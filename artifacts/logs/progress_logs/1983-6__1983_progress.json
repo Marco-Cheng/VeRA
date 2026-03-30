@@ -1,0 +1,699 @@
+[
+  {
+    "timestamp": 1762555187.410869,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1983,
+      "question_preview": "Let $a_n=6^{n}+8^{n}$ . Determine the remainder on dividing $a_{83}$ by $49$ .",
+      "answer": "35",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-07T22:39:47Z"
+  },
+  {
+    "timestamp": 1762555187.410892,
+    "seed_id": "1983-6::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-07T22:39:47Z"
+  },
+  {
+    "timestamp": 1762555187.4109042,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $a_n=6^{n}+8^{n}$ . Determine the remainder on dividing $a_{83}$ by $49$ .",
+      "answer": "35",
+      "example_id": "1983-6::1983"
+    },
+    "iso_time": "2025-11-07T22:39:47Z"
+  },
+  {
+    "timestamp": 1762555344.058272,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-6::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 424620531
+    },
+    "iso_time": "2025-11-07T22:42:24Z"
+  },
+  {
+    "timestamp": 1762555344.815136,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 36,
+        "b": 133,
+        "c_a": 432,
+        "d_b": 133,
+        "n": 193,
+        "mod": 169
+      }
+    },
+    "iso_time": "2025-11-07T22:42:24Z"
+  },
+  {
+    "timestamp": 1762555345.5909069,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 136
+    },
+    "iso_time": "2025-11-07T22:42:25Z"
+  },
+  {
+    "timestamp": 1762555345.5910552,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let two sequences be defined by the recurrence relations $u_{k+1} = 36 u_k$ and $v_{k+1} = 133 v_k$ for $k \\ge 1$, with ",
+      "correct_answer": "136",
+      "seed_value": 424620531
+    },
+    "iso_time": "2025-11-07T22:42:25Z"
+  },
+  {
+    "timestamp": 1762555345.5911071,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "135",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T22:42:25Z"
+  },
+  {
+    "timestamp": 1762555547.856451,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "136",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T22:45:47Z"
+  },
+  {
+    "timestamp": 1762555676.279436,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "142",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T22:47:56Z"
+  },
+  {
+    "timestamp": 1762555891.7463129,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "141",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T22:51:31Z"
+  },
+  {
+    "timestamp": 1762556065.8031502,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "136",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T22:54:25Z"
+  },
+  {
+    "timestamp": 1762556201.5041971,
+    "seed_id": "1983-6::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-6::1983_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-07T22:56:41Z"
+  },
+  {
+    "timestamp": 1762556201.504241,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-6::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 695156006
+    },
+    "iso_time": "2025-11-07T22:56:41Z"
+  },
+  {
+    "timestamp": 1762556202.462556,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 122,
+        "b": 200,
+        "c_a": 1098,
+        "d_b": 2200,
+        "n": 1422,
+        "mod": 529
+      }
+    },
+    "iso_time": "2025-11-07T22:56:42Z"
+  },
+  {
+    "timestamp": 1762556203.239899,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 500
+    },
+    "iso_time": "2025-11-07T22:56:43Z"
+  },
+  {
+    "timestamp": 1762556203.2400389,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let two sequences be defined by the recurrence relations $u_{k+1} = 122 u_k$ and $v_{k+1} = 200 v_k$ for $k \\ge 1$, with",
+      "correct_answer": "500",
+      "seed_value": 695156006
+    },
+    "iso_time": "2025-11-07T22:56:43Z"
+  },
+  {
+    "timestamp": 1762556203.2400908,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "501",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T22:56:43Z"
+  },
+  {
+    "timestamp": 1762556462.048576,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "507",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T23:01:02Z"
+  },
+  {
+    "timestamp": 1762556726.615424,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "500",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T23:05:26Z"
+  },
+  {
+    "timestamp": 1762556894.40495,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "500",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T23:08:14Z"
+  },
+  {
+    "timestamp": 1762557109.941559,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "509",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T23:11:49Z"
+  },
+  {
+    "timestamp": 1762557300.1921651,
+    "seed_id": "1983-6::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-6::1983_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-07T23:15:00Z"
+  },
+  {
+    "timestamp": 1762557300.192213,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-6::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 222730036
+    },
+    "iso_time": "2025-11-07T23:15:00Z"
+  },
+  {
+    "timestamp": 1762557300.984997,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 305,
+        "b": 171,
+        "c_a": 2135,
+        "d_b": 1368,
+        "n": 404,
+        "mod": 289
+      }
+    },
+    "iso_time": "2025-11-07T23:15:00Z"
+  },
+  {
+    "timestamp": 1762557301.766313,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 253
+    },
+    "iso_time": "2025-11-07T23:15:01Z"
+  },
+  {
+    "timestamp": 1762557301.76646,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let two sequences be defined by the recurrence relations $u_{k+1} = 305 u_k$ and $v_{k+1} = 171 v_k$ for $k \\ge 1$, with",
+      "correct_answer": "253",
+      "seed_value": 222730036
+    },
+    "iso_time": "2025-11-07T23:15:01Z"
+  },
+  {
+    "timestamp": 1762557301.7665138,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "262",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T23:15:01Z"
+  },
+  {
+    "timestamp": 1762557447.972429,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "257",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T23:17:27Z"
+  },
+  {
+    "timestamp": 1762557622.667058,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "259",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T23:20:22Z"
+  },
+  {
+    "timestamp": 1762557796.871391,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "253",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T23:23:16Z"
+  },
+  {
+    "timestamp": 1762557902.6564102,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "253",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T23:25:02Z"
+  },
+  {
+    "timestamp": 1762558007.6905532,
+    "seed_id": "1983-6::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-6::1983_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-07T23:26:47Z"
+  },
+  {
+    "timestamp": 1762558007.6905978,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-6::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1532450736
+    },
+    "iso_time": "2025-11-07T23:26:47Z"
+  },
+  {
+    "timestamp": 1762558008.649518,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 138,
+        "b": 219,
+        "c_a": 2070,
+        "d_b": 3504,
+        "n": 806,
+        "mod": 289
+      }
+    },
+    "iso_time": "2025-11-07T23:26:48Z"
+  },
+  {
+    "timestamp": 1762558009.4726698,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 46
+    },
+    "iso_time": "2025-11-07T23:26:49Z"
+  },
+  {
+    "timestamp": 1762558009.472814,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let two sequences be defined by the recurrence relations $u_{k+1} = 138 u_k$ and $v_{k+1} = 219 v_k$ for $k \\ge 1$, with",
+      "correct_answer": "46",
+      "seed_value": 1532450736
+    },
+    "iso_time": "2025-11-07T23:26:49Z"
+  },
+  {
+    "timestamp": 1762558009.472856,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "46",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T23:26:49Z"
+  },
+  {
+    "timestamp": 1762558128.294126,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "39",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T23:28:48Z"
+  },
+  {
+    "timestamp": 1762558289.4059598,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "52",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T23:31:29Z"
+  },
+  {
+    "timestamp": 1762558473.8304021,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "46",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T23:34:33Z"
+  },
+  {
+    "timestamp": 1762558585.387757,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "37",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T23:36:25Z"
+  },
+  {
+    "timestamp": 1762558793.086464,
+    "seed_id": "1983-6::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-6::1983_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-07T23:39:53Z"
+  },
+  {
+    "timestamp": 1762558793.086508,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-6::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2120470367
+    },
+    "iso_time": "2025-11-07T23:39:53Z"
+  },
+  {
+    "timestamp": 1762558793.845396,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 232,
+        "b": 193,
+        "c_a": 464,
+        "d_b": 1737,
+        "n": 408,
+        "mod": 289
+      }
+    },
+    "iso_time": "2025-11-07T23:39:53Z"
+  },
+  {
+    "timestamp": 1762558794.626668,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 278
+    },
+    "iso_time": "2025-11-07T23:39:54Z"
+  },
+  {
+    "timestamp": 1762558794.626813,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let two sequences be defined by the recurrence relations $u_{k+1} = 232 u_k$ and $v_{k+1} = 193 v_k$ for $k \\ge 1$, with",
+      "correct_answer": "278",
+      "seed_value": 2120470367
+    },
+    "iso_time": "2025-11-07T23:39:54Z"
+  },
+  {
+    "timestamp": 1762558794.626857,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "273",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T23:39:54Z"
+  },
+  {
+    "timestamp": 1762559033.762602,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "274",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T23:43:53Z"
+  },
+  {
+    "timestamp": 1762559263.115277,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "271",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T23:47:43Z"
+  },
+  {
+    "timestamp": 1762559518.188939,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "278",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T23:51:58Z"
+  },
+  {
+    "timestamp": 1762559677.940877,
+    "seed_id": "1983-6::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "278",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T23:54:37Z"
+  },
+  {
+    "timestamp": 1762559830.505926,
+    "seed_id": "1983-6::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-6::1983_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-07T23:57:10Z"
+  }
+]

@@ -1,0 +1,2187 @@
+[
+  {
+    "timestamp": 1761949812.1738749,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2024,
+      "question_preview": "Torus $T$ is the surface produced by revolving a circle with radius 3 around an axis in the plane of the circle that is ",
+      "answer": "127",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-10-31T22:30:12Z"
+  },
+  {
+    "timestamp": 1761949812.173943,
+    "seed_id": "2024-II-8::2024",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-10-31T22:30:12Z"
+  },
+  {
+    "timestamp": 1761949812.173971,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Torus $T$ is the surface produced by revolving a circle with radius 3 around an axis in the plane of the circle that is a distance 6 from the center of the circle (so like a donut). Let $S$ be a sphere with a radius 11. When $T$ rests on the inside of $S$ , it is internally tangent to $S$ along a circle with radius $r_i$ , and when $T$ rests on the outside of $S$ , it is externally tangent to $S$ along a circle with radius $r_o$ . The difference $r_i-r_o$ can be written as $\\frac{m}{n}$ , where $m$ and $n$ are relatively prime positive integers. Find $m+n$ . [asy] unitsize(0.3 inch); draw(ellipse((0,0), 3, 1.75)); draw((-1.2,0.1)..(-0.8,-0.03)..(-0.4,-0.11)..(0,-0.15)..(0.4,-0.11)..(0.8,-0.03)..(1.2,0.1)); draw((-1,0.04)..(-0.5,0.12)..(0,0.16)..(0.5,0.12)..(1,0.04)); draw((0,2.4)--(0,-0.15)); draw((0,-0.15)--(0,-1.75), dashed); draw((0,-1.75)--(0,-2.25)); draw(ellipse((2,0), 1, 0.9)); draw((2.03,-0.02)--(2.9,-0.4)); [/asy]",
+      "answer": "127",
+      "example_id": "2024-II-8::2024"
+    },
+    "iso_time": "2025-10-31T22:30:12Z"
+  },
+  {
+    "timestamp": 1761950291.556609,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1359738440
+    },
+    "iso_time": "2025-10-31T22:38:11Z"
+  },
+  {
+    "timestamp": 1761950292.442466,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "major_radius": 13,
+        "minor_radius": 10,
+        "sphere_radius": 55
+      }
+    },
+    "iso_time": "2025-10-31T22:38:12Z"
+  },
+  {
+    "timestamp": 1761950293.347574,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 859
+    },
+    "iso_time": "2025-10-31T22:38:13Z"
+  },
+  {
+    "timestamp": 1761950293.347688,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let T be a torus formed by revolving a circle of radius 10 about an axis in the plane of the circle at distance 13 from ",
+      "correct_answer": "859",
+      "seed_value": 1359738440
+    },
+    "iso_time": "2025-10-31T22:38:13Z"
+  },
+  {
+    "timestamp": 1761950293.3477278,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "864",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:38:13Z"
+  },
+  {
+    "timestamp": 1761950413.334475,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "862",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:40:13Z"
+  },
+  {
+    "timestamp": 1761950533.830682,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "859",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:42:13Z"
+  },
+  {
+    "timestamp": 1761950680.5861351,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "856",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:44:40Z"
+  },
+  {
+    "timestamp": 1761950858.8531451,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "859",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:47:38Z"
+  },
+  {
+    "timestamp": 1761950968.054645,
+    "seed_id": "2024-II-8::2024",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-10-31T22:49:28Z"
+  },
+  {
+    "timestamp": 1761950968.0548842,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1055414746
+    },
+    "iso_time": "2025-10-31T22:49:28Z"
+  },
+  {
+    "timestamp": 1761950968.9718451,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "major_radius": 11,
+        "minor_radius": 2,
+        "sphere_radius": 14
+      }
+    },
+    "iso_time": "2025-10-31T22:49:28Z"
+  },
+  {
+    "timestamp": 1761950969.8781571,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 121
+    },
+    "iso_time": "2025-10-31T22:49:29Z"
+  },
+  {
+    "timestamp": 1761950969.8782752,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let T be a torus formed by revolving a circle of radius 2 about an axis in the plane of the circle at distance 11 from i",
+      "correct_answer": "121",
+      "seed_value": 1055414746
+    },
+    "iso_time": "2025-10-31T22:49:29Z"
+  },
+  {
+    "timestamp": 1761950969.878315,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "124",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:49:29Z"
+  },
+  {
+    "timestamp": 1761951013.937972,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "121",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:50:13Z"
+  },
+  {
+    "timestamp": 1761951106.1846,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "130",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:51:46Z"
+  },
+  {
+    "timestamp": 1761951188.8841732,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "116",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:53:08Z"
+  },
+  {
+    "timestamp": 1761951352.77652,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "121",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:55:52Z"
+  },
+  {
+    "timestamp": 1761951420.174318,
+    "seed_id": "2024-II-8::2024",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-10-31T22:57:00Z"
+  },
+  {
+    "timestamp": 1761951420.174606,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 2137265884
+    },
+    "iso_time": "2025-10-31T22:57:00Z"
+  },
+  {
+    "timestamp": 1761951421.066299,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "major_radius": 9,
+        "minor_radius": 5,
+        "sphere_radius": 53
+      }
+    },
+    "iso_time": "2025-10-31T22:57:01Z"
+  },
+  {
+    "timestamp": 1761951422.0076642,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3013
+    },
+    "iso_time": "2025-10-31T22:57:02Z"
+  },
+  {
+    "timestamp": 1761951422.007784,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let T be a torus formed by revolving a circle of radius 5 about an axis in the plane of the circle at distance 9 from it",
+      "correct_answer": "3013",
+      "seed_value": 2137265884
+    },
+    "iso_time": "2025-10-31T22:57:02Z"
+  },
+  {
+    "timestamp": 1761951422.0078259,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3006",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:57:02Z"
+  },
+  {
+    "timestamp": 1761951511.696238,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3018",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:58:31Z"
+  },
+  {
+    "timestamp": 1761951625.718747,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3013",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T23:00:25Z"
+  },
+  {
+    "timestamp": 1761951809.9024808,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3013",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T23:03:29Z"
+  },
+  {
+    "timestamp": 1761952006.613177,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3017",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T23:06:46Z"
+  },
+  {
+    "timestamp": 1761952149.94629,
+    "seed_id": "2024-II-8::2024",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-10-31T23:09:09Z"
+  },
+  {
+    "timestamp": 1761952149.946443,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1638472523
+    },
+    "iso_time": "2025-10-31T23:09:09Z"
+  },
+  {
+    "timestamp": 1761952151.10564,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "major_radius": 26,
+        "minor_radius": 6,
+        "sphere_radius": 39
+      }
+    },
+    "iso_time": "2025-10-31T23:09:11Z"
+  },
+  {
+    "timestamp": 1761952152.2533278,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1199
+    },
+    "iso_time": "2025-10-31T23:09:12Z"
+  },
+  {
+    "timestamp": 1761952152.2534888,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let T be a torus formed by revolving a circle of radius 6 about an axis in the plane of the circle at distance 26 from i",
+      "correct_answer": "1199",
+      "seed_value": 1638472523
+    },
+    "iso_time": "2025-10-31T23:09:12Z"
+  },
+  {
+    "timestamp": 1761952152.253531,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1194",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T23:09:12Z"
+  },
+  {
+    "timestamp": 1761952271.97696,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1202",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T23:11:11Z"
+  },
+  {
+    "timestamp": 1761952343.0541708,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1196",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T23:12:23Z"
+  },
+  {
+    "timestamp": 1761952435.635713,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1199",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T23:13:55Z"
+  },
+  {
+    "timestamp": 1761952613.563885,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1199",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T23:16:53Z"
+  },
+  {
+    "timestamp": 1761953098.358083,
+    "seed_id": "2024-II-8::2024",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-10-31T23:24:58Z"
+  },
+  {
+    "timestamp": 1761953098.3584352,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 327603260
+    },
+    "iso_time": "2025-10-31T23:24:58Z"
+  },
+  {
+    "timestamp": 1761953099.256932,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "major_radius": 19,
+        "minor_radius": 12,
+        "sphere_radius": 95
+      }
+    },
+    "iso_time": "2025-10-31T23:24:59Z"
+  },
+  {
+    "timestamp": 1761953100.1652422,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 412
+    },
+    "iso_time": "2025-10-31T23:25:00Z"
+  },
+  {
+    "timestamp": 1761953100.1653771,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let T be a torus formed by revolving a circle of radius 12 about an axis in the plane of the circle at distance 19 from ",
+      "correct_answer": "412",
+      "seed_value": 327603260
+    },
+    "iso_time": "2025-10-31T23:25:00Z"
+  },
+  {
+    "timestamp": 1761953100.16542,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "419",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T23:25:00Z"
+  },
+  {
+    "timestamp": 1761953333.564802,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "412",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T23:28:53Z"
+  },
+  {
+    "timestamp": 1761953508.2745569,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "403",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T23:31:48Z"
+  },
+  {
+    "timestamp": 1761953592.089642,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "412",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T23:33:12Z"
+  },
+  {
+    "timestamp": 1761953742.045323,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "405",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T23:35:42Z"
+  },
+  {
+    "timestamp": 1761953861.882706,
+    "seed_id": "2024-II-8::2024",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-10-31T23:37:41Z"
+  },
+  {
+    "timestamp": 1761953861.882936,
+    "seed_id": "2024-II-8::2024",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-10-31T23:37:41Z"
+  },
+  {
+    "timestamp": 1761953861.8830268,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Torus $T$ is the surface produced by revolving a circle with radius 3 around an axis in the plane of the circle that is a distance 6 from the center of the circle (so like a donut). Let $S$ be a sphere with a radius 11. When $T$ rests on the inside of $S$ , it is internally tangent to $S$ along a circle with radius $r_i$ , and when $T$ rests on the outside of $S$ , it is externally tangent to $S$ along a circle with radius $r_o$ . The difference $r_i-r_o$ can be written as $\\frac{m}{n}$ , where $m$ and $n$ are relatively prime positive integers. Find $m+n$ . [asy] unitsize(0.3 inch); draw(ellipse((0,0), 3, 1.75)); draw((-1.2,0.1)..(-0.8,-0.03)..(-0.4,-0.11)..(0,-0.15)..(0.4,-0.11)..(0.8,-0.03)..(1.2,0.1)); draw((-1,0.04)..(-0.5,0.12)..(0,0.16)..(0.5,0.12)..(1,0.04)); draw((0,2.4)--(0,-0.15)); draw((0,-0.15)--(0,-1.75), dashed); draw((0,-1.75)--(0,-2.25)); draw(ellipse((2,0), 1, 0.9)); draw((2.03,-0.02)--(2.9,-0.4)); [/asy]",
+      "answer": "127",
+      "example_id": "2024-II-8::2024"
+    },
+    "iso_time": "2025-10-31T23:37:41Z"
+  },
+  {
+    "timestamp": 1761954159.335998,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 352209086
+    },
+    "iso_time": "2025-10-31T23:42:39Z"
+  },
+  {
+    "timestamp": 1761954160.236414,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:42:40Z"
+  },
+  {
+    "timestamp": 1761954161.1210291,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:42:41Z"
+  },
+  {
+    "timestamp": 1761954162.0196722,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:42:42Z"
+  },
+  {
+    "timestamp": 1761954162.907603,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:42:42Z"
+  },
+  {
+    "timestamp": 1761954163.80497,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:42:43Z"
+  },
+  {
+    "timestamp": 1761954164.706069,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:42:44Z"
+  },
+  {
+    "timestamp": 1761954165.61727,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:42:45Z"
+  },
+  {
+    "timestamp": 1761954166.5247512,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:42:46Z"
+  },
+  {
+    "timestamp": 1761954167.414613,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:42:47Z"
+  },
+  {
+    "timestamp": 1761954168.318625,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:42:48Z"
+  },
+  {
+    "timestamp": 1761954169.2215848,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:42:49Z"
+  },
+  {
+    "timestamp": 1761954170.126786,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:42:50Z"
+  },
+  {
+    "timestamp": 1761954170.1268659,
+    "seed_id": "2024-II-8::2024",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.790875911712646
+    },
+    "iso_time": "2025-10-31T23:42:50Z"
+  },
+  {
+    "timestamp": 1761954170.126936,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 956758301
+    },
+    "iso_time": "2025-10-31T23:42:50Z"
+  },
+  {
+    "timestamp": 1761954171.028477,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:42:51Z"
+  },
+  {
+    "timestamp": 1761954171.928354,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:42:51Z"
+  },
+  {
+    "timestamp": 1761954172.829437,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:42:52Z"
+  },
+  {
+    "timestamp": 1761954173.730606,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:42:53Z"
+  },
+  {
+    "timestamp": 1761954174.617358,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:42:54Z"
+  },
+  {
+    "timestamp": 1761954175.5289018,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:42:55Z"
+  },
+  {
+    "timestamp": 1761954176.432266,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:42:56Z"
+  },
+  {
+    "timestamp": 1761954177.343224,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:42:57Z"
+  },
+  {
+    "timestamp": 1761954178.247804,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:42:58Z"
+  },
+  {
+    "timestamp": 1761954179.162965,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:42:59Z"
+  },
+  {
+    "timestamp": 1761954180.067472,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:00Z"
+  },
+  {
+    "timestamp": 1761954180.974011,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:00Z"
+  },
+  {
+    "timestamp": 1761954180.974098,
+    "seed_id": "2024-II-8::2024",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.847162008285522
+    },
+    "iso_time": "2025-10-31T23:43:00Z"
+  },
+  {
+    "timestamp": 1761954180.974141,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 307838728
+    },
+    "iso_time": "2025-10-31T23:43:00Z"
+  },
+  {
+    "timestamp": 1761954181.922154,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:01Z"
+  },
+  {
+    "timestamp": 1761954182.811668,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:02Z"
+  },
+  {
+    "timestamp": 1761954183.720856,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:03Z"
+  },
+  {
+    "timestamp": 1761954184.6173592,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:04Z"
+  },
+  {
+    "timestamp": 1761954185.524766,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:05Z"
+  },
+  {
+    "timestamp": 1761954186.418675,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:06Z"
+  },
+  {
+    "timestamp": 1761954187.3270242,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:07Z"
+  },
+  {
+    "timestamp": 1761954188.217649,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:08Z"
+  },
+  {
+    "timestamp": 1761954189.128787,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:09Z"
+  },
+  {
+    "timestamp": 1761954190.028685,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:10Z"
+  },
+  {
+    "timestamp": 1761954190.928599,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:10Z"
+  },
+  {
+    "timestamp": 1761954191.8242502,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:11Z"
+  },
+  {
+    "timestamp": 1761954191.8243399,
+    "seed_id": "2024-II-8::2024",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.850199937820435
+    },
+    "iso_time": "2025-10-31T23:43:11Z"
+  },
+  {
+    "timestamp": 1761954191.8243861,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 943566118
+    },
+    "iso_time": "2025-10-31T23:43:11Z"
+  },
+  {
+    "timestamp": 1761954192.719042,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:12Z"
+  },
+  {
+    "timestamp": 1761954193.617547,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:13Z"
+  },
+  {
+    "timestamp": 1761954194.5473568,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:14Z"
+  },
+  {
+    "timestamp": 1761954195.452676,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:15Z"
+  },
+  {
+    "timestamp": 1761954196.356839,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:16Z"
+  },
+  {
+    "timestamp": 1761954197.26495,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:17Z"
+  },
+  {
+    "timestamp": 1761954198.166836,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:18Z"
+  },
+  {
+    "timestamp": 1761954199.0843258,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:19Z"
+  },
+  {
+    "timestamp": 1761954199.990763,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:19Z"
+  },
+  {
+    "timestamp": 1761954200.881196,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:20Z"
+  },
+  {
+    "timestamp": 1761954201.780725,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:21Z"
+  },
+  {
+    "timestamp": 1761954202.666093,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:22Z"
+  },
+  {
+    "timestamp": 1761954202.666184,
+    "seed_id": "2024-II-8::2024",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.841799020767212
+    },
+    "iso_time": "2025-10-31T23:43:22Z"
+  },
+  {
+    "timestamp": 1761954202.666233,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 446685360
+    },
+    "iso_time": "2025-10-31T23:43:22Z"
+  },
+  {
+    "timestamp": 1761954203.5626361,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:23Z"
+  },
+  {
+    "timestamp": 1761954204.489387,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:24Z"
+  },
+  {
+    "timestamp": 1761954205.418615,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:25Z"
+  },
+  {
+    "timestamp": 1761954206.3580768,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:26Z"
+  },
+  {
+    "timestamp": 1761954207.2669811,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:27Z"
+  },
+  {
+    "timestamp": 1761954208.166445,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:28Z"
+  },
+  {
+    "timestamp": 1761954209.0643232,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:29Z"
+  },
+  {
+    "timestamp": 1761954209.9577038,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:29Z"
+  },
+  {
+    "timestamp": 1761954210.8481221,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:30Z"
+  },
+  {
+    "timestamp": 1761954211.749818,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:31Z"
+  },
+  {
+    "timestamp": 1761954212.7059178,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-10-31T23:43:32Z"
+  },
+  {
+    "timestamp": 1761954213.61684,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-10-31T23:43:33Z"
+  },
+  {
+    "timestamp": 1761954213.616918,
+    "seed_id": "2024-II-8::2024",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.950683832168579
+    },
+    "iso_time": "2025-10-31T23:43:33Z"
+  },
+  {
+    "timestamp": 1761954213.6169448,
+    "seed_id": "2024-II-8::2024",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-10-31T23:43:33Z"
+  },
+  {
+    "timestamp": 1761954213.61696,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "Torus $T$ is the surface produced by revolving a circle with radius 3 around an axis in the plane of the circle that is a distance 6 from the center of the circle (so like a donut). Let $S$ be a sphere with a radius 11. When $T$ rests on the inside of $S$ , it is internally tangent to $S$ along a circle with radius $r_i$ , and when $T$ rests on the outside of $S$ , it is externally tangent to $S$ along a circle with radius $r_o$ . The difference $r_i-r_o$ can be written as $\\frac{m}{n}$ , where $m$ and $n$ are relatively prime positive integers. Find $m+n$ . [asy] unitsize(0.3 inch); draw(ellipse((0,0), 3, 1.75)); draw((-1.2,0.1)..(-0.8,-0.03)..(-0.4,-0.11)..(0,-0.15)..(0.4,-0.11)..(0.8,-0.03)..(1.2,0.1)); draw((-1,0.04)..(-0.5,0.12)..(0,0.16)..(0.5,0.12)..(1,0.04)); draw((0,2.4)--(0,-0.15)); draw((0,-0.15)--(0,-1.75), dashed); draw((0,-1.75)--(0,-2.25)); draw(ellipse((2,0), 1, 0.9)); draw((2.03,-0.02)--(2.9,-0.4)); [/asy]",
+      "answer": "127",
+      "example_id": "2024-II-8::2024"
+    },
+    "iso_time": "2025-10-31T23:43:33Z"
+  },
+  {
+    "timestamp": 1761954474.024052,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 835895950
+    },
+    "iso_time": "2025-10-31T23:47:54Z"
+  },
+  {
+    "timestamp": 1761954474.917259,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "minor_radius": 6,
+        "major_radius": 12,
+        "sphere1_radius": 24,
+        "sphere2_radius": 10
+      }
+    },
+    "iso_time": "2025-10-31T23:47:54Z"
+  },
+  {
+    "timestamp": 1761954475.812781,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 66
+    },
+    "iso_time": "2025-10-31T23:47:55Z"
+  },
+  {
+    "timestamp": 1761954475.812903,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A torus T is formed by revolving a circle of radius 6 about a line in the plane of the circle that is at distance 12 fro",
+      "correct_answer": "66",
+      "seed_value": 835895950
+    },
+    "iso_time": "2025-10-31T23:47:55Z"
+  },
+  {
+    "timestamp": 1761954475.812947,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "75",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T23:47:55Z"
+  },
+  {
+    "timestamp": 1761954503.459568,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "57",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T23:48:23Z"
+  },
+  {
+    "timestamp": 1761954582.3355892,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "66",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T23:49:42Z"
+  },
+  {
+    "timestamp": 1761954730.00909,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "66",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T23:52:10Z"
+  },
+  {
+    "timestamp": 1761954853.2997508,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "74",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T23:54:13Z"
+  },
+  {
+    "timestamp": 1761954968.240601,
+    "seed_id": "2024-II-8::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-8::2024_prompt03-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T23:56:08Z"
+  },
+  {
+    "timestamp": 1761954968.2407858,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1384270717
+    },
+    "iso_time": "2025-10-31T23:56:08Z"
+  },
+  {
+    "timestamp": 1761954969.133898,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "minor_radius": 3,
+        "major_radius": 12,
+        "sphere1_radius": 40,
+        "sphere2_radius": 24
+      }
+    },
+    "iso_time": "2025-10-31T23:56:09Z"
+  },
+  {
+    "timestamp": 1761954970.036347,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 449
+    },
+    "iso_time": "2025-10-31T23:56:10Z"
+  },
+  {
+    "timestamp": 1761954970.036475,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A torus T is formed by revolving a circle of radius 3 about a line in the plane of the circle that is at distance 12 fro",
+      "correct_answer": "449",
+      "seed_value": 1384270717
+    },
+    "iso_time": "2025-10-31T23:56:10Z"
+  },
+  {
+    "timestamp": 1761954970.0365188,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "457",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T23:56:10Z"
+  },
+  {
+    "timestamp": 1761955112.197765,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "449",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T23:58:32Z"
+  },
+  {
+    "timestamp": 1761955331.324309,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "458",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-01T00:02:11Z"
+  },
+  {
+    "timestamp": 1761955412.605033,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "441",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-01T00:03:32Z"
+  },
+  {
+    "timestamp": 1761955508.248526,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "449",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-01T00:05:08Z"
+  },
+  {
+    "timestamp": 1761955632.89029,
+    "seed_id": "2024-II-8::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-8::2024_prompt03-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-01T00:07:12Z"
+  },
+  {
+    "timestamp": 1761955632.890482,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1884741849
+    },
+    "iso_time": "2025-11-01T00:07:12Z"
+  },
+  {
+    "timestamp": 1761955633.808234,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "minor_radius": 8,
+        "major_radius": 20,
+        "sphere1_radius": 48,
+        "sphere2_radius": 51
+      }
+    },
+    "iso_time": "2025-11-01T00:07:13Z"
+  },
+  {
+    "timestamp": 1761955634.701914,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 658
+    },
+    "iso_time": "2025-11-01T00:07:14Z"
+  },
+  {
+    "timestamp": 1761955634.702042,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A torus T is formed by revolving a circle of radius 8 about a line in the plane of the circle that is at distance 20 fro",
+      "correct_answer": "658",
+      "seed_value": 1884741849
+    },
+    "iso_time": "2025-11-01T00:07:14Z"
+  },
+  {
+    "timestamp": 1761955634.702083,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "660",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-01T00:07:14Z"
+  },
+  {
+    "timestamp": 1761955703.642603,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "652",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-01T00:08:23Z"
+  },
+  {
+    "timestamp": 1761955761.279298,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "658",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-01T00:09:21Z"
+  },
+  {
+    "timestamp": 1761955854.593245,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "658",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-01T00:10:54Z"
+  },
+  {
+    "timestamp": 1761955929.672215,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "662",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-01T00:12:09Z"
+  },
+  {
+    "timestamp": 1761956025.991989,
+    "seed_id": "2024-II-8::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-8::2024_prompt03-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-01T00:13:45Z"
+  },
+  {
+    "timestamp": 1761956025.9921541,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1610052111
+    },
+    "iso_time": "2025-11-01T00:13:45Z"
+  },
+  {
+    "timestamp": 1761956026.8939211,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "minor_radius": 11,
+        "major_radius": 24,
+        "sphere1_radius": 54,
+        "sphere2_radius": 44
+      }
+    },
+    "iso_time": "2025-11-01T00:13:46Z"
+  },
+  {
+    "timestamp": 1761956027.7904818,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2788
+    },
+    "iso_time": "2025-11-01T00:13:47Z"
+  },
+  {
+    "timestamp": 1761956027.790605,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A torus T is formed by revolving a circle of radius 11 about a line in the plane of the circle that is at distance 24 fr",
+      "correct_answer": "2788",
+      "seed_value": 1610052111
+    },
+    "iso_time": "2025-11-01T00:13:47Z"
+  },
+  {
+    "timestamp": 1761956027.790646,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2797",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-01T00:13:47Z"
+  },
+  {
+    "timestamp": 1761956327.992693,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2787",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-01T00:18:47Z"
+  },
+  {
+    "timestamp": 1761956379.265528,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2788",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-01T00:19:39Z"
+  },
+  {
+    "timestamp": 1761956496.6286569,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2783",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-01T00:21:36Z"
+  },
+  {
+    "timestamp": 1761956577.7521532,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2788",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-01T00:22:57Z"
+  },
+  {
+    "timestamp": 1761956671.182569,
+    "seed_id": "2024-II-8::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-8::2024_prompt03-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-01T00:24:31Z"
+  },
+  {
+    "timestamp": 1761956671.182732,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-8::2024_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 409831811
+    },
+    "iso_time": "2025-11-01T00:24:31Z"
+  },
+  {
+    "timestamp": 1761956672.097814,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "minor_radius": 4,
+        "major_radius": 11,
+        "sphere1_radius": 31,
+        "sphere2_radius": 28
+      }
+    },
+    "iso_time": "2025-11-01T00:24:32Z"
+  },
+  {
+    "timestamp": 1761956672.98871,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1302
+    },
+    "iso_time": "2025-11-01T00:24:32Z"
+  },
+  {
+    "timestamp": 1761956672.988843,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A torus T is formed by revolving a circle of radius 4 about a line in the plane of the circle that is at distance 11 fro",
+      "correct_answer": "1302",
+      "seed_value": 409831811
+    },
+    "iso_time": "2025-11-01T00:24:32Z"
+  },
+  {
+    "timestamp": 1761956672.988884,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1294",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-01T00:24:32Z"
+  },
+  {
+    "timestamp": 1761956823.683525,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1302",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-01T00:27:03Z"
+  },
+  {
+    "timestamp": 1761956893.17226,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1302",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-01T00:28:13Z"
+  },
+  {
+    "timestamp": 1761956976.1091452,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1305",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-01T00:29:36Z"
+  },
+  {
+    "timestamp": 1761957068.628135,
+    "seed_id": "2024-II-8::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1303",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-01T00:31:08Z"
+  },
+  {
+    "timestamp": 1761957122.9561322,
+    "seed_id": "2024-II-8::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-8::2024_prompt03-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-01T00:32:02Z"
+  }
+]

@@ -1,0 +1,2192 @@
+[
+  {
+    "timestamp": 1765298086.228352,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "Let $x=\\frac{4}{(\\sqrt{5}+1)(\\sqrt[4]{5}+1)(\\sqrt[8]{5}+1)(\\sqrt[16]{5}+1)}.$ Find $(x+1)^{48}.$",
+      "answer": "125",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T16:34:46Z"
+  },
+  {
+    "timestamp": 1765298086.228409,
+    "seed_id": "2005-II-7::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T16:34:46Z"
+  },
+  {
+    "timestamp": 1765298086.228446,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $x=\\frac{4}{(\\sqrt{5}+1)(\\sqrt[4]{5}+1)(\\sqrt[8]{5}+1)(\\sqrt[16]{5}+1)}.$ Find $(x+1)^{48}.$",
+      "answer": "125",
+      "example_id": "2005-II-7::2005"
+    },
+    "iso_time": "2025-12-09T16:34:46Z"
+  },
+  {
+    "timestamp": 1765298327.349138,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1753030835
+    },
+    "iso_time": "2025-12-09T16:38:47Z"
+  },
+  {
+    "timestamp": 1765298328.709555,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 10,
+        "b": 4,
+        "n": 3,
+        "m": 5,
+        "power": 32
+      }
+    },
+    "iso_time": "2025-12-09T16:38:48Z"
+  },
+  {
+    "timestamp": 1765298329.942425,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 40000
+    },
+    "iso_time": "2025-12-09T16:38:49Z"
+  },
+  {
+    "timestamp": 1765298329.942644,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let real numbers x and y be defined by\nx = ((10-1)(4-1)) / ( [prod_{k=1..{n}} (10^(1/2^k)+1)] [prod_{k=1..{m}} (4^(1/2^k",
+      "correct_answer": "40000",
+      "seed_value": 1753030835
+    },
+    "iso_time": "2025-12-09T16:38:49Z"
+  },
+  {
+    "timestamp": 1765298329.942709,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "40000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:38:49Z"
+  },
+  {
+    "timestamp": 1765298353.023583,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "39997",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:39:13Z"
+  },
+  {
+    "timestamp": 1765298392.2093341,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "40000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:39:52Z"
+  },
+  {
+    "timestamp": 1765298428.342419,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "39995",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:40:28Z"
+  },
+  {
+    "timestamp": 1765298487.7570748,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "39993",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:41:27Z"
+  },
+  {
+    "timestamp": 1765298524.012037,
+    "seed_id": "2005-II-7::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T16:42:04Z"
+  },
+  {
+    "timestamp": 1765298524.01229,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1811687254
+    },
+    "iso_time": "2025-12-09T16:42:04Z"
+  },
+  {
+    "timestamp": 1765298525.3438458,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 6,
+        "b": 10,
+        "n": 3,
+        "m": 5,
+        "power": 32
+      }
+    },
+    "iso_time": "2025-12-09T16:42:05Z"
+  },
+  {
+    "timestamp": 1765298526.4780369,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12960
+    },
+    "iso_time": "2025-12-09T16:42:06Z"
+  },
+  {
+    "timestamp": 1765298526.478192,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let real numbers x and y be defined by\nx = ((6-1)(10-1)) / ( [prod_{k=1..{n}} (6^(1/2^k)+1)] [prod_{k=1..{m}} (10^(1/2^k",
+      "correct_answer": "12960",
+      "seed_value": 1811687254
+    },
+    "iso_time": "2025-12-09T16:42:06Z"
+  },
+  {
+    "timestamp": 1765298526.478246,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12960",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:42:06Z"
+  },
+  {
+    "timestamp": 1765298611.871083,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12960",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:43:31Z"
+  },
+  {
+    "timestamp": 1765298659.3771572,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12953",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:44:19Z"
+  },
+  {
+    "timestamp": 1765298690.9837508,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12966",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:44:50Z"
+  },
+  {
+    "timestamp": 1765298749.2600331,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12964",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:45:49Z"
+  },
+  {
+    "timestamp": 1765298816.159005,
+    "seed_id": "2005-II-7::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T16:46:56Z"
+  },
+  {
+    "timestamp": 1765298816.1592588,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 774667027
+    },
+    "iso_time": "2025-12-09T16:46:56Z"
+  },
+  {
+    "timestamp": 1765298817.349183,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 8,
+        "b": 6,
+        "n": 2,
+        "m": 4,
+        "power": 16
+      }
+    },
+    "iso_time": "2025-12-09T16:46:57Z"
+  },
+  {
+    "timestamp": 1765298818.45372,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 24576
+    },
+    "iso_time": "2025-12-09T16:46:58Z"
+  },
+  {
+    "timestamp": 1765298818.453866,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let real numbers x and y be defined by\nx = ((8-1)(6-1)) / ( [prod_{k=1..{n}} (8^(1/2^k)+1)] [prod_{k=1..{m}} (6^(1/2^k)+",
+      "correct_answer": "24576",
+      "seed_value": 774667027
+    },
+    "iso_time": "2025-12-09T16:46:58Z"
+  },
+  {
+    "timestamp": 1765298818.4539142,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "24581",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:46:58Z"
+  },
+  {
+    "timestamp": 1765298865.6148522,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "24575",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:47:45Z"
+  },
+  {
+    "timestamp": 1765298894.394596,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "24584",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:48:14Z"
+  },
+  {
+    "timestamp": 1765298932.7901409,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "24576",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:48:52Z"
+  },
+  {
+    "timestamp": 1765298982.0448582,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "24576",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:49:42Z"
+  },
+  {
+    "timestamp": 1765299018.188826,
+    "seed_id": "2005-II-7::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T16:50:18Z"
+  },
+  {
+    "timestamp": 1765299018.189108,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 84014102
+    },
+    "iso_time": "2025-12-09T16:50:18Z"
+  },
+  {
+    "timestamp": 1765299019.464787,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 10,
+        "b": 8,
+        "n": 3,
+        "m": 4,
+        "power": 16
+      }
+    },
+    "iso_time": "2025-12-09T16:50:19Z"
+  },
+  {
+    "timestamp": 1765299020.658114,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 800
+    },
+    "iso_time": "2025-12-09T16:50:20Z"
+  },
+  {
+    "timestamp": 1765299020.658298,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let real numbers x and y be defined by\nx = ((10-1)(8-1)) / ( [prod_{k=1..{n}} (10^(1/2^k)+1)] [prod_{k=1..{m}} (8^(1/2^k",
+      "correct_answer": "800",
+      "seed_value": 84014102
+    },
+    "iso_time": "2025-12-09T16:50:20Z"
+  },
+  {
+    "timestamp": 1765299020.6583538,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:50:20Z"
+  },
+  {
+    "timestamp": 1765299069.944423,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "805",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:51:09Z"
+  },
+  {
+    "timestamp": 1765299104.008072,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "807",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:51:44Z"
+  },
+  {
+    "timestamp": 1765299119.16517,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:51:59Z"
+  },
+  {
+    "timestamp": 1765299169.751094,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "801",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:52:49Z"
+  },
+  {
+    "timestamp": 1765299184.695831,
+    "seed_id": "2005-II-7::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T16:53:04Z"
+  },
+  {
+    "timestamp": 1765299184.6960819,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 551776257
+    },
+    "iso_time": "2025-12-09T16:53:04Z"
+  },
+  {
+    "timestamp": 1765299185.9693801,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 2,
+        "b": 8,
+        "n": 5,
+        "m": 3,
+        "power": 32
+      }
+    },
+    "iso_time": "2025-12-09T16:53:05Z"
+  },
+  {
+    "timestamp": 1765299187.190133,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8192
+    },
+    "iso_time": "2025-12-09T16:53:07Z"
+  },
+  {
+    "timestamp": 1765299187.190371,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let real numbers x and y be defined by\nx = ((2-1)(8-1)) / ( [prod_{k=1..{n}} (2^(1/2^k)+1)] [prod_{k=1..{m}} (8^(1/2^k)+",
+      "correct_answer": "8192",
+      "seed_value": 551776257
+    },
+    "iso_time": "2025-12-09T16:53:07Z"
+  },
+  {
+    "timestamp": 1765299187.1904361,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8195",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:53:07Z"
+  },
+  {
+    "timestamp": 1765299235.284168,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8186",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:53:55Z"
+  },
+  {
+    "timestamp": 1765299287.000374,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8192",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:54:47Z"
+  },
+  {
+    "timestamp": 1765299343.5911481,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8189",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:55:43Z"
+  },
+  {
+    "timestamp": 1765299360.892968,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8192",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:56:00Z"
+  },
+  {
+    "timestamp": 1765299400.210046,
+    "seed_id": "2005-II-7::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T16:56:40Z"
+  },
+  {
+    "timestamp": 1765299400.210301,
+    "seed_id": "2005-II-7::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-09T16:56:40Z"
+  },
+  {
+    "timestamp": 1765299400.210409,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Let $x=\\frac{4}{(\\sqrt{5}+1)(\\sqrt[4]{5}+1)(\\sqrt[8]{5}+1)(\\sqrt[16]{5}+1)}.$ Find $(x+1)^{48}.$",
+      "answer": "125",
+      "example_id": "2005-II-7::2005"
+    },
+    "iso_time": "2025-12-09T16:56:40Z"
+  },
+  {
+    "timestamp": 1765299698.032279,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 662364966
+    },
+    "iso_time": "2025-12-09T17:01:38Z"
+  },
+  {
+    "timestamp": 1765299699.374214,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 152587890625,
+        "b": 33232930569601,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:01:39Z"
+  },
+  {
+    "timestamp": 1765299700.602964,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:01:40Z"
+  },
+  {
+    "timestamp": 1765299701.836731,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 65536,
+        "b": 6561,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-12-09T17:01:41Z"
+  },
+  {
+    "timestamp": 1765299703.098336,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:01:43Z"
+  },
+  {
+    "timestamp": 1765299704.215294,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 5764801,
+        "b": 65536,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-12-09T17:01:44Z"
+  },
+  {
+    "timestamp": 1765299705.2940412,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:01:45Z"
+  },
+  {
+    "timestamp": 1765299706.45242,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 152587890625,
+        "b": 2821109907456,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:01:46Z"
+  },
+  {
+    "timestamp": 1765299707.686421,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:01:47Z"
+  },
+  {
+    "timestamp": 1765299708.8533928,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 1853020188851841,
+        "b": 33232930569601,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:01:48Z"
+  },
+  {
+    "timestamp": 1765299709.9457579,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:01:49Z"
+  },
+  {
+    "timestamp": 1765299709.9458408,
+    "seed_id": "2005-II-7::2005",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 11.913570165634155
+    },
+    "iso_time": "2025-12-09T17:01:49Z"
+  },
+  {
+    "timestamp": 1765299709.9459462,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 467558421
+    },
+    "iso_time": "2025-12-09T17:01:49Z"
+  },
+  {
+    "timestamp": 1765299710.892261,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 152587890625,
+        "b": 65536,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:01:50Z"
+  },
+  {
+    "timestamp": 1765299711.986042,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:01:51Z"
+  },
+  {
+    "timestamp": 1765299713.18845,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 390625,
+        "b": 43046721,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-12-09T17:01:53Z"
+  },
+  {
+    "timestamp": 1765299714.4028192,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:01:54Z"
+  },
+  {
+    "timestamp": 1765299715.5983381,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 65536,
+        "b": 6561,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-12-09T17:01:55Z"
+  },
+  {
+    "timestamp": 1765299716.713158,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:01:56Z"
+  },
+  {
+    "timestamp": 1765299717.8301098,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 65536,
+        "b": 281474976710656,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:01:57Z"
+  },
+  {
+    "timestamp": 1765299719.026881,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:01:59Z"
+  },
+  {
+    "timestamp": 1765299720.2233222,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 1679616,
+        "b": 43046721,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-12-09T17:02:00Z"
+  },
+  {
+    "timestamp": 1765299721.400382,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:01Z"
+  },
+  {
+    "timestamp": 1765299721.400477,
+    "seed_id": "2005-II-7::2005",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.454529762268066
+    },
+    "iso_time": "2025-12-09T17:02:01Z"
+  },
+  {
+    "timestamp": 1765299721.400528,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 507471714
+    },
+    "iso_time": "2025-12-09T17:02:01Z"
+  },
+  {
+    "timestamp": 1765299722.454787,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 33232930569601,
+        "b": 2821109907456,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:02:02Z"
+  },
+  {
+    "timestamp": 1765299723.594154,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:03Z"
+  },
+  {
+    "timestamp": 1765299724.715381,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 152587890625,
+        "b": 281474976710656,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:02:04Z"
+  },
+  {
+    "timestamp": 1765299725.760996,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:05Z"
+  },
+  {
+    "timestamp": 1765299727.004525,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 4294967296,
+        "b": 43046721,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:02:07Z"
+  },
+  {
+    "timestamp": 1765299728.192986,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:08Z"
+  },
+  {
+    "timestamp": 1765299729.288976,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 1853020188851841,
+        "b": 65536,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:02:09Z"
+  },
+  {
+    "timestamp": 1765299730.5506501,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:10Z"
+  },
+  {
+    "timestamp": 1765299731.784276,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 16777216,
+        "b": 390625,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-12-09T17:02:11Z"
+  },
+  {
+    "timestamp": 1765299732.916567,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:12Z"
+  },
+  {
+    "timestamp": 1765299732.916667,
+    "seed_id": "2005-II-7::2005",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.516138076782227
+    },
+    "iso_time": "2025-12-09T17:02:12Z"
+  },
+  {
+    "timestamp": 1765299732.9167209,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 432153290
+    },
+    "iso_time": "2025-12-09T17:02:12Z"
+  },
+  {
+    "timestamp": 1765299734.187786,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 256,
+        "b": 5764801,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-12-09T17:02:14Z"
+  },
+  {
+    "timestamp": 1765299735.4269838,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:15Z"
+  },
+  {
+    "timestamp": 1765299736.702144,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 33232930569601,
+        "b": 281474976710656,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:02:16Z"
+  },
+  {
+    "timestamp": 1765299737.8267121,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:17Z"
+  },
+  {
+    "timestamp": 1765299738.909228,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 256,
+        "b": 390625,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-12-09T17:02:18Z"
+  },
+  {
+    "timestamp": 1765299739.910204,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:19Z"
+  },
+  {
+    "timestamp": 1765299741.143061,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 7958661109946400884391936,
+        "b": 4294967296,
+        "m": 5
+      }
+    },
+    "iso_time": "2025-12-09T17:02:21Z"
+  },
+  {
+    "timestamp": 1765299742.265598,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:22Z"
+  },
+  {
+    "timestamp": 1765299743.544697,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 7958661109946400884391936,
+        "b": 4294967296,
+        "m": 5
+      }
+    },
+    "iso_time": "2025-12-09T17:02:23Z"
+  },
+  {
+    "timestamp": 1765299744.646532,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:24Z"
+  },
+  {
+    "timestamp": 1765299744.6466298,
+    "seed_id": "2005-II-7::2005",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.729909896850586
+    },
+    "iso_time": "2025-12-09T17:02:24Z"
+  },
+  {
+    "timestamp": 1765299744.6466749,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 296116913
+    },
+    "iso_time": "2025-12-09T17:02:24Z"
+  },
+  {
+    "timestamp": 1765299745.73979,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 43046721,
+        "b": 4294967296,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:02:25Z"
+  },
+  {
+    "timestamp": 1765299746.9661078,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:26Z"
+  },
+  {
+    "timestamp": 1765299748.280254,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 390625,
+        "b": 6561,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-12-09T17:02:28Z"
+  },
+  {
+    "timestamp": 1765299749.410926,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:29Z"
+  },
+  {
+    "timestamp": 1765299750.5718951,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 1679616,
+        "b": 16777216,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-12-09T17:02:30Z"
+  },
+  {
+    "timestamp": 1765299751.624212,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:31Z"
+  },
+  {
+    "timestamp": 1765299752.761953,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 6561,
+        "b": 1679616,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-12-09T17:02:32Z"
+  },
+  {
+    "timestamp": 1765299754.022769,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:34Z"
+  },
+  {
+    "timestamp": 1765299755.246119,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 4294967296,
+        "b": 152587890625,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-09T17:02:35Z"
+  },
+  {
+    "timestamp": 1765299756.4053812,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-09T17:02:36Z"
+  },
+  {
+    "timestamp": 1765299756.405532,
+    "seed_id": "2005-II-7::2005",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.758856296539307
+    },
+    "iso_time": "2025-12-09T17:02:36Z"
+  },
+  {
+    "timestamp": 1765299756.405566,
+    "seed_id": "2005-II-7::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-09T17:02:36Z"
+  },
+  {
+    "timestamp": 1765299756.40558,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "Let $x=\\frac{4}{(\\sqrt{5}+1)(\\sqrt[4]{5}+1)(\\sqrt[8]{5}+1)(\\sqrt[16]{5}+1)}.$ Find $(x+1)^{48}.$",
+      "answer": "125",
+      "example_id": "2005-II-7::2005"
+    },
+    "iso_time": "2025-12-09T17:02:36Z"
+  },
+  {
+    "timestamp": 1765299989.584834,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1939421600
+    },
+    "iso_time": "2025-12-09T17:06:29Z"
+  },
+  {
+    "timestamp": 1765299990.906666,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 6,
+        "n": 6,
+        "r1": 8,
+        "r2": 4,
+        "r3": 3,
+        "m": 128
+      }
+    },
+    "iso_time": "2025-12-09T17:06:30Z"
+  },
+  {
+    "timestamp": 1765299992.083138,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 221073919720733357899776
+    },
+    "iso_time": "2025-12-09T17:06:32Z"
+  },
+  {
+    "timestamp": 1765299992.083324,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let base = 6 > 1 be an integer and n = 6 be a positive integer. Define three quantities as follows:\n- x = (6^8 - 1) / pr",
+      "correct_answer": "221073919720733357899776",
+      "seed_value": 1939421600
+    },
+    "iso_time": "2025-12-09T17:06:32Z"
+  },
+  {
+    "timestamp": 1765299992.083383,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "221073919720733357899780",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:06:32Z"
+  },
+  {
+    "timestamp": 1765300030.334208,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "221073919720733357899781",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:07:10Z"
+  },
+  {
+    "timestamp": 1765300091.4019341,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "221073919720733357899776",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:08:11Z"
+  },
+  {
+    "timestamp": 1765300128.1705348,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "221073919720733357899773",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:08:48Z"
+  },
+  {
+    "timestamp": 1765300225.861551,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "221073919720733357899776",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:10:25Z"
+  },
+  {
+    "timestamp": 1765300398.2927492,
+    "seed_id": "2005-II-7::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-7::2005_prompt03-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T17:13:18Z"
+  },
+  {
+    "timestamp": 1765300398.2929401,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1575082347
+    },
+    "iso_time": "2025-12-09T17:13:18Z"
+  },
+  {
+    "timestamp": 1765300399.69154,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 2,
+        "n": 5,
+        "r1": 14,
+        "r2": 13,
+        "r3": 39,
+        "m": 16
+      }
+    },
+    "iso_time": "2025-12-09T17:13:19Z"
+  },
+  {
+    "timestamp": 1765300400.906541,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8589934592
+    },
+    "iso_time": "2025-12-09T17:13:20Z"
+  },
+  {
+    "timestamp": 1765300400.906754,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let base = 2 > 1 be an integer and n = 5 be a positive integer. Define three quantities as follows:\n- x = (2^14 - 1) / p",
+      "correct_answer": "8589934592",
+      "seed_value": 1575082347
+    },
+    "iso_time": "2025-12-09T17:13:20Z"
+  },
+  {
+    "timestamp": 1765300400.906816,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8589934595",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:13:20Z"
+  },
+  {
+    "timestamp": 1765300442.535133,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8589934592",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:14:02Z"
+  },
+  {
+    "timestamp": 1765300496.9051871,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8589934589",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:14:56Z"
+  },
+  {
+    "timestamp": 1765300550.050283,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8589934592",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:15:50Z"
+  },
+  {
+    "timestamp": 1765300598.177639,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8589934587",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:16:38Z"
+  },
+  {
+    "timestamp": 1765300650.60205,
+    "seed_id": "2005-II-7::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-7::2005_prompt03-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T17:17:30Z"
+  },
+  {
+    "timestamp": 1765300650.602132,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1982992220
+    },
+    "iso_time": "2025-12-09T17:17:30Z"
+  },
+  {
+    "timestamp": 1765300651.679414,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 8,
+        "n": 3,
+        "r1": 38,
+        "r2": 32,
+        "r3": 34,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-12-09T17:17:31Z"
+  },
+  {
+    "timestamp": 1765300652.8143811,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 302231454903657293676544
+    },
+    "iso_time": "2025-12-09T17:17:32Z"
+  },
+  {
+    "timestamp": 1765300652.814545,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let base = 8 > 1 be an integer and n = 3 be a positive integer. Define three quantities as follows:\n- x = (8^38 - 1) / p",
+      "correct_answer": "302231454903657293676544",
+      "seed_value": 1982992220
+    },
+    "iso_time": "2025-12-09T17:17:32Z"
+  },
+  {
+    "timestamp": 1765300652.814602,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "302231454903657293676544",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:17:32Z"
+  },
+  {
+    "timestamp": 1765300713.525822,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "302231454903657293676538",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:18:33Z"
+  },
+  {
+    "timestamp": 1765300821.5117388,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "302231454903657293676544",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:20:21Z"
+  },
+  {
+    "timestamp": 1765300855.2471418,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "302231454903657293676545",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:20:55Z"
+  },
+  {
+    "timestamp": 1765300921.759923,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "302231454903657293676550",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:22:01Z"
+  },
+  {
+    "timestamp": 1765300992.946143,
+    "seed_id": "2005-II-7::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-7::2005_prompt03-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T17:23:12Z"
+  },
+  {
+    "timestamp": 1765300992.94633,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 220415815
+    },
+    "iso_time": "2025-12-09T17:23:12Z"
+  },
+  {
+    "timestamp": 1765300994.0535412,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 8,
+        "n": 4,
+        "r1": 25,
+        "r2": 10,
+        "r3": 19,
+        "m": 8
+      }
+    },
+    "iso_time": "2025-12-09T17:23:14Z"
+  },
+  {
+    "timestamp": 1765300995.215105,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2417851639229258349412352
+    },
+    "iso_time": "2025-12-09T17:23:15Z"
+  },
+  {
+    "timestamp": 1765300995.215271,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let base = 8 > 1 be an integer and n = 4 be a positive integer. Define three quantities as follows:\n- x = (8^25 - 1) / p",
+      "correct_answer": "2417851639229258349412352",
+      "seed_value": 220415815
+    },
+    "iso_time": "2025-12-09T17:23:15Z"
+  },
+  {
+    "timestamp": 1765300995.215322,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2417851639229258349412352",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:23:15Z"
+  },
+  {
+    "timestamp": 1765301066.962166,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2417851639229258349412346",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:24:26Z"
+  },
+  {
+    "timestamp": 1765301106.59281,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2417851639229258349412344",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:25:06Z"
+  },
+  {
+    "timestamp": 1765301215.033302,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2417851639229258349412354",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:26:55Z"
+  },
+  {
+    "timestamp": 1765301282.511914,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2417851639229258349412352",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:28:02Z"
+  },
+  {
+    "timestamp": 1765301309.651656,
+    "seed_id": "2005-II-7::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-7::2005_prompt03-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T17:28:29Z"
+  },
+  {
+    "timestamp": 1765301309.6518369,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-7::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 1801462680
+    },
+    "iso_time": "2025-12-09T17:28:29Z"
+  },
+  {
+    "timestamp": 1765301310.909176,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 5,
+        "n": 6,
+        "r1": 26,
+        "r2": 6,
+        "r3": 3,
+        "m": 64
+      }
+    },
+    "iso_time": "2025-12-09T17:28:30Z"
+  },
+  {
+    "timestamp": 1765301311.9925911,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2910383045673370361328125
+    },
+    "iso_time": "2025-12-09T17:28:31Z"
+  },
+  {
+    "timestamp": 1765301311.9928188,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let base = 5 > 1 be an integer and n = 6 be a positive integer. Define three quantities as follows:\n- x = (5^26 - 1) / p",
+      "correct_answer": "2910383045673370361328125",
+      "seed_value": 1801462680
+    },
+    "iso_time": "2025-12-09T17:28:31Z"
+  },
+  {
+    "timestamp": 1765301311.9928849,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2910383045673370270040061",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:28:31Z"
+  },
+  {
+    "timestamp": 1765301414.810177,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2910383045673370361328125",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:30:14Z"
+  },
+  {
+    "timestamp": 1765301504.592484,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2910383045673370361328125",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:31:44Z"
+  },
+  {
+    "timestamp": 1765301541.121147,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2910383045673370270040068",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:32:21Z"
+  },
+  {
+    "timestamp": 1765301680.290904,
+    "seed_id": "2005-II-7::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2910383045673370270040066",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:34:40Z"
+  },
+  {
+    "timestamp": 1765301797.024411,
+    "seed_id": "2005-II-7::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-7::2005_prompt03-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T17:36:37Z"
+  }
+]

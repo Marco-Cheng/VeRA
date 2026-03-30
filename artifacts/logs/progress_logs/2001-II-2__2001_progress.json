@@ -1,0 +1,734 @@
+[
+  {
+    "timestamp": 1764588529.690242,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "Each of the 2001 students at a high school studies either Spanish or French, and some study both. The number who study S",
+      "answer": "298",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T11:28:49Z"
+  },
+  {
+    "timestamp": 1764588529.6905768,
+    "seed_id": "2001-II-2::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T11:28:49Z"
+  },
+  {
+    "timestamp": 1764588529.690611,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Each of the 2001 students at a high school studies either Spanish or French, and some study both. The number who study Spanish is between 80 percent and 85 percent of the school population, and the number who study French is between 30 percent and 40 percent. Let $m$ be the smallest number of students who could study both languages, and let $M$ be the largest number of students who could study both languages. Find $M-m$ .",
+      "answer": "298",
+      "example_id": "2001-II-2::2001"
+    },
+    "iso_time": "2025-12-01T11:28:49Z"
+  },
+  {
+    "timestamp": 1764589133.734674,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-2::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 970389930
+    },
+    "iso_time": "2025-12-01T11:38:53Z"
+  },
+  {
+    "timestamp": 1764589135.174149,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 924,
+        "s_low_spanish": 548,
+        "s_high_spanish": 622,
+        "s_low_french": 532,
+        "s_high_french": 590,
+        "s_low_german": 527,
+        "s_high_german": 563,
+        "p_low_sf": 322,
+        "p_high_sf": 342,
+        "p_low_sg": 279,
+        "p_high_sg": 315,
+        "p_low_fg": 318,
+        "p_high_fg": 338
+      }
+    },
+    "iso_time": "2025-12-01T11:38:55Z"
+  },
+  {
+    "timestamp": 1764589136.254241,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 244
+    },
+    "iso_time": "2025-12-01T11:38:56Z"
+  },
+  {
+    "timestamp": 1764589136.254396,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a high school with 924 students, each student studies at least one of three languages: Spanish (S), French (F), and G",
+      "correct_answer": "244",
+      "seed_value": 970389930
+    },
+    "iso_time": "2025-12-01T11:38:56Z"
+  },
+  {
+    "timestamp": 1764589136.254464,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T11:38:56Z"
+  },
+  {
+    "timestamp": 1764589403.808678,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "244",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T11:43:23Z"
+  },
+  {
+    "timestamp": 1764589597.773551,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "239",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T11:46:37Z"
+  },
+  {
+    "timestamp": 1764589827.61039,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "240",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T11:50:27Z"
+  },
+  {
+    "timestamp": 1764589856.7753432,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "244",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T11:50:56Z"
+  },
+  {
+    "timestamp": 1764589897.195808,
+    "seed_id": "2001-II-2::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-2::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T11:51:37Z"
+  },
+  {
+    "timestamp": 1764589897.1959648,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-2::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1072800628
+    },
+    "iso_time": "2025-12-01T11:51:37Z"
+  },
+  {
+    "timestamp": 1764589898.589741,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 1488,
+        "s_low_spanish": 843,
+        "s_high_spanish": 967,
+        "s_low_french": 1010,
+        "s_high_french": 1069,
+        "s_low_german": 840,
+        "s_high_german": 950,
+        "p_low_sf": 401,
+        "p_high_sf": 410,
+        "p_low_sg": 479,
+        "p_high_sg": 516,
+        "p_low_fg": 779,
+        "p_high_fg": 810
+      }
+    },
+    "iso_time": "2025-12-01T11:51:38Z"
+  },
+  {
+    "timestamp": 1764589899.7102358,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 102
+    },
+    "iso_time": "2025-12-01T11:51:39Z"
+  },
+  {
+    "timestamp": 1764589899.7103941,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a high school with 1488 students, each student studies at least one of three languages: Spanish (S), French (F), and ",
+      "correct_answer": "102",
+      "seed_value": 1072800628
+    },
+    "iso_time": "2025-12-01T11:51:39Z"
+  },
+  {
+    "timestamp": 1764589899.710453,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "102",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T11:51:39Z"
+  },
+  {
+    "timestamp": 1764589974.716987,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "103",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T11:52:54Z"
+  },
+  {
+    "timestamp": 1764590100.356715,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "107",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T11:55:00Z"
+  },
+  {
+    "timestamp": 1764590265.121968,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "102",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T11:57:45Z"
+  },
+  {
+    "timestamp": 1764590360.142146,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "108",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T11:59:20Z"
+  },
+  {
+    "timestamp": 1764590409.049591,
+    "seed_id": "2001-II-2::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-2::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T12:00:09Z"
+  },
+  {
+    "timestamp": 1764590409.049665,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-2::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 96389620
+    },
+    "iso_time": "2025-12-01T12:00:09Z"
+  },
+  {
+    "timestamp": 1764590410.215433,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 1813,
+        "s_low_spanish": 1163,
+        "s_high_spanish": 1240,
+        "s_low_french": 1018,
+        "s_high_french": 1108,
+        "s_low_german": 1224,
+        "s_high_german": 1343,
+        "p_low_sf": 654,
+        "p_high_sf": 668,
+        "p_low_sg": 614,
+        "p_high_sg": 640,
+        "p_low_fg": 1031,
+        "p_high_fg": 1039
+      }
+    },
+    "iso_time": "2025-12-01T12:00:10Z"
+  },
+  {
+    "timestamp": 1764590411.371407,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 63
+    },
+    "iso_time": "2025-12-01T12:00:11Z"
+  },
+  {
+    "timestamp": 1764590411.371576,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a high school with 1813 students, each student studies at least one of three languages: Spanish (S), French (F), and ",
+      "correct_answer": "63",
+      "seed_value": 96389620
+    },
+    "iso_time": "2025-12-01T12:00:11Z"
+  },
+  {
+    "timestamp": 1764590411.3716412,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "63",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T12:00:11Z"
+  },
+  {
+    "timestamp": 1764591605.91186,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "63",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T12:20:05Z"
+  },
+  {
+    "timestamp": 1764591670.687117,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "66",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T12:21:10Z"
+  },
+  {
+    "timestamp": 1764591737.1216278,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "70",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T12:22:17Z"
+  },
+  {
+    "timestamp": 1764592157.441348,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "72",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T12:29:17Z"
+  },
+  {
+    "timestamp": 1764592534.609505,
+    "seed_id": "2001-II-2::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-2::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T12:35:34Z"
+  },
+  {
+    "timestamp": 1764592534.6096718,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-2::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1884595800
+    },
+    "iso_time": "2025-12-01T12:35:34Z"
+  },
+  {
+    "timestamp": 1764592535.9673338,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 1042,
+        "s_low_spanish": 630,
+        "s_high_spanish": 679,
+        "s_low_french": 650,
+        "s_high_french": 697,
+        "s_low_german": 603,
+        "s_high_german": 665,
+        "p_low_sf": 252,
+        "p_high_sf": 274,
+        "p_low_sg": 447,
+        "p_high_sg": 458,
+        "p_low_fg": 466,
+        "p_high_fg": 503
+      }
+    },
+    "iso_time": "2025-12-01T12:35:35Z"
+  },
+  {
+    "timestamp": 1764592537.160641,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 26
+    },
+    "iso_time": "2025-12-01T12:35:37Z"
+  },
+  {
+    "timestamp": 1764592537.160835,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a high school with 1042 students, each student studies at least one of three languages: Spanish (S), French (F), and ",
+      "correct_answer": "26",
+      "seed_value": 1884595800
+    },
+    "iso_time": "2025-12-01T12:35:37Z"
+  },
+  {
+    "timestamp": 1764592537.1608992,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "26",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T12:35:37Z"
+  },
+  {
+    "timestamp": 1764592624.621494,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T12:37:04Z"
+  },
+  {
+    "timestamp": 1764592722.6221561,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "26",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T12:38:42Z"
+  },
+  {
+    "timestamp": 1764592919.253559,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "23",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T12:41:59Z"
+  },
+  {
+    "timestamp": 1764593204.391519,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "29",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T12:46:44Z"
+  },
+  {
+    "timestamp": 1764593264.8429701,
+    "seed_id": "2001-II-2::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-2::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T12:47:44Z"
+  },
+  {
+    "timestamp": 1764593264.843067,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-2::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1516287647
+    },
+    "iso_time": "2025-12-01T12:47:44Z"
+  },
+  {
+    "timestamp": 1764593266.237451,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 1180,
+        "s_low_spanish": 726,
+        "s_high_spanish": 820,
+        "s_low_french": 829,
+        "s_high_french": 894,
+        "s_low_german": 721,
+        "s_high_german": 775,
+        "p_low_sf": 638,
+        "p_high_sf": 659,
+        "p_low_sg": 529,
+        "p_high_sg": 555,
+        "p_low_fg": 640,
+        "p_high_fg": 655
+      }
+    },
+    "iso_time": "2025-12-01T12:47:46Z"
+  },
+  {
+    "timestamp": 1764593267.2863119,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 57
+    },
+    "iso_time": "2025-12-01T12:47:47Z"
+  },
+  {
+    "timestamp": 1764593267.286454,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a high school with 1180 students, each student studies at least one of three languages: Spanish (S), French (F), and ",
+      "correct_answer": "57",
+      "seed_value": 1516287647
+    },
+    "iso_time": "2025-12-01T12:47:47Z"
+  },
+  {
+    "timestamp": 1764593267.286506,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "55",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T12:47:47Z"
+  },
+  {
+    "timestamp": 1764593479.042432,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "49",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T12:51:19Z"
+  },
+  {
+    "timestamp": 1764593525.762281,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "57",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T12:52:05Z"
+  },
+  {
+    "timestamp": 1764593851.3378718,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "56",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T12:57:31Z"
+  },
+  {
+    "timestamp": 1764594394.168601,
+    "seed_id": "2001-II-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "57",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T13:06:34Z"
+  },
+  {
+    "timestamp": 1764594427.1726851,
+    "seed_id": "2001-II-2::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-2::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T13:07:07Z"
+  }
+]

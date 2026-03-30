@@ -1,0 +1,704 @@
+[
+  {
+    "timestamp": 1765280068.384522,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "A game uses a deck of $n$ different cards, where $n$ is an integer and $n \\geq 6.$ The number of possible sets of 6 card",
+      "answer": "13",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T11:34:28Z"
+  },
+  {
+    "timestamp": 1765280068.384567,
+    "seed_id": "2005-II-1::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T11:34:28Z"
+  },
+  {
+    "timestamp": 1765280068.384587,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A game uses a deck of $n$ different cards, where $n$ is an integer and $n \\geq 6.$ The number of possible sets of 6 cards that can be drawn from the deck is 6 times the number of possible sets of 3 cards that can be drawn. Find $n.$",
+      "answer": "13",
+      "example_id": "2005-II-1::2005"
+    },
+    "iso_time": "2025-12-09T11:34:28Z"
+  },
+  {
+    "timestamp": 1765280409.337274,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-1::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 482639029
+    },
+    "iso_time": "2025-12-09T11:40:09Z"
+  },
+  {
+    "timestamp": 1765280410.733321,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "min_n": 10,
+        "r1": 8,
+        "s1": 5,
+        "k1": 329,
+        "r2": 11,
+        "s2": 8,
+        "k2": 92
+      }
+    },
+    "iso_time": "2025-12-09T11:40:10Z"
+  },
+  {
+    "timestamp": 1765280411.809858,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 54
+    },
+    "iso_time": "2025-12-09T11:40:11Z"
+  },
+  {
+    "timestamp": 1765280411.810015,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A card game uses a deck of n distinct cards, with n ≥ 10. It is known that two independent constraints hold simultaneous",
+      "correct_answer": "54",
+      "seed_value": 482639029
+    },
+    "iso_time": "2025-12-09T11:40:11Z"
+  },
+  {
+    "timestamp": 1765280411.810081,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "48",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:40:11Z"
+  },
+  {
+    "timestamp": 1765280497.372007,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "54",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:41:37Z"
+  },
+  {
+    "timestamp": 1765280512.757316,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "47",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:41:52Z"
+  },
+  {
+    "timestamp": 1765280553.7382631,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "53",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:42:33Z"
+  },
+  {
+    "timestamp": 1765280579.997238,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "54",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:42:59Z"
+  },
+  {
+    "timestamp": 1765280626.2194612,
+    "seed_id": "2005-II-1::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-1::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T11:43:46Z"
+  },
+  {
+    "timestamp": 1765280626.219639,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-1::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1629718932
+    },
+    "iso_time": "2025-12-09T11:43:46Z"
+  },
+  {
+    "timestamp": 1765280627.5207539,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "min_n": 10,
+        "r1": 6,
+        "s1": 2,
+        "k1": 48048,
+        "r2": 7,
+        "s2": 3,
+        "k2": 19344
+      }
+    },
+    "iso_time": "2025-12-09T11:43:47Z"
+  },
+  {
+    "timestamp": 1765280628.750176,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 68
+    },
+    "iso_time": "2025-12-09T11:43:48Z"
+  },
+  {
+    "timestamp": 1765280628.75038,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A card game uses a deck of n distinct cards, with n ≥ 10. It is known that two independent constraints hold simultaneous",
+      "correct_answer": "68",
+      "seed_value": 1629718932
+    },
+    "iso_time": "2025-12-09T11:43:48Z"
+  },
+  {
+    "timestamp": 1765280628.750444,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "68",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:43:48Z"
+  },
+  {
+    "timestamp": 1765280671.454296,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "76",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:44:31Z"
+  },
+  {
+    "timestamp": 1765280691.564397,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "68",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:44:51Z"
+  },
+  {
+    "timestamp": 1765280755.336688,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "67",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:45:55Z"
+  },
+  {
+    "timestamp": 1765280788.433017,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "75",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:46:28Z"
+  },
+  {
+    "timestamp": 1765280834.7067251,
+    "seed_id": "2005-II-1::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-1::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T11:47:14Z"
+  },
+  {
+    "timestamp": 1765280834.7069051,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-1::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1898408192
+    },
+    "iso_time": "2025-12-09T11:47:14Z"
+  },
+  {
+    "timestamp": 1765280835.9897,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "min_n": 15,
+        "r1": 12,
+        "s1": 8,
+        "k1": 689,
+        "r2": 10,
+        "s2": 7,
+        "k2": 231
+      }
+    },
+    "iso_time": "2025-12-09T11:47:15Z"
+  },
+  {
+    "timestamp": 1765280837.229868,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 63
+    },
+    "iso_time": "2025-12-09T11:47:17Z"
+  },
+  {
+    "timestamp": 1765280837.230067,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A card game uses a deck of n distinct cards, with n ≥ 15. It is known that two independent constraints hold simultaneous",
+      "correct_answer": "63",
+      "seed_value": 1898408192
+    },
+    "iso_time": "2025-12-09T11:47:17Z"
+  },
+  {
+    "timestamp": 1765280837.230127,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "55",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:47:17Z"
+  },
+  {
+    "timestamp": 1765280916.428992,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "63",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:48:36Z"
+  },
+  {
+    "timestamp": 1765280966.1301692,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "65",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:49:26Z"
+  },
+  {
+    "timestamp": 1765281040.7236118,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "67",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:50:40Z"
+  },
+  {
+    "timestamp": 1765281092.65283,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "63",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:51:32Z"
+  },
+  {
+    "timestamp": 1765281168.184823,
+    "seed_id": "2005-II-1::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-1::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T11:52:48Z"
+  },
+  {
+    "timestamp": 1765281168.1849961,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-1::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 298832096
+    },
+    "iso_time": "2025-12-09T11:52:48Z"
+  },
+  {
+    "timestamp": 1765281169.513568,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "min_n": 10,
+        "r1": 8,
+        "s1": 5,
+        "k1": 1065,
+        "r2": 6,
+        "s2": 2,
+        "k2": 81030
+      }
+    },
+    "iso_time": "2025-12-09T11:52:49Z"
+  },
+  {
+    "timestamp": 1765281170.696075,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 77
+    },
+    "iso_time": "2025-12-09T11:52:50Z"
+  },
+  {
+    "timestamp": 1765281170.6962528,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A card game uses a deck of n distinct cards, with n ≥ 10. It is known that two independent constraints hold simultaneous",
+      "correct_answer": "77",
+      "seed_value": 298832096
+    },
+    "iso_time": "2025-12-09T11:52:50Z"
+  },
+  {
+    "timestamp": 1765281170.69632,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "81",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:52:50Z"
+  },
+  {
+    "timestamp": 1765281231.0037389,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "79",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:53:51Z"
+  },
+  {
+    "timestamp": 1765281298.853166,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "69",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:54:58Z"
+  },
+  {
+    "timestamp": 1765281353.258997,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "77",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:55:53Z"
+  },
+  {
+    "timestamp": 1765281381.956991,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "77",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:56:21Z"
+  },
+  {
+    "timestamp": 1765281403.026657,
+    "seed_id": "2005-II-1::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-1::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T11:56:43Z"
+  },
+  {
+    "timestamp": 1765281403.026847,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-1::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1729744122
+    },
+    "iso_time": "2025-12-09T11:56:43Z"
+  },
+  {
+    "timestamp": 1765281404.38315,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "min_n": 10,
+        "r1": 8,
+        "s1": 5,
+        "k1": 495,
+        "r2": 7,
+        "s2": 3,
+        "k2": 12122
+      }
+    },
+    "iso_time": "2025-12-09T11:56:44Z"
+  },
+  {
+    "timestamp": 1765281405.5598001,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 61
+    },
+    "iso_time": "2025-12-09T11:56:45Z"
+  },
+  {
+    "timestamp": 1765281405.559999,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A card game uses a deck of n distinct cards, with n ≥ 10. It is known that two independent constraints hold simultaneous",
+      "correct_answer": "61",
+      "seed_value": 1729744122
+    },
+    "iso_time": "2025-12-09T11:56:45Z"
+  },
+  {
+    "timestamp": 1765281405.5600798,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "59",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:56:45Z"
+  },
+  {
+    "timestamp": 1765281460.681379,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "68",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:57:40Z"
+  },
+  {
+    "timestamp": 1765281481.776326,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "64",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:58:01Z"
+  },
+  {
+    "timestamp": 1765281533.07854,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "61",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:58:53Z"
+  },
+  {
+    "timestamp": 1765281561.260997,
+    "seed_id": "2005-II-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "61",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:59:21Z"
+  },
+  {
+    "timestamp": 1765281598.840352,
+    "seed_id": "2005-II-1::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-1::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T11:59:58Z"
+  }
+]

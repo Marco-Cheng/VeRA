@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1763240520.058465,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1989,
+      "question_preview": "Compute $\\sqrt{(31)(30)(29)(28)+1}$ .",
+      "answer": "869",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-15T21:02:00Z"
+  },
+  {
+    "timestamp": 1763240520.058537,
+    "seed_id": "1989-1::1989",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-15T21:02:00Z"
+  },
+  {
+    "timestamp": 1763240520.058583,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Compute $\\sqrt{(31)(30)(29)(28)+1}$ .",
+      "answer": "869",
+      "example_id": "1989-1::1989"
+    },
+    "iso_time": "2025-11-15T21:02:00Z"
+  },
+  {
+    "timestamp": 1763240673.797337,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-1::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1523335370
+    },
+    "iso_time": "2025-11-15T21:04:33Z"
+  },
+  {
+    "timestamp": 1763240674.599612,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u": 9,
+        "v": 1,
+        "u_sq": 81,
+        "v_sq": 1,
+        "y0": 14
+      }
+    },
+    "iso_time": "2025-11-15T21:04:34Z"
+  },
+  {
+    "timestamp": 1763240675.352968,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 155
+    },
+    "iso_time": "2025-11-15T21:04:35Z"
+  },
+  {
+    "timestamp": 1763240675.353101,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $u=9$ and $v=1$ be two positive integers. A polynomial $P(y)$ is defined by the expression $P(y) = (y^2 - 81)(y^2 - ",
+      "correct_answer": "155",
+      "seed_value": 1523335370
+    },
+    "iso_time": "2025-11-15T21:04:35Z"
+  },
+  {
+    "timestamp": 1763240675.3531442,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "154",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:04:35Z"
+  },
+  {
+    "timestamp": 1763240770.0732548,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "163",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:06:10Z"
+  },
+  {
+    "timestamp": 1763240885.0699189,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "155",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T21:08:05Z"
+  },
+  {
+    "timestamp": 1763240951.4259279,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "155",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T21:09:11Z"
+  },
+  {
+    "timestamp": 1763241025.6667142,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "151",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:10:25Z"
+  },
+  {
+    "timestamp": 1763241108.722645,
+    "seed_id": "1989-1::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-1::1989_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T21:11:48Z"
+  },
+  {
+    "timestamp": 1763241108.722859,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-1::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2044355528
+    },
+    "iso_time": "2025-11-15T21:11:48Z"
+  },
+  {
+    "timestamp": 1763241109.6593568,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u": 5,
+        "v": 3,
+        "u_sq": 25,
+        "v_sq": 9,
+        "y0": 9
+      }
+    },
+    "iso_time": "2025-11-15T21:11:49Z"
+  },
+  {
+    "timestamp": 1763241110.397813,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 64
+    },
+    "iso_time": "2025-11-15T21:11:50Z"
+  },
+  {
+    "timestamp": 1763241110.397962,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $u=5$ and $v=3$ be two positive integers. A polynomial $P(y)$ is defined by the expression $P(y) = (y^2 - 25)(y^2 - ",
+      "correct_answer": "64",
+      "seed_value": 2044355528
+    },
+    "iso_time": "2025-11-15T21:11:50Z"
+  },
+  {
+    "timestamp": 1763241110.3980072,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "64",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T21:11:50Z"
+  },
+  {
+    "timestamp": 1763241166.162663,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "63",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:12:46Z"
+  },
+  {
+    "timestamp": 1763241285.910013,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "64",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T21:14:45Z"
+  },
+  {
+    "timestamp": 1763241357.8609421,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "62",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:15:57Z"
+  },
+  {
+    "timestamp": 1763241466.464653,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "58",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:17:46Z"
+  },
+  {
+    "timestamp": 1763241573.892642,
+    "seed_id": "1989-1::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-1::1989_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T21:19:33Z"
+  },
+  {
+    "timestamp": 1763241573.892842,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-1::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1948684570
+    },
+    "iso_time": "2025-11-15T21:19:33Z"
+  },
+  {
+    "timestamp": 1763241574.6442182,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u": 9,
+        "v": 3,
+        "u_sq": 81,
+        "v_sq": 9,
+        "y0": 12
+      }
+    },
+    "iso_time": "2025-11-15T21:19:34Z"
+  },
+  {
+    "timestamp": 1763241575.381418,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 99
+    },
+    "iso_time": "2025-11-15T21:19:35Z"
+  },
+  {
+    "timestamp": 1763241575.381557,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $u=9$ and $v=3$ be two positive integers. A polynomial $P(y)$ is defined by the expression $P(y) = (y^2 - 81)(y^2 - ",
+      "correct_answer": "99",
+      "seed_value": 1948684570
+    },
+    "iso_time": "2025-11-15T21:19:35Z"
+  },
+  {
+    "timestamp": 1763241575.381598,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "107",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:19:35Z"
+  },
+  {
+    "timestamp": 1763241690.727573,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "99",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T21:21:30Z"
+  },
+  {
+    "timestamp": 1763241751.3149061,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "92",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:22:31Z"
+  },
+  {
+    "timestamp": 1763241829.1449301,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "100",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:23:49Z"
+  },
+  {
+    "timestamp": 1763241908.449449,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "99",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T21:25:08Z"
+  },
+  {
+    "timestamp": 1763241986.157601,
+    "seed_id": "1989-1::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-1::1989_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T21:26:26Z"
+  },
+  {
+    "timestamp": 1763241986.1578088,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-1::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1087975810
+    },
+    "iso_time": "2025-11-15T21:26:26Z"
+  },
+  {
+    "timestamp": 1763241986.934417,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u": 12,
+        "v": 8,
+        "u_sq": 144,
+        "v_sq": 64,
+        "y0": 14
+      }
+    },
+    "iso_time": "2025-11-15T21:26:26Z"
+  },
+  {
+    "timestamp": 1763241987.676613,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 92
+    },
+    "iso_time": "2025-11-15T21:26:27Z"
+  },
+  {
+    "timestamp": 1763241987.676769,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $u=12$ and $v=8$ be two positive integers. A polynomial $P(y)$ is defined by the expression $P(y) = (y^2 - 144)(y^2 ",
+      "correct_answer": "92",
+      "seed_value": 1087975810
+    },
+    "iso_time": "2025-11-15T21:26:27Z"
+  },
+  {
+    "timestamp": 1763241987.676812,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "96",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:26:27Z"
+  },
+  {
+    "timestamp": 1763242107.782391,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "99",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:28:27Z"
+  },
+  {
+    "timestamp": 1763242209.2076612,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "98",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:30:09Z"
+  },
+  {
+    "timestamp": 1763242327.045789,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "92",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T21:32:07Z"
+  },
+  {
+    "timestamp": 1763242383.087738,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "92",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T21:33:03Z"
+  },
+  {
+    "timestamp": 1763242439.717876,
+    "seed_id": "1989-1::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-1::1989_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T21:33:59Z"
+  },
+  {
+    "timestamp": 1763242439.717952,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-1::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1898887783
+    },
+    "iso_time": "2025-11-15T21:33:59Z"
+  },
+  {
+    "timestamp": 1763242440.680398,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u": 14,
+        "v": 4,
+        "u_sq": 196,
+        "v_sq": 16,
+        "y0": 15
+      }
+    },
+    "iso_time": "2025-11-15T21:34:00Z"
+  },
+  {
+    "timestamp": 1763242441.552557,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 119
+    },
+    "iso_time": "2025-11-15T21:34:01Z"
+  },
+  {
+    "timestamp": 1763242441.5527282,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $u=14$ and $v=4$ be two positive integers. A polynomial $P(y)$ is defined by the expression $P(y) = (y^2 - 196)(y^2 ",
+      "correct_answer": "119",
+      "seed_value": 1898887783
+    },
+    "iso_time": "2025-11-15T21:34:01Z"
+  },
+  {
+    "timestamp": 1763242441.552789,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "119",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T21:34:01Z"
+  },
+  {
+    "timestamp": 1763242511.2663412,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "119",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T21:35:11Z"
+  },
+  {
+    "timestamp": 1763242580.703371,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "125",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:36:20Z"
+  },
+  {
+    "timestamp": 1763242668.026918,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "126",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:37:48Z"
+  },
+  {
+    "timestamp": 1763242786.7361228,
+    "seed_id": "1989-1::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "111",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T21:39:46Z"
+  },
+  {
+    "timestamp": 1763242911.248193,
+    "seed_id": "1989-1::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-1::1989_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T21:41:51Z"
+  }
+]

@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1764382077.4326131,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "Let $u$ and $v$ be integers satisfying $0 < v < u$ . Let $A = (u,v)$ , let $B$ be the reflection of $A$ across the line ",
+      "answer": "21",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T02:07:57Z"
+  },
+  {
+    "timestamp": 1764382077.4326668,
+    "seed_id": "2000-I-2::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T02:07:57Z"
+  },
+  {
+    "timestamp": 1764382077.432693,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $u$ and $v$ be integers satisfying $0 < v < u$ . Let $A = (u,v)$ , let $B$ be the reflection of $A$ across the line $y = x$ , let $C$ be the reflection of $B$ across the y-axis, let $D$ be the reflection of $C$ across the x-axis, and let $E$ be the reflection of $D$ across the y-axis. The area of pentagon $ABCDE$ is $451$ . Find $u + v$ .",
+      "answer": "21",
+      "example_id": "2000-I-2::2000"
+    },
+    "iso_time": "2025-11-29T02:07:57Z"
+  },
+  {
+    "timestamp": 1764382254.2680378,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-2::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1620798209
+    },
+    "iso_time": "2025-11-29T02:10:54Z"
+  },
+  {
+    "timestamp": 1764382255.45733,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "area": 11916,
+        "interior": 11713,
+        "u": 60,
+        "v": 42,
+        "sum_uv": 102
+      }
+    },
+    "iso_time": "2025-11-29T02:10:55Z"
+  },
+  {
+    "timestamp": 1764382256.5297432,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 102
+    },
+    "iso_time": "2025-11-29T02:10:56Z"
+  },
+  {
+    "timestamp": 1764382256.529902,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let A = (u, v) be integers with 0 < v < u. Construct points by successive reflections as follows: B is the reflection of",
+      "correct_answer": "102",
+      "seed_value": 1620798209
+    },
+    "iso_time": "2025-11-29T02:10:56Z"
+  },
+  {
+    "timestamp": 1764382256.5299468,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "94",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:10:56Z"
+  },
+  {
+    "timestamp": 1764382283.119519,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "102",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:11:23Z"
+  },
+  {
+    "timestamp": 1764382322.1573079,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:12:02Z"
+  },
+  {
+    "timestamp": 1764382345.029928,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "102",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:12:25Z"
+  },
+  {
+    "timestamp": 1764382365.77937,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "93",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:12:45Z"
+  },
+  {
+    "timestamp": 1764382391.997202,
+    "seed_id": "2000-I-2::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-2::2000_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:13:11Z"
+  },
+  {
+    "timestamp": 1764382391.997379,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-2::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 766602285
+    },
+    "iso_time": "2025-11-29T02:13:11Z"
+  },
+  {
+    "timestamp": 1764382393.090743,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "area": 48779,
+        "interior": 48378,
+        "u": 130,
+        "v": 71,
+        "sum_uv": 201
+      }
+    },
+    "iso_time": "2025-11-29T02:13:13Z"
+  },
+  {
+    "timestamp": 1764382394.104105,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 201
+    },
+    "iso_time": "2025-11-29T02:13:14Z"
+  },
+  {
+    "timestamp": 1764382394.104255,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let A = (u, v) be integers with 0 < v < u. Construct points by successive reflections as follows: B is the reflection of",
+      "correct_answer": "201",
+      "seed_value": 766602285
+    },
+    "iso_time": "2025-11-29T02:13:14Z"
+  },
+  {
+    "timestamp": 1764382394.1042979,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "203",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:13:14Z"
+  },
+  {
+    "timestamp": 1764382414.626594,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "201",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:13:34Z"
+  },
+  {
+    "timestamp": 1764382488.354572,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "201",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:14:48Z"
+  },
+  {
+    "timestamp": 1764382509.4451141,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "209",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:15:09Z"
+  },
+  {
+    "timestamp": 1764382532.5898938,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "194",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:15:32Z"
+  },
+  {
+    "timestamp": 1764382555.065744,
+    "seed_id": "2000-I-2::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-2::2000_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:15:55Z"
+  },
+  {
+    "timestamp": 1764382555.0659242,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-2::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 654241517
+    },
+    "iso_time": "2025-11-29T02:15:55Z"
+  },
+  {
+    "timestamp": 1764382556.1423948,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "area": 9889,
+        "interior": 9712,
+        "u": 65,
+        "v": 24,
+        "sum_uv": 89
+      }
+    },
+    "iso_time": "2025-11-29T02:15:56Z"
+  },
+  {
+    "timestamp": 1764382557.1300118,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 89
+    },
+    "iso_time": "2025-11-29T02:15:57Z"
+  },
+  {
+    "timestamp": 1764382557.130152,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let A = (u, v) be integers with 0 < v < u. Construct points by successive reflections as follows: B is the reflection of",
+      "correct_answer": "89",
+      "seed_value": 654241517
+    },
+    "iso_time": "2025-11-29T02:15:57Z"
+  },
+  {
+    "timestamp": 1764382557.130194,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "89",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:15:57Z"
+  },
+  {
+    "timestamp": 1764382601.882036,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "94",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:16:41Z"
+  },
+  {
+    "timestamp": 1764382617.889312,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "89",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:16:57Z"
+  },
+  {
+    "timestamp": 1764382678.24638,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "93",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:17:58Z"
+  },
+  {
+    "timestamp": 1764382710.473113,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "84",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:18:30Z"
+  },
+  {
+    "timestamp": 1764382761.4545531,
+    "seed_id": "2000-I-2::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-2::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:19:21Z"
+  },
+  {
+    "timestamp": 1764382761.454693,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-2::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1780349369
+    },
+    "iso_time": "2025-11-29T02:19:21Z"
+  },
+  {
+    "timestamp": 1764382762.736353,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "area": 24604,
+        "interior": 24297,
+        "u": 80,
+        "v": 74,
+        "sum_uv": 154
+      }
+    },
+    "iso_time": "2025-11-29T02:19:22Z"
+  },
+  {
+    "timestamp": 1764382763.845485,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 154
+    },
+    "iso_time": "2025-11-29T02:19:23Z"
+  },
+  {
+    "timestamp": 1764382763.845644,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let A = (u, v) be integers with 0 < v < u. Construct points by successive reflections as follows: B is the reflection of",
+      "correct_answer": "154",
+      "seed_value": 1780349369
+    },
+    "iso_time": "2025-11-29T02:19:23Z"
+  },
+  {
+    "timestamp": 1764382763.845686,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "156",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:19:23Z"
+  },
+  {
+    "timestamp": 1764382799.193961,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "152",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:19:59Z"
+  },
+  {
+    "timestamp": 1764382822.46475,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "154",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:20:22Z"
+  },
+  {
+    "timestamp": 1764382841.491762,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "158",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:20:41Z"
+  },
+  {
+    "timestamp": 1764382858.440471,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "154",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:20:58Z"
+  },
+  {
+    "timestamp": 1764382926.4251862,
+    "seed_id": "2000-I-2::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-2::2000_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:22:06Z"
+  },
+  {
+    "timestamp": 1764382926.4253812,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-2::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 522577819
+    },
+    "iso_time": "2025-11-29T02:22:06Z"
+  },
+  {
+    "timestamp": 1764382927.637511,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "area": 556,
+        "interior": 513,
+        "u": 13,
+        "v": 9,
+        "sum_uv": 22
+      }
+    },
+    "iso_time": "2025-11-29T02:22:07Z"
+  },
+  {
+    "timestamp": 1764382928.733403,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 22
+    },
+    "iso_time": "2025-11-29T02:22:08Z"
+  },
+  {
+    "timestamp": 1764382928.7335622,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let A = (u, v) be integers with 0 < v < u. Construct points by successive reflections as follows: B is the reflection of",
+      "correct_answer": "22",
+      "seed_value": 522577819
+    },
+    "iso_time": "2025-11-29T02:22:08Z"
+  },
+  {
+    "timestamp": 1764382928.733608,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "18",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:22:08Z"
+  },
+  {
+    "timestamp": 1764382954.305284,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "22",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:22:34Z"
+  },
+  {
+    "timestamp": 1764382978.032552,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "26",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:22:58Z"
+  },
+  {
+    "timestamp": 1764382996.1574268,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:23:16Z"
+  },
+  {
+    "timestamp": 1764383032.52438,
+    "seed_id": "2000-I-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "22",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:23:52Z"
+  },
+  {
+    "timestamp": 1764383052.308905,
+    "seed_id": "2000-I-2::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-2::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:24:12Z"
+  }
+]

@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1765177137.368021,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "How many positive integers have exactly three proper divisors (positive integral divisors excluding itself), each of whi",
+      "answer": "109",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-08T06:58:57Z"
+  },
+  {
+    "timestamp": 1765177137.368112,
+    "seed_id": "2005-I-3::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-08T06:58:57Z"
+  },
+  {
+    "timestamp": 1765177137.368163,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "How many positive integers have exactly three proper divisors (positive integral divisors excluding itself), each of which is less than 50?",
+      "answer": "109",
+      "example_id": "2005-I-3::2005"
+    },
+    "iso_time": "2025-12-08T06:58:57Z"
+  },
+  {
+    "timestamp": 1765177378.758898,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-3::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 333967826
+    },
+    "iso_time": "2025-12-08T07:02:58Z"
+  },
+  {
+    "timestamp": 1765177379.861855,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 35,
+        "b": 191,
+        "m": 7,
+        "r": 0
+      }
+    },
+    "iso_time": "2025-12-08T07:02:59Z"
+  },
+  {
+    "timestamp": 1765177380.9849448,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 56
+    },
+    "iso_time": "2025-12-08T07:03:00Z"
+  },
+  {
+    "timestamp": 1765177380.985107,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider positive integers n with exactly three proper divisors (positive integral divisors of n excluding n itself). De",
+      "correct_answer": "56",
+      "seed_value": 333967826
+    },
+    "iso_time": "2025-12-08T07:03:00Z"
+  },
+  {
+    "timestamp": 1765177380.985157,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "59",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T07:03:00Z"
+  },
+  {
+    "timestamp": 1765177628.632322,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "56",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T07:07:08Z"
+  },
+  {
+    "timestamp": 1765177783.3576949,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "56",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T07:09:43Z"
+  },
+  {
+    "timestamp": 1765177918.581825,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "65",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T07:11:58Z"
+  },
+  {
+    "timestamp": 1765178110.371847,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "58",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T07:15:10Z"
+  },
+  {
+    "timestamp": 1765178327.046321,
+    "seed_id": "2005-I-3::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-3::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T07:18:47Z"
+  },
+  {
+    "timestamp": 1765178327.0465128,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-3::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1472896244
+    },
+    "iso_time": "2025-12-08T07:18:47Z"
+  },
+  {
+    "timestamp": 1765178328.410198,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 37,
+        "b": 249,
+        "m": 11,
+        "r": 6
+      }
+    },
+    "iso_time": "2025-12-08T07:18:48Z"
+  },
+  {
+    "timestamp": 1765178329.545769,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 44
+    },
+    "iso_time": "2025-12-08T07:18:49Z"
+  },
+  {
+    "timestamp": 1765178329.545918,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider positive integers n with exactly three proper divisors (positive integral divisors of n excluding n itself). De",
+      "correct_answer": "44",
+      "seed_value": 1472896244
+    },
+    "iso_time": "2025-12-08T07:18:49Z"
+  },
+  {
+    "timestamp": 1765178329.5459578,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "44",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T07:18:49Z"
+  },
+  {
+    "timestamp": 1765178496.0063381,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "42",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T07:21:36Z"
+  },
+  {
+    "timestamp": 1765178755.841148,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "48",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T07:25:55Z"
+  },
+  {
+    "timestamp": 1765179069.6423948,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "35",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T07:31:09Z"
+  },
+  {
+    "timestamp": 1765179330.087129,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "44",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T07:35:30Z"
+  },
+  {
+    "timestamp": 1765179636.521866,
+    "seed_id": "2005-I-3::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-3::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T07:40:36Z"
+  },
+  {
+    "timestamp": 1765179636.522057,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-3::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 804981410
+    },
+    "iso_time": "2025-12-08T07:40:36Z"
+  },
+  {
+    "timestamp": 1765179637.896811,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 32,
+        "b": 239,
+        "m": 8,
+        "r": 0
+      }
+    },
+    "iso_time": "2025-12-08T07:40:37Z"
+  },
+  {
+    "timestamp": 1765179639.1420941,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 101
+    },
+    "iso_time": "2025-12-08T07:40:39Z"
+  },
+  {
+    "timestamp": 1765179639.142292,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider positive integers n with exactly three proper divisors (positive integral divisors of n excluding n itself). De",
+      "correct_answer": "101",
+      "seed_value": 804981410
+    },
+    "iso_time": "2025-12-08T07:40:39Z"
+  },
+  {
+    "timestamp": 1765179639.1423411,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T07:40:39Z"
+  },
+  {
+    "timestamp": 1765179920.4509802,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "101",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T07:45:20Z"
+  },
+  {
+    "timestamp": 1765180104.962861,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "101",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T07:48:24Z"
+  },
+  {
+    "timestamp": 1765180210.796562,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "97",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T07:50:10Z"
+  },
+  {
+    "timestamp": 1765180386.6015491,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "107",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T07:53:06Z"
+  },
+  {
+    "timestamp": 1765180751.9804952,
+    "seed_id": "2005-I-3::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-3::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T07:59:11Z"
+  },
+  {
+    "timestamp": 1765180751.980682,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-3::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1998444422
+    },
+    "iso_time": "2025-12-08T07:59:11Z"
+  },
+  {
+    "timestamp": 1765180753.193461,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 25,
+        "b": 225,
+        "m": 5,
+        "r": 2
+      }
+    },
+    "iso_time": "2025-12-08T07:59:13Z"
+  },
+  {
+    "timestamp": 1765180754.3848681,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 59
+    },
+    "iso_time": "2025-12-08T07:59:14Z"
+  },
+  {
+    "timestamp": 1765180754.385073,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider positive integers n with exactly three proper divisors (positive integral divisors of n excluding n itself). De",
+      "correct_answer": "59",
+      "seed_value": 1998444422
+    },
+    "iso_time": "2025-12-08T07:59:14Z"
+  },
+  {
+    "timestamp": 1765180754.3851259,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "63",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T07:59:14Z"
+  },
+  {
+    "timestamp": 1765181061.609638,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T08:04:21Z"
+  },
+  {
+    "timestamp": 1765181127.1532469,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "58",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T08:05:27Z"
+  },
+  {
+    "timestamp": 1765181432.3630831,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "64",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T08:10:32Z"
+  },
+  {
+    "timestamp": 1765181677.391961,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T08:14:37Z"
+  },
+  {
+    "timestamp": 1765181790.606774,
+    "seed_id": "2005-I-3::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-3::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T08:16:30Z"
+  },
+  {
+    "timestamp": 1765181790.606921,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-3::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 832779557
+    },
+    "iso_time": "2025-12-08T08:16:30Z"
+  },
+  {
+    "timestamp": 1765181791.914874,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 23,
+        "b": 148,
+        "m": 11,
+        "r": 0
+      }
+    },
+    "iso_time": "2025-12-08T08:16:31Z"
+  },
+  {
+    "timestamp": 1765181793.030964,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 19
+    },
+    "iso_time": "2025-12-08T08:16:33Z"
+  },
+  {
+    "timestamp": 1765181793.03115,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider positive integers n with exactly three proper divisors (positive integral divisors of n excluding n itself). De",
+      "correct_answer": "19",
+      "seed_value": 832779557
+    },
+    "iso_time": "2025-12-08T08:16:33Z"
+  },
+  {
+    "timestamp": 1765181793.031202,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "27",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T08:16:33Z"
+  },
+  {
+    "timestamp": 1765182006.755918,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "19",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T08:20:06Z"
+  },
+  {
+    "timestamp": 1765182243.506423,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "15",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T08:24:03Z"
+  },
+  {
+    "timestamp": 1765182301.563306,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "19",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T08:25:01Z"
+  },
+  {
+    "timestamp": 1765182423.424099,
+    "seed_id": "2005-I-3::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T08:27:03Z"
+  },
+  {
+    "timestamp": 1765182574.7681339,
+    "seed_id": "2005-I-3::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-3::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T08:29:34Z"
+  }
+]

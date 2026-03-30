@@ -1,0 +1,2163 @@
+[
+  {
+    "timestamp": 1764258857.679851,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1998,
+      "question_preview": "Find the number of ordered pairs $(x,y)$ of positive integers that satisfy $x \\le 2y \\le 60$ and $y \\le 2x \\le 60$ .",
+      "answer": "480",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-27T15:54:17Z"
+  },
+  {
+    "timestamp": 1764258857.679969,
+    "seed_id": "1998-2::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-27T15:54:17Z"
+  },
+  {
+    "timestamp": 1764258857.680033,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find the number of ordered pairs $(x,y)$ of positive integers that satisfy $x \\le 2y \\le 60$ and $y \\le 2x \\le 60$ .",
+      "answer": "480",
+      "example_id": "1998-2::1998"
+    },
+    "iso_time": "2025-11-27T15:54:17Z"
+  },
+  {
+    "timestamp": 1764258921.638894,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 667586838
+    },
+    "iso_time": "2025-11-27T15:55:21Z"
+  },
+  {
+    "timestamp": 1764258922.9648378,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 6,
+        "q": 4,
+        "m_max": 13920,
+        "n_max": 11474,
+        "g": 5
+      }
+    },
+    "iso_time": "2025-11-27T15:55:22Z"
+  },
+  {
+    "timestamp": 1764258924.240739,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 128961
+    },
+    "iso_time": "2025-11-27T15:55:24Z"
+  },
+  {
+    "timestamp": 1764258924.240951,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Count the number of ordered pairs (x, y) of positive integers satisfying x ≤ 6 y ≤ 13920 and y ≤ 4 x ≤ 11474, with gcd(x",
+      "correct_answer": "128961",
+      "seed_value": 667586838
+    },
+    "iso_time": "2025-11-27T15:55:24Z"
+  },
+  {
+    "timestamp": 1764258924.241027,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "128957",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T15:55:24Z"
+  },
+  {
+    "timestamp": 1764259054.952841,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "128965",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T15:57:34Z"
+  },
+  {
+    "timestamp": 1764259121.81409,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "128961",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T15:58:41Z"
+  },
+  {
+    "timestamp": 1764259196.637299,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "128961",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T15:59:56Z"
+  },
+  {
+    "timestamp": 1764259269.483743,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "128956",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T16:01:09Z"
+  },
+  {
+    "timestamp": 1764259504.6971352,
+    "seed_id": "1998-2::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-27T16:05:04Z"
+  },
+  {
+    "timestamp": 1764259504.69741,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1564070497
+    },
+    "iso_time": "2025-11-27T16:05:04Z"
+  },
+  {
+    "timestamp": 1764259506.0567858,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 6,
+        "q": 5,
+        "m_max": 4487,
+        "n_max": 5349,
+        "g": 2
+      }
+    },
+    "iso_time": "2025-11-27T16:05:06Z"
+  },
+  {
+    "timestamp": 1764259507.190638,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 98465
+    },
+    "iso_time": "2025-11-27T16:05:07Z"
+  },
+  {
+    "timestamp": 1764259507.190814,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Count the number of ordered pairs (x, y) of positive integers satisfying x ≤ 6 y ≤ 4487 and y ≤ 5 x ≤ 5349, with gcd(x, ",
+      "correct_answer": "98465",
+      "seed_value": 1564070497
+    },
+    "iso_time": "2025-11-27T16:05:07Z"
+  },
+  {
+    "timestamp": 1764259507.1908631,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "98470",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T16:05:07Z"
+  },
+  {
+    "timestamp": 1764259589.022156,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "98461",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T16:06:29Z"
+  },
+  {
+    "timestamp": 1764259954.1155462,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "98465",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T16:12:34Z"
+  },
+  {
+    "timestamp": 1764260325.8972092,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "98465",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T16:18:45Z"
+  },
+  {
+    "timestamp": 1764260541.191623,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "98466",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T16:22:21Z"
+  },
+  {
+    "timestamp": 1764260588.577325,
+    "seed_id": "1998-2::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-27T16:23:08Z"
+  },
+  {
+    "timestamp": 1764260588.5776231,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1206387796
+    },
+    "iso_time": "2025-11-27T16:23:08Z"
+  },
+  {
+    "timestamp": 1764260589.704407,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 4,
+        "q": 3,
+        "m_max": 13647,
+        "n_max": 6058,
+        "g": 6
+      }
+    },
+    "iso_time": "2025-11-27T16:23:09Z"
+  },
+  {
+    "timestamp": 1764260590.9799,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 74801
+    },
+    "iso_time": "2025-11-27T16:23:10Z"
+  },
+  {
+    "timestamp": 1764260590.980086,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Count the number of ordered pairs (x, y) of positive integers satisfying x ≤ 4 y ≤ 13647 and y ≤ 3 x ≤ 6058, with gcd(x,",
+      "correct_answer": "74801",
+      "seed_value": 1206387796
+    },
+    "iso_time": "2025-11-27T16:23:10Z"
+  },
+  {
+    "timestamp": 1764260590.9801679,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "74803",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T16:23:10Z"
+  },
+  {
+    "timestamp": 1764260677.464799,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "74805",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T16:24:37Z"
+  },
+  {
+    "timestamp": 1764260772.4929779,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "74801",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T16:26:12Z"
+  },
+  {
+    "timestamp": 1764260874.757749,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "74810",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T16:27:54Z"
+  },
+  {
+    "timestamp": 1764260962.4516711,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "74801",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T16:29:22Z"
+  },
+  {
+    "timestamp": 1764261048.2435,
+    "seed_id": "1998-2::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-27T16:30:48Z"
+  },
+  {
+    "timestamp": 1764261048.2438002,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1934102541
+    },
+    "iso_time": "2025-11-27T16:30:48Z"
+  },
+  {
+    "timestamp": 1764261049.6646762,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 2,
+        "q": 6,
+        "m_max": 2426,
+        "n_max": 11596,
+        "g": 4
+      }
+    },
+    "iso_time": "2025-11-27T16:30:49Z"
+  },
+  {
+    "timestamp": 1764261050.944731,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 49016
+    },
+    "iso_time": "2025-11-27T16:30:50Z"
+  },
+  {
+    "timestamp": 1764261050.94494,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Count the number of ordered pairs (x, y) of positive integers satisfying x ≤ 2 y ≤ 2426 and y ≤ 6 x ≤ 11596, with gcd(x,",
+      "correct_answer": "49016",
+      "seed_value": 1934102541
+    },
+    "iso_time": "2025-11-27T16:30:50Z"
+  },
+  {
+    "timestamp": 1764261050.945034,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "49009",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T16:30:50Z"
+  },
+  {
+    "timestamp": 1764261764.944679,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "49016",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T16:42:44Z"
+  },
+  {
+    "timestamp": 1764261884.344875,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "49012",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T16:44:44Z"
+  },
+  {
+    "timestamp": 1764261954.443894,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "49014",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T16:45:54Z"
+  },
+  {
+    "timestamp": 1764262645.407308,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "49016",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T16:57:25Z"
+  },
+  {
+    "timestamp": 1764262799.3717701,
+    "seed_id": "1998-2::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-27T16:59:59Z"
+  },
+  {
+    "timestamp": 1764262799.371938,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 520622460
+    },
+    "iso_time": "2025-11-27T16:59:59Z"
+  },
+  {
+    "timestamp": 1764262800.7039711,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 5,
+        "q": 3,
+        "m_max": 2981,
+        "n_max": 2099,
+        "g": 2
+      }
+    },
+    "iso_time": "2025-11-27T17:00:00Z"
+  },
+  {
+    "timestamp": 1764262801.671044,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 46998
+    },
+    "iso_time": "2025-11-27T17:00:01Z"
+  },
+  {
+    "timestamp": 1764262801.671212,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Count the number of ordered pairs (x, y) of positive integers satisfying x ≤ 5 y ≤ 2981 and y ≤ 3 x ≤ 2099, with gcd(x, ",
+      "correct_answer": "46998",
+      "seed_value": 520622460
+    },
+    "iso_time": "2025-11-27T17:00:01Z"
+  },
+  {
+    "timestamp": 1764262801.671286,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "47006",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T17:00:01Z"
+  },
+  {
+    "timestamp": 1764263409.555444,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "46998",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T17:10:09Z"
+  },
+  {
+    "timestamp": 1764263505.085008,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "46998",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T17:11:45Z"
+  },
+  {
+    "timestamp": 1764263662.4639978,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "46993",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T17:14:22Z"
+  },
+  {
+    "timestamp": 1764263737.7320461,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "46996",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T17:15:37Z"
+  },
+  {
+    "timestamp": 1764263791.879147,
+    "seed_id": "1998-2::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-2::1998_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-27T17:16:31Z"
+  },
+  {
+    "timestamp": 1764263791.879304,
+    "seed_id": "1998-2::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-27T17:16:31Z"
+  },
+  {
+    "timestamp": 1764263791.879401,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Find the number of ordered pairs $(x,y)$ of positive integers that satisfy $x \\le 2y \\le 60$ and $y \\le 2x \\le 60$ .",
+      "answer": "480",
+      "example_id": "1998-2::1998"
+    },
+    "iso_time": "2025-11-27T17:16:31Z"
+  },
+  {
+    "timestamp": 1764263978.883678,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 376537035
+    },
+    "iso_time": "2025-11-27T17:19:38Z"
+  },
+  {
+    "timestamp": 1764263980.06658,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_factor": 5,
+        "b_factor": 4,
+        "upper1": 255977,
+        "upper2": 59149,
+        "gcd_target": 8
+      }
+    },
+    "iso_time": "2025-11-27T17:19:40Z"
+  },
+  {
+    "timestamp": 1764263981.317204,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3870492
+    },
+    "iso_time": "2025-11-27T17:19:41Z"
+  },
+  {
+    "timestamp": 1764263981.317398,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Determine the number of ordered pairs (x, y) of positive integers satisfying both x ≤ 5·y ≤ 255977 and y ≤ 4·x ≤ 59149, ",
+      "correct_answer": "3870492",
+      "seed_value": 376537035
+    },
+    "iso_time": "2025-11-27T17:19:41Z"
+  },
+  {
+    "timestamp": 1764263981.317464,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3870498",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T17:19:41Z"
+  },
+  {
+    "timestamp": 1764264043.7717881,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3870494",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T17:20:43Z"
+  },
+  {
+    "timestamp": 1764264143.413225,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3870500",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T17:22:23Z"
+  },
+  {
+    "timestamp": 1764264205.6526048,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3870492",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T17:23:25Z"
+  },
+  {
+    "timestamp": 1764289070.039545,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3870492",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T00:17:50Z"
+  },
+  {
+    "timestamp": 1764289143.430803,
+    "seed_id": "1998-2::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T00:19:03Z"
+  },
+  {
+    "timestamp": 1764289143.4309802,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 495658075
+    },
+    "iso_time": "2025-11-28T00:19:03Z"
+  },
+  {
+    "timestamp": 1764289144.794733,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_factor": 6,
+        "b_factor": 2,
+        "upper1": 1136376,
+        "upper2": 240923,
+        "gcd_target": 8
+      }
+    },
+    "iso_time": "2025-11-28T00:19:04Z"
+  },
+  {
+    "timestamp": 1764289145.932831,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 120042739
+    },
+    "iso_time": "2025-11-28T00:19:05Z"
+  },
+  {
+    "timestamp": 1764289145.932985,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Determine the number of ordered pairs (x, y) of positive integers satisfying both x ≤ 6·y ≤ 1136376 and y ≤ 2·x ≤ 240923",
+      "correct_answer": "120042739",
+      "seed_value": 495658075
+    },
+    "iso_time": "2025-11-28T00:19:05Z"
+  },
+  {
+    "timestamp": 1764289145.9330502,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "120042739",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T00:19:05Z"
+  },
+  {
+    "timestamp": 1764289220.441024,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "120042746",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:20:20Z"
+  },
+  {
+    "timestamp": 1764289391.562689,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "120042739",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T00:23:11Z"
+  },
+  {
+    "timestamp": 1764289479.6745012,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "120042747",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:24:39Z"
+  },
+  {
+    "timestamp": 1764289667.071088,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "120042733",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:27:47Z"
+  },
+  {
+    "timestamp": 1764289744.003495,
+    "seed_id": "1998-2::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T00:29:04Z"
+  },
+  {
+    "timestamp": 1764289744.0036778,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1368289028
+    },
+    "iso_time": "2025-11-28T00:29:04Z"
+  },
+  {
+    "timestamp": 1764289745.153564,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_factor": 2,
+        "b_factor": 4,
+        "upper1": 156936,
+        "upper2": 135426,
+        "gcd_target": 7
+      }
+    },
+    "iso_time": "2025-11-28T00:29:05Z"
+  },
+  {
+    "timestamp": 1764289746.2790122,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 19854048
+    },
+    "iso_time": "2025-11-28T00:29:06Z"
+  },
+  {
+    "timestamp": 1764289746.279186,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Determine the number of ordered pairs (x, y) of positive integers satisfying both x ≤ 2·y ≤ 156936 and y ≤ 4·x ≤ 135426,",
+      "correct_answer": "19854048",
+      "seed_value": 1368289028
+    },
+    "iso_time": "2025-11-28T00:29:06Z"
+  },
+  {
+    "timestamp": 1764289746.279266,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "19854048",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T00:29:06Z"
+  },
+  {
+    "timestamp": 1764289876.615581,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "19854046",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:31:16Z"
+  },
+  {
+    "timestamp": 1764290026.518867,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "19854048",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T00:33:46Z"
+  },
+  {
+    "timestamp": 1764290123.9029791,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "19854047",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:35:23Z"
+  },
+  {
+    "timestamp": 1764290236.532044,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "19854039",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:37:16Z"
+  },
+  {
+    "timestamp": 1764290285.962152,
+    "seed_id": "1998-2::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T00:38:05Z"
+  },
+  {
+    "timestamp": 1764290285.9623091,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 2143829209
+    },
+    "iso_time": "2025-11-28T00:38:05Z"
+  },
+  {
+    "timestamp": 1764290287.063466,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_factor": 4,
+        "b_factor": 6,
+        "upper1": 41386,
+        "upper2": 101049,
+        "gcd_target": 1
+      }
+    },
+    "iso_time": "2025-11-28T00:38:07Z"
+  },
+  {
+    "timestamp": 1764290288.135173,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 78955374
+    },
+    "iso_time": "2025-11-28T00:38:08Z"
+  },
+  {
+    "timestamp": 1764290288.13533,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Determine the number of ordered pairs (x, y) of positive integers satisfying both x ≤ 4·y ≤ 41386 and y ≤ 6·x ≤ 101049, ",
+      "correct_answer": "78955374",
+      "seed_value": 2143829209
+    },
+    "iso_time": "2025-11-28T00:38:08Z"
+  },
+  {
+    "timestamp": 1764290288.135402,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "78955374",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T00:38:08Z"
+  },
+  {
+    "timestamp": 1764290352.964405,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "78955365",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:39:12Z"
+  },
+  {
+    "timestamp": 1764290447.640231,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "78955370",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:40:47Z"
+  },
+  {
+    "timestamp": 1764290506.3574212,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "78955374",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T00:41:46Z"
+  },
+  {
+    "timestamp": 1764290569.7412322,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "78955366",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:42:49Z"
+  },
+  {
+    "timestamp": 1764290738.3445508,
+    "seed_id": "1998-2::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T00:45:38Z"
+  },
+  {
+    "timestamp": 1764290738.344712,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 1035729201
+    },
+    "iso_time": "2025-11-28T00:45:38Z"
+  },
+  {
+    "timestamp": 1764290739.645175,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_factor": 6,
+        "b_factor": 4,
+        "upper1": 75008,
+        "upper2": 38746,
+        "gcd_target": 1
+      }
+    },
+    "iso_time": "2025-11-28T00:45:39Z"
+  },
+  {
+    "timestamp": 1764290740.761575,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 56987580
+    },
+    "iso_time": "2025-11-28T00:45:40Z"
+  },
+  {
+    "timestamp": 1764290740.76175,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Determine the number of ordered pairs (x, y) of positive integers satisfying both x ≤ 6·y ≤ 75008 and y ≤ 4·x ≤ 38746, w",
+      "correct_answer": "56987580",
+      "seed_value": 1035729201
+    },
+    "iso_time": "2025-11-28T00:45:40Z"
+  },
+  {
+    "timestamp": 1764290740.761812,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "56987580",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T00:45:40Z"
+  },
+  {
+    "timestamp": 1764290803.022002,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "56987584",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:46:43Z"
+  },
+  {
+    "timestamp": 1764291182.1955452,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "56987577",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:53:02Z"
+  },
+  {
+    "timestamp": 1764291294.424756,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "56987576",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T00:54:54Z"
+  },
+  {
+    "timestamp": 1764291362.211252,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "56987580",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T00:56:02Z"
+  },
+  {
+    "timestamp": 1764291434.1475148,
+    "seed_id": "1998-2::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T00:57:14Z"
+  },
+  {
+    "timestamp": 1764291434.1475992,
+    "seed_id": "1998-2::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-28T00:57:14Z"
+  },
+  {
+    "timestamp": 1764291434.14763,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Find the number of ordered pairs $(x,y)$ of positive integers that satisfy $x \\le 2y \\le 60$ and $y \\le 2x \\le 60$ .",
+      "answer": "480",
+      "example_id": "1998-2::1998"
+    },
+    "iso_time": "2025-11-28T00:57:14Z"
+  },
+  {
+    "timestamp": 1764291498.50294,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1739634074
+    },
+    "iso_time": "2025-11-28T00:58:18Z"
+  },
+  {
+    "timestamp": 1764291508.508977,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-28T00:58:28Z"
+  },
+  {
+    "timestamp": 1764291509.5879931,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-28T00:58:29Z"
+  },
+  {
+    "timestamp": 1764291509.588105,
+    "seed_id": "1998-2::1998",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 11.08516788482666
+    },
+    "iso_time": "2025-11-28T00:58:29Z"
+  },
+  {
+    "timestamp": 1764291509.588185,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1898446992
+    },
+    "iso_time": "2025-11-28T00:58:29Z"
+  },
+  {
+    "timestamp": 1764291519.592457,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-28T00:58:39Z"
+  },
+  {
+    "timestamp": 1764291520.683029,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-28T00:58:40Z"
+  },
+  {
+    "timestamp": 1764291520.6831439,
+    "seed_id": "1998-2::1998",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.094959020614624
+    },
+    "iso_time": "2025-11-28T00:58:40Z"
+  },
+  {
+    "timestamp": 1764291520.683201,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1397936442
+    },
+    "iso_time": "2025-11-28T00:58:40Z"
+  },
+  {
+    "timestamp": 1764291530.687444,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-28T00:58:50Z"
+  },
+  {
+    "timestamp": 1764291531.7952158,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-28T00:58:51Z"
+  },
+  {
+    "timestamp": 1764291531.7953181,
+    "seed_id": "1998-2::1998",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.112117052078247
+    },
+    "iso_time": "2025-11-28T00:58:51Z"
+  },
+  {
+    "timestamp": 1764291531.79537,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 817035633
+    },
+    "iso_time": "2025-11-28T00:58:51Z"
+  },
+  {
+    "timestamp": 1764291541.79935,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-28T00:59:01Z"
+  },
+  {
+    "timestamp": 1764291542.888114,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-28T00:59:02Z"
+  },
+  {
+    "timestamp": 1764291542.888268,
+    "seed_id": "1998-2::1998",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.092897176742554
+    },
+    "iso_time": "2025-11-28T00:59:02Z"
+  },
+  {
+    "timestamp": 1764291542.8883321,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 1609478087
+    },
+    "iso_time": "2025-11-28T00:59:02Z"
+  },
+  {
+    "timestamp": 1764291552.892225,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-28T00:59:12Z"
+  },
+  {
+    "timestamp": 1764291553.9920928,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-28T00:59:13Z"
+  },
+  {
+    "timestamp": 1764291553.992235,
+    "seed_id": "1998-2::1998",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.103902101516724
+    },
+    "iso_time": "2025-11-28T00:59:13Z"
+  },
+  {
+    "timestamp": 1764291553.992276,
+    "seed_id": "1998-2::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-28T00:59:13Z"
+  },
+  {
+    "timestamp": 1764291553.9922931,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "Find the number of ordered pairs $(x,y)$ of positive integers that satisfy $x \\le 2y \\le 60$ and $y \\le 2x \\le 60$ .",
+      "answer": "480",
+      "example_id": "1998-2::1998"
+    },
+    "iso_time": "2025-11-28T00:59:13Z"
+  },
+  {
+    "timestamp": 1764291617.312602,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 937608007
+    },
+    "iso_time": "2025-11-28T01:00:17Z"
+  },
+  {
+    "timestamp": 1764291618.384802,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_max": 1171,
+        "c": 5,
+        "g": 3
+      }
+    },
+    "iso_time": "2025-11-28T01:00:18Z"
+  },
+  {
+    "timestamp": 1764291619.4199371,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2971
+    },
+    "iso_time": "2025-11-28T01:00:19Z"
+  },
+  {
+    "timestamp": 1764291619.420091,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a number theory contest, determine the number of ordered pairs (x, y) of positive integers satisfying x ≤ 5y ≤ 1171 a",
+      "correct_answer": "2971",
+      "seed_value": 937608007
+    },
+    "iso_time": "2025-11-28T01:00:19Z"
+  },
+  {
+    "timestamp": 1764291619.420154,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2978",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:00:19Z"
+  },
+  {
+    "timestamp": 1764291711.189579,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2969",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:01:51Z"
+  },
+  {
+    "timestamp": 1764291818.3291829,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2971",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:03:38Z"
+  },
+  {
+    "timestamp": 1764291896.7437341,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2968",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:04:56Z"
+  },
+  {
+    "timestamp": 1764291976.393278,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2971",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:06:16Z"
+  },
+  {
+    "timestamp": 1764292036.204038,
+    "seed_id": "1998-2::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-2::1998_prompt04-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T01:07:16Z"
+  },
+  {
+    "timestamp": 1764292036.204213,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 1525456231
+    },
+    "iso_time": "2025-11-28T01:07:16Z"
+  },
+  {
+    "timestamp": 1764292037.4901261,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_max": 1520,
+        "c": 3,
+        "g": 4
+      }
+    },
+    "iso_time": "2025-11-28T01:07:17Z"
+  },
+  {
+    "timestamp": 1764292038.60182,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6445
+    },
+    "iso_time": "2025-11-28T01:07:18Z"
+  },
+  {
+    "timestamp": 1764292038.601981,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a number theory contest, determine the number of ordered pairs (x, y) of positive integers satisfying x ≤ 3y ≤ 1520 a",
+      "correct_answer": "6445",
+      "seed_value": 1525456231
+    },
+    "iso_time": "2025-11-28T01:07:18Z"
+  },
+  {
+    "timestamp": 1764292038.602047,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6445",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:07:18Z"
+  },
+  {
+    "timestamp": 1764292134.037907,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6442",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:08:54Z"
+  },
+  {
+    "timestamp": 1764292271.252376,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6437",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:11:11Z"
+  },
+  {
+    "timestamp": 1764292475.3977752,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6445",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:14:35Z"
+  },
+  {
+    "timestamp": 1764292565.662302,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6454",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:16:05Z"
+  },
+  {
+    "timestamp": 1764292663.269136,
+    "seed_id": "1998-2::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-2::1998_prompt04-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-28T01:17:43Z"
+  },
+  {
+    "timestamp": 1764292663.2692502,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 3,
+      "seed_value": 1011732895
+    },
+    "iso_time": "2025-11-28T01:17:43Z"
+  },
+  {
+    "timestamp": 1764292664.639035,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_max": 1113,
+        "c": 5,
+        "g": 5
+      }
+    },
+    "iso_time": "2025-11-28T01:17:44Z"
+  },
+  {
+    "timestamp": 1764292665.683771,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 969
+    },
+    "iso_time": "2025-11-28T01:17:45Z"
+  },
+  {
+    "timestamp": 1764292665.683927,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a number theory contest, determine the number of ordered pairs (x, y) of positive integers satisfying x ≤ 5y ≤ 1113 a",
+      "correct_answer": "969",
+      "seed_value": 1011732895
+    },
+    "iso_time": "2025-11-28T01:17:45Z"
+  },
+  {
+    "timestamp": 1764292665.683991,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "969",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:17:45Z"
+  },
+  {
+    "timestamp": 1764292713.021872,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "976",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:18:33Z"
+  },
+  {
+    "timestamp": 1764292785.049747,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "961",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:19:45Z"
+  },
+  {
+    "timestamp": 1764292891.713652,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "970",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:21:31Z"
+  },
+  {
+    "timestamp": 1764293020.325171,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "969",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:23:40Z"
+  },
+  {
+    "timestamp": 1764293095.4092832,
+    "seed_id": "1998-2::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-2::1998_prompt04-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-28T01:24:55Z"
+  },
+  {
+    "timestamp": 1764293095.4094012,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-2::1998_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 4,
+      "seed_value": 1077933378
+    },
+    "iso_time": "2025-11-28T01:24:55Z"
+  },
+  {
+    "timestamp": 1764293096.453033,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_max": 1072,
+        "c": 2,
+        "g": 8
+      }
+    },
+    "iso_time": "2025-11-28T01:24:56Z"
+  },
+  {
+    "timestamp": 1764293097.485235,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1395
+    },
+    "iso_time": "2025-11-28T01:24:57Z"
+  },
+  {
+    "timestamp": 1764293097.485427,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a number theory contest, determine the number of ordered pairs (x, y) of positive integers satisfying x ≤ 2y ≤ 1072 a",
+      "correct_answer": "1395",
+      "seed_value": 1077933378
+    },
+    "iso_time": "2025-11-28T01:24:57Z"
+  },
+  {
+    "timestamp": 1764293097.485486,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1395",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:24:57Z"
+  },
+  {
+    "timestamp": 1764293187.966773,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1387",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:26:27Z"
+  },
+  {
+    "timestamp": 1764293262.7095912,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1386",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:27:42Z"
+  },
+  {
+    "timestamp": 1764293344.8345118,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1395",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:29:04Z"
+  },
+  {
+    "timestamp": 1764293431.580357,
+    "seed_id": "1998-2::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1397",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:30:31Z"
+  },
+  {
+    "timestamp": 1764293546.157624,
+    "seed_id": "1998-2::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-2::1998_prompt04-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-28T01:32:26Z"
+  }
+]

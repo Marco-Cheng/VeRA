@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1763944486.237681,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1994,
+      "question_preview": "Given a point $P^{}_{}$ on a triangular piece of paper $ABC,\\,$ consider the creases that are formed in the paper when $",
+      "answer": "597",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-24T00:34:46Z"
+  },
+  {
+    "timestamp": 1763944486.237758,
+    "seed_id": "1994-15::1994",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-24T00:34:46Z"
+  },
+  {
+    "timestamp": 1763944486.237788,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Given a point $P^{}_{}$ on a triangular piece of paper $ABC,\\,$ consider the creases that are formed in the paper when $A, B,\\,$ and $C\\,$ are folded onto $P.\\,$ Let us call $P_{}^{}$ a fold point of $\\triangle ABC\\,$ if these creases, which number three unless $P^{}_{}$ is one of the vertices, do not intersect.  Suppose that $AB=36, AC=72,\\,$ and $\\angle B=90^\\circ.\\,$ Then the area of the set of all fold points of $\\triangle ABC\\,$ can be written in the form $q\\pi-r\\sqrt{s},\\,$ where $q, r,\\,$ and $s\\,$ are positive integers and $s\\,$ is not divisible by the square of any prime.  What is $q+r+s\\,$ ?",
+      "answer": "597",
+      "example_id": "1994-15::1994"
+    },
+    "iso_time": "2025-11-24T00:34:46Z"
+  },
+  {
+    "timestamp": 1763944548.464863,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-15::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1518946372
+    },
+    "iso_time": "2025-11-24T00:35:48Z"
+  },
+  {
+    "timestamp": 1763944549.2438998,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 36,
+        "b": 36
+      }
+    },
+    "iso_time": "2025-11-24T00:35:49Z"
+  },
+  {
+    "timestamp": 1763944549.990804,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 179
+    },
+    "iso_time": "2025-11-24T00:35:49Z"
+  },
+  {
+    "timestamp": 1763944549.990946,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the right triangle with vertices at (0, 0), (36, 0), and (0, 36). For an interior integer lattice point P = (x,",
+      "correct_answer": "179",
+      "seed_value": 1518946372
+    },
+    "iso_time": "2025-11-24T00:35:49Z"
+  },
+  {
+    "timestamp": 1763944549.9910011,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "170",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T00:35:49Z"
+  },
+  {
+    "timestamp": 1763944706.850817,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "172",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T00:38:26Z"
+  },
+  {
+    "timestamp": 1763944806.6920252,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "175",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T00:40:06Z"
+  },
+  {
+    "timestamp": 1763944981.785907,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "179",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T00:43:01Z"
+  },
+  {
+    "timestamp": 1763945086.8499331,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "179",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T00:44:46Z"
+  },
+  {
+    "timestamp": 1763945163.443725,
+    "seed_id": "1994-15::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-15::1994_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T00:46:03Z"
+  },
+  {
+    "timestamp": 1763945163.443935,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-15::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1056121313
+    },
+    "iso_time": "2025-11-24T00:46:03Z"
+  },
+  {
+    "timestamp": 1763945164.2071722,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 25,
+        "b": 31
+      }
+    },
+    "iso_time": "2025-11-24T00:46:04Z"
+  },
+  {
+    "timestamp": 1763945164.956136,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 109
+    },
+    "iso_time": "2025-11-24T00:46:04Z"
+  },
+  {
+    "timestamp": 1763945164.9562821,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the right triangle with vertices at (0, 0), (25, 0), and (0, 31). For an interior integer lattice point P = (x,",
+      "correct_answer": "109",
+      "seed_value": 1056121313
+    },
+    "iso_time": "2025-11-24T00:46:04Z"
+  },
+  {
+    "timestamp": 1763945164.9563441,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "102",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T00:46:04Z"
+  },
+  {
+    "timestamp": 1763945338.408819,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "109",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T00:48:58Z"
+  },
+  {
+    "timestamp": 1763945473.4962182,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "109",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T00:51:13Z"
+  },
+  {
+    "timestamp": 1763945587.584409,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T00:53:07Z"
+  },
+  {
+    "timestamp": 1763945733.056257,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "113",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T00:55:33Z"
+  },
+  {
+    "timestamp": 1763945921.3074381,
+    "seed_id": "1994-15::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-15::1994_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T00:58:41Z"
+  },
+  {
+    "timestamp": 1763945921.307657,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-15::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1004645927
+    },
+    "iso_time": "2025-11-24T00:58:41Z"
+  },
+  {
+    "timestamp": 1763945922.0967062,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 22,
+        "b": 66
+      }
+    },
+    "iso_time": "2025-11-24T00:58:42Z"
+  },
+  {
+    "timestamp": 1763945922.846407,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 135
+    },
+    "iso_time": "2025-11-24T00:58:42Z"
+  },
+  {
+    "timestamp": 1763945922.846553,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the right triangle with vertices at (0, 0), (22, 0), and (0, 66). For an interior integer lattice point P = (x,",
+      "correct_answer": "135",
+      "seed_value": 1004645927
+    },
+    "iso_time": "2025-11-24T00:58:42Z"
+  },
+  {
+    "timestamp": 1763945922.8466141,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "135",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T00:58:42Z"
+  },
+  {
+    "timestamp": 1763946076.877305,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "141",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:01:16Z"
+  },
+  {
+    "timestamp": 1763946228.179564,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "144",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:03:48Z"
+  },
+  {
+    "timestamp": 1763946377.8754408,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "132",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:06:17Z"
+  },
+  {
+    "timestamp": 1763946555.6716769,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "135",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T01:09:15Z"
+  },
+  {
+    "timestamp": 1763946690.7492769,
+    "seed_id": "1994-15::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-15::1994_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T01:11:30Z"
+  },
+  {
+    "timestamp": 1763946690.749438,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-15::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 28445202
+    },
+    "iso_time": "2025-11-24T01:11:30Z"
+  },
+  {
+    "timestamp": 1763946691.545907,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 21,
+        "b": 28
+      }
+    },
+    "iso_time": "2025-11-24T01:11:31Z"
+  },
+  {
+    "timestamp": 1763946692.302409,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 81
+    },
+    "iso_time": "2025-11-24T01:11:32Z"
+  },
+  {
+    "timestamp": 1763946692.30256,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the right triangle with vertices at (0, 0), (21, 0), and (0, 28). For an interior integer lattice point P = (x,",
+      "correct_answer": "81",
+      "seed_value": 28445202
+    },
+    "iso_time": "2025-11-24T01:11:32Z"
+  },
+  {
+    "timestamp": 1763946692.302602,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "81",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T01:11:32Z"
+  },
+  {
+    "timestamp": 1763946841.9186912,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "81",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T01:14:01Z"
+  },
+  {
+    "timestamp": 1763947002.609005,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "90",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:16:42Z"
+  },
+  {
+    "timestamp": 1763947138.809769,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "78",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:18:58Z"
+  },
+  {
+    "timestamp": 1763947289.4055748,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "80",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:21:29Z"
+  },
+  {
+    "timestamp": 1763947456.386326,
+    "seed_id": "1994-15::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-15::1994_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T01:24:16Z"
+  },
+  {
+    "timestamp": 1763947456.386528,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-15::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2108630534
+    },
+    "iso_time": "2025-11-24T01:24:16Z"
+  },
+  {
+    "timestamp": 1763947457.185303,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 30,
+        "b": 54
+      }
+    },
+    "iso_time": "2025-11-24T01:24:17Z"
+  },
+  {
+    "timestamp": 1763947457.933179,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 203
+    },
+    "iso_time": "2025-11-24T01:24:17Z"
+  },
+  {
+    "timestamp": 1763947457.933328,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the right triangle with vertices at (0, 0), (30, 0), and (0, 54). For an interior integer lattice point P = (x,",
+      "correct_answer": "203",
+      "seed_value": 2108630534
+    },
+    "iso_time": "2025-11-24T01:24:17Z"
+  },
+  {
+    "timestamp": 1763947457.933374,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "196",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:24:17Z"
+  },
+  {
+    "timestamp": 1763947593.9126458,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "205",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:26:33Z"
+  },
+  {
+    "timestamp": 1763947754.207283,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "204",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:29:14Z"
+  },
+  {
+    "timestamp": 1763947913.6786208,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "203",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T01:31:53Z"
+  },
+  {
+    "timestamp": 1763948068.395906,
+    "seed_id": "1994-15::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "203",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T01:34:28Z"
+  },
+  {
+    "timestamp": 1763948207.7768772,
+    "seed_id": "1994-15::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-15::1994_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T01:36:47Z"
+  }
+]

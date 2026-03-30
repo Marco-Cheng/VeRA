@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1764798678.764412,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "Point $B$ is on $\\overline{AC}$ with $AB = 9$ and $BC = 21.$ Point $D$ is not on $\\overline{AC}$ so that $AD = CD,$ and ",
+      "answer": "380",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-03T21:51:18Z"
+  },
+  {
+    "timestamp": 1764798678.764441,
+    "seed_id": "2003-I-7::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-03T21:51:18Z"
+  },
+  {
+    "timestamp": 1764798678.764456,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Point $B$ is on $\\overline{AC}$ with $AB = 9$ and $BC = 21.$ Point $D$ is not on $\\overline{AC}$ so that $AD = CD,$ and $AD$ and $BD$ are integers. Let $s$ be the sum of all possible perimeters of $\\triangle ACD.$ Find $s.$",
+      "answer": "380",
+      "example_id": "2003-I-7::2003"
+    },
+    "iso_time": "2025-12-03T21:51:18Z"
+  },
+  {
+    "timestamp": 1764798785.7104619,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-7::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1707910595
+    },
+    "iso_time": "2025-12-03T21:53:05Z"
+  },
+  {
+    "timestamp": 1764798787.054249,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 16,
+        "bc": 56
+      }
+    },
+    "iso_time": "2025-12-03T21:53:07Z"
+  },
+  {
+    "timestamp": 1764798788.2899132,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 342
+    },
+    "iso_time": "2025-12-03T21:53:08Z"
+  },
+  {
+    "timestamp": 1764798788.290098,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a line segment AC, point B lies strictly between A and C with AB = 16 and BC = 56. A point D is chosen off the line A",
+      "correct_answer": "342",
+      "seed_value": 1707910595
+    },
+    "iso_time": "2025-12-03T21:53:08Z"
+  },
+  {
+    "timestamp": 1764798788.2901728,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "351",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:53:08Z"
+  },
+  {
+    "timestamp": 1764798835.898207,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "344",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:53:55Z"
+  },
+  {
+    "timestamp": 1764798868.4643562,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "349",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:54:28Z"
+  },
+  {
+    "timestamp": 1764799046.639353,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "342",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:57:26Z"
+  },
+  {
+    "timestamp": 1764799132.605319,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "342",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:58:52Z"
+  },
+  {
+    "timestamp": 1764799230.136959,
+    "seed_id": "2003-I-7::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-7::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T22:00:30Z"
+  },
+  {
+    "timestamp": 1764799230.137125,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-7::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 198212347
+    },
+    "iso_time": "2025-12-03T22:00:30Z"
+  },
+  {
+    "timestamp": 1764799231.22239,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 464,
+        "bc": 616
+      }
+    },
+    "iso_time": "2025-12-03T22:00:31Z"
+  },
+  {
+    "timestamp": 1764799232.478605,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5046
+    },
+    "iso_time": "2025-12-03T22:00:32Z"
+  },
+  {
+    "timestamp": 1764799232.478789,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a line segment AC, point B lies strictly between A and C with AB = 464 and BC = 616. A point D is chosen off the line",
+      "correct_answer": "5046",
+      "seed_value": 198212347
+    },
+    "iso_time": "2025-12-03T22:00:32Z"
+  },
+  {
+    "timestamp": 1764799232.478858,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5046",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:00:32Z"
+  },
+  {
+    "timestamp": 1764799280.7544498,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5049",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:01:20Z"
+  },
+  {
+    "timestamp": 1764799380.359678,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5040",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:03:00Z"
+  },
+  {
+    "timestamp": 1764799521.377523,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5046",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:05:21Z"
+  },
+  {
+    "timestamp": 1764799584.477995,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5042",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:06:24Z"
+  },
+  {
+    "timestamp": 1764799685.3088691,
+    "seed_id": "2003-I-7::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-7::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T22:08:05Z"
+  },
+  {
+    "timestamp": 1764799685.308984,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-7::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 839641992
+    },
+    "iso_time": "2025-12-03T22:08:05Z"
+  },
+  {
+    "timestamp": 1764799686.715177,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 16,
+        "bc": 56
+      }
+    },
+    "iso_time": "2025-12-03T22:08:06Z"
+  },
+  {
+    "timestamp": 1764799687.782131,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 342
+    },
+    "iso_time": "2025-12-03T22:08:07Z"
+  },
+  {
+    "timestamp": 1764799687.782311,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a line segment AC, point B lies strictly between A and C with AB = 16 and BC = 56. A point D is chosen off the line A",
+      "correct_answer": "342",
+      "seed_value": 839641992
+    },
+    "iso_time": "2025-12-03T22:08:07Z"
+  },
+  {
+    "timestamp": 1764799687.7823691,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "342",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:08:07Z"
+  },
+  {
+    "timestamp": 1764799719.825959,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "349",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:08:39Z"
+  },
+  {
+    "timestamp": 1764799845.271106,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "346",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:10:45Z"
+  },
+  {
+    "timestamp": 1764799932.806376,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "333",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:12:12Z"
+  },
+  {
+    "timestamp": 1764800141.613632,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "342",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:15:41Z"
+  },
+  {
+    "timestamp": 1764800229.082183,
+    "seed_id": "2003-I-7::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-7::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T22:17:09Z"
+  },
+  {
+    "timestamp": 1764800229.0823581,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-7::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 436352565
+    },
+    "iso_time": "2025-12-03T22:17:09Z"
+  },
+  {
+    "timestamp": 1764800230.4471629,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 168,
+        "bc": 432
+      }
+    },
+    "iso_time": "2025-12-03T22:17:10Z"
+  },
+  {
+    "timestamp": 1764800231.597307,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3370
+    },
+    "iso_time": "2025-12-03T22:17:11Z"
+  },
+  {
+    "timestamp": 1764800231.597433,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a line segment AC, point B lies strictly between A and C with AB = 168 and BC = 432. A point D is chosen off the line",
+      "correct_answer": "3370",
+      "seed_value": 436352565
+    },
+    "iso_time": "2025-12-03T22:17:11Z"
+  },
+  {
+    "timestamp": 1764800231.597499,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3366",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:17:11Z"
+  },
+  {
+    "timestamp": 1764800562.67087,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3370",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:22:42Z"
+  },
+  {
+    "timestamp": 1764800720.5844228,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3367",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:25:20Z"
+  },
+  {
+    "timestamp": 1764800802.073955,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3370",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:26:42Z"
+  },
+  {
+    "timestamp": 1764800868.04028,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3368",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:27:48Z"
+  },
+  {
+    "timestamp": 1764801466.275758,
+    "seed_id": "2003-I-7::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-7::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-03T22:37:46Z"
+  },
+  {
+    "timestamp": 1764801466.275857,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-7::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 407945160
+    },
+    "iso_time": "2025-12-03T22:37:46Z"
+  },
+  {
+    "timestamp": 1764801467.587372,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 700,
+        "bc": 884
+      }
+    },
+    "iso_time": "2025-12-03T22:37:47Z"
+  },
+  {
+    "timestamp": 1764801468.734095,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7398
+    },
+    "iso_time": "2025-12-03T22:37:48Z"
+  },
+  {
+    "timestamp": 1764801468.734238,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a line segment AC, point B lies strictly between A and C with AB = 700 and BC = 884. A point D is chosen off the line",
+      "correct_answer": "7398",
+      "seed_value": 407945160
+    },
+    "iso_time": "2025-12-03T22:37:48Z"
+  },
+  {
+    "timestamp": 1764801468.734294,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7398",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:37:48Z"
+  },
+  {
+    "timestamp": 1764801561.935828,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7398",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:39:21Z"
+  },
+  {
+    "timestamp": 1764801657.284228,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7404",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:40:57Z"
+  },
+  {
+    "timestamp": 1764801791.2297401,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7405",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:43:11Z"
+  },
+  {
+    "timestamp": 1764801853.1960871,
+    "seed_id": "2003-I-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7390",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:44:13Z"
+  },
+  {
+    "timestamp": 1764801912.675159,
+    "seed_id": "2003-I-7::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-7::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T22:45:12Z"
+  }
+]

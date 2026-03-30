@@ -1,0 +1,1141 @@
+[
+  {
+    "timestamp": 1764423048.003638,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "Let $S$ be the set of points whose coordinates $x,$ $y,$ and $z$ are integers that satisfy $0\\le x\\le2,$ $0\\le y\\le3,$ a",
+      "answer": "200",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T13:30:48Z"
+  },
+  {
+    "timestamp": 1764423048.003705,
+    "seed_id": "2001-I-10::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T13:30:48Z"
+  },
+  {
+    "timestamp": 1764423048.003733,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $S$ be the set of points whose coordinates $x,$ $y,$ and $z$ are integers that satisfy $0\\le x\\le2,$ $0\\le y\\le3,$ and $0\\le z\\le4.$ Two distinct points are randomly chosen from $S.$ The probability that the midpoint of the segment they determine also belongs to $S$ is $m/n,$ where $m$ and $n$ are relatively prime positive integers.  Find $m + n.$",
+      "answer": "200",
+      "example_id": "2001-I-10::2001"
+    },
+    "iso_time": "2025-11-29T13:30:48Z"
+  },
+  {
+    "timestamp": 1764423118.047452,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-10::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1288714250
+    },
+    "iso_time": "2025-11-29T13:31:58Z"
+  },
+  {
+    "timestamp": 1764423119.1461911,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 4,
+        "upper_bounds_text": "15,14,13,17",
+        "upper_bounds": [
+          15,
+          14,
+          13,
+          17
+        ],
+        "k_points": 8
+      }
+    },
+    "iso_time": "2025-11-29T13:31:59Z"
+  },
+  {
+    "timestamp": 1764423120.18316,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3970554079914015697430946029
+    },
+    "iso_time": "2025-11-29T13:32:00Z"
+  },
+  {
+    "timestamp": 1764423120.1833222,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be the set of integer 4-tuples (x_1, ..., x_4) with 0 ≤ x_i ≤ A_i for each i, where the upper bounds per coordinat",
+      "correct_answer": "3970554079914015697430946029",
+      "seed_value": 1288714250
+    },
+    "iso_time": "2025-11-29T13:32:00Z"
+  },
+  {
+    "timestamp": 1764423120.183388,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3970554079914015498442899462",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:32:00Z"
+  },
+  {
+    "timestamp": 1764423302.671069,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3970554079914015697430946029",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:35:02Z"
+  },
+  {
+    "timestamp": 1764423444.7355058,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3970554079914015498442899457",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:37:24Z"
+  },
+  {
+    "timestamp": 1764423575.0458229,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3970554079914015697430946029",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:39:35Z"
+  },
+  {
+    "timestamp": 1764423750.4797199,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3970554079914015498442899447",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:42:30Z"
+  },
+  {
+    "timestamp": 1764423850.6040802,
+    "seed_id": "2001-I-10::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-10::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T13:44:10Z"
+  },
+  {
+    "timestamp": 1764423850.604188,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-10::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1523433945
+    },
+    "iso_time": "2025-11-29T13:44:10Z"
+  },
+  {
+    "timestamp": 1764423851.861381,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 4,
+        "upper_bounds_text": "9,7,10,5",
+        "upper_bounds": [
+          9,
+          7,
+          10,
+          5
+        ],
+        "k_points": 7
+      }
+    },
+    "iso_time": "2025-11-29T13:44:11Z"
+  },
+  {
+    "timestamp": 1764423852.874402,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 35324277860910170313499
+    },
+    "iso_time": "2025-11-29T13:44:12Z"
+  },
+  {
+    "timestamp": 1764423852.874549,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be the set of integer 4-tuples (x_1, ..., x_4) with 0 ≤ x_i ≤ A_i for each i, where the upper bounds per coordinat",
+      "correct_answer": "35324277860910170313499",
+      "seed_value": 1523433945
+    },
+    "iso_time": "2025-11-29T13:44:12Z"
+  },
+  {
+    "timestamp": 1764423852.8746061,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "35324277860910168539145",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:44:12Z"
+  },
+  {
+    "timestamp": 1764424008.60886,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "35324277860910168539128",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:46:48Z"
+  },
+  {
+    "timestamp": 1764424127.946822,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "35324277860910170313499",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:48:47Z"
+  },
+  {
+    "timestamp": 1764424307.303352,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "35324277860910168539140",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:51:47Z"
+  },
+  {
+    "timestamp": 1764424452.20769,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "35324277860910170313499",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:54:12Z"
+  },
+  {
+    "timestamp": 1764424617.48689,
+    "seed_id": "2001-I-10::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-10::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T13:56:57Z"
+  },
+  {
+    "timestamp": 1764424617.487016,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-10::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1549979678
+    },
+    "iso_time": "2025-11-29T13:56:57Z"
+  },
+  {
+    "timestamp": 1764424618.601533,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 4,
+        "upper_bounds_text": "17,19,4,20",
+        "upper_bounds": [
+          17,
+          19,
+          4,
+          20
+        ],
+        "k_points": 5
+      }
+    },
+    "iso_time": "2025-11-29T13:56:58Z"
+  },
+  {
+    "timestamp": 1764424619.624921,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 96619177658939
+    },
+    "iso_time": "2025-11-29T13:56:59Z"
+  },
+  {
+    "timestamp": 1764424619.625091,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be the set of integer 4-tuples (x_1, ..., x_4) with 0 ≤ x_i ≤ A_i for each i, where the upper bounds per coordinat",
+      "correct_answer": "96619177658939",
+      "seed_value": 1549979678
+    },
+    "iso_time": "2025-11-29T13:56:59Z"
+  },
+  {
+    "timestamp": 1764424619.625154,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "96619177658939",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:56:59Z"
+  },
+  {
+    "timestamp": 1764424745.892898,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "96619177658947",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:59:05Z"
+  },
+  {
+    "timestamp": 1764424817.17172,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "96619177658930",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:00:17Z"
+  },
+  {
+    "timestamp": 1764424950.7612522,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "96619177658948",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:02:30Z"
+  },
+  {
+    "timestamp": 1764425030.974602,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "96619177658939",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T14:03:50Z"
+  },
+  {
+    "timestamp": 1764425168.394166,
+    "seed_id": "2001-I-10::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-10::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T14:06:08Z"
+  },
+  {
+    "timestamp": 1764425168.394254,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-10::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 507803025
+    },
+    "iso_time": "2025-11-29T14:06:08Z"
+  },
+  {
+    "timestamp": 1764425169.524079,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "upper_bounds_text": "10,16,19",
+        "upper_bounds": [
+          10,
+          16,
+          19
+        ],
+        "k_points": 7
+      }
+    },
+    "iso_time": "2025-11-29T14:06:09Z"
+  },
+  {
+    "timestamp": 1764425170.543248,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17759783361549272526673
+    },
+    "iso_time": "2025-11-29T14:06:10Z"
+  },
+  {
+    "timestamp": 1764425170.543442,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be the set of integer 3-tuples (x_1, ..., x_3) with 0 ≤ x_i ≤ A_i for each i, where the upper bounds per coordinat",
+      "correct_answer": "17759783361549272526673",
+      "seed_value": 507803025
+    },
+    "iso_time": "2025-11-29T14:06:10Z"
+  },
+  {
+    "timestamp": 1764425170.5435112,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "17759783361549272526673",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T14:06:10Z"
+  },
+  {
+    "timestamp": 1764425363.6729028,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17759783361549273399293",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:09:23Z"
+  },
+  {
+    "timestamp": 1764425518.5176802,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "17759783361549273399291",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:11:58Z"
+  },
+  {
+    "timestamp": 1764425684.9046988,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "17759783361549273399302",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:14:44Z"
+  },
+  {
+    "timestamp": 1764425868.383452,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17759783361549272526673",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T14:17:48Z"
+  },
+  {
+    "timestamp": 1764426045.046311,
+    "seed_id": "2001-I-10::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T14:20:45Z"
+  },
+  {
+    "timestamp": 1764426045.046581,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-10::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 613289804
+    },
+    "iso_time": "2025-11-29T14:20:45Z"
+  },
+  {
+    "timestamp": 1764426046.288735,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 4,
+        "upper_bounds_text": "10,12,15,13",
+        "upper_bounds": [
+          10,
+          12,
+          15,
+          13
+        ],
+        "k_points": 8
+      }
+    },
+    "iso_time": "2025-11-29T14:20:46Z"
+  },
+  {
+    "timestamp": 1764426047.478667,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1032472739819610039217608545
+    },
+    "iso_time": "2025-11-29T14:20:47Z"
+  },
+  {
+    "timestamp": 1764426047.478848,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be the set of integer 4-tuples (x_1, ..., x_4) with 0 ≤ x_i ≤ A_i for each i, where the upper bounds per coordinat",
+      "correct_answer": "1032472739819610039217608545",
+      "seed_value": 613289804
+    },
+    "iso_time": "2025-11-29T14:20:47Z"
+  },
+  {
+    "timestamp": 1764426047.478922,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1032472739819610039217608545",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T14:20:47Z"
+  },
+  {
+    "timestamp": 1764426206.8193102,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1032472739819610053468487672",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:23:26Z"
+  },
+  {
+    "timestamp": 1764426465.466367,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1032472739819610039217608545",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T14:27:45Z"
+  },
+  {
+    "timestamp": 1764426620.1897721,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1032472739819610053468487681",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:30:20Z"
+  },
+  {
+    "timestamp": 1764426779.007145,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1032472739819610053468487674",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:32:59Z"
+  },
+  {
+    "timestamp": 1764426852.356024,
+    "seed_id": "2001-I-10::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-10::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T14:34:12Z"
+  },
+  {
+    "timestamp": 1764426852.356089,
+    "seed_id": "2001-I-10::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-29T14:34:12Z"
+  },
+  {
+    "timestamp": 1764426852.356138,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 4 (successes=3).",
+      "question": "Let $S$ be the set of points whose coordinates $x,$ $y,$ and $z$ are integers that satisfy $0\\le x\\le2,$ $0\\le y\\le3,$ and $0\\le z\\le4.$ Two distinct points are randomly chosen from $S.$ The probability that the midpoint of the segment they determine also belongs to $S$ is $m/n,$ where $m$ and $n$ are relatively prime positive integers.  Find $m + n.$",
+      "answer": "200",
+      "example_id": "2001-I-10::2001"
+    },
+    "iso_time": "2025-11-29T14:34:12Z"
+  },
+  {
+    "timestamp": 1764426923.639316,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-10::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1060612068
+    },
+    "iso_time": "2025-11-29T14:35:23Z"
+  },
+  {
+    "timestamp": 1764426924.928202,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "d": 5,
+        "bounds_str": "18,11,7,16,12",
+        "bounds": [
+          18,
+          11,
+          7,
+          16,
+          12
+        ],
+        "p": 4,
+        "q": 1
+      }
+    },
+    "iso_time": "2025-11-29T14:35:24Z"
+  },
+  {
+    "timestamp": 1764426925.9615822,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 13546278459
+    },
+    "iso_time": "2025-11-29T14:35:25Z"
+  },
+  {
+    "timestamp": 1764426925.961728,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be the set of integer lattice points in d dimensions with coordinates (x_1, ..., x_d) satisfying 0 ≤ x_i ≤ N_i for",
+      "correct_answer": "13546278459",
+      "seed_value": 1060612068
+    },
+    "iso_time": "2025-11-29T14:35:25Z"
+  },
+  {
+    "timestamp": 1764426925.9617732,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "13546278459",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T14:35:25Z"
+  },
+  {
+    "timestamp": 1764426979.348011,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "13546278467",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:36:19Z"
+  },
+  {
+    "timestamp": 1764427037.577268,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "13546278459",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T14:37:17Z"
+  },
+  {
+    "timestamp": 1764427095.365571,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "13546278458",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:38:15Z"
+  },
+  {
+    "timestamp": 1764427145.234741,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13546278454",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:39:05Z"
+  },
+  {
+    "timestamp": 1764427228.5968251,
+    "seed_id": "2001-I-10::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T14:40:28Z"
+  },
+  {
+    "timestamp": 1764427228.596965,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-10::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1238796538
+    },
+    "iso_time": "2025-11-29T14:40:28Z"
+  },
+  {
+    "timestamp": 1764427229.949343,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "d": 4,
+        "bounds_str": "10,9,10,9",
+        "bounds": [
+          10,
+          9,
+          10,
+          9
+        ],
+        "p": 1,
+        "q": 3
+      }
+    },
+    "iso_time": "2025-11-29T14:40:29Z"
+  },
+  {
+    "timestamp": 1764427231.0365708,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12252953
+    },
+    "iso_time": "2025-11-29T14:40:31Z"
+  },
+  {
+    "timestamp": 1764427231.036716,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be the set of integer lattice points in d dimensions with coordinates (x_1, ..., x_d) satisfying 0 ≤ x_i ≤ N_i for",
+      "correct_answer": "12252953",
+      "seed_value": 1238796538
+    },
+    "iso_time": "2025-11-29T14:40:31Z"
+  },
+  {
+    "timestamp": 1764427231.0367942,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12252953",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T14:40:31Z"
+  },
+  {
+    "timestamp": 1764427301.2214131,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12252952",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:41:41Z"
+  },
+  {
+    "timestamp": 1764427361.198835,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12252953",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T14:42:41Z"
+  },
+  {
+    "timestamp": 1764427411.167903,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12252948",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:43:31Z"
+  },
+  {
+    "timestamp": 1764427522.784184,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12252960",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:45:22Z"
+  },
+  {
+    "timestamp": 1764427580.028367,
+    "seed_id": "2001-I-10::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T14:46:20Z"
+  },
+  {
+    "timestamp": 1764427580.028577,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-10::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1746633818
+    },
+    "iso_time": "2025-11-29T14:46:20Z"
+  },
+  {
+    "timestamp": 1764427581.187926,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "d": 2,
+        "bounds_str": "5,10",
+        "bounds": [
+          5,
+          10
+        ],
+        "p": 3,
+        "q": 1
+      }
+    },
+    "iso_time": "2025-11-29T14:46:21Z"
+  },
+  {
+    "timestamp": 1764427582.292938,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2267
+    },
+    "iso_time": "2025-11-29T14:46:22Z"
+  },
+  {
+    "timestamp": 1764427582.293108,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be the set of integer lattice points in d dimensions with coordinates (x_1, ..., x_d) satisfying 0 ≤ x_i ≤ N_i for",
+      "correct_answer": "2267",
+      "seed_value": 1746633818
+    },
+    "iso_time": "2025-11-29T14:46:22Z"
+  },
+  {
+    "timestamp": 1764427582.293174,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2276",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:46:22Z"
+  },
+  {
+    "timestamp": 1764427637.1295738,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2274",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:47:17Z"
+  },
+  {
+    "timestamp": 1764427685.6964679,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2267",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T14:48:05Z"
+  },
+  {
+    "timestamp": 1764427769.05862,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2263",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T14:49:29Z"
+  },
+  {
+    "timestamp": 1764427808.3857431,
+    "seed_id": "2001-I-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2267",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T14:50:08Z"
+  },
+  {
+    "timestamp": 1764427876.5768151,
+    "seed_id": "2001-I-10::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-10::2001_prompt02-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T14:51:16Z"
+  }
+]

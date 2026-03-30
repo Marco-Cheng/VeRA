@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1764328196.3560581,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1999,
+      "question_preview": "Forty teams play a tournament in which every team plays every other( $39$ different opponents) team exactly once.  No ti",
+      "answer": "742",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T11:09:56Z"
+  },
+  {
+    "timestamp": 1764328196.3561149,
+    "seed_id": "1999-13::1999",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T11:09:56Z"
+  },
+  {
+    "timestamp": 1764328196.3561358,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Forty teams play a tournament in which every team plays every other( $39$ different opponents) team exactly once.  No ties occur, and each team has a $50 \\%$ chance of winning any game it plays.  The probability that no two teams win the same number of games is $m/n,$ where $m_{}$ and $n_{}$ are relatively prime positive integers.  Find $\\log_2 n.$",
+      "answer": "742",
+      "example_id": "1999-13::1999"
+    },
+    "iso_time": "2025-11-28T11:09:56Z"
+  },
+  {
+    "timestamp": 1764328329.733302,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-13::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1412452519
+    },
+    "iso_time": "2025-11-28T11:12:09Z"
+  },
+  {
+    "timestamp": 1764328330.827455,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 35,
+        "p": 179,
+        "lambda": 2,
+        "a": 5325,
+        "b": 32041
+      }
+    },
+    "iso_time": "2025-11-28T11:12:10Z"
+  },
+  {
+    "timestamp": 1764328331.862539,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1156
+    },
+    "iso_time": "2025-11-28T11:12:11Z"
+  },
+  {
+    "timestamp": 1764328331.862704,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a round-robin tournament with 35 teams labeled 1 through 35, every pair of distinct teams plays exactly once. No ties",
+      "correct_answer": "1156",
+      "seed_value": 1412452519
+    },
+    "iso_time": "2025-11-28T11:12:11Z"
+  },
+  {
+    "timestamp": 1764328331.8627489,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1156",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:12:11Z"
+  },
+  {
+    "timestamp": 1764328746.657205,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1148",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:19:06Z"
+  },
+  {
+    "timestamp": 1764329074.610721,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1147",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:24:34Z"
+  },
+  {
+    "timestamp": 1764329134.235348,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1155",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:25:34Z"
+  },
+  {
+    "timestamp": 1764329305.014082,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1156",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:28:25Z"
+  },
+  {
+    "timestamp": 1764329414.055428,
+    "seed_id": "1999-13::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-13::1999_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T11:30:14Z"
+  },
+  {
+    "timestamp": 1764329414.055618,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-13::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 919544939
+    },
+    "iso_time": "2025-11-28T11:30:14Z"
+  },
+  {
+    "timestamp": 1764329415.283929,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 35,
+        "p": 173,
+        "lambda": 2,
+        "a": 13609,
+        "b": 29929
+      }
+    },
+    "iso_time": "2025-11-28T11:30:15Z"
+  },
+  {
+    "timestamp": 1764329416.315496,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1156
+    },
+    "iso_time": "2025-11-28T11:30:16Z"
+  },
+  {
+    "timestamp": 1764329416.315661,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a round-robin tournament with 35 teams labeled 1 through 35, every pair of distinct teams plays exactly once. No ties",
+      "correct_answer": "1156",
+      "seed_value": 919544939
+    },
+    "iso_time": "2025-11-28T11:30:16Z"
+  },
+  {
+    "timestamp": 1764329416.315704,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1165",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:30:16Z"
+  },
+  {
+    "timestamp": 1764329679.4944751,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1157",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:34:39Z"
+  },
+  {
+    "timestamp": 1764329726.047942,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1156",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:35:26Z"
+  },
+  {
+    "timestamp": 1764329902.082027,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1147",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:38:22Z"
+  },
+  {
+    "timestamp": 1764329970.5747468,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1156",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:39:30Z"
+  },
+  {
+    "timestamp": 1764330011.975233,
+    "seed_id": "1999-13::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-13::1999_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T11:40:11Z"
+  },
+  {
+    "timestamp": 1764330011.9753358,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-13::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1488454000
+    },
+    "iso_time": "2025-11-28T11:40:11Z"
+  },
+  {
+    "timestamp": 1764330013.422831,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 59,
+        "p": 167,
+        "lambda": 3,
+        "a": 2110637,
+        "b": 4657463
+      }
+    },
+    "iso_time": "2025-11-28T11:40:13Z"
+  },
+  {
+    "timestamp": 1764330014.458913,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5046
+    },
+    "iso_time": "2025-11-28T11:40:14Z"
+  },
+  {
+    "timestamp": 1764330014.459063,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a round-robin tournament with 59 teams labeled 1 through 59, every pair of distinct teams plays exactly once. No ties",
+      "correct_answer": "5046",
+      "seed_value": 1488454000
+    },
+    "iso_time": "2025-11-28T11:40:14Z"
+  },
+  {
+    "timestamp": 1764330014.459106,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5043",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:40:14Z"
+  },
+  {
+    "timestamp": 1764330079.245295,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5046",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:41:19Z"
+  },
+  {
+    "timestamp": 1764330294.0954611,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5040",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:44:54Z"
+  },
+  {
+    "timestamp": 1764330374.87888,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5054",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:46:14Z"
+  },
+  {
+    "timestamp": 1764330432.793704,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5046",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:47:12Z"
+  },
+  {
+    "timestamp": 1764330504.276703,
+    "seed_id": "1999-13::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-13::1999_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T11:48:24Z"
+  },
+  {
+    "timestamp": 1764330504.27681,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-13::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 345682357
+    },
+    "iso_time": "2025-11-28T11:48:24Z"
+  },
+  {
+    "timestamp": 1764330505.46941,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 22,
+        "p": 193,
+        "lambda": 1,
+        "a": 156,
+        "b": 193
+      }
+    },
+    "iso_time": "2025-11-28T11:48:25Z"
+  },
+  {
+    "timestamp": 1764330506.538084,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 220
+    },
+    "iso_time": "2025-11-28T11:48:26Z"
+  },
+  {
+    "timestamp": 1764330506.5382369,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a round-robin tournament with 22 teams labeled 1 through 22, every pair of distinct teams plays exactly once. No ties",
+      "correct_answer": "220",
+      "seed_value": 345682357
+    },
+    "iso_time": "2025-11-28T11:48:26Z"
+  },
+  {
+    "timestamp": 1764330506.5382788,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "226",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:48:26Z"
+  },
+  {
+    "timestamp": 1764330549.240376,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "220",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:49:09Z"
+  },
+  {
+    "timestamp": 1764330611.300246,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "217",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:50:11Z"
+  },
+  {
+    "timestamp": 1764330701.963878,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "220",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:51:41Z"
+  },
+  {
+    "timestamp": 1764330754.212523,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "222",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:52:34Z"
+  },
+  {
+    "timestamp": 1764330801.581129,
+    "seed_id": "1999-13::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-13::1999_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T11:53:21Z"
+  },
+  {
+    "timestamp": 1764330801.581236,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-13::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 844408924
+    },
+    "iso_time": "2025-11-28T11:53:21Z"
+  },
+  {
+    "timestamp": 1764330802.777954,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 26,
+        "p": 163,
+        "lambda": 1,
+        "a": 27,
+        "b": 163
+      }
+    },
+    "iso_time": "2025-11-28T11:53:22Z"
+  },
+  {
+    "timestamp": 1764330803.8096871,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 312
+    },
+    "iso_time": "2025-11-28T11:53:23Z"
+  },
+  {
+    "timestamp": 1764330803.809872,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a round-robin tournament with 26 teams labeled 1 through 26, every pair of distinct teams plays exactly once. No ties",
+      "correct_answer": "312",
+      "seed_value": 844408924
+    },
+    "iso_time": "2025-11-28T11:53:23Z"
+  },
+  {
+    "timestamp": 1764330803.809933,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "316",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:53:23Z"
+  },
+  {
+    "timestamp": 1764330844.590122,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "312",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:54:04Z"
+  },
+  {
+    "timestamp": 1764330995.2177842,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "313",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:56:35Z"
+  },
+  {
+    "timestamp": 1764331179.5403578,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "314",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:59:39Z"
+  },
+  {
+    "timestamp": 1764331234.5964859,
+    "seed_id": "1999-13::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "312",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T12:00:34Z"
+  },
+  {
+    "timestamp": 1764331482.711678,
+    "seed_id": "1999-13::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-13::1999_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T12:04:42Z"
+  }
+]

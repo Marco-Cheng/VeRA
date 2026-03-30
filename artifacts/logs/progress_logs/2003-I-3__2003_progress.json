@@ -1,0 +1,753 @@
+[
+  {
+    "timestamp": 1764783629.286329,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "Let the set $\\mathcal{S} = \\{8, 5, 1, 13, 34, 3, 21, 2\\}.$ Susan makes a list as follows: for each two-element subset of",
+      "answer": "484",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-03T17:40:29Z"
+  },
+  {
+    "timestamp": 1764783629.2864158,
+    "seed_id": "2003-I-3::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-03T17:40:29Z"
+  },
+  {
+    "timestamp": 1764783629.286462,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let the set $\\mathcal{S} = \\{8, 5, 1, 13, 34, 3, 21, 2\\}.$ Susan makes a list as follows: for each two-element subset of $\\mathcal{S},$ she writes on her list the greater of the set's two elements. Find the sum of the numbers on the list.",
+      "answer": "484",
+      "example_id": "2003-I-3::2003"
+    },
+    "iso_time": "2025-12-03T17:40:29Z"
+  },
+  {
+    "timestamp": 1764783831.820931,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-3::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1794828823
+    },
+    "iso_time": "2025-12-03T17:43:51Z"
+  },
+  {
+    "timestamp": 1764783833.20929,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 12,
+        "k": 4,
+        "r": 2,
+        "values": [
+          92,
+          148,
+          14,
+          204,
+          44,
+          129,
+          90,
+          214,
+          166,
+          109,
+          58,
+          244
+        ],
+        "set_elements": "92, 148, 14, 204, 44, 129, 90, 214, 166, 109, 58, 244"
+      }
+    },
+    "iso_time": "2025-12-03T17:43:53Z"
+  },
+  {
+    "timestamp": 1764783834.429255,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 175135
+    },
+    "iso_time": "2025-12-03T17:43:54Z"
+  },
+  {
+    "timestamp": 1764783834.4294279,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a set S consists of 12 distinct positive integers: 92, 148, 14, 204, 44, 129, 90, 214, 166, 109, 58, ",
+      "correct_answer": "175135",
+      "seed_value": 1794828823
+    },
+    "iso_time": "2025-12-03T17:43:54Z"
+  },
+  {
+    "timestamp": 1764783834.429503,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "175128",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T17:43:54Z"
+  },
+  {
+    "timestamp": 1764783935.8289988,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "175127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T17:45:35Z"
+  },
+  {
+    "timestamp": 1764783998.314305,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "175135",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T17:46:38Z"
+  },
+  {
+    "timestamp": 1764784058.815905,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "175134",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T17:47:38Z"
+  },
+  {
+    "timestamp": 1764784146.125039,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "175135",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T17:49:06Z"
+  },
+  {
+    "timestamp": 1764784206.441277,
+    "seed_id": "2003-I-3::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-3::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T17:50:06Z"
+  },
+  {
+    "timestamp": 1764784206.441447,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-3::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1670271648
+    },
+    "iso_time": "2025-12-03T17:50:06Z"
+  },
+  {
+    "timestamp": 1764784207.7424,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 9,
+        "k": 6,
+        "r": 2,
+        "values": [
+          88,
+          327,
+          89,
+          41,
+          324,
+          340,
+          120,
+          308,
+          281
+        ],
+        "set_elements": "88, 327, 89, 41, 324, 340, 120, 308, 281"
+      }
+    },
+    "iso_time": "2025-12-03T17:50:07Z"
+  },
+  {
+    "timestamp": 1764784208.9553568,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 55068
+    },
+    "iso_time": "2025-12-03T17:50:08Z"
+  },
+  {
+    "timestamp": 1764784208.9555619,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a set S consists of 9 distinct positive integers: 88, 327, 89, 41, 324, 340, 120, 308, 281. For each ",
+      "correct_answer": "55068",
+      "seed_value": 1670271648
+    },
+    "iso_time": "2025-12-03T17:50:08Z"
+  },
+  {
+    "timestamp": 1764784208.955644,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "55068",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T17:50:08Z"
+  },
+  {
+    "timestamp": 1764784288.18694,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "55059",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T17:51:28Z"
+  },
+  {
+    "timestamp": 1764784366.002632,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "55071",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T17:52:46Z"
+  },
+  {
+    "timestamp": 1764784436.78545,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "55064",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T17:53:56Z"
+  },
+  {
+    "timestamp": 1764784509.1976058,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "55068",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T17:55:09Z"
+  },
+  {
+    "timestamp": 1764784530.7842681,
+    "seed_id": "2003-I-3::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-3::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T17:55:30Z"
+  },
+  {
+    "timestamp": 1764784530.78441,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-3::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 227118360
+    },
+    "iso_time": "2025-12-03T17:55:30Z"
+  },
+  {
+    "timestamp": 1764784532.009877,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 11,
+        "k": 4,
+        "r": 2,
+        "values": [
+          53,
+          46,
+          95,
+          43,
+          87,
+          96,
+          5,
+          152,
+          195,
+          186,
+          126
+        ],
+        "set_elements": "53, 46, 95, 43, 87, 96, 5, 152, 195, 186, 126"
+      }
+    },
+    "iso_time": "2025-12-03T17:55:32Z"
+  },
+  {
+    "timestamp": 1764784533.140249,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 93486
+    },
+    "iso_time": "2025-12-03T17:55:33Z"
+  },
+  {
+    "timestamp": 1764784533.1404061,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a set S consists of 11 distinct positive integers: 53, 46, 95, 43, 87, 96, 5, 152, 195, 186, 126. For",
+      "correct_answer": "93486",
+      "seed_value": 227118360
+    },
+    "iso_time": "2025-12-03T17:55:33Z"
+  },
+  {
+    "timestamp": 1764784533.140467,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "93493",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T17:55:33Z"
+  },
+  {
+    "timestamp": 1764784653.17324,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "93486",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T17:57:33Z"
+  },
+  {
+    "timestamp": 1764784703.5387678,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "93495",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T17:58:23Z"
+  },
+  {
+    "timestamp": 1764784740.948574,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "93486",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T17:59:00Z"
+  },
+  {
+    "timestamp": 1764784788.861124,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "93479",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T17:59:48Z"
+  },
+  {
+    "timestamp": 1764784865.760813,
+    "seed_id": "2003-I-3::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-3::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T18:01:05Z"
+  },
+  {
+    "timestamp": 1764784865.760989,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-3::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2116482211
+    },
+    "iso_time": "2025-12-03T18:01:05Z"
+  },
+  {
+    "timestamp": 1764784867.177412,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 11,
+        "k": 5,
+        "r": 4,
+        "values": [
+          67,
+          156,
+          108,
+          57,
+          84,
+          174,
+          209,
+          198,
+          60,
+          6,
+          210
+        ],
+        "set_elements": "67, 156, 108, 57, 84, 174, 209, 198, 60, 6, 210"
+      }
+    },
+    "iso_time": "2025-12-03T18:01:07Z"
+  },
+  {
+    "timestamp": 1764784868.271056,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 262147
+    },
+    "iso_time": "2025-12-03T18:01:08Z"
+  },
+  {
+    "timestamp": 1764784868.2712152,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a set S consists of 11 distinct positive integers: 67, 156, 108, 57, 84, 174, 209, 198, 60, 6, 210. F",
+      "correct_answer": "262147",
+      "seed_value": 2116482211
+    },
+    "iso_time": "2025-12-03T18:01:08Z"
+  },
+  {
+    "timestamp": 1764784868.271277,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "262140",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:01:08Z"
+  },
+  {
+    "timestamp": 1764784946.1847382,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "262152",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:02:26Z"
+  },
+  {
+    "timestamp": 1764785080.69587,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "262148",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:04:40Z"
+  },
+  {
+    "timestamp": 1764785220.165616,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "262147",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:07:00Z"
+  },
+  {
+    "timestamp": 1764785344.686425,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "262147",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:09:04Z"
+  },
+  {
+    "timestamp": 1764785400.9008598,
+    "seed_id": "2003-I-3::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-3::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T18:10:00Z"
+  },
+  {
+    "timestamp": 1764785400.900971,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-3::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1271390384
+    },
+    "iso_time": "2025-12-03T18:10:00Z"
+  },
+  {
+    "timestamp": 1764785402.357019,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 11,
+        "k": 5,
+        "r": 2,
+        "values": [
+          11,
+          72,
+          164,
+          90,
+          209,
+          214,
+          8,
+          67,
+          37,
+          66,
+          213
+        ],
+        "set_elements": "11, 72, 164, 90, 209, 214, 8, 67, 37, 66, 213"
+      }
+    },
+    "iso_time": "2025-12-03T18:10:02Z"
+  },
+  {
+    "timestamp": 1764785403.446719,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 165315
+    },
+    "iso_time": "2025-12-03T18:10:03Z"
+  },
+  {
+    "timestamp": 1764785403.4468648,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a set S consists of 11 distinct positive integers: 11, 72, 164, 90, 209, 214, 8, 67, 37, 66, 213. For",
+      "correct_answer": "165315",
+      "seed_value": 1271390384
+    },
+    "iso_time": "2025-12-03T18:10:03Z"
+  },
+  {
+    "timestamp": 1764785403.446935,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "165315",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:10:03Z"
+  },
+  {
+    "timestamp": 1764785456.947955,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "165308",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:10:56Z"
+  },
+  {
+    "timestamp": 1764785568.125857,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "165317",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:12:48Z"
+  },
+  {
+    "timestamp": 1764785689.112706,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "165315",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:14:49Z"
+  },
+  {
+    "timestamp": 1764785746.153352,
+    "seed_id": "2003-I-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "165310",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:15:46Z"
+  },
+  {
+    "timestamp": 1764785803.1619961,
+    "seed_id": "2003-I-3::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-3::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T18:16:43Z"
+  }
+]

@@ -1,0 +1,4908 @@
+[
+  {
+    "timestamp": 1765229469.846038,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "The equation $2^{333x-2} + 2^{111x+2} = 2^{222x+1} + 1$ has three real roots. Given that their sum is $\\frac mn$ where $",
+      "answer": "113",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-08T21:31:09Z"
+  },
+  {
+    "timestamp": 1765229469.846087,
+    "seed_id": "2005-I-8::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-08T21:31:09Z"
+  },
+  {
+    "timestamp": 1765229469.8461099,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The equation $2^{333x-2} + 2^{111x+2} = 2^{222x+1} + 1$ has three real roots. Given that their sum is $\\frac mn$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$",
+      "answer": "113",
+      "example_id": "2005-I-8::2005"
+    },
+    "iso_time": "2025-12-08T21:31:09Z"
+  },
+  {
+    "timestamp": 1765229872.682081,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 84022121
+    },
+    "iso_time": "2025-12-08T21:37:52Z"
+  },
+  {
+    "timestamp": 1765229874.080943,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 5,
+        "step": 43,
+        "m0": 0,
+        "r3": 0,
+        "n0": 1,
+        "s1": 3,
+        "p0": 5,
+        "t2": 1,
+        "q0": 1,
+        "u0": 0
+      }
+    },
+    "iso_time": "2025-12-08T21:37:54Z"
+  },
+  {
+    "timestamp": 1765229875.142153,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 44
+    },
+    "iso_time": "2025-12-08T21:37:55Z"
+  },
+  {
+    "timestamp": 1765229875.142316,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation: 5^{(3*{step}*x + 0)} * 5^{({m0})} + 5^{({step}*x + 3)} * 5^{({n0})} = 5^{(2*{step}*x ",
+      "correct_answer": "44",
+      "seed_value": 84022121
+    },
+    "iso_time": "2025-12-08T21:37:55Z"
+  },
+  {
+    "timestamp": 1765229875.142362,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "44",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T21:37:55Z"
+  },
+  {
+    "timestamp": 1765229928.923836,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "46",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:38:48Z"
+  },
+  {
+    "timestamp": 1765229947.945674,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "44",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T21:39:07Z"
+  },
+  {
+    "timestamp": 1765229990.959871,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "53",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:39:50Z"
+  },
+  {
+    "timestamp": 1765230033.590293,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "45",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:40:33Z"
+  },
+  {
+    "timestamp": 1765230062.287277,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T21:41:02Z"
+  },
+  {
+    "timestamp": 1765230062.2875268,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 410250404
+    },
+    "iso_time": "2025-12-08T21:41:02Z"
+  },
+  {
+    "timestamp": 1765230063.573973,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 7,
+        "step": 121,
+        "m0": 0,
+        "r3": 0,
+        "n0": 1,
+        "s1": 3,
+        "p0": 6,
+        "t2": 0,
+        "q0": 0,
+        "u0": 1
+      }
+    },
+    "iso_time": "2025-12-08T21:41:03Z"
+  },
+  {
+    "timestamp": 1765230064.6978219,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 122
+    },
+    "iso_time": "2025-12-08T21:41:04Z"
+  },
+  {
+    "timestamp": 1765230064.697985,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation: 7^{(3*{step}*x + 0)} * 7^{({m0})} + 7^{({step}*x + 3)} * 7^{({n0})} = 7^{(2*{step}*x ",
+      "correct_answer": "122",
+      "seed_value": 410250404
+    },
+    "iso_time": "2025-12-08T21:41:04Z"
+  },
+  {
+    "timestamp": 1765230064.698029,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "122",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T21:41:04Z"
+  },
+  {
+    "timestamp": 1765230086.849248,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:41:26Z"
+  },
+  {
+    "timestamp": 1765230148.3770041,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "117",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:42:28Z"
+  },
+  {
+    "timestamp": 1765230198.0044532,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "115",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:43:18Z"
+  },
+  {
+    "timestamp": 1765230233.1263518,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "122",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T21:43:53Z"
+  },
+  {
+    "timestamp": 1765230272.418807,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T21:44:32Z"
+  },
+  {
+    "timestamp": 1765230272.4190772,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 74973726
+    },
+    "iso_time": "2025-12-08T21:44:32Z"
+  },
+  {
+    "timestamp": 1765230273.662242,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 5,
+        "step": 36,
+        "m0": 0,
+        "r3": 0,
+        "n0": 4,
+        "s1": 0,
+        "p0": 1,
+        "t2": 5,
+        "q0": 1,
+        "u0": 0
+      }
+    },
+    "iso_time": "2025-12-08T21:44:33Z"
+  },
+  {
+    "timestamp": 1765230274.79424,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 37
+    },
+    "iso_time": "2025-12-08T21:44:34Z"
+  },
+  {
+    "timestamp": 1765230274.794421,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation: 5^{(3*{step}*x + 0)} * 5^{({m0})} + 5^{({step}*x + 0)} * 5^{({n0})} = 5^{(2*{step}*x ",
+      "correct_answer": "37",
+      "seed_value": 74973726
+    },
+    "iso_time": "2025-12-08T21:44:34Z"
+  },
+  {
+    "timestamp": 1765230274.794467,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "31",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:44:34Z"
+  },
+  {
+    "timestamp": 1765230305.744267,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "45",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:45:05Z"
+  },
+  {
+    "timestamp": 1765230333.673398,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "37",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T21:45:33Z"
+  },
+  {
+    "timestamp": 1765230368.936571,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "42",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:46:08Z"
+  },
+  {
+    "timestamp": 1765230408.217752,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "37",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T21:46:48Z"
+  },
+  {
+    "timestamp": 1765230446.630435,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T21:47:26Z"
+  },
+  {
+    "timestamp": 1765230446.630604,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2072781546
+    },
+    "iso_time": "2025-12-08T21:47:26Z"
+  },
+  {
+    "timestamp": 1765230448.009048,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 3,
+        "step": 13,
+        "m0": 0,
+        "r3": 0,
+        "n0": 0,
+        "s1": 5,
+        "p0": 4,
+        "t2": 3,
+        "q0": 0,
+        "u0": 1
+      }
+    },
+    "iso_time": "2025-12-08T21:47:28Z"
+  },
+  {
+    "timestamp": 1765230449.21524,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 14
+    },
+    "iso_time": "2025-12-08T21:47:29Z"
+  },
+  {
+    "timestamp": 1765230449.215429,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation: 3^{(3*{step}*x + 0)} * 3^{({m0})} + 3^{({step}*x + 5)} * 3^{({n0})} = 3^{(2*{step}*x ",
+      "correct_answer": "14",
+      "seed_value": 2072781546
+    },
+    "iso_time": "2025-12-08T21:47:29Z"
+  },
+  {
+    "timestamp": 1765230449.2154791,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:47:29Z"
+  },
+  {
+    "timestamp": 1765230489.5372171,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "14",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T21:48:09Z"
+  },
+  {
+    "timestamp": 1765230535.721429,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "17",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:48:55Z"
+  },
+  {
+    "timestamp": 1765230615.689864,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T21:50:15Z"
+  },
+  {
+    "timestamp": 1765230686.082029,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:51:26Z"
+  },
+  {
+    "timestamp": 1765230734.7709382,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T21:52:14Z"
+  },
+  {
+    "timestamp": 1765230734.7712371,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 206179200
+    },
+    "iso_time": "2025-12-08T21:52:14Z"
+  },
+  {
+    "timestamp": 1765230735.9866061,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 5,
+        "step": 123,
+        "m0": 0,
+        "r3": 0,
+        "n0": 0,
+        "s1": 4,
+        "p0": 5,
+        "t2": 1,
+        "q0": 1,
+        "u0": 0
+      }
+    },
+    "iso_time": "2025-12-08T21:52:15Z"
+  },
+  {
+    "timestamp": 1765230737.151189,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 124
+    },
+    "iso_time": "2025-12-08T21:52:17Z"
+  },
+  {
+    "timestamp": 1765230737.151349,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation: 5^{(3*{step}*x + 0)} * 5^{({m0})} + 5^{({step}*x + 4)} * 5^{({n0})} = 5^{(2*{step}*x ",
+      "correct_answer": "124",
+      "seed_value": 206179200
+    },
+    "iso_time": "2025-12-08T21:52:17Z"
+  },
+  {
+    "timestamp": 1765230737.151399,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "124",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T21:52:17Z"
+  },
+  {
+    "timestamp": 1765230795.294949,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "124",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T21:53:15Z"
+  },
+  {
+    "timestamp": 1765230834.218337,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "119",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:53:54Z"
+  },
+  {
+    "timestamp": 1765230852.023008,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "132",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:54:12Z"
+  },
+  {
+    "timestamp": 1765230895.2527418,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "117",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T21:54:55Z"
+  },
+  {
+    "timestamp": 1765230916.7270138,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T21:55:16Z"
+  },
+  {
+    "timestamp": 1765230916.727252,
+    "seed_id": "2005-I-8::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-08T21:55:16Z"
+  },
+  {
+    "timestamp": 1765230916.727359,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "The equation $2^{333x-2} + 2^{111x+2} = 2^{222x+1} + 1$ has three real roots. Given that their sum is $\\frac mn$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$",
+      "answer": "113",
+      "example_id": "2005-I-8::2005"
+    },
+    "iso_time": "2025-12-08T21:55:16Z"
+  },
+  {
+    "timestamp": 1765231326.4613981,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1654250124
+    },
+    "iso_time": "2025-12-08T22:02:06Z"
+  },
+  {
+    "timestamp": 1765231327.751938,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 8,
+        "coef1": 11,
+        "coef2": 22,
+        "coef3": 33,
+        "a": 1,
+        "b": 5,
+        "c": 7,
+        "d": 2
+      }
+    },
+    "iso_time": "2025-12-08T22:02:07Z"
+  },
+  {
+    "timestamp": 1765231328.980082,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12
+    },
+    "iso_time": "2025-12-08T22:02:08Z"
+  },
+  {
+    "timestamp": 1765231328.980263,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation 8^(33x + 1) + 8^(11x + 5) = 8^(22x + 7) + 8^{ {d} }. Let S be the sum of all real solutions x to t",
+      "correct_answer": "12",
+      "seed_value": 1654250124
+    },
+    "iso_time": "2025-12-08T22:02:08Z"
+  },
+  {
+    "timestamp": 1765231328.9803112,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:02:08Z"
+  },
+  {
+    "timestamp": 1765231494.0889542,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "11",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:04:54Z"
+  },
+  {
+    "timestamp": 1765231575.062475,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:06:15Z"
+  },
+  {
+    "timestamp": 1765231686.389544,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:08:06Z"
+  },
+  {
+    "timestamp": 1765231788.5951529,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:09:48Z"
+  },
+  {
+    "timestamp": 1765231870.307633,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T22:11:10Z"
+  },
+  {
+    "timestamp": 1765231870.307893,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1515606003
+    },
+    "iso_time": "2025-12-08T22:11:10Z"
+  },
+  {
+    "timestamp": 1765231871.686632,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 4,
+        "coef1": 13,
+        "coef2": 26,
+        "coef3": 39,
+        "a": -1,
+        "b": 6,
+        "c": 4,
+        "d": 6
+      }
+    },
+    "iso_time": "2025-12-08T22:11:11Z"
+  },
+  {
+    "timestamp": 1765231872.8120372,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 20
+    },
+    "iso_time": "2025-12-08T22:11:12Z"
+  },
+  {
+    "timestamp": 1765231872.812201,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation 4^(39x + -1) + 4^(13x + 6) = 4^(26x + 4) + 4^{ {d} }. Let S be the sum of all real solutions x to ",
+      "correct_answer": "20",
+      "seed_value": 1515606003
+    },
+    "iso_time": "2025-12-08T22:11:12Z"
+  },
+  {
+    "timestamp": 1765231872.812253,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "20",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:11:12Z"
+  },
+  {
+    "timestamp": 1765232013.232924,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:13:33Z"
+  },
+  {
+    "timestamp": 1765232173.515627,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "29",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:16:13Z"
+  },
+  {
+    "timestamp": 1765232260.14571,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "20",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:17:40Z"
+  },
+  {
+    "timestamp": 1765232339.1559522,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "16",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:18:59Z"
+  },
+  {
+    "timestamp": 1765232452.196231,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T22:20:52Z"
+  },
+  {
+    "timestamp": 1765232452.196513,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1729016186
+    },
+    "iso_time": "2025-12-08T22:20:52Z"
+  },
+  {
+    "timestamp": 1765232453.419478,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 4,
+        "coef1": 10,
+        "coef2": 20,
+        "coef3": 30,
+        "a": 1,
+        "b": 7,
+        "c": 9,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-12-08T22:20:53Z"
+  },
+  {
+    "timestamp": 1765232454.536169,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6
+    },
+    "iso_time": "2025-12-08T22:20:54Z"
+  },
+  {
+    "timestamp": 1765232454.5363252,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation 4^(30x + 1) + 4^(10x + 7) = 4^(20x + 9) + 4^{ {d} }. Let S be the sum of all real solutions x to t",
+      "correct_answer": "6",
+      "seed_value": 1729016186
+    },
+    "iso_time": "2025-12-08T22:20:54Z"
+  },
+  {
+    "timestamp": 1765232454.5363681,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:20:54Z"
+  },
+  {
+    "timestamp": 1765232612.189419,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:23:32Z"
+  },
+  {
+    "timestamp": 1765232681.025959,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "14",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:24:41Z"
+  },
+  {
+    "timestamp": 1765232787.61646,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:26:27Z"
+  },
+  {
+    "timestamp": 1765232914.691255,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:28:34Z"
+  },
+  {
+    "timestamp": 1765233048.630517,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T22:30:48Z"
+  },
+  {
+    "timestamp": 1765233048.6307561,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 43282345
+    },
+    "iso_time": "2025-12-08T22:30:48Z"
+  },
+  {
+    "timestamp": 1765233049.808773,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 4,
+        "coef1": 5,
+        "coef2": 10,
+        "coef3": 15,
+        "a": 2,
+        "b": 10,
+        "c": 8,
+        "d": 9
+      }
+    },
+    "iso_time": "2025-12-08T22:30:49Z"
+  },
+  {
+    "timestamp": 1765233051.00393,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12
+    },
+    "iso_time": "2025-12-08T22:30:51Z"
+  },
+  {
+    "timestamp": 1765233051.0041,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation 4^(15x + 2) + 4^(5x + 10) = 4^(10x + 8) + 4^{ {d} }. Let S be the sum of all real solutions x to t",
+      "correct_answer": "12",
+      "seed_value": 43282345
+    },
+    "iso_time": "2025-12-08T22:30:51Z"
+  },
+  {
+    "timestamp": 1765233051.004145,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:30:51Z"
+  },
+  {
+    "timestamp": 1765233216.362946,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:33:36Z"
+  },
+  {
+    "timestamp": 1765233400.379395,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:36:40Z"
+  },
+  {
+    "timestamp": 1765233492.4111948,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:38:12Z"
+  },
+  {
+    "timestamp": 1765233605.1049411,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:40:05Z"
+  },
+  {
+    "timestamp": 1765233733.8796642,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T22:42:13Z"
+  },
+  {
+    "timestamp": 1765233733.8799329,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 466559343
+    },
+    "iso_time": "2025-12-08T22:42:13Z"
+  },
+  {
+    "timestamp": 1765233735.2830238,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 7,
+        "coef1": 11,
+        "coef2": 22,
+        "coef3": 33,
+        "a": 3,
+        "b": 12,
+        "c": 11,
+        "d": 7
+      }
+    },
+    "iso_time": "2025-12-08T22:42:15Z"
+  },
+  {
+    "timestamp": 1765233736.492127,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 15
+    },
+    "iso_time": "2025-12-08T22:42:16Z"
+  },
+  {
+    "timestamp": 1765233736.492311,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation 7^(33x + 3) + 7^(11x + 12) = 7^(22x + 11) + 7^{ {d} }. Let S be the sum of all real solutions x to",
+      "correct_answer": "15",
+      "seed_value": 466559343
+    },
+    "iso_time": "2025-12-08T22:42:16Z"
+  },
+  {
+    "timestamp": 1765233736.492357,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "22",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:42:16Z"
+  },
+  {
+    "timestamp": 1765233855.130316,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:44:15Z"
+  },
+  {
+    "timestamp": 1765233941.723077,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:45:41Z"
+  },
+  {
+    "timestamp": 1765233987.6430342,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:46:27Z"
+  },
+  {
+    "timestamp": 1765234094.0410712,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:48:14Z"
+  },
+  {
+    "timestamp": 1765234178.218484,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T22:49:38Z"
+  },
+  {
+    "timestamp": 1765234178.218741,
+    "seed_id": "2005-I-8::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-08T22:49:38Z"
+  },
+  {
+    "timestamp": 1765234178.2188501,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "The equation $2^{333x-2} + 2^{111x+2} = 2^{222x+1} + 1$ has three real roots. Given that their sum is $\\frac mn$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$",
+      "answer": "113",
+      "example_id": "2005-I-8::2005"
+    },
+    "iso_time": "2025-12-08T22:49:38Z"
+  },
+  {
+    "timestamp": 1765234459.402291,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 2127852666
+    },
+    "iso_time": "2025-12-08T22:54:19Z"
+  },
+  {
+    "timestamp": 1765234460.519142,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_b": 2,
+        "step_u": 24,
+        "c5": 1,
+        "c4": -628,
+        "c3": 63424,
+        "c2": -2111488,
+        "c1": 24248320,
+        "c0": -67108864,
+        "hidden_r_values": [
+          2,
+          4,
+          5,
+          6,
+          9
+        ]
+      }
+    },
+    "iso_time": "2025-12-08T22:54:20Z"
+  },
+  {
+    "timestamp": 1765234461.6405709,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 25
+    },
+    "iso_time": "2025-12-08T22:54:21Z"
+  },
+  {
+    "timestamp": 1765234461.640757,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation with base 2: 1*2^{5*{step_u}*x} + -628*2^{4*{step_u}*x} + 63424*2^{3*{step_u}*x} + -21",
+      "correct_answer": "25",
+      "seed_value": 2127852666
+    },
+    "iso_time": "2025-12-08T22:54:21Z"
+  },
+  {
+    "timestamp": 1765234461.640809,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "27",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:54:21Z"
+  },
+  {
+    "timestamp": 1765234493.810337,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "24",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:54:53Z"
+  },
+  {
+    "timestamp": 1765234581.96366,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "25",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:56:21Z"
+  },
+  {
+    "timestamp": 1765234672.1043258,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T22:57:52Z"
+  },
+  {
+    "timestamp": 1765234759.225394,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "25",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T22:59:19Z"
+  },
+  {
+    "timestamp": 1765234890.8421,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T23:01:30Z"
+  },
+  {
+    "timestamp": 1765234890.842336,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1632314818
+    },
+    "iso_time": "2025-12-08T23:01:30Z"
+  },
+  {
+    "timestamp": 1765234892.115582,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_b": 2,
+        "step_u": 15,
+        "c5": 1,
+        "c4": -364,
+        "c3": 30880,
+        "c2": -855040,
+        "c1": 7143424,
+        "c0": -16777216,
+        "hidden_r_values": [
+          2,
+          3,
+          5,
+          6,
+          8
+        ]
+      }
+    },
+    "iso_time": "2025-12-08T23:01:32Z"
+  },
+  {
+    "timestamp": 1765234893.351383,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 13
+    },
+    "iso_time": "2025-12-08T23:01:33Z"
+  },
+  {
+    "timestamp": 1765234893.351578,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation with base 2: 1*2^{5*{step_u}*x} + -364*2^{4*{step_u}*x} + 30880*2^{3*{step_u}*x} + -85",
+      "correct_answer": "13",
+      "seed_value": 1632314818
+    },
+    "iso_time": "2025-12-08T23:01:33Z"
+  },
+  {
+    "timestamp": 1765234893.351624,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "13",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:01:33Z"
+  },
+  {
+    "timestamp": 1765235001.047803,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "11",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:03:21Z"
+  },
+  {
+    "timestamp": 1765235112.694879,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:05:12Z"
+  },
+  {
+    "timestamp": 1765235136.90804,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "22",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:05:36Z"
+  },
+  {
+    "timestamp": 1765235264.81272,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:07:44Z"
+  },
+  {
+    "timestamp": 1765235412.0318642,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T23:10:12Z"
+  },
+  {
+    "timestamp": 1765235412.032091,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1241437955
+    },
+    "iso_time": "2025-12-08T23:10:12Z"
+  },
+  {
+    "timestamp": 1765235413.3721359,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_b": 2,
+        "step_u": 10,
+        "c5": 1,
+        "c4": -566,
+        "c3": 28456,
+        "c2": -417152,
+        "c1": 1773568,
+        "c0": -2097152,
+        "hidden_r_values": [
+          1,
+          2,
+          4,
+          5,
+          9
+        ]
+      }
+    },
+    "iso_time": "2025-12-08T23:10:13Z"
+  },
+  {
+    "timestamp": 1765235414.594079,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 31
+    },
+    "iso_time": "2025-12-08T23:10:14Z"
+  },
+  {
+    "timestamp": 1765235414.5942662,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation with base 2: 1*2^{5*{step_u}*x} + -566*2^{4*{step_u}*x} + 28456*2^{3*{step_u}*x} + -41",
+      "correct_answer": "31",
+      "seed_value": 1241437955
+    },
+    "iso_time": "2025-12-08T23:10:14Z"
+  },
+  {
+    "timestamp": 1765235414.594314,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "37",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:10:14Z"
+  },
+  {
+    "timestamp": 1765235557.23598,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "34",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:12:37Z"
+  },
+  {
+    "timestamp": 1765235617.239712,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "31",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:13:37Z"
+  },
+  {
+    "timestamp": 1765235768.086845,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "35",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:16:08Z"
+  },
+  {
+    "timestamp": 1765235829.62157,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "31",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:17:09Z"
+  },
+  {
+    "timestamp": 1765235938.194728,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T23:18:58Z"
+  },
+  {
+    "timestamp": 1765235938.1950011,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1766216713
+    },
+    "iso_time": "2025-12-08T23:18:58Z"
+  },
+  {
+    "timestamp": 1765235939.321079,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_b": 2,
+        "step_u": 7,
+        "c5": 1,
+        "c4": -572,
+        "c3": 31840,
+        "c2": -581120,
+        "c1": 3948544,
+        "c0": -8388608,
+        "hidden_r_values": [
+          2,
+          3,
+          4,
+          5,
+          9
+        ]
+      }
+    },
+    "iso_time": "2025-12-08T23:18:59Z"
+  },
+  {
+    "timestamp": 1765235940.435711,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 30
+    },
+    "iso_time": "2025-12-08T23:19:00Z"
+  },
+  {
+    "timestamp": 1765235940.435864,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation with base 2: 1*2^{5*{step_u}*x} + -572*2^{4*{step_u}*x} + 31840*2^{3*{step_u}*x} + -58",
+      "correct_answer": "30",
+      "seed_value": 1766216713
+    },
+    "iso_time": "2025-12-08T23:19:00Z"
+  },
+  {
+    "timestamp": 1765235940.4359071,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "23",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:19:00Z"
+  },
+  {
+    "timestamp": 1765235998.710675,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "33",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:19:58Z"
+  },
+  {
+    "timestamp": 1765236132.1145449,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "30",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:22:12Z"
+  },
+  {
+    "timestamp": 1765236193.4480991,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "24",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:23:13Z"
+  },
+  {
+    "timestamp": 1765236255.298211,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "30",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:24:15Z"
+  },
+  {
+    "timestamp": 1765236336.905966,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T23:25:36Z"
+  },
+  {
+    "timestamp": 1765236336.90625,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 1478925667
+    },
+    "iso_time": "2025-12-08T23:25:36Z"
+  },
+  {
+    "timestamp": 1765236338.180895,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_b": 2,
+        "step_u": 7,
+        "c5": 1,
+        "c4": -410,
+        "c3": 42928,
+        "c2": -919808,
+        "c1": 5865472,
+        "c0": -8388608,
+        "hidden_r_values": [
+          1,
+          3,
+          4,
+          7,
+          8
+        ]
+      }
+    },
+    "iso_time": "2025-12-08T23:25:38Z"
+  },
+  {
+    "timestamp": 1765236339.3248892,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 30
+    },
+    "iso_time": "2025-12-08T23:25:39Z"
+  },
+  {
+    "timestamp": 1765236339.3250299,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation with base 2: 1*2^{5*{step_u}*x} + -410*2^{4*{step_u}*x} + 42928*2^{3*{step_u}*x} + -91",
+      "correct_answer": "30",
+      "seed_value": 1478925667
+    },
+    "iso_time": "2025-12-08T23:25:39Z"
+  },
+  {
+    "timestamp": 1765236339.325075,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "30",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:25:39Z"
+  },
+  {
+    "timestamp": 1765236481.192756,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "29",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:28:01Z"
+  },
+  {
+    "timestamp": 1765236571.099433,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "34",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:29:31Z"
+  },
+  {
+    "timestamp": 1765236606.414701,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "35",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:30:06Z"
+  },
+  {
+    "timestamp": 1765236705.55232,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "30",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:31:45Z"
+  },
+  {
+    "timestamp": 1765236797.712652,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T23:33:17Z"
+  },
+  {
+    "timestamp": 1765236797.712894,
+    "seed_id": "2005-I-8::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-08T23:33:17Z"
+  },
+  {
+    "timestamp": 1765236797.7130072,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "The equation $2^{333x-2} + 2^{111x+2} = 2^{222x+1} + 1$ has three real roots. Given that their sum is $\\frac mn$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$",
+      "answer": "113",
+      "example_id": "2005-I-8::2005"
+    },
+    "iso_time": "2025-12-08T23:33:17Z"
+  },
+  {
+    "timestamp": 1765237043.75212,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 317133391
+    },
+    "iso_time": "2025-12-08T23:37:23Z"
+  },
+  {
+    "timestamp": 1765237045.092122,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "d": 97,
+        "u": 0,
+        "v": 12,
+        "w": 15,
+        "c": 6
+      }
+    },
+    "iso_time": "2025-12-08T23:37:25Z"
+  },
+  {
+    "timestamp": 1765237046.258678,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 103
+    },
+    "iso_time": "2025-12-08T23:37:26Z"
+  },
+  {
+    "timestamp": 1765237046.258827,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation 2^{3·{d}·x + 0} + 2^{{d}·x + 12} = 2^{2·{d}·x + 15} + 2^{ {c} }. It is known to have e",
+      "correct_answer": "103",
+      "seed_value": 317133391
+    },
+    "iso_time": "2025-12-08T23:37:26Z"
+  },
+  {
+    "timestamp": 1765237046.2588742,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:37:26Z"
+  },
+  {
+    "timestamp": 1765237119.65987,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "106",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:38:39Z"
+  },
+  {
+    "timestamp": 1765237201.167636,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "103",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:40:01Z"
+  },
+  {
+    "timestamp": 1765237280.095764,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "103",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:41:20Z"
+  },
+  {
+    "timestamp": 1765237349.97809,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "97",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:42:29Z"
+  },
+  {
+    "timestamp": 1765237496.4926069,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T23:44:56Z"
+  },
+  {
+    "timestamp": 1765237496.4928808,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 2046776648
+    },
+    "iso_time": "2025-12-08T23:44:56Z"
+  },
+  {
+    "timestamp": 1765237497.844244,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "d": 197,
+        "u": 0,
+        "v": 12,
+        "w": 14,
+        "c": 8
+      }
+    },
+    "iso_time": "2025-12-08T23:44:57Z"
+  },
+  {
+    "timestamp": 1765237498.9443982,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 205
+    },
+    "iso_time": "2025-12-08T23:44:58Z"
+  },
+  {
+    "timestamp": 1765237498.944533,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation 2^{3·{d}·x + 0} + 2^{{d}·x + 12} = 2^{2·{d}·x + 14} + 2^{ {c} }. It is known to have e",
+      "correct_answer": "205",
+      "seed_value": 2046776648
+    },
+    "iso_time": "2025-12-08T23:44:58Z"
+  },
+  {
+    "timestamp": 1765237498.944583,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "205",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:44:58Z"
+  },
+  {
+    "timestamp": 1765237589.577151,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "205",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:46:29Z"
+  },
+  {
+    "timestamp": 1765237672.331258,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "198",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:47:52Z"
+  },
+  {
+    "timestamp": 1765237763.6548128,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "211",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:49:23Z"
+  },
+  {
+    "timestamp": 1765237855.405101,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "197",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:50:55Z"
+  },
+  {
+    "timestamp": 1765237902.612938,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T23:51:42Z"
+  },
+  {
+    "timestamp": 1765237902.613222,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 3,
+      "seed_value": 1445248593
+    },
+    "iso_time": "2025-12-08T23:51:42Z"
+  },
+  {
+    "timestamp": 1765237903.7390301,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "d": 232,
+        "u": 0,
+        "v": 11,
+        "w": 14,
+        "c": 5
+      }
+    },
+    "iso_time": "2025-12-08T23:51:43Z"
+  },
+  {
+    "timestamp": 1765237904.93282,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 237
+    },
+    "iso_time": "2025-12-08T23:51:44Z"
+  },
+  {
+    "timestamp": 1765237904.933016,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation 2^{3·{d}·x + 0} + 2^{{d}·x + 11} = 2^{2·{d}·x + 14} + 2^{ {c} }. It is known to have e",
+      "correct_answer": "237",
+      "seed_value": 1445248593
+    },
+    "iso_time": "2025-12-08T23:51:44Z"
+  },
+  {
+    "timestamp": 1765237904.93308,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "237",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:51:44Z"
+  },
+  {
+    "timestamp": 1765237973.7583401,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:52:53Z"
+  },
+  {
+    "timestamp": 1765238063.790635,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "231",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:54:23Z"
+  },
+  {
+    "timestamp": 1765238110.184051,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "244",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:55:10Z"
+  },
+  {
+    "timestamp": 1765238175.60879,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "237",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:56:15Z"
+  },
+  {
+    "timestamp": 1765238253.2336981,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T23:57:33Z"
+  },
+  {
+    "timestamp": 1765238253.233964,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 4,
+      "seed_value": 1492017993
+    },
+    "iso_time": "2025-12-08T23:57:33Z"
+  },
+  {
+    "timestamp": 1765238254.5554,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "d": 106,
+        "u": 0,
+        "v": 13,
+        "w": 16,
+        "c": 7
+      }
+    },
+    "iso_time": "2025-12-08T23:57:34Z"
+  },
+  {
+    "timestamp": 1765238255.64054,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 113
+    },
+    "iso_time": "2025-12-08T23:57:35Z"
+  },
+  {
+    "timestamp": 1765238255.640671,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation 2^{3·{d}·x + 0} + 2^{{d}·x + 13} = 2^{2·{d}·x + 16} + 2^{ {c} }. It is known to have e",
+      "correct_answer": "113",
+      "seed_value": 1492017993
+    },
+    "iso_time": "2025-12-08T23:57:35Z"
+  },
+  {
+    "timestamp": 1765238255.6407151,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "113",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T23:57:35Z"
+  },
+  {
+    "timestamp": 1765238386.8930671,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "106",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T23:59:46Z"
+  },
+  {
+    "timestamp": 1765238435.369836,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "116",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:00:35Z"
+  },
+  {
+    "timestamp": 1765238480.795768,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "113",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:01:20Z"
+  },
+  {
+    "timestamp": 1765238508.601534,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "120",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:01:48Z"
+  },
+  {
+    "timestamp": 1765238586.6028109,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T00:03:06Z"
+  },
+  {
+    "timestamp": 1765238586.603104,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 5,
+      "seed_value": 1781556906
+    },
+    "iso_time": "2025-12-09T00:03:06Z"
+  },
+  {
+    "timestamp": 1765238587.822717,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "d": 161,
+        "u": 0,
+        "v": 15,
+        "w": 18,
+        "c": 10
+      }
+    },
+    "iso_time": "2025-12-09T00:03:07Z"
+  },
+  {
+    "timestamp": 1765238588.946675,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 171
+    },
+    "iso_time": "2025-12-09T00:03:08Z"
+  },
+  {
+    "timestamp": 1765238588.946814,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation 2^{3·{d}·x + 0} + 2^{{d}·x + 15} = 2^{2·{d}·x + 18} + 2^{ {c} }. It is known to have e",
+      "correct_answer": "171",
+      "seed_value": 1781556906
+    },
+    "iso_time": "2025-12-09T00:03:08Z"
+  },
+  {
+    "timestamp": 1765238588.946858,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "171",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:03:08Z"
+  },
+  {
+    "timestamp": 1765238702.207011,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "170",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:05:02Z"
+  },
+  {
+    "timestamp": 1765238783.999524,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "165",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:06:23Z"
+  },
+  {
+    "timestamp": 1765238820.172718,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "171",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:07:00Z"
+  },
+  {
+    "timestamp": 1765238906.2985148,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "178",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:08:26Z"
+  },
+  {
+    "timestamp": 1765239010.018328,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T00:10:10Z"
+  },
+  {
+    "timestamp": 1765239010.018581,
+    "seed_id": "2005-I-8::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 5).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-09T00:10:10Z"
+  },
+  {
+    "timestamp": 1765239010.01869,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 5,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "The equation $2^{333x-2} + 2^{111x+2} = 2^{222x+1} + 1$ has three real roots. Given that their sum is $\\frac mn$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$",
+      "answer": "113",
+      "example_id": "2005-I-8::2005"
+    },
+    "iso_time": "2025-12-09T00:10:10Z"
+  },
+  {
+    "timestamp": 1765239417.5732758,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 1,
+      "seed_value": 95379486
+    },
+    "iso_time": "2025-12-09T00:16:57Z"
+  },
+  {
+    "timestamp": 1765239418.930102,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 3,
+        "step": 153,
+        "u_1": 5,
+        "u_2": 6,
+        "u_3": 10,
+        "u_4": 13,
+        "u_12": 11,
+        "u_13": 15,
+        "u_14": 18,
+        "u_23": 16,
+        "u_24": 19,
+        "u_34": 23,
+        "u_123": 21,
+        "u_124": 24,
+        "u_134": 28,
+        "u_234": 29,
+        "u_1234": 34
+      }
+    },
+    "iso_time": "2025-12-09T00:16:58Z"
+  },
+  {
+    "timestamp": 1765239420.0445929,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 11
+    },
+    "iso_time": "2025-12-09T00:17:00Z"
+  },
+  {
+    "timestamp": 1765239420.04477,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation:\n\n3^{4{step}x} - (3^{5} + 3^{6} + 3^{10} + 3^{13}) 3^{3{step}x} + (3^{11} + 3^{15} + 3",
+      "correct_answer": "11",
+      "seed_value": 95379486
+    },
+    "iso_time": "2025-12-09T00:17:00Z"
+  },
+  {
+    "timestamp": 1765239420.0448298,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "19",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:17:00Z"
+  },
+  {
+    "timestamp": 1765239555.102197,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:19:15Z"
+  },
+  {
+    "timestamp": 1765239608.3338208,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "11",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:20:08Z"
+  },
+  {
+    "timestamp": 1765239669.057803,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "11",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:21:09Z"
+  },
+  {
+    "timestamp": 1765239713.688982,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:21:53Z"
+  },
+  {
+    "timestamp": 1765239764.392593,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T00:22:44Z"
+  },
+  {
+    "timestamp": 1765239764.392871,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 2,
+      "seed_value": 985066249
+    },
+    "iso_time": "2025-12-09T00:22:44Z"
+  },
+  {
+    "timestamp": 1765239765.485269,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 6,
+        "step": 78,
+        "u_1": 2,
+        "u_2": 9,
+        "u_3": 11,
+        "u_4": 18,
+        "u_12": 11,
+        "u_13": 13,
+        "u_14": 20,
+        "u_23": 20,
+        "u_24": 27,
+        "u_34": 29,
+        "u_123": 22,
+        "u_124": 29,
+        "u_134": 31,
+        "u_234": 38,
+        "u_1234": 40
+      }
+    },
+    "iso_time": "2025-12-09T00:22:45Z"
+  },
+  {
+    "timestamp": 1765239766.5855172,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 59
+    },
+    "iso_time": "2025-12-09T00:22:46Z"
+  },
+  {
+    "timestamp": 1765239766.5857038,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation:\n\n6^{4{step}x} - (6^{2} + 6^{9} + 6^{11} + 6^{18}) 6^{3{step}x} + (6^{11} + 6^{13} + 6",
+      "correct_answer": "59",
+      "seed_value": 985066249
+    },
+    "iso_time": "2025-12-09T00:22:46Z"
+  },
+  {
+    "timestamp": 1765239766.585758,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "64",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:22:46Z"
+  },
+  {
+    "timestamp": 1765239857.9876869,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:24:17Z"
+  },
+  {
+    "timestamp": 1765239883.813948,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "67",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:24:43Z"
+  },
+  {
+    "timestamp": 1765239966.202049,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:26:06Z"
+  },
+  {
+    "timestamp": 1765240106.225754,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "57",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:28:26Z"
+  },
+  {
+    "timestamp": 1765240161.9465868,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T00:29:21Z"
+  },
+  {
+    "timestamp": 1765240161.946815,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 3,
+      "seed_value": 2006241913
+    },
+    "iso_time": "2025-12-09T00:29:21Z"
+  },
+  {
+    "timestamp": 1765240163.240868,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 8,
+        "step": 128,
+        "u_1": 6,
+        "u_2": 7,
+        "u_3": 10,
+        "u_4": 16,
+        "u_12": 13,
+        "u_13": 16,
+        "u_14": 22,
+        "u_23": 17,
+        "u_24": 23,
+        "u_34": 26,
+        "u_123": 23,
+        "u_124": 29,
+        "u_134": 32,
+        "u_234": 33,
+        "u_1234": 39
+      }
+    },
+    "iso_time": "2025-12-09T00:29:23Z"
+  },
+  {
+    "timestamp": 1765240164.453953,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 167
+    },
+    "iso_time": "2025-12-09T00:29:24Z"
+  },
+  {
+    "timestamp": 1765240164.4542239,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation:\n\n8^{4{step}x} - (8^{6} + 8^{7} + 8^{10} + 8^{16}) 8^{3{step}x} + (8^{13} + 8^{16} + 8",
+      "correct_answer": "167",
+      "seed_value": 2006241913
+    },
+    "iso_time": "2025-12-09T00:29:24Z"
+  },
+  {
+    "timestamp": 1765240164.45429,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "176",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:29:24Z"
+  },
+  {
+    "timestamp": 1765240300.958418,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "167",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:31:40Z"
+  },
+  {
+    "timestamp": 1765240379.832832,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "161",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:32:59Z"
+  },
+  {
+    "timestamp": 1765240491.544279,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "167",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:34:51Z"
+  },
+  {
+    "timestamp": 1765240550.851996,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "168",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:35:50Z"
+  },
+  {
+    "timestamp": 1765240619.047057,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T00:36:59Z"
+  },
+  {
+    "timestamp": 1765240619.047322,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 4,
+      "seed_value": 1649413384
+    },
+    "iso_time": "2025-12-09T00:36:59Z"
+  },
+  {
+    "timestamp": 1765240620.377968,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 2,
+        "step": 155,
+        "u_1": 4,
+        "u_2": 5,
+        "u_3": 12,
+        "u_4": 13,
+        "u_12": 9,
+        "u_13": 16,
+        "u_14": 17,
+        "u_23": 17,
+        "u_24": 18,
+        "u_34": 25,
+        "u_123": 21,
+        "u_124": 22,
+        "u_134": 29,
+        "u_234": 30,
+        "u_1234": 34
+      }
+    },
+    "iso_time": "2025-12-09T00:37:00Z"
+  },
+  {
+    "timestamp": 1765240621.5908911,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 189
+    },
+    "iso_time": "2025-12-09T00:37:01Z"
+  },
+  {
+    "timestamp": 1765240621.591118,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation:\n\n2^{4{step}x} - (2^{4} + 2^{5} + 2^{12} + 2^{13}) 2^{3{step}x} + (2^{9} + 2^{16} + 2^",
+      "correct_answer": "189",
+      "seed_value": 1649413384
+    },
+    "iso_time": "2025-12-09T00:37:01Z"
+  },
+  {
+    "timestamp": 1765240621.5911832,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "181",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:37:01Z"
+  },
+  {
+    "timestamp": 1765240676.700951,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "195",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:37:56Z"
+  },
+  {
+    "timestamp": 1765240750.8155038,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "186",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:39:10Z"
+  },
+  {
+    "timestamp": 1765240794.0499341,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "189",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:39:54Z"
+  },
+  {
+    "timestamp": 1765240853.7156632,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "189",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:40:53Z"
+  },
+  {
+    "timestamp": 1765240940.630743,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T00:42:20Z"
+  },
+  {
+    "timestamp": 1765240940.630996,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 5,
+      "seed_value": 1982638555
+    },
+    "iso_time": "2025-12-09T00:42:20Z"
+  },
+  {
+    "timestamp": 1765240941.965594,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 5,
+        "step": 161,
+        "u_1": 7,
+        "u_2": 8,
+        "u_3": 10,
+        "u_4": 19,
+        "u_12": 15,
+        "u_13": 17,
+        "u_14": 26,
+        "u_23": 18,
+        "u_24": 27,
+        "u_34": 29,
+        "u_123": 25,
+        "u_124": 34,
+        "u_134": 36,
+        "u_234": 37,
+        "u_1234": 44
+      }
+    },
+    "iso_time": "2025-12-09T00:42:21Z"
+  },
+  {
+    "timestamp": 1765240943.094026,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 205
+    },
+    "iso_time": "2025-12-09T00:42:23Z"
+  },
+  {
+    "timestamp": 1765240943.0942342,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation:\n\n5^{4{step}x} - (5^{7} + 5^{8} + 5^{10} + 5^{19}) 5^{3{step}x} + (5^{15} + 5^{17} + 5",
+      "correct_answer": "205",
+      "seed_value": 1982638555
+    },
+    "iso_time": "2025-12-09T00:42:23Z"
+  },
+  {
+    "timestamp": 1765240943.094286,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "205",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:42:23Z"
+  },
+  {
+    "timestamp": 1765240994.037067,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "204",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:43:14Z"
+  },
+  {
+    "timestamp": 1765241113.267692,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "208",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:45:13Z"
+  },
+  {
+    "timestamp": 1765241136.2742069,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "205",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:45:36Z"
+  },
+  {
+    "timestamp": 1765241190.1951182,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "199",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:46:30Z"
+  },
+  {
+    "timestamp": 1765241247.370902,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T00:47:27Z"
+  },
+  {
+    "timestamp": 1765241247.371117,
+    "seed_id": "2005-I-8::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 6).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-09T00:47:27Z"
+  },
+  {
+    "timestamp": 1765241247.371213,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 6,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "The equation $2^{333x-2} + 2^{111x+2} = 2^{222x+1} + 1$ has three real roots. Given that their sum is $\\frac mn$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$",
+      "answer": "113",
+      "example_id": "2005-I-8::2005"
+    },
+    "iso_time": "2025-12-09T00:47:27Z"
+  },
+  {
+    "timestamp": 1765241503.191149,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 1,
+      "seed_value": 1806894709
+    },
+    "iso_time": "2025-12-09T00:51:43Z"
+  },
+  {
+    "timestamp": 1765241504.301708,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 2,
+        "r": 117,
+        "u": -1,
+        "v": 6,
+        "w": 5,
+        "s": 4
+      }
+    },
+    "iso_time": "2025-12-09T00:51:44Z"
+  },
+  {
+    "timestamp": 1765241505.444235,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 122
+    },
+    "iso_time": "2025-12-09T00:51:45Z"
+  },
+  {
+    "timestamp": 1765241505.44442,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation 2^{3*{r}*x + -1} + 2^{ {r}*x + 6} = 2^{2*{r}*x + 5} + 2^{ {s}}. It is known that this ",
+      "correct_answer": "122",
+      "seed_value": 1806894709
+    },
+    "iso_time": "2025-12-09T00:51:45Z"
+  },
+  {
+    "timestamp": 1765241505.4444852,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "130",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:51:45Z"
+  },
+  {
+    "timestamp": 1765241665.703016,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "122",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T00:54:25Z"
+  },
+  {
+    "timestamp": 1765241870.801714,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "124",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T00:57:50Z"
+  },
+  {
+    "timestamp": 1765242098.014594,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "119",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:01:38Z"
+  },
+  {
+    "timestamp": 1765242215.978563,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "122",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:03:35Z"
+  },
+  {
+    "timestamp": 1765242241.9903932,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T01:04:01Z"
+  },
+  {
+    "timestamp": 1765242241.990687,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 2,
+      "seed_value": 2098599320
+    },
+    "iso_time": "2025-12-09T01:04:01Z"
+  },
+  {
+    "timestamp": 1765242243.107478,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 4,
+        "r": 129,
+        "u": -3,
+        "v": 2,
+        "w": 0,
+        "s": -2
+      }
+    },
+    "iso_time": "2025-12-09T01:04:03Z"
+  },
+  {
+    "timestamp": 1765242244.2482119,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 130
+    },
+    "iso_time": "2025-12-09T01:04:04Z"
+  },
+  {
+    "timestamp": 1765242244.248397,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation 4^{3*{r}*x + -3} + 4^{ {r}*x + 2} = 4^{2*{r}*x + 0} + 4^{ {s}}. It is known that this ",
+      "correct_answer": "130",
+      "seed_value": 2098599320
+    },
+    "iso_time": "2025-12-09T01:04:04Z"
+  },
+  {
+    "timestamp": 1765242244.248445,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "130",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:04:04Z"
+  },
+  {
+    "timestamp": 1765242335.790571,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "130",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:05:35Z"
+  },
+  {
+    "timestamp": 1765242400.1952481,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "124",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:06:40Z"
+  },
+  {
+    "timestamp": 1765242458.19859,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "132",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:07:38Z"
+  },
+  {
+    "timestamp": 1765242695.872573,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:11:35Z"
+  },
+  {
+    "timestamp": 1765242773.695966,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T01:12:53Z"
+  },
+  {
+    "timestamp": 1765242773.696243,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 3,
+      "seed_value": 212657648
+    },
+    "iso_time": "2025-12-09T01:12:53Z"
+  },
+  {
+    "timestamp": 1765242775.056344,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 7,
+        "r": 153,
+        "u": 7,
+        "v": 14,
+        "w": 13,
+        "s": 12
+      }
+    },
+    "iso_time": "2025-12-09T01:12:55Z"
+  },
+  {
+    "timestamp": 1765242776.28054,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 158
+    },
+    "iso_time": "2025-12-09T01:12:56Z"
+  },
+  {
+    "timestamp": 1765242776.28073,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation 7^{3*{r}*x + 7} + 7^{ {r}*x + 14} = 7^{2*{r}*x + 13} + 7^{ {s}}. It is known that this",
+      "correct_answer": "158",
+      "seed_value": 212657648
+    },
+    "iso_time": "2025-12-09T01:12:56Z"
+  },
+  {
+    "timestamp": 1765242776.28078,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "157",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:12:56Z"
+  },
+  {
+    "timestamp": 1765242931.396737,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "159",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:15:31Z"
+  },
+  {
+    "timestamp": 1765243029.725878,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "158",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:17:09Z"
+  },
+  {
+    "timestamp": 1765243113.260849,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "164",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:18:33Z"
+  },
+  {
+    "timestamp": 1765243151.8163252,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "158",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:19:11Z"
+  },
+  {
+    "timestamp": 1765243275.516031,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T01:21:15Z"
+  },
+  {
+    "timestamp": 1765243275.516293,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 4,
+      "seed_value": 1320518267
+    },
+    "iso_time": "2025-12-09T01:21:15Z"
+  },
+  {
+    "timestamp": 1765243276.6496189,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 8,
+        "r": 117,
+        "u": 0,
+        "v": 6,
+        "w": 4,
+        "s": 2
+      }
+    },
+    "iso_time": "2025-12-09T01:21:16Z"
+  },
+  {
+    "timestamp": 1765243277.8199391,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 119
+    },
+    "iso_time": "2025-12-09T01:21:17Z"
+  },
+  {
+    "timestamp": 1765243277.8201,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation 8^{3*{r}*x + 0} + 8^{ {r}*x + 6} = 8^{2*{r}*x + 4} + 8^{ {s}}. It is known that this e",
+      "correct_answer": "119",
+      "seed_value": 1320518267
+    },
+    "iso_time": "2025-12-09T01:21:17Z"
+  },
+  {
+    "timestamp": 1765243277.820141,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "119",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:21:17Z"
+  },
+  {
+    "timestamp": 1765243305.493858,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "113",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:21:45Z"
+  },
+  {
+    "timestamp": 1765243488.566441,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "124",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:24:48Z"
+  },
+  {
+    "timestamp": 1765243591.3804438,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "118",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:26:31Z"
+  },
+  {
+    "timestamp": 1765243727.281079,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "119",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:28:47Z"
+  },
+  {
+    "timestamp": 1765243812.29723,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T01:30:12Z"
+  },
+  {
+    "timestamp": 1765243812.297518,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 5,
+      "seed_value": 1577217515
+    },
+    "iso_time": "2025-12-09T01:30:12Z"
+  },
+  {
+    "timestamp": 1765243813.5900521,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 3,
+        "r": 171,
+        "u": 0,
+        "v": 6,
+        "w": 5,
+        "s": 4
+      }
+    },
+    "iso_time": "2025-12-09T01:30:13Z"
+  },
+  {
+    "timestamp": 1765243814.7450821,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 175
+    },
+    "iso_time": "2025-12-09T01:30:14Z"
+  },
+  {
+    "timestamp": 1765243814.7452302,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the exponential equation 3^{3*{r}*x + 0} + 3^{ {r}*x + 6} = 3^{2*{r}*x + 5} + 3^{ {s}}. It is known that this e",
+      "correct_answer": "175",
+      "seed_value": 1577217515
+    },
+    "iso_time": "2025-12-09T01:30:14Z"
+  },
+  {
+    "timestamp": 1765243814.745273,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "168",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:30:14Z"
+  },
+  {
+    "timestamp": 1765243858.131812,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "167",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:30:58Z"
+  },
+  {
+    "timestamp": 1765243967.805641,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "175",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:32:47Z"
+  },
+  {
+    "timestamp": 1765244037.432229,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "178",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:33:57Z"
+  },
+  {
+    "timestamp": 1765244140.147022,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "175",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:35:40Z"
+  },
+  {
+    "timestamp": 1765244242.579778,
+    "seed_id": "2005-I-8::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T01:37:22Z"
+  },
+  {
+    "timestamp": 1765244242.580002,
+    "seed_id": "2005-I-8::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 7).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-09T01:37:22Z"
+  },
+  {
+    "timestamp": 1765244242.5801148,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 7,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "The equation $2^{333x-2} + 2^{111x+2} = 2^{222x+1} + 1$ has three real roots. Given that their sum is $\\frac mn$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$",
+      "answer": "113",
+      "example_id": "2005-I-8::2005"
+    },
+    "iso_time": "2025-12-09T01:37:22Z"
+  },
+  {
+    "timestamp": 1765244490.157363,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 1,
+      "seed_value": 854220582
+    },
+    "iso_time": "2025-12-09T01:41:30Z"
+  },
+  {
+    "timestamp": 1765244491.512063,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 8,
+        "k": 146,
+        "p": 114,
+        "q": 19,
+        "r": 216,
+        "y1": 4,
+        "y2": 6,
+        "y3": 9
+      }
+    },
+    "iso_time": "2025-12-09T01:41:31Z"
+  },
+  {
+    "timestamp": 1765244492.609478,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 101
+    },
+    "iso_time": "2025-12-09T01:41:32Z"
+  },
+  {
+    "timestamp": 1765244492.609658,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider integers base 8 >= 2 and k = 146. The exponential equation 8^(3*146*x) + 114*8^(146*x) = 19*",
+      "correct_answer": "101",
+      "seed_value": 854220582
+    },
+    "iso_time": "2025-12-09T01:41:32Z"
+  },
+  {
+    "timestamp": 1765244492.609707,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "98",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:41:32Z"
+  },
+  {
+    "timestamp": 1765244510.984595,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "101",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:41:50Z"
+  },
+  {
+    "timestamp": 1765244542.496226,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "102",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:42:22Z"
+  },
+  {
+    "timestamp": 1765244564.780982,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "101",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:42:44Z"
+  },
+  {
+    "timestamp": 1765244580.985676,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "106",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:43:00Z"
+  },
+  {
+    "timestamp": 1765244621.2331772,
+    "seed_id": "2005-I-8::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-8::2005_prompt07-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T01:43:41Z"
+  },
+  {
+    "timestamp": 1765244621.233351,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 2,
+      "seed_value": 1292761788
+    },
+    "iso_time": "2025-12-09T01:43:41Z"
+  },
+  {
+    "timestamp": 1765244622.5314429,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 2,
+        "k": 283,
+        "p": 353,
+        "q": 36,
+        "r": 570,
+        "y1": 2,
+        "y2": 15,
+        "y3": 19
+      }
+    },
+    "iso_time": "2025-12-09T01:43:42Z"
+  },
+  {
+    "timestamp": 1765244623.699417,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 347
+    },
+    "iso_time": "2025-12-09T01:43:43Z"
+  },
+  {
+    "timestamp": 1765244623.699585,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider integers base 2 >= 2 and k = 283. The exponential equation 2^(3*283*x) + 353*2^(283*x) = 36*",
+      "correct_answer": "347",
+      "seed_value": 1292761788
+    },
+    "iso_time": "2025-12-09T01:43:43Z"
+  },
+  {
+    "timestamp": 1765244623.6996381,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "341",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:43:43Z"
+  },
+  {
+    "timestamp": 1765244643.038671,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "347",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:44:03Z"
+  },
+  {
+    "timestamp": 1765244698.604545,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "347",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:44:58Z"
+  },
+  {
+    "timestamp": 1765244728.438005,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "353",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:45:28Z"
+  },
+  {
+    "timestamp": 1765244763.4744651,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "355",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:46:03Z"
+  },
+  {
+    "timestamp": 1765244805.094979,
+    "seed_id": "2005-I-8::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-8::2005_prompt07-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T01:46:45Z"
+  },
+  {
+    "timestamp": 1765244805.095148,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 3,
+      "seed_value": 885737901
+    },
+    "iso_time": "2025-12-09T01:46:45Z"
+  },
+  {
+    "timestamp": 1765244806.432179,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 4,
+        "k": 200,
+        "p": 375,
+        "q": 36,
+        "r": 988,
+        "y1": 4,
+        "y2": 13,
+        "y3": 19
+      }
+    },
+    "iso_time": "2025-12-09T01:46:46Z"
+  },
+  {
+    "timestamp": 1765244807.532865,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 37
+    },
+    "iso_time": "2025-12-09T01:46:47Z"
+  },
+  {
+    "timestamp": 1765244807.5330508,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider integers base 4 >= 2 and k = 200. The exponential equation 4^(3*200*x) + 375*4^(200*x) = 36*",
+      "correct_answer": "37",
+      "seed_value": 885737901
+    },
+    "iso_time": "2025-12-09T01:46:47Z"
+  },
+  {
+    "timestamp": 1765244807.533107,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "45",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:46:47Z"
+  },
+  {
+    "timestamp": 1765244831.6091158,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "38",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:47:11Z"
+  },
+  {
+    "timestamp": 1765244870.675563,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "37",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:47:50Z"
+  },
+  {
+    "timestamp": 1765244892.4123971,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "46",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:48:12Z"
+  },
+  {
+    "timestamp": 1765244935.968194,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "37",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:48:55Z"
+  },
+  {
+    "timestamp": 1765244976.717099,
+    "seed_id": "2005-I-8::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-8::2005_prompt07-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T01:49:36Z"
+  },
+  {
+    "timestamp": 1765244976.717278,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 4,
+      "seed_value": 642873252
+    },
+    "iso_time": "2025-12-09T01:49:36Z"
+  },
+  {
+    "timestamp": 1765244978.002316,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 7,
+        "k": 263,
+        "p": 183,
+        "q": 24,
+        "r": 440,
+        "y1": 5,
+        "y2": 8,
+        "y3": 11
+      }
+    },
+    "iso_time": "2025-12-09T01:49:38Z"
+  },
+  {
+    "timestamp": 1765244979.131514,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 49
+    },
+    "iso_time": "2025-12-09T01:49:39Z"
+  },
+  {
+    "timestamp": 1765244979.131681,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider integers base 7 >= 2 and k = 263. The exponential equation 7^(3*263*x) + 183*7^(263*x) = 24*",
+      "correct_answer": "49",
+      "seed_value": 642873252
+    },
+    "iso_time": "2025-12-09T01:49:39Z"
+  },
+  {
+    "timestamp": 1765244979.131732,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:49:39Z"
+  },
+  {
+    "timestamp": 1765244998.514166,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:49:58Z"
+  },
+  {
+    "timestamp": 1765245023.6186628,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "50",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:50:23Z"
+  },
+  {
+    "timestamp": 1765245049.830098,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "51",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:50:49Z"
+  },
+  {
+    "timestamp": 1765245078.607944,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "46",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:51:18Z"
+  },
+  {
+    "timestamp": 1765245123.427995,
+    "seed_id": "2005-I-8::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-8::2005_prompt07-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T01:52:03Z"
+  },
+  {
+    "timestamp": 1765245123.428162,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-8::2005_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 5,
+      "seed_value": 969542471
+    },
+    "iso_time": "2025-12-09T01:52:03Z"
+  },
+  {
+    "timestamp": 1765245124.680545,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 6,
+        "k": 149,
+        "p": 344,
+        "q": 34,
+        "r": 896,
+        "y1": 4,
+        "y2": 14,
+        "y3": 16
+      }
+    },
+    "iso_time": "2025-12-09T01:52:04Z"
+  },
+  {
+    "timestamp": 1765245125.9026382,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 338
+    },
+    "iso_time": "2025-12-09T01:52:05Z"
+  },
+  {
+    "timestamp": 1765245125.90287,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider integers base 6 >= 2 and k = 149. The exponential equation 6^(3*149*x) + 344*6^(149*x) = 34*",
+      "correct_answer": "338",
+      "seed_value": 969542471
+    },
+    "iso_time": "2025-12-09T01:52:05Z"
+  },
+  {
+    "timestamp": 1765245125.9029288,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "334",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:52:05Z"
+  },
+  {
+    "timestamp": 1765245167.4116511,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "345",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:52:47Z"
+  },
+  {
+    "timestamp": 1765245195.342658,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "338",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:53:15Z"
+  },
+  {
+    "timestamp": 1765245232.922156,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "338",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T01:53:52Z"
+  },
+  {
+    "timestamp": 1765245268.4543538,
+    "seed_id": "2005-I-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "337",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T01:54:28Z"
+  },
+  {
+    "timestamp": 1765245298.047253,
+    "seed_id": "2005-I-8::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-8::2005_prompt07-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T01:54:58Z"
+  }
+]

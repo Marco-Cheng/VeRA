@@ -1,0 +1,839 @@
+[
+  {
+    "timestamp": 1764576215.588856,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "Let $EFGH$ , $EFDC$ , and $EHBC$ be three adjacent square faces of a cube, for which $EC = 8$ , and let $A$ be the eight",
+      "answer": "417",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T08:03:35Z"
+  },
+  {
+    "timestamp": 1764576215.588908,
+    "seed_id": "2001-II-15::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T08:03:35Z"
+  },
+  {
+    "timestamp": 1764576215.588934,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $EFGH$ , $EFDC$ , and $EHBC$ be three adjacent square faces of a cube, for which $EC = 8$ , and let $A$ be the eighth vertex of the cube. Let $I$ , $J$ , and $K$ , be the points on $\\overline{EF}$ , $\\overline{EH}$ , and $\\overline{EC}$ , respectively, so that $EI = EJ = EK = 2$ . A solid $S$ is obtained by drilling a tunnel through the cube. The sides of the tunnel are planes parallel to $\\overline{AE}$ , and containing the edges, $\\overline{IJ}$ , $\\overline{JK}$ , and $\\overline{KI}$ . The surface area of $S$ , including the walls of the tunnel, is $m + n\\sqrt {p}$ , where $m$ , $n$ , and $p$ are positive integers and $p$ is not divisible by the square of any prime. Find $m + n + p$ .",
+      "answer": "417",
+      "example_id": "2001-II-15::2001"
+    },
+    "iso_time": "2025-12-01T08:03:35Z"
+  },
+  {
+    "timestamp": 1764576420.9779148,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-15::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1435314794
+    },
+    "iso_time": "2025-12-01T08:07:00Z"
+  },
+  {
+    "timestamp": 1764576422.362318,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "edge_length": 31,
+        "offset": 5,
+        "radicand": 6
+      }
+    },
+    "iso_time": "2025-12-01T08:07:02Z"
+  },
+  {
+    "timestamp": 1764576423.487901,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6087
+    },
+    "iso_time": "2025-12-01T08:07:03Z"
+  },
+  {
+    "timestamp": 1764576423.4880462,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a cube with edge length 31, let E be a vertex and A the opposite vertex. On the three edges EF, EH, and EC emanating ",
+      "correct_answer": "6087",
+      "seed_value": 1435314794
+    },
+    "iso_time": "2025-12-01T08:07:03Z"
+  },
+  {
+    "timestamp": 1764576423.48812,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6080",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T08:07:03Z"
+  },
+  {
+    "timestamp": 1764576596.397681,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6083",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T08:09:56Z"
+  },
+  {
+    "timestamp": 1764576812.512372,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6091",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T08:13:32Z"
+  },
+  {
+    "timestamp": 1764577534.601656,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6087",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T08:25:34Z"
+  },
+  {
+    "timestamp": 1764577718.0762439,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6087",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T08:28:38Z"
+  },
+  {
+    "timestamp": 1764578017.2013,
+    "seed_id": "2001-II-15::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-15::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-01T08:33:37Z"
+  },
+  {
+    "timestamp": 1764578017.201375,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-15::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1194469232
+    },
+    "iso_time": "2025-12-01T08:33:37Z"
+  },
+  {
+    "timestamp": 1764578018.544689,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "edge_length": 35,
+        "offset": 13,
+        "radicand": 6
+      }
+    },
+    "iso_time": "2025-12-01T08:33:38Z"
+  },
+  {
+    "timestamp": 1764578019.6111119,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7707
+    },
+    "iso_time": "2025-12-01T08:33:39Z"
+  },
+  {
+    "timestamp": 1764578019.6112719,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a cube with edge length 35, let E be a vertex and A the opposite vertex. On the three edges EF, EH, and EC emanating ",
+      "correct_answer": "7707",
+      "seed_value": 1194469232
+    },
+    "iso_time": "2025-12-01T08:33:39Z"
+  },
+  {
+    "timestamp": 1764578019.6113322,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7707",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T08:33:39Z"
+  },
+  {
+    "timestamp": 1764578112.99547,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7712",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T08:35:12Z"
+  },
+  {
+    "timestamp": 1764578254.001987,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7707",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T08:37:34Z"
+  },
+  {
+    "timestamp": 1764578662.9885921,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7713",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T08:44:22Z"
+  },
+  {
+    "timestamp": 1764579096.557641,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7711",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T08:51:36Z"
+  },
+  {
+    "timestamp": 1764579654.631753,
+    "seed_id": "2001-II-15::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-15::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T09:00:54Z"
+  },
+  {
+    "timestamp": 1764579654.631953,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-15::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 824599308
+    },
+    "iso_time": "2025-12-01T09:00:54Z"
+  },
+  {
+    "timestamp": 1764579656.012955,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "edge_length": 41,
+        "offset": 3,
+        "radicand": 6
+      }
+    },
+    "iso_time": "2025-12-01T09:00:56Z"
+  },
+  {
+    "timestamp": 1764579657.0896719,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10407
+    },
+    "iso_time": "2025-12-01T09:00:57Z"
+  },
+  {
+    "timestamp": 1764579657.0898108,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a cube with edge length 41, let E be a vertex and A the opposite vertex. On the three edges EF, EH, and EC emanating ",
+      "correct_answer": "10407",
+      "seed_value": 824599308
+    },
+    "iso_time": "2025-12-01T09:00:57Z"
+  },
+  {
+    "timestamp": 1764579657.089865,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10407",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T09:00:57Z"
+  },
+  {
+    "timestamp": 1764579829.639149,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10412",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T09:03:49Z"
+  },
+  {
+    "timestamp": 1764579937.516406,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10407",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T09:05:37Z"
+  },
+  {
+    "timestamp": 1764580376.98129,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10400",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T09:12:56Z"
+  },
+  {
+    "timestamp": 1764580516.5231638,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10416",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T09:15:16Z"
+  },
+  {
+    "timestamp": 1764580720.0382771,
+    "seed_id": "2001-II-15::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T09:18:40Z"
+  },
+  {
+    "timestamp": 1764580720.0384681,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-15::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 824642869
+    },
+    "iso_time": "2025-12-01T09:18:40Z"
+  },
+  {
+    "timestamp": 1764580721.433206,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "edge_length": 49,
+        "offset": 2,
+        "radicand": 6
+      }
+    },
+    "iso_time": "2025-12-01T09:18:41Z"
+  },
+  {
+    "timestamp": 1764580722.537757,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 14682
+    },
+    "iso_time": "2025-12-01T09:18:42Z"
+  },
+  {
+    "timestamp": 1764580722.537893,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a cube with edge length 49, let E be a vertex and A the opposite vertex. On the three edges EF, EH, and EC emanating ",
+      "correct_answer": "14682",
+      "seed_value": 824642869
+    },
+    "iso_time": "2025-12-01T09:18:42Z"
+  },
+  {
+    "timestamp": 1764580722.5379531,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "14682",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T09:18:42Z"
+  },
+  {
+    "timestamp": 1764580782.716579,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "14684",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T09:19:42Z"
+  },
+  {
+    "timestamp": 1764582114.759087,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "14676",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T09:41:54Z"
+  },
+  {
+    "timestamp": 1764582312.742215,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14683",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T09:45:12Z"
+  },
+  {
+    "timestamp": 1764582464.11074,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "14682",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T09:47:44Z"
+  },
+  {
+    "timestamp": 1764582526.965634,
+    "seed_id": "2001-II-15::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-15::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T09:48:46Z"
+  },
+  {
+    "timestamp": 1764582526.9657989,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-15::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 485358672
+    },
+    "iso_time": "2025-12-01T09:48:46Z"
+  },
+  {
+    "timestamp": 1764582528.3577118,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "edge_length": 55,
+        "offset": 7,
+        "radicand": 6
+      }
+    },
+    "iso_time": "2025-12-01T09:48:48Z"
+  },
+  {
+    "timestamp": 1764582529.434786,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 19017
+    },
+    "iso_time": "2025-12-01T09:48:49Z"
+  },
+  {
+    "timestamp": 1764582529.434922,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a cube with edge length 55, let E be a vertex and A the opposite vertex. On the three edges EF, EH, and EC emanating ",
+      "correct_answer": "19017",
+      "seed_value": 485358672
+    },
+    "iso_time": "2025-12-01T09:48:49Z"
+  },
+  {
+    "timestamp": 1764582529.4349818,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "19012",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T09:48:49Z"
+  },
+  {
+    "timestamp": 1764583690.027006,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "19011",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T10:08:10Z"
+  },
+  {
+    "timestamp": 1764583902.20335,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "19019",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T10:11:42Z"
+  },
+  {
+    "timestamp": 1764584093.073947,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "19017",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T10:14:53Z"
+  },
+  {
+    "timestamp": 1764584257.2967691,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "19017",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T10:17:37Z"
+  },
+  {
+    "timestamp": 1764585263.267002,
+    "seed_id": "2001-II-15::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-15::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-01T10:34:23Z"
+  },
+  {
+    "timestamp": 1764585263.267075,
+    "seed_id": "2001-II-15::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-01T10:34:23Z"
+  },
+  {
+    "timestamp": 1764585263.267127,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 3 (successes=3).",
+      "question": "Let $EFGH$ , $EFDC$ , and $EHBC$ be three adjacent square faces of a cube, for which $EC = 8$ , and let $A$ be the eighth vertex of the cube. Let $I$ , $J$ , and $K$ , be the points on $\\overline{EF}$ , $\\overline{EH}$ , and $\\overline{EC}$ , respectively, so that $EI = EJ = EK = 2$ . A solid $S$ is obtained by drilling a tunnel through the cube. The sides of the tunnel are planes parallel to $\\overline{AE}$ , and containing the edges, $\\overline{IJ}$ , $\\overline{JK}$ , and $\\overline{KI}$ . The surface area of $S$ , including the walls of the tunnel, is $m + n\\sqrt {p}$ , where $m$ , $n$ , and $p$ are positive integers and $p$ is not divisible by the square of any prime. Find $m + n + p$ .",
+      "answer": "417",
+      "example_id": "2001-II-15::2001"
+    },
+    "iso_time": "2025-12-01T10:34:23Z"
+  },
+  {
+    "timestamp": 1764585374.414743,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-15::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 214258926
+    },
+    "iso_time": "2025-12-01T10:36:14Z"
+  },
+  {
+    "timestamp": 1764585375.789254,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 16,
+        "b": 8,
+        "c": 8,
+        "x": 3,
+        "y": 3,
+        "z": 2
+      }
+    },
+    "iso_time": "2025-12-01T10:36:15Z"
+  },
+  {
+    "timestamp": 1764585376.8922381,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 122
+    },
+    "iso_time": "2025-12-01T10:36:16Z"
+  },
+  {
+    "timestamp": 1764585376.892372,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a solid geometry challenge, consider a rectangular box with edge lengths 16, 8, and 8. Label one trihedral corner E a",
+      "correct_answer": "122",
+      "seed_value": 214258926
+    },
+    "iso_time": "2025-12-01T10:36:16Z"
+  },
+  {
+    "timestamp": 1764585376.892427,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "122",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T10:36:16Z"
+  },
+  {
+    "timestamp": 1764585429.1637702,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "115",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T10:37:09Z"
+  },
+  {
+    "timestamp": 1764585773.569866,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "128",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T10:42:53Z"
+  },
+  {
+    "timestamp": 1764585852.519964,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "122",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T10:44:12Z"
+  },
+  {
+    "timestamp": 1764585900.5455801,
+    "seed_id": "2001-II-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "116",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T10:45:00Z"
+  },
+  {
+    "timestamp": 1764585981.717634,
+    "seed_id": "2001-II-15::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-15::2001_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T10:46:21Z"
+  }
+]

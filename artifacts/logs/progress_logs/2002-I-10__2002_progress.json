@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764625921.429,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2002,
+      "question_preview": "In the diagram below, angle $ABC$ is a right angle. Point $D$ is on $\\overline{BC}$ , and $\\overline{AD}$ bisects angle ",
+      "answer": "148",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T21:52:01Z"
+  },
+  {
+    "timestamp": 1764625921.429043,
+    "seed_id": "2002-I-10::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T21:52:01Z"
+  },
+  {
+    "timestamp": 1764625921.429069,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In the diagram below, angle $ABC$ is a right angle. Point $D$ is on $\\overline{BC}$ , and $\\overline{AD}$ bisects angle $CAB$ . Points $E$ and $F$ are on $\\overline{AB}$ and $\\overline{AC}$ , respectively, so that $AE=3$ and $AF=10$ . Given that $EB=9$ and $FC=27$ , find the integer closest to the area of quadrilateral $DCFG$ . [asy] size(250); pair A=(0,12), E=(0,8), B=origin, C=(24*sqrt(2),0), D=(6*sqrt(2),0), F=A+10*dir(A--C), G=intersectionpoint(E--F, A--D); draw(A--B--C--A--D^^E--F); pair point=G+1*dir(250); label(\"$A$\", A, dir(point--A)); label(\"$B$\", B, dir(point--B)); label(\"$C$\", C, dir(point--C)); label(\"$D$\", D, dir(point--D)); label(\"$E$\", E, dir(point--E)); label(\"$F$\", F, dir(point--F)); label(\"$G$\", G, dir(point--G)); markscalefactor=0.1; draw(rightanglemark(A,B,C)); label(\"10\", A--F, dir(90)*dir(A--F)); label(\"27\", F--C, dir(90)*dir(F--C)); label(\"3\", (0,10), W); label(\"9\", (0,4), W); [/asy]",
+      "answer": "148",
+      "example_id": "2002-I-10::2002"
+    },
+    "iso_time": "2025-12-01T21:52:01Z"
+  },
+  {
+    "timestamp": 1764625995.109004,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-10::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 54842671
+    },
+    "iso_time": "2025-12-01T21:53:15Z"
+  },
+  {
+    "timestamp": 1764625996.220704,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ae": 32,
+        "eb": 20,
+        "af": 4,
+        "fc": 50
+      }
+    },
+    "iso_time": "2025-12-01T21:53:16Z"
+  },
+  {
+    "timestamp": 1764625997.317589,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 191
+    },
+    "iso_time": "2025-12-01T21:53:17Z"
+  },
+  {
+    "timestamp": 1764625997.317719,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider triangle ABC with right angle at B. Point D lies on BC so that AD is the internal bisector of angle CAB. Points",
+      "correct_answer": "191",
+      "seed_value": 54842671
+    },
+    "iso_time": "2025-12-01T21:53:17Z"
+  },
+  {
+    "timestamp": 1764625997.31778,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "191",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T21:53:17Z"
+  },
+  {
+    "timestamp": 1764626077.762142,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "191",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T21:54:37Z"
+  },
+  {
+    "timestamp": 1764626146.628652,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "189",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:55:46Z"
+  },
+  {
+    "timestamp": 1764626215.885532,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "193",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:56:55Z"
+  },
+  {
+    "timestamp": 1764626327.39452,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "190",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:58:47Z"
+  },
+  {
+    "timestamp": 1764626427.1494038,
+    "seed_id": "2002-I-10::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-10::2002_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T22:00:27Z"
+  },
+  {
+    "timestamp": 1764626427.1495838,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-10::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 612103263
+    },
+    "iso_time": "2025-12-01T22:00:27Z"
+  },
+  {
+    "timestamp": 1764626428.2688792,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ae": 29,
+        "eb": 25,
+        "af": 24,
+        "fc": 55
+      }
+    },
+    "iso_time": "2025-12-01T22:00:28Z"
+  },
+  {
+    "timestamp": 1764626429.321933,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 810
+    },
+    "iso_time": "2025-12-01T22:00:29Z"
+  },
+  {
+    "timestamp": 1764626429.3220649,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider triangle ABC with right angle at B. Point D lies on BC so that AD is the internal bisector of angle CAB. Points",
+      "correct_answer": "810",
+      "seed_value": 612103263
+    },
+    "iso_time": "2025-12-01T22:00:29Z"
+  },
+  {
+    "timestamp": 1764626429.32212,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "819",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:00:29Z"
+  },
+  {
+    "timestamp": 1764626512.5363588,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "814",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:01:52Z"
+  },
+  {
+    "timestamp": 1764626604.6446989,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "813",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:03:24Z"
+  },
+  {
+    "timestamp": 1764626746.124871,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "810",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:05:46Z"
+  },
+  {
+    "timestamp": 1764626844.7079191,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "810",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:07:24Z"
+  },
+  {
+    "timestamp": 1764626939.253462,
+    "seed_id": "2002-I-10::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-10::2002_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T22:08:59Z"
+  },
+  {
+    "timestamp": 1764626939.253658,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-10::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 198438921
+    },
+    "iso_time": "2025-12-01T22:08:59Z"
+  },
+  {
+    "timestamp": 1764626940.614209,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ae": 26,
+        "eb": 16,
+        "af": 3,
+        "fc": 57
+      }
+    },
+    "iso_time": "2025-12-01T22:09:00Z"
+  },
+  {
+    "timestamp": 1764626941.680945,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 526
+    },
+    "iso_time": "2025-12-01T22:09:01Z"
+  },
+  {
+    "timestamp": 1764626941.681095,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider triangle ABC with right angle at B. Point D lies on BC so that AD is the internal bisector of angle CAB. Points",
+      "correct_answer": "526",
+      "seed_value": 198438921
+    },
+    "iso_time": "2025-12-01T22:09:01Z"
+  },
+  {
+    "timestamp": 1764626941.681161,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "535",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:09:01Z"
+  },
+  {
+    "timestamp": 1764626988.405539,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "533",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:09:48Z"
+  },
+  {
+    "timestamp": 1764627083.76893,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "526",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:11:23Z"
+  },
+  {
+    "timestamp": 1764627213.561109,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "534",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:13:33Z"
+  },
+  {
+    "timestamp": 1764627292.998904,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "526",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:14:52Z"
+  },
+  {
+    "timestamp": 1764627358.437119,
+    "seed_id": "2002-I-10::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-10::2002_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-01T22:15:58Z"
+  },
+  {
+    "timestamp": 1764627358.4373062,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-10::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1825661440
+    },
+    "iso_time": "2025-12-01T22:15:58Z"
+  },
+  {
+    "timestamp": 1764627359.715782,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ae": 39,
+        "eb": 19,
+        "af": 27,
+        "fc": 46
+      }
+    },
+    "iso_time": "2025-12-01T22:15:59Z"
+  },
+  {
+    "timestamp": 1764627360.933142,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 586
+    },
+    "iso_time": "2025-12-01T22:16:00Z"
+  },
+  {
+    "timestamp": 1764627360.933322,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider triangle ABC with right angle at B. Point D lies on BC so that AD is the internal bisector of angle CAB. Points",
+      "correct_answer": "586",
+      "seed_value": 1825661440
+    },
+    "iso_time": "2025-12-01T22:16:00Z"
+  },
+  {
+    "timestamp": 1764627360.933394,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "588",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:16:00Z"
+  },
+  {
+    "timestamp": 1764627450.319602,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "586",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:17:30Z"
+  },
+  {
+    "timestamp": 1764627594.422286,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "593",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:19:54Z"
+  },
+  {
+    "timestamp": 1764627726.797719,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "586",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:22:06Z"
+  },
+  {
+    "timestamp": 1764627795.513661,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "592",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:23:15Z"
+  },
+  {
+    "timestamp": 1764627895.140007,
+    "seed_id": "2002-I-10::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-10::2002_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T22:24:55Z"
+  },
+  {
+    "timestamp": 1764627895.14019,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-10::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1583546483
+    },
+    "iso_time": "2025-12-01T22:24:55Z"
+  },
+  {
+    "timestamp": 1764627896.287319,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ae": 34,
+        "eb": 15,
+        "af": 13,
+        "fc": 48
+      }
+    },
+    "iso_time": "2025-12-01T22:24:56Z"
+  },
+  {
+    "timestamp": 1764627897.336679,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 457
+    },
+    "iso_time": "2025-12-01T22:24:57Z"
+  },
+  {
+    "timestamp": 1764627897.336828,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider triangle ABC with right angle at B. Point D lies on BC so that AD is the internal bisector of angle CAB. Points",
+      "correct_answer": "457",
+      "seed_value": 1583546483
+    },
+    "iso_time": "2025-12-01T22:24:57Z"
+  },
+  {
+    "timestamp": 1764627897.336892,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "465",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:24:57Z"
+  },
+  {
+    "timestamp": 1764627975.758604,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "458",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:26:15Z"
+  },
+  {
+    "timestamp": 1764628066.713326,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "456",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:27:46Z"
+  },
+  {
+    "timestamp": 1764628537.202347,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "457",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:35:37Z"
+  },
+  {
+    "timestamp": 1764628811.827532,
+    "seed_id": "2002-I-10::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "457",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:40:11Z"
+  },
+  {
+    "timestamp": 1764628906.44512,
+    "seed_id": "2002-I-10::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-10::2002_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T22:41:46Z"
+  }
+]

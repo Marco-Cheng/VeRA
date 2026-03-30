@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764345831.9281018,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1999,
+      "question_preview": "For any positive integer $x_{}$ , let $S(x)$ be the sum of the digits of $x_{}$ , and let $T(x)$ be $|S(x+2)-S(x)|.$ For",
+      "answer": "223",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T16:03:51Z"
+  },
+  {
+    "timestamp": 1764345831.928131,
+    "seed_id": "1999-5::1999",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T16:03:51Z"
+  },
+  {
+    "timestamp": 1764345831.928143,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "For any positive integer $x_{}$ , let $S(x)$ be the sum of the digits of $x_{}$ , and let $T(x)$ be $|S(x+2)-S(x)|.$ For example, $T(199)=|S(201)-S(199)|=|3-19|=16.$ How many values of $T(x)$ do not exceed 1999?",
+      "answer": "223",
+      "example_id": "1999-5::1999"
+    },
+    "iso_time": "2025-11-28T16:03:51Z"
+  },
+  {
+    "timestamp": 1764345913.371221,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-5::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 618552999
+    },
+    "iso_time": "2025-11-28T16:05:13Z"
+  },
+  {
+    "timestamp": 1764345914.6766138,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 13,
+        "m": 1182,
+        "n": 2010
+      }
+    },
+    "iso_time": "2025-11-28T16:05:14Z"
+  },
+  {
+    "timestamp": 1764345915.704662,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 168
+    },
+    "iso_time": "2025-11-28T16:05:15Z"
+  },
+  {
+    "timestamp": 1764345915.704822,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 13, let S(x) denote the sum of the base-13 digits of x. For any positive integer x, define T(x) = |S(x + 1182) -",
+      "correct_answer": "168",
+      "seed_value": 618552999
+    },
+    "iso_time": "2025-11-28T16:05:15Z"
+  },
+  {
+    "timestamp": 1764345915.704861,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "168",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T16:05:15Z"
+  },
+  {
+    "timestamp": 1764345975.624074,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "165",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:06:15Z"
+  },
+  {
+    "timestamp": 1764346022.8622,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "168",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T16:07:02Z"
+  },
+  {
+    "timestamp": 1764346098.63424,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "169",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:08:18Z"
+  },
+  {
+    "timestamp": 1764346136.3152661,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "173",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:08:56Z"
+  },
+  {
+    "timestamp": 1764346183.216137,
+    "seed_id": "1999-5::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-5::1999_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T16:09:43Z"
+  },
+  {
+    "timestamp": 1764346183.216324,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-5::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 577038311
+    },
+    "iso_time": "2025-11-28T16:09:43Z"
+  },
+  {
+    "timestamp": 1764346184.475453,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "m": 99999,
+        "n": 2781
+      }
+    },
+    "iso_time": "2025-11-28T16:09:44Z"
+  },
+  {
+    "timestamp": 1764346185.505524,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 310
+    },
+    "iso_time": "2025-11-28T16:09:45Z"
+  },
+  {
+    "timestamp": 1764346185.5056908,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, let S(x) denote the sum of the base-10 digits of x. For any positive integer x, define T(x) = |S(x + 99999) ",
+      "correct_answer": "310",
+      "seed_value": 577038311
+    },
+    "iso_time": "2025-11-28T16:09:45Z"
+  },
+  {
+    "timestamp": 1764346185.505737,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "301",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:09:45Z"
+  },
+  {
+    "timestamp": 1764346226.50686,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "304",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:10:26Z"
+  },
+  {
+    "timestamp": 1764346268.617253,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "310",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T16:11:08Z"
+  },
+  {
+    "timestamp": 1764346300.2624798,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "310",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T16:11:40Z"
+  },
+  {
+    "timestamp": 1764346341.333303,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "315",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:12:21Z"
+  },
+  {
+    "timestamp": 1764346394.464681,
+    "seed_id": "1999-5::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-5::1999_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T16:13:14Z"
+  },
+  {
+    "timestamp": 1764346394.465056,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-5::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 659718362
+    },
+    "iso_time": "2025-11-28T16:13:14Z"
+  },
+  {
+    "timestamp": 1764346395.734669,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 8,
+        "m": 63,
+        "n": 1603
+      }
+    },
+    "iso_time": "2025-11-28T16:13:15Z"
+  },
+  {
+    "timestamp": 1764346396.797747,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 230
+    },
+    "iso_time": "2025-11-28T16:13:16Z"
+  },
+  {
+    "timestamp": 1764346396.797908,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 8, let S(x) denote the sum of the base-8 digits of x. For any positive integer x, define T(x) = |S(x + 63) - S(x",
+      "correct_answer": "230",
+      "seed_value": 659718362
+    },
+    "iso_time": "2025-11-28T16:13:16Z"
+  },
+  {
+    "timestamp": 1764346396.79795,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "230",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T16:13:16Z"
+  },
+  {
+    "timestamp": 1764346432.555718,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "229",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:13:52Z"
+  },
+  {
+    "timestamp": 1764346462.191565,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "223",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:14:22Z"
+  },
+  {
+    "timestamp": 1764346504.0451531,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "235",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:15:04Z"
+  },
+  {
+    "timestamp": 1764346529.671961,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "230",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T16:15:29Z"
+  },
+  {
+    "timestamp": 1764346565.782584,
+    "seed_id": "1999-5::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-5::1999_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T16:16:05Z"
+  },
+  {
+    "timestamp": 1764346565.782706,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-5::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2050825113
+    },
+    "iso_time": "2025-11-28T16:16:05Z"
+  },
+  {
+    "timestamp": 1764346567.032187,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 16,
+        "m": 1048575,
+        "n": 3600
+      }
+    },
+    "iso_time": "2025-11-28T16:16:07Z"
+  },
+  {
+    "timestamp": 1764346568.080389,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 241
+    },
+    "iso_time": "2025-11-28T16:16:08Z"
+  },
+  {
+    "timestamp": 1764346568.080547,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 16, let S(x) denote the sum of the base-16 digits of x. For any positive integer x, define T(x) = |S(x + 1048575",
+      "correct_answer": "241",
+      "seed_value": 2050825113
+    },
+    "iso_time": "2025-11-28T16:16:08Z"
+  },
+  {
+    "timestamp": 1764346568.080598,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "241",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T16:16:08Z"
+  },
+  {
+    "timestamp": 1764346616.975926,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "250",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:16:56Z"
+  },
+  {
+    "timestamp": 1764346656.5008209,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "241",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T16:17:36Z"
+  },
+  {
+    "timestamp": 1764346756.855644,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "248",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:19:16Z"
+  },
+  {
+    "timestamp": 1764346810.003003,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "236",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:20:10Z"
+  },
+  {
+    "timestamp": 1764346845.739936,
+    "seed_id": "1999-5::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-5::1999_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T16:20:45Z"
+  },
+  {
+    "timestamp": 1764346845.740119,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-5::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1050242463
+    },
+    "iso_time": "2025-11-28T16:20:45Z"
+  },
+  {
+    "timestamp": 1764346846.918315,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 13,
+        "m": 15378,
+        "n": 3270
+      }
+    },
+    "iso_time": "2025-11-28T16:20:46Z"
+  },
+  {
+    "timestamp": 1764346847.9457269,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 273
+    },
+    "iso_time": "2025-11-28T16:20:47Z"
+  },
+  {
+    "timestamp": 1764346847.94589,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 13, let S(x) denote the sum of the base-13 digits of x. For any positive integer x, define T(x) = |S(x + 15378) ",
+      "correct_answer": "273",
+      "seed_value": 1050242463
+    },
+    "iso_time": "2025-11-28T16:20:47Z"
+  },
+  {
+    "timestamp": 1764346847.945942,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "275",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:20:47Z"
+  },
+  {
+    "timestamp": 1764346932.52974,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "272",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:22:12Z"
+  },
+  {
+    "timestamp": 1764346969.636509,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "270",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T16:22:49Z"
+  },
+  {
+    "timestamp": 1764347021.675712,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "273",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T16:23:41Z"
+  },
+  {
+    "timestamp": 1764347056.716929,
+    "seed_id": "1999-5::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "273",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T16:24:16Z"
+  },
+  {
+    "timestamp": 1764347110.402745,
+    "seed_id": "1999-5::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-5::1999_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T16:25:10Z"
+  }
+]

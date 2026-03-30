@@ -1,0 +1,904 @@
+[
+  {
+    "timestamp": 1764312014.4631832,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1998,
+      "question_preview": "Let $n$ be the number of ordered quadruples $(x_1,x_2,x_3,x_4)$ of positive odd integers that satisfy $\\sum_{i = 1}^4 x_",
+      "answer": "196",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T06:40:14Z"
+  },
+  {
+    "timestamp": 1764312014.463219,
+    "seed_id": "1998-7::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T06:40:14Z"
+  },
+  {
+    "timestamp": 1764312014.463232,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $n$ be the number of ordered quadruples $(x_1,x_2,x_3,x_4)$ of positive odd integers that satisfy $\\sum_{i = 1}^4 x_i = 98.$ Find $\\frac n{100}.$",
+      "answer": "196",
+      "example_id": "1998-7::1998"
+    },
+    "iso_time": "2025-11-28T06:40:14Z"
+  },
+  {
+    "timestamp": 1764312123.2991,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-7::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 391205735
+    },
+    "iso_time": "2025-11-28T06:42:03Z"
+  },
+  {
+    "timestamp": 1764312124.570335,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 6,
+        "coeffs": [
+          3,
+          1,
+          7,
+          6,
+          3,
+          4
+        ],
+        "moduli": [
+          2,
+          2,
+          2,
+          3,
+          2,
+          2
+        ],
+        "residues": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "lowers": [
+          6,
+          12,
+          9,
+          12,
+          5,
+          3
+        ],
+        "uppers": [
+          12,
+          24,
+          21,
+          22,
+          15,
+          17
+        ],
+        "target": 340,
+        "divider": 32
+      }
+    },
+    "iso_time": "2025-11-28T06:42:04Z"
+  },
+  {
+    "timestamp": 1764312125.617762,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12
+    },
+    "iso_time": "2025-11-28T06:42:05Z"
+  },
+  {
+    "timestamp": 1764312125.61794,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You are given an ordered k-tuple (x_1, x_2, ..., x_6) subject to simultaneous arithmetic-progression and range constrain",
+      "correct_answer": "12",
+      "seed_value": 391205735
+    },
+    "iso_time": "2025-11-28T06:42:05Z"
+  },
+  {
+    "timestamp": 1764312125.6179829,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T06:42:05Z"
+  },
+  {
+    "timestamp": 1764312200.6151412,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T06:43:20Z"
+  },
+  {
+    "timestamp": 1764312289.487287,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T06:44:49Z"
+  },
+  {
+    "timestamp": 1764312484.6646929,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T06:48:04Z"
+  },
+  {
+    "timestamp": 1764312571.496219,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T06:49:31Z"
+  },
+  {
+    "timestamp": 1764312788.2825248,
+    "seed_id": "1998-7::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-7::1998_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T06:53:08Z"
+  },
+  {
+    "timestamp": 1764312788.282766,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-7::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 323824056
+    },
+    "iso_time": "2025-11-28T06:53:08Z"
+  },
+  {
+    "timestamp": 1764312789.493082,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 7,
+        "coeffs": [
+          3,
+          7,
+          1,
+          1,
+          7,
+          4,
+          2
+        ],
+        "moduli": [
+          2,
+          2,
+          4,
+          2,
+          3,
+          4,
+          2
+        ],
+        "residues": [
+          1,
+          1,
+          3,
+          1,
+          0,
+          1,
+          0
+        ],
+        "lowers": [
+          2,
+          5,
+          5,
+          9,
+          2,
+          4,
+          12
+        ],
+        "uppers": [
+          12,
+          19,
+          12,
+          15,
+          15,
+          16,
+          24
+        ],
+        "target": 289,
+        "divider": 29
+      }
+    },
+    "iso_time": "2025-11-28T06:53:09Z"
+  },
+  {
+    "timestamp": 1764312790.547553,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 9
+    },
+    "iso_time": "2025-11-28T06:53:10Z"
+  },
+  {
+    "timestamp": 1764312790.547734,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You are given an ordered k-tuple (x_1, x_2, ..., x_7) subject to simultaneous arithmetic-progression and range constrain",
+      "correct_answer": "9",
+      "seed_value": 323824056
+    },
+    "iso_time": "2025-11-28T06:53:10Z"
+  },
+  {
+    "timestamp": 1764312790.54778,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T06:53:10Z"
+  },
+  {
+    "timestamp": 1764312889.659616,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "9",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T06:54:49Z"
+  },
+  {
+    "timestamp": 1764312962.39198,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T06:56:02Z"
+  },
+  {
+    "timestamp": 1764313150.371708,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T06:59:10Z"
+  },
+  {
+    "timestamp": 1764313290.283561,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "9",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T07:01:30Z"
+  },
+  {
+    "timestamp": 1764313385.891983,
+    "seed_id": "1998-7::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-7::1998_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T07:03:05Z"
+  },
+  {
+    "timestamp": 1764313385.892121,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-7::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 33278592
+    },
+    "iso_time": "2025-11-28T07:03:05Z"
+  },
+  {
+    "timestamp": 1764313387.072774,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 7,
+        "coeffs": [
+          5,
+          1,
+          4,
+          5,
+          1,
+          2,
+          7
+        ],
+        "moduli": [
+          2,
+          2,
+          2,
+          3,
+          4,
+          4,
+          4
+        ],
+        "residues": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "lowers": [
+          7,
+          11,
+          10,
+          12,
+          6,
+          4,
+          1
+        ],
+        "uppers": [
+          17,
+          22,
+          23,
+          19,
+          16,
+          10,
+          14
+        ],
+        "target": 293,
+        "divider": 32
+      }
+    },
+    "iso_time": "2025-11-28T07:03:07Z"
+  },
+  {
+    "timestamp": 1764313388.084817,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4
+    },
+    "iso_time": "2025-11-28T07:03:08Z"
+  },
+  {
+    "timestamp": 1764313388.085026,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You are given an ordered k-tuple (x_1, x_2, ..., x_7) subject to simultaneous arithmetic-progression and range constrain",
+      "correct_answer": "4",
+      "seed_value": 33278592
+    },
+    "iso_time": "2025-11-28T07:03:08Z"
+  },
+  {
+    "timestamp": 1764313388.0850759,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T07:03:08Z"
+  },
+  {
+    "timestamp": 1764313467.251928,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T07:04:27Z"
+  },
+  {
+    "timestamp": 1764313576.764823,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T07:06:16Z"
+  },
+  {
+    "timestamp": 1764313746.577973,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T07:09:06Z"
+  },
+  {
+    "timestamp": 1764313843.51199,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T07:10:43Z"
+  },
+  {
+    "timestamp": 1764313949.917989,
+    "seed_id": "1998-7::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-7::1998_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T07:12:29Z"
+  },
+  {
+    "timestamp": 1764313949.918315,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-7::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1642863951
+    },
+    "iso_time": "2025-11-28T07:12:29Z"
+  },
+  {
+    "timestamp": 1764313951.279916,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 7,
+        "coeffs": [
+          2,
+          7,
+          7,
+          6,
+          3,
+          7,
+          1
+        ],
+        "moduli": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          2,
+          2
+        ],
+        "residues": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "lowers": [
+          7,
+          2,
+          12,
+          10,
+          12,
+          11,
+          4
+        ],
+        "uppers": [
+          15,
+          10,
+          25,
+          24,
+          24,
+          22,
+          11
+        ],
+        "target": 416,
+        "divider": 132
+      }
+    },
+    "iso_time": "2025-11-28T07:12:31Z"
+  },
+  {
+    "timestamp": 1764313952.342361,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3
+    },
+    "iso_time": "2025-11-28T07:12:32Z"
+  },
+  {
+    "timestamp": 1764313952.34253,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You are given an ordered k-tuple (x_1, x_2, ..., x_7) subject to simultaneous arithmetic-progression and range constrain",
+      "correct_answer": "3",
+      "seed_value": 1642863951
+    },
+    "iso_time": "2025-11-28T07:12:32Z"
+  },
+  {
+    "timestamp": 1764313952.342581,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T07:12:32Z"
+  },
+  {
+    "timestamp": 1764314009.551111,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T07:13:29Z"
+  },
+  {
+    "timestamp": 1764314145.618616,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T07:15:45Z"
+  },
+  {
+    "timestamp": 1764314257.3213031,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T07:17:37Z"
+  },
+  {
+    "timestamp": 1764314325.924671,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T07:18:45Z"
+  },
+  {
+    "timestamp": 1764314662.441903,
+    "seed_id": "1998-7::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-7::1998_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T07:24:22Z"
+  },
+  {
+    "timestamp": 1764314662.4420521,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-7::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 460715584
+    },
+    "iso_time": "2025-11-28T07:24:22Z"
+  },
+  {
+    "timestamp": 1764314663.630831,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 7,
+        "coeffs": [
+          2,
+          2,
+          7,
+          1,
+          1,
+          2,
+          6
+        ],
+        "moduli": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          4,
+          4
+        ],
+        "residues": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          3,
+          3
+        ],
+        "lowers": [
+          8,
+          10,
+          7,
+          6,
+          11,
+          3,
+          10
+        ],
+        "uppers": [
+          21,
+          16,
+          13,
+          15,
+          23,
+          14,
+          19
+        ],
+        "target": 202,
+        "divider": 23
+      }
+    },
+    "iso_time": "2025-11-28T07:24:23Z"
+  },
+  {
+    "timestamp": 1764314664.673545,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5
+    },
+    "iso_time": "2025-11-28T07:24:24Z"
+  },
+  {
+    "timestamp": 1764314664.673734,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You are given an ordered k-tuple (x_1, x_2, ..., x_7) subject to simultaneous arithmetic-progression and range constrain",
+      "correct_answer": "5",
+      "seed_value": 460715584
+    },
+    "iso_time": "2025-11-28T07:24:24Z"
+  },
+  {
+    "timestamp": 1764314664.6737778,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T07:24:24Z"
+  },
+  {
+    "timestamp": 1764314908.126991,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T07:28:28Z"
+  },
+  {
+    "timestamp": 1764314961.061964,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T07:29:21Z"
+  },
+  {
+    "timestamp": 1764315177.670069,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T07:32:57Z"
+  },
+  {
+    "timestamp": 1764315441.016992,
+    "seed_id": "1998-7::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "11",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T07:37:21Z"
+  },
+  {
+    "timestamp": 1764315554.772295,
+    "seed_id": "1998-7::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-7::1998_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T07:39:14Z"
+  }
+]

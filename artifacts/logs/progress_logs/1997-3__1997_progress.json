@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1764211129.699818,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1997,
+      "question_preview": "Sarah intended to multiply a two-digit number and a three-digit number, but she left out the multiplication sign and sim",
+      "answer": "126",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-27T02:38:49Z"
+  },
+  {
+    "timestamp": 1764211129.699882,
+    "seed_id": "1997-3::1997",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-27T02:38:49Z"
+  },
+  {
+    "timestamp": 1764211129.699914,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Sarah intended to multiply a two-digit number and a three-digit number, but she left out the multiplication sign and simply placed the two-digit number to the left of the three-digit number, thereby forming a five-digit number.  This number is exactly nine times the product Sarah should have obtained.  What is the sum of the two-digit number and the three-digit number?",
+      "answer": "126",
+      "example_id": "1997-3::1997"
+    },
+    "iso_time": "2025-11-27T02:38:49Z"
+  },
+  {
+    "timestamp": 1764211186.3821461,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-3::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 987572973
+    },
+    "iso_time": "2025-11-27T02:39:46Z"
+  },
+  {
+    "timestamp": 1764211187.159192,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 13,
+        "m_digits": 2,
+        "n_digits": 3,
+        "p": 11,
+        "r": 277
+      }
+    },
+    "iso_time": "2025-11-27T02:39:47Z"
+  },
+  {
+    "timestamp": 1764211187.908319,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 210
+    },
+    "iso_time": "2025-11-27T02:39:47Z"
+  },
+  {
+    "timestamp": 1764211187.90849,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 13, let X be a 2-digit positive integer and Y be a 3-digit positive integer (both written without leading zeros ",
+      "correct_answer": "210",
+      "seed_value": 987572973
+    },
+    "iso_time": "2025-11-27T02:39:47Z"
+  },
+  {
+    "timestamp": 1764211187.9085371,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "219",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:39:47Z"
+  },
+  {
+    "timestamp": 1764211219.2521422,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "213",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:40:19Z"
+  },
+  {
+    "timestamp": 1764211240.8732018,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "210",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T02:40:40Z"
+  },
+  {
+    "timestamp": 1764211270.347164,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "201",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:41:10Z"
+  },
+  {
+    "timestamp": 1764211303.913238,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "210",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T02:41:43Z"
+  },
+  {
+    "timestamp": 1764211333.944845,
+    "seed_id": "1997-3::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-3::1997_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T02:42:13Z"
+  },
+  {
+    "timestamp": 1764211333.94505,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-3::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1311807430
+    },
+    "iso_time": "2025-11-27T02:42:13Z"
+  },
+  {
+    "timestamp": 1764211334.7383711,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 15,
+        "m_digits": 2,
+        "n_digits": 4,
+        "p": 13,
+        "r": 5349
+      }
+    },
+    "iso_time": "2025-11-27T02:42:14Z"
+  },
+  {
+    "timestamp": 1764211335.489182,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3569
+    },
+    "iso_time": "2025-11-27T02:42:15Z"
+  },
+  {
+    "timestamp": 1764211335.4893389,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 15, let X be a 2-digit positive integer and Y be a 4-digit positive integer (both written without leading zeros ",
+      "correct_answer": "3569",
+      "seed_value": 1311807430
+    },
+    "iso_time": "2025-11-27T02:42:15Z"
+  },
+  {
+    "timestamp": 1764211335.489383,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3565",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:42:15Z"
+  },
+  {
+    "timestamp": 1764211364.732877,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3560",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:42:44Z"
+  },
+  {
+    "timestamp": 1764211395.8998039,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3569",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T02:43:15Z"
+  },
+  {
+    "timestamp": 1764211485.5054421,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3569",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T02:44:45Z"
+  },
+  {
+    "timestamp": 1764211525.00286,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3567",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:45:25Z"
+  },
+  {
+    "timestamp": 1764211563.816941,
+    "seed_id": "1997-3::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-3::1997_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T02:46:03Z"
+  },
+  {
+    "timestamp": 1764211563.817119,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-3::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 263643694
+    },
+    "iso_time": "2025-11-27T02:46:03Z"
+  },
+  {
+    "timestamp": 1764211564.5787652,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "m_digits": 2,
+        "n_digits": 3,
+        "p": 7,
+        "r": 232
+      }
+    },
+    "iso_time": "2025-11-27T02:46:04Z"
+  },
+  {
+    "timestamp": 1764211565.330888,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 165
+    },
+    "iso_time": "2025-11-27T02:46:05Z"
+  },
+  {
+    "timestamp": 1764211565.33108,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, let X be a 2-digit positive integer and Y be a 3-digit positive integer (both written without leading zeros ",
+      "correct_answer": "165",
+      "seed_value": 263643694
+    },
+    "iso_time": "2025-11-27T02:46:05Z"
+  },
+  {
+    "timestamp": 1764211565.331119,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "173",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:46:05Z"
+  },
+  {
+    "timestamp": 1764211577.029006,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "165",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T02:46:17Z"
+  },
+  {
+    "timestamp": 1764211587.2679172,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "157",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:46:27Z"
+  },
+  {
+    "timestamp": 1764211610.5146492,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "163",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:46:50Z"
+  },
+  {
+    "timestamp": 1764211623.734103,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "165",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T02:47:03Z"
+  },
+  {
+    "timestamp": 1764211637.615752,
+    "seed_id": "1997-3::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-3::1997_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T02:47:17Z"
+  },
+  {
+    "timestamp": 1764211637.615942,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-3::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1441289543
+    },
+    "iso_time": "2025-11-27T02:47:17Z"
+  },
+  {
+    "timestamp": 1764211638.409878,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 11,
+        "m_digits": 3,
+        "n_digits": 4,
+        "p": 7,
+        "r": 13
+      }
+    },
+    "iso_time": "2025-11-27T02:47:18Z"
+  },
+  {
+    "timestamp": 1764211639.1574411,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3135
+    },
+    "iso_time": "2025-11-27T02:47:19Z"
+  },
+  {
+    "timestamp": 1764211639.157603,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 11, let X be a 3-digit positive integer and Y be a 4-digit positive integer (both written without leading zeros ",
+      "correct_answer": "3135",
+      "seed_value": 1441289543
+    },
+    "iso_time": "2025-11-27T02:47:19Z"
+  },
+  {
+    "timestamp": 1764211639.1576478,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3128",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:47:19Z"
+  },
+  {
+    "timestamp": 1764211671.0337012,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3130",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:47:51Z"
+  },
+  {
+    "timestamp": 1764211780.4159539,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3135",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T02:49:40Z"
+  },
+  {
+    "timestamp": 1764211816.1382809,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3132",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:50:16Z"
+  },
+  {
+    "timestamp": 1764211838.155405,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3135",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T02:50:38Z"
+  },
+  {
+    "timestamp": 1764211869.489752,
+    "seed_id": "1997-3::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-3::1997_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T02:51:09Z"
+  },
+  {
+    "timestamp": 1764211869.489928,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-3::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1661176432
+    },
+    "iso_time": "2025-11-27T02:51:09Z"
+  },
+  {
+    "timestamp": 1764211870.2800262,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 15,
+        "m_digits": 4,
+        "n_digits": 5,
+        "p": 11,
+        "r": 29715
+      }
+    },
+    "iso_time": "2025-11-27T02:51:10Z"
+  },
+  {
+    "timestamp": 1764211871.029444,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 88444
+    },
+    "iso_time": "2025-11-27T02:51:11Z"
+  },
+  {
+    "timestamp": 1764211871.0296152,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 15, let X be a 4-digit positive integer and Y be a 5-digit positive integer (both written without leading zeros ",
+      "correct_answer": "88444",
+      "seed_value": 1661176432
+    },
+    "iso_time": "2025-11-27T02:51:11Z"
+  },
+  {
+    "timestamp": 1764211871.0296562,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "88439",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:51:11Z"
+  },
+  {
+    "timestamp": 1764211920.375942,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "88444",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T02:52:00Z"
+  },
+  {
+    "timestamp": 1764211965.2297359,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "88445",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:52:45Z"
+  },
+  {
+    "timestamp": 1764212018.988152,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "88441",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T02:53:38Z"
+  },
+  {
+    "timestamp": 1764212054.113729,
+    "seed_id": "1997-3::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "88444",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T02:54:14Z"
+  },
+  {
+    "timestamp": 1764212088.446111,
+    "seed_id": "1997-3::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-3::1997_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T02:54:48Z"
+  }
+]

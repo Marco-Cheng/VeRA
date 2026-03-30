@@ -1,0 +1,699 @@
+[
+  {
+    "timestamp": 1765276955.5448298,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "Let $w_1$ and $w_2$ denote the circles $x^2+y^2+10x-24y-87=0$ and $x^2 +y^2-10x-24y+153=0,$ respectively. Let $m$ be the",
+      "answer": "169",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T10:42:35Z"
+  },
+  {
+    "timestamp": 1765276955.54486,
+    "seed_id": "2005-II-15::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T10:42:35Z"
+  },
+  {
+    "timestamp": 1765276955.544876,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $w_1$ and $w_2$ denote the circles $x^2+y^2+10x-24y-87=0$ and $x^2 +y^2-10x-24y+153=0,$ respectively. Let $m$ be the smallest positive value of $a$ for which the line $y=ax$ contains the center of a circle that is externally tangent to $w_2$ and internally tangent to $w_1.$ Given that $m^2=\\frac pq,$ where $p$ and $q$ are relatively prime integers, find $p+q.$",
+      "answer": "169",
+      "example_id": "2005-II-15::2005"
+    },
+    "iso_time": "2025-12-09T10:42:35Z"
+  },
+  {
+    "timestamp": 1765277521.7553449,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-15::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1125219537
+    },
+    "iso_time": "2025-12-09T10:52:01Z"
+  },
+  {
+    "timestamp": 1765277523.094669,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1_x": -11,
+        "c1_y": 37,
+        "c2_x": 11,
+        "c2_y": 37,
+        "r1": 41,
+        "r2": 1
+      }
+    },
+    "iso_time": "2025-12-09T10:52:03Z"
+  },
+  {
+    "timestamp": 1765277524.318273,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1490
+    },
+    "iso_time": "2025-12-09T10:52:04Z"
+  },
+  {
+    "timestamp": 1765277524.3184671,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let w1 and w2 denote the circles (x - -11)^2 + (y - 37)^2 = 41^2 and (x - 11)^2 + (y - 37)^2 = 1^2, respectively. Let m ",
+      "correct_answer": "1490",
+      "seed_value": 1125219537
+    },
+    "iso_time": "2025-12-09T10:52:04Z"
+  },
+  {
+    "timestamp": 1765277524.3185139,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1495",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T10:52:04Z"
+  },
+  {
+    "timestamp": 1765277647.110896,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1489",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T10:54:07Z"
+  },
+  {
+    "timestamp": 1765277760.3553321,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1494",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T10:56:00Z"
+  },
+  {
+    "timestamp": 1765277882.933911,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1490",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T10:58:02Z"
+  },
+  {
+    "timestamp": 1765277992.050865,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1490",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T10:59:52Z"
+  },
+  {
+    "timestamp": 1765278083.532573,
+    "seed_id": "2005-II-15::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-15::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T11:01:23Z"
+  },
+  {
+    "timestamp": 1765278083.5327559,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-15::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1093870931
+    },
+    "iso_time": "2025-12-09T11:01:23Z"
+  },
+  {
+    "timestamp": 1765278084.709404,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1_x": -9,
+        "c1_y": 19,
+        "c2_x": 9,
+        "c2_y": 19,
+        "r1": 23,
+        "r2": 5
+      }
+    },
+    "iso_time": "2025-12-09T11:01:24Z"
+  },
+  {
+    "timestamp": 1765278085.842537,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 221
+    },
+    "iso_time": "2025-12-09T11:01:25Z"
+  },
+  {
+    "timestamp": 1765278085.84268,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let w1 and w2 denote the circles (x - -9)^2 + (y - 19)^2 = 23^2 and (x - 9)^2 + (y - 19)^2 = 5^2, respectively. Let m be",
+      "correct_answer": "221",
+      "seed_value": 1093870931
+    },
+    "iso_time": "2025-12-09T11:01:25Z"
+  },
+  {
+    "timestamp": 1765278085.84273,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "217",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:01:25Z"
+  },
+  {
+    "timestamp": 1765278166.9748979,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "221",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:02:46Z"
+  },
+  {
+    "timestamp": 1765278293.955112,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "224",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:04:53Z"
+  },
+  {
+    "timestamp": 1765278381.398178,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "223",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:06:21Z"
+  },
+  {
+    "timestamp": 1765278454.991429,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "221",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:07:34Z"
+  },
+  {
+    "timestamp": 1765278552.748665,
+    "seed_id": "2005-II-15::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-15::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T11:09:12Z"
+  },
+  {
+    "timestamp": 1765278552.748775,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-15::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 593140076
+    },
+    "iso_time": "2025-12-09T11:09:12Z"
+  },
+  {
+    "timestamp": 1765278554.077271,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1_x": -12,
+        "c1_y": 28,
+        "c2_x": 12,
+        "c2_y": 28,
+        "r1": 41,
+        "r2": 5
+      }
+    },
+    "iso_time": "2025-12-09T11:09:14Z"
+  },
+  {
+    "timestamp": 1765278555.1183739,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 928
+    },
+    "iso_time": "2025-12-09T11:09:15Z"
+  },
+  {
+    "timestamp": 1765278555.118539,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let w1 and w2 denote the circles (x - -12)^2 + (y - 28)^2 = 41^2 and (x - 12)^2 + (y - 28)^2 = 5^2, respectively. Let m ",
+      "correct_answer": "928",
+      "seed_value": 593140076
+    },
+    "iso_time": "2025-12-09T11:09:15Z"
+  },
+  {
+    "timestamp": 1765278555.1185951,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "933",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:09:15Z"
+  },
+  {
+    "timestamp": 1765278585.687497,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "928",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:09:45Z"
+  },
+  {
+    "timestamp": 1765278664.004575,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "920",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:11:04Z"
+  },
+  {
+    "timestamp": 1765278719.627899,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "928",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:11:59Z"
+  },
+  {
+    "timestamp": 1765278816.840405,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "929",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:13:36Z"
+  },
+  {
+    "timestamp": 1765278914.984969,
+    "seed_id": "2005-II-15::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-15::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T11:15:14Z"
+  },
+  {
+    "timestamp": 1765278914.98507,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-15::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 415791247
+    },
+    "iso_time": "2025-12-09T11:15:14Z"
+  },
+  {
+    "timestamp": 1765278916.19963,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1_x": -3,
+        "c1_y": 29,
+        "c2_x": 3,
+        "c2_y": 29,
+        "r1": 35,
+        "r2": 5
+      }
+    },
+    "iso_time": "2025-12-09T11:15:16Z"
+  },
+  {
+    "timestamp": 1765278917.298686,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17
+    },
+    "iso_time": "2025-12-09T11:15:17Z"
+  },
+  {
+    "timestamp": 1765278917.298856,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let w1 and w2 denote the circles (x - -3)^2 + (y - 29)^2 = 35^2 and (x - 3)^2 + (y - 29)^2 = 5^2, respectively. Let m be",
+      "correct_answer": "17",
+      "seed_value": 415791247
+    },
+    "iso_time": "2025-12-09T11:15:17Z"
+  },
+  {
+    "timestamp": 1765278917.298899,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "24",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:15:17Z"
+  },
+  {
+    "timestamp": 1765279011.699678,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "23",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:16:51Z"
+  },
+  {
+    "timestamp": 1765279122.8647628,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "17",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:18:42Z"
+  },
+  {
+    "timestamp": 1765279195.589132,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:19:55Z"
+  },
+  {
+    "timestamp": 1765279271.9624739,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:21:11Z"
+  },
+  {
+    "timestamp": 1765279378.735938,
+    "seed_id": "2005-II-15::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-15::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T11:22:58Z"
+  },
+  {
+    "timestamp": 1765279378.736114,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-15::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1615155396
+    },
+    "iso_time": "2025-12-09T11:22:58Z"
+  },
+  {
+    "timestamp": 1765279380.046117,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1_x": -5,
+        "c1_y": 36,
+        "c2_x": 5,
+        "c2_y": 36,
+        "r1": 43,
+        "r2": 3
+      }
+    },
+    "iso_time": "2025-12-09T11:23:00Z"
+  },
+  {
+    "timestamp": 1765279381.171753,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1321
+    },
+    "iso_time": "2025-12-09T11:23:01Z"
+  },
+  {
+    "timestamp": 1765279381.171936,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let w1 and w2 denote the circles (x - -5)^2 + (y - 36)^2 = 43^2 and (x - 5)^2 + (y - 36)^2 = 3^2, respectively. Let m be",
+      "correct_answer": "1321",
+      "seed_value": 1615155396
+    },
+    "iso_time": "2025-12-09T11:23:01Z"
+  },
+  {
+    "timestamp": 1765279381.17199,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:23:01Z"
+  },
+  {
+    "timestamp": 1765279506.9217439,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1318",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:25:06Z"
+  },
+  {
+    "timestamp": 1765279656.699859,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T11:27:36Z"
+  },
+  {
+    "timestamp": 1765279783.5542982,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1329",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:29:43Z"
+  },
+  {
+    "timestamp": 1765279979.315794,
+    "seed_id": "2005-II-15::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1319",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T11:32:59Z"
+  },
+  {
+    "timestamp": 1765280068.379112,
+    "seed_id": "2005-II-15::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-15::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T11:34:28Z"
+  }
+]

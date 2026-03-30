@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1762651272.065363,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1984,
+      "question_preview": "A gardener plants three maple trees, four oaks, and five birch trees in a row. He plants them in random order, each arra",
+      "answer": "106",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-09T01:21:12Z"
+  },
+  {
+    "timestamp": 1762651272.065408,
+    "seed_id": "1984-11::1984",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-09T01:21:12Z"
+  },
+  {
+    "timestamp": 1762651272.0654259,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A gardener plants three maple trees, four oaks, and five birch trees in a row. He plants them in random order, each arrangement being equally likely. Let $\\frac m n$ in lowest terms be the probability that no two birch trees are next to one another. Find $m+n$ .",
+      "answer": "106",
+      "example_id": "1984-11::1984"
+    },
+    "iso_time": "2025-11-09T01:21:12Z"
+  },
+  {
+    "timestamp": 1762651495.765609,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-11::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1910031939
+    },
+    "iso_time": "2025-11-09T01:24:55Z"
+  },
+  {
+    "timestamp": 1762651496.729249,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n1": 6,
+        "n2": 3,
+        "n3": 5,
+        "K": 0,
+        "n_sum": 14
+      }
+    },
+    "iso_time": "2025-11-09T01:24:56Z"
+  },
+  {
+    "timestamp": 1762651497.51246,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 147
+    },
+    "iso_time": "2025-11-09T01:24:57Z"
+  },
+  {
+    "timestamp": 1762651497.512643,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A group of 14 students, consisting of 6 computer science majors, 3 physics majors, and 5 mathematics majors, are arrange",
+      "correct_answer": "147",
+      "seed_value": 1910031939
+    },
+    "iso_time": "2025-11-09T01:24:57Z"
+  },
+  {
+    "timestamp": 1762651497.5126882,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "147",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T01:24:57Z"
+  },
+  {
+    "timestamp": 1762651617.46465,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "147",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T01:26:57Z"
+  },
+  {
+    "timestamp": 1762651731.480413,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "149",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T01:28:51Z"
+  },
+  {
+    "timestamp": 1762651914.070741,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "138",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T01:31:54Z"
+  },
+  {
+    "timestamp": 1762652068.617583,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "146",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T01:34:28Z"
+  },
+  {
+    "timestamp": 1762652281.428045,
+    "seed_id": "1984-11::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-11::1984_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T01:38:01Z"
+  },
+  {
+    "timestamp": 1762652281.4280908,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-11::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1974633927
+    },
+    "iso_time": "2025-11-09T01:38:01Z"
+  },
+  {
+    "timestamp": 1762652282.2484312,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n1": 6,
+        "n2": 5,
+        "n3": 3,
+        "K": 0,
+        "n_sum": 14
+      }
+    },
+    "iso_time": "2025-11-09T01:38:02Z"
+  },
+  {
+    "timestamp": 1762652283.044202,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 147
+    },
+    "iso_time": "2025-11-09T01:38:03Z"
+  },
+  {
+    "timestamp": 1762652283.044348,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A group of 14 students, consisting of 6 computer science majors, 5 physics majors, and 3 mathematics majors, are arrange",
+      "correct_answer": "147",
+      "seed_value": 1974633927
+    },
+    "iso_time": "2025-11-09T01:38:03Z"
+  },
+  {
+    "timestamp": 1762652283.044394,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "150",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T01:38:03Z"
+  },
+  {
+    "timestamp": 1762652533.1085188,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "147",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T01:42:13Z"
+  },
+  {
+    "timestamp": 1762652653.1532888,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "143",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T01:44:13Z"
+  },
+  {
+    "timestamp": 1762652806.259565,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "152",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T01:46:46Z"
+  },
+  {
+    "timestamp": 1762653005.024113,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "147",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T01:50:05Z"
+  },
+  {
+    "timestamp": 1762653126.176217,
+    "seed_id": "1984-11::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-11::1984_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T01:52:06Z"
+  },
+  {
+    "timestamp": 1762653126.176269,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-11::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1781521660
+    },
+    "iso_time": "2025-11-09T01:52:06Z"
+  },
+  {
+    "timestamp": 1762653127.133149,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n1": 4,
+        "n2": 6,
+        "n3": 5,
+        "K": 1,
+        "n_sum": 15
+      }
+    },
+    "iso_time": "2025-11-09T01:52:07Z"
+  },
+  {
+    "timestamp": 1762653127.9213052,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 71
+    },
+    "iso_time": "2025-11-09T01:52:07Z"
+  },
+  {
+    "timestamp": 1762653127.9214358,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A group of 15 students, consisting of 4 computer science majors, 6 physics majors, and 5 mathematics majors, are arrange",
+      "correct_answer": "71",
+      "seed_value": 1781521660
+    },
+    "iso_time": "2025-11-09T01:52:07Z"
+  },
+  {
+    "timestamp": 1762653127.9214778,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "71",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T01:52:07Z"
+  },
+  {
+    "timestamp": 1762653231.3689978,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "71",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T01:53:51Z"
+  },
+  {
+    "timestamp": 1762653348.5472698,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "76",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T01:55:48Z"
+  },
+  {
+    "timestamp": 1762653612.44346,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "68",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T02:00:12Z"
+  },
+  {
+    "timestamp": 1762653858.755913,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "69",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T02:04:18Z"
+  },
+  {
+    "timestamp": 1762654085.7109,
+    "seed_id": "1984-11::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-11::1984_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T02:08:05Z"
+  },
+  {
+    "timestamp": 1762654085.710946,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-11::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 31397781
+    },
+    "iso_time": "2025-11-09T02:08:05Z"
+  },
+  {
+    "timestamp": 1762654086.5030882,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n1": 3,
+        "n2": 5,
+        "n3": 3,
+        "K": 0,
+        "n_sum": 11
+      }
+    },
+    "iso_time": "2025-11-09T02:08:06Z"
+  },
+  {
+    "timestamp": 1762654087.297503,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 83
+    },
+    "iso_time": "2025-11-09T02:08:07Z"
+  },
+  {
+    "timestamp": 1762654087.297654,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A group of 11 students, consisting of 3 computer science majors, 5 physics majors, and 3 mathematics majors, are arrange",
+      "correct_answer": "83",
+      "seed_value": 31397781
+    },
+    "iso_time": "2025-11-09T02:08:07Z"
+  },
+  {
+    "timestamp": 1762654087.297704,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "83",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T02:08:07Z"
+  },
+  {
+    "timestamp": 1762654187.292192,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "83",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T02:09:47Z"
+  },
+  {
+    "timestamp": 1762654289.387424,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "77",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T02:11:29Z"
+  },
+  {
+    "timestamp": 1762654540.366771,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "85",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T02:15:40Z"
+  },
+  {
+    "timestamp": 1762654766.052622,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "87",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T02:19:26Z"
+  },
+  {
+    "timestamp": 1762655002.395921,
+    "seed_id": "1984-11::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-11::1984_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T02:23:22Z"
+  },
+  {
+    "timestamp": 1762655002.395966,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-11::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 794775181
+    },
+    "iso_time": "2025-11-09T02:23:22Z"
+  },
+  {
+    "timestamp": 1762655003.3549812,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n1": 5,
+        "n2": 9,
+        "n3": 8,
+        "K": 2,
+        "n_sum": 22
+      }
+    },
+    "iso_time": "2025-11-09T02:23:23Z"
+  },
+  {
+    "timestamp": 1762655004.128885,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 211
+    },
+    "iso_time": "2025-11-09T02:23:24Z"
+  },
+  {
+    "timestamp": 1762655004.129024,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A group of 22 students, consisting of 5 computer science majors, 9 physics majors, and 8 mathematics majors, are arrange",
+      "correct_answer": "211",
+      "seed_value": 794775181
+    },
+    "iso_time": "2025-11-09T02:23:24Z"
+  },
+  {
+    "timestamp": 1762655004.1290681,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "206",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T02:23:24Z"
+  },
+  {
+    "timestamp": 1762655244.469311,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "202",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T02:27:24Z"
+  },
+  {
+    "timestamp": 1762655482.754231,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "211",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T02:31:22Z"
+  },
+  {
+    "timestamp": 1762655591.017005,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "208",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T02:33:11Z"
+  },
+  {
+    "timestamp": 1762655833.873801,
+    "seed_id": "1984-11::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "211",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T02:37:13Z"
+  },
+  {
+    "timestamp": 1762655982.5576682,
+    "seed_id": "1984-11::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-11::1984_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T02:39:42Z"
+  }
+]

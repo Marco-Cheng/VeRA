@@ -1,0 +1,787 @@
+[
+  {
+    "timestamp": 1764903174.160067,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "Consider the polynomials $P(x) = x^{6} - x^{5} - x^{3} - x^{2} - x$ and $Q(x) = x^{4} - x^{3} - x^{2} - 1.$ Given that $",
+      "answer": "6",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-05T02:52:54Z"
+  },
+  {
+    "timestamp": 1764903174.1601841,
+    "seed_id": "2003-II-9::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-05T02:52:54Z"
+  },
+  {
+    "timestamp": 1764903174.160245,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Consider the polynomials $P(x) = x^{6} - x^{5} - x^{3} - x^{2} - x$ and $Q(x) = x^{4} - x^{3} - x^{2} - 1.$ Given that $z_{1},z_{2},z_{3},$ and $z_{4}$ are the roots of $Q(x) = 0,$ find $P(z_{1}) + P(z_{2}) + P(z_{3}) + P(z_{4}).$",
+      "answer": "6",
+      "example_id": "2003-II-9::2003"
+    },
+    "iso_time": "2025-12-05T02:52:54Z"
+  },
+  {
+    "timestamp": 1764903594.044281,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-9::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1513458109
+    },
+    "iso_time": "2025-12-05T02:59:54Z"
+  },
+  {
+    "timestamp": 1764903595.394994,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "q_poly_str": "x^4 + 2x^3 - x - 3",
+        "p_poly_str": "x^10 + 2x^8 + 3x^7 - x - 1",
+        "m": 2,
+        "q_coeffs": [
+          -3,
+          -1,
+          0,
+          2
+        ],
+        "p_coeffs": [
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          0,
+          1
+        ]
+      }
+    },
+    "iso_time": "2025-12-05T02:59:55Z"
+  },
+  {
+    "timestamp": 1764903596.492867,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -301837
+    },
+    "iso_time": "2025-12-05T02:59:56Z"
+  },
+  {
+    "timestamp": 1764903596.4930189,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let Q(x) = x^4 + 2x^3 - x - 3 be a monic polynomial of degree 4 with distinct complex roots z_1, ..., z_4. Let P(x) = x^",
+      "correct_answer": "-301837",
+      "seed_value": 1513458109
+    },
+    "iso_time": "2025-12-05T02:59:56Z"
+  },
+  {
+    "timestamp": 1764903596.4930959,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:59:56Z"
+  },
+  {
+    "timestamp": 1764903637.622848,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-301837",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T03:00:37Z"
+  },
+  {
+    "timestamp": 1764903675.95755,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-301836",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:01:15Z"
+  },
+  {
+    "timestamp": 1764903749.482291,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-301834",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:02:29Z"
+  },
+  {
+    "timestamp": 1764904240.299618,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-301837",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T03:10:40Z"
+  },
+  {
+    "timestamp": 1764904266.891433,
+    "seed_id": "2003-II-9::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-9::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T03:11:06Z"
+  },
+  {
+    "timestamp": 1764904266.891552,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-9::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1042522488
+    },
+    "iso_time": "2025-12-05T03:11:06Z"
+  },
+  {
+    "timestamp": 1764904268.357787,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 5,
+        "q_poly_str": "x^5 + x^3 - x^2 - 3",
+        "p_poly_str": "x^10 + 2x^9 + 3x^8",
+        "m": 2,
+        "q_coeffs": [
+          -3,
+          0,
+          -1,
+          1,
+          0
+        ],
+        "p_coeffs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          1
+        ]
+      }
+    },
+    "iso_time": "2025-12-05T03:11:08Z"
+  },
+  {
+    "timestamp": 1764904269.605401,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 184
+    },
+    "iso_time": "2025-12-05T03:11:09Z"
+  },
+  {
+    "timestamp": 1764904269.6055942,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let Q(x) = x^5 + x^3 - x^2 - 3 be a monic polynomial of degree 5 with distinct complex roots z_1, ..., z_5. Let P(x) = x",
+      "correct_answer": "184",
+      "seed_value": 1042522488
+    },
+    "iso_time": "2025-12-05T03:11:09Z"
+  },
+  {
+    "timestamp": 1764904269.605663,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "184",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T03:11:09Z"
+  },
+  {
+    "timestamp": 1764904356.928532,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "190",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:12:36Z"
+  },
+  {
+    "timestamp": 1764904476.699083,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "175",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:14:36Z"
+  },
+  {
+    "timestamp": 1764904515.947789,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "185",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:15:15Z"
+  },
+  {
+    "timestamp": 1764904576.147684,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "184",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T03:16:16Z"
+  },
+  {
+    "timestamp": 1764904664.465709,
+    "seed_id": "2003-II-9::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-9::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T03:17:44Z"
+  },
+  {
+    "timestamp": 1764904664.46589,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-9::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1988158295
+    },
+    "iso_time": "2025-12-05T03:17:44Z"
+  },
+  {
+    "timestamp": 1764904665.813646,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 5,
+        "q_poly_str": "x^5 - x^4 + x^3 + 3x^2 + 3x + 3",
+        "p_poly_str": "-x^10 + 2x^6 + 2x^5",
+        "m": 2,
+        "q_coeffs": [
+          3,
+          3,
+          3,
+          1,
+          -1
+        ],
+        "p_coeffs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    "iso_time": "2025-12-05T03:17:45Z"
+  },
+  {
+    "timestamp": 1764904666.92787,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 30766
+    },
+    "iso_time": "2025-12-05T03:17:46Z"
+  },
+  {
+    "timestamp": 1764904666.928024,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let Q(x) = x^5 - x^4 + x^3 + 3x^2 + 3x + 3 be a monic polynomial of degree 5 with distinct complex roots z_1, ..., z_5. ",
+      "correct_answer": "30766",
+      "seed_value": 1988158295
+    },
+    "iso_time": "2025-12-05T03:17:46Z"
+  },
+  {
+    "timestamp": 1764904666.928092,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "30766",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T03:17:46Z"
+  },
+  {
+    "timestamp": 1764904715.307486,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "30766",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T03:18:35Z"
+  },
+  {
+    "timestamp": 1764904834.618606,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "30759",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:20:34Z"
+  },
+  {
+    "timestamp": 1764905147.4343328,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "30762",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:25:47Z"
+  },
+  {
+    "timestamp": 1764905233.276333,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "30757",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:27:13Z"
+  },
+  {
+    "timestamp": 1764905317.525111,
+    "seed_id": "2003-II-9::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-9::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T03:28:37Z"
+  },
+  {
+    "timestamp": 1764905317.525292,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-9::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1354668442
+    },
+    "iso_time": "2025-12-05T03:28:37Z"
+  },
+  {
+    "timestamp": 1764905318.8853672,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 6,
+        "q_poly_str": "x^6 + 3x^5 + 3x^4 - 3x - 3",
+        "p_poly_str": "x^10 - 2x^7 + 2x^6",
+        "m": 2,
+        "q_coeffs": [
+          -3,
+          -3,
+          0,
+          0,
+          3,
+          3
+        ],
+        "p_coeffs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          -2,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "iso_time": "2025-12-05T03:28:38Z"
+  },
+  {
+    "timestamp": 1764905320.121881,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -21807
+    },
+    "iso_time": "2025-12-05T03:28:40Z"
+  },
+  {
+    "timestamp": 1764905320.122095,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let Q(x) = x^6 + 3x^5 + 3x^4 - 3x - 3 be a monic polynomial of degree 6 with distinct complex roots z_1, ..., z_6. Let P",
+      "correct_answer": "-21807",
+      "seed_value": 1354668442
+    },
+    "iso_time": "2025-12-05T03:28:40Z"
+  },
+  {
+    "timestamp": 1764905320.12219,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-21800",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:28:40Z"
+  },
+  {
+    "timestamp": 1764905617.591488,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:33:37Z"
+  },
+  {
+    "timestamp": 1764905706.649923,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-21804",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:35:06Z"
+  },
+  {
+    "timestamp": 1764905814.670775,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-21807",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T03:36:54Z"
+  },
+  {
+    "timestamp": 1764905884.412122,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-21807",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T03:38:04Z"
+  },
+  {
+    "timestamp": 1764905937.287647,
+    "seed_id": "2003-II-9::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-9::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T03:38:57Z"
+  },
+  {
+    "timestamp": 1764905937.287829,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-9::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 366245467
+    },
+    "iso_time": "2025-12-05T03:38:57Z"
+  },
+  {
+    "timestamp": 1764905938.64305,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 5,
+        "q_poly_str": "x^5 - x^4 - 2x^2 - 2x",
+        "p_poly_str": "x^8 + 3x^6 + 2",
+        "m": 2,
+        "q_coeffs": [
+          0,
+          -2,
+          -2,
+          0,
+          -1
+        ],
+        "p_coeffs": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          1
+        ]
+      }
+    },
+    "iso_time": "2025-12-05T03:38:58Z"
+  },
+  {
+    "timestamp": 1764905939.845967,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3120
+    },
+    "iso_time": "2025-12-05T03:38:59Z"
+  },
+  {
+    "timestamp": 1764905939.846155,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let Q(x) = x^5 - x^4 - 2x^2 - 2x be a monic polynomial of degree 5 with distinct complex roots z_1, ..., z_5. Let P(x) =",
+      "correct_answer": "3120",
+      "seed_value": 366245467
+    },
+    "iso_time": "2025-12-05T03:38:59Z"
+  },
+  {
+    "timestamp": 1764905939.846229,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T03:38:59Z"
+  },
+  {
+    "timestamp": 1764906035.758912,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T03:40:35Z"
+  },
+  {
+    "timestamp": 1764906101.570407,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3116",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:41:41Z"
+  },
+  {
+    "timestamp": 1764906143.694284,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3129",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:42:23Z"
+  },
+  {
+    "timestamp": 1764906222.022044,
+    "seed_id": "2003-II-9::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3113",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:43:42Z"
+  },
+  {
+    "timestamp": 1764906259.468883,
+    "seed_id": "2003-II-9::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-9::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T03:44:19Z"
+  }
+]

@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1765259487.384026,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "Let $m$ be a positive integer, and let $a_0, a_1,\\ldots,a_m$ be a sequence of reals such that $a_0 = 37, a_1 = 72, a_m =",
+      "answer": "889",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T05:51:27Z"
+  },
+  {
+    "timestamp": 1765259487.3841019,
+    "seed_id": "2005-II-11::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T05:51:27Z"
+  },
+  {
+    "timestamp": 1765259487.384133,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $m$ be a positive integer, and let $a_0, a_1,\\ldots,a_m$ be a sequence of reals such that $a_0 = 37, a_1 = 72, a_m = 0,$ and $a_{k+1} = a_{k-1} - \\frac 3{a_k}$ for $k = 1,2,\\ldots, m-1.$ Find $m.$",
+      "answer": "889",
+      "example_id": "2005-II-11::2005"
+    },
+    "iso_time": "2025-12-09T05:51:27Z"
+  },
+  {
+    "timestamp": 1765259555.291357,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-11::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2141934731
+    },
+    "iso_time": "2025-12-09T05:52:35Z"
+  },
+  {
+    "timestamp": 1765259556.594835,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "initial_x": 100,
+        "initial_y": 81,
+        "r_factor": 7,
+        "t_scale": 324
+      }
+    },
+    "iso_time": "2025-12-09T05:52:36Z"
+  },
+  {
+    "timestamp": 1765259557.8219361,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 176
+    },
+    "iso_time": "2025-12-09T05:52:37Z"
+  },
+  {
+    "timestamp": 1765259557.822137,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let a sequence (a_k) be defined by a_0 = 100, a_1 = 81, and for k >= 1, a_{k+1} = 7 a_{k-1} - (324 · 7^{k-1}) / a_k. Ass",
+      "correct_answer": "176",
+      "seed_value": 2141934731
+    },
+    "iso_time": "2025-12-09T05:52:37Z"
+  },
+  {
+    "timestamp": 1765259557.822201,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "176",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T05:52:37Z"
+  },
+  {
+    "timestamp": 1765259665.569403,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "176",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T05:54:25Z"
+  },
+  {
+    "timestamp": 1765259685.639391,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "174",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:54:45Z"
+  },
+  {
+    "timestamp": 1765259725.032303,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "178",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:55:25Z"
+  },
+  {
+    "timestamp": 1765259754.150013,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "173",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:55:54Z"
+  },
+  {
+    "timestamp": 1765259796.744305,
+    "seed_id": "2005-II-11::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-11::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T05:56:36Z"
+  },
+  {
+    "timestamp": 1765259796.744473,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-11::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 122082771
+    },
+    "iso_time": "2025-12-09T05:56:36Z"
+  },
+  {
+    "timestamp": 1765259798.061708,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "initial_x": 153,
+        "initial_y": 62,
+        "r_factor": 2,
+        "t_scale": 34
+      }
+    },
+    "iso_time": "2025-12-09T05:56:38Z"
+  },
+  {
+    "timestamp": 1765259799.240274,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 559
+    },
+    "iso_time": "2025-12-09T05:56:39Z"
+  },
+  {
+    "timestamp": 1765259799.240436,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let a sequence (a_k) be defined by a_0 = 153, a_1 = 62, and for k >= 1, a_{k+1} = 2 a_{k-1} - (34 · 2^{k-1}) / a_k. Assu",
+      "correct_answer": "559",
+      "seed_value": 122082771
+    },
+    "iso_time": "2025-12-09T05:56:39Z"
+  },
+  {
+    "timestamp": 1765259799.2404852,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "553",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:56:39Z"
+  },
+  {
+    "timestamp": 1765259822.334822,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "559",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T05:57:02Z"
+  },
+  {
+    "timestamp": 1765259852.54623,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "551",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:57:32Z"
+  },
+  {
+    "timestamp": 1765259869.1396322,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "564",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:57:49Z"
+  },
+  {
+    "timestamp": 1765259922.4500601,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "559",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T05:58:42Z"
+  },
+  {
+    "timestamp": 1765259960.214699,
+    "seed_id": "2005-II-11::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-11::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T05:59:20Z"
+  },
+  {
+    "timestamp": 1765259960.2148852,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-11::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1247449575
+    },
+    "iso_time": "2025-12-09T05:59:20Z"
+  },
+  {
+    "timestamp": 1765259961.617028,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "initial_x": 73,
+        "initial_y": 63,
+        "r_factor": 4,
+        "t_scale": 4
+      }
+    },
+    "iso_time": "2025-12-09T05:59:21Z"
+  },
+  {
+    "timestamp": 1765259962.7133288,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4600
+    },
+    "iso_time": "2025-12-09T05:59:22Z"
+  },
+  {
+    "timestamp": 1765259962.713485,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let a sequence (a_k) be defined by a_0 = 73, a_1 = 63, and for k >= 1, a_{k+1} = 4 a_{k-1} - (4 · 4^{k-1}) / a_k. Assume",
+      "correct_answer": "4600",
+      "seed_value": 1247449575
+    },
+    "iso_time": "2025-12-09T05:59:22Z"
+  },
+  {
+    "timestamp": 1765259962.713548,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4596",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:59:22Z"
+  },
+  {
+    "timestamp": 1765259988.743372,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T05:59:48Z"
+  },
+  {
+    "timestamp": 1765260028.8141701,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4601",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T06:00:28Z"
+  },
+  {
+    "timestamp": 1765260082.311562,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T06:01:22Z"
+  },
+  {
+    "timestamp": 1765260113.3660722,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4603",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T06:01:53Z"
+  },
+  {
+    "timestamp": 1765260145.932252,
+    "seed_id": "2005-II-11::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-11::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T06:02:25Z"
+  },
+  {
+    "timestamp": 1765260145.932354,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-11::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 456076742
+    },
+    "iso_time": "2025-12-09T06:02:25Z"
+  },
+  {
+    "timestamp": 1765260147.2017221,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "initial_x": 72,
+        "initial_y": 131,
+        "r_factor": 6,
+        "t_scale": 16
+      }
+    },
+    "iso_time": "2025-12-09T06:02:27Z"
+  },
+  {
+    "timestamp": 1765260148.3115158,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3538
+    },
+    "iso_time": "2025-12-09T06:02:28Z"
+  },
+  {
+    "timestamp": 1765260148.3116632,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let a sequence (a_k) be defined by a_0 = 72, a_1 = 131, and for k >= 1, a_{k+1} = 6 a_{k-1} - (16 · 6^{k-1}) / a_k. Assu",
+      "correct_answer": "3538",
+      "seed_value": 456076742
+    },
+    "iso_time": "2025-12-09T06:02:28Z"
+  },
+  {
+    "timestamp": 1765260148.311709,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3541",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T06:02:28Z"
+  },
+  {
+    "timestamp": 1765260214.3328278,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3538",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T06:03:34Z"
+  },
+  {
+    "timestamp": 1765260229.7535949,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3538",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T06:03:49Z"
+  },
+  {
+    "timestamp": 1765260267.9370172,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3529",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T06:04:27Z"
+  },
+  {
+    "timestamp": 1765260306.5936909,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3533",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T06:05:06Z"
+  },
+  {
+    "timestamp": 1765260363.285751,
+    "seed_id": "2005-II-11::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-11::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T06:06:03Z"
+  },
+  {
+    "timestamp": 1765260363.2859058,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-11::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1454515569
+    },
+    "iso_time": "2025-12-09T06:06:03Z"
+  },
+  {
+    "timestamp": 1765260364.5653179,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "initial_x": 145,
+        "initial_y": 114,
+        "r_factor": 5,
+        "t_scale": 570
+      }
+    },
+    "iso_time": "2025-12-09T06:06:04Z"
+  },
+  {
+    "timestamp": 1765260365.597663,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 146
+    },
+    "iso_time": "2025-12-09T06:06:05Z"
+  },
+  {
+    "timestamp": 1765260365.597824,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let a sequence (a_k) be defined by a_0 = 145, a_1 = 114, and for k >= 1, a_{k+1} = 5 a_{k-1} - (570 · 5^{k-1}) / a_k. As",
+      "correct_answer": "146",
+      "seed_value": 1454515569
+    },
+    "iso_time": "2025-12-09T06:06:05Z"
+  },
+  {
+    "timestamp": 1765260365.597866,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "139",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T06:06:05Z"
+  },
+  {
+    "timestamp": 1765260403.3002691,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "155",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T06:06:43Z"
+  },
+  {
+    "timestamp": 1765260474.842261,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "145",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T06:07:54Z"
+  },
+  {
+    "timestamp": 1765260492.3668969,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "146",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T06:08:12Z"
+  },
+  {
+    "timestamp": 1765260527.884296,
+    "seed_id": "2005-II-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "146",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T06:08:47Z"
+  },
+  {
+    "timestamp": 1765260574.991207,
+    "seed_id": "2005-II-11::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-11::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T06:09:34Z"
+  }
+]

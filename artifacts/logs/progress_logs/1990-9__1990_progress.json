@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1763337605.97468,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1990,
+      "question_preview": "A fair coin is to be tossed $10_{}^{}$ times. Let $i/j^{}_{}$ , in lowest terms, be the probability that heads never occ",
+      "answer": "73",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-17T00:00:05Z"
+  },
+  {
+    "timestamp": 1763337605.9747279,
+    "seed_id": "1990-9::1990",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-17T00:00:05Z"
+  },
+  {
+    "timestamp": 1763337605.9747531,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A fair coin is to be tossed $10_{}^{}$ times. Let $i/j^{}_{}$ , in lowest terms, be the probability that heads never occur on consecutive tosses. Find $i+j_{}^{}$ .",
+      "answer": "73",
+      "example_id": "1990-9::1990"
+    },
+    "iso_time": "2025-11-17T00:00:05Z"
+  },
+  {
+    "timestamp": 1763337752.30621,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-9::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1515335196
+    },
+    "iso_time": "2025-11-17T00:02:32Z"
+  },
+  {
+    "timestamp": 1763337753.0722282,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 7,
+        "k": 4,
+        "a": 2,
+        "b": 4
+      }
+    },
+    "iso_time": "2025-11-17T00:02:33Z"
+  },
+  {
+    "timestamp": 1763337753.8124218,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 59
+    },
+    "iso_time": "2025-11-17T00:02:33Z"
+  },
+  {
+    "timestamp": 1763337753.8125691,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A factory produces widgets using a robot arm. On each step, the robot can either perform a 'weld' operation or a 'cool' ",
+      "correct_answer": "59",
+      "seed_value": 1515335196
+    },
+    "iso_time": "2025-11-17T00:02:33Z"
+  },
+  {
+    "timestamp": 1763337753.812626,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "52",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:02:33Z"
+  },
+  {
+    "timestamp": 1763338015.039793,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "64",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:06:55Z"
+  },
+  {
+    "timestamp": 1763338237.0960472,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T00:10:37Z"
+  },
+  {
+    "timestamp": 1763338336.4696581,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "65",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:12:16Z"
+  },
+  {
+    "timestamp": 1763338544.27131,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T00:15:44Z"
+  },
+  {
+    "timestamp": 1763338649.21567,
+    "seed_id": "1990-9::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-9::1990_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T00:17:29Z"
+  },
+  {
+    "timestamp": 1763338649.2158751,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-9::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1768028891
+    },
+    "iso_time": "2025-11-17T00:17:29Z"
+  },
+  {
+    "timestamp": 1763338649.98788,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 10,
+        "k": 3,
+        "a": 3,
+        "b": 5
+      }
+    },
+    "iso_time": "2025-11-17T00:17:29Z"
+  },
+  {
+    "timestamp": 1763338650.7150831,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 507281
+    },
+    "iso_time": "2025-11-17T00:17:30Z"
+  },
+  {
+    "timestamp": 1763338650.715206,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A factory produces widgets using a robot arm. On each step, the robot can either perform a 'weld' operation or a 'cool' ",
+      "correct_answer": "507281",
+      "seed_value": 1768028891
+    },
+    "iso_time": "2025-11-17T00:17:30Z"
+  },
+  {
+    "timestamp": 1763338650.715255,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "507281",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T00:17:30Z"
+  },
+  {
+    "timestamp": 1763338778.0228128,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "507289",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:19:38Z"
+  },
+  {
+    "timestamp": 1763339042.01337,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "507281",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T00:24:02Z"
+  },
+  {
+    "timestamp": 1763339169.423371,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "507279",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:26:09Z"
+  },
+  {
+    "timestamp": 1763339328.0407062,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "507290",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:28:48Z"
+  },
+  {
+    "timestamp": 1763339484.281303,
+    "seed_id": "1990-9::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-9::1990_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T00:31:24Z"
+  },
+  {
+    "timestamp": 1763339484.2815318,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-9::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1161371989
+    },
+    "iso_time": "2025-11-17T00:31:24Z"
+  },
+  {
+    "timestamp": 1763339485.0635798,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 8,
+        "k": 4,
+        "a": 3,
+        "b": 5
+      }
+    },
+    "iso_time": "2025-11-17T00:31:25Z"
+  },
+  {
+    "timestamp": 1763339485.8047569,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5197
+    },
+    "iso_time": "2025-11-17T00:31:25Z"
+  },
+  {
+    "timestamp": 1763339485.8049002,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A factory produces widgets using a robot arm. On each step, the robot can either perform a 'weld' operation or a 'cool' ",
+      "correct_answer": "5197",
+      "seed_value": 1161371989
+    },
+    "iso_time": "2025-11-17T00:31:25Z"
+  },
+  {
+    "timestamp": 1763339485.804941,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5190",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:31:25Z"
+  },
+  {
+    "timestamp": 1763339655.9055638,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5197",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T00:34:15Z"
+  },
+  {
+    "timestamp": 1763339754.63589,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5198",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:35:54Z"
+  },
+  {
+    "timestamp": 1763339920.403701,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5197",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T00:38:40Z"
+  },
+  {
+    "timestamp": 1763340061.800944,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5201",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:41:01Z"
+  },
+  {
+    "timestamp": 1763340251.160156,
+    "seed_id": "1990-9::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-9::1990_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T00:44:11Z"
+  },
+  {
+    "timestamp": 1763340251.160355,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-9::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 3661581
+    },
+    "iso_time": "2025-11-17T00:44:11Z"
+  },
+  {
+    "timestamp": 1763340251.95887,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 9,
+        "k": 3,
+        "a": 3,
+        "b": 4
+      }
+    },
+    "iso_time": "2025-11-17T00:44:11Z"
+  },
+  {
+    "timestamp": 1763340252.69809,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 72887
+    },
+    "iso_time": "2025-11-17T00:44:12Z"
+  },
+  {
+    "timestamp": 1763340252.698224,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A factory produces widgets using a robot arm. On each step, the robot can either perform a 'weld' operation or a 'cool' ",
+      "correct_answer": "72887",
+      "seed_value": 3661581
+    },
+    "iso_time": "2025-11-17T00:44:12Z"
+  },
+  {
+    "timestamp": 1763340252.6982772,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "72887",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T00:44:12Z"
+  },
+  {
+    "timestamp": 1763340347.1377878,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "72887",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T00:45:47Z"
+  },
+  {
+    "timestamp": 1763340458.2570071,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "72880",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:47:38Z"
+  },
+  {
+    "timestamp": 1763340636.1823318,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "72878",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:50:36Z"
+  },
+  {
+    "timestamp": 1763340791.424673,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "72892",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:53:11Z"
+  },
+  {
+    "timestamp": 1763340931.811619,
+    "seed_id": "1990-9::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-9::1990_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T00:55:31Z"
+  },
+  {
+    "timestamp": 1763340931.8118248,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-9::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 942436132
+    },
+    "iso_time": "2025-11-17T00:55:31Z"
+  },
+  {
+    "timestamp": 1763340932.569244,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 11,
+        "k": 3,
+        "a": 3,
+        "b": 4
+      }
+    },
+    "iso_time": "2025-11-17T00:55:32Z"
+  },
+  {
+    "timestamp": 1763340933.306599,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4460189
+    },
+    "iso_time": "2025-11-17T00:55:33Z"
+  },
+  {
+    "timestamp": 1763340933.30673,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A factory produces widgets using a robot arm. On each step, the robot can either perform a 'weld' operation or a 'cool' ",
+      "correct_answer": "4460189",
+      "seed_value": 942436132
+    },
+    "iso_time": "2025-11-17T00:55:33Z"
+  },
+  {
+    "timestamp": 1763340933.306772,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4460189",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T00:55:33Z"
+  },
+  {
+    "timestamp": 1763341045.2815812,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4460183",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T00:57:25Z"
+  },
+  {
+    "timestamp": 1763341243.11187,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4460193",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T01:00:43Z"
+  },
+  {
+    "timestamp": 1763341480.086406,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4460189",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T01:04:40Z"
+  },
+  {
+    "timestamp": 1763341590.377449,
+    "seed_id": "1990-9::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4460196",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T01:06:30Z"
+  },
+  {
+    "timestamp": 1763341752.8642209,
+    "seed_id": "1990-9::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-9::1990_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T01:09:12Z"
+  }
+]

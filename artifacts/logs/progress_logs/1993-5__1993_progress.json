@@ -1,0 +1,740 @@
+[
+  {
+    "timestamp": 1763923560.860578,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1993,
+      "question_preview": "Let $P_0(x) = x^3 + 313x^2 - 77x - 8\\,$ .  For integers $n \\ge 1\\,$ , define $P_n(x) = P_{n - 1}(x - n)\\,$ .  What is th",
+      "answer": "763",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-23T18:46:00Z"
+  },
+  {
+    "timestamp": 1763923560.8606641,
+    "seed_id": "1993-5::1993",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-23T18:46:00Z"
+  },
+  {
+    "timestamp": 1763923560.860717,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $P_0(x) = x^3 + 313x^2 - 77x - 8\\,$ .  For integers $n \\ge 1\\,$ , define $P_n(x) = P_{n - 1}(x - n)\\,$ .  What is the coefficient of $x\\,$ in $P_{20}(x)\\,$ ?",
+      "answer": "763",
+      "example_id": "1993-5::1993"
+    },
+    "iso_time": "2025-11-23T18:46:00Z"
+  },
+  {
+    "timestamp": 1763923667.314765,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-5::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 995697799
+    },
+    "iso_time": "2025-11-23T18:47:47Z"
+  },
+  {
+    "timestamp": 1763923668.0829031,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "poly_str": "-1x^4 - 12x^3 - 8x^2 - 15x + 6",
+        "degree": 4,
+        "coeffs": [
+          6,
+          -15,
+          -8,
+          -12,
+          -1
+        ],
+        "a_scale": -2,
+        "b_linear": 4,
+        "c_quad": -1,
+        "n_steps": 13,
+        "target_power": 2
+      }
+    },
+    "iso_time": "2025-11-23T18:47:48Z"
+  },
+  {
+    "timestamp": 1763923668.833108,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -46329561407270420480
+    },
+    "iso_time": "2025-11-23T18:47:48Z"
+  },
+  {
+    "timestamp": 1763923668.8332832,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial P_0(x) = -1x^4 - 12x^3 - 8x^2 - 15x + 6. For integers n ≥ 1, define the seque",
+      "correct_answer": "-46329561407270420480",
+      "seed_value": 995697799
+    },
+    "iso_time": "2025-11-23T18:47:48Z"
+  },
+  {
+    "timestamp": 1763923668.8333418,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-46329561407270420471",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:47:48Z"
+  },
+  {
+    "timestamp": 1763923722.7140212,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-46329561407270420480",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:48:42Z"
+  },
+  {
+    "timestamp": 1763923749.6426492,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:49:09Z"
+  },
+  {
+    "timestamp": 1763923791.515331,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-46329561407270420477",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:49:51Z"
+  },
+  {
+    "timestamp": 1763923864.1262221,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-46329561407270420480",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:51:04Z"
+  },
+  {
+    "timestamp": 1763923920.941494,
+    "seed_id": "1993-5::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-5::1993_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T18:52:00Z"
+  },
+  {
+    "timestamp": 1763923920.941677,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-5::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 588786130
+    },
+    "iso_time": "2025-11-23T18:52:00Z"
+  },
+  {
+    "timestamp": 1763923921.7415218,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "poly_str": "-1x^5 + 6x^4 + 3x^3 - 18x^2 - 9x - 7",
+        "degree": 5,
+        "coeffs": [
+          -7,
+          -9,
+          -18,
+          3,
+          6,
+          -1
+        ],
+        "a_scale": 2,
+        "b_linear": -1,
+        "c_quad": 3,
+        "n_steps": 10,
+        "target_power": 2
+      }
+    },
+    "iso_time": "2025-11-23T18:52:01Z"
+  },
+  {
+    "timestamp": 1763923922.491055,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -155623124569988286906368
+    },
+    "iso_time": "2025-11-23T18:52:02Z"
+  },
+  {
+    "timestamp": 1763923922.4912372,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial P_0(x) = -1x^5 + 6x^4 + 3x^3 - 18x^2 - 9x - 7. For integers n ≥ 1, define the",
+      "correct_answer": "-155623124569988286906368",
+      "seed_value": 588786130
+    },
+    "iso_time": "2025-11-23T18:52:02Z"
+  },
+  {
+    "timestamp": 1763923922.4912908,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-155623124569988274323452",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:52:02Z"
+  },
+  {
+    "timestamp": 1763923994.808649,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-155623124569988286906368",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:53:14Z"
+  },
+  {
+    "timestamp": 1763924480.967169,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-155623124569988274323449",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:01:20Z"
+  },
+  {
+    "timestamp": 1763924554.195667,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-155623124569988286906368",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:02:34Z"
+  },
+  {
+    "timestamp": 1763924594.947671,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-155623124569988274323448",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:03:14Z"
+  },
+  {
+    "timestamp": 1763924657.0577972,
+    "seed_id": "1993-5::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-5::1993_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T19:04:17Z"
+  },
+  {
+    "timestamp": 1763924657.057997,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-5::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 734323808
+    },
+    "iso_time": "2025-11-23T19:04:17Z"
+  },
+  {
+    "timestamp": 1763924657.8547149,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "poly_str": "3x^4 + 21x^3 + 13x^2 - 17x - 6",
+        "degree": 4,
+        "coeffs": [
+          -6,
+          -17,
+          13,
+          21,
+          3
+        ],
+        "a_scale": 2,
+        "b_linear": 6,
+        "c_quad": -4,
+        "n_steps": 15,
+        "target_power": 2
+      }
+    },
+    "iso_time": "2025-11-23T19:04:17Z"
+  },
+  {
+    "timestamp": 1763924658.609639,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10402507100151234357624832
+    },
+    "iso_time": "2025-11-23T19:04:18Z"
+  },
+  {
+    "timestamp": 1763924658.609814,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial P_0(x) = 3x^4 + 21x^3 + 13x^2 - 17x - 6. For integers n ≥ 1, define the seque",
+      "correct_answer": "10402507100151234357624832",
+      "seed_value": 734323808
+    },
+    "iso_time": "2025-11-23T19:04:18Z"
+  },
+  {
+    "timestamp": 1763924658.609875,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10402507100151235431366653",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:04:18Z"
+  },
+  {
+    "timestamp": 1763924735.706205,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10402507100151234357624832",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:05:35Z"
+  },
+  {
+    "timestamp": 1763924808.659796,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10402507100151234357624832",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:06:48Z"
+  },
+  {
+    "timestamp": 1763924872.5541382,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10402507100151235431366665",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:07:52Z"
+  },
+  {
+    "timestamp": 1763924962.562767,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10402507100151235431366654",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:09:22Z"
+  },
+  {
+    "timestamp": 1763925030.586546,
+    "seed_id": "1993-5::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-5::1993_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-23T19:10:30Z"
+  },
+  {
+    "timestamp": 1763925030.586737,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-5::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1520215191
+    },
+    "iso_time": "2025-11-23T19:10:30Z"
+  },
+  {
+    "timestamp": 1763925031.334751,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "poly_str": "-1x^4 - 8x^3 - 23x^2 + 22x - 24",
+        "degree": 4,
+        "coeffs": [
+          -24,
+          22,
+          -23,
+          -8,
+          -1
+        ],
+        "a_scale": 2,
+        "b_linear": 4,
+        "c_quad": -2,
+        "n_steps": 12,
+        "target_power": 2
+      }
+    },
+    "iso_time": "2025-11-23T19:10:31Z"
+  },
+  {
+    "timestamp": 1763925032.086611,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -68909830800549085184
+    },
+    "iso_time": "2025-11-23T19:10:32Z"
+  },
+  {
+    "timestamp": 1763925032.086763,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial P_0(x) = -1x^4 - 8x^3 - 23x^2 + 22x - 24. For integers n ≥ 1, define the sequ",
+      "correct_answer": "-68909830800549085184",
+      "seed_value": 1520215191
+    },
+    "iso_time": "2025-11-23T19:10:32Z"
+  },
+  {
+    "timestamp": 1763925032.086812,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-68909830800549085184",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:10:32Z"
+  },
+  {
+    "timestamp": 1763925095.074809,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-68909830800549085182",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:11:35Z"
+  },
+  {
+    "timestamp": 1763925157.836235,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-68909830800549085176",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:12:37Z"
+  },
+  {
+    "timestamp": 1763925218.153588,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-68909830800549085179",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:13:38Z"
+  },
+  {
+    "timestamp": 1763925289.7149062,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-68909830800549085184",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:14:49Z"
+  },
+  {
+    "timestamp": 1763925345.333351,
+    "seed_id": "1993-5::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-5::1993_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T19:15:45Z"
+  },
+  {
+    "timestamp": 1763925345.333556,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-5::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 619299199
+    },
+    "iso_time": "2025-11-23T19:15:45Z"
+  },
+  {
+    "timestamp": 1763925346.090633,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "poly_str": "3x^4 - 8x^3 + 8x^2 + 9x + 16",
+        "degree": 4,
+        "coeffs": [
+          16,
+          9,
+          8,
+          -8,
+          3
+        ],
+        "a_scale": 2,
+        "b_linear": -2,
+        "c_quad": -4,
+        "n_steps": 16,
+        "target_power": 2
+      }
+    },
+    "iso_time": "2025-11-23T19:15:46Z"
+  },
+  {
+    "timestamp": 1763925346.837883,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 292144538958301595741192192
+    },
+    "iso_time": "2025-11-23T19:15:46Z"
+  },
+  {
+    "timestamp": 1763925346.838072,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial P_0(x) = 3x^4 - 8x^3 + 8x^2 + 9x + 16. For integers n ≥ 1, define the sequenc",
+      "correct_answer": "292144538958301595741192192",
+      "seed_value": 619299199
+    },
+    "iso_time": "2025-11-23T19:15:46Z"
+  },
+  {
+    "timestamp": 1763925346.83813,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "292144538958301595741192191",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:15:46Z"
+  },
+  {
+    "timestamp": 1763925458.9232981,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "292144538958301595741192192",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:17:38Z"
+  },
+  {
+    "timestamp": 1763925530.8848991,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "292144538958301595741192183",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:18:50Z"
+  },
+  {
+    "timestamp": 1763925604.275668,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "292144538958301595741192189",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:20:04Z"
+  },
+  {
+    "timestamp": 1763925704.343863,
+    "seed_id": "1993-5::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "292144538958301595741192192",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:21:44Z"
+  },
+  {
+    "timestamp": 1763925778.384597,
+    "seed_id": "1993-5::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-5::1993_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T19:22:58Z"
+  }
+]

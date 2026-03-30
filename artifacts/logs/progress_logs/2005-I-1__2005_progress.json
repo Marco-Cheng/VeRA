@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1765163678.637007,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "Six congruent circles form a ring with each circle externally tangent to two circles adjacent to it. All circles are int",
+      "answer": "942",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-08T03:14:38Z"
+  },
+  {
+    "timestamp": 1765163678.637095,
+    "seed_id": "2005-I-1::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-08T03:14:38Z"
+  },
+  {
+    "timestamp": 1765163678.6371489,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Six congruent circles form a ring with each circle externally tangent to two circles adjacent to it. All circles are internally tangent to a circle $C$ with radius 30. Let $K$ be the area of the region inside circle $C$ and outside of the six circles in the ring. Find $\\lfloor K \\rfloor.$",
+      "answer": "942",
+      "example_id": "2005-I-1::2005"
+    },
+    "iso_time": "2025-12-08T03:14:38Z"
+  },
+  {
+    "timestamp": 1765163914.4924889,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-1::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1768157044
+    },
+    "iso_time": "2025-12-08T03:18:34Z"
+  },
+  {
+    "timestamp": 1765163915.829518,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 129,
+        "n": 24
+      }
+    },
+    "iso_time": "2025-12-08T03:18:35Z"
+  },
+  {
+    "timestamp": 1765163916.983147,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7370
+    },
+    "iso_time": "2025-12-08T03:18:36Z"
+  },
+  {
+    "timestamp": 1765163916.9833112,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A circle C of radius 129 contains two concentric rings of 24 congruent circles each. The outer ring’s circles are intern",
+      "correct_answer": "7370",
+      "seed_value": 1768157044
+    },
+    "iso_time": "2025-12-08T03:18:36Z"
+  },
+  {
+    "timestamp": 1765163916.983387,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7370",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T03:18:36Z"
+  },
+  {
+    "timestamp": 1765164547.2119548,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7378",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T03:29:07Z"
+  },
+  {
+    "timestamp": 1765164936.978424,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7376",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T03:35:36Z"
+  },
+  {
+    "timestamp": 1765165202.6147,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7361",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T03:40:02Z"
+  },
+  {
+    "timestamp": 1765165848.364146,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7370",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T03:50:48Z"
+  },
+  {
+    "timestamp": 1765165986.198271,
+    "seed_id": "2005-I-1::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-1::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T03:53:06Z"
+  },
+  {
+    "timestamp": 1765165986.198525,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-1::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 871278551
+    },
+    "iso_time": "2025-12-08T03:53:06Z"
+  },
+  {
+    "timestamp": 1765165987.552825,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 29,
+        "n": 14
+      }
+    },
+    "iso_time": "2025-12-08T03:53:07Z"
+  },
+  {
+    "timestamp": 1765165988.730926,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 488
+    },
+    "iso_time": "2025-12-08T03:53:08Z"
+  },
+  {
+    "timestamp": 1765165988.731122,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A circle C of radius 29 contains two concentric rings of 14 congruent circles each. The outer ring’s circles are interna",
+      "correct_answer": "488",
+      "seed_value": 871278551
+    },
+    "iso_time": "2025-12-08T03:53:08Z"
+  },
+  {
+    "timestamp": 1765165988.7312021,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "482",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T03:53:08Z"
+  },
+  {
+    "timestamp": 1765166362.7620192,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "490",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T03:59:22Z"
+  },
+  {
+    "timestamp": 1765166681.395683,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "497",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T04:04:41Z"
+  },
+  {
+    "timestamp": 1765167066.07249,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "488",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T04:11:06Z"
+  },
+  {
+    "timestamp": 1765167395.451892,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "488",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T04:16:35Z"
+  },
+  {
+    "timestamp": 1765167539.028482,
+    "seed_id": "2005-I-1::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-1::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T04:18:59Z"
+  },
+  {
+    "timestamp": 1765167539.0286999,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-1::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 904907375
+    },
+    "iso_time": "2025-12-08T04:18:59Z"
+  },
+  {
+    "timestamp": 1765167540.368984,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 119,
+        "n": 13
+      }
+    },
+    "iso_time": "2025-12-08T04:19:00Z"
+  },
+  {
+    "timestamp": 1765167541.508137,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8483
+    },
+    "iso_time": "2025-12-08T04:19:01Z"
+  },
+  {
+    "timestamp": 1765167541.508269,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A circle C of radius 119 contains two concentric rings of 13 congruent circles each. The outer ring’s circles are intern",
+      "correct_answer": "8483",
+      "seed_value": 904907375
+    },
+    "iso_time": "2025-12-08T04:19:01Z"
+  },
+  {
+    "timestamp": 1765167541.508331,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8483",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T04:19:01Z"
+  },
+  {
+    "timestamp": 1765167614.033338,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8483",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T04:20:14Z"
+  },
+  {
+    "timestamp": 1765167968.447415,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8477",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T04:26:08Z"
+  },
+  {
+    "timestamp": 1765168470.68975,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8487",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T04:34:30Z"
+  },
+  {
+    "timestamp": 1765168784.632483,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8476",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T04:39:44Z"
+  },
+  {
+    "timestamp": 1765169064.438453,
+    "seed_id": "2005-I-1::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-1::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T04:44:24Z"
+  },
+  {
+    "timestamp": 1765169064.438623,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-1::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1120548425
+    },
+    "iso_time": "2025-12-08T04:44:24Z"
+  },
+  {
+    "timestamp": 1765169065.747207,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 98,
+        "n": 8
+      }
+    },
+    "iso_time": "2025-12-08T04:44:25Z"
+  },
+  {
+    "timestamp": 1765169066.977819,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6798
+    },
+    "iso_time": "2025-12-08T04:44:26Z"
+  },
+  {
+    "timestamp": 1765169066.9779992,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A circle C of radius 98 contains two concentric rings of 8 congruent circles each. The outer ring’s circles are internal",
+      "correct_answer": "6798",
+      "seed_value": 1120548425
+    },
+    "iso_time": "2025-12-08T04:44:26Z"
+  },
+  {
+    "timestamp": 1765169066.9780622,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6790",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T04:44:26Z"
+  },
+  {
+    "timestamp": 1765169560.720714,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6798",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T04:52:40Z"
+  },
+  {
+    "timestamp": 1765169934.155313,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6797",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T04:58:54Z"
+  },
+  {
+    "timestamp": 1765170247.933459,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6801",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T05:04:07Z"
+  },
+  {
+    "timestamp": 1765170990.423608,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6798",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T05:16:30Z"
+  },
+  {
+    "timestamp": 1765171301.943688,
+    "seed_id": "2005-I-1::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-1::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T05:21:41Z"
+  },
+  {
+    "timestamp": 1765171301.943861,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-1::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1519089343
+    },
+    "iso_time": "2025-12-08T05:21:41Z"
+  },
+  {
+    "timestamp": 1765171303.257663,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 85,
+        "n": 18
+      }
+    },
+    "iso_time": "2025-12-08T05:21:43Z"
+  },
+  {
+    "timestamp": 1765171304.356448,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3742
+    },
+    "iso_time": "2025-12-08T05:21:44Z"
+  },
+  {
+    "timestamp": 1765171304.356608,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A circle C of radius 85 contains two concentric rings of 18 congruent circles each. The outer ring’s circles are interna",
+      "correct_answer": "3742",
+      "seed_value": 1519089343
+    },
+    "iso_time": "2025-12-08T05:21:44Z"
+  },
+  {
+    "timestamp": 1765171304.3566878,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3746",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T05:21:44Z"
+  },
+  {
+    "timestamp": 1765171714.347609,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3742",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T05:28:34Z"
+  },
+  {
+    "timestamp": 1765172081.268608,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3737",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T05:34:41Z"
+  },
+  {
+    "timestamp": 1765172762.686922,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3750",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T05:46:02Z"
+  },
+  {
+    "timestamp": 1765173414.818646,
+    "seed_id": "2005-I-1::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3742",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T05:56:54Z"
+  },
+  {
+    "timestamp": 1765173725.117908,
+    "seed_id": "2005-I-1::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-1::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T06:02:05Z"
+  }
+]

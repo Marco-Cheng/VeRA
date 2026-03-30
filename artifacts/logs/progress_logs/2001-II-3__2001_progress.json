@@ -1,0 +1,865 @@
+[
+  {
+    "timestamp": 1764594427.18282,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "Given that \\begin{align*}x_{1}&=211,\\\\ x_{2}&=375,\\\\ x_{3}&=420,\\\\ x_{4}&=523,\\ \\text{and}\\\\ x_{n}&=x_{n-1}-x_{n-2}+x_{n",
+      "answer": "898",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T13:07:07Z"
+  },
+  {
+    "timestamp": 1764594427.182944,
+    "seed_id": "2001-II-3::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T13:07:07Z"
+  },
+  {
+    "timestamp": 1764594427.18298,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Given that \\begin{align*}x_{1}&=211,\\\\ x_{2}&=375,\\\\ x_{3}&=420,\\\\ x_{4}&=523,\\ \\text{and}\\\\ x_{n}&=x_{n-1}-x_{n-2}+x_{n-3}-x_{n-4}\\ \\text{when}\\ n\\geq5, \\end{align*} find the value of $x_{531}+x_{753}+x_{975}$ .",
+      "answer": "898",
+      "example_id": "2001-II-3::2001"
+    },
+    "iso_time": "2025-12-01T13:07:07Z"
+  },
+  {
+    "timestamp": 1764594534.3356428,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-3::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 995470426
+    },
+    "iso_time": "2025-12-01T13:08:54Z"
+  },
+  {
+    "timestamp": 1764594535.814306,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "order_m": 7,
+        "initial_values_str": "x1=-269, x2=-137, x3=-367, x4=78, x5=92, x6=-195, x7=-87",
+        "num_terms": 10,
+        "coeff_str": "3, 1, 1, -3, -1, 3, 2, -1, 1, 2",
+        "index_str": "158767528, 118775541, 19347458, 114030296, 148858997, 48966757, 16468328, 80824853, 16, 126270290",
+        "initial_values": [
+          -269,
+          -137,
+          -367,
+          78,
+          92,
+          -195,
+          -87
+        ],
+        "coeffs": [
+          3,
+          1,
+          1,
+          -3,
+          -1,
+          3,
+          2,
+          -1,
+          1,
+          2
+        ],
+        "indices": [
+          158767528,
+          118775541,
+          19347458,
+          114030296,
+          148858997,
+          48966757,
+          16468328,
+          80824853,
+          16,
+          126270290
+        ],
+        "answer": -1358
+      }
+    },
+    "iso_time": "2025-12-01T13:08:55Z"
+  },
+  {
+    "timestamp": 1764594536.905746,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -1358
+    },
+    "iso_time": "2025-12-01T13:08:56Z"
+  },
+  {
+    "timestamp": 1764594536.905896,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the integer sequence {x_n} of order 7 defined by the alternating-sign linear recurrence x_n ",
+      "correct_answer": "-1358",
+      "seed_value": 995470426
+    },
+    "iso_time": "2025-12-01T13:08:56Z"
+  },
+  {
+    "timestamp": 1764594536.905952,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-1358",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T13:08:56Z"
+  },
+  {
+    "timestamp": 1764594570.529674,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-1357",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:09:30Z"
+  },
+  {
+    "timestamp": 1764594601.399137,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-1352",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:10:01Z"
+  },
+  {
+    "timestamp": 1764594641.206757,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:10:41Z"
+  },
+  {
+    "timestamp": 1764594680.7103639,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-1358",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T13:11:20Z"
+  },
+  {
+    "timestamp": 1764594748.550438,
+    "seed_id": "2001-II-3::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-3::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T13:12:28Z"
+  },
+  {
+    "timestamp": 1764594748.550601,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-3::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 167572890
+    },
+    "iso_time": "2025-12-01T13:12:28Z"
+  },
+  {
+    "timestamp": 1764594749.911604,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "order_m": 11,
+        "initial_values_str": "x1=-385, x2=109, x3=191, x4=382, x5=109, x6=129, x7=-13, x8=-317, x9=-39, x10=-209, x11=80",
+        "num_terms": 8,
+        "coeff_str": "-3, 2, 3, 2, 1, 1, -1, 2",
+        "index_str": "166468252, 158215457, 128175833, 188358408, 156891434, 8313597, 221552855, 9621623",
+        "initial_values": [
+          -385,
+          109,
+          191,
+          382,
+          109,
+          129,
+          -13,
+          -317,
+          -39,
+          -209,
+          80
+        ],
+        "coeffs": [
+          -3,
+          2,
+          3,
+          2,
+          1,
+          1,
+          -1,
+          2
+        ],
+        "indices": [
+          166468252,
+          158215457,
+          128175833,
+          188358408,
+          156891434,
+          8313597,
+          221552855,
+          9621623
+        ],
+        "answer": -753
+      }
+    },
+    "iso_time": "2025-12-01T13:12:29Z"
+  },
+  {
+    "timestamp": 1764594751.0606349,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -753
+    },
+    "iso_time": "2025-12-01T13:12:31Z"
+  },
+  {
+    "timestamp": 1764594751.060807,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the integer sequence {x_n} of order 11 defined by the alternating-sign linear recurrence x_n",
+      "correct_answer": "-753",
+      "seed_value": 167572890
+    },
+    "iso_time": "2025-12-01T13:12:31Z"
+  },
+  {
+    "timestamp": 1764594751.060865,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-745",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:12:31Z"
+  },
+  {
+    "timestamp": 1764594801.642876,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-753",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T13:13:21Z"
+  },
+  {
+    "timestamp": 1764594877.524478,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-750",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:14:37Z"
+  },
+  {
+    "timestamp": 1764594930.571734,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:15:30Z"
+  },
+  {
+    "timestamp": 1764594986.8404028,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-753",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T13:16:26Z"
+  },
+  {
+    "timestamp": 1764595040.440205,
+    "seed_id": "2001-II-3::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-3::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T13:17:20Z"
+  },
+  {
+    "timestamp": 1764595040.440376,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-3::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1948750253
+    },
+    "iso_time": "2025-12-01T13:17:20Z"
+  },
+  {
+    "timestamp": 1764595041.792222,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "order_m": 10,
+        "initial_values_str": "x1=35, x2=114, x3=-340, x4=-396, x5=-95, x6=-269, x7=-37, x8=-189, x9=-96, x10=388",
+        "num_terms": 9,
+        "coeff_str": "3, 3, 1, -2, -3, -1, -3, -3, 2",
+        "index_str": "83856386, 151016336, 6909543, 166916968, 70302166, 132837098, 89712309, 32712157, 106424981",
+        "initial_values": [
+          35,
+          114,
+          -340,
+          -396,
+          -95,
+          -269,
+          -37,
+          -189,
+          -96,
+          388
+        ],
+        "coeffs": [
+          3,
+          3,
+          1,
+          -2,
+          -3,
+          -1,
+          -3,
+          -3,
+          2
+        ],
+        "indices": [
+          83856386,
+          151016336,
+          6909543,
+          166916968,
+          70302166,
+          132837098,
+          89712309,
+          32712157,
+          106424981
+        ],
+        "answer": 381
+      }
+    },
+    "iso_time": "2025-12-01T13:17:21Z"
+  },
+  {
+    "timestamp": 1764595042.935424,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 381
+    },
+    "iso_time": "2025-12-01T13:17:22Z"
+  },
+  {
+    "timestamp": 1764595042.935574,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the integer sequence {x_n} of order 10 defined by the alternating-sign linear recurrence x_n",
+      "correct_answer": "381",
+      "seed_value": 1948750253
+    },
+    "iso_time": "2025-12-01T13:17:22Z"
+  },
+  {
+    "timestamp": 1764595042.9356291,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "379",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:17:22Z"
+  },
+  {
+    "timestamp": 1764595103.1724072,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "381",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T13:18:23Z"
+  },
+  {
+    "timestamp": 1764595190.459718,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "381",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T13:19:50Z"
+  },
+  {
+    "timestamp": 1764595230.754851,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "372",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:20:30Z"
+  },
+  {
+    "timestamp": 1764595296.404233,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "380",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:21:36Z"
+  },
+  {
+    "timestamp": 1764595350.921841,
+    "seed_id": "2001-II-3::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-3::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-01T13:22:30Z"
+  },
+  {
+    "timestamp": 1764595350.922011,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-3::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 50140
+    },
+    "iso_time": "2025-12-01T13:22:30Z"
+  },
+  {
+    "timestamp": 1764595352.2029068,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "order_m": 9,
+        "initial_values_str": "x1=-28, x2=-175, x3=80, x4=320, x5=-328, x6=-67, x7=-301, x8=-378, x9=-149",
+        "num_terms": 9,
+        "coeff_str": "2, -1, -3, 3, -1, 2, 3, -2, -1",
+        "index_str": "133567056, 185672201, 51002976, 147508835, 6285256, 9804636, 57741756, 176411876, 180386495",
+        "initial_values": [
+          -28,
+          -175,
+          80,
+          320,
+          -328,
+          -67,
+          -301,
+          -378,
+          -149
+        ],
+        "coeffs": [
+          2,
+          -1,
+          -3,
+          3,
+          -1,
+          2,
+          3,
+          -2,
+          -1
+        ],
+        "indices": [
+          133567056,
+          185672201,
+          51002976,
+          147508835,
+          6285256,
+          9804636,
+          57741756,
+          176411876,
+          180386495
+        ],
+        "answer": -695
+      }
+    },
+    "iso_time": "2025-12-01T13:22:32Z"
+  },
+  {
+    "timestamp": 1764595353.408569,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -695
+    },
+    "iso_time": "2025-12-01T13:22:33Z"
+  },
+  {
+    "timestamp": 1764595353.4087832,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the integer sequence {x_n} of order 9 defined by the alternating-sign linear recurrence x_n ",
+      "correct_answer": "-695",
+      "seed_value": 50140
+    },
+    "iso_time": "2025-12-01T13:22:33Z"
+  },
+  {
+    "timestamp": 1764595353.4088378,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-688",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:22:33Z"
+  },
+  {
+    "timestamp": 1764595395.977686,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-686",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:23:15Z"
+  },
+  {
+    "timestamp": 1764595430.584497,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-691",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:23:50Z"
+  },
+  {
+    "timestamp": 1764595466.525522,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-695",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T13:24:26Z"
+  },
+  {
+    "timestamp": 1764595506.158887,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-695",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T13:25:06Z"
+  },
+  {
+    "timestamp": 1764595592.519816,
+    "seed_id": "2001-II-3::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-3::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T13:26:32Z"
+  },
+  {
+    "timestamp": 1764595592.519997,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-3::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 321918566
+    },
+    "iso_time": "2025-12-01T13:26:32Z"
+  },
+  {
+    "timestamp": 1764595593.7522418,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "order_m": 7,
+        "initial_values_str": "x1=-162, x2=137, x3=345, x4=302, x5=292, x6=-396, x7=361",
+        "num_terms": 10,
+        "coeff_str": "1, -2, 1, -2, -2, 2, 3, -3, -3, 2",
+        "index_str": "117191807, 31151329, 114659832, 111214543, 115086703, 143586289, 11491375, 108483263, 82243430, 82399240",
+        "initial_values": [
+          -162,
+          137,
+          345,
+          302,
+          292,
+          -396,
+          361
+        ],
+        "coeffs": [
+          1,
+          -2,
+          1,
+          -2,
+          -2,
+          2,
+          3,
+          -3,
+          -3,
+          2
+        ],
+        "indices": [
+          117191807,
+          31151329,
+          114659832,
+          111214543,
+          115086703,
+          143586289,
+          11491375,
+          108483263,
+          82243430,
+          82399240
+        ],
+        "answer": 2484
+      }
+    },
+    "iso_time": "2025-12-01T13:26:33Z"
+  },
+  {
+    "timestamp": 1764595594.880615,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2484
+    },
+    "iso_time": "2025-12-01T13:26:34Z"
+  },
+  {
+    "timestamp": 1764595594.88078,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the integer sequence {x_n} of order 7 defined by the alternating-sign linear recurrence x_n ",
+      "correct_answer": "2484",
+      "seed_value": 321918566
+    },
+    "iso_time": "2025-12-01T13:26:34Z"
+  },
+  {
+    "timestamp": 1764595594.880836,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2484",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T13:26:34Z"
+  },
+  {
+    "timestamp": 1764595631.241327,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2477",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:27:11Z"
+  },
+  {
+    "timestamp": 1764595657.229995,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2488",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:27:37Z"
+  },
+  {
+    "timestamp": 1764595729.2242749,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2484",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T13:28:49Z"
+  },
+  {
+    "timestamp": 1764595765.193387,
+    "seed_id": "2001-II-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2480",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T13:29:25Z"
+  },
+  {
+    "timestamp": 1764595795.279386,
+    "seed_id": "2001-II-3::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-3::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T13:29:55Z"
+  }
+]

@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1764821426.4318879,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "Two positive integers differ by $60.$ The sum of their square roots is the square root of an integer that is not a perfe",
+      "answer": "156",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-04T04:10:26Z"
+  },
+  {
+    "timestamp": 1764821426.431938,
+    "seed_id": "2003-II-10::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-04T04:10:26Z"
+  },
+  {
+    "timestamp": 1764821426.431963,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Two positive integers differ by $60.$ The sum of their square roots is the square root of an integer that is not a perfect square. What is the maximum possible sum of the two integers?",
+      "answer": "156",
+      "example_id": "2003-II-10::2003"
+    },
+    "iso_time": "2025-12-04T04:10:26Z"
+  },
+  {
+    "timestamp": 1764821558.4088728,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-10::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2008034274
+    },
+    "iso_time": "2025-12-04T04:12:38Z"
+  },
+  {
+    "timestamp": 1764821559.7799308,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "delta": 39933,
+        "g": 459
+      }
+    },
+    "iso_time": "2025-12-04T04:12:39Z"
+  },
+  {
+    "timestamp": 1764821560.9990919,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1737315
+    },
+    "iso_time": "2025-12-04T04:12:40Z"
+  },
+  {
+    "timestamp": 1764821560.999267,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two positive integers differ by 39933. The sum of their square roots equals the square root of an integer that is not a ",
+      "correct_answer": "1737315",
+      "seed_value": 2008034274
+    },
+    "iso_time": "2025-12-04T04:12:40Z"
+  },
+  {
+    "timestamp": 1764821560.999315,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1737315",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:12:40Z"
+  },
+  {
+    "timestamp": 1764821597.7504482,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1737308",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:13:17Z"
+  },
+  {
+    "timestamp": 1764821744.9824939,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1737320",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:15:44Z"
+  },
+  {
+    "timestamp": 1764821815.8467572,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1737315",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:16:55Z"
+  },
+  {
+    "timestamp": 1764822022.28221,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1737324",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:20:22Z"
+  },
+  {
+    "timestamp": 1764822087.2034292,
+    "seed_id": "2003-II-10::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-10::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T04:21:27Z"
+  },
+  {
+    "timestamp": 1764822087.203691,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-10::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1939897678
+    },
+    "iso_time": "2025-12-04T04:21:27Z"
+  },
+  {
+    "timestamp": 1764822088.526033,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "delta": 4725,
+        "g": 945
+      }
+    },
+    "iso_time": "2025-12-04T04:21:28Z"
+  },
+  {
+    "timestamp": 1764822089.707826,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12285
+    },
+    "iso_time": "2025-12-04T04:21:29Z"
+  },
+  {
+    "timestamp": 1764822089.707982,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two positive integers differ by 4725. The sum of their square roots equals the square root of an integer that is not a p",
+      "correct_answer": "12285",
+      "seed_value": 1939897678
+    },
+    "iso_time": "2025-12-04T04:21:29Z"
+  },
+  {
+    "timestamp": 1764822089.7080262,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12285",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:21:29Z"
+  },
+  {
+    "timestamp": 1764822165.9686599,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12277",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:22:45Z"
+  },
+  {
+    "timestamp": 1764822185.901078,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12285",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:23:05Z"
+  },
+  {
+    "timestamp": 1764822210.703924,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12284",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:23:30Z"
+  },
+  {
+    "timestamp": 1764822277.0810041,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12286",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:24:37Z"
+  },
+  {
+    "timestamp": 1764822332.371347,
+    "seed_id": "2003-II-10::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-10::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T04:25:32Z"
+  },
+  {
+    "timestamp": 1764822332.3715332,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-10::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 394763820
+    },
+    "iso_time": "2025-12-04T04:25:32Z"
+  },
+  {
+    "timestamp": 1764822333.657639,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "delta": 10829,
+        "g": 221
+      }
+    },
+    "iso_time": "2025-12-04T04:25:33Z"
+  },
+  {
+    "timestamp": 1764822334.909086,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 265421
+    },
+    "iso_time": "2025-12-04T04:25:34Z"
+  },
+  {
+    "timestamp": 1764822334.909258,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two positive integers differ by 10829. The sum of their square roots equals the square root of an integer that is not a ",
+      "correct_answer": "265421",
+      "seed_value": 394763820
+    },
+    "iso_time": "2025-12-04T04:25:34Z"
+  },
+  {
+    "timestamp": 1764822334.909306,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "265421",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:25:34Z"
+  },
+  {
+    "timestamp": 1764822385.905482,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "265415",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:26:25Z"
+  },
+  {
+    "timestamp": 1764822413.340532,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "265428",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:26:53Z"
+  },
+  {
+    "timestamp": 1764822495.8850582,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "265421",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:28:15Z"
+  },
+  {
+    "timestamp": 1764822529.221836,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "265426",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:28:49Z"
+  },
+  {
+    "timestamp": 1764822548.4134989,
+    "seed_id": "2003-II-10::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-10::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T04:29:08Z"
+  },
+  {
+    "timestamp": 1764822548.41368,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-10::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 192867571
+    },
+    "iso_time": "2025-12-04T04:29:08Z"
+  },
+  {
+    "timestamp": 1764822549.649923,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "delta": 21945,
+        "g": 1045
+      }
+    },
+    "iso_time": "2025-12-04T04:29:09Z"
+  },
+  {
+    "timestamp": 1764822550.7165718,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 230945
+    },
+    "iso_time": "2025-12-04T04:29:10Z"
+  },
+  {
+    "timestamp": 1764822550.716704,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two positive integers differ by 21945. The sum of their square roots equals the square root of an integer that is not a ",
+      "correct_answer": "230945",
+      "seed_value": 192867571
+    },
+    "iso_time": "2025-12-04T04:29:10Z"
+  },
+  {
+    "timestamp": 1764822550.716745,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "230945",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:29:10Z"
+  },
+  {
+    "timestamp": 1764822579.8705778,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "230945",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:29:39Z"
+  },
+  {
+    "timestamp": 1764822612.2295911,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "230948",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:30:12Z"
+  },
+  {
+    "timestamp": 1764822654.5515761,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "230949",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:30:54Z"
+  },
+  {
+    "timestamp": 1764822671.311557,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "230950",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:31:11Z"
+  },
+  {
+    "timestamp": 1764822705.8473332,
+    "seed_id": "2003-II-10::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-10::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T04:31:45Z"
+  },
+  {
+    "timestamp": 1764822705.847498,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-10::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1468829542
+    },
+    "iso_time": "2025-12-04T04:31:45Z"
+  },
+  {
+    "timestamp": 1764822707.0465338,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "delta": 2431,
+        "g": 221
+      }
+    },
+    "iso_time": "2025-12-04T04:31:47Z"
+  },
+  {
+    "timestamp": 1764822708.265853,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 13481
+    },
+    "iso_time": "2025-12-04T04:31:48Z"
+  },
+  {
+    "timestamp": 1764822708.266068,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two positive integers differ by 2431. The sum of their square roots equals the square root of an integer that is not a p",
+      "correct_answer": "13481",
+      "seed_value": 1468829542
+    },
+    "iso_time": "2025-12-04T04:31:48Z"
+  },
+  {
+    "timestamp": 1764822708.266117,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "13481",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:31:48Z"
+  },
+  {
+    "timestamp": 1764822733.351089,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "13481",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:32:13Z"
+  },
+  {
+    "timestamp": 1764822756.2083268,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "13477",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:32:36Z"
+  },
+  {
+    "timestamp": 1764822778.409596,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "13484",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:32:58Z"
+  },
+  {
+    "timestamp": 1764822807.312599,
+    "seed_id": "2003-II-10::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13482",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:33:27Z"
+  },
+  {
+    "timestamp": 1764822874.213797,
+    "seed_id": "2003-II-10::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-10::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T04:34:34Z"
+  }
+]

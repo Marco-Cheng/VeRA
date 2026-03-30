@@ -1,0 +1,1864 @@
+[
+  {
+    "timestamp": 1763019284.466826,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1987,
+      "question_preview": "An ordered pair $(m,n)$ of non-negative integers is called \"simple\" if the addition $m+n$ in base $10$ requires no carry",
+      "answer": "300",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-13T07:34:44Z"
+  },
+  {
+    "timestamp": 1763019284.4668522,
+    "seed_id": "1987-1::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-13T07:34:44Z"
+  },
+  {
+    "timestamp": 1763019284.466864,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "An ordered pair $(m,n)$ of non-negative integers is called \"simple\" if the addition $m+n$ in base $10$ requires no carrying. Find the number of simple ordered pairs of non-negative integers that sum to $1492$ .",
+      "answer": "300",
+      "example_id": "1987-1::1987"
+    },
+    "iso_time": "2025-11-13T07:34:44Z"
+  },
+  {
+    "timestamp": 1763019437.231862,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-1::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2136599159
+    },
+    "iso_time": "2025-11-13T07:37:17Z"
+  },
+  {
+    "timestamp": 1763019438.019084,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 3,
+        "base": 8,
+        "capacity": 5,
+        "S": 446
+      }
+    },
+    "iso_time": "2025-11-13T07:37:18Z"
+  },
+  {
+    "timestamp": 1763019438.7932549,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6498
+    },
+    "iso_time": "2025-11-13T07:37:18Z"
+  },
+  {
+    "timestamp": 1763019438.793408,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "An ordered 3-tuple of non-negative integers $(m_1, \\dots, m_3)$ is called '(8,5)-simple' if two conditions are met. Firs",
+      "correct_answer": "6498",
+      "seed_value": 2136599159
+    },
+    "iso_time": "2025-11-13T07:37:18Z"
+  },
+  {
+    "timestamp": 1763019438.793453,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6499",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T07:37:18Z"
+  },
+  {
+    "timestamp": 1763019599.631344,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6498",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T07:39:59Z"
+  },
+  {
+    "timestamp": 1763019671.233441,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6490",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T07:41:11Z"
+  },
+  {
+    "timestamp": 1763019839.566276,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6498",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T07:43:59Z"
+  },
+  {
+    "timestamp": 1763019934.252784,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6503",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T07:45:34Z"
+  },
+  {
+    "timestamp": 1763020108.579585,
+    "seed_id": "1987-1::1987",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-13T07:48:28Z"
+  },
+  {
+    "timestamp": 1763020108.5796638,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-1::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 505876168
+    },
+    "iso_time": "2025-11-13T07:48:28Z"
+  },
+  {
+    "timestamp": 1763020109.356095,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 3,
+        "base": 10,
+        "capacity": 6,
+        "S": 956
+      }
+    },
+    "iso_time": "2025-11-13T07:48:29Z"
+  },
+  {
+    "timestamp": 1763020110.1335099,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 13125
+    },
+    "iso_time": "2025-11-13T07:48:30Z"
+  },
+  {
+    "timestamp": 1763020110.1336792,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "An ordered 3-tuple of non-negative integers $(m_1, \\dots, m_3)$ is called '(10,6)-simple' if two conditions are met. Fir",
+      "correct_answer": "13125",
+      "seed_value": 505876168
+    },
+    "iso_time": "2025-11-13T07:48:30Z"
+  },
+  {
+    "timestamp": 1763020110.133727,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "13119",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T07:48:30Z"
+  },
+  {
+    "timestamp": 1763020297.72925,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "13125",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T07:51:37Z"
+  },
+  {
+    "timestamp": 1763020370.801177,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "13125",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T07:52:50Z"
+  },
+  {
+    "timestamp": 1763020480.7950568,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "13126",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T07:54:40Z"
+  },
+  {
+    "timestamp": 1763020628.1602979,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13117",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T07:57:08Z"
+  },
+  {
+    "timestamp": 1763020810.563879,
+    "seed_id": "1987-1::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-1::1987_prompt01-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-13T08:00:10Z"
+  },
+  {
+    "timestamp": 1763020810.563933,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-1::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 832705027
+    },
+    "iso_time": "2025-11-13T08:00:10Z"
+  },
+  {
+    "timestamp": 1763020811.382617,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 3,
+        "base": 12,
+        "capacity": 10,
+        "S": 19881
+      }
+    },
+    "iso_time": "2025-11-13T08:00:11Z"
+  },
+  {
+    "timestamp": 1763020812.162168,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 106260
+    },
+    "iso_time": "2025-11-13T08:00:12Z"
+  },
+  {
+    "timestamp": 1763020812.162317,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "An ordered 3-tuple of non-negative integers $(m_1, \\dots, m_3)$ is called '(12,10)-simple' if two conditions are met. Fi",
+      "correct_answer": "106260",
+      "seed_value": 832705027
+    },
+    "iso_time": "2025-11-13T08:00:12Z"
+  },
+  {
+    "timestamp": 1763020812.162362,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "106267",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T08:00:12Z"
+  },
+  {
+    "timestamp": 1763020980.1098728,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "106260",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T08:03:00Z"
+  },
+  {
+    "timestamp": 1763021053.123075,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "106254",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T08:04:13Z"
+  },
+  {
+    "timestamp": 1763021245.12368,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "106260",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T08:07:25Z"
+  },
+  {
+    "timestamp": 1763021330.222796,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "106256",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T08:08:50Z"
+  },
+  {
+    "timestamp": 1763021470.338667,
+    "seed_id": "1987-1::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-1::1987_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T08:11:10Z"
+  },
+  {
+    "timestamp": 1763021470.3387089,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-1::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1414277215
+    },
+    "iso_time": "2025-11-13T08:11:10Z"
+  },
+  {
+    "timestamp": 1763021471.122554,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 4,
+        "base": 12,
+        "capacity": 9,
+        "S": 716
+      }
+    },
+    "iso_time": "2025-11-13T08:11:11Z"
+  },
+  {
+    "timestamp": 1763021471.90522,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1871100
+    },
+    "iso_time": "2025-11-13T08:11:11Z"
+  },
+  {
+    "timestamp": 1763021471.905382,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "An ordered 4-tuple of non-negative integers $(m_1, \\dots, m_4)$ is called '(12,9)-simple' if two conditions are met. Fir",
+      "correct_answer": "1871100",
+      "seed_value": 1414277215
+    },
+    "iso_time": "2025-11-13T08:11:11Z"
+  },
+  {
+    "timestamp": 1763021471.905426,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1871100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T08:11:11Z"
+  },
+  {
+    "timestamp": 1763021570.0431669,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1871100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T08:12:50Z"
+  },
+  {
+    "timestamp": 1763021666.800151,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1871091",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T08:14:26Z"
+  },
+  {
+    "timestamp": 1763021845.807213,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1871098",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T08:17:25Z"
+  },
+  {
+    "timestamp": 1763022025.825396,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1871099",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T08:20:25Z"
+  },
+  {
+    "timestamp": 1763022200.52128,
+    "seed_id": "1987-1::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-1::1987_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T08:23:20Z"
+  },
+  {
+    "timestamp": 1763022200.521325,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-1::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1241023238
+    },
+    "iso_time": "2025-11-13T08:23:20Z"
+  },
+  {
+    "timestamp": 1763022201.327067,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 3,
+        "base": 9,
+        "capacity": 4,
+        "S": 2875
+      }
+    },
+    "iso_time": "2025-11-13T08:23:21Z"
+  },
+  {
+    "timestamp": 1763022202.112811,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4320
+    },
+    "iso_time": "2025-11-13T08:23:22Z"
+  },
+  {
+    "timestamp": 1763022202.112957,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "An ordered 3-tuple of non-negative integers $(m_1, \\dots, m_3)$ is called '(9,4)-simple' if two conditions are met. Firs",
+      "correct_answer": "4320",
+      "seed_value": 1241023238
+    },
+    "iso_time": "2025-11-13T08:23:22Z"
+  },
+  {
+    "timestamp": 1763022202.113002,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4320",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T08:23:22Z"
+  },
+  {
+    "timestamp": 1763022292.78436,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4328",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T08:24:52Z"
+  },
+  {
+    "timestamp": 1763022466.2897432,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4313",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T08:27:46Z"
+  },
+  {
+    "timestamp": 1763022603.4361181,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4322",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T08:30:03Z"
+  },
+  {
+    "timestamp": 1763044240.935411,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4320",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T14:30:40Z"
+  },
+  {
+    "timestamp": 1763044362.214261,
+    "seed_id": "1987-1::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-1::1987_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-13T14:32:42Z"
+  },
+  {
+    "timestamp": 1763044362.2142878,
+    "seed_id": "1987-1::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-13T14:32:42Z"
+  },
+  {
+    "timestamp": 1763044362.214302,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3).",
+      "question": "An ordered pair $(m,n)$ of non-negative integers is called \"simple\" if the addition $m+n$ in base $10$ requires no carrying. Find the number of simple ordered pairs of non-negative integers that sum to $1492$ .",
+      "answer": "300",
+      "example_id": "1987-1::1987"
+    },
+    "iso_time": "2025-11-13T14:32:42Z"
+  },
+  {
+    "timestamp": 1763044611.296896,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-1::1987_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 925641108
+    },
+    "iso_time": "2025-11-13T14:36:51Z"
+  },
+  {
+    "timestamp": 1763044612.2795541,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:36:52Z"
+  },
+  {
+    "timestamp": 1763044613.129348,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:36:53Z"
+  },
+  {
+    "timestamp": 1763044613.993833,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:36:53Z"
+  },
+  {
+    "timestamp": 1763044614.826784,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:36:54Z"
+  },
+  {
+    "timestamp": 1763044615.6792152,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:36:55Z"
+  },
+  {
+    "timestamp": 1763044616.487436,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:36:56Z"
+  },
+  {
+    "timestamp": 1763044617.292257,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:36:57Z"
+  },
+  {
+    "timestamp": 1763044618.1042502,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:36:58Z"
+  },
+  {
+    "timestamp": 1763044618.893533,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:36:58Z"
+  },
+  {
+    "timestamp": 1763044619.6959722,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:36:59Z"
+  },
+  {
+    "timestamp": 1763044620.4836612,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:00Z"
+  },
+  {
+    "timestamp": 1763044621.319904,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:01Z"
+  },
+  {
+    "timestamp": 1763044621.319983,
+    "seed_id": "1987-1::1987",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.023088216781616
+    },
+    "iso_time": "2025-11-13T14:37:01Z"
+  },
+  {
+    "timestamp": 1763044621.320056,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-1::1987_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 971760633
+    },
+    "iso_time": "2025-11-13T14:37:01Z"
+  },
+  {
+    "timestamp": 1763044622.114625,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:02Z"
+  },
+  {
+    "timestamp": 1763044622.91477,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:02Z"
+  },
+  {
+    "timestamp": 1763044623.706583,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:03Z"
+  },
+  {
+    "timestamp": 1763044624.503411,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:04Z"
+  },
+  {
+    "timestamp": 1763044625.302516,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:05Z"
+  },
+  {
+    "timestamp": 1763044626.09191,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:06Z"
+  },
+  {
+    "timestamp": 1763044626.881876,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:06Z"
+  },
+  {
+    "timestamp": 1763044627.712308,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:07Z"
+  },
+  {
+    "timestamp": 1763044628.516429,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:08Z"
+  },
+  {
+    "timestamp": 1763044629.3282402,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:09Z"
+  },
+  {
+    "timestamp": 1763044630.1450062,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:10Z"
+  },
+  {
+    "timestamp": 1763044630.990481,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:10Z"
+  },
+  {
+    "timestamp": 1763044631.824034,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:11Z"
+  },
+  {
+    "timestamp": 1763044632.6903439,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:12Z"
+  },
+  {
+    "timestamp": 1763044632.6904461,
+    "seed_id": "1987-1::1987",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.370389938354492
+    },
+    "iso_time": "2025-11-13T14:37:12Z"
+  },
+  {
+    "timestamp": 1763044632.6905138,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-1::1987_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1543302193
+    },
+    "iso_time": "2025-11-13T14:37:12Z"
+  },
+  {
+    "timestamp": 1763044633.541117,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:13Z"
+  },
+  {
+    "timestamp": 1763044634.368268,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:14Z"
+  },
+  {
+    "timestamp": 1763044635.253848,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:15Z"
+  },
+  {
+    "timestamp": 1763044636.093554,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:16Z"
+  },
+  {
+    "timestamp": 1763044636.9446442,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:16Z"
+  },
+  {
+    "timestamp": 1763044637.8025331,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:17Z"
+  },
+  {
+    "timestamp": 1763044638.600716,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:18Z"
+  },
+  {
+    "timestamp": 1763044639.399698,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:19Z"
+  },
+  {
+    "timestamp": 1763044640.196527,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:20Z"
+  },
+  {
+    "timestamp": 1763044641.075279,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:21Z"
+  },
+  {
+    "timestamp": 1763044641.871392,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:21Z"
+  },
+  {
+    "timestamp": 1763044642.672689,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:22Z"
+  },
+  {
+    "timestamp": 1763044643.479991,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:23Z"
+  },
+  {
+    "timestamp": 1763044644.2695308,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:24Z"
+  },
+  {
+    "timestamp": 1763044644.2696068,
+    "seed_id": "1987-1::1987",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.579093933105469
+    },
+    "iso_time": "2025-11-13T14:37:24Z"
+  },
+  {
+    "timestamp": 1763044644.269658,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-1::1987_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 2074633958
+    },
+    "iso_time": "2025-11-13T14:37:24Z"
+  },
+  {
+    "timestamp": 1763044645.068678,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:25Z"
+  },
+  {
+    "timestamp": 1763044645.876499,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:25Z"
+  },
+  {
+    "timestamp": 1763044646.611594,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:26Z"
+  },
+  {
+    "timestamp": 1763044647.38796,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:27Z"
+  },
+  {
+    "timestamp": 1763044648.1864588,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:28Z"
+  },
+  {
+    "timestamp": 1763044648.998713,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:28Z"
+  },
+  {
+    "timestamp": 1763044649.813612,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:29Z"
+  },
+  {
+    "timestamp": 1763044650.6750982,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:30Z"
+  },
+  {
+    "timestamp": 1763044651.4940522,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:31Z"
+  },
+  {
+    "timestamp": 1763044652.339104,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:32Z"
+  },
+  {
+    "timestamp": 1763044653.1468291,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:33Z"
+  },
+  {
+    "timestamp": 1763044653.932974,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:33Z"
+  },
+  {
+    "timestamp": 1763044654.720177,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:34Z"
+  },
+  {
+    "timestamp": 1763044655.508325,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:35Z"
+  },
+  {
+    "timestamp": 1763044655.508412,
+    "seed_id": "1987-1::1987",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.23875379562378
+    },
+    "iso_time": "2025-11-13T14:37:35Z"
+  },
+  {
+    "timestamp": 1763044655.508471,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-1::1987_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 1009121803
+    },
+    "iso_time": "2025-11-13T14:37:35Z"
+  },
+  {
+    "timestamp": 1763044656.3034801,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:36Z"
+  },
+  {
+    "timestamp": 1763044657.106538,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:37Z"
+  },
+  {
+    "timestamp": 1763044657.9152682,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:37Z"
+  },
+  {
+    "timestamp": 1763044658.725805,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:38Z"
+  },
+  {
+    "timestamp": 1763044659.5214798,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:39Z"
+  },
+  {
+    "timestamp": 1763044660.312808,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:40Z"
+  },
+  {
+    "timestamp": 1763044661.099212,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:41Z"
+  },
+  {
+    "timestamp": 1763044661.8860438,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:41Z"
+  },
+  {
+    "timestamp": 1763044662.686563,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:42Z"
+  },
+  {
+    "timestamp": 1763044663.4771252,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:43Z"
+  },
+  {
+    "timestamp": 1763044664.268244,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:44Z"
+  },
+  {
+    "timestamp": 1763044665.054196,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:45Z"
+  },
+  {
+    "timestamp": 1763044665.8563468,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-13T14:37:45Z"
+  },
+  {
+    "timestamp": 1763044666.659751,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-13T14:37:46Z"
+  },
+  {
+    "timestamp": 1763044666.6598258,
+    "seed_id": "1987-1::1987",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.15135669708252
+    },
+    "iso_time": "2025-11-13T14:37:46Z"
+  },
+  {
+    "timestamp": 1763044666.659861,
+    "seed_id": "1987-1::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-13T14:37:46Z"
+  },
+  {
+    "timestamp": 1763044666.65988,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "An ordered pair $(m,n)$ of non-negative integers is called \"simple\" if the addition $m+n$ in base $10$ requires no carrying. Find the number of simple ordered pairs of non-negative integers that sum to $1492$ .",
+      "answer": "300",
+      "example_id": "1987-1::1987"
+    },
+    "iso_time": "2025-11-13T14:37:46Z"
+  },
+  {
+    "timestamp": 1763044814.098231,
+    "seed_id": "1987-1::1987",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 2 column 327 (char 328)",
+    "payload": {},
+    "iso_time": "2025-11-13T14:40:14Z"
+  },
+  {
+    "timestamp": 1763044814.098281,
+    "seed_id": "1987-1::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-13T14:40:14Z"
+  },
+  {
+    "timestamp": 1763044814.0982988,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 2 column 327 (char 328)",
+      "question": "An ordered pair $(m,n)$ of non-negative integers is called \"simple\" if the addition $m+n$ in base $10$ requires no carrying. Find the number of simple ordered pairs of non-negative integers that sum to $1492$ .",
+      "answer": "300",
+      "example_id": "1987-1::1987"
+    },
+    "iso_time": "2025-11-13T14:40:14Z"
+  },
+  {
+    "timestamp": 1763045009.322298,
+    "seed_id": "1987-1::1987",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 2 column 82 (char 83)",
+    "payload": {},
+    "iso_time": "2025-11-13T14:43:29Z"
+  },
+  {
+    "timestamp": 1763045009.322353,
+    "seed_id": "1987-1::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 5).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-13T14:43:29Z"
+  },
+  {
+    "timestamp": 1763045009.322371,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 5,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 2 column 82 (char 83)",
+      "question": "An ordered pair $(m,n)$ of non-negative integers is called \"simple\" if the addition $m+n$ in base $10$ requires no carrying. Find the number of simple ordered pairs of non-negative integers that sum to $1492$ .",
+      "answer": "300",
+      "example_id": "1987-1::1987"
+    },
+    "iso_time": "2025-11-13T14:43:29Z"
+  },
+  {
+    "timestamp": 1763045146.882803,
+    "seed_id": "1987-1::1987",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 2 column 164 (char 165)",
+    "payload": {},
+    "iso_time": "2025-11-13T14:45:46Z"
+  },
+  {
+    "timestamp": 1763045146.8828568,
+    "seed_id": "1987-1::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 6).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-13T14:45:46Z"
+  },
+  {
+    "timestamp": 1763045146.882875,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 6,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 2 column 164 (char 165)",
+      "question": "An ordered pair $(m,n)$ of non-negative integers is called \"simple\" if the addition $m+n$ in base $10$ requires no carrying. Find the number of simple ordered pairs of non-negative integers that sum to $1492$ .",
+      "answer": "300",
+      "example_id": "1987-1::1987"
+    },
+    "iso_time": "2025-11-13T14:45:46Z"
+  },
+  {
+    "timestamp": 1763045253.86203,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-1::1987_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 1,
+      "seed_value": 1943986378
+    },
+    "iso_time": "2025-11-13T14:47:33Z"
+  },
+  {
+    "timestamp": 1763045254.785991,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k_val": 4,
+        "base": 9,
+        "S_str": "136",
+        "S_val": 114
+      }
+    },
+    "iso_time": "2025-11-13T14:47:34Z"
+  },
+  {
+    "timestamp": 1763045255.6570292,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3692
+    },
+    "iso_time": "2025-11-13T14:47:35Z"
+  },
+  {
+    "timestamp": 1763045255.657204,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "An ordered tuple $(n_1, n_2, \\dots, n_4)$ of 4 positive integers is called 'simple in base 9' if the sum $n_1 + n_2 + \\d",
+      "correct_answer": "3692",
+      "seed_value": 1943986378
+    },
+    "iso_time": "2025-11-13T14:47:35Z"
+  },
+  {
+    "timestamp": 1763045255.6572611,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3683",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T14:47:35Z"
+  },
+  {
+    "timestamp": 1763045442.945811,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3699",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T14:50:42Z"
+  },
+  {
+    "timestamp": 1763045627.9227169,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3692",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T14:53:47Z"
+  },
+  {
+    "timestamp": 1763045715.4864252,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3686",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T14:55:15Z"
+  },
+  {
+    "timestamp": 1763045881.534971,
+    "seed_id": "1987-1::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3692",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T14:58:01Z"
+  },
+  {
+    "timestamp": 1763045984.911617,
+    "seed_id": "1987-1::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-1::1987_prompt06-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T14:59:44Z"
+  }
+]

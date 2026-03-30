@@ -1,0 +1,840 @@
+[
+  {
+    "timestamp": 1763979973.734036,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1995,
+      "question_preview": "Pyramid $OABCD$ has square base $ABCD,$ congruent edges $\\overline{OA}, \\overline{OB}, \\overline{OC},$ and $\\overline{OD",
+      "answer": "5",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-24T10:26:13Z"
+  },
+  {
+    "timestamp": 1763979973.734178,
+    "seed_id": "1995-12::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-24T10:26:13Z"
+  },
+  {
+    "timestamp": 1763979973.734257,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Pyramid $OABCD$ has square base $ABCD,$ congruent edges $\\overline{OA}, \\overline{OB}, \\overline{OC},$ and $\\overline{OD},$ and $\\angle AOB=45^\\circ.$ Let $\\theta$ be the measure of the dihedral angle formed by faces $OAB$ and $OBC.$ Given that $\\cos \\theta=m+\\sqrt{n},$ where $m_{}$ and $n_{}$ are integers, find $m+n.$",
+      "answer": "5",
+      "example_id": "1995-12::1995"
+    },
+    "iso_time": "2025-11-24T10:26:13Z"
+  },
+  {
+    "timestamp": 1763980063.4661949,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-12::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 993812943
+    },
+    "iso_time": "2025-11-24T10:27:43Z"
+  },
+  {
+    "timestamp": 1763980064.437026,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 5,
+        "q": 16,
+        "r": 1,
+        "s": 3
+      }
+    },
+    "iso_time": "2025-11-24T10:27:44Z"
+  },
+  {
+    "timestamp": 1763980065.411581,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6782
+    },
+    "iso_time": "2025-11-24T10:27:45Z"
+  },
+  {
+    "timestamp": 1763980065.411781,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a pyramid OABCD whose base ABCD is a rectangle. The apex O lies on the line perpendicular to the base through t",
+      "correct_answer": "6782",
+      "seed_value": 993812943
+    },
+    "iso_time": "2025-11-24T10:27:45Z"
+  },
+  {
+    "timestamp": 1763980065.4118662,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6782",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T10:27:45Z"
+  },
+  {
+    "timestamp": 1763980098.320908,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6780",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:28:18Z"
+  },
+  {
+    "timestamp": 1763980129.583704,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6782",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T10:28:49Z"
+  },
+  {
+    "timestamp": 1763980163.4154592,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6781",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:29:23Z"
+  },
+  {
+    "timestamp": 1763980199.96426,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6785",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:29:59Z"
+  },
+  {
+    "timestamp": 1763980232.058465,
+    "seed_id": "1995-12::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-24T10:30:32Z"
+  },
+  {
+    "timestamp": 1763980232.0587058,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-12::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2083460258
+    },
+    "iso_time": "2025-11-24T10:30:32Z"
+  },
+  {
+    "timestamp": 1763980232.836713,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 3,
+        "q": 4,
+        "r": 3,
+        "s": 7
+      }
+    },
+    "iso_time": "2025-11-24T10:30:32Z"
+  },
+  {
+    "timestamp": 1763980233.5864918,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7802
+    },
+    "iso_time": "2025-11-24T10:30:33Z"
+  },
+  {
+    "timestamp": 1763980233.586702,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a pyramid OABCD whose base ABCD is a rectangle. The apex O lies on the line perpendicular to the base through t",
+      "correct_answer": "7802",
+      "seed_value": 2083460258
+    },
+    "iso_time": "2025-11-24T10:30:33Z"
+  },
+  {
+    "timestamp": 1763980233.586765,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7801",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:30:33Z"
+  },
+  {
+    "timestamp": 1763980265.398646,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7802",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T10:31:05Z"
+  },
+  {
+    "timestamp": 1763980366.4706292,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7802",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T10:32:46Z"
+  },
+  {
+    "timestamp": 1763980394.9914281,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7795",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:33:14Z"
+  },
+  {
+    "timestamp": 1763980435.041535,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7811",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:33:55Z"
+  },
+  {
+    "timestamp": 1763980466.034205,
+    "seed_id": "1995-12::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-12::1995_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T10:34:26Z"
+  },
+  {
+    "timestamp": 1763980466.034413,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-12::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1033963888
+    },
+    "iso_time": "2025-11-24T10:34:26Z"
+  },
+  {
+    "timestamp": 1763980466.817558,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 4,
+        "q": 11,
+        "r": 1,
+        "s": 2
+      }
+    },
+    "iso_time": "2025-11-24T10:34:26Z"
+  },
+  {
+    "timestamp": 1763980467.6391838,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 238
+    },
+    "iso_time": "2025-11-24T10:34:27Z"
+  },
+  {
+    "timestamp": 1763980467.639372,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a pyramid OABCD whose base ABCD is a rectangle. The apex O lies on the line perpendicular to the base through t",
+      "correct_answer": "238",
+      "seed_value": 1033963888
+    },
+    "iso_time": "2025-11-24T10:34:27Z"
+  },
+  {
+    "timestamp": 1763980467.639431,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "246",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:34:27Z"
+  },
+  {
+    "timestamp": 1763981507.608066,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "238",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T10:51:47Z"
+  },
+  {
+    "timestamp": 1763981537.7103639,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "230",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:52:17Z"
+  },
+  {
+    "timestamp": 1763981568.503624,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "232",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:52:48Z"
+  },
+  {
+    "timestamp": 1763981652.909683,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "238",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T10:54:12Z"
+  },
+  {
+    "timestamp": 1763981678.6578062,
+    "seed_id": "1995-12::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-12::1995_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-24T10:54:38Z"
+  },
+  {
+    "timestamp": 1763981678.657989,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-12::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 115703121
+    },
+    "iso_time": "2025-11-24T10:54:38Z"
+  },
+  {
+    "timestamp": 1763981679.468821,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 1,
+        "q": 3,
+        "r": 19,
+        "s": 30
+      }
+    },
+    "iso_time": "2025-11-24T10:54:39Z"
+  },
+  {
+    "timestamp": 1763981680.218571,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8234
+    },
+    "iso_time": "2025-11-24T10:54:40Z"
+  },
+  {
+    "timestamp": 1763981680.218719,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a pyramid OABCD whose base ABCD is a rectangle. The apex O lies on the line perpendicular to the base through t",
+      "correct_answer": "8234",
+      "seed_value": 115703121
+    },
+    "iso_time": "2025-11-24T10:54:40Z"
+  },
+  {
+    "timestamp": 1763981680.2187788,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8234",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T10:54:40Z"
+  },
+  {
+    "timestamp": 1763981714.903247,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8227",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:55:14Z"
+  },
+  {
+    "timestamp": 1763981749.376725,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8230",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:55:49Z"
+  },
+  {
+    "timestamp": 1763981817.490693,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:56:57Z"
+  },
+  {
+    "timestamp": 1763981845.750485,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8234",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T10:57:25Z"
+  },
+  {
+    "timestamp": 1763981878.340389,
+    "seed_id": "1995-12::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-12::1995_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-24T10:57:58Z"
+  },
+  {
+    "timestamp": 1763981878.340512,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-12::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1051083524
+    },
+    "iso_time": "2025-11-24T10:57:58Z"
+  },
+  {
+    "timestamp": 1763981879.151329,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 3,
+        "q": 7,
+        "r": 2,
+        "s": 9
+      }
+    },
+    "iso_time": "2025-11-24T10:57:59Z"
+  },
+  {
+    "timestamp": 1763981879.951533,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 11254
+    },
+    "iso_time": "2025-11-24T10:57:59Z"
+  },
+  {
+    "timestamp": 1763981879.9517062,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a pyramid OABCD whose base ABCD is a rectangle. The apex O lies on the line perpendicular to the base through t",
+      "correct_answer": "11254",
+      "seed_value": 1051083524
+    },
+    "iso_time": "2025-11-24T10:57:59Z"
+  },
+  {
+    "timestamp": 1763981879.951767,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "11263",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:57:59Z"
+  },
+  {
+    "timestamp": 1763981959.097901,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "11262",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T10:59:19Z"
+  },
+  {
+    "timestamp": 1763983032.244784,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "11254",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T11:17:12Z"
+  },
+  {
+    "timestamp": 1763983064.632742,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "11254",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T11:17:44Z"
+  },
+  {
+    "timestamp": 1763983091.946377,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "11251",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T11:18:11Z"
+  },
+  {
+    "timestamp": 1763983134.217084,
+    "seed_id": "1995-12::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-12::1995_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T11:18:54Z"
+  },
+  {
+    "timestamp": 1763983134.217213,
+    "seed_id": "1995-12::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-24T11:18:54Z"
+  },
+  {
+    "timestamp": 1763983134.217299,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3).",
+      "question": "Pyramid $OABCD$ has square base $ABCD,$ congruent edges $\\overline{OA}, \\overline{OB}, \\overline{OC},$ and $\\overline{OD},$ and $\\angle AOB=45^\\circ.$ Let $\\theta$ be the measure of the dihedral angle formed by faces $OAB$ and $OBC.$ Given that $\\cos \\theta=m+\\sqrt{n},$ where $m_{}$ and $n_{}$ are integers, find $m+n.$",
+      "answer": "5",
+      "example_id": "1995-12::1995"
+    },
+    "iso_time": "2025-11-24T11:18:54Z"
+  },
+  {
+    "timestamp": 1763983276.88226,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-12::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1061744707
+    },
+    "iso_time": "2025-11-24T11:21:16Z"
+  },
+  {
+    "timestamp": 1763983277.661341,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_sides": 6,
+        "phi_deg": 36
+      }
+    },
+    "iso_time": "2025-11-24T11:21:17Z"
+  },
+  {
+    "timestamp": 1763983278.4103239,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17
+    },
+    "iso_time": "2025-11-24T11:21:18Z"
+  },
+  {
+    "timestamp": 1763983278.410481,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a pyramid with regular 6-gon base whose consecutive vertices are labeled A, B, C, ... around the base. The apex",
+      "correct_answer": "17",
+      "seed_value": 1061744707
+    },
+    "iso_time": "2025-11-24T11:21:18Z"
+  },
+  {
+    "timestamp": 1763983278.410538,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "17",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T11:21:18Z"
+  },
+  {
+    "timestamp": 1763983308.825361,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T11:21:48Z"
+  },
+  {
+    "timestamp": 1763983426.9996119,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "19",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T11:23:46Z"
+  },
+  {
+    "timestamp": 1763983473.078998,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "26",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T11:24:33Z"
+  },
+  {
+    "timestamp": 1763983515.716274,
+    "seed_id": "1995-12::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T11:25:15Z"
+  },
+  {
+    "timestamp": 1763983552.848428,
+    "seed_id": "1995-12::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-12::1995_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T11:25:52Z"
+  }
+]

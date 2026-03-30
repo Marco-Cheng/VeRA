@@ -1,0 +1,4885 @@
+[
+  {
+    "timestamp": 1764637873.731929,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2002,
+      "question_preview": "In triangle $ABC$ the medians $\\overline{AD}$ and $\\overline{CE}$ have lengths 18 and 27, respectively, and $AB = 24$ . ",
+      "answer": "63",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-02T01:11:13Z"
+  },
+  {
+    "timestamp": 1764637873.73198,
+    "seed_id": "2002-I-13::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-02T01:11:13Z"
+  },
+  {
+    "timestamp": 1764637873.7320042,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In triangle $ABC$ the medians $\\overline{AD}$ and $\\overline{CE}$ have lengths 18 and 27, respectively, and $AB = 24$ .  Extend $\\overline{CE}$ to intersect the circumcircle of $ABC$ at $F$ .  The area of triangle $AFB$ is $m\\sqrt {n}$ , where $m$ and $n$ are positive integers and $n$ is not divisible by the square of any prime.  Find $m + n$ .",
+      "answer": "63",
+      "example_id": "2002-I-13::2002"
+    },
+    "iso_time": "2025-12-02T01:11:13Z"
+  },
+  {
+    "timestamp": 1764638057.4225469,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 956109708
+    },
+    "iso_time": "2025-12-02T01:14:17Z"
+  },
+  {
+    "timestamp": 1764638058.7909389,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 14,
+        "r": 2,
+        "t": 3,
+        "ad_sq": 59,
+        "ce_sq": 234,
+        "k": 21952000
+      }
+    },
+    "iso_time": "2025-12-02T01:14:18Z"
+  },
+  {
+    "timestamp": 1764638059.874936,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -6914489
+    },
+    "iso_time": "2025-12-02T01:14:19Z"
+  },
+  {
+    "timestamp": 1764638059.875075,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, AB = 14. The cevian AD to side BC divides BC in the ratio BD:DC = 2:1 and has length sqrt[59]. The cevi",
+      "correct_answer": "-6914489",
+      "seed_value": 956109708
+    },
+    "iso_time": "2025-12-02T01:14:19Z"
+  },
+  {
+    "timestamp": 1764638059.875144,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-6914480",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:14:19Z"
+  },
+  {
+    "timestamp": 1764638064.380691,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:14:24Z"
+  },
+  {
+    "timestamp": 1764638068.887449,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-6914489",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:14:28Z"
+  },
+  {
+    "timestamp": 1764638073.389554,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-6914489",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:14:33Z"
+  },
+  {
+    "timestamp": 1764638077.891514,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-6914485",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:14:37Z"
+  },
+  {
+    "timestamp": 1764638795.95211,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T01:26:35Z"
+  },
+  {
+    "timestamp": 1764638795.952363,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1272298027
+    },
+    "iso_time": "2025-12-02T01:26:35Z"
+  },
+  {
+    "timestamp": 1764638797.0841331,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 16,
+        "r": 2,
+        "t": 3,
+        "ad_sq": 132,
+        "ce_sq": 108,
+        "k": 14417920
+      }
+    },
+    "iso_time": "2025-12-02T01:26:37Z"
+  },
+  {
+    "timestamp": 1764638798.324245,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -75497461
+    },
+    "iso_time": "2025-12-02T01:26:38Z"
+  },
+  {
+    "timestamp": 1764638798.324427,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, AB = 16. The cevian AD to side BC divides BC in the ratio BD:DC = 2:1 and has length sqrt[132]. The cev",
+      "correct_answer": "-75497461",
+      "seed_value": 1272298027
+    },
+    "iso_time": "2025-12-02T01:26:38Z"
+  },
+  {
+    "timestamp": 1764638798.3245041,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-75497461",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:26:38Z"
+  },
+  {
+    "timestamp": 1764638803.087748,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:26:43Z"
+  },
+  {
+    "timestamp": 1764638808.2552168,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-75497459",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:26:48Z"
+  },
+  {
+    "timestamp": 1764638813.429951,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-75497461",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:26:53Z"
+  },
+  {
+    "timestamp": 1764638819.588056,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-75497455",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:26:59Z"
+  },
+  {
+    "timestamp": 1764638826.4343731,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T01:27:06Z"
+  },
+  {
+    "timestamp": 1764638826.434645,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1551374180
+    },
+    "iso_time": "2025-12-02T01:27:06Z"
+  },
+  {
+    "timestamp": 1764638827.734996,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 18,
+        "r": 2,
+        "t": 2,
+        "ad_sq": 211,
+        "ce_sq": 30,
+        "k": 2379456
+      }
+    },
+    "iso_time": "2025-12-02T01:27:07Z"
+  },
+  {
+    "timestamp": 1764638828.974261,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -7557817
+    },
+    "iso_time": "2025-12-02T01:27:08Z"
+  },
+  {
+    "timestamp": 1764638828.974433,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, AB = 18. The cevian AD to side BC divides BC in the ratio BD:DC = 2:1 and has length sqrt[211]. The cev",
+      "correct_answer": "-7557817",
+      "seed_value": 1551374180
+    },
+    "iso_time": "2025-12-02T01:27:08Z"
+  },
+  {
+    "timestamp": 1764638828.9745111,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-7557812",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:27:08Z"
+  },
+  {
+    "timestamp": 1764638936.92034,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-7557814",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:28:56Z"
+  },
+  {
+    "timestamp": 1764638946.9582238,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-7557817",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:29:06Z"
+  },
+  {
+    "timestamp": 1764639058.3706691,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:30:58Z"
+  },
+  {
+    "timestamp": 1764639142.540056,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-7557817",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:32:22Z"
+  },
+  {
+    "timestamp": 1764639146.1284218,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T01:32:26Z"
+  },
+  {
+    "timestamp": 1764639146.128705,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1783433822
+    },
+    "iso_time": "2025-12-02T01:32:26Z"
+  },
+  {
+    "timestamp": 1764639147.4619079,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 20,
+        "r": 2,
+        "t": 3,
+        "ad_sq": 216,
+        "ce_sq": 54,
+        "k": 18841600
+      }
+    },
+    "iso_time": "2025-12-02T01:32:27Z"
+  },
+  {
+    "timestamp": 1764639148.677,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -115199977
+    },
+    "iso_time": "2025-12-02T01:32:28Z"
+  },
+  {
+    "timestamp": 1764639148.677173,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, AB = 20. The cevian AD to side BC divides BC in the ratio BD:DC = 2:1 and has length sqrt[216]. The cev",
+      "correct_answer": "-115199977",
+      "seed_value": 1783433822
+    },
+    "iso_time": "2025-12-02T01:32:28Z"
+  },
+  {
+    "timestamp": 1764639148.677247,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-115199977",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:32:28Z"
+  },
+  {
+    "timestamp": 1764639264.0978,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-115199971",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:34:24Z"
+  },
+  {
+    "timestamp": 1764639307.815186,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:35:07Z"
+  },
+  {
+    "timestamp": 1764639315.5956218,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-115199977",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:35:15Z"
+  },
+  {
+    "timestamp": 1764639319.799145,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-115199976",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:35:19Z"
+  },
+  {
+    "timestamp": 1764639325.758743,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T01:35:25Z"
+  },
+  {
+    "timestamp": 1764639325.7590241,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1775849543
+    },
+    "iso_time": "2025-12-02T01:35:25Z"
+  },
+  {
+    "timestamp": 1764639327.0547998,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 40,
+        "r": 2,
+        "t": 3,
+        "ad_sq": 1577,
+        "ce_sq": 1017,
+        "k": 118374400
+      }
+    },
+    "iso_time": "2025-12-02T01:35:27Z"
+  },
+  {
+    "timestamp": 1764639328.159126,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -2949119846
+    },
+    "iso_time": "2025-12-02T01:35:28Z"
+  },
+  {
+    "timestamp": 1764639328.159264,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, AB = 40. The cevian AD to side BC divides BC in the ratio BD:DC = 2:1 and has length sqrt[1577]. The ce",
+      "correct_answer": "-2949119846",
+      "seed_value": 1775849543
+    },
+    "iso_time": "2025-12-02T01:35:28Z"
+  },
+  {
+    "timestamp": 1764639328.159334,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-2949119839",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:35:28Z"
+  },
+  {
+    "timestamp": 1764639333.387614,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-2949119838",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:35:33Z"
+  },
+  {
+    "timestamp": 1764639338.277822,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-2949119846",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:35:38Z"
+  },
+  {
+    "timestamp": 1764639342.8354309,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-2949119846",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:35:42Z"
+  },
+  {
+    "timestamp": 1764639349.027053,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:35:49Z"
+  },
+  {
+    "timestamp": 1764639354.757945,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T01:35:54Z"
+  },
+  {
+    "timestamp": 1764639354.7582002,
+    "seed_id": "2002-I-13::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-02T01:35:54Z"
+  },
+  {
+    "timestamp": 1764639354.75833,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "In triangle $ABC$ the medians $\\overline{AD}$ and $\\overline{CE}$ have lengths 18 and 27, respectively, and $AB = 24$ .  Extend $\\overline{CE}$ to intersect the circumcircle of $ABC$ at $F$ .  The area of triangle $AFB$ is $m\\sqrt {n}$ , where $m$ and $n$ are positive integers and $n$ is not divisible by the square of any prime.  Find $m + n$ .",
+      "answer": "63",
+      "example_id": "2002-I-13::2002"
+    },
+    "iso_time": "2025-12-02T01:35:54Z"
+  },
+  {
+    "timestamp": 1764639523.429097,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 85894398
+    },
+    "iso_time": "2025-12-02T01:38:43Z"
+  },
+  {
+    "timestamp": 1764639524.7820659,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 128,
+        "m_a2": 9082,
+        "m_b2": 9382,
+        "m_c2": 64
+      }
+    },
+    "iso_time": "2025-12-02T01:38:44Z"
+  },
+  {
+    "timestamp": 1764639525.924224,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 871
+    },
+    "iso_time": "2025-12-02T01:38:45Z"
+  },
+  {
+    "timestamp": 1764639525.924365,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, AB = 128. The squared lengths of the medians from A, B, and C are 9082, 9382, and 64, respectively. Let",
+      "correct_answer": "871",
+      "seed_value": 85894398
+    },
+    "iso_time": "2025-12-02T01:38:45Z"
+  },
+  {
+    "timestamp": 1764639525.9244218,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "866",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:38:45Z"
+  },
+  {
+    "timestamp": 1764639565.747297,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "871",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:39:25Z"
+  },
+  {
+    "timestamp": 1764639592.2340322,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "868",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:39:52Z"
+  },
+  {
+    "timestamp": 1764639625.128654,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "871",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:40:25Z"
+  },
+  {
+    "timestamp": 1764639688.437453,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "865",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:41:28Z"
+  },
+  {
+    "timestamp": 1764639739.282511,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T01:42:19Z"
+  },
+  {
+    "timestamp": 1764639739.282799,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 330969758
+    },
+    "iso_time": "2025-12-02T01:42:19Z"
+  },
+  {
+    "timestamp": 1764639740.6437628,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 64,
+        "m_a2": 2209,
+        "m_b2": 2407,
+        "m_c2": 16
+      }
+    },
+    "iso_time": "2025-12-02T01:42:20Z"
+  },
+  {
+    "timestamp": 1764639741.920172,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 225
+    },
+    "iso_time": "2025-12-02T01:42:21Z"
+  },
+  {
+    "timestamp": 1764639741.920358,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, AB = 64. The squared lengths of the medians from A, B, and C are 2209, 2407, and 16, respectively. Let ",
+      "correct_answer": "225",
+      "seed_value": 330969758
+    },
+    "iso_time": "2025-12-02T01:42:21Z"
+  },
+  {
+    "timestamp": 1764639741.9204311,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "218",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:42:21Z"
+  },
+  {
+    "timestamp": 1764639782.286433,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "231",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:43:02Z"
+  },
+  {
+    "timestamp": 1764639823.643717,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "225",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:43:43Z"
+  },
+  {
+    "timestamp": 1764639878.357245,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "217",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:44:38Z"
+  },
+  {
+    "timestamp": 1764639912.6666298,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "225",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:45:12Z"
+  },
+  {
+    "timestamp": 1764639955.491643,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T01:45:55Z"
+  },
+  {
+    "timestamp": 1764639955.4919,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 478471318
+    },
+    "iso_time": "2025-12-02T01:45:55Z"
+  },
+  {
+    "timestamp": 1764639956.6221418,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 160,
+        "m_a2": 14032,
+        "m_b2": 14818,
+        "m_c2": 100
+      }
+    },
+    "iso_time": "2025-12-02T01:45:56Z"
+  },
+  {
+    "timestamp": 1764639957.7209458,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 653
+    },
+    "iso_time": "2025-12-02T01:45:57Z"
+  },
+  {
+    "timestamp": 1764639957.721138,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, AB = 160. The squared lengths of the medians from A, B, and C are 14032, 14818, and 100, respectively. ",
+      "correct_answer": "653",
+      "seed_value": 478471318
+    },
+    "iso_time": "2025-12-02T01:45:57Z"
+  },
+  {
+    "timestamp": 1764639957.72121,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "654",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:45:57Z"
+  },
+  {
+    "timestamp": 1764640001.7108421,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "650",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:46:41Z"
+  },
+  {
+    "timestamp": 1764640050.77759,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "644",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:47:30Z"
+  },
+  {
+    "timestamp": 1764640092.7034938,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "653",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:48:12Z"
+  },
+  {
+    "timestamp": 1764640137.707319,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "653",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:48:57Z"
+  },
+  {
+    "timestamp": 1764640194.437697,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T01:49:54Z"
+  },
+  {
+    "timestamp": 1764640194.4379609,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1891333416
+    },
+    "iso_time": "2025-12-02T01:49:54Z"
+  },
+  {
+    "timestamp": 1764640195.5998132,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 160,
+        "m_a2": 14254,
+        "m_b2": 14596,
+        "m_c2": 100
+      }
+    },
+    "iso_time": "2025-12-02T01:49:55Z"
+  },
+  {
+    "timestamp": 1764640196.663428,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1353
+    },
+    "iso_time": "2025-12-02T01:49:56Z"
+  },
+  {
+    "timestamp": 1764640196.66358,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, AB = 160. The squared lengths of the medians from A, B, and C are 14254, 14596, and 100, respectively. ",
+      "correct_answer": "1353",
+      "seed_value": 1891333416
+    },
+    "iso_time": "2025-12-02T01:49:56Z"
+  },
+  {
+    "timestamp": 1764640196.663748,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1356",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:49:56Z"
+  },
+  {
+    "timestamp": 1764640251.065152,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1353",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:50:51Z"
+  },
+  {
+    "timestamp": 1764640313.062891,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1357",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:51:53Z"
+  },
+  {
+    "timestamp": 1764640352.366316,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1350",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:52:32Z"
+  },
+  {
+    "timestamp": 1764640386.1978781,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1353",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:53:06Z"
+  },
+  {
+    "timestamp": 1764640451.566475,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T01:54:11Z"
+  },
+  {
+    "timestamp": 1764640451.566737,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 1815257498
+    },
+    "iso_time": "2025-12-02T01:54:11Z"
+  },
+  {
+    "timestamp": 1764640452.770008,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 128,
+        "m_a2": 8893,
+        "m_b2": 9571,
+        "m_c2": 64
+      }
+    },
+    "iso_time": "2025-12-02T01:54:12Z"
+  },
+  {
+    "timestamp": 1764640453.961993,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 425
+    },
+    "iso_time": "2025-12-02T01:54:13Z"
+  },
+  {
+    "timestamp": 1764640453.962177,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, AB = 128. The squared lengths of the medians from A, B, and C are 8893, 9571, and 64, respectively. Let",
+      "correct_answer": "425",
+      "seed_value": 1815257498
+    },
+    "iso_time": "2025-12-02T01:54:13Z"
+  },
+  {
+    "timestamp": 1764640453.9622521,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "425",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:54:13Z"
+  },
+  {
+    "timestamp": 1764640506.3532338,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "430",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:55:06Z"
+  },
+  {
+    "timestamp": 1764640559.036809,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "425",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T01:55:59Z"
+  },
+  {
+    "timestamp": 1764640604.309221,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "432",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:56:44Z"
+  },
+  {
+    "timestamp": 1764640652.7705019,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "434",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T01:57:32Z"
+  },
+  {
+    "timestamp": 1764640705.521955,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T01:58:25Z"
+  },
+  {
+    "timestamp": 1764640705.522212,
+    "seed_id": "2002-I-13::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-02T01:58:25Z"
+  },
+  {
+    "timestamp": 1764640705.5223382,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "In triangle $ABC$ the medians $\\overline{AD}$ and $\\overline{CE}$ have lengths 18 and 27, respectively, and $AB = 24$ .  Extend $\\overline{CE}$ to intersect the circumcircle of $ABC$ at $F$ .  The area of triangle $AFB$ is $m\\sqrt {n}$ , where $m$ and $n$ are positive integers and $n$ is not divisible by the square of any prime.  Find $m + n$ .",
+      "answer": "63",
+      "example_id": "2002-I-13::2002"
+    },
+    "iso_time": "2025-12-02T01:58:25Z"
+  },
+  {
+    "timestamp": 1764640818.94259,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1369359849
+    },
+    "iso_time": "2025-12-02T02:00:18Z"
+  },
+  {
+    "timestamp": 1764640820.07234,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 108,
+        "m_ad": 37,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 36
+      }
+    },
+    "iso_time": "2025-12-02T02:00:20Z"
+  },
+  {
+    "timestamp": 1764640821.303165,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:21Z"
+  },
+  {
+    "timestamp": 1764640822.5488799,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "ab": 72,
+        "m_ad": 31,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 24
+      }
+    },
+    "iso_time": "2025-12-02T02:00:22Z"
+  },
+  {
+    "timestamp": 1764640823.8231308,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:23Z"
+  },
+  {
+    "timestamp": 1764640824.9774961,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "ab": 36,
+        "m_ad": 11,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 12
+      }
+    },
+    "iso_time": "2025-12-02T02:00:24Z"
+  },
+  {
+    "timestamp": 1764640826.189627,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:26Z"
+  },
+  {
+    "timestamp": 1764640827.3488379,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "ab": 36,
+        "m_ad": 11,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 12
+      }
+    },
+    "iso_time": "2025-12-02T02:00:27Z"
+  },
+  {
+    "timestamp": 1764640828.4577851,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:28Z"
+  },
+  {
+    "timestamp": 1764640829.617065,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "ab": 108,
+        "m_ad": 41,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 36
+      }
+    },
+    "iso_time": "2025-12-02T02:00:29Z"
+  },
+  {
+    "timestamp": 1764640830.7304692,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:30Z"
+  },
+  {
+    "timestamp": 1764640830.73057,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 11.787989854812622
+    },
+    "iso_time": "2025-12-02T02:00:30Z"
+  },
+  {
+    "timestamp": 1764640830.730655,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1091579873
+    },
+    "iso_time": "2025-12-02T02:00:30Z"
+  },
+  {
+    "timestamp": 1764640831.8563662,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 126,
+        "m_ad": 52,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 42
+      }
+    },
+    "iso_time": "2025-12-02T02:00:31Z"
+  },
+  {
+    "timestamp": 1764640832.9914722,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:32Z"
+  },
+  {
+    "timestamp": 1764640834.2018728,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "ab": 36,
+        "m_ad": 11,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 12
+      }
+    },
+    "iso_time": "2025-12-02T02:00:34Z"
+  },
+  {
+    "timestamp": 1764640835.431398,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:35Z"
+  },
+  {
+    "timestamp": 1764640836.56228,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "ab": 90,
+        "m_ad": 22,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 30
+      }
+    },
+    "iso_time": "2025-12-02T02:00:36Z"
+  },
+  {
+    "timestamp": 1764640837.674408,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:37Z"
+  },
+  {
+    "timestamp": 1764640838.7756338,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "ab": 36,
+        "m_ad": 13,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 12
+      }
+    },
+    "iso_time": "2025-12-02T02:00:38Z"
+  },
+  {
+    "timestamp": 1764640839.737521,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:39Z"
+  },
+  {
+    "timestamp": 1764640840.9152792,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "ab": 108,
+        "m_ad": 41,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 36
+      }
+    },
+    "iso_time": "2025-12-02T02:00:40Z"
+  },
+  {
+    "timestamp": 1764640842.162604,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:42Z"
+  },
+  {
+    "timestamp": 1764640842.1627378,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.4320809841156
+    },
+    "iso_time": "2025-12-02T02:00:42Z"
+  },
+  {
+    "timestamp": 1764640842.162805,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1205462980
+    },
+    "iso_time": "2025-12-02T02:00:42Z"
+  },
+  {
+    "timestamp": 1764640843.303055,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 36,
+        "m_ad": 11,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 12
+      }
+    },
+    "iso_time": "2025-12-02T02:00:43Z"
+  },
+  {
+    "timestamp": 1764640844.553182,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:44Z"
+  },
+  {
+    "timestamp": 1764640845.658918,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "ab": 126,
+        "m_ad": 50,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 42
+      }
+    },
+    "iso_time": "2025-12-02T02:00:45Z"
+  },
+  {
+    "timestamp": 1764640846.811061,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:46Z"
+  },
+  {
+    "timestamp": 1764640847.932117,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "ab": 36,
+        "m_ad": 13,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 12
+      }
+    },
+    "iso_time": "2025-12-02T02:00:47Z"
+  },
+  {
+    "timestamp": 1764640849.001738,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:49Z"
+  },
+  {
+    "timestamp": 1764640850.130042,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "ab": 72,
+        "m_ad": 31,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 24
+      }
+    },
+    "iso_time": "2025-12-02T02:00:50Z"
+  },
+  {
+    "timestamp": 1764640851.371047,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:51Z"
+  },
+  {
+    "timestamp": 1764640852.606561,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "ab": 108,
+        "m_ad": 47,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 36
+      }
+    },
+    "iso_time": "2025-12-02T02:00:52Z"
+  },
+  {
+    "timestamp": 1764640853.802677,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:53Z"
+  },
+  {
+    "timestamp": 1764640853.802782,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.639977931976318
+    },
+    "iso_time": "2025-12-02T02:00:53Z"
+  },
+  {
+    "timestamp": 1764640853.8028328,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 643967559
+    },
+    "iso_time": "2025-12-02T02:00:53Z"
+  },
+  {
+    "timestamp": 1764640854.943691,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 72,
+        "m_ad": 23,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 24
+      }
+    },
+    "iso_time": "2025-12-02T02:00:54Z"
+  },
+  {
+    "timestamp": 1764640856.1321962,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:56Z"
+  },
+  {
+    "timestamp": 1764640857.3451672,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "ab": 90,
+        "m_ad": 26,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 30
+      }
+    },
+    "iso_time": "2025-12-02T02:00:57Z"
+  },
+  {
+    "timestamp": 1764640858.625155,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:00:58Z"
+  },
+  {
+    "timestamp": 1764640859.6921952,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "ab": 36,
+        "m_ad": 13,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 12
+      }
+    },
+    "iso_time": "2025-12-02T02:00:59Z"
+  },
+  {
+    "timestamp": 1764640860.84755,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:01:00Z"
+  },
+  {
+    "timestamp": 1764640862.012199,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "ab": 144,
+        "m_ad": 35,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 48
+      }
+    },
+    "iso_time": "2025-12-02T02:01:02Z"
+  },
+  {
+    "timestamp": 1764640863.1910882,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:01:03Z"
+  },
+  {
+    "timestamp": 1764640864.440682,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "ab": 108,
+        "m_ad": 47,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 36
+      }
+    },
+    "iso_time": "2025-12-02T02:01:04Z"
+  },
+  {
+    "timestamp": 1764640865.543234,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:01:05Z"
+  },
+  {
+    "timestamp": 1764640865.54333,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.74049711227417
+    },
+    "iso_time": "2025-12-02T02:01:05Z"
+  },
+  {
+    "timestamp": 1764640865.5433779,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 1259524862
+    },
+    "iso_time": "2025-12-02T02:01:05Z"
+  },
+  {
+    "timestamp": 1764640866.630493,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 108,
+        "m_ad": 37,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 36
+      }
+    },
+    "iso_time": "2025-12-02T02:01:06Z"
+  },
+  {
+    "timestamp": 1764640867.799204,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:01:07Z"
+  },
+  {
+    "timestamp": 1764640868.9278998,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "ab": 144,
+        "m_ad": 35,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 48
+      }
+    },
+    "iso_time": "2025-12-02T02:01:08Z"
+  },
+  {
+    "timestamp": 1764640870.075041,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:01:10Z"
+  },
+  {
+    "timestamp": 1764640871.208894,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "ab": 108,
+        "m_ad": 35,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 36
+      }
+    },
+    "iso_time": "2025-12-02T02:01:11Z"
+  },
+  {
+    "timestamp": 1764640872.3100789,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:01:12Z"
+  },
+  {
+    "timestamp": 1764640873.526113,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "ab": 90,
+        "m_ad": 22,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 30
+      }
+    },
+    "iso_time": "2025-12-02T02:01:13Z"
+  },
+  {
+    "timestamp": 1764640874.6561122,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:01:14Z"
+  },
+  {
+    "timestamp": 1764640875.748399,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "ab": 144,
+        "m_ad": 43,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "ce": 48
+      }
+    },
+    "iso_time": "2025-12-02T02:01:15Z"
+  },
+  {
+    "timestamp": 1764640876.8375309,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:01:16Z"
+  },
+  {
+    "timestamp": 1764640876.837628,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.294250011444092
+    },
+    "iso_time": "2025-12-02T02:01:16Z"
+  },
+  {
+    "timestamp": 1764640876.837656,
+    "seed_id": "2002-I-13::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-02T02:01:16Z"
+  },
+  {
+    "timestamp": 1764640876.837673,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "In triangle $ABC$ the medians $\\overline{AD}$ and $\\overline{CE}$ have lengths 18 and 27, respectively, and $AB = 24$ .  Extend $\\overline{CE}$ to intersect the circumcircle of $ABC$ at $F$ .  The area of triangle $AFB$ is $m\\sqrt {n}$ , where $m$ and $n$ are positive integers and $n$ is not divisible by the square of any prime.  Find $m + n$ .",
+      "answer": "63",
+      "example_id": "2002-I-13::2002"
+    },
+    "iso_time": "2025-12-02T02:01:16Z"
+  },
+  {
+    "timestamp": 1764641086.250696,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 1503377865
+    },
+    "iso_time": "2025-12-02T02:04:46Z"
+  },
+  {
+    "timestamp": 1764641087.63835,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:04:47Z"
+  },
+  {
+    "timestamp": 1764641088.777059,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:04:48Z"
+  },
+  {
+    "timestamp": 1764641089.937922,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:04:49Z"
+  },
+  {
+    "timestamp": 1764641090.994306,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:04:50Z"
+  },
+  {
+    "timestamp": 1764641092.047713,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:04:52Z"
+  },
+  {
+    "timestamp": 1764641093.092103,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:04:53Z"
+  },
+  {
+    "timestamp": 1764641094.260329,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:04:54Z"
+  },
+  {
+    "timestamp": 1764641095.3752499,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:04:55Z"
+  },
+  {
+    "timestamp": 1764641096.495111,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:04:56Z"
+  },
+  {
+    "timestamp": 1764641097.625977,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:04:57Z"
+  },
+  {
+    "timestamp": 1764641097.626067,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 11.375382661819458
+    },
+    "iso_time": "2025-12-02T02:04:57Z"
+  },
+  {
+    "timestamp": 1764641097.626122,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 883007741
+    },
+    "iso_time": "2025-12-02T02:04:57Z"
+  },
+  {
+    "timestamp": 1764641098.678028,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:04:58Z"
+  },
+  {
+    "timestamp": 1764641099.77024,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:04:59Z"
+  },
+  {
+    "timestamp": 1764641100.8204002,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:00Z"
+  },
+  {
+    "timestamp": 1764641101.838381,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:01Z"
+  },
+  {
+    "timestamp": 1764641102.922818,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:02Z"
+  },
+  {
+    "timestamp": 1764641104.00013,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:04Z"
+  },
+  {
+    "timestamp": 1764641105.098142,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:05Z"
+  },
+  {
+    "timestamp": 1764641106.1728508,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:06Z"
+  },
+  {
+    "timestamp": 1764641107.1902778,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:07Z"
+  },
+  {
+    "timestamp": 1764641108.277864,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:08Z"
+  },
+  {
+    "timestamp": 1764641108.2779589,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.651838064193726
+    },
+    "iso_time": "2025-12-02T02:05:08Z"
+  },
+  {
+    "timestamp": 1764641108.278007,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 3,
+      "seed_value": 1481639520
+    },
+    "iso_time": "2025-12-02T02:05:08Z"
+  },
+  {
+    "timestamp": 1764641109.532593,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:09Z"
+  },
+  {
+    "timestamp": 1764641110.775101,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:10Z"
+  },
+  {
+    "timestamp": 1764641112.0091789,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:12Z"
+  },
+  {
+    "timestamp": 1764641113.06271,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:13Z"
+  },
+  {
+    "timestamp": 1764641114.301829,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:14Z"
+  },
+  {
+    "timestamp": 1764641115.429398,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:15Z"
+  },
+  {
+    "timestamp": 1764641116.523499,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:16Z"
+  },
+  {
+    "timestamp": 1764641117.597763,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:17Z"
+  },
+  {
+    "timestamp": 1764641118.711683,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:18Z"
+  },
+  {
+    "timestamp": 1764641119.865678,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:19Z"
+  },
+  {
+    "timestamp": 1764641119.865768,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.587760925292969
+    },
+    "iso_time": "2025-12-02T02:05:19Z"
+  },
+  {
+    "timestamp": 1764641119.865817,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 4,
+      "seed_value": 576568627
+    },
+    "iso_time": "2025-12-02T02:05:19Z"
+  },
+  {
+    "timestamp": 1764641120.972026,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:20Z"
+  },
+  {
+    "timestamp": 1764641122.13957,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:22Z"
+  },
+  {
+    "timestamp": 1764641123.2436988,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:23Z"
+  },
+  {
+    "timestamp": 1764641124.3853812,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:24Z"
+  },
+  {
+    "timestamp": 1764641125.539351,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:25Z"
+  },
+  {
+    "timestamp": 1764641126.7818189,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:26Z"
+  },
+  {
+    "timestamp": 1764641127.852635,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:27Z"
+  },
+  {
+    "timestamp": 1764641129.083511,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:29Z"
+  },
+  {
+    "timestamp": 1764641130.2636,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:30Z"
+  },
+  {
+    "timestamp": 1764641131.305572,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:31Z"
+  },
+  {
+    "timestamp": 1764641131.305664,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.439846754074097
+    },
+    "iso_time": "2025-12-02T02:05:31Z"
+  },
+  {
+    "timestamp": 1764641131.30572,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 5,
+      "seed_value": 2005779926
+    },
+    "iso_time": "2025-12-02T02:05:31Z"
+  },
+  {
+    "timestamp": 1764641132.4267268,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:32Z"
+  },
+  {
+    "timestamp": 1764641133.5646589,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:33Z"
+  },
+  {
+    "timestamp": 1764641134.623805,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:34Z"
+  },
+  {
+    "timestamp": 1764641135.831025,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:35Z"
+  },
+  {
+    "timestamp": 1764641136.9777431,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:36Z"
+  },
+  {
+    "timestamp": 1764641138.064041,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:38Z"
+  },
+  {
+    "timestamp": 1764641139.32546,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:39Z"
+  },
+  {
+    "timestamp": 1764641140.482923,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:40Z"
+  },
+  {
+    "timestamp": 1764641141.43682,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:05:41Z"
+  },
+  {
+    "timestamp": 1764641142.511946,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:05:42Z"
+  },
+  {
+    "timestamp": 1764641142.512032,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.206310749053955
+    },
+    "iso_time": "2025-12-02T02:05:42Z"
+  },
+  {
+    "timestamp": 1764641142.512063,
+    "seed_id": "2002-I-13::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 5).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-02T02:05:42Z"
+  },
+  {
+    "timestamp": 1764641142.512079,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 5,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "In triangle $ABC$ the medians $\\overline{AD}$ and $\\overline{CE}$ have lengths 18 and 27, respectively, and $AB = 24$ .  Extend $\\overline{CE}$ to intersect the circumcircle of $ABC$ at $F$ .  The area of triangle $AFB$ is $m\\sqrt {n}$ , where $m$ and $n$ are positive integers and $n$ is not divisible by the square of any prime.  Find $m + n$ .",
+      "answer": "63",
+      "example_id": "2002-I-13::2002"
+    },
+    "iso_time": "2025-12-02T02:05:42Z"
+  },
+  {
+    "timestamp": 1764641401.239199,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 1,
+      "seed_value": 1314991583
+    },
+    "iso_time": "2025-12-02T02:10:01Z"
+  },
+  {
+    "timestamp": 1764641402.598089,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:02Z"
+  },
+  {
+    "timestamp": 1764641403.714656,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:03Z"
+  },
+  {
+    "timestamp": 1764641404.9465432,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:04Z"
+  },
+  {
+    "timestamp": 1764641406.180012,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:06Z"
+  },
+  {
+    "timestamp": 1764641407.3519151,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:07Z"
+  },
+  {
+    "timestamp": 1764641408.433846,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:08Z"
+  },
+  {
+    "timestamp": 1764641409.5586188,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:09Z"
+  },
+  {
+    "timestamp": 1764641410.8010728,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:10Z"
+  },
+  {
+    "timestamp": 1764641411.94646,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:11Z"
+  },
+  {
+    "timestamp": 1764641413.05252,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:13Z"
+  },
+  {
+    "timestamp": 1764641413.052626,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 11.813439130783081
+    },
+    "iso_time": "2025-12-02T02:10:13Z"
+  },
+  {
+    "timestamp": 1764641413.052672,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 2,
+      "seed_value": 1495606966
+    },
+    "iso_time": "2025-12-02T02:10:13Z"
+  },
+  {
+    "timestamp": 1764641414.2195048,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:14Z"
+  },
+  {
+    "timestamp": 1764641415.367212,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:15Z"
+  },
+  {
+    "timestamp": 1764641416.4352808,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:16Z"
+  },
+  {
+    "timestamp": 1764641417.5637708,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:17Z"
+  },
+  {
+    "timestamp": 1764641418.69354,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:18Z"
+  },
+  {
+    "timestamp": 1764641419.9374988,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:19Z"
+  },
+  {
+    "timestamp": 1764641421.092638,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:21Z"
+  },
+  {
+    "timestamp": 1764641422.376406,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:22Z"
+  },
+  {
+    "timestamp": 1764641423.4495099,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:23Z"
+  },
+  {
+    "timestamp": 1764641424.592702,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:24Z"
+  },
+  {
+    "timestamp": 1764641424.59281,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.540138006210327
+    },
+    "iso_time": "2025-12-02T02:10:24Z"
+  },
+  {
+    "timestamp": 1764641424.5928588,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 3,
+      "seed_value": 578612250
+    },
+    "iso_time": "2025-12-02T02:10:24Z"
+  },
+  {
+    "timestamp": 1764641425.739591,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:25Z"
+  },
+  {
+    "timestamp": 1764641426.8551722,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:26Z"
+  },
+  {
+    "timestamp": 1764641427.951952,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:27Z"
+  },
+  {
+    "timestamp": 1764641429.0413928,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:29Z"
+  },
+  {
+    "timestamp": 1764641430.305652,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:30Z"
+  },
+  {
+    "timestamp": 1764641431.359843,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:31Z"
+  },
+  {
+    "timestamp": 1764641432.447635,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:32Z"
+  },
+  {
+    "timestamp": 1764641433.561383,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:33Z"
+  },
+  {
+    "timestamp": 1764641434.7300532,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:34Z"
+  },
+  {
+    "timestamp": 1764641435.968386,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:35Z"
+  },
+  {
+    "timestamp": 1764641435.96852,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.37566065788269
+    },
+    "iso_time": "2025-12-02T02:10:35Z"
+  },
+  {
+    "timestamp": 1764641435.968578,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 4,
+      "seed_value": 1312003214
+    },
+    "iso_time": "2025-12-02T02:10:35Z"
+  },
+  {
+    "timestamp": 1764641437.252342,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:37Z"
+  },
+  {
+    "timestamp": 1764641438.345373,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:38Z"
+  },
+  {
+    "timestamp": 1764641439.531863,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:39Z"
+  },
+  {
+    "timestamp": 1764641440.685546,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:40Z"
+  },
+  {
+    "timestamp": 1764641441.833245,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:41Z"
+  },
+  {
+    "timestamp": 1764641442.908106,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:42Z"
+  },
+  {
+    "timestamp": 1764641444.032234,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:44Z"
+  },
+  {
+    "timestamp": 1764641445.229002,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:45Z"
+  },
+  {
+    "timestamp": 1764641446.39034,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:46Z"
+  },
+  {
+    "timestamp": 1764641447.555418,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:47Z"
+  },
+  {
+    "timestamp": 1764641447.555511,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.586934089660645
+    },
+    "iso_time": "2025-12-02T02:10:47Z"
+  },
+  {
+    "timestamp": 1764641447.5555682,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 5,
+      "seed_value": 2092745869
+    },
+    "iso_time": "2025-12-02T02:10:47Z"
+  },
+  {
+    "timestamp": 1764641448.697215,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:48Z"
+  },
+  {
+    "timestamp": 1764641449.975219,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:49Z"
+  },
+  {
+    "timestamp": 1764641451.131789,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:51Z"
+  },
+  {
+    "timestamp": 1764641452.282259,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:52Z"
+  },
+  {
+    "timestamp": 1764641453.4857118,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:53Z"
+  },
+  {
+    "timestamp": 1764641454.67359,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:54Z"
+  },
+  {
+    "timestamp": 1764641455.708284,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:55Z"
+  },
+  {
+    "timestamp": 1764641456.912183,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:56Z"
+  },
+  {
+    "timestamp": 1764641458.047748,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-02T02:10:58Z"
+  },
+  {
+    "timestamp": 1764641459.308129,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-02T02:10:59Z"
+  },
+  {
+    "timestamp": 1764641459.308258,
+    "seed_id": "2002-I-13::2002",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.752688884735107
+    },
+    "iso_time": "2025-12-02T02:10:59Z"
+  },
+  {
+    "timestamp": 1764641459.308296,
+    "seed_id": "2002-I-13::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 6).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-02T02:10:59Z"
+  },
+  {
+    "timestamp": 1764641459.3083231,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 6,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "In triangle $ABC$ the medians $\\overline{AD}$ and $\\overline{CE}$ have lengths 18 and 27, respectively, and $AB = 24$ .  Extend $\\overline{CE}$ to intersect the circumcircle of $ABC$ at $F$ .  The area of triangle $AFB$ is $m\\sqrt {n}$ , where $m$ and $n$ are positive integers and $n$ is not divisible by the square of any prime.  Find $m + n$ .",
+      "answer": "63",
+      "example_id": "2002-I-13::2002"
+    },
+    "iso_time": "2025-12-02T02:10:59Z"
+  },
+  {
+    "timestamp": 1764641606.4534578,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 1,
+      "seed_value": 1211003852
+    },
+    "iso_time": "2025-12-02T02:13:26Z"
+  },
+  {
+    "timestamp": 1764641607.617495,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab_len": 21,
+        "median_ad": 16,
+        "ce_ratio_p": 2,
+        "ce_ratio_q": 1,
+        "ce_len": 12
+      }
+    },
+    "iso_time": "2025-12-02T02:13:27Z"
+  },
+  {
+    "timestamp": 1764641608.758851,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 52
+    },
+    "iso_time": "2025-12-02T02:13:28Z"
+  },
+  {
+    "timestamp": 1764641608.758985,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, let AB = 21. The median from A to BC has length 16. Let E be a point on segment AB such that AE:EB = 2:",
+      "correct_answer": "52",
+      "seed_value": 1211003852
+    },
+    "iso_time": "2025-12-02T02:13:28Z"
+  },
+  {
+    "timestamp": 1764641608.759043,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "49",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T02:13:28Z"
+  },
+  {
+    "timestamp": 1764641757.894173,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "48",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T02:15:57Z"
+  },
+  {
+    "timestamp": 1764641808.691503,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "55",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T02:16:48Z"
+  },
+  {
+    "timestamp": 1764641984.769365,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "52",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T02:19:44Z"
+  },
+  {
+    "timestamp": 1764642125.8407629,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "52",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T02:22:05Z"
+  },
+  {
+    "timestamp": 1764642218.43578,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T02:23:38Z"
+  },
+  {
+    "timestamp": 1764642218.436074,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 2,
+      "seed_value": 1762393164
+    },
+    "iso_time": "2025-12-02T02:23:38Z"
+  },
+  {
+    "timestamp": 1764642219.56907,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab_len": 42,
+        "median_ad": 37,
+        "ce_ratio_p": 1,
+        "ce_ratio_q": 2,
+        "ce_len": 56
+      }
+    },
+    "iso_time": "2025-12-02T02:23:39Z"
+  },
+  {
+    "timestamp": 1764642220.699938,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2148
+    },
+    "iso_time": "2025-12-02T02:23:40Z"
+  },
+  {
+    "timestamp": 1764642220.7000809,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, let AB = 42. The median from A to BC has length 37. Let E be a point on segment AB such that AE:EB = 1:",
+      "correct_answer": "2148",
+      "seed_value": 1762393164
+    },
+    "iso_time": "2025-12-02T02:23:40Z"
+  },
+  {
+    "timestamp": 1764642220.700141,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2148",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T02:23:40Z"
+  },
+  {
+    "timestamp": 1764642376.67222,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2154",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T02:26:16Z"
+  },
+  {
+    "timestamp": 1764642504.560917,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2145",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T02:28:24Z"
+  },
+  {
+    "timestamp": 1764642604.4846091,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2148",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T02:30:04Z"
+  },
+  {
+    "timestamp": 1764642656.404438,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2153",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T02:30:56Z"
+  },
+  {
+    "timestamp": 1764642757.3521678,
+    "seed_id": "2002-I-13::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-13::2002_prompt06-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-02T02:32:37Z"
+  },
+  {
+    "timestamp": 1764642757.352362,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 3,
+      "seed_value": 1437653250
+    },
+    "iso_time": "2025-12-02T02:32:37Z"
+  },
+  {
+    "timestamp": 1764642758.50349,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab_len": 48,
+        "median_ad": 34,
+        "ce_ratio_p": 2,
+        "ce_ratio_q": 1,
+        "ce_len": 24
+      }
+    },
+    "iso_time": "2025-12-02T02:32:38Z"
+  },
+  {
+    "timestamp": 1764642759.638964,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 479
+    },
+    "iso_time": "2025-12-02T02:32:39Z"
+  },
+  {
+    "timestamp": 1764642759.6391191,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, let AB = 48. The median from A to BC has length 34. Let E be a point on segment AB such that AE:EB = 2:",
+      "correct_answer": "479",
+      "seed_value": 1437653250
+    },
+    "iso_time": "2025-12-02T02:32:39Z"
+  },
+  {
+    "timestamp": 1764642759.639182,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "479",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T02:32:39Z"
+  },
+  {
+    "timestamp": 1764642879.857496,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "473",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T02:34:39Z"
+  },
+  {
+    "timestamp": 1764643527.030004,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "486",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T02:45:27Z"
+  },
+  {
+    "timestamp": 1764643620.5160792,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "479",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T02:47:00Z"
+  },
+  {
+    "timestamp": 1764643724.0435588,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "474",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T02:48:44Z"
+  },
+  {
+    "timestamp": 1764644124.901719,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T02:55:24Z"
+  },
+  {
+    "timestamp": 1764644124.902009,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 4,
+      "seed_value": 257266500
+    },
+    "iso_time": "2025-12-02T02:55:24Z"
+  },
+  {
+    "timestamp": 1764644126.336745,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab_len": 20,
+        "median_ad": 14,
+        "ce_ratio_p": 2,
+        "ce_ratio_q": 3,
+        "ce_len": 15
+      }
+    },
+    "iso_time": "2025-12-02T02:55:26Z"
+  },
+  {
+    "timestamp": 1764644127.3559098,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3136
+    },
+    "iso_time": "2025-12-02T02:55:27Z"
+  },
+  {
+    "timestamp": 1764644127.3560588,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, let AB = 20. The median from A to BC has length 14. Let E be a point on segment AB such that AE:EB = 2:",
+      "correct_answer": "3136",
+      "seed_value": 257266500
+    },
+    "iso_time": "2025-12-02T02:55:27Z"
+  },
+  {
+    "timestamp": 1764644127.356117,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3136",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T02:55:27Z"
+  },
+  {
+    "timestamp": 1764644196.312564,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3130",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T02:56:36Z"
+  },
+  {
+    "timestamp": 1764644297.3186612,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3144",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T02:58:17Z"
+  },
+  {
+    "timestamp": 1764644420.164311,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3136",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T03:00:20Z"
+  },
+  {
+    "timestamp": 1764644525.5325649,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3134",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T03:02:05Z"
+  },
+  {
+    "timestamp": 1764645073.737841,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T03:11:13Z"
+  },
+  {
+    "timestamp": 1764645073.738121,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 5,
+      "seed_value": 1000653339
+    },
+    "iso_time": "2025-12-02T03:11:13Z"
+  },
+  {
+    "timestamp": 1764645075.1090932,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab_len": 56,
+        "median_ad": 33,
+        "ce_ratio_p": 4,
+        "ce_ratio_q": 3,
+        "ce_len": 56
+      }
+    },
+    "iso_time": "2025-12-02T03:11:15Z"
+  },
+  {
+    "timestamp": 1764645076.302633,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 321
+    },
+    "iso_time": "2025-12-02T03:11:16Z"
+  },
+  {
+    "timestamp": 1764645076.302839,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, let AB = 56. The median from A to BC has length 33. Let E be a point on segment AB such that AE:EB = 4:",
+      "correct_answer": "321",
+      "seed_value": 1000653339
+    },
+    "iso_time": "2025-12-02T03:11:16Z"
+  },
+  {
+    "timestamp": 1764645076.302925,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T03:11:16Z"
+  },
+  {
+    "timestamp": 1764645451.4928792,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "328",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T03:17:31Z"
+  },
+  {
+    "timestamp": 1764645553.41978,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T03:19:13Z"
+  },
+  {
+    "timestamp": 1764646226.494421,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "322",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T03:30:26Z"
+  },
+  {
+    "timestamp": 1764646787.764697,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "314",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T03:39:47Z"
+  },
+  {
+    "timestamp": 1764646876.644702,
+    "seed_id": "2002-I-13::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T03:41:16Z"
+  },
+  {
+    "timestamp": 1764646876.644928,
+    "seed_id": "2002-I-13::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 7).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-02T03:41:16Z"
+  },
+  {
+    "timestamp": 1764646876.645033,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 7,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 3 (successes=3). | Judge rejected variant 4 (successes=3).",
+      "question": "In triangle $ABC$ the medians $\\overline{AD}$ and $\\overline{CE}$ have lengths 18 and 27, respectively, and $AB = 24$ .  Extend $\\overline{CE}$ to intersect the circumcircle of $ABC$ at $F$ .  The area of triangle $AFB$ is $m\\sqrt {n}$ , where $m$ and $n$ are positive integers and $n$ is not divisible by the square of any prime.  Find $m + n$ .",
+      "answer": "63",
+      "example_id": "2002-I-13::2002"
+    },
+    "iso_time": "2025-12-02T03:41:16Z"
+  },
+  {
+    "timestamp": 1764647114.953877,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 1,
+      "seed_value": 1052392814
+    },
+    "iso_time": "2025-12-02T03:45:14Z"
+  },
+  {
+    "timestamp": 1764647116.316652,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "median_a": 18,
+        "median_c": 12,
+        "side_ab": 24
+      }
+    },
+    "iso_time": "2025-12-02T03:45:16Z"
+  },
+  {
+    "timestamp": 1764647117.553832,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 59
+    },
+    "iso_time": "2025-12-02T03:45:17Z"
+  },
+  {
+    "timestamp": 1764647117.554013,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the medians AD and CE have lengths 18 and 12, respectively, and AB = 24. Let E be the midpoint of AB, a",
+      "correct_answer": "59",
+      "seed_value": 1052392814
+    },
+    "iso_time": "2025-12-02T03:45:17Z"
+  },
+  {
+    "timestamp": 1764647117.5540879,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "54",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T03:45:17Z"
+  },
+  {
+    "timestamp": 1764647395.099981,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "53",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T03:49:55Z"
+  },
+  {
+    "timestamp": 1764647471.7797198,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T03:51:11Z"
+  },
+  {
+    "timestamp": 1764647505.9209752,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T03:51:45Z"
+  },
+  {
+    "timestamp": 1764647562.447087,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "58",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T03:52:42Z"
+  },
+  {
+    "timestamp": 1764647590.3033988,
+    "seed_id": "2002-I-13::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-13::2002_prompt07-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T03:53:10Z"
+  },
+  {
+    "timestamp": 1764647590.303576,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 2,
+      "seed_value": 761045897
+    },
+    "iso_time": "2025-12-02T03:53:10Z"
+  },
+  {
+    "timestamp": 1764647591.3842251,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "median_a": 36,
+        "median_c": 24,
+        "side_ab": 48
+      }
+    },
+    "iso_time": "2025-12-02T03:53:11Z"
+  },
+  {
+    "timestamp": 1764647592.5725498,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 131
+    },
+    "iso_time": "2025-12-02T03:53:12Z"
+  },
+  {
+    "timestamp": 1764647592.572742,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the medians AD and CE have lengths 36 and 24, respectively, and AB = 48. Let E be the midpoint of AB, a",
+      "correct_answer": "131",
+      "seed_value": 761045897
+    },
+    "iso_time": "2025-12-02T03:53:12Z"
+  },
+  {
+    "timestamp": 1764647592.572812,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "133",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T03:53:12Z"
+  },
+  {
+    "timestamp": 1764647696.1581042,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T03:54:56Z"
+  },
+  {
+    "timestamp": 1764647726.742712,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "123",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T03:55:26Z"
+  },
+  {
+    "timestamp": 1764647787.497664,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "131",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T03:56:27Z"
+  },
+  {
+    "timestamp": 1764647829.2780821,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "131",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T03:57:09Z"
+  },
+  {
+    "timestamp": 1764647849.5307782,
+    "seed_id": "2002-I-13::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-13::2002_prompt07-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T03:57:29Z"
+  },
+  {
+    "timestamp": 1764647849.530902,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 3,
+      "seed_value": 1416820263
+    },
+    "iso_time": "2025-12-02T03:57:29Z"
+  },
+  {
+    "timestamp": 1764647850.703489,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "median_a": 36,
+        "median_c": 27,
+        "side_ab": 54
+      }
+    },
+    "iso_time": "2025-12-02T03:57:30Z"
+  },
+  {
+    "timestamp": 1764647851.805322,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 143
+    },
+    "iso_time": "2025-12-02T03:57:31Z"
+  },
+  {
+    "timestamp": 1764647851.8054578,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the medians AD and CE have lengths 36 and 27, respectively, and AB = 54. Let E be the midpoint of AB, a",
+      "correct_answer": "143",
+      "seed_value": 1416820263
+    },
+    "iso_time": "2025-12-02T03:57:31Z"
+  },
+  {
+    "timestamp": 1764647851.805517,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "143",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T03:57:31Z"
+  },
+  {
+    "timestamp": 1764647959.052551,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "143",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T03:59:19Z"
+  },
+  {
+    "timestamp": 1764648042.781895,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "140",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T04:00:42Z"
+  },
+  {
+    "timestamp": 1764648145.285985,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "149",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T04:02:25Z"
+  },
+  {
+    "timestamp": 1764648211.579075,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "134",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T04:03:31Z"
+  },
+  {
+    "timestamp": 1764648271.2361972,
+    "seed_id": "2002-I-13::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-13::2002_prompt07-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T04:04:31Z"
+  },
+  {
+    "timestamp": 1764648271.236298,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-13::2002_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 4,
+      "seed_value": 481960060
+    },
+    "iso_time": "2025-12-02T04:04:31Z"
+  },
+  {
+    "timestamp": 1764648272.63629,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "median_a": 36,
+        "median_c": 24,
+        "side_ab": 48
+      }
+    },
+    "iso_time": "2025-12-02T04:04:32Z"
+  },
+  {
+    "timestamp": 1764648273.727016,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 131
+    },
+    "iso_time": "2025-12-02T04:04:33Z"
+  },
+  {
+    "timestamp": 1764648273.72717,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the medians AD and CE have lengths 36 and 24, respectively, and AB = 48. Let E be the midpoint of AB, a",
+      "correct_answer": "131",
+      "seed_value": 481960060
+    },
+    "iso_time": "2025-12-02T04:04:33Z"
+  },
+  {
+    "timestamp": 1764648273.7272298,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "125",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T04:04:33Z"
+  },
+  {
+    "timestamp": 1764648314.427995,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "128",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T04:05:14Z"
+  },
+  {
+    "timestamp": 1764648479.624477,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "131",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T04:07:59Z"
+  },
+  {
+    "timestamp": 1764648502.420776,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T04:08:22Z"
+  },
+  {
+    "timestamp": 1764648530.86007,
+    "seed_id": "2002-I-13::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "131",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T04:08:50Z"
+  },
+  {
+    "timestamp": 1764648561.4873888,
+    "seed_id": "2002-I-13::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-13::2002_prompt07-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T04:09:21Z"
+  }
+]

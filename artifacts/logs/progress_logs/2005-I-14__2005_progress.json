@@ -1,0 +1,765 @@
+[
+  {
+    "timestamp": 1765156730.9239628,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "Consider the points $A(0,12), B(10,9), C(8,0),$ and $D(-4,7).$ There is a unique square $S$ such that each of the four p",
+      "answer": "936",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-08T01:18:50Z"
+  },
+  {
+    "timestamp": 1765156730.9240708,
+    "seed_id": "2005-I-14::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-08T01:18:50Z"
+  },
+  {
+    "timestamp": 1765156730.924126,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Consider the points $A(0,12), B(10,9), C(8,0),$ and $D(-4,7).$ There is a unique square $S$ such that each of the four points is on a different side of $S.$ Let $K$ be the area of $S.$ Find the remainder when $10K$ is divided by 1000.",
+      "answer": "936",
+      "example_id": "2005-I-14::2005"
+    },
+    "iso_time": "2025-12-08T01:18:50Z"
+  },
+  {
+    "timestamp": 1765156846.9027562,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-14::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1006445633
+    },
+    "iso_time": "2025-12-08T01:20:46Z"
+  },
+  {
+    "timestamp": 1765156848.2706828,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ax": -10,
+        "ay": 10,
+        "bx": -20,
+        "by": -18,
+        "cx": -34,
+        "cy": 0,
+        "dx": 4,
+        "dy": -8,
+        "ratio_p": 4,
+        "ratio_q": 5,
+        "mult": 13,
+        "mod": 800
+      }
+    },
+    "iso_time": "2025-12-08T01:20:48Z"
+  },
+  {
+    "timestamp": 1765156849.517843,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 720
+    },
+    "iso_time": "2025-12-08T01:20:49Z"
+  },
+  {
+    "timestamp": 1765156849.518046,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, consider four points A(-10,10), B(-20,-18), C(-34,0), and D(4,-8). Among all rectangles whose sides are pa",
+      "correct_answer": "720",
+      "seed_value": 1006445633
+    },
+    "iso_time": "2025-12-08T01:20:49Z"
+  },
+  {
+    "timestamp": 1765156849.5180979,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "720",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T01:20:49Z"
+  },
+  {
+    "timestamp": 1765156906.1535811,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "714",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T01:21:46Z"
+  },
+  {
+    "timestamp": 1765156956.5606558,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "715",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T01:22:36Z"
+  },
+  {
+    "timestamp": 1765157075.0334451,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "716",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T01:24:35Z"
+  },
+  {
+    "timestamp": 1765157222.079129,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "720",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T01:27:02Z"
+  },
+  {
+    "timestamp": 1765157270.931071,
+    "seed_id": "2005-I-14::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-14::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T01:27:50Z"
+  },
+  {
+    "timestamp": 1765157270.931254,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-14::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1460790688
+    },
+    "iso_time": "2025-12-08T01:27:50Z"
+  },
+  {
+    "timestamp": 1765157272.0666869,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ax": -34,
+        "ay": -2,
+        "bx": 32,
+        "by": -56,
+        "cx": 8,
+        "cy": -56,
+        "dx": 32,
+        "dy": -8,
+        "ratio_p": 5,
+        "ratio_q": 3,
+        "mult": 14,
+        "mod": 1100
+      }
+    },
+    "iso_time": "2025-12-08T01:27:52Z"
+  },
+  {
+    "timestamp": 1765157273.163557,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1080
+    },
+    "iso_time": "2025-12-08T01:27:53Z"
+  },
+  {
+    "timestamp": 1765157273.1637068,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, consider four points A(-34,-2), B(32,-56), C(8,-56), and D(32,-8). Among all rectangles whose sides are pa",
+      "correct_answer": "1080",
+      "seed_value": 1460790688
+    },
+    "iso_time": "2025-12-08T01:27:53Z"
+  },
+  {
+    "timestamp": 1765157273.163757,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T01:27:53Z"
+  },
+  {
+    "timestamp": 1765157502.252589,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1075",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T01:31:42Z"
+  },
+  {
+    "timestamp": 1765157620.295818,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1086",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T01:33:40Z"
+  },
+  {
+    "timestamp": 1765157856.4167628,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1082",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T01:37:36Z"
+  },
+  {
+    "timestamp": 1765158021.85107,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T01:40:21Z"
+  },
+  {
+    "timestamp": 1765158250.006803,
+    "seed_id": "2005-I-14::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-14::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T01:44:10Z"
+  },
+  {
+    "timestamp": 1765158250.006997,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-14::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 2137676931
+    },
+    "iso_time": "2025-12-08T01:44:10Z"
+  },
+  {
+    "timestamp": 1765158251.3749912,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ax": 5,
+        "ay": -16,
+        "bx": -33,
+        "by": -8,
+        "cx": 14,
+        "cy": 5,
+        "dx": -32,
+        "dy": -25,
+        "ratio_p": 2,
+        "ratio_q": 5,
+        "mult": 10,
+        "mod": 550
+      }
+    },
+    "iso_time": "2025-12-08T01:44:11Z"
+  },
+  {
+    "timestamp": 1765158252.520134,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 50
+    },
+    "iso_time": "2025-12-08T01:44:12Z"
+  },
+  {
+    "timestamp": 1765158252.5202858,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, consider four points A(5,-16), B(-33,-8), C(14,5), and D(-32,-25). Among all rectangles whose sides are pa",
+      "correct_answer": "50",
+      "seed_value": 2137676931
+    },
+    "iso_time": "2025-12-08T01:44:12Z"
+  },
+  {
+    "timestamp": 1765158252.520329,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "50",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T01:44:12Z"
+  },
+  {
+    "timestamp": 1765158416.486742,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "56",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T01:46:56Z"
+  },
+  {
+    "timestamp": 1765158652.721349,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "50",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T01:50:52Z"
+  },
+  {
+    "timestamp": 1765158805.9290218,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "53",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T01:53:25Z"
+  },
+  {
+    "timestamp": 1765159049.3705852,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "43",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T01:57:29Z"
+  },
+  {
+    "timestamp": 1765159246.131083,
+    "seed_id": "2005-I-14::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-14::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T02:00:46Z"
+  },
+  {
+    "timestamp": 1765159246.1312551,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-14::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 150951709
+    },
+    "iso_time": "2025-12-08T02:00:46Z"
+  },
+  {
+    "timestamp": 1765159247.256649,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ax": -25,
+        "ay": -39,
+        "bx": 53,
+        "by": 18,
+        "cx": 15,
+        "cy": -52,
+        "dx": -16,
+        "dy": -16,
+        "ratio_p": 2,
+        "ratio_q": 1,
+        "mult": 3,
+        "mod": 1500
+      }
+    },
+    "iso_time": "2025-12-08T02:00:47Z"
+  },
+  {
+    "timestamp": 1765159248.492341,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T02:00:48Z"
+  },
+  {
+    "timestamp": 1765159249.64667,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "ax": -24,
+        "ay": -5,
+        "bx": 18,
+        "by": -11,
+        "cx": 4,
+        "cy": -19,
+        "dx": 3,
+        "dy": 14,
+        "ratio_p": 6,
+        "ratio_q": 5,
+        "mult": 17,
+        "mod": 2000
+      }
+    },
+    "iso_time": "2025-12-08T02:00:49Z"
+  },
+  {
+    "timestamp": 1765159250.753651,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": true,
+      "answer": 400
+    },
+    "iso_time": "2025-12-08T02:00:50Z"
+  },
+  {
+    "timestamp": 1765159250.753811,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, consider four points A(-24,-5), B(18,-11), C(4,-19), and D(3,14). Among all rectangles whose sides are pai",
+      "correct_answer": "400",
+      "seed_value": 150951709
+    },
+    "iso_time": "2025-12-08T02:00:50Z"
+  },
+  {
+    "timestamp": 1765159250.753859,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "400",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T02:00:50Z"
+  },
+  {
+    "timestamp": 1765159414.441837,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "408",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T02:03:34Z"
+  },
+  {
+    "timestamp": 1765159482.5791261,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "400",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T02:04:42Z"
+  },
+  {
+    "timestamp": 1765159610.1636322,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "407",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T02:06:50Z"
+  },
+  {
+    "timestamp": 1765159757.189158,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "406",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T02:09:17Z"
+  },
+  {
+    "timestamp": 1765159816.310323,
+    "seed_id": "2005-I-14::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-14::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T02:10:16Z"
+  },
+  {
+    "timestamp": 1765159816.310505,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-14::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1316812279
+    },
+    "iso_time": "2025-12-08T02:10:16Z"
+  },
+  {
+    "timestamp": 1765159817.62247,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ax": -23,
+        "ay": -23,
+        "bx": -7,
+        "by": 9,
+        "cx": -11,
+        "cy": -19,
+        "dx": -19,
+        "dy": 5,
+        "ratio_p": 3,
+        "ratio_q": 2,
+        "mult": 12,
+        "mod": 1400
+      }
+    },
+    "iso_time": "2025-12-08T02:10:17Z"
+  },
+  {
+    "timestamp": 1765159818.611003,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 816
+    },
+    "iso_time": "2025-12-08T02:10:18Z"
+  },
+  {
+    "timestamp": 1765159818.61116,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, consider four points A(-23,-23), B(-7,9), C(-11,-19), and D(-19,5). Among all rectangles whose sides are p",
+      "correct_answer": "816",
+      "seed_value": 1316812279
+    },
+    "iso_time": "2025-12-08T02:10:18Z"
+  },
+  {
+    "timestamp": 1765159818.6112142,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "824",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T02:10:18Z"
+  },
+  {
+    "timestamp": 1765160056.895696,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "812",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T02:14:16Z"
+  },
+  {
+    "timestamp": 1765160383.855298,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "816",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T02:19:43Z"
+  },
+  {
+    "timestamp": 1765160544.158231,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "814",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T02:22:24Z"
+  },
+  {
+    "timestamp": 1765160635.6015701,
+    "seed_id": "2005-I-14::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "816",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T02:23:55Z"
+  },
+  {
+    "timestamp": 1765160792.565375,
+    "seed_id": "2005-I-14::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-14::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T02:26:32Z"
+  }
+]

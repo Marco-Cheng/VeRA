@@ -1,0 +1,848 @@
+[
+  {
+    "timestamp": 1765138317.925057,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "A sequence of positive integers with $a_1=1$ and $a_9+a_{10}=646$ is formed so that the first three terms are in geometr",
+      "answer": "973",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-07T20:11:57Z"
+  },
+  {
+    "timestamp": 1765138317.925087,
+    "seed_id": "2004-II-9::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-07T20:11:57Z"
+  },
+  {
+    "timestamp": 1765138317.9251,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A sequence of positive integers with $a_1=1$ and $a_9+a_{10}=646$ is formed so that the first three terms are in geometric progression, the second, third, and fourth terms are in arithmetic progression, and, in general, for all $n\\ge1,$ the terms $a_{2n-1}, a_{2n}, a_{2n+1}$ are in geometric progression, and the terms $a_{2n}, a_{2n+1},$ and $a_{2n+2}$ are in arithmetic progression. Let $a_n$ be the greatest term in this sequence that is less than 1000. Find $n+a_n.$",
+      "answer": "973",
+      "example_id": "2004-II-9::2004"
+    },
+    "iso_time": "2025-12-07T20:11:57Z"
+  },
+  {
+    "timestamp": 1765138600.357025,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-9::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 465633856
+    },
+    "iso_time": "2025-12-07T20:16:40Z"
+  },
+  {
+    "timestamp": 1765138601.690293,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_index": 3,
+        "q_index": 6,
+        "sum_p": 1664,
+        "sum_q": 8432,
+        "threshold": 23068
+      }
+    },
+    "iso_time": "2025-12-07T20:16:41Z"
+  },
+  {
+    "timestamp": 1765138602.890552,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 21341
+    },
+    "iso_time": "2025-12-07T20:16:42Z"
+  },
+  {
+    "timestamp": 1765138602.89073,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a sequence of positive integers (a_n) with the property that for every integer t ≥ 1 the triple (a_{2t-1}, a_{2",
+      "correct_answer": "21341",
+      "seed_value": 465633856
+    },
+    "iso_time": "2025-12-07T20:16:42Z"
+  },
+  {
+    "timestamp": 1765138602.890829,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "21348",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T20:16:42Z"
+  },
+  {
+    "timestamp": 1765138844.279689,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "21350",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T20:20:44Z"
+  },
+  {
+    "timestamp": 1765139017.2762759,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "21339",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T20:23:37Z"
+  },
+  {
+    "timestamp": 1765139429.0467,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "21341",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T20:30:29Z"
+  },
+  {
+    "timestamp": 1765139766.1119602,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "21341",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T20:36:06Z"
+  },
+  {
+    "timestamp": 1765139941.93486,
+    "seed_id": "2004-II-9::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-9::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T20:39:01Z"
+  },
+  {
+    "timestamp": 1765139941.935057,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-9::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2135085850
+    },
+    "iso_time": "2025-12-07T20:39:01Z"
+  },
+  {
+    "timestamp": 1765139943.2905412,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_index": 2,
+        "q_index": 3,
+        "sum_p": 2208,
+        "sum_q": 6660,
+        "threshold": 22188
+      }
+    },
+    "iso_time": "2025-12-07T20:39:03Z"
+  },
+  {
+    "timestamp": 1765139944.355668,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 18588
+    },
+    "iso_time": "2025-12-07T20:39:04Z"
+  },
+  {
+    "timestamp": 1765139944.3558369,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a sequence of positive integers (a_n) with the property that for every integer t ≥ 1 the triple (a_{2t-1}, a_{2",
+      "correct_answer": "18588",
+      "seed_value": 2135085850
+    },
+    "iso_time": "2025-12-07T20:39:04Z"
+  },
+  {
+    "timestamp": 1765139944.3558989,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "18588",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T20:39:04Z"
+  },
+  {
+    "timestamp": 1765140185.857744,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "18580",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T20:43:05Z"
+  },
+  {
+    "timestamp": 1765140567.436855,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "18588",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T20:49:27Z"
+  },
+  {
+    "timestamp": 1765140763.311411,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "18593",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T20:52:43Z"
+  },
+  {
+    "timestamp": 1765141015.508637,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "18586",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T20:56:55Z"
+  },
+  {
+    "timestamp": 1765141225.914995,
+    "seed_id": "2004-II-9::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-9::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-07T21:00:25Z"
+  },
+  {
+    "timestamp": 1765141225.915176,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-9::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 603648500
+    },
+    "iso_time": "2025-12-07T21:00:25Z"
+  },
+  {
+    "timestamp": 1765141227.047752,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_index": 3,
+        "q_index": 4,
+        "sum_p": 540,
+        "sum_q": 1008,
+        "threshold": 5175
+      }
+    },
+    "iso_time": "2025-12-07T21:00:27Z"
+  },
+  {
+    "timestamp": 1765141228.170797,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4784
+    },
+    "iso_time": "2025-12-07T21:00:28Z"
+  },
+  {
+    "timestamp": 1765141228.1709409,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a sequence of positive integers (a_n) with the property that for every integer t ≥ 1 the triple (a_{2t-1}, a_{2",
+      "correct_answer": "4784",
+      "seed_value": 603648500
+    },
+    "iso_time": "2025-12-07T21:00:28Z"
+  },
+  {
+    "timestamp": 1765141228.171026,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4781",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:00:28Z"
+  },
+  {
+    "timestamp": 1765141523.115131,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4784",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T21:05:23Z"
+  },
+  {
+    "timestamp": 1765141729.877665,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4778",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:08:49Z"
+  },
+  {
+    "timestamp": 1765141916.6894772,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4786",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:11:56Z"
+  },
+  {
+    "timestamp": 1765141970.1678238,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4784",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T21:12:50Z"
+  },
+  {
+    "timestamp": 1765142099.342769,
+    "seed_id": "2004-II-9::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-9::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T21:14:59Z"
+  },
+  {
+    "timestamp": 1765142099.3429482,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-9::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1448525312
+    },
+    "iso_time": "2025-12-07T21:14:59Z"
+  },
+  {
+    "timestamp": 1765142100.695467,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_index": 2,
+        "q_index": 3,
+        "sum_p": 1020,
+        "sum_q": 2970,
+        "threshold": 18860
+      }
+    },
+    "iso_time": "2025-12-07T21:15:00Z"
+  },
+  {
+    "timestamp": 1765142101.876759,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16827
+    },
+    "iso_time": "2025-12-07T21:15:01Z"
+  },
+  {
+    "timestamp": 1765142101.8769312,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a sequence of positive integers (a_n) with the property that for every integer t ≥ 1 the triple (a_{2t-1}, a_{2",
+      "correct_answer": "16827",
+      "seed_value": 1448525312
+    },
+    "iso_time": "2025-12-07T21:15:01Z"
+  },
+  {
+    "timestamp": 1765142101.877034,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16827",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T21:15:01Z"
+  },
+  {
+    "timestamp": 1765142231.988426,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "16819",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:17:11Z"
+  },
+  {
+    "timestamp": 1765142375.970294,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16827",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T21:19:35Z"
+  },
+  {
+    "timestamp": 1765142612.72299,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16833",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:23:32Z"
+  },
+  {
+    "timestamp": 1765142838.954444,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "16832",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:27:18Z"
+  },
+  {
+    "timestamp": 1765142992.0985138,
+    "seed_id": "2004-II-9::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-9::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-07T21:29:52Z"
+  },
+  {
+    "timestamp": 1765142992.098697,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-9::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1672913368
+    },
+    "iso_time": "2025-12-07T21:29:52Z"
+  },
+  {
+    "timestamp": 1765142993.253026,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_index": 4,
+        "q_index": 5,
+        "sum_p": 10150,
+        "sum_q": 17094,
+        "threshold": 33215
+      }
+    },
+    "iso_time": "2025-12-07T21:29:53Z"
+  },
+  {
+    "timestamp": 1765142994.439517,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 29592
+    },
+    "iso_time": "2025-12-07T21:29:54Z"
+  },
+  {
+    "timestamp": 1765142994.4397361,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a sequence of positive integers (a_n) with the property that for every integer t ≥ 1 the triple (a_{2t-1}, a_{2",
+      "correct_answer": "29592",
+      "seed_value": 1672913368
+    },
+    "iso_time": "2025-12-07T21:29:54Z"
+  },
+  {
+    "timestamp": 1765142994.439819,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "29592",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T21:29:54Z"
+  },
+  {
+    "timestamp": 1765143172.507104,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "29592",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T21:32:52Z"
+  },
+  {
+    "timestamp": 1765143380.5185359,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "29599",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:36:20Z"
+  },
+  {
+    "timestamp": 1765143529.0078452,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "29586",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:38:49Z"
+  },
+  {
+    "timestamp": 1765143749.314659,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "29585",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:42:29Z"
+  },
+  {
+    "timestamp": 1765143938.224734,
+    "seed_id": "2004-II-9::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-07T21:45:38Z"
+  },
+  {
+    "timestamp": 1765143938.22499,
+    "seed_id": "2004-II-9::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-07T21:45:38Z"
+  },
+  {
+    "timestamp": 1765143938.225129,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 5 (successes=3).",
+      "question": "A sequence of positive integers with $a_1=1$ and $a_9+a_{10}=646$ is formed so that the first three terms are in geometric progression, the second, third, and fourth terms are in arithmetic progression, and, in general, for all $n\\ge1,$ the terms $a_{2n-1}, a_{2n}, a_{2n+1}$ are in geometric progression, and the terms $a_{2n}, a_{2n+1},$ and $a_{2n+2}$ are in arithmetic progression. Let $a_n$ be the greatest term in this sequence that is less than 1000. Find $n+a_n.$",
+      "answer": "973",
+      "example_id": "2004-II-9::2004"
+    },
+    "iso_time": "2025-12-07T21:45:38Z"
+  },
+  {
+    "timestamp": 1765144279.5325089,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-9::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 2088134879
+    },
+    "iso_time": "2025-12-07T21:51:19Z"
+  },
+  {
+    "timestamp": 1765144280.89435,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 7,
+        "q": 6,
+        "difference_1": 2304,
+        "difference_2": 1656,
+        "threshold": 85469
+      }
+    },
+    "iso_time": "2025-12-07T21:51:20Z"
+  },
+  {
+    "timestamp": 1765144281.995949,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 84133
+    },
+    "iso_time": "2025-12-07T21:51:21Z"
+  },
+  {
+    "timestamp": 1765144281.996104,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A sequence of positive integers (a_n) is defined so that for every n ≥ 1, the triple a_{2n-1}, a_{2n}, a_{2n+1} forms a ",
+      "correct_answer": "84133",
+      "seed_value": 2088134879
+    },
+    "iso_time": "2025-12-07T21:51:21Z"
+  },
+  {
+    "timestamp": 1765144281.996167,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "84133",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T21:51:21Z"
+  },
+  {
+    "timestamp": 1765144380.625823,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "84128",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:53:00Z"
+  },
+  {
+    "timestamp": 1765144539.1823602,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "84133",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T21:55:39Z"
+  },
+  {
+    "timestamp": 1765144658.3151639,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "84139",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:57:38Z"
+  },
+  {
+    "timestamp": 1765144694.870736,
+    "seed_id": "2004-II-9::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "84136",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T21:58:14Z"
+  },
+  {
+    "timestamp": 1765144818.825679,
+    "seed_id": "2004-II-9::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-9::2004_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T22:00:18Z"
+  }
+]

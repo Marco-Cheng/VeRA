@@ -1,0 +1,1390 @@
+[
+  {
+    "timestamp": 1762986282.870005,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1987,
+      "question_preview": "Find the largest possible value of $k$ for which $3^{11}$ is expressible as the sum of $k$ consecutive positive integers",
+      "answer": "486",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-12T22:24:42Z"
+  },
+  {
+    "timestamp": 1762986282.870038,
+    "seed_id": "1987-11::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-12T22:24:42Z"
+  },
+  {
+    "timestamp": 1762986282.87005,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find the largest possible value of $k$ for which $3^{11}$ is expressible as the sum of $k$ consecutive positive integers.",
+      "answer": "486",
+      "example_id": "1987-11::1987"
+    },
+    "iso_time": "2025-11-12T22:24:42Z"
+  },
+  {
+    "timestamp": 1762986471.956985,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-11::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 973846528
+    },
+    "iso_time": "2025-11-12T22:27:51Z"
+  },
+  {
+    "timestamp": 1762986472.827123,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 7,
+        "q": 11,
+        "a": 7,
+        "b": 3,
+        "c": 5,
+        "d": 5
+      }
+    },
+    "iso_time": "2025-11-12T22:27:52Z"
+  },
+  {
+    "timestamp": 1762986473.673418,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 41503
+    },
+    "iso_time": "2025-11-12T22:27:53Z"
+  },
+  {
+    "timestamp": 1762986473.673573,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two number theorists, Alice and Bob, are studying sums of consecutive integers. Alice is investigating the integer $N_1 ",
+      "correct_answer": "41503",
+      "seed_value": 973846528
+    },
+    "iso_time": "2025-11-12T22:27:53Z"
+  },
+  {
+    "timestamp": 1762986473.6736379,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "41503",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T22:27:53Z"
+  },
+  {
+    "timestamp": 1762986726.087723,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "41499",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T22:32:06Z"
+  },
+  {
+    "timestamp": 1762986974.740742,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "41508",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T22:36:14Z"
+  },
+  {
+    "timestamp": 1762987224.392494,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "41503",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T22:40:24Z"
+  },
+  {
+    "timestamp": 1762987493.098857,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "41507",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T22:44:53Z"
+  },
+  {
+    "timestamp": 1762987726.66151,
+    "seed_id": "1987-11::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-11::1987_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-12T22:48:46Z"
+  },
+  {
+    "timestamp": 1762987726.6615522,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-11::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 615390627
+    },
+    "iso_time": "2025-11-12T22:48:46Z"
+  },
+  {
+    "timestamp": 1762987727.438503,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 3,
+        "q": 11,
+        "a": 6,
+        "b": 3,
+        "c": 5,
+        "d": 5
+      }
+    },
+    "iso_time": "2025-11-12T22:48:47Z"
+  },
+  {
+    "timestamp": 1762987728.2197099,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1331
+    },
+    "iso_time": "2025-11-12T22:48:48Z"
+  },
+  {
+    "timestamp": 1762987728.2198532,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two number theorists, Alice and Bob, are studying sums of consecutive integers. Alice is investigating the integer $N_1 ",
+      "correct_answer": "1331",
+      "seed_value": 615390627
+    },
+    "iso_time": "2025-11-12T22:48:48Z"
+  },
+  {
+    "timestamp": 1762987728.219897,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1331",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T22:48:48Z"
+  },
+  {
+    "timestamp": 1762987959.211667,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1339",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T22:52:39Z"
+  },
+  {
+    "timestamp": 1762988149.768856,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1333",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T22:55:49Z"
+  },
+  {
+    "timestamp": 1762988394.410835,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1331",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T22:59:54Z"
+  },
+  {
+    "timestamp": 1762988681.447052,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1336",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T23:04:41Z"
+  },
+  {
+    "timestamp": 1762988892.357867,
+    "seed_id": "1987-11::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-11::1987_prompt01-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-12T23:08:12Z"
+  },
+  {
+    "timestamp": 1762988892.357909,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-11::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1892592814
+    },
+    "iso_time": "2025-11-12T23:08:12Z"
+  },
+  {
+    "timestamp": 1762988893.1625118,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 11,
+        "q": 5,
+        "a": 7,
+        "b": 7,
+        "c": 8,
+        "d": 6
+      }
+    },
+    "iso_time": "2025-11-12T23:08:13Z"
+  },
+  {
+    "timestamp": 1762988893.948194,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1663750
+    },
+    "iso_time": "2025-11-12T23:08:13Z"
+  },
+  {
+    "timestamp": 1762988893.9483478,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two number theorists, Alice and Bob, are studying sums of consecutive integers. Alice is investigating the integer $N_1 ",
+      "correct_answer": "1663750",
+      "seed_value": 1892592814
+    },
+    "iso_time": "2025-11-12T23:08:13Z"
+  },
+  {
+    "timestamp": 1762988893.948391,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1663743",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T23:08:13Z"
+  },
+  {
+    "timestamp": 1762989073.70127,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1663747",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T23:11:13Z"
+  },
+  {
+    "timestamp": 1762989255.402655,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1663750",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T23:14:15Z"
+  },
+  {
+    "timestamp": 1762989529.8295522,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1663750",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T23:18:49Z"
+  },
+  {
+    "timestamp": 1762989813.7862778,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1663749",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T23:23:33Z"
+  },
+  {
+    "timestamp": 1762990016.436096,
+    "seed_id": "1987-11::1987",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-12T23:26:56Z"
+  },
+  {
+    "timestamp": 1762990016.436175,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-11::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1041460694
+    },
+    "iso_time": "2025-11-12T23:26:56Z"
+  },
+  {
+    "timestamp": 1762990017.221801,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 11,
+        "q": 3,
+        "a": 7,
+        "b": 8,
+        "c": 9,
+        "d": 7
+      }
+    },
+    "iso_time": "2025-11-12T23:26:57Z"
+  },
+  {
+    "timestamp": 1762990018.002222,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 483153
+    },
+    "iso_time": "2025-11-12T23:26:58Z"
+  },
+  {
+    "timestamp": 1762990018.002367,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two number theorists, Alice and Bob, are studying sums of consecutive integers. Alice is investigating the integer $N_1 ",
+      "correct_answer": "483153",
+      "seed_value": 1041460694
+    },
+    "iso_time": "2025-11-12T23:26:58Z"
+  },
+  {
+    "timestamp": 1762990018.002429,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "483153",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T23:26:58Z"
+  },
+  {
+    "timestamp": 1762990274.09615,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "483160",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T23:31:14Z"
+  },
+  {
+    "timestamp": 1762990450.618263,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "483153",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T23:34:10Z"
+  },
+  {
+    "timestamp": 1762990751.238823,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "483148",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T23:39:11Z"
+  },
+  {
+    "timestamp": 1762991013.369411,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "483158",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T23:43:33Z"
+  },
+  {
+    "timestamp": 1762991202.869324,
+    "seed_id": "1987-11::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-11::1987_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-12T23:46:42Z"
+  },
+  {
+    "timestamp": 1762991202.869389,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-11::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1377445733
+    },
+    "iso_time": "2025-11-12T23:46:42Z"
+  },
+  {
+    "timestamp": 1762991203.634521,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 11,
+        "q": 3,
+        "a": 8,
+        "b": 7,
+        "c": 4,
+        "d": 9
+      }
+    },
+    "iso_time": "2025-11-12T23:46:43Z"
+  },
+  {
+    "timestamp": 1762991204.408065,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 23958
+    },
+    "iso_time": "2025-11-12T23:46:44Z"
+  },
+  {
+    "timestamp": 1762991204.408194,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two number theorists, Alice and Bob, are studying sums of consecutive integers. Alice is investigating the integer $N_1 ",
+      "correct_answer": "23958",
+      "seed_value": 1377445733
+    },
+    "iso_time": "2025-11-12T23:46:44Z"
+  },
+  {
+    "timestamp": 1762991204.408252,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "23958",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T23:46:44Z"
+  },
+  {
+    "timestamp": 1762991450.902766,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "23958",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T23:50:50Z"
+  },
+  {
+    "timestamp": 1762991754.408919,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "23961",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T23:55:54Z"
+  },
+  {
+    "timestamp": 1762991939.24141,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "23957",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T23:58:59Z"
+  },
+  {
+    "timestamp": 1762992220.5358999,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "23963",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T00:03:40Z"
+  },
+  {
+    "timestamp": 1762992478.5067341,
+    "seed_id": "1987-11::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-11::1987_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-13T00:07:58Z"
+  },
+  {
+    "timestamp": 1762992478.506769,
+    "seed_id": "1987-11::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-13T00:07:58Z"
+  },
+  {
+    "timestamp": 1762992478.506788,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 3 (successes=3).",
+      "question": "Find the largest possible value of $k$ for which $3^{11}$ is expressible as the sum of $k$ consecutive positive integers.",
+      "answer": "486",
+      "example_id": "1987-11::1987"
+    },
+    "iso_time": "2025-11-13T00:07:58Z"
+  },
+  {
+    "timestamp": 1762992712.8020191,
+    "seed_id": "1987-11::1987",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 29 column 999 (char 5730)",
+    "payload": {},
+    "iso_time": "2025-11-13T00:11:52Z"
+  },
+  {
+    "timestamp": 1762992712.802071,
+    "seed_id": "1987-11::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-13T00:11:52Z"
+  },
+  {
+    "timestamp": 1762992712.80209,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 29 column 999 (char 5730)",
+      "question": "Find the largest possible value of $k$ for which $3^{11}$ is expressible as the sum of $k$ consecutive positive integers.",
+      "answer": "486",
+      "example_id": "1987-11::1987"
+    },
+    "iso_time": "2025-11-13T00:11:52Z"
+  },
+  {
+    "timestamp": 1762992949.34037,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-11::1987_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1539444245
+    },
+    "iso_time": "2025-11-13T00:15:49Z"
+  },
+  {
+    "timestamp": 1762992950.171796,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 51,
+        "r": 20
+      }
+    },
+    "iso_time": "2025-11-13T00:15:50Z"
+  },
+  {
+    "timestamp": 1762992950.9577222,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8799340
+    },
+    "iso_time": "2025-11-13T00:15:50Z"
+  },
+  {
+    "timestamp": 1762992950.9578822,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $N$ be the binomial coefficient $\\binom{{{n}}}{{{r}}}$. A positive integer $k$ is called 'representable' if $N$ can ",
+      "correct_answer": "8799340",
+      "seed_value": 1539444245
+    },
+    "iso_time": "2025-11-13T00:15:50Z"
+  },
+  {
+    "timestamp": 1762992950.95793,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8799338",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T00:15:50Z"
+  },
+  {
+    "timestamp": 1762993142.9907289,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8799332",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T00:19:02Z"
+  },
+  {
+    "timestamp": 1762993417.221007,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8799340",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T00:23:37Z"
+  },
+  {
+    "timestamp": 1762993627.350353,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8799346",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T00:27:07Z"
+  },
+  {
+    "timestamp": 1762993902.504688,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8799340",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T00:31:42Z"
+  },
+  {
+    "timestamp": 1762994194.1452532,
+    "seed_id": "1987-11::1987",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-13T00:36:34Z"
+  },
+  {
+    "timestamp": 1762994194.1453178,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-11::1987_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1377286848
+    },
+    "iso_time": "2025-11-13T00:36:34Z"
+  },
+  {
+    "timestamp": 1762994194.935487,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 36,
+        "r": 11
+      }
+    },
+    "iso_time": "2025-11-13T00:36:34Z"
+  },
+  {
+    "timestamp": 1762994195.7168078,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 23868
+    },
+    "iso_time": "2025-11-13T00:36:35Z"
+  },
+  {
+    "timestamp": 1762994195.7169862,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $N$ be the binomial coefficient $\\binom{{{n}}}{{{r}}}$. A positive integer $k$ is called 'representable' if $N$ can ",
+      "correct_answer": "23868",
+      "seed_value": 1377286848
+    },
+    "iso_time": "2025-11-13T00:36:35Z"
+  },
+  {
+    "timestamp": 1762994195.717039,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "23871",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T00:36:35Z"
+  },
+  {
+    "timestamp": 1762994483.309639,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "23872",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T00:41:23Z"
+  },
+  {
+    "timestamp": 1762994718.322449,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "23863",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T00:45:18Z"
+  },
+  {
+    "timestamp": 1762994935.348021,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "23868",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T00:48:55Z"
+  },
+  {
+    "timestamp": 1762995211.588355,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "23868",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T00:53:31Z"
+  },
+  {
+    "timestamp": 1762995394.8533492,
+    "seed_id": "1987-11::1987",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 1
+    },
+    "iso_time": "2025-11-13T00:56:34Z"
+  },
+  {
+    "timestamp": 1762995394.853428,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-11::1987_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1853977355
+    },
+    "iso_time": "2025-11-13T00:56:34Z"
+  },
+  {
+    "timestamp": 1762995395.6595452,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 41,
+        "r": 19
+      }
+    },
+    "iso_time": "2025-11-13T00:56:35Z"
+  },
+  {
+    "timestamp": 1762995396.4442391,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 493580
+    },
+    "iso_time": "2025-11-13T00:56:36Z"
+  },
+  {
+    "timestamp": 1762995396.444395,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $N$ be the binomial coefficient $\\binom{{{n}}}{{{r}}}$. A positive integer $k$ is called 'representable' if $N$ can ",
+      "correct_answer": "493580",
+      "seed_value": 1853977355
+    },
+    "iso_time": "2025-11-13T00:56:36Z"
+  },
+  {
+    "timestamp": 1762995396.444462,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "493580",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T00:56:36Z"
+  },
+  {
+    "timestamp": 1762995623.112489,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "493580",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T01:00:23Z"
+  },
+  {
+    "timestamp": 1762995904.6378381,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "493573",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T01:05:04Z"
+  },
+  {
+    "timestamp": 1762996121.8683252,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "493587",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T01:08:41Z"
+  },
+  {
+    "timestamp": 1762996441.037611,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "493578",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T01:14:01Z"
+  },
+  {
+    "timestamp": 1762996665.692182,
+    "seed_id": "1987-11::1987",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 1
+    },
+    "iso_time": "2025-11-13T01:17:45Z"
+  },
+  {
+    "timestamp": 1762996665.692308,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-11::1987_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1324468289
+    },
+    "iso_time": "2025-11-13T01:17:45Z"
+  },
+  {
+    "timestamp": 1762996666.465986,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 38,
+        "r": 10
+      }
+    },
+    "iso_time": "2025-11-13T01:17:46Z"
+  },
+  {
+    "timestamp": 1762996667.2452211,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 20026
+    },
+    "iso_time": "2025-11-13T01:17:47Z"
+  },
+  {
+    "timestamp": 1762996667.2453911,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $N$ be the binomial coefficient $\\binom{{{n}}}{{{r}}}$. A positive integer $k$ is called 'representable' if $N$ can ",
+      "correct_answer": "20026",
+      "seed_value": 1324468289
+    },
+    "iso_time": "2025-11-13T01:17:47Z"
+  },
+  {
+    "timestamp": 1762996667.2454422,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "20026",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T01:17:47Z"
+  },
+  {
+    "timestamp": 1762996917.082918,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "20026",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T01:21:57Z"
+  },
+  {
+    "timestamp": 1762997175.2357938,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "20034",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T01:26:15Z"
+  },
+  {
+    "timestamp": 1762997504.044029,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "20022",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T01:31:44Z"
+  },
+  {
+    "timestamp": 1762997781.749643,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "20025",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T01:36:21Z"
+  },
+  {
+    "timestamp": 1762997999.636632,
+    "seed_id": "1987-11::1987",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 1
+    },
+    "iso_time": "2025-11-13T01:39:59Z"
+  },
+  {
+    "timestamp": 1762997999.636714,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-11::1987_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 199822853
+    },
+    "iso_time": "2025-11-13T01:39:59Z"
+  },
+  {
+    "timestamp": 1762998000.4306839,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 54,
+        "r": 15
+      }
+    },
+    "iso_time": "2025-11-13T01:40:00Z"
+  },
+  {
+    "timestamp": 1762998001.2233548,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2935352
+    },
+    "iso_time": "2025-11-13T01:40:01Z"
+  },
+  {
+    "timestamp": 1762998001.223514,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $N$ be the binomial coefficient $\\binom{{{n}}}{{{r}}}$. A positive integer $k$ is called 'representable' if $N$ can ",
+      "correct_answer": "2935352",
+      "seed_value": 199822853
+    },
+    "iso_time": "2025-11-13T01:40:01Z"
+  },
+  {
+    "timestamp": 1762998001.223561,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2935349",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T01:40:01Z"
+  },
+  {
+    "timestamp": 1762998270.31341,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2935352",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T01:44:30Z"
+  },
+  {
+    "timestamp": 1762998505.330281,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2935359",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T01:48:25Z"
+  },
+  {
+    "timestamp": 1762998773.962798,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2935356",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T01:52:53Z"
+  },
+  {
+    "timestamp": 1762999005.855073,
+    "seed_id": "1987-11::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2935352",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T01:56:45Z"
+  },
+  {
+    "timestamp": 1762999286.863808,
+    "seed_id": "1987-11::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-11::1987_prompt03-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-13T02:01:26Z"
+  }
+]

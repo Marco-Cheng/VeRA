@@ -1,0 +1,709 @@
+[
+  {
+    "timestamp": 1763936446.733502,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1994,
+      "question_preview": "Ninety-four bricks, each measuring $4''\\times10''\\times19'',$ are to be stacked one on top of another to form a tower 94",
+      "answer": "465",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-23T22:20:46Z"
+  },
+  {
+    "timestamp": 1763936446.7336268,
+    "seed_id": "1994-11::1994",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-23T22:20:46Z"
+  },
+  {
+    "timestamp": 1763936446.733664,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Ninety-four bricks, each measuring $4''\\times10''\\times19'',$ are to be stacked one on top of another to form a tower 94 bricks tall.  Each brick can be oriented so it contributes $4''\\,$ or $10''\\,$ or $19''\\,$ to the total height of the tower.  How many different tower heights can be achieved using all 94 of the bricks?",
+      "answer": "465",
+      "example_id": "1994-11::1994"
+    },
+    "iso_time": "2025-11-23T22:20:46Z"
+  },
+  {
+    "timestamp": 1763936532.135571,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-11::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1923701455
+    },
+    "iso_time": "2025-11-23T22:22:12Z"
+  },
+  {
+    "timestamp": 1763936532.930644,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_bricks": 71,
+        "dim_small": 17,
+        "dim_mid": 20,
+        "dim_tall": 23,
+        "max_small": 49,
+        "min_mid": 14,
+        "height_min": 1437,
+        "height_max": 1591
+      }
+    },
+    "iso_time": "2025-11-23T22:22:12Z"
+  },
+  {
+    "timestamp": 1763936533.681328,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 52
+    },
+    "iso_time": "2025-11-23T22:22:13Z"
+  },
+  {
+    "timestamp": 1763936533.681483,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A contractor stacks 71 identical bricks of dimensions 17×20×23 inches to form a single tower using every brick. Each bri",
+      "correct_answer": "52",
+      "seed_value": 1923701455
+    },
+    "iso_time": "2025-11-23T22:22:13Z"
+  },
+  {
+    "timestamp": 1763936533.681525,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "57",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:22:13Z"
+  },
+  {
+    "timestamp": 1763936558.851666,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "44",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:22:38Z"
+  },
+  {
+    "timestamp": 1763936584.083134,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "52",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T22:23:04Z"
+  },
+  {
+    "timestamp": 1763936615.901889,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "52",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T22:23:35Z"
+  },
+  {
+    "timestamp": 1763936645.708639,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "53",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:24:05Z"
+  },
+  {
+    "timestamp": 1763936843.060867,
+    "seed_id": "1994-11::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-11::1994_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T22:27:23Z"
+  },
+  {
+    "timestamp": 1763936843.060971,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-11::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1325134148
+    },
+    "iso_time": "2025-11-23T22:27:23Z"
+  },
+  {
+    "timestamp": 1763936844.012165,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_bricks": 91,
+        "dim_small": 4,
+        "dim_mid": 6,
+        "dim_tall": 16,
+        "max_small": 30,
+        "min_mid": 17,
+        "height_min": 907,
+        "height_max": 1286
+      }
+    },
+    "iso_time": "2025-11-23T22:27:24Z"
+  },
+  {
+    "timestamp": 1763936844.948722,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 180
+    },
+    "iso_time": "2025-11-23T22:27:24Z"
+  },
+  {
+    "timestamp": 1763936844.9489331,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A contractor stacks 91 identical bricks of dimensions 4×6×16 inches to form a single tower using every brick. Each brick",
+      "correct_answer": "180",
+      "seed_value": 1325134148
+    },
+    "iso_time": "2025-11-23T22:27:24Z"
+  },
+  {
+    "timestamp": 1763936844.9490108,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T22:27:24Z"
+  },
+  {
+    "timestamp": 1763936905.459732,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T22:28:25Z"
+  },
+  {
+    "timestamp": 1763936951.3496919,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "183",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:29:11Z"
+  },
+  {
+    "timestamp": 1763937019.241793,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "172",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:30:19Z"
+  },
+  {
+    "timestamp": 1763937096.058781,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "178",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:31:36Z"
+  },
+  {
+    "timestamp": 1763937163.9235368,
+    "seed_id": "1994-11::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-11::1994_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T22:32:43Z"
+  },
+  {
+    "timestamp": 1763937163.92374,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-11::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 820535902
+    },
+    "iso_time": "2025-11-23T22:32:43Z"
+  },
+  {
+    "timestamp": 1763937164.704721,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_bricks": 108,
+        "dim_small": 8,
+        "dim_mid": 30,
+        "dim_tall": 32,
+        "max_small": 71,
+        "min_mid": 25,
+        "height_min": 2713,
+        "height_max": 3406
+      }
+    },
+    "iso_time": "2025-11-23T22:32:44Z"
+  },
+  {
+    "timestamp": 1763937165.449553,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 347
+    },
+    "iso_time": "2025-11-23T22:32:45Z"
+  },
+  {
+    "timestamp": 1763937165.4497,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A contractor stacks 108 identical bricks of dimensions 8×30×32 inches to form a single tower using every brick. Each bri",
+      "correct_answer": "347",
+      "seed_value": 820535902
+    },
+    "iso_time": "2025-11-23T22:32:45Z"
+  },
+  {
+    "timestamp": 1763937165.449743,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "350",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:32:45Z"
+  },
+  {
+    "timestamp": 1763937198.448043,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "347",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T22:33:18Z"
+  },
+  {
+    "timestamp": 1763937631.466717,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "338",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:40:31Z"
+  },
+  {
+    "timestamp": 1763937666.206532,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "347",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T22:41:06Z"
+  },
+  {
+    "timestamp": 1763937703.85519,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "353",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:41:43Z"
+  },
+  {
+    "timestamp": 1763937711.5697548,
+    "seed_id": "1994-11::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-11::1994_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T22:41:51Z"
+  },
+  {
+    "timestamp": 1763937711.569949,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-11::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 70265044
+    },
+    "iso_time": "2025-11-23T22:41:51Z"
+  },
+  {
+    "timestamp": 1763937712.3327072,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_bricks": 102,
+        "dim_small": 8,
+        "dim_mid": 18,
+        "dim_tall": 32,
+        "max_small": 25,
+        "min_mid": 42,
+        "height_min": 2332,
+        "height_max": 2676
+      }
+    },
+    "iso_time": "2025-11-23T22:41:52Z"
+  },
+  {
+    "timestamp": 1763937713.075739,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 140
+    },
+    "iso_time": "2025-11-23T22:41:53Z"
+  },
+  {
+    "timestamp": 1763937713.075924,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A contractor stacks 102 identical bricks of dimensions 8×18×32 inches to form a single tower using every brick. Each bri",
+      "correct_answer": "140",
+      "seed_value": 70265044
+    },
+    "iso_time": "2025-11-23T22:41:53Z"
+  },
+  {
+    "timestamp": 1763937713.07599,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "140",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T22:41:53Z"
+  },
+  {
+    "timestamp": 1763937757.4681642,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "134",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:42:37Z"
+  },
+  {
+    "timestamp": 1763937824.812512,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "132",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:43:44Z"
+  },
+  {
+    "timestamp": 1763937931.424955,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "140",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T22:45:31Z"
+  },
+  {
+    "timestamp": 1763937980.7952929,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "141",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:46:20Z"
+  },
+  {
+    "timestamp": 1763938073.147032,
+    "seed_id": "1994-11::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-11::1994_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T22:47:53Z"
+  },
+  {
+    "timestamp": 1763938073.1472661,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-11::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 441008641
+    },
+    "iso_time": "2025-11-23T22:47:53Z"
+  },
+  {
+    "timestamp": 1763938073.912802,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_bricks": 111,
+        "dim_small": 19,
+        "dim_mid": 21,
+        "dim_tall": 29,
+        "max_small": 44,
+        "min_mid": 44,
+        "height_min": 2712,
+        "height_max": 2867
+      }
+    },
+    "iso_time": "2025-11-23T22:47:53Z"
+  },
+  {
+    "timestamp": 1763938074.6616309,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 72
+    },
+    "iso_time": "2025-11-23T22:47:54Z"
+  },
+  {
+    "timestamp": 1763938074.661794,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A contractor stacks 111 identical bricks of dimensions 19×21×29 inches to form a single tower using every brick. Each br",
+      "correct_answer": "72",
+      "seed_value": 441008641
+    },
+    "iso_time": "2025-11-23T22:47:54Z"
+  },
+  {
+    "timestamp": 1763938074.661859,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "63",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:47:54Z"
+  },
+  {
+    "timestamp": 1763938139.7060401,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "72",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T22:48:59Z"
+  },
+  {
+    "timestamp": 1763938196.903979,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "79",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:49:56Z"
+  },
+  {
+    "timestamp": 1763938262.8908439,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "72",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T22:51:02Z"
+  },
+  {
+    "timestamp": 1763938303.495614,
+    "seed_id": "1994-11::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "74",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T22:51:43Z"
+  },
+  {
+    "timestamp": 1763938366.729238,
+    "seed_id": "1994-11::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-11::1994_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T22:52:46Z"
+  }
+]

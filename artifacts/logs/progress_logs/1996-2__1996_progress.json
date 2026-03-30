@@ -1,0 +1,709 @@
+[
+  {
+    "timestamp": 1764111040.989672,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1996,
+      "question_preview": "For each real number $x$ , let $\\lfloor x \\rfloor$ denote the greatest integer that does not exceed $x$ . For how many p",
+      "answer": "340",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-25T22:50:40Z"
+  },
+  {
+    "timestamp": 1764111040.989751,
+    "seed_id": "1996-2::1996",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-25T22:50:40Z"
+  },
+  {
+    "timestamp": 1764111040.989799,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "For each real number $x$ , let $\\lfloor x \\rfloor$ denote the greatest integer that does not exceed $x$ . For how many positive integers $n$ is it true that $n<1000$ and that $\\lfloor \\log_{2} n \\rfloor$ is a positive even integer?",
+      "answer": "340",
+      "example_id": "1996-2::1996"
+    },
+    "iso_time": "2025-11-25T22:50:40Z"
+  },
+  {
+    "timestamp": 1764111106.004735,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-2::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1378645294
+    },
+    "iso_time": "2025-11-25T22:51:46Z"
+  },
+  {
+    "timestamp": 1764111106.844606,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_limit": 207419,
+        "base1": 3,
+        "base2": 11,
+        "shift": 15110,
+        "mod1": 3,
+        "res1": 1,
+        "mod2": 2,
+        "res2": 0
+      }
+    },
+    "iso_time": "2025-11-25T22:51:46Z"
+  },
+  {
+    "timestamp": 1764111107.674848,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 91434
+    },
+    "iso_time": "2025-11-25T22:51:47Z"
+  },
+  {
+    "timestamp": 1764111107.6750238,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n range over the integers 1 <= n < 207419. Count how many n satisfy both conditions: (i) floor of the logarithm base",
+      "correct_answer": "91434",
+      "seed_value": 1378645294
+    },
+    "iso_time": "2025-11-25T22:51:47Z"
+  },
+  {
+    "timestamp": 1764111107.675068,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "91434",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T22:51:47Z"
+  },
+  {
+    "timestamp": 1764111146.8591712,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "91434",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T22:52:26Z"
+  },
+  {
+    "timestamp": 1764111163.499945,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "91426",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T22:52:43Z"
+  },
+  {
+    "timestamp": 1764111189.354291,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "91443",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T22:53:09Z"
+  },
+  {
+    "timestamp": 1764111215.601527,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "91432",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T22:53:35Z"
+  },
+  {
+    "timestamp": 1764111239.942466,
+    "seed_id": "1996-2::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-2::1996_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T22:53:59Z"
+  },
+  {
+    "timestamp": 1764111239.942657,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-2::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1971962817
+    },
+    "iso_time": "2025-11-25T22:53:59Z"
+  },
+  {
+    "timestamp": 1764111240.754163,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_limit": 187659,
+        "base1": 8,
+        "base2": 6,
+        "shift": 2099,
+        "mod1": 3,
+        "res1": 0,
+        "mod2": 2,
+        "res2": 0
+      }
+    },
+    "iso_time": "2025-11-25T22:54:00Z"
+  },
+  {
+    "timestamp": 1764111241.536151,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3584
+    },
+    "iso_time": "2025-11-25T22:54:01Z"
+  },
+  {
+    "timestamp": 1764111241.536376,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n range over the integers 1 <= n < 187659. Count how many n satisfy both conditions: (i) floor of the logarithm base",
+      "correct_answer": "3584",
+      "seed_value": 1971962817
+    },
+    "iso_time": "2025-11-25T22:54:01Z"
+  },
+  {
+    "timestamp": 1764111241.5364218,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3589",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T22:54:01Z"
+  },
+  {
+    "timestamp": 1764111272.608213,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3582",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T22:54:32Z"
+  },
+  {
+    "timestamp": 1764111304.865333,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3590",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T22:55:04Z"
+  },
+  {
+    "timestamp": 1764111322.781832,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3584",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T22:55:22Z"
+  },
+  {
+    "timestamp": 1764111337.5376818,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3584",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T22:55:37Z"
+  },
+  {
+    "timestamp": 1764111352.942574,
+    "seed_id": "1996-2::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-2::1996_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T22:55:52Z"
+  },
+  {
+    "timestamp": 1764111352.942782,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-2::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1286285542
+    },
+    "iso_time": "2025-11-25T22:55:52Z"
+  },
+  {
+    "timestamp": 1764111353.7797482,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_limit": 140301,
+        "base1": 5,
+        "base2": 7,
+        "shift": 2847,
+        "mod1": 3,
+        "res1": 2,
+        "mod2": 2,
+        "res2": 0
+      }
+    },
+    "iso_time": "2025-11-25T22:55:53Z"
+  },
+  {
+    "timestamp": 1764111354.56432,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10935
+    },
+    "iso_time": "2025-11-25T22:55:54Z"
+  },
+  {
+    "timestamp": 1764111354.564495,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n range over the integers 1 <= n < 140301. Count how many n satisfy both conditions: (i) floor of the logarithm base",
+      "correct_answer": "10935",
+      "seed_value": 1286285542
+    },
+    "iso_time": "2025-11-25T22:55:54Z"
+  },
+  {
+    "timestamp": 1764111354.5645492,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10944",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T22:55:54Z"
+  },
+  {
+    "timestamp": 1764111388.65506,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10938",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T22:56:28Z"
+  },
+  {
+    "timestamp": 1764111409.0218801,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10926",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T22:56:49Z"
+  },
+  {
+    "timestamp": 1764111452.7235782,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10935",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T22:57:32Z"
+  },
+  {
+    "timestamp": 1764111472.8730838,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10935",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T22:57:52Z"
+  },
+  {
+    "timestamp": 1764111504.4378119,
+    "seed_id": "1996-2::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-2::1996_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T22:58:24Z"
+  },
+  {
+    "timestamp": 1764111504.43802,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-2::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 254484113
+    },
+    "iso_time": "2025-11-25T22:58:24Z"
+  },
+  {
+    "timestamp": 1764111505.282453,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_limit": 85272,
+        "base1": 10,
+        "base2": 3,
+        "shift": 17738,
+        "mod1": 3,
+        "res1": 1,
+        "mod2": 2,
+        "res2": 1
+      }
+    },
+    "iso_time": "2025-11-25T22:58:25Z"
+  },
+  {
+    "timestamp": 1764111506.068993,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 31311
+    },
+    "iso_time": "2025-11-25T22:58:26Z"
+  },
+  {
+    "timestamp": 1764111506.0691788,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n range over the integers 1 <= n < 85272. Count how many n satisfy both conditions: (i) floor of the logarithm base ",
+      "correct_answer": "31311",
+      "seed_value": 254484113
+    },
+    "iso_time": "2025-11-25T22:58:26Z"
+  },
+  {
+    "timestamp": 1764111506.069222,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "31307",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T22:58:26Z"
+  },
+  {
+    "timestamp": 1764111616.534288,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "31303",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:00:16Z"
+  },
+  {
+    "timestamp": 1764111752.921412,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "31311",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:02:32Z"
+  },
+  {
+    "timestamp": 1764111771.761247,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "31317",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:02:51Z"
+  },
+  {
+    "timestamp": 1764111791.40191,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "31311",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:03:11Z"
+  },
+  {
+    "timestamp": 1764111809.40002,
+    "seed_id": "1996-2::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-2::1996_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:03:29Z"
+  },
+  {
+    "timestamp": 1764111809.400198,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-2::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 74815110
+    },
+    "iso_time": "2025-11-25T23:03:29Z"
+  },
+  {
+    "timestamp": 1764111810.231801,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_limit": 117085,
+        "base1": 8,
+        "base2": 10,
+        "shift": 2640,
+        "mod1": 2,
+        "res1": 1,
+        "mod2": 2,
+        "res2": 1
+      }
+    },
+    "iso_time": "2025-11-25T23:03:30Z"
+  },
+  {
+    "timestamp": 1764111811.004289,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 23365
+    },
+    "iso_time": "2025-11-25T23:03:31Z"
+  },
+  {
+    "timestamp": 1764111811.004458,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n range over the integers 1 <= n < 117085. Count how many n satisfy both conditions: (i) floor of the logarithm base",
+      "correct_answer": "23365",
+      "seed_value": 74815110
+    },
+    "iso_time": "2025-11-25T23:03:31Z"
+  },
+  {
+    "timestamp": 1764111811.004517,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "23356",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:03:31Z"
+  },
+  {
+    "timestamp": 1764111873.854839,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "23369",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:04:33Z"
+  },
+  {
+    "timestamp": 1764111905.601384,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "23365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:05:05Z"
+  },
+  {
+    "timestamp": 1764111926.080378,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "23372",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:05:26Z"
+  },
+  {
+    "timestamp": 1764111954.549933,
+    "seed_id": "1996-2::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "23365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:05:54Z"
+  },
+  {
+    "timestamp": 1764111975.134799,
+    "seed_id": "1996-2::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-2::1996_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:06:15Z"
+  }
+]

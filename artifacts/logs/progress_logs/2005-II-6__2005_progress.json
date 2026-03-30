@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1765294086.751859,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "The cards in a stack of $2n$ cards are numbered consecutively from 1 through $2n$ from top to bottom. The top $n$ cards ",
+      "answer": "392",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T15:28:06Z"
+  },
+  {
+    "timestamp": 1765294086.751911,
+    "seed_id": "2005-II-6::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T15:28:06Z"
+  },
+  {
+    "timestamp": 1765294086.751936,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The cards in a stack of $2n$ cards are numbered consecutively from 1 through $2n$ from top to bottom. The top $n$ cards are removed, kept in order, and form pile $A.$ The remaining cards form pile $B.$ The cards are then restacked by taking cards alternately from the tops of pile $B$ and $A,$ respectively. In this process, card number $(n+1)$ becomes the bottom card of the new stack, card number 1 is on top of this card, and so on, until piles $A$ and $B$ are exhausted. If, after the restacking process, at least one card from each pile occupies the same position that it occupied in the original stack, the stack is named magical. Find the number of cards in the magical stack in which card number 131 retains its original position.",
+      "answer": "392",
+      "example_id": "2005-II-6::2005"
+    },
+    "iso_time": "2025-12-09T15:28:06Z"
+  },
+  {
+    "timestamp": 1765294190.589951,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-6::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1289679480
+    },
+    "iso_time": "2025-12-09T15:29:50Z"
+  },
+  {
+    "timestamp": 1765294191.921468,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k_block": 4,
+        "iterations": 3,
+        "card_label": 112
+      }
+    },
+    "iso_time": "2025-12-09T15:29:51Z"
+  },
+  {
+    "timestamp": 1765294193.119342,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1355
+    },
+    "iso_time": "2025-12-09T15:29:53Z"
+  },
+  {
+    "timestamp": 1765294193.119519,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A deck of cards is labeled consecutively from top to bottom starting at 1. The top n cards form pile A, and the remainin",
+      "correct_answer": "1355",
+      "seed_value": 1289679480
+    },
+    "iso_time": "2025-12-09T15:29:53Z"
+  },
+  {
+    "timestamp": 1765294193.1195679,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1359",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T15:29:53Z"
+  },
+  {
+    "timestamp": 1765294338.737659,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1350",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T15:32:18Z"
+  },
+  {
+    "timestamp": 1765294533.08863,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1364",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T15:35:33Z"
+  },
+  {
+    "timestamp": 1765294563.095816,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1355",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T15:36:03Z"
+  },
+  {
+    "timestamp": 1765294805.269281,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1355",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T15:40:05Z"
+  },
+  {
+    "timestamp": 1765295196.6698382,
+    "seed_id": "2005-II-6::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-6::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T15:46:36Z"
+  },
+  {
+    "timestamp": 1765295196.670178,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-6::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2011284081
+    },
+    "iso_time": "2025-12-09T15:46:36Z"
+  },
+  {
+    "timestamp": 1765295198.083947,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k_block": 5,
+        "iterations": 6,
+        "card_label": 210
+      }
+    },
+    "iso_time": "2025-12-09T15:46:38Z"
+  },
+  {
+    "timestamp": 1765295199.293906,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1080
+    },
+    "iso_time": "2025-12-09T15:46:39Z"
+  },
+  {
+    "timestamp": 1765295199.2940722,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A deck of cards is labeled consecutively from top to bottom starting at 1. The top n cards form pile A, and the remainin",
+      "correct_answer": "1080",
+      "seed_value": 2011284081
+    },
+    "iso_time": "2025-12-09T15:46:39Z"
+  },
+  {
+    "timestamp": 1765295199.294116,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1085",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T15:46:39Z"
+  },
+  {
+    "timestamp": 1765295215.083553,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1088",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T15:46:55Z"
+  },
+  {
+    "timestamp": 1765295288.2756732,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T15:48:08Z"
+  },
+  {
+    "timestamp": 1765295382.2206101,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1081",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T15:49:42Z"
+  },
+  {
+    "timestamp": 1765295435.262317,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T15:50:35Z"
+  },
+  {
+    "timestamp": 1765295796.932387,
+    "seed_id": "2005-II-6::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-6::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-09T15:56:36Z"
+  },
+  {
+    "timestamp": 1765295796.932576,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-6::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1149411682
+    },
+    "iso_time": "2025-12-09T15:56:36Z"
+  },
+  {
+    "timestamp": 1765295798.21361,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k_block": 4,
+        "iterations": 2,
+        "card_label": 207
+      }
+    },
+    "iso_time": "2025-12-09T15:56:38Z"
+  },
+  {
+    "timestamp": 1765295799.465151,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4345
+    },
+    "iso_time": "2025-12-09T15:56:39Z"
+  },
+  {
+    "timestamp": 1765295799.465282,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A deck of cards is labeled consecutively from top to bottom starting at 1. The top n cards form pile A, and the remainin",
+      "correct_answer": "4345",
+      "seed_value": 1149411682
+    },
+    "iso_time": "2025-12-09T15:56:39Z"
+  },
+  {
+    "timestamp": 1765295799.465326,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4344",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T15:56:39Z"
+  },
+  {
+    "timestamp": 1765295954.231882,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4345",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T15:59:14Z"
+  },
+  {
+    "timestamp": 1765296161.837167,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4345",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:02:41Z"
+  },
+  {
+    "timestamp": 1765296343.317656,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4351",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:05:43Z"
+  },
+  {
+    "timestamp": 1765296360.336023,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4343",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:06:00Z"
+  },
+  {
+    "timestamp": 1765296385.172304,
+    "seed_id": "2005-II-6::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-6::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T16:06:25Z"
+  },
+  {
+    "timestamp": 1765296385.172479,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-6::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 500838119
+    },
+    "iso_time": "2025-12-09T16:06:25Z"
+  },
+  {
+    "timestamp": 1765296386.56385,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k_block": 6,
+        "iterations": 3,
+        "card_label": 121
+      }
+    },
+    "iso_time": "2025-12-09T16:06:26Z"
+  },
+  {
+    "timestamp": 1765296387.782809,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2856
+    },
+    "iso_time": "2025-12-09T16:06:27Z"
+  },
+  {
+    "timestamp": 1765296387.7829509,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A deck of cards is labeled consecutively from top to bottom starting at 1. The top n cards form pile A, and the remainin",
+      "correct_answer": "2856",
+      "seed_value": 500838119
+    },
+    "iso_time": "2025-12-09T16:06:27Z"
+  },
+  {
+    "timestamp": 1765296387.7829928,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2850",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:06:27Z"
+  },
+  {
+    "timestamp": 1765296459.926715,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2849",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:07:39Z"
+  },
+  {
+    "timestamp": 1765296685.614818,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2848",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:11:25Z"
+  },
+  {
+    "timestamp": 1765296710.299517,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2856",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:11:50Z"
+  },
+  {
+    "timestamp": 1765297017.4312,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2856",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:16:57Z"
+  },
+  {
+    "timestamp": 1765297265.094573,
+    "seed_id": "2005-II-6::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-6::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T16:21:05Z"
+  },
+  {
+    "timestamp": 1765297265.094752,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-6::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1339189759
+    },
+    "iso_time": "2025-12-09T16:21:05Z"
+  },
+  {
+    "timestamp": 1765297269.039191,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k_block": 5,
+        "iterations": 5,
+        "card_label": 188
+      }
+    },
+    "iso_time": "2025-12-09T16:21:09Z"
+  },
+  {
+    "timestamp": 1765297270.344971,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3414
+    },
+    "iso_time": "2025-12-09T16:21:10Z"
+  },
+  {
+    "timestamp": 1765297270.345151,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A deck of cards is labeled consecutively from top to bottom starting at 1. The top n cards form pile A, and the remainin",
+      "correct_answer": "3414",
+      "seed_value": 1339189759
+    },
+    "iso_time": "2025-12-09T16:21:10Z"
+  },
+  {
+    "timestamp": 1765297270.345202,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3410",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:21:10Z"
+  },
+  {
+    "timestamp": 1765297312.608612,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3409",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:21:52Z"
+  },
+  {
+    "timestamp": 1765297381.2726688,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3414",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:23:01Z"
+  },
+  {
+    "timestamp": 1765297760.9510279,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3414",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T16:29:20Z"
+  },
+  {
+    "timestamp": 1765298042.012733,
+    "seed_id": "2005-II-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3407",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T16:34:02Z"
+  },
+  {
+    "timestamp": 1765298086.2209349,
+    "seed_id": "2005-II-6::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-6::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T16:34:46Z"
+  }
+]

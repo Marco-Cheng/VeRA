@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1765301797.041118,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "Circles $C_1$ and $C_2$ are externally tangent, and they are both internally tangent to circle $C_3.$ The radii of $C_1$",
+      "answer": "405",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T17:36:37Z"
+  },
+  {
+    "timestamp": 1765301797.041183,
+    "seed_id": "2005-II-8::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T17:36:37Z"
+  },
+  {
+    "timestamp": 1765301797.041213,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Circles $C_1$ and $C_2$ are externally tangent, and they are both internally tangent to circle $C_3.$ The radii of $C_1$ and $C_2$ are 4 and 10, respectively, and the centers of the three circles are all collinear. A chord of $C_3$ is also a common external tangent of $C_1$ and $C_2.$ Given that the length of the chord is $\\frac{m\\sqrt{n}}p$ where $m,n,$ and $p$ are positive integers, $m$ and $p$ are relatively prime, and $n$ is not divisible by the square of any prime, find $m+n+p.$",
+      "answer": "405",
+      "example_id": "2005-II-8::2005"
+    },
+    "iso_time": "2025-12-09T17:36:37Z"
+  },
+  {
+    "timestamp": 1765302240.8308082,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-8::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1433413906
+    },
+    "iso_time": "2025-12-09T17:44:00Z"
+  },
+  {
+    "timestamp": 1765302242.217723,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 12,
+        "r2": 28,
+        "R": 35
+      }
+    },
+    "iso_time": "2025-12-09T17:44:02Z"
+  },
+  {
+    "timestamp": 1765302243.276911,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2950
+    },
+    "iso_time": "2025-12-09T17:44:03Z"
+  },
+  {
+    "timestamp": 1765302243.277044,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Circles C1 and C2 have radii 12 and 28, respectively. Both are internally tangent to a larger circle C3 of radius 35, an",
+      "correct_answer": "2950",
+      "seed_value": 1433413906
+    },
+    "iso_time": "2025-12-09T17:44:03Z"
+  },
+  {
+    "timestamp": 1765302243.27709,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2950",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:44:03Z"
+  },
+  {
+    "timestamp": 1765302311.6896052,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2942",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:45:11Z"
+  },
+  {
+    "timestamp": 1765302397.901224,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2945",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:46:37Z"
+  },
+  {
+    "timestamp": 1765302445.3209338,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2947",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:47:25Z"
+  },
+  {
+    "timestamp": 1765302509.110004,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2950",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:48:29Z"
+  },
+  {
+    "timestamp": 1765302551.3100412,
+    "seed_id": "2005-II-8::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-8::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T17:49:11Z"
+  },
+  {
+    "timestamp": 1765302551.31022,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-8::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 180835197
+    },
+    "iso_time": "2025-12-09T17:49:11Z"
+  },
+  {
+    "timestamp": 1765302552.628744,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 4,
+        "r2": 5,
+        "R": 13
+      }
+    },
+    "iso_time": "2025-12-09T17:49:12Z"
+  },
+  {
+    "timestamp": 1765302553.740822,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 339
+    },
+    "iso_time": "2025-12-09T17:49:13Z"
+  },
+  {
+    "timestamp": 1765302553.74098,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Circles C1 and C2 have radii 4 and 5, respectively. Both are internally tangent to a larger circle C3 of radius 13, and ",
+      "correct_answer": "339",
+      "seed_value": 180835197
+    },
+    "iso_time": "2025-12-09T17:49:13Z"
+  },
+  {
+    "timestamp": 1765302553.741024,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "339",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:49:13Z"
+  },
+  {
+    "timestamp": 1765302619.311233,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "336",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:50:19Z"
+  },
+  {
+    "timestamp": 1765302690.319411,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "334",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:51:30Z"
+  },
+  {
+    "timestamp": 1765302741.093366,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "340",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:52:21Z"
+  },
+  {
+    "timestamp": 1765302800.44822,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "339",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:53:20Z"
+  },
+  {
+    "timestamp": 1765302891.2786188,
+    "seed_id": "2005-II-8::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-8::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T17:54:51Z"
+  },
+  {
+    "timestamp": 1765302891.278801,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-8::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1770325645
+    },
+    "iso_time": "2025-12-09T17:54:51Z"
+  },
+  {
+    "timestamp": 1765302892.5572212,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 14,
+        "r2": 27,
+        "R": 30
+      }
+    },
+    "iso_time": "2025-12-09T17:54:52Z"
+  },
+  {
+    "timestamp": 1765302893.6493702,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 241
+    },
+    "iso_time": "2025-12-09T17:54:53Z"
+  },
+  {
+    "timestamp": 1765302893.649525,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Circles C1 and C2 have radii 14 and 27, respectively. Both are internally tangent to a larger circle C3 of radius 30, an",
+      "correct_answer": "241",
+      "seed_value": 1770325645
+    },
+    "iso_time": "2025-12-09T17:54:53Z"
+  },
+  {
+    "timestamp": 1765302893.649568,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "241",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:54:53Z"
+  },
+  {
+    "timestamp": 1765302967.600662,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "237",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:56:07Z"
+  },
+  {
+    "timestamp": 1765303065.567677,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "241",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T17:57:45Z"
+  },
+  {
+    "timestamp": 1765303131.750817,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "234",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T17:58:51Z"
+  },
+  {
+    "timestamp": 1765303239.855826,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T18:00:39Z"
+  },
+  {
+    "timestamp": 1765303409.850678,
+    "seed_id": "2005-II-8::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-8::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T18:03:29Z"
+  },
+  {
+    "timestamp": 1765303409.850861,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-8::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1569410917
+    },
+    "iso_time": "2025-12-09T18:03:29Z"
+  },
+  {
+    "timestamp": 1765303411.0963762,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 8,
+        "r2": 11,
+        "R": 16
+      }
+    },
+    "iso_time": "2025-12-09T18:03:31Z"
+  },
+  {
+    "timestamp": 1765303412.232981,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 150
+    },
+    "iso_time": "2025-12-09T18:03:32Z"
+  },
+  {
+    "timestamp": 1765303412.23313,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Circles C1 and C2 have radii 8 and 11, respectively. Both are internally tangent to a larger circle C3 of radius 16, and",
+      "correct_answer": "150",
+      "seed_value": 1569410917
+    },
+    "iso_time": "2025-12-09T18:03:32Z"
+  },
+  {
+    "timestamp": 1765303412.233204,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "148",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T18:03:32Z"
+  },
+  {
+    "timestamp": 1765303486.570554,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "150",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T18:04:46Z"
+  },
+  {
+    "timestamp": 1765303534.2640698,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "145",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T18:05:34Z"
+  },
+  {
+    "timestamp": 1765303590.344744,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "150",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T18:06:30Z"
+  },
+  {
+    "timestamp": 1765303611.624037,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "143",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T18:06:51Z"
+  },
+  {
+    "timestamp": 1765303661.537726,
+    "seed_id": "2005-II-8::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-8::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T18:07:41Z"
+  },
+  {
+    "timestamp": 1765303661.537913,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-8::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 559548425
+    },
+    "iso_time": "2025-12-09T18:07:41Z"
+  },
+  {
+    "timestamp": 1765303662.889604,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 11,
+        "r2": 24,
+        "R": 30
+      }
+    },
+    "iso_time": "2025-12-09T18:07:42Z"
+  },
+  {
+    "timestamp": 1765303664.015445,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2063
+    },
+    "iso_time": "2025-12-09T18:07:44Z"
+  },
+  {
+    "timestamp": 1765303664.0155892,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Circles C1 and C2 have radii 11 and 24, respectively. Both are internally tangent to a larger circle C3 of radius 30, an",
+      "correct_answer": "2063",
+      "seed_value": 559548425
+    },
+    "iso_time": "2025-12-09T18:07:44Z"
+  },
+  {
+    "timestamp": 1765303664.0156338,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2063",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T18:07:44Z"
+  },
+  {
+    "timestamp": 1765303744.9952772,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2061",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T18:09:04Z"
+  },
+  {
+    "timestamp": 1765303852.398516,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2063",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T18:10:52Z"
+  },
+  {
+    "timestamp": 1765303907.302154,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2058",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T18:11:47Z"
+  },
+  {
+    "timestamp": 1765303975.806755,
+    "seed_id": "2005-II-8::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2065",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T18:12:55Z"
+  },
+  {
+    "timestamp": 1765304004.990381,
+    "seed_id": "2005-II-8::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-8::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T18:13:24Z"
+  }
+]

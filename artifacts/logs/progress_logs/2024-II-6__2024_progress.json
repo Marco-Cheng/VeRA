@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1761942882.696137,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2024,
+      "question_preview": "Alice chooses a set $A$ of positive integers. Then Bob lists all finite nonempty sets $B$ of positive integers with the ",
+      "answer": "55",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-10-31T20:34:42Z"
+  },
+  {
+    "timestamp": 1761942882.696218,
+    "seed_id": "2024-II-6::2024",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-10-31T20:34:42Z"
+  },
+  {
+    "timestamp": 1761942882.696249,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Alice chooses a set $A$ of positive integers. Then Bob lists all finite nonempty sets $B$ of positive integers with the property that the maximum element of $B$ belongs to $A$ . Bob's list has $2024$ sets. Find the sum of the elements of $A$ .",
+      "answer": "55",
+      "example_id": "2024-II-6::2024"
+    },
+    "iso_time": "2025-10-31T20:34:42Z"
+  },
+  {
+    "timestamp": 1761942975.659276,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-6::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 60325992
+    },
+    "iso_time": "2025-10-31T20:36:15Z"
+  },
+  {
+    "timestamp": 1761942976.828046,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 4796,
+        "beta": 27370
+      }
+    },
+    "iso_time": "2025-10-31T20:36:16Z"
+  },
+  {
+    "timestamp": 1761942978.001601,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 39
+    },
+    "iso_time": "2025-10-31T20:36:18Z"
+  },
+  {
+    "timestamp": 1761942978.001769,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Alice chooses a finite set A of positive integers. Bob lists every finite nonempty subset B of positive integers such th",
+      "correct_answer": "39",
+      "seed_value": 60325992
+    },
+    "iso_time": "2025-10-31T20:36:18Z"
+  },
+  {
+    "timestamp": 1761942978.001825,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "48",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T20:36:18Z"
+  },
+  {
+    "timestamp": 1761943099.958739,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "39",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T20:38:19Z"
+  },
+  {
+    "timestamp": 1761943144.647857,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "32",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T20:39:04Z"
+  },
+  {
+    "timestamp": 1761943253.816299,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "39",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T20:40:53Z"
+  },
+  {
+    "timestamp": 1761943361.186921,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "40",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T20:42:41Z"
+  },
+  {
+    "timestamp": 1761943572.2625291,
+    "seed_id": "2024-II-6::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-6::2024_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T20:46:12Z"
+  },
+  {
+    "timestamp": 1761943572.262655,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-6::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1354233573
+    },
+    "iso_time": "2025-10-31T20:46:12Z"
+  },
+  {
+    "timestamp": 1761943573.1930351,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 1382,
+        "beta": 6685
+      }
+    },
+    "iso_time": "2025-10-31T20:46:13Z"
+  },
+  {
+    "timestamp": 1761943574.085522,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 42
+    },
+    "iso_time": "2025-10-31T20:46:14Z"
+  },
+  {
+    "timestamp": 1761943574.085653,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Alice chooses a finite set A of positive integers. Bob lists every finite nonempty subset B of positive integers such th",
+      "correct_answer": "42",
+      "seed_value": 1354233573
+    },
+    "iso_time": "2025-10-31T20:46:14Z"
+  },
+  {
+    "timestamp": 1761943574.0857,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "42",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T20:46:14Z"
+  },
+  {
+    "timestamp": 1761943661.93522,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "38",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T20:47:41Z"
+  },
+  {
+    "timestamp": 1761943728.588554,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "42",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T20:48:48Z"
+  },
+  {
+    "timestamp": 1761943848.9702132,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "44",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T20:50:48Z"
+  },
+  {
+    "timestamp": 1761943994.4363132,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "50",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T20:53:14Z"
+  },
+  {
+    "timestamp": 1761944058.270259,
+    "seed_id": "2024-II-6::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-6::2024_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T20:54:18Z"
+  },
+  {
+    "timestamp": 1761944058.2704499,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-6::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1107434855
+    },
+    "iso_time": "2025-10-31T20:54:18Z"
+  },
+  {
+    "timestamp": 1761944059.161522,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 490743,
+        "beta": 3960249
+      }
+    },
+    "iso_time": "2025-10-31T20:54:19Z"
+  },
+  {
+    "timestamp": 1761944060.047641,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 117
+    },
+    "iso_time": "2025-10-31T20:54:20Z"
+  },
+  {
+    "timestamp": 1761944060.0477598,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Alice chooses a finite set A of positive integers. Bob lists every finite nonempty subset B of positive integers such th",
+      "correct_answer": "117",
+      "seed_value": 1107434855
+    },
+    "iso_time": "2025-10-31T20:54:20Z"
+  },
+  {
+    "timestamp": 1761944060.0478039,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "117",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T20:54:20Z"
+  },
+  {
+    "timestamp": 1761944294.084885,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "116",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T20:58:14Z"
+  },
+  {
+    "timestamp": 1761944761.821593,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "111",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T21:06:01Z"
+  },
+  {
+    "timestamp": 1761944964.548343,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "112",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T21:09:24Z"
+  },
+  {
+    "timestamp": 1761945147.584285,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "117",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T21:12:27Z"
+  },
+  {
+    "timestamp": 1761945361.84219,
+    "seed_id": "2024-II-6::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-6::2024_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T21:16:01Z"
+  },
+  {
+    "timestamp": 1761945361.842491,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-6::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 613555406
+    },
+    "iso_time": "2025-10-31T21:16:01Z"
+  },
+  {
+    "timestamp": 1761945362.736543,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 29356,
+        "beta": 202587
+      }
+    },
+    "iso_time": "2025-10-31T21:16:02Z"
+  },
+  {
+    "timestamp": 1761945363.6111,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 49
+    },
+    "iso_time": "2025-10-31T21:16:03Z"
+  },
+  {
+    "timestamp": 1761945363.6112158,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Alice chooses a finite set A of positive integers. Bob lists every finite nonempty subset B of positive integers such th",
+      "correct_answer": "49",
+      "seed_value": 613555406
+    },
+    "iso_time": "2025-10-31T21:16:03Z"
+  },
+  {
+    "timestamp": 1761945363.611255,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "50",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T21:16:03Z"
+  },
+  {
+    "timestamp": 1761945426.410518,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T21:17:06Z"
+  },
+  {
+    "timestamp": 1761945590.226489,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "54",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T21:19:50Z"
+  },
+  {
+    "timestamp": 1761945794.194317,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "55",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T21:23:14Z"
+  },
+  {
+    "timestamp": 1761945858.134624,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T21:24:18Z"
+  },
+  {
+    "timestamp": 1761946099.2233658,
+    "seed_id": "2024-II-6::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-6::2024_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T21:28:19Z"
+  },
+  {
+    "timestamp": 1761946099.2235599,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-6::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 212062514
+    },
+    "iso_time": "2025-10-31T21:28:19Z"
+  },
+  {
+    "timestamp": 1761946100.11981,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 321518,
+        "beta": 2670054
+      }
+    },
+    "iso_time": "2025-10-31T21:28:20Z"
+  },
+  {
+    "timestamp": 1761946100.980514,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 89
+    },
+    "iso_time": "2025-10-31T21:28:20Z"
+  },
+  {
+    "timestamp": 1761946100.980636,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Alice chooses a finite set A of positive integers. Bob lists every finite nonempty subset B of positive integers such th",
+      "correct_answer": "89",
+      "seed_value": 212062514
+    },
+    "iso_time": "2025-10-31T21:28:20Z"
+  },
+  {
+    "timestamp": 1761946100.980675,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "86",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T21:28:20Z"
+  },
+  {
+    "timestamp": 1761946532.404044,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "97",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T21:35:32Z"
+  },
+  {
+    "timestamp": 1761946678.3462121,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "89",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T21:37:58Z"
+  },
+  {
+    "timestamp": 1761947082.4924212,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "92",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T21:44:42Z"
+  },
+  {
+    "timestamp": 1761947148.305084,
+    "seed_id": "2024-II-6::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "89",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T21:45:48Z"
+  },
+  {
+    "timestamp": 1761947317.156162,
+    "seed_id": "2024-II-6::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-6::2024_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T21:48:37Z"
+  }
+]

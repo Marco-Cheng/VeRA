@@ -1,0 +1,2201 @@
+[
+  {
+    "timestamp": 1762559830.5095732,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1983,
+      "question_preview": "Twenty five of King Arthur's knights are seated at their customary round table. Three of them are chosen - all choices b",
+      "answer": "57",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-07T23:57:10Z"
+  },
+  {
+    "timestamp": 1762559830.509604,
+    "seed_id": "1983-7::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-07T23:57:10Z"
+  },
+  {
+    "timestamp": 1762559830.5096169,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Twenty five of King Arthur's knights are seated at their customary round table. Three of them are chosen - all choices being equally likely - and are sent off to slay a troublesome dragon. Let $P$ be the probability that at least two of the three had been sitting next to each other. If $P$ is written as a fraction in lowest terms, what is the sum of the numerator and denominator?",
+      "answer": "57",
+      "example_id": "1983-7::1983"
+    },
+    "iso_time": "2025-11-07T23:57:10Z"
+  },
+  {
+    "timestamp": 1762559976.03458,
+    "seed_id": "1983-7::1983",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 24 column 478 (char 6129)",
+    "payload": {},
+    "iso_time": "2025-11-07T23:59:36Z"
+  },
+  {
+    "timestamp": 1762559976.034631,
+    "seed_id": "1983-7::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-07T23:59:36Z"
+  },
+  {
+    "timestamp": 1762559976.03465,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 24 column 478 (char 6129)",
+      "question": "Twenty five of King Arthur's knights are seated at their customary round table. Three of them are chosen - all choices being equally likely - and are sent off to slay a troublesome dragon. Let $P$ be the probability that at least two of the three had been sitting next to each other. If $P$ is written as a fraction in lowest terms, what is the sum of the numerator and denominator?",
+      "answer": "57",
+      "example_id": "1983-7::1983"
+    },
+    "iso_time": "2025-11-07T23:59:36Z"
+  },
+  {
+    "timestamp": 1762560218.156708,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 767258885
+    },
+    "iso_time": "2025-11-08T00:03:38Z"
+  },
+  {
+    "timestamp": 1762560219.103541,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 14,
+        "k": 5,
+        "d": 0
+      }
+    },
+    "iso_time": "2025-11-08T00:03:39Z"
+  },
+  {
+    "timestamp": 1762560219.872257,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 272
+    },
+    "iso_time": "2025-11-08T00:03:39Z"
+  },
+  {
+    "timestamp": 1762560219.872386,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A group of 14 students are seated in a circle. A committee of 5 students is to be chosen, with all possible committees b",
+      "correct_answer": "272",
+      "seed_value": 767258885
+    },
+    "iso_time": "2025-11-08T00:03:39Z"
+  },
+  {
+    "timestamp": 1762560219.872428,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "272",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T00:03:39Z"
+  },
+  {
+    "timestamp": 1762560348.175662,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "265",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T00:05:48Z"
+  },
+  {
+    "timestamp": 1762560487.074362,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "279",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T00:08:07Z"
+  },
+  {
+    "timestamp": 1762560671.0452852,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "281",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T00:11:11Z"
+  },
+  {
+    "timestamp": 1762560862.019957,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "272",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T00:14:22Z"
+  },
+  {
+    "timestamp": 1762560921.601009,
+    "seed_id": "1983-7::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-7::1983_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-08T00:15:21Z"
+  },
+  {
+    "timestamp": 1762560921.601054,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1344271071
+    },
+    "iso_time": "2025-11-08T00:15:21Z"
+  },
+  {
+    "timestamp": 1762560922.3627222,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 16,
+        "k": 5,
+        "d": 1
+      }
+    },
+    "iso_time": "2025-11-08T00:15:22Z"
+  },
+  {
+    "timestamp": 1762560923.149332,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 335
+    },
+    "iso_time": "2025-11-08T00:15:23Z"
+  },
+  {
+    "timestamp": 1762560923.149463,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A group of 16 students are seated in a circle. A committee of 5 students is to be chosen, with all possible committees b",
+      "correct_answer": "335",
+      "seed_value": 1344271071
+    },
+    "iso_time": "2025-11-08T00:15:23Z"
+  },
+  {
+    "timestamp": 1762560923.149506,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "335",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T00:15:23Z"
+  },
+  {
+    "timestamp": 1762561132.034771,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "338",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T00:18:52Z"
+  },
+  {
+    "timestamp": 1762561417.707201,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "329",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T00:23:37Z"
+  },
+  {
+    "timestamp": 1762561614.259042,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "335",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T00:26:54Z"
+  },
+  {
+    "timestamp": 1762561824.697603,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "337",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T00:30:24Z"
+  },
+  {
+    "timestamp": 1762562096.258962,
+    "seed_id": "1983-7::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-08T00:34:56Z"
+  },
+  {
+    "timestamp": 1762562096.259031,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 582693508
+    },
+    "iso_time": "2025-11-08T00:34:56Z"
+  },
+  {
+    "timestamp": 1762562097.234297,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 19,
+        "k": 3,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-08T00:34:57Z"
+  },
+  {
+    "timestamp": 1762562098.018351,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 601
+    },
+    "iso_time": "2025-11-08T00:34:58Z"
+  },
+  {
+    "timestamp": 1762562098.018493,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A group of 19 students are seated in a circle. A committee of 3 students is to be chosen, with all possible committees b",
+      "correct_answer": "601",
+      "seed_value": 582693508
+    },
+    "iso_time": "2025-11-08T00:34:58Z"
+  },
+  {
+    "timestamp": 1762562098.018539,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "601",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T00:34:58Z"
+  },
+  {
+    "timestamp": 1762562368.445205,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "595",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T00:39:28Z"
+  },
+  {
+    "timestamp": 1762562642.245711,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "601",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T00:44:02Z"
+  },
+  {
+    "timestamp": 1762562876.7789388,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "605",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T00:47:56Z"
+  },
+  {
+    "timestamp": 1762563151.8690822,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "596",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T00:52:31Z"
+  },
+  {
+    "timestamp": 1762563377.375801,
+    "seed_id": "1983-7::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-08T00:56:17Z"
+  },
+  {
+    "timestamp": 1762563377.375892,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1660902756
+    },
+    "iso_time": "2025-11-08T00:56:17Z"
+  },
+  {
+    "timestamp": 1762563378.647119,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 15,
+        "k": 3,
+        "d": 1
+      }
+    },
+    "iso_time": "2025-11-08T00:56:18Z"
+  },
+  {
+    "timestamp": 1762563379.680346,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 762
+    },
+    "iso_time": "2025-11-08T00:56:19Z"
+  },
+  {
+    "timestamp": 1762563379.6804988,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A group of 15 students are seated in a circle. A committee of 3 students is to be chosen, with all possible committees b",
+      "correct_answer": "762",
+      "seed_value": 1660902756
+    },
+    "iso_time": "2025-11-08T00:56:19Z"
+  },
+  {
+    "timestamp": 1762563379.680552,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "770",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T00:56:19Z"
+  },
+  {
+    "timestamp": 1762563631.8396502,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "762",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T01:00:31Z"
+  },
+  {
+    "timestamp": 1762563887.636394,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "762",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T01:04:47Z"
+  },
+  {
+    "timestamp": 1762564116.7873988,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "760",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T01:08:36Z"
+  },
+  {
+    "timestamp": 1762564364.717966,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "767",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T01:12:44Z"
+  },
+  {
+    "timestamp": 1762564591.233162,
+    "seed_id": "1983-7::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-08T01:16:31Z"
+  },
+  {
+    "timestamp": 1762564591.2332318,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 680421332
+    },
+    "iso_time": "2025-11-08T01:16:31Z"
+  },
+  {
+    "timestamp": 1762564591.991715,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 22,
+        "k": 3,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-08T01:16:31Z"
+  },
+  {
+    "timestamp": 1762564592.7623549,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 197
+    },
+    "iso_time": "2025-11-08T01:16:32Z"
+  },
+  {
+    "timestamp": 1762564592.762481,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A group of 22 students are seated in a circle. A committee of 3 students is to be chosen, with all possible committees b",
+      "correct_answer": "197",
+      "seed_value": 680421332
+    },
+    "iso_time": "2025-11-08T01:16:32Z"
+  },
+  {
+    "timestamp": 1762564592.762523,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "197",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T01:16:32Z"
+  },
+  {
+    "timestamp": 1762564859.605273,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "189",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T01:20:59Z"
+  },
+  {
+    "timestamp": 1762565100.362514,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "205",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T01:25:00Z"
+  },
+  {
+    "timestamp": 1762565334.9609091,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "199",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T01:28:54Z"
+  },
+  {
+    "timestamp": 1762565950.612948,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "197",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T01:39:10Z"
+  },
+  {
+    "timestamp": 1762566188.302667,
+    "seed_id": "1983-7::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-08T01:43:08Z"
+  },
+  {
+    "timestamp": 1762566188.302718,
+    "seed_id": "1983-7::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-08T01:43:08Z"
+  },
+  {
+    "timestamp": 1762566188.3027358,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 2 (successes=2). | Judge rejected variant 3 (successes=3). | Judge rejected variant 4 (successes=3).",
+      "question": "Twenty five of King Arthur's knights are seated at their customary round table. Three of them are chosen - all choices being equally likely - and are sent off to slay a troublesome dragon. Let $P$ be the probability that at least two of the three had been sitting next to each other. If $P$ is written as a fraction in lowest terms, what is the sum of the numerator and denominator?",
+      "answer": "57",
+      "example_id": "1983-7::1983"
+    },
+    "iso_time": "2025-11-08T01:43:08Z"
+  },
+  {
+    "timestamp": 1762612106.461065,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1066699961
+    },
+    "iso_time": "2025-11-08T14:28:26Z"
+  },
+  {
+    "timestamp": 1762612107.436866,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:27Z"
+  },
+  {
+    "timestamp": 1762612108.208695,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:28Z"
+  },
+  {
+    "timestamp": 1762612108.976359,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:28Z"
+  },
+  {
+    "timestamp": 1762612109.741981,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:29Z"
+  },
+  {
+    "timestamp": 1762612110.507134,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:30Z"
+  },
+  {
+    "timestamp": 1762612111.268821,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:31Z"
+  },
+  {
+    "timestamp": 1762612112.0300548,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:32Z"
+  },
+  {
+    "timestamp": 1762612112.8008351,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:32Z"
+  },
+  {
+    "timestamp": 1762612113.5674791,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:33Z"
+  },
+  {
+    "timestamp": 1762612114.3301818,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:34Z"
+  },
+  {
+    "timestamp": 1762612115.095318,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:35Z"
+  },
+  {
+    "timestamp": 1762612115.861869,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:35Z"
+  },
+  {
+    "timestamp": 1762612116.626025,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:36Z"
+  },
+  {
+    "timestamp": 1762612117.389899,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:37Z"
+  },
+  {
+    "timestamp": 1762612117.389987,
+    "seed_id": "1983-7::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.928924083709717
+    },
+    "iso_time": "2025-11-08T14:28:37Z"
+  },
+  {
+    "timestamp": 1762612117.390068,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 2017179971
+    },
+    "iso_time": "2025-11-08T14:28:37Z"
+  },
+  {
+    "timestamp": 1762612118.157859,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:38Z"
+  },
+  {
+    "timestamp": 1762612118.92122,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:38Z"
+  },
+  {
+    "timestamp": 1762612119.686429,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:39Z"
+  },
+  {
+    "timestamp": 1762612120.4499378,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:40Z"
+  },
+  {
+    "timestamp": 1762612121.214239,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:41Z"
+  },
+  {
+    "timestamp": 1762612121.9778671,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:41Z"
+  },
+  {
+    "timestamp": 1762612122.745209,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:42Z"
+  },
+  {
+    "timestamp": 1762612123.508894,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:43Z"
+  },
+  {
+    "timestamp": 1762612124.2714329,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:44Z"
+  },
+  {
+    "timestamp": 1762612125.029075,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:45Z"
+  },
+  {
+    "timestamp": 1762612125.7890391,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:45Z"
+  },
+  {
+    "timestamp": 1762612126.554461,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:46Z"
+  },
+  {
+    "timestamp": 1762612127.3203058,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:47Z"
+  },
+  {
+    "timestamp": 1762612128.089262,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:48Z"
+  },
+  {
+    "timestamp": 1762612128.089345,
+    "seed_id": "1983-7::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.69927716255188
+    },
+    "iso_time": "2025-11-08T14:28:48Z"
+  },
+  {
+    "timestamp": 1762612128.089397,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 262386861
+    },
+    "iso_time": "2025-11-08T14:28:48Z"
+  },
+  {
+    "timestamp": 1762612128.8518882,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:48Z"
+  },
+  {
+    "timestamp": 1762612129.6606688,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:49Z"
+  },
+  {
+    "timestamp": 1762612130.418407,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:50Z"
+  },
+  {
+    "timestamp": 1762612131.1768599,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:51Z"
+  },
+  {
+    "timestamp": 1762612131.937613,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:51Z"
+  },
+  {
+    "timestamp": 1762612132.705329,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:52Z"
+  },
+  {
+    "timestamp": 1762612133.469144,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:53Z"
+  },
+  {
+    "timestamp": 1762612134.233418,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:54Z"
+  },
+  {
+    "timestamp": 1762612134.998464,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:54Z"
+  },
+  {
+    "timestamp": 1762612135.7619278,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:55Z"
+  },
+  {
+    "timestamp": 1762612136.5300832,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:56Z"
+  },
+  {
+    "timestamp": 1762612137.276546,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:57Z"
+  },
+  {
+    "timestamp": 1762612138.051744,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:58Z"
+  },
+  {
+    "timestamp": 1762612138.818729,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:28:58Z"
+  },
+  {
+    "timestamp": 1762612138.818811,
+    "seed_id": "1983-7::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.729414224624634
+    },
+    "iso_time": "2025-11-08T14:28:58Z"
+  },
+  {
+    "timestamp": 1762612138.818858,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1676594544
+    },
+    "iso_time": "2025-11-08T14:28:58Z"
+  },
+  {
+    "timestamp": 1762612139.582527,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:28:59Z"
+  },
+  {
+    "timestamp": 1762612140.345519,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:00Z"
+  },
+  {
+    "timestamp": 1762612141.114922,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:01Z"
+  },
+  {
+    "timestamp": 1762612141.879762,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:01Z"
+  },
+  {
+    "timestamp": 1762612142.661581,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:02Z"
+  },
+  {
+    "timestamp": 1762612143.429091,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:03Z"
+  },
+  {
+    "timestamp": 1762612144.201956,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:04Z"
+  },
+  {
+    "timestamp": 1762612144.964243,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:04Z"
+  },
+  {
+    "timestamp": 1762612145.728265,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:05Z"
+  },
+  {
+    "timestamp": 1762612146.4852538,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:06Z"
+  },
+  {
+    "timestamp": 1762612147.250797,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:07Z"
+  },
+  {
+    "timestamp": 1762612148.020253,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:08Z"
+  },
+  {
+    "timestamp": 1762612148.788748,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:08Z"
+  },
+  {
+    "timestamp": 1762612149.5532842,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:09Z"
+  },
+  {
+    "timestamp": 1762612149.553358,
+    "seed_id": "1983-7::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.734502077102661
+    },
+    "iso_time": "2025-11-08T14:29:09Z"
+  },
+  {
+    "timestamp": 1762612149.553407,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 296074168
+    },
+    "iso_time": "2025-11-08T14:29:09Z"
+  },
+  {
+    "timestamp": 1762612150.3243961,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:10Z"
+  },
+  {
+    "timestamp": 1762612151.092258,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:11Z"
+  },
+  {
+    "timestamp": 1762612151.85885,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:11Z"
+  },
+  {
+    "timestamp": 1762612152.647449,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:12Z"
+  },
+  {
+    "timestamp": 1762612153.396103,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:13Z"
+  },
+  {
+    "timestamp": 1762612154.161226,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:14Z"
+  },
+  {
+    "timestamp": 1762612154.925556,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:14Z"
+  },
+  {
+    "timestamp": 1762612155.68379,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:15Z"
+  },
+  {
+    "timestamp": 1762612156.446899,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:16Z"
+  },
+  {
+    "timestamp": 1762612157.2074518,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:17Z"
+  },
+  {
+    "timestamp": 1762612157.974441,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:17Z"
+  },
+  {
+    "timestamp": 1762612158.73825,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:18Z"
+  },
+  {
+    "timestamp": 1762612159.54221,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T14:29:19Z"
+  },
+  {
+    "timestamp": 1762612160.3165429,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T14:29:20Z"
+  },
+  {
+    "timestamp": 1762612160.3166149,
+    "seed_id": "1983-7::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.763209819793701
+    },
+    "iso_time": "2025-11-08T14:29:20Z"
+  },
+  {
+    "timestamp": 1762612160.31665,
+    "seed_id": "1983-7::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-08T14:29:20Z"
+  },
+  {
+    "timestamp": 1762612160.3166661,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "Twenty five of King Arthur's knights are seated at their customary round table. Three of them are chosen - all choices being equally likely - and are sent off to slay a troublesome dragon. Let $P$ be the probability that at least two of the three had been sitting next to each other. If $P$ is written as a fraction in lowest terms, what is the sum of the numerator and denominator?",
+      "answer": "57",
+      "example_id": "1983-7::1983"
+    },
+    "iso_time": "2025-11-08T14:29:20Z"
+  },
+  {
+    "timestamp": 1762612496.608902,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 1117317780
+    },
+    "iso_time": "2025-11-08T14:34:56Z"
+  },
+  {
+    "timestamp": 1762612497.3446379,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 50,
+        "beta": 3,
+        "gamma": 20
+      }
+    },
+    "iso_time": "2025-11-08T14:34:57Z"
+  },
+  {
+    "timestamp": 1762612498.1125062,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 563
+    },
+    "iso_time": "2025-11-08T14:34:58Z"
+  },
+  {
+    "timestamp": 1762612498.112639,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "At a round table, 50 students are seated. A team of 3 students is to be chosen at random. The selection is called '20-co",
+      "correct_answer": "563",
+      "seed_value": 1117317780
+    },
+    "iso_time": "2025-11-08T14:34:58Z"
+  },
+  {
+    "timestamp": 1762612498.112683,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "559",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T14:34:58Z"
+  },
+  {
+    "timestamp": 1762612759.753002,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "557",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T14:39:19Z"
+  },
+  {
+    "timestamp": 1762612996.383509,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "563",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T14:43:16Z"
+  },
+  {
+    "timestamp": 1762613103.841333,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "565",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T14:45:03Z"
+  },
+  {
+    "timestamp": 1762613292.7706182,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "563",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T14:48:12Z"
+  },
+  {
+    "timestamp": 1762613419.3708658,
+    "seed_id": "1983-7::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-7::1983_prompt04-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-08T14:50:19Z"
+  },
+  {
+    "timestamp": 1762613419.3709052,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 982704188
+    },
+    "iso_time": "2025-11-08T14:50:19Z"
+  },
+  {
+    "timestamp": 1762613420.1367512,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 62,
+        "beta": 4,
+        "gamma": 26
+      }
+    },
+    "iso_time": "2025-11-08T14:50:20Z"
+  },
+  {
+    "timestamp": 1762613420.91342,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4519
+    },
+    "iso_time": "2025-11-08T14:50:20Z"
+  },
+  {
+    "timestamp": 1762613420.913564,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "At a round table, 62 students are seated. A team of 4 students is to be chosen at random. The selection is called '26-co",
+      "correct_answer": "4519",
+      "seed_value": 982704188
+    },
+    "iso_time": "2025-11-08T14:50:20Z"
+  },
+  {
+    "timestamp": 1762613420.9136121,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4519",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T14:50:20Z"
+  },
+  {
+    "timestamp": 1762613576.41779,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4518",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T14:52:56Z"
+  },
+  {
+    "timestamp": 1762613763.817342,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4510",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T14:56:03Z"
+  },
+  {
+    "timestamp": 1762613965.333117,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4528",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T14:59:25Z"
+  },
+  {
+    "timestamp": 1762614148.561703,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4519",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T15:02:28Z"
+  },
+  {
+    "timestamp": 1762614309.0921779,
+    "seed_id": "1983-7::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-7::1983_prompt04-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-08T15:05:09Z"
+  },
+  {
+    "timestamp": 1762614309.092226,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 3,
+      "seed_value": 1144435156
+    },
+    "iso_time": "2025-11-08T15:05:09Z"
+  },
+  {
+    "timestamp": 1762614310.043773,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 26,
+        "beta": 3,
+        "gamma": 8
+      }
+    },
+    "iso_time": "2025-11-08T15:05:10Z"
+  },
+  {
+    "timestamp": 1762614310.852663,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 121
+    },
+    "iso_time": "2025-11-08T15:05:10Z"
+  },
+  {
+    "timestamp": 1762614310.8528051,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "At a round table, 26 students are seated. A team of 3 students is to be chosen at random. The selection is called '8-com",
+      "correct_answer": "121",
+      "seed_value": 1144435156
+    },
+    "iso_time": "2025-11-08T15:05:10Z"
+  },
+  {
+    "timestamp": 1762614310.8528461,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "122",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T15:05:10Z"
+  },
+  {
+    "timestamp": 1762614611.89007,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T15:10:11Z"
+  },
+  {
+    "timestamp": 1762614825.605668,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "121",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T15:13:45Z"
+  },
+  {
+    "timestamp": 1762614911.6157,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "120",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T15:15:11Z"
+  },
+  {
+    "timestamp": 1762615096.365472,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "121",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T15:18:16Z"
+  },
+  {
+    "timestamp": 1762615218.7167208,
+    "seed_id": "1983-7::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-7::1983_prompt04-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-08T15:20:18Z"
+  },
+  {
+    "timestamp": 1762615218.7167711,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-7::1983_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 4,
+      "seed_value": 1912508170
+    },
+    "iso_time": "2025-11-08T15:20:18Z"
+  },
+  {
+    "timestamp": 1762615219.712589,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 66,
+        "beta": 3,
+        "gamma": 14
+      }
+    },
+    "iso_time": "2025-11-08T15:20:19Z"
+  },
+  {
+    "timestamp": 1762615220.50822,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 89
+    },
+    "iso_time": "2025-11-08T15:20:20Z"
+  },
+  {
+    "timestamp": 1762615220.5083709,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "At a round table, 66 students are seated. A team of 3 students is to be chosen at random. The selection is called '14-co",
+      "correct_answer": "89",
+      "seed_value": 1912508170
+    },
+    "iso_time": "2025-11-08T15:20:20Z"
+  },
+  {
+    "timestamp": 1762615220.508418,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "95",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T15:20:20Z"
+  },
+  {
+    "timestamp": 1762615366.289439,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "89",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T15:22:46Z"
+  },
+  {
+    "timestamp": 1762615475.8420181,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "83",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T15:24:35Z"
+  },
+  {
+    "timestamp": 1762615656.076245,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "80",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T15:27:36Z"
+  },
+  {
+    "timestamp": 1762615773.828862,
+    "seed_id": "1983-7::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "89",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T15:29:33Z"
+  },
+  {
+    "timestamp": 1762615921.953672,
+    "seed_id": "1983-7::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-7::1983_prompt04-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-08T15:32:01Z"
+  }
+]

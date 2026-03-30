@@ -1,0 +1,714 @@
+[
+  {
+    "timestamp": 1761861009.018024,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2024,
+      "question_preview": "A list of positive integers has the following properties: $\\bullet$ The sum of the items in the list is $30$ . $\\bullet$",
+      "answer": "236",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-10-30T21:50:09Z"
+  },
+  {
+    "timestamp": 1761861009.018081,
+    "seed_id": "2024-II-2::2024",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-10-30T21:50:09Z"
+  },
+  {
+    "timestamp": 1761861009.018115,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A list of positive integers has the following properties: $\\bullet$ The sum of the items in the list is $30$ . $\\bullet$ The unique mode of the list is $9$ . $\\bullet$ The median of the list is a positive integer that does not appear in the list itself. Find the sum of the squares of all the items in the list.",
+      "answer": "236",
+      "example_id": "2024-II-2::2024"
+    },
+    "iso_time": "2025-10-30T21:50:09Z"
+  },
+  {
+    "timestamp": 1761861514.627556,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-2::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 322157271
+    },
+    "iso_time": "2025-10-30T21:58:34Z"
+  },
+  {
+    "timestamp": 1761861515.5413032,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_count": 18,
+        "total_sum": 252,
+        "mode_value": 19,
+        "median_mean_value": 14,
+        "range_value": 16,
+        "mode_gap": 5,
+        "below_repeat_gap1": 4,
+        "below_repeat_gap2": 6,
+        "distinct_count": 7
+      }
+    },
+    "iso_time": "2025-10-30T21:58:35Z"
+  },
+  {
+    "timestamp": 1761861516.4406831,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4066
+    },
+    "iso_time": "2025-10-30T21:58:36Z"
+  },
+  {
+    "timestamp": 1761861516.4408221,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a list of 18 positive integers satisfies all of the following:\n- The sum of its entries is 252.\n- The",
+      "correct_answer": "4066",
+      "seed_value": 322157271
+    },
+    "iso_time": "2025-10-30T21:58:36Z"
+  },
+  {
+    "timestamp": 1761861516.440871,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4067",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:58:36Z"
+  },
+  {
+    "timestamp": 1761861743.911492,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4075",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:02:23Z"
+  },
+  {
+    "timestamp": 1761862033.396885,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4066",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T22:07:13Z"
+  },
+  {
+    "timestamp": 1761862186.791279,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4074",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:09:46Z"
+  },
+  {
+    "timestamp": 1761862405.950352,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4066",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T22:13:25Z"
+  },
+  {
+    "timestamp": 1761862448.656676,
+    "seed_id": "2024-II-2::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-2::2024_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T22:14:08Z"
+  },
+  {
+    "timestamp": 1761862448.6567721,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-2::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 449751804
+    },
+    "iso_time": "2025-10-30T22:14:08Z"
+  },
+  {
+    "timestamp": 1761862449.5933802,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_count": 18,
+        "total_sum": 306,
+        "mode_value": 22,
+        "median_mean_value": 17,
+        "range_value": 14,
+        "mode_gap": 5,
+        "below_repeat_gap1": 4,
+        "below_repeat_gap2": 6,
+        "distinct_count": 7
+      }
+    },
+    "iso_time": "2025-10-30T22:14:09Z"
+  },
+  {
+    "timestamp": 1761862450.484373,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5710
+    },
+    "iso_time": "2025-10-30T22:14:10Z"
+  },
+  {
+    "timestamp": 1761862450.4845061,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a list of 18 positive integers satisfies all of the following:\n- The sum of its entries is 306.\n- The",
+      "correct_answer": "5710",
+      "seed_value": 449751804
+    },
+    "iso_time": "2025-10-30T22:14:10Z"
+  },
+  {
+    "timestamp": 1761862450.48455,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5710",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T22:14:10Z"
+  },
+  {
+    "timestamp": 1761862553.917987,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5702",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:15:53Z"
+  },
+  {
+    "timestamp": 1761862656.174001,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5705",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:17:36Z"
+  },
+  {
+    "timestamp": 1761862815.885407,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5710",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T22:20:15Z"
+  },
+  {
+    "timestamp": 1761862898.0568519,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5714",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:21:38Z"
+  },
+  {
+    "timestamp": 1761862933.7979221,
+    "seed_id": "2024-II-2::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-2::2024_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T22:22:13Z"
+  },
+  {
+    "timestamp": 1761862933.798103,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-2::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 518397672
+    },
+    "iso_time": "2025-10-30T22:22:13Z"
+  },
+  {
+    "timestamp": 1761862934.684588,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_count": 14,
+        "total_sum": 196,
+        "mode_value": 18,
+        "median_mean_value": 14,
+        "range_value": 14,
+        "mode_gap": 4,
+        "below_repeat_gap1": 3,
+        "below_repeat_gap2": 5,
+        "distinct_count": 7
+      }
+    },
+    "iso_time": "2025-10-30T22:22:14Z"
+  },
+  {
+    "timestamp": 1761862935.575404,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3042
+    },
+    "iso_time": "2025-10-30T22:22:15Z"
+  },
+  {
+    "timestamp": 1761862935.575536,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a list of 14 positive integers satisfies all of the following:\n- The sum of its entries is 196.\n- The",
+      "correct_answer": "3042",
+      "seed_value": 518397672
+    },
+    "iso_time": "2025-10-30T22:22:15Z"
+  },
+  {
+    "timestamp": 1761862935.5755851,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3048",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:22:15Z"
+  },
+  {
+    "timestamp": 1761862981.086228,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3049",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:23:01Z"
+  },
+  {
+    "timestamp": 1761863132.932978,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3042",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T22:25:32Z"
+  },
+  {
+    "timestamp": 1761863577.647406,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3043",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:32:57Z"
+  },
+  {
+    "timestamp": 1761863657.6151512,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3042",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T22:34:17Z"
+  },
+  {
+    "timestamp": 1761863717.5745778,
+    "seed_id": "2024-II-2::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-2::2024_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T22:35:17Z"
+  },
+  {
+    "timestamp": 1761863717.574731,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-2::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 985647766
+    },
+    "iso_time": "2025-10-30T22:35:17Z"
+  },
+  {
+    "timestamp": 1761863718.489931,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_count": 14,
+        "total_sum": 224,
+        "mode_value": 21,
+        "median_mean_value": 16,
+        "range_value": 16,
+        "mode_gap": 5,
+        "below_repeat_gap1": 4,
+        "below_repeat_gap2": 6,
+        "distinct_count": 7
+      }
+    },
+    "iso_time": "2025-10-30T22:35:18Z"
+  },
+  {
+    "timestamp": 1761863719.372019,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4020
+    },
+    "iso_time": "2025-10-30T22:35:19Z"
+  },
+  {
+    "timestamp": 1761863719.372152,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a list of 14 positive integers satisfies all of the following:\n- The sum of its entries is 224.\n- The",
+      "correct_answer": "4020",
+      "seed_value": 985647766
+    },
+    "iso_time": "2025-10-30T22:35:19Z"
+  },
+  {
+    "timestamp": 1761863719.372195,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4013",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:35:19Z"
+  },
+  {
+    "timestamp": 1761863775.9840581,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4020",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T22:36:15Z"
+  },
+  {
+    "timestamp": 1761863938.760847,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4020",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T22:38:58Z"
+  },
+  {
+    "timestamp": 1761864214.412075,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4019",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:43:34Z"
+  },
+  {
+    "timestamp": 1761864296.771456,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4018",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:44:56Z"
+  },
+  {
+    "timestamp": 1761864336.875576,
+    "seed_id": "2024-II-2::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-2::2024_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T22:45:36Z"
+  },
+  {
+    "timestamp": 1761864336.875751,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-2::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1218090678
+    },
+    "iso_time": "2025-10-30T22:45:36Z"
+  },
+  {
+    "timestamp": 1761864337.8013,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_count": 14,
+        "total_sum": 252,
+        "mode_value": 24,
+        "median_mean_value": 18,
+        "range_value": 16,
+        "mode_gap": 6,
+        "below_repeat_gap1": 5,
+        "below_repeat_gap2": 7,
+        "distinct_count": 7
+      }
+    },
+    "iso_time": "2025-10-30T22:45:37Z"
+  },
+  {
+    "timestamp": 1761864338.660542,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5104
+    },
+    "iso_time": "2025-10-30T22:45:38Z"
+  },
+  {
+    "timestamp": 1761864338.660672,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a list of 14 positive integers satisfies all of the following:\n- The sum of its entries is 252.\n- The",
+      "correct_answer": "5104",
+      "seed_value": 1218090678
+    },
+    "iso_time": "2025-10-30T22:45:38Z"
+  },
+  {
+    "timestamp": 1761864338.6607208,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5096",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:45:38Z"
+  },
+  {
+    "timestamp": 1761864439.086765,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5112",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:47:19Z"
+  },
+  {
+    "timestamp": 1761864638.5620108,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5104",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T22:50:38Z"
+  },
+  {
+    "timestamp": 1761864695.294639,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5104",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T22:51:35Z"
+  },
+  {
+    "timestamp": 1761864791.827698,
+    "seed_id": "2024-II-2::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5097",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:53:11Z"
+  },
+  {
+    "timestamp": 1761864876.988304,
+    "seed_id": "2024-II-2::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-2::2024_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T22:54:36Z"
+  }
+]

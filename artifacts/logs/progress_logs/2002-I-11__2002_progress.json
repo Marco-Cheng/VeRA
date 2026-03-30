@@ -1,0 +1,870 @@
+[
+  {
+    "timestamp": 1764628906.456308,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2002,
+      "question_preview": "Let $ABCD$ and $BCFG$ be two faces of a cube with $AB=12$ . A beam of light emanates from vertex $A$ and reflects off fa",
+      "answer": "230",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T22:41:46Z"
+  },
+  {
+    "timestamp": 1764628906.456393,
+    "seed_id": "2002-I-11::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T22:41:46Z"
+  },
+  {
+    "timestamp": 1764628906.456506,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $ABCD$ and $BCFG$ be two faces of a cube with $AB=12$ . A beam of light emanates from vertex $A$ and reflects off face $BCFG$ at point $P$ , which is $7$ units from $\\overline{BG}$ and $5$ units from $\\overline{BC}$ . The beam continues to be reflected off the faces of the cube. The length of the light path from the time it leaves point $A$ until it next reaches a vertex of the cube is given by $m\\sqrt{n}$ , where $m$ and $n$ are integers and $n$ is not divisible by the square of any prime. Find $m+n$ .",
+      "answer": "230",
+      "example_id": "2002-I-11::2002"
+    },
+    "iso_time": "2025-12-01T22:41:46Z"
+  },
+  {
+    "timestamp": 1764629008.441769,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-11::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 389317260
+    },
+    "iso_time": "2025-12-01T22:43:28Z"
+  },
+  {
+    "timestamp": 1764629009.820943,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 18,
+        "b": 11,
+        "c": 14,
+        "first_axis": "y",
+        "first_face_length": 11,
+        "other_axis_1": "x",
+        "other_axis_2": "z",
+        "dist_other_1": 7,
+        "dist_other_2": 9
+      }
+    },
+    "iso_time": "2025-12-01T22:43:29Z"
+  },
+  {
+    "timestamp": 1764629010.90337,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 377
+    },
+    "iso_time": "2025-12-01T22:43:30Z"
+  },
+  {
+    "timestamp": 1764629010.903519,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangular box is aligned with the coordinate axes, with edge lengths 18, 11, and 14 along the x-, y-, and z-directio",
+      "correct_answer": "377",
+      "seed_value": 389317260
+    },
+    "iso_time": "2025-12-01T22:43:30Z"
+  },
+  {
+    "timestamp": 1764629010.903581,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "377",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:43:30Z"
+  },
+  {
+    "timestamp": 1764629069.364201,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "377",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:44:29Z"
+  },
+  {
+    "timestamp": 1764629098.448879,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "383",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:44:58Z"
+  },
+  {
+    "timestamp": 1764629257.7739022,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "379",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:47:37Z"
+  },
+  {
+    "timestamp": 1764629287.729758,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "382",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:48:07Z"
+  },
+  {
+    "timestamp": 1764629321.590035,
+    "seed_id": "2002-I-11::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T22:48:41Z"
+  },
+  {
+    "timestamp": 1764629321.5902889,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-11::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 976806065
+    },
+    "iso_time": "2025-12-01T22:48:41Z"
+  },
+  {
+    "timestamp": 1764629322.81433,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 14,
+        "b": 14,
+        "c": 14,
+        "first_axis": "y",
+        "first_face_length": 14,
+        "other_axis_1": "x",
+        "other_axis_2": "z",
+        "dist_other_1": 3,
+        "dist_other_2": 13
+      }
+    },
+    "iso_time": "2025-12-01T22:48:42Z"
+  },
+  {
+    "timestamp": 1764629323.9079092,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 388
+    },
+    "iso_time": "2025-12-01T22:48:43Z"
+  },
+  {
+    "timestamp": 1764629323.9080708,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangular box is aligned with the coordinate axes, with edge lengths 14, 14, and 14 along the x-, y-, and z-directio",
+      "correct_answer": "388",
+      "seed_value": 976806065
+    },
+    "iso_time": "2025-12-01T22:48:43Z"
+  },
+  {
+    "timestamp": 1764629323.908134,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "384",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:48:43Z"
+  },
+  {
+    "timestamp": 1764629380.0056589,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "388",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:49:40Z"
+  },
+  {
+    "timestamp": 1764629425.086277,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "379",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:50:25Z"
+  },
+  {
+    "timestamp": 1764629477.523984,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "389",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:51:17Z"
+  },
+  {
+    "timestamp": 1764629511.177184,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "388",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:51:51Z"
+  },
+  {
+    "timestamp": 1764629564.7727518,
+    "seed_id": "2002-I-11::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-11::2002_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T22:52:44Z"
+  },
+  {
+    "timestamp": 1764629564.77291,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-11::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1926589827
+    },
+    "iso_time": "2025-12-01T22:52:44Z"
+  },
+  {
+    "timestamp": 1764629565.980968,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 19,
+        "b": 18,
+        "c": 14,
+        "first_axis": "z",
+        "first_face_length": 14,
+        "other_axis_1": "x",
+        "other_axis_2": "y",
+        "dist_other_1": 17,
+        "dist_other_2": 17
+      }
+    },
+    "iso_time": "2025-12-01T22:52:45Z"
+  },
+  {
+    "timestamp": 1764629567.20078,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1112
+    },
+    "iso_time": "2025-12-01T22:52:47Z"
+  },
+  {
+    "timestamp": 1764629567.200999,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangular box is aligned with the coordinate axes, with edge lengths 19, 18, and 14 along the x-, y-, and z-directio",
+      "correct_answer": "1112",
+      "seed_value": 1926589827
+    },
+    "iso_time": "2025-12-01T22:52:47Z"
+  },
+  {
+    "timestamp": 1764629567.201069,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1118",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:52:47Z"
+  },
+  {
+    "timestamp": 1764629609.889586,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1112",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:53:29Z"
+  },
+  {
+    "timestamp": 1764629639.173285,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:53:59Z"
+  },
+  {
+    "timestamp": 1764629686.071884,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1103",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:54:46Z"
+  },
+  {
+    "timestamp": 1764629726.113816,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1112",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:55:26Z"
+  },
+  {
+    "timestamp": 1764629772.198622,
+    "seed_id": "2002-I-11::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-11::2002_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T22:56:12Z"
+  },
+  {
+    "timestamp": 1764629772.198802,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-11::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 513403241
+    },
+    "iso_time": "2025-12-01T22:56:12Z"
+  },
+  {
+    "timestamp": 1764629773.518263,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 14,
+        "b": 20,
+        "c": 19,
+        "first_axis": "z",
+        "first_face_length": 19,
+        "other_axis_1": "x",
+        "other_axis_2": "y",
+        "dist_other_1": 13,
+        "dist_other_2": 1
+      }
+    },
+    "iso_time": "2025-12-01T22:56:13Z"
+  },
+  {
+    "timestamp": 1764629774.642406,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 479
+    },
+    "iso_time": "2025-12-01T22:56:14Z"
+  },
+  {
+    "timestamp": 1764629774.642567,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangular box is aligned with the coordinate axes, with edge lengths 14, 20, and 19 along the x-, y-, and z-directio",
+      "correct_answer": "479",
+      "seed_value": 513403241
+    },
+    "iso_time": "2025-12-01T22:56:14Z"
+  },
+  {
+    "timestamp": 1764629774.642633,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "479",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:56:14Z"
+  },
+  {
+    "timestamp": 1764629809.360805,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "482",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:56:49Z"
+  },
+  {
+    "timestamp": 1764629864.7810571,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "475",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:57:44Z"
+  },
+  {
+    "timestamp": 1764629918.787904,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "476",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T22:58:38Z"
+  },
+  {
+    "timestamp": 1764629966.2291598,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "479",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T22:59:26Z"
+  },
+  {
+    "timestamp": 1764630001.556701,
+    "seed_id": "2002-I-11::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-11::2002_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T23:00:01Z"
+  },
+  {
+    "timestamp": 1764630001.556913,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-11::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1488218963
+    },
+    "iso_time": "2025-12-01T23:00:01Z"
+  },
+  {
+    "timestamp": 1764630002.679766,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 18,
+        "b": 11,
+        "c": 15,
+        "first_axis": "y",
+        "first_face_length": 11,
+        "other_axis_1": "x",
+        "other_axis_2": "z",
+        "dist_other_1": 13,
+        "dist_other_2": 13
+      }
+    },
+    "iso_time": "2025-12-01T23:00:02Z"
+  },
+  {
+    "timestamp": 1764630003.769155,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 321
+    },
+    "iso_time": "2025-12-01T23:00:03Z"
+  },
+  {
+    "timestamp": 1764630003.7693188,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangular box is aligned with the coordinate axes, with edge lengths 18, 11, and 15 along the x-, y-, and z-directio",
+      "correct_answer": "321",
+      "seed_value": 1488218963
+    },
+    "iso_time": "2025-12-01T23:00:03Z"
+  },
+  {
+    "timestamp": 1764630003.769392,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "313",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T23:00:03Z"
+  },
+  {
+    "timestamp": 1764630055.2217112,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T23:00:55Z"
+  },
+  {
+    "timestamp": 1764630130.4866948,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T23:02:10Z"
+  },
+  {
+    "timestamp": 1764630172.4674969,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "317",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T23:02:52Z"
+  },
+  {
+    "timestamp": 1764630227.7503722,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "328",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T23:03:47Z"
+  },
+  {
+    "timestamp": 1764630265.753328,
+    "seed_id": "2002-I-11::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-11::2002_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T23:04:25Z"
+  },
+  {
+    "timestamp": 1764630265.753422,
+    "seed_id": "2002-I-11::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-01T23:04:25Z"
+  },
+  {
+    "timestamp": 1764630265.753485,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3).",
+      "question": "Let $ABCD$ and $BCFG$ be two faces of a cube with $AB=12$ . A beam of light emanates from vertex $A$ and reflects off face $BCFG$ at point $P$ , which is $7$ units from $\\overline{BG}$ and $5$ units from $\\overline{BC}$ . The beam continues to be reflected off the faces of the cube. The length of the light path from the time it leaves point $A$ until it next reaches a vertex of the cube is given by $m\\sqrt{n}$ , where $m$ and $n$ are integers and $n$ is not divisible by the square of any prime. Find $m+n$ .",
+      "answer": "230",
+      "example_id": "2002-I-11::2002"
+    },
+    "iso_time": "2025-12-01T23:04:25Z"
+  },
+  {
+    "timestamp": 1764630698.583807,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-11::2002_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1507313886
+    },
+    "iso_time": "2025-12-01T23:11:38Z"
+  },
+  {
+    "timestamp": 1764630699.921767,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 108,
+        "b": 31,
+        "c": 35,
+        "p_y": 27,
+        "p_z": 27,
+        "q_x": 92,
+        "q_z": 31
+      }
+    },
+    "iso_time": "2025-12-01T23:11:39Z"
+  },
+  {
+    "timestamp": 1764630701.018712,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 90751
+    },
+    "iso_time": "2025-12-01T23:11:41Z"
+  },
+  {
+    "timestamp": 1764630701.018859,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a rectangular prism with side lengths 108, 31, and 35, a beam of light starts at the origin vertex and first reflects",
+      "correct_answer": "90751",
+      "seed_value": 1507313886
+    },
+    "iso_time": "2025-12-01T23:11:41Z"
+  },
+  {
+    "timestamp": 1764630701.018917,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "90745",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T23:11:41Z"
+  },
+  {
+    "timestamp": 1764630758.746388,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "90743",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T23:12:38Z"
+  },
+  {
+    "timestamp": 1764630800.8910148,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "90751",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T23:13:20Z"
+  },
+  {
+    "timestamp": 1764630909.842009,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "90759",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T23:15:09Z"
+  },
+  {
+    "timestamp": 1764630952.2383308,
+    "seed_id": "2002-I-11::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "90751",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T23:15:52Z"
+  },
+  {
+    "timestamp": 1764630984.1832051,
+    "seed_id": "2002-I-11::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-11::2002_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T23:16:24Z"
+  }
+]

@@ -1,0 +1,1903 @@
+[
+  {
+    "timestamp": 1764616410.524443,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "Each unit square of a 3-by-3 unit-square grid is to be colored either blue or red. For each square, either color is equa",
+      "answer": "929",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T19:13:30Z"
+  },
+  {
+    "timestamp": 1764616410.524471,
+    "seed_id": "2001-II-9::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T19:13:30Z"
+  },
+  {
+    "timestamp": 1764616410.524485,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Each unit square of a 3-by-3 unit-square grid is to be colored either blue or red. For each square, either color is equally likely to be used. The probability of obtaining a grid that does not have a 2-by-2 red square is $\\frac {m}{n}$ , where $m$ and $n$ are relatively prime positive integers. Find $m + n$ .",
+      "answer": "929",
+      "example_id": "2001-II-9::2001"
+    },
+    "iso_time": "2025-12-01T19:13:30Z"
+  },
+  {
+    "timestamp": 1764616488.431862,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 508961827
+    },
+    "iso_time": "2025-12-01T19:14:48Z"
+  },
+  {
+    "timestamp": 1764616489.785795,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "rows": 5,
+        "cols": 8,
+        "p_num": 1,
+        "p_den": 3,
+        "k": 15
+      }
+    },
+    "iso_time": "2025-12-01T19:14:49Z"
+  },
+  {
+    "timestamp": 1764616490.999708,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 13054785963968948257
+    },
+    "iso_time": "2025-12-01T19:14:50Z"
+  },
+  {
+    "timestamp": 1764616490.999925,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Each unit square of an 5-by-8 grid is independently colored red with probability 1/3 and blue otherwise. Let m/n be the ",
+      "correct_answer": "13054785963968948257",
+      "seed_value": 508961827
+    },
+    "iso_time": "2025-12-01T19:14:50Z"
+  },
+  {
+    "timestamp": 1764616491.000004,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "13054785963968948219",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:14:51Z"
+  },
+  {
+    "timestamp": 1764616537.485605,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "13054785963968948231",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:15:37Z"
+  },
+  {
+    "timestamp": 1764616568.6915112,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "13054785963968948257",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:16:08Z"
+  },
+  {
+    "timestamp": 1764616644.144761,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "13054785963968948220",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:17:24Z"
+  },
+  {
+    "timestamp": 1764616664.952895,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13054785963968948257",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:17:44Z"
+  },
+  {
+    "timestamp": 1764616740.792476,
+    "seed_id": "2001-II-9::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T19:19:00Z"
+  },
+  {
+    "timestamp": 1764616740.792567,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 747883635
+    },
+    "iso_time": "2025-12-01T19:19:00Z"
+  },
+  {
+    "timestamp": 1764616741.7737029,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "rows": 7,
+        "cols": 6,
+        "p_num": 3,
+        "p_den": 5,
+        "k": 17
+      }
+    },
+    "iso_time": "2025-12-01T19:19:01Z"
+  },
+  {
+    "timestamp": 1764616742.901272,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 227965452965910066877004576377
+    },
+    "iso_time": "2025-12-01T19:19:02Z"
+  },
+  {
+    "timestamp": 1764616742.901431,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Each unit square of an 7-by-6 grid is independently colored red with probability 3/5 and blue otherwise. Let m/n be the ",
+      "correct_answer": "227965452965910066877004576377",
+      "seed_value": 747883635
+    },
+    "iso_time": "2025-12-01T19:19:02Z"
+  },
+  {
+    "timestamp": 1764616742.9014778,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "227965452965910054415540158456",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:19:02Z"
+  },
+  {
+    "timestamp": 1764616790.87285,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "227965452965910054415540158471",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:19:50Z"
+  },
+  {
+    "timestamp": 1764616837.05112,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "227965452965910066877004576377",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:20:37Z"
+  },
+  {
+    "timestamp": 1764617067.156459,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "227965452965910054415540158465",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:24:27Z"
+  },
+  {
+    "timestamp": 1764617121.3234618,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "227965452965910066877004576377",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:25:21Z"
+  },
+  {
+    "timestamp": 1764617172.841495,
+    "seed_id": "2001-II-9::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T19:26:12Z"
+  },
+  {
+    "timestamp": 1764617172.8416781,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1684866078
+    },
+    "iso_time": "2025-12-01T19:26:12Z"
+  },
+  {
+    "timestamp": 1764617174.147595,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "rows": 7,
+        "cols": 5,
+        "p_num": 7,
+        "p_den": 9,
+        "k": 15
+      }
+    },
+    "iso_time": "2025-12-01T19:26:14Z"
+  },
+  {
+    "timestamp": 1764617175.2250051,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2503164242857299306768904918415321
+    },
+    "iso_time": "2025-12-01T19:26:15Z"
+  },
+  {
+    "timestamp": 1764617175.225163,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Each unit square of an 7-by-5 grid is independently colored red with probability 7/9 and blue otherwise. Let m/n be the ",
+      "correct_answer": "2503164242857299306768904918415321",
+      "seed_value": 1684866078
+    },
+    "iso_time": "2025-12-01T19:26:15Z"
+  },
+  {
+    "timestamp": 1764617175.225211,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2503164242857299437363488983351288",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:26:15Z"
+  },
+  {
+    "timestamp": 1764617246.895749,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2503164242857299437363488983351292",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:27:26Z"
+  },
+  {
+    "timestamp": 1764617263.628482,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2503164242857299437363488983351302",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:27:43Z"
+  },
+  {
+    "timestamp": 1764617276.026047,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2503164242857299306768904918415321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:27:56Z"
+  },
+  {
+    "timestamp": 1764617349.954989,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2503164242857299306768904918415321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:29:09Z"
+  },
+  {
+    "timestamp": 1764617362.958144,
+    "seed_id": "2001-II-9::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T19:29:22Z"
+  },
+  {
+    "timestamp": 1764617362.958409,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 515637046
+    },
+    "iso_time": "2025-12-01T19:29:22Z"
+  },
+  {
+    "timestamp": 1764617364.2704298,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "rows": 5,
+        "cols": 7,
+        "p_num": 4,
+        "p_den": 5,
+        "k": 16
+      }
+    },
+    "iso_time": "2025-12-01T19:29:24Z"
+  },
+  {
+    "timestamp": 1764617365.315309,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2910390690977455189062141
+    },
+    "iso_time": "2025-12-01T19:29:25Z"
+  },
+  {
+    "timestamp": 1764617365.3154712,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Each unit square of an 5-by-7 grid is independently colored red with probability 4/5 and blue otherwise. Let m/n be the ",
+      "correct_answer": "2910390690977455189062141",
+      "seed_value": 515637046
+    },
+    "iso_time": "2025-12-01T19:29:25Z"
+  },
+  {
+    "timestamp": 1764617365.315527,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2910390690977455097774084",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:29:25Z"
+  },
+  {
+    "timestamp": 1764617431.2566762,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2910390690977455097774078",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:30:31Z"
+  },
+  {
+    "timestamp": 1764617487.285291,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2910390690977455097774085",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:31:27Z"
+  },
+  {
+    "timestamp": 1764617596.37281,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2910390690977455189062141",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:33:16Z"
+  },
+  {
+    "timestamp": 1764617716.9996219,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2910390690977455189062141",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:35:16Z"
+  },
+  {
+    "timestamp": 1764617836.240875,
+    "seed_id": "2001-II-9::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T19:37:16Z"
+  },
+  {
+    "timestamp": 1764617836.241215,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 51460059
+    },
+    "iso_time": "2025-12-01T19:37:16Z"
+  },
+  {
+    "timestamp": 1764617837.603341,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "rows": 6,
+        "cols": 7,
+        "p_num": 1,
+        "p_den": 9,
+        "k": 15
+      }
+    },
+    "iso_time": "2025-12-01T19:37:17Z"
+  },
+  {
+    "timestamp": 1764617838.7042649,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 11972682166361731541684187027784331962513
+    },
+    "iso_time": "2025-12-01T19:37:18Z"
+  },
+  {
+    "timestamp": 1764617838.704442,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Each unit square of an 6-by-7 grid is independently colored red with probability 1/9 and blue otherwise. Let m/n be the ",
+      "correct_answer": "11972682166361731541684187027784331962513",
+      "seed_value": 51460059
+    },
+    "iso_time": "2025-12-01T19:37:18Z"
+  },
+  {
+    "timestamp": 1764617838.7044969,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "11972682166361732157671257066495916638201",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:37:18Z"
+  },
+  {
+    "timestamp": 1764617920.255709,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "11972682166361732157671257066495916638202",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:38:40Z"
+  },
+  {
+    "timestamp": 1764617930.953208,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "11972682166361731541684187027784331962513",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:38:50Z"
+  },
+  {
+    "timestamp": 1764617945.75188,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "11972682166361731541684187027784331962513",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:39:05Z"
+  },
+  {
+    "timestamp": 1764617960.345056,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "11972682166361732157671257066495916638214",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:39:20Z"
+  },
+  {
+    "timestamp": 1764617974.028943,
+    "seed_id": "2001-II-9::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T19:39:34Z"
+  },
+  {
+    "timestamp": 1764617974.0290828,
+    "seed_id": "2001-II-9::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-01T19:39:34Z"
+  },
+  {
+    "timestamp": 1764617974.029154,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Each unit square of a 3-by-3 unit-square grid is to be colored either blue or red. For each square, either color is equally likely to be used. The probability of obtaining a grid that does not have a 2-by-2 red square is $\\frac {m}{n}$ , where $m$ and $n$ are relatively prime positive integers. Find $m + n$ .",
+      "answer": "929",
+      "example_id": "2001-II-9::2001"
+    },
+    "iso_time": "2025-12-01T19:39:34Z"
+  },
+  {
+    "timestamp": 1764618044.8262699,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 892633787
+    },
+    "iso_time": "2025-12-01T19:40:44Z"
+  },
+  {
+    "timestamp": 1764618046.1682692,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "rows": 3,
+        "cols": 5,
+        "p_num": 9,
+        "p_den": 13
+      }
+    },
+    "iso_time": "2025-12-01T19:40:46Z"
+  },
+  {
+    "timestamp": 1764618047.409636,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4201225986631129
+    },
+    "iso_time": "2025-12-01T19:40:47Z"
+  },
+  {
+    "timestamp": 1764618047.4098299,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a toroidal 3-by-5 grid of unit squares (both horizontally and vertically, the last index wraps to the first). E",
+      "correct_answer": "4201225986631129",
+      "seed_value": 892633787
+    },
+    "iso_time": "2025-12-01T19:40:47Z"
+  },
+  {
+    "timestamp": 1764618047.4099069,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4201225986631129",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:40:47Z"
+  },
+  {
+    "timestamp": 1764618280.539737,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4201225986631138",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:44:40Z"
+  },
+  {
+    "timestamp": 1764618833.379833,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4201225986631131",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:53:53Z"
+  },
+  {
+    "timestamp": 1764618975.101682,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4201225986631129",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:56:15Z"
+  },
+  {
+    "timestamp": 1764619095.808005,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4201225986631126",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:58:15Z"
+  },
+  {
+    "timestamp": 1764619337.33459,
+    "seed_id": "2001-II-9::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T20:02:17Z"
+  },
+  {
+    "timestamp": 1764619337.334843,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 888455920
+    },
+    "iso_time": "2025-12-01T20:02:17Z"
+  },
+  {
+    "timestamp": 1764619338.4771001,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "rows": 6,
+        "cols": 3,
+        "p_num": 3,
+        "p_den": 7
+      }
+    },
+    "iso_time": "2025-12-01T20:02:18Z"
+  },
+  {
+    "timestamp": 1764619339.582308,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1805243498726833
+    },
+    "iso_time": "2025-12-01T20:02:19Z"
+  },
+  {
+    "timestamp": 1764619339.582447,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a toroidal 6-by-3 grid of unit squares (both horizontally and vertically, the last index wraps to the first). E",
+      "correct_answer": "1805243498726833",
+      "seed_value": 888455920
+    },
+    "iso_time": "2025-12-01T20:02:19Z"
+  },
+  {
+    "timestamp": 1764619339.582507,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1805243498726839",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:02:19Z"
+  },
+  {
+    "timestamp": 1764619387.023579,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1805243498726833",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T20:03:07Z"
+  },
+  {
+    "timestamp": 1764619626.474122,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1805243498726836",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:07:06Z"
+  },
+  {
+    "timestamp": 1764619880.129705,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1805243498726833",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T20:11:20Z"
+  },
+  {
+    "timestamp": 1764620193.363654,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1805243498726841",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:16:33Z"
+  },
+  {
+    "timestamp": 1764620269.2411242,
+    "seed_id": "2001-II-9::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-9::2001_prompt02-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-01T20:17:49Z"
+  },
+  {
+    "timestamp": 1764620269.2412999,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1803892640
+    },
+    "iso_time": "2025-12-01T20:17:49Z"
+  },
+  {
+    "timestamp": 1764620270.605076,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "rows": 3,
+        "cols": 5,
+        "p_num": 2,
+        "p_den": 17
+      }
+    },
+    "iso_time": "2025-12-01T20:17:50Z"
+  },
+  {
+    "timestamp": 1764620271.834118,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 168559457638400929
+    },
+    "iso_time": "2025-12-01T20:17:51Z"
+  },
+  {
+    "timestamp": 1764620271.834326,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a toroidal 3-by-5 grid of unit squares (both horizontally and vertically, the last index wraps to the first). E",
+      "correct_answer": "168559457638400929",
+      "seed_value": 1803892640
+    },
+    "iso_time": "2025-12-01T20:17:51Z"
+  },
+  {
+    "timestamp": 1764620271.8344069,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "168559457638400923",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:17:51Z"
+  },
+  {
+    "timestamp": 1764620335.891853,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "168559457638400936",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:18:55Z"
+  },
+  {
+    "timestamp": 1764620429.683745,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "168559457638400929",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T20:20:29Z"
+  },
+  {
+    "timestamp": 1764620552.0374231,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "168559457638400932",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:22:32Z"
+  },
+  {
+    "timestamp": 1764620597.521454,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "168559457638400929",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T20:23:17Z"
+  },
+  {
+    "timestamp": 1764620737.2711391,
+    "seed_id": "2001-II-9::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T20:25:37Z"
+  },
+  {
+    "timestamp": 1764620737.271399,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1792410983
+    },
+    "iso_time": "2025-12-01T20:25:37Z"
+  },
+  {
+    "timestamp": 1764620738.524489,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "rows": 3,
+        "cols": 3,
+        "p_num": 10,
+        "p_den": 11
+      }
+    },
+    "iso_time": "2025-12-01T20:25:38Z"
+  },
+  {
+    "timestamp": 1764620739.6732092,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 215624881
+    },
+    "iso_time": "2025-12-01T20:25:39Z"
+  },
+  {
+    "timestamp": 1764620739.6733649,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a toroidal 3-by-3 grid of unit squares (both horizontally and vertically, the last index wraps to the first). E",
+      "correct_answer": "215624881",
+      "seed_value": 1792410983
+    },
+    "iso_time": "2025-12-01T20:25:39Z"
+  },
+  {
+    "timestamp": 1764620739.67343,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "215624881",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T20:25:39Z"
+  },
+  {
+    "timestamp": 1764620823.1143181,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "215624881",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T20:27:03Z"
+  },
+  {
+    "timestamp": 1764620916.1605818,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "215624884",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:28:36Z"
+  },
+  {
+    "timestamp": 1764621176.8539798,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "215624874",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:32:56Z"
+  },
+  {
+    "timestamp": 1764621290.936908,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "215624878",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:34:50Z"
+  },
+  {
+    "timestamp": 1764621387.394538,
+    "seed_id": "2001-II-9::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-9::2001_prompt02-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T20:36:27Z"
+  },
+  {
+    "timestamp": 1764621387.394717,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 847757388
+    },
+    "iso_time": "2025-12-01T20:36:27Z"
+  },
+  {
+    "timestamp": 1764621388.7719522,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "rows": 5,
+        "cols": 4,
+        "p_num": 3,
+        "p_den": 14
+      }
+    },
+    "iso_time": "2025-12-01T20:36:28Z"
+  },
+  {
+    "timestamp": 1764621390.000216,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 21095606145903813096961
+    },
+    "iso_time": "2025-12-01T20:36:30Z"
+  },
+  {
+    "timestamp": 1764621390.000404,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a toroidal 5-by-4 grid of unit squares (both horizontally and vertically, the last index wraps to the first). E",
+      "correct_answer": "21095606145903813096961",
+      "seed_value": 847757388
+    },
+    "iso_time": "2025-12-01T20:36:30Z"
+  },
+  {
+    "timestamp": 1764621390.000479,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "21095606145903811887110",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:36:30Z"
+  },
+  {
+    "timestamp": 1764621449.3372312,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "21095606145903813096961",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T20:37:29Z"
+  },
+  {
+    "timestamp": 1764621529.065343,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "21095606145903813096961",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T20:38:49Z"
+  },
+  {
+    "timestamp": 1764621711.789232,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "21095606145903811887103",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:41:51Z"
+  },
+  {
+    "timestamp": 1764621789.837277,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "21095606145903811887100",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:43:09Z"
+  },
+  {
+    "timestamp": 1764621950.6769001,
+    "seed_id": "2001-II-9::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T20:45:50Z"
+  },
+  {
+    "timestamp": 1764621950.6771252,
+    "seed_id": "2001-II-9::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-01T20:45:50Z"
+  },
+  {
+    "timestamp": 1764621950.6772459,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 3 (successes=3). | Judge rejected variant 5 (successes=3).",
+      "question": "Each unit square of a 3-by-3 unit-square grid is to be colored either blue or red. For each square, either color is equally likely to be used. The probability of obtaining a grid that does not have a 2-by-2 red square is $\\frac {m}{n}$ , where $m$ and $n$ are relatively prime positive integers. Find $m + n$ .",
+      "answer": "929",
+      "example_id": "2001-II-9::2001"
+    },
+    "iso_time": "2025-12-01T20:45:50Z"
+  },
+  {
+    "timestamp": 1764622025.304298,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1932952473
+    },
+    "iso_time": "2025-12-01T20:47:05Z"
+  },
+  {
+    "timestamp": 1764622026.722892,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "grid_rows": 3,
+        "grid_cols": 4,
+        "p_num": 2,
+        "p_den": 9
+      }
+    },
+    "iso_time": "2025-12-01T20:47:06Z"
+  },
+  {
+    "timestamp": 1764622027.8686411,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 296881482017
+    },
+    "iso_time": "2025-12-01T20:47:07Z"
+  },
+  {
+    "timestamp": 1764622027.8687801,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 3-by-4 grid whose opposite edges are identified (a torus). Each cell is independently colored red with probab",
+      "correct_answer": "296881482017",
+      "seed_value": 1932952473
+    },
+    "iso_time": "2025-12-01T20:47:07Z"
+  },
+  {
+    "timestamp": 1764622027.868839,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "296881482020",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:47:07Z"
+  },
+  {
+    "timestamp": 1764622217.625961,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "296881482014",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:50:17Z"
+  },
+  {
+    "timestamp": 1764622284.654098,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "296881482023",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T20:51:24Z"
+  },
+  {
+    "timestamp": 1764622465.4381518,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "296881482017",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T20:54:25Z"
+  },
+  {
+    "timestamp": 1764622576.1034591,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "296881482017",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T20:56:16Z"
+  },
+  {
+    "timestamp": 1764623276.122575,
+    "seed_id": "2001-II-9::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-9::2001_prompt03-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-01T21:07:56Z"
+  },
+  {
+    "timestamp": 1764623276.122763,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 43920506
+    },
+    "iso_time": "2025-12-01T21:07:56Z"
+  },
+  {
+    "timestamp": 1764623277.4890199,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "grid_rows": 5,
+        "grid_cols": 3,
+        "p_num": 3,
+        "p_den": 8
+      }
+    },
+    "iso_time": "2025-12-01T21:07:57Z"
+  },
+  {
+    "timestamp": 1764623278.64826,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2456007146177
+    },
+    "iso_time": "2025-12-01T21:07:58Z"
+  },
+  {
+    "timestamp": 1764623278.6483939,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 5-by-3 grid whose opposite edges are identified (a torus). Each cell is independently colored red with probab",
+      "correct_answer": "2456007146177",
+      "seed_value": 43920506
+    },
+    "iso_time": "2025-12-01T21:07:58Z"
+  },
+  {
+    "timestamp": 1764623278.648454,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2456007146177",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T21:07:58Z"
+  },
+  {
+    "timestamp": 1764623407.806466,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2456007146179",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:10:07Z"
+  },
+  {
+    "timestamp": 1764623548.401908,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2456007146170",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:12:28Z"
+  },
+  {
+    "timestamp": 1764623815.579013,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2456007146174",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:16:55Z"
+  },
+  {
+    "timestamp": 1764624051.9710479,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2456007146177",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T21:20:51Z"
+  },
+  {
+    "timestamp": 1764624216.3991082,
+    "seed_id": "2001-II-9::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-9::2001_prompt03-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T21:23:36Z"
+  },
+  {
+    "timestamp": 1764624216.399292,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 179291936
+    },
+    "iso_time": "2025-12-01T21:23:36Z"
+  },
+  {
+    "timestamp": 1764624217.80097,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "grid_rows": 6,
+        "grid_cols": 7,
+        "p_num": 3,
+        "p_den": 8
+      }
+    },
+    "iso_time": "2025-12-01T21:23:37Z"
+  },
+  {
+    "timestamp": 1764624219.023446,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10683459635815356332893951546940022233
+    },
+    "iso_time": "2025-12-01T21:23:39Z"
+  },
+  {
+    "timestamp": 1764624219.023595,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 6-by-7 grid whose opposite edges are identified (a torus). Each cell is independently colored red with probab",
+      "correct_answer": "10683459635815356332893951546940022233",
+      "seed_value": 179291936
+    },
+    "iso_time": "2025-12-01T21:23:39Z"
+  },
+  {
+    "timestamp": 1764624219.023655,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10683459635815356332893951546940022233",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T21:23:39Z"
+  },
+  {
+    "timestamp": 1764624261.148027,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10683459635815357005457094095629451257",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:24:21Z"
+  },
+  {
+    "timestamp": 1764624298.31992,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10683459635815357005457094095629451272",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:24:58Z"
+  },
+  {
+    "timestamp": 1764624749.215152,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10683459635815357005457094095629451256",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:32:29Z"
+  },
+  {
+    "timestamp": 1764624936.992024,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10683459635815356332893951546940022233",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T21:35:36Z"
+  },
+  {
+    "timestamp": 1764625031.561308,
+    "seed_id": "2001-II-9::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T21:37:11Z"
+  },
+  {
+    "timestamp": 1764625031.5615659,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-9::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1002974446
+    },
+    "iso_time": "2025-12-01T21:37:11Z"
+  },
+  {
+    "timestamp": 1764625032.927021,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "grid_rows": 4,
+        "grid_cols": 3,
+        "p_num": 7,
+        "p_den": 9
+      }
+    },
+    "iso_time": "2025-12-01T21:37:12Z"
+  },
+  {
+    "timestamp": 1764625034.067733,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 296881482017
+    },
+    "iso_time": "2025-12-01T21:37:14Z"
+  },
+  {
+    "timestamp": 1764625034.067904,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 4-by-3 grid whose opposite edges are identified (a torus). Each cell is independently colored red with probab",
+      "correct_answer": "296881482017",
+      "seed_value": 1002974446
+    },
+    "iso_time": "2025-12-01T21:37:14Z"
+  },
+  {
+    "timestamp": 1764625034.067968,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "296881482011",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:37:14Z"
+  },
+  {
+    "timestamp": 1764625219.130157,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "296881482013",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:40:19Z"
+  },
+  {
+    "timestamp": 1764625329.7869382,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "296881482017",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T21:42:09Z"
+  },
+  {
+    "timestamp": 1764625684.56631,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "296881482014",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T21:48:04Z"
+  },
+  {
+    "timestamp": 1764625812.66985,
+    "seed_id": "2001-II-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "296881482017",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T21:50:12Z"
+  },
+  {
+    "timestamp": 1764625921.417465,
+    "seed_id": "2001-II-9::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-9::2001_prompt03-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-01T21:52:01Z"
+  }
+]

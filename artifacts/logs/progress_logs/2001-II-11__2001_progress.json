@@ -1,0 +1,991 @@
+[
+  {
+    "timestamp": 1764566804.167809,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "Club Truncator is in a soccer league with six other teams, each of which it plays once. In any of its 6 matches, the pro",
+      "answer": "341",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T05:26:44Z"
+  },
+  {
+    "timestamp": 1764566804.167878,
+    "seed_id": "2001-II-11::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T05:26:44Z"
+  },
+  {
+    "timestamp": 1764566804.1679099,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Club Truncator is in a soccer league with six other teams, each of which it plays once. In any of its 6 matches, the probabilities that Club Truncator will win, lose, or tie are each $\\frac {1}{3}$ . The probability that Club Truncator will finish the season with more wins than losses is $\\frac {m}{n}$ , where $m$ and $n$ are relatively prime positive integers. Find $m + n$ .",
+      "answer": "341",
+      "example_id": "2001-II-11::2001"
+    },
+    "iso_time": "2025-12-01T05:26:44Z"
+  },
+  {
+    "timestamp": 1764566854.051301,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-11::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1442237144
+    },
+    "iso_time": "2025-12-01T05:27:34Z"
+  },
+  {
+    "timestamp": 1764566855.182268,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "matches": 20,
+        "den": 16,
+        "win_p": 5,
+        "loss_p": 5,
+        "tie_p": 6,
+        "min_points": 27
+      }
+    },
+    "iso_time": "2025-12-01T05:27:35Z"
+  },
+  {
+    "timestamp": 1764566856.369258,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 863515354282926270224963
+    },
+    "iso_time": "2025-12-01T05:27:36Z"
+  },
+  {
+    "timestamp": 1764566856.369482,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Club Truncator plays 20 independent matches. Each match results in a win, loss, or tie with probabilities 5/16, 5/16, an",
+      "correct_answer": "863515354282926270224963",
+      "seed_value": 1442237144
+    },
+    "iso_time": "2025-12-01T05:27:36Z"
+  },
+  {
+    "timestamp": 1764566856.369535,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "863515354282926305968127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:27:36Z"
+  },
+  {
+    "timestamp": 1764566942.2432919,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "863515354282926305968136",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:29:02Z"
+  },
+  {
+    "timestamp": 1764566985.0604491,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "863515354282926270224963",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:29:45Z"
+  },
+  {
+    "timestamp": 1764567068.886917,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "863515354282926305968126",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:31:08Z"
+  },
+  {
+    "timestamp": 1764567285.513128,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "863515354282926270224963",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:34:45Z"
+  },
+  {
+    "timestamp": 1764567382.50992,
+    "seed_id": "2001-II-11::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T05:36:22Z"
+  },
+  {
+    "timestamp": 1764567382.5101418,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-11::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 953621610
+    },
+    "iso_time": "2025-12-01T05:36:22Z"
+  },
+  {
+    "timestamp": 1764567383.819027,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "matches": 15,
+        "den": 23,
+        "win_p": 10,
+        "loss_p": 10,
+        "tie_p": 3,
+        "min_points": 22
+      }
+    },
+    "iso_time": "2025-12-01T05:36:23Z"
+  },
+  {
+    "timestamp": 1764567384.986578,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 385109303579490995607
+    },
+    "iso_time": "2025-12-01T05:36:24Z"
+  },
+  {
+    "timestamp": 1764567384.986763,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Club Truncator plays 15 independent matches. Each match results in a win, loss, or tie with probabilities 10/23, 10/23, ",
+      "correct_answer": "385109303579490995607",
+      "seed_value": 953621610
+    },
+    "iso_time": "2025-12-01T05:36:24Z"
+  },
+  {
+    "timestamp": 1764567384.9868212,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "385109303579490995607",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:36:24Z"
+  },
+  {
+    "timestamp": 1764567538.5388741,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "385109303579490975751",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:38:58Z"
+  },
+  {
+    "timestamp": 1764568080.169992,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "385109303579490975737",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:48:00Z"
+  },
+  {
+    "timestamp": 1764568109.751074,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "385109303579490995607",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:48:29Z"
+  },
+  {
+    "timestamp": 1764568257.8995829,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "385109303579490975736",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:50:57Z"
+  },
+  {
+    "timestamp": 1764568402.205877,
+    "seed_id": "2001-II-11::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-11::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-01T05:53:22Z"
+  },
+  {
+    "timestamp": 1764568402.206069,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-11::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1499937687
+    },
+    "iso_time": "2025-12-01T05:53:22Z"
+  },
+  {
+    "timestamp": 1764568403.541878,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "matches": 15,
+        "den": 10,
+        "win_p": 2,
+        "loss_p": 2,
+        "tie_p": 6,
+        "min_points": 19
+      }
+    },
+    "iso_time": "2025-12-01T05:53:23Z"
+  },
+  {
+    "timestamp": 1764568404.6502678,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8500762077
+    },
+    "iso_time": "2025-12-01T05:53:24Z"
+  },
+  {
+    "timestamp": 1764568404.650431,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Club Truncator plays 15 independent matches. Each match results in a win, loss, or tie with probabilities 2/10, 2/10, an",
+      "correct_answer": "8500762077",
+      "seed_value": 1499937687
+    },
+    "iso_time": "2025-12-01T05:53:24Z"
+  },
+  {
+    "timestamp": 1764568404.650483,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8500762068",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:53:24Z"
+  },
+  {
+    "timestamp": 1764568613.0138319,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8500762077",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:56:53Z"
+  },
+  {
+    "timestamp": 1764568762.0378082,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8500762077",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:59:22Z"
+  },
+  {
+    "timestamp": 1764569008.863012,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8500762080",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:03:28Z"
+  },
+  {
+    "timestamp": 1764569215.8786292,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8500762085",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:06:55Z"
+  },
+  {
+    "timestamp": 1764569304.664696,
+    "seed_id": "2001-II-11::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-11::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T06:08:24Z"
+  },
+  {
+    "timestamp": 1764569304.664789,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-11::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1164120649
+    },
+    "iso_time": "2025-12-01T06:08:24Z"
+  },
+  {
+    "timestamp": 1764569305.851378,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "matches": 14,
+        "den": 15,
+        "win_p": 4,
+        "loss_p": 4,
+        "tie_p": 7,
+        "min_points": 17
+      }
+    },
+    "iso_time": "2025-12-01T06:08:25Z"
+  },
+  {
+    "timestamp": 1764569307.097396,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 41674279485761233
+    },
+    "iso_time": "2025-12-01T06:08:27Z"
+  },
+  {
+    "timestamp": 1764569307.097595,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Club Truncator plays 14 independent matches. Each match results in a win, loss, or tie with probabilities 4/15, 4/15, an",
+      "correct_answer": "41674279485761233",
+      "seed_value": 1164120649
+    },
+    "iso_time": "2025-12-01T06:08:27Z"
+  },
+  {
+    "timestamp": 1764569307.0976682,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "41674279485761228",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:08:27Z"
+  },
+  {
+    "timestamp": 1764569579.225471,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "41674279485761233",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T06:12:59Z"
+  },
+  {
+    "timestamp": 1764569948.377768,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "41674279485761234",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:19:08Z"
+  },
+  {
+    "timestamp": 1764570066.140575,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "41674279485761233",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T06:21:06Z"
+  },
+  {
+    "timestamp": 1764570383.6033049,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "41674279485761229",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:26:23Z"
+  },
+  {
+    "timestamp": 1764570496.734218,
+    "seed_id": "2001-II-11::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-11::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T06:28:16Z"
+  },
+  {
+    "timestamp": 1764570496.7344651,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-11::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1200609879
+    },
+    "iso_time": "2025-12-01T06:28:16Z"
+  },
+  {
+    "timestamp": 1764570498.041044,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "matches": 19,
+        "den": 22,
+        "win_p": 5,
+        "loss_p": 5,
+        "tie_p": 12,
+        "min_points": 23
+      }
+    },
+    "iso_time": "2025-12-01T06:28:18Z"
+  },
+  {
+    "timestamp": 1764570499.14362,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5732831150548221648058701
+    },
+    "iso_time": "2025-12-01T06:28:19Z"
+  },
+  {
+    "timestamp": 1764570499.143765,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Club Truncator plays 19 independent matches. Each match results in a win, loss, or tie with probabilities 5/22, 5/22, an",
+      "correct_answer": "5732831150548221648058701",
+      "seed_value": 1200609879
+    },
+    "iso_time": "2025-12-01T06:28:19Z"
+  },
+  {
+    "timestamp": 1764570499.143808,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5732831150548221966680061",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:28:19Z"
+  },
+  {
+    "timestamp": 1764570550.702545,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5732831150548221966680060",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:29:10Z"
+  },
+  {
+    "timestamp": 1764570653.730491,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5732831150548221648058701",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T06:30:53Z"
+  },
+  {
+    "timestamp": 1764570699.136327,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5732831150548221966680062",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:31:39Z"
+  },
+  {
+    "timestamp": 1764570741.776056,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5732831150548221648058701",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T06:32:21Z"
+  },
+  {
+    "timestamp": 1764570782.2806542,
+    "seed_id": "2001-II-11::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-01T06:33:02Z"
+  },
+  {
+    "timestamp": 1764570782.2808802,
+    "seed_id": "2001-II-11::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-01T06:33:02Z"
+  },
+  {
+    "timestamp": 1764570782.280973,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 5 (successes=3).",
+      "question": "Club Truncator is in a soccer league with six other teams, each of which it plays once. In any of its 6 matches, the probabilities that Club Truncator will win, lose, or tie are each $\\frac {1}{3}$ . The probability that Club Truncator will finish the season with more wins than losses is $\\frac {m}{n}$ , where $m$ and $n$ are relatively prime positive integers. Find $m + n$ .",
+      "answer": "341",
+      "example_id": "2001-II-11::2001"
+    },
+    "iso_time": "2025-12-01T06:33:02Z"
+  },
+  {
+    "timestamp": 1764570843.61784,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-11::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1723961374
+    },
+    "iso_time": "2025-12-01T06:34:03Z"
+  },
+  {
+    "timestamp": 1764570844.98848,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_matches": 4,
+        "b_matches": 6,
+        "pA_str": "7/11",
+        "qA_str": "3/11",
+        "rA_str": "1/11",
+        "pB_str": "1/11",
+        "qB_str": "5/11",
+        "rB_str": "5/11",
+        "S_points": 13
+      }
+    },
+    "iso_time": "2025-12-01T06:34:04Z"
+  },
+  {
+    "timestamp": 1764570846.044928,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 33934220647
+    },
+    "iso_time": "2025-12-01T06:34:06Z"
+  },
+  {
+    "timestamp": 1764570846.045096,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Club Truncator plays 4 matches against type A opponents and 6 matches against type B opponents. In a type A match, the p",
+      "correct_answer": "33934220647",
+      "seed_value": 1723961374
+    },
+    "iso_time": "2025-12-01T06:34:06Z"
+  },
+  {
+    "timestamp": 1764570846.045141,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "33934220653",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:34:06Z"
+  },
+  {
+    "timestamp": 1764570961.22321,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "33934220647",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T06:36:01Z"
+  },
+  {
+    "timestamp": 1764571085.017625,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "33934220652",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:38:05Z"
+  },
+  {
+    "timestamp": 1764571243.029151,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "33934220655",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:40:43Z"
+  },
+  {
+    "timestamp": 1764571412.461003,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "33934220647",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T06:43:32Z"
+  },
+  {
+    "timestamp": 1764571586.5703418,
+    "seed_id": "2001-II-11::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-11::2001_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T06:46:26Z"
+  },
+  {
+    "timestamp": 1764571586.570543,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-11::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1195604952
+    },
+    "iso_time": "2025-12-01T06:46:26Z"
+  },
+  {
+    "timestamp": 1764571587.979715,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_matches": 5,
+        "b_matches": 6,
+        "pA_str": "5/10",
+        "qA_str": "2/10",
+        "rA_str": "3/10",
+        "pB_str": "1/6",
+        "qB_str": "1/6",
+        "rB_str": "4/6",
+        "S_points": 18
+      }
+    },
+    "iso_time": "2025-12-01T06:46:27Z"
+  },
+  {
+    "timestamp": 1764571589.1313019,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 249404021
+    },
+    "iso_time": "2025-12-01T06:46:29Z"
+  },
+  {
+    "timestamp": 1764571589.131493,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Club Truncator plays 5 matches against type A opponents and 6 matches against type B opponents. In a type A match, the p",
+      "correct_answer": "249404021",
+      "seed_value": 1195604952
+    },
+    "iso_time": "2025-12-01T06:46:29Z"
+  },
+  {
+    "timestamp": 1764571589.1315389,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "249404018",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:46:29Z"
+  },
+  {
+    "timestamp": 1764571737.4098182,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "249404021",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T06:48:57Z"
+  },
+  {
+    "timestamp": 1764571797.7825038,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "249404026",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:49:57Z"
+  },
+  {
+    "timestamp": 1764572017.590073,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "249404021",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T06:53:37Z"
+  },
+  {
+    "timestamp": 1764572160.870833,
+    "seed_id": "2001-II-11::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "249404015",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T06:56:00Z"
+  },
+  {
+    "timestamp": 1764572264.151834,
+    "seed_id": "2001-II-11::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-11::2001_prompt02-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-01T06:57:44Z"
+  }
+]

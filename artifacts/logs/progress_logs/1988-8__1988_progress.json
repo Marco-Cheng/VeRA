@@ -1,0 +1,2698 @@
+[
+  {
+    "timestamp": 1763216547.127058,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1988,
+      "question_preview": "The function $f$ , defined on the set of ordered pairs of positive integers, satisfies the following properties: \\[f(x, ",
+      "answer": "364",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-15T14:22:27Z"
+  },
+  {
+    "timestamp": 1763216547.1270888,
+    "seed_id": "1988-8::1988",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-15T14:22:27Z"
+  },
+  {
+    "timestamp": 1763216547.127101,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The function $f$ , defined on the set of ordered pairs of positive integers, satisfies the following properties: \\[f(x, x) = x,\\; f(x, y) = f(y, x), {\\rm \\ and\\ } (x+y)f(x, y) = yf(x, x+y).\\] Calculate $f(14,52)$ .",
+      "answer": "364",
+      "example_id": "1988-8::1988"
+    },
+    "iso_time": "2025-11-15T14:22:27Z"
+  },
+  {
+    "timestamp": 1763216804.0467992,
+    "seed_id": "1988-8::1988",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "payload": {},
+    "iso_time": "2025-11-15T14:26:44Z"
+  },
+  {
+    "timestamp": 1763216804.047026,
+    "seed_id": "1988-8::1988",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-15T14:26:44Z"
+  },
+  {
+    "timestamp": 1763216804.047106,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Teacher call raised JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "question": "The function $f$ , defined on the set of ordered pairs of positive integers, satisfies the following properties: \\[f(x, x) = x,\\; f(x, y) = f(y, x), {\\rm \\ and\\ } (x+y)f(x, y) = yf(x, x+y).\\] Calculate $f(14,52)$ .",
+      "answer": "364",
+      "example_id": "1988-8::1988"
+    },
+    "iso_time": "2025-11-15T14:26:44Z"
+  },
+  {
+    "timestamp": 1763217020.0353029,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 358141580
+    },
+    "iso_time": "2025-11-15T14:30:20Z"
+  },
+  {
+    "timestamp": 1763217020.806308,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 3,
+        "a": 520,
+        "b": 624
+      }
+    },
+    "iso_time": "2025-11-15T14:30:20Z"
+  },
+  {
+    "timestamp": 1763217021.565546,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1440
+    },
+    "iso_time": "2025-11-15T14:30:21Z"
+  },
+  {
+    "timestamp": 1763217021.565701,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A function `f`, defined on the set of ordered pairs of positive integers, is known to satisfy five properties for a cert",
+      "correct_answer": "1440",
+      "seed_value": 358141580
+    },
+    "iso_time": "2025-11-15T14:30:21Z"
+  },
+  {
+    "timestamp": 1763217021.5657501,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1444",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T14:30:21Z"
+  },
+  {
+    "timestamp": 1763217218.7525241,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1436",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T14:33:38Z"
+  },
+  {
+    "timestamp": 1763217484.2428522,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1443",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T14:38:04Z"
+  },
+  {
+    "timestamp": 1763217681.7078872,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T14:41:21Z"
+  },
+  {
+    "timestamp": 1763218004.274305,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T14:46:44Z"
+  },
+  {
+    "timestamp": 1763218246.759831,
+    "seed_id": "1988-8::1988",
+    "stage": "variant_success",
+    "message": "Accepted variant 1988-8::1988_prompt02-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-15T14:50:46Z"
+  },
+  {
+    "timestamp": 1763218246.760042,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 142755430
+    },
+    "iso_time": "2025-11-15T14:50:46Z"
+  },
+  {
+    "timestamp": 1763218247.559464,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 20,
+        "a": 2535,
+        "b": 8450
+      }
+    },
+    "iso_time": "2025-11-15T14:50:47Z"
+  },
+  {
+    "timestamp": 1763218248.3111858,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 18720
+    },
+    "iso_time": "2025-11-15T14:50:48Z"
+  },
+  {
+    "timestamp": 1763218248.3113348,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A function `f`, defined on the set of ordered pairs of positive integers, is known to satisfy five properties for a cert",
+      "correct_answer": "18720",
+      "seed_value": 142755430
+    },
+    "iso_time": "2025-11-15T14:50:48Z"
+  },
+  {
+    "timestamp": 1763218248.311383,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "18718",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T14:50:48Z"
+  },
+  {
+    "timestamp": 1763218443.981167,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "18720",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T14:54:03Z"
+  },
+  {
+    "timestamp": 1763218693.046165,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "18729",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T14:58:13Z"
+  },
+  {
+    "timestamp": 1763218935.451639,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "18715",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T15:02:15Z"
+  },
+  {
+    "timestamp": 1763219115.5674229,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "18720",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T15:05:15Z"
+  },
+  {
+    "timestamp": 1763219377.8006248,
+    "seed_id": "1988-8::1988",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-15T15:09:37Z"
+  },
+  {
+    "timestamp": 1763219377.800816,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1644093821
+    },
+    "iso_time": "2025-11-15T15:09:37Z"
+  },
+  {
+    "timestamp": 1763219378.605819,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 7,
+        "a": 693,
+        "b": 990
+      }
+    },
+    "iso_time": "2025-11-15T15:09:38Z"
+  },
+  {
+    "timestamp": 1763219379.3670511,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4200
+    },
+    "iso_time": "2025-11-15T15:09:39Z"
+  },
+  {
+    "timestamp": 1763219379.367203,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A function `f`, defined on the set of ordered pairs of positive integers, is known to satisfy five properties for a cert",
+      "correct_answer": "4200",
+      "seed_value": 1644093821
+    },
+    "iso_time": "2025-11-15T15:09:39Z"
+  },
+  {
+    "timestamp": 1763219379.367254,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4200",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T15:09:39Z"
+  },
+  {
+    "timestamp": 1763219600.889198,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4195",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T15:13:20Z"
+  },
+  {
+    "timestamp": 1763219877.634603,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4191",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T15:17:57Z"
+  },
+  {
+    "timestamp": 1763220138.358509,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4196",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T15:22:18Z"
+  },
+  {
+    "timestamp": 1763220424.553051,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4200",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T15:27:04Z"
+  },
+  {
+    "timestamp": 1763220527.463264,
+    "seed_id": "1988-8::1988",
+    "stage": "variant_success",
+    "message": "Accepted variant 1988-8::1988_prompt02-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-15T15:28:47Z"
+  },
+  {
+    "timestamp": 1763220527.463475,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1036982786
+    },
+    "iso_time": "2025-11-15T15:28:47Z"
+  },
+  {
+    "timestamp": 1763220528.225915,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 15,
+        "a": 78,
+        "b": 130
+      }
+    },
+    "iso_time": "2025-11-15T15:28:48Z"
+  },
+  {
+    "timestamp": 1763220528.966163,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 180
+    },
+    "iso_time": "2025-11-15T15:28:48Z"
+  },
+  {
+    "timestamp": 1763220528.96632,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A function `f`, defined on the set of ordered pairs of positive integers, is known to satisfy five properties for a cert",
+      "correct_answer": "180",
+      "seed_value": 1036982786
+    },
+    "iso_time": "2025-11-15T15:28:48Z"
+  },
+  {
+    "timestamp": 1763220528.966368,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T15:28:48Z"
+  },
+  {
+    "timestamp": 1763220824.923531,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T15:33:44Z"
+  },
+  {
+    "timestamp": 1763221039.561336,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "172",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T15:37:19Z"
+  },
+  {
+    "timestamp": 1763221200.945726,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "173",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T15:40:00Z"
+  },
+  {
+    "timestamp": 1763221379.736372,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "188",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T15:42:59Z"
+  },
+  {
+    "timestamp": 1763221607.683098,
+    "seed_id": "1988-8::1988",
+    "stage": "variant_success",
+    "message": "Accepted variant 1988-8::1988_prompt02-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-15T15:46:47Z"
+  },
+  {
+    "timestamp": 1763221607.68331,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 1520932069
+    },
+    "iso_time": "2025-11-15T15:46:47Z"
+  },
+  {
+    "timestamp": 1763221608.4822452,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 6,
+        "a": 15125,
+        "b": 27225
+      }
+    },
+    "iso_time": "2025-11-15T15:46:48Z"
+  },
+  {
+    "timestamp": 1763221609.248459,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 99000
+    },
+    "iso_time": "2025-11-15T15:46:49Z"
+  },
+  {
+    "timestamp": 1763221609.248626,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A function `f`, defined on the set of ordered pairs of positive integers, is known to satisfy five properties for a cert",
+      "correct_answer": "99000",
+      "seed_value": 1520932069
+    },
+    "iso_time": "2025-11-15T15:46:49Z"
+  },
+  {
+    "timestamp": 1763221609.248683,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "98993",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T15:46:49Z"
+  },
+  {
+    "timestamp": 1763221778.077887,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "99000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T15:49:38Z"
+  },
+  {
+    "timestamp": 1763221972.536603,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "99009",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T15:52:52Z"
+  },
+  {
+    "timestamp": 1763222229.4104488,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "99000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T15:57:09Z"
+  },
+  {
+    "timestamp": 1763222297.4631739,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "99008",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T15:58:17Z"
+  },
+  {
+    "timestamp": 1763222520.292576,
+    "seed_id": "1988-8::1988",
+    "stage": "variant_success",
+    "message": "Accepted variant 1988-8::1988_prompt02-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T16:02:00Z"
+  },
+  {
+    "timestamp": 1763222520.292711,
+    "seed_id": "1988-8::1988",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-15T16:02:00Z"
+  },
+  {
+    "timestamp": 1763222520.2928,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 2 (successes=3).",
+      "question": "The function $f$ , defined on the set of ordered pairs of positive integers, satisfies the following properties: \\[f(x, x) = x,\\; f(x, y) = f(y, x), {\\rm \\ and\\ } (x+y)f(x, y) = yf(x, x+y).\\] Calculate $f(14,52)$ .",
+      "answer": "364",
+      "example_id": "1988-8::1988"
+    },
+    "iso_time": "2025-11-15T16:02:00Z"
+  },
+  {
+    "timestamp": 1763222670.4163132,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 2098360247
+    },
+    "iso_time": "2025-11-15T16:04:30Z"
+  },
+  {
+    "timestamp": 1763222671.264006,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:31Z"
+  },
+  {
+    "timestamp": 1763222672.0165231,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:32Z"
+  },
+  {
+    "timestamp": 1763222672.7699351,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:32Z"
+  },
+  {
+    "timestamp": 1763222673.5235252,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:33Z"
+  },
+  {
+    "timestamp": 1763222674.2742882,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:34Z"
+  },
+  {
+    "timestamp": 1763222675.035153,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:35Z"
+  },
+  {
+    "timestamp": 1763222675.779213,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:35Z"
+  },
+  {
+    "timestamp": 1763222676.551469,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:36Z"
+  },
+  {
+    "timestamp": 1763222677.2968352,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:37Z"
+  },
+  {
+    "timestamp": 1763222678.040375,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:38Z"
+  },
+  {
+    "timestamp": 1763222678.796576,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:38Z"
+  },
+  {
+    "timestamp": 1763222679.565141,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:39Z"
+  },
+  {
+    "timestamp": 1763222680.318476,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:40Z"
+  },
+  {
+    "timestamp": 1763222681.094962,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:41Z"
+  },
+  {
+    "timestamp": 1763222681.09504,
+    "seed_id": "1988-8::1988",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.678736925125122
+    },
+    "iso_time": "2025-11-15T16:04:41Z"
+  },
+  {
+    "timestamp": 1763222681.095084,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 738285961
+    },
+    "iso_time": "2025-11-15T16:04:41Z"
+  },
+  {
+    "timestamp": 1763222681.8743181,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:41Z"
+  },
+  {
+    "timestamp": 1763222682.6508548,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:42Z"
+  },
+  {
+    "timestamp": 1763222683.407201,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:43Z"
+  },
+  {
+    "timestamp": 1763222684.147697,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:44Z"
+  },
+  {
+    "timestamp": 1763222684.8998961,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:44Z"
+  },
+  {
+    "timestamp": 1763222685.664654,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:45Z"
+  },
+  {
+    "timestamp": 1763222686.420374,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:46Z"
+  },
+  {
+    "timestamp": 1763222687.163866,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:47Z"
+  },
+  {
+    "timestamp": 1763222687.930729,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:47Z"
+  },
+  {
+    "timestamp": 1763222688.675287,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:48Z"
+  },
+  {
+    "timestamp": 1763222689.4797492,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:49Z"
+  },
+  {
+    "timestamp": 1763222690.237476,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:50Z"
+  },
+  {
+    "timestamp": 1763222690.992882,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:50Z"
+  },
+  {
+    "timestamp": 1763222691.758966,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:51Z"
+  },
+  {
+    "timestamp": 1763222691.759063,
+    "seed_id": "1988-8::1988",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.663980960845947
+    },
+    "iso_time": "2025-11-15T16:04:51Z"
+  },
+  {
+    "timestamp": 1763222691.759124,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 2100298762
+    },
+    "iso_time": "2025-11-15T16:04:51Z"
+  },
+  {
+    "timestamp": 1763222692.508729,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:52Z"
+  },
+  {
+    "timestamp": 1763222693.268138,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:53Z"
+  },
+  {
+    "timestamp": 1763222694.023036,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:54Z"
+  },
+  {
+    "timestamp": 1763222694.7741592,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:54Z"
+  },
+  {
+    "timestamp": 1763222695.536261,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:55Z"
+  },
+  {
+    "timestamp": 1763222696.297129,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:56Z"
+  },
+  {
+    "timestamp": 1763222697.146179,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:57Z"
+  },
+  {
+    "timestamp": 1763222697.905777,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:57Z"
+  },
+  {
+    "timestamp": 1763222698.644017,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:04:58Z"
+  },
+  {
+    "timestamp": 1763222699.397741,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:04:59Z"
+  },
+  {
+    "timestamp": 1763222700.154469,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:00Z"
+  },
+  {
+    "timestamp": 1763222700.906493,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:00Z"
+  },
+  {
+    "timestamp": 1763222701.656619,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:01Z"
+  },
+  {
+    "timestamp": 1763222702.431096,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:02Z"
+  },
+  {
+    "timestamp": 1763222702.43118,
+    "seed_id": "1988-8::1988",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.672057151794434
+    },
+    "iso_time": "2025-11-15T16:05:02Z"
+  },
+  {
+    "timestamp": 1763222702.431247,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 744975666
+    },
+    "iso_time": "2025-11-15T16:05:02Z"
+  },
+  {
+    "timestamp": 1763222703.184194,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:03Z"
+  },
+  {
+    "timestamp": 1763222703.946701,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:03Z"
+  },
+  {
+    "timestamp": 1763222704.6916249,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:04Z"
+  },
+  {
+    "timestamp": 1763222705.442691,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:05Z"
+  },
+  {
+    "timestamp": 1763222706.183392,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:06Z"
+  },
+  {
+    "timestamp": 1763222706.997121,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:06Z"
+  },
+  {
+    "timestamp": 1763222707.7505438,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:07Z"
+  },
+  {
+    "timestamp": 1763222708.536087,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:08Z"
+  },
+  {
+    "timestamp": 1763222709.327063,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:09Z"
+  },
+  {
+    "timestamp": 1763222710.089271,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:10Z"
+  },
+  {
+    "timestamp": 1763222710.843369,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:10Z"
+  },
+  {
+    "timestamp": 1763222711.6029289,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:11Z"
+  },
+  {
+    "timestamp": 1763222712.365765,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:12Z"
+  },
+  {
+    "timestamp": 1763222713.119195,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:13Z"
+  },
+  {
+    "timestamp": 1763222713.119273,
+    "seed_id": "1988-8::1988",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.688026905059814
+    },
+    "iso_time": "2025-11-15T16:05:13Z"
+  },
+  {
+    "timestamp": 1763222713.119336,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 1594329703
+    },
+    "iso_time": "2025-11-15T16:05:13Z"
+  },
+  {
+    "timestamp": 1763222713.874558,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:13Z"
+  },
+  {
+    "timestamp": 1763222714.634345,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:14Z"
+  },
+  {
+    "timestamp": 1763222715.3961742,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:15Z"
+  },
+  {
+    "timestamp": 1763222716.157269,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:16Z"
+  },
+  {
+    "timestamp": 1763222716.924219,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:16Z"
+  },
+  {
+    "timestamp": 1763222717.686042,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:17Z"
+  },
+  {
+    "timestamp": 1763222718.438258,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:18Z"
+  },
+  {
+    "timestamp": 1763222719.205533,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:19Z"
+  },
+  {
+    "timestamp": 1763222720.024422,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:20Z"
+  },
+  {
+    "timestamp": 1763222720.786347,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:20Z"
+  },
+  {
+    "timestamp": 1763222721.5381062,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:21Z"
+  },
+  {
+    "timestamp": 1763222722.292628,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:22Z"
+  },
+  {
+    "timestamp": 1763222723.042359,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:05:23Z"
+  },
+  {
+    "timestamp": 1763222723.801821,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:05:23Z"
+  },
+  {
+    "timestamp": 1763222723.801908,
+    "seed_id": "1988-8::1988",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.682573080062866
+    },
+    "iso_time": "2025-11-15T16:05:23Z"
+  },
+  {
+    "timestamp": 1763222723.801939,
+    "seed_id": "1988-8::1988",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-15T16:05:23Z"
+  },
+  {
+    "timestamp": 1763222723.8019562,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "The function $f$ , defined on the set of ordered pairs of positive integers, satisfies the following properties: \\[f(x, x) = x,\\; f(x, y) = f(y, x), {\\rm \\ and\\ } (x+y)f(x, y) = yf(x, x+y).\\] Calculate $f(14,52)$ .",
+      "answer": "364",
+      "example_id": "1988-8::1988"
+    },
+    "iso_time": "2025-11-15T16:05:23Z"
+  },
+  {
+    "timestamp": 1763222912.3892758,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 1441989803
+    },
+    "iso_time": "2025-11-15T16:08:32Z"
+  },
+  {
+    "timestamp": 1763222913.166316,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:33Z"
+  },
+  {
+    "timestamp": 1763222913.933454,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:33Z"
+  },
+  {
+    "timestamp": 1763222914.676262,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:34Z"
+  },
+  {
+    "timestamp": 1763222915.419096,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:35Z"
+  },
+  {
+    "timestamp": 1763222916.166768,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:36Z"
+  },
+  {
+    "timestamp": 1763222916.9079301,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:36Z"
+  },
+  {
+    "timestamp": 1763222917.648041,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:37Z"
+  },
+  {
+    "timestamp": 1763222918.390871,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:38Z"
+  },
+  {
+    "timestamp": 1763222919.167836,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:39Z"
+  },
+  {
+    "timestamp": 1763222919.946361,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:39Z"
+  },
+  {
+    "timestamp": 1763222920.70659,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:40Z"
+  },
+  {
+    "timestamp": 1763222921.4586098,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:41Z"
+  },
+  {
+    "timestamp": 1763222922.243426,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:42Z"
+  },
+  {
+    "timestamp": 1763222922.996763,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:42Z"
+  },
+  {
+    "timestamp": 1763222922.996842,
+    "seed_id": "1988-8::1988",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.607572078704834
+    },
+    "iso_time": "2025-11-15T16:08:42Z"
+  },
+  {
+    "timestamp": 1763222922.996901,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 1538470756
+    },
+    "iso_time": "2025-11-15T16:08:42Z"
+  },
+  {
+    "timestamp": 1763222923.765842,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:43Z"
+  },
+  {
+    "timestamp": 1763222924.527662,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:44Z"
+  },
+  {
+    "timestamp": 1763222925.281595,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:45Z"
+  },
+  {
+    "timestamp": 1763222926.026418,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:46Z"
+  },
+  {
+    "timestamp": 1763222926.7907572,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:46Z"
+  },
+  {
+    "timestamp": 1763222927.530012,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:47Z"
+  },
+  {
+    "timestamp": 1763222928.3082309,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:48Z"
+  },
+  {
+    "timestamp": 1763222929.09462,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:49Z"
+  },
+  {
+    "timestamp": 1763222929.848504,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:49Z"
+  },
+  {
+    "timestamp": 1763222930.625634,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:50Z"
+  },
+  {
+    "timestamp": 1763222931.525398,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:51Z"
+  },
+  {
+    "timestamp": 1763222932.41109,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:52Z"
+  },
+  {
+    "timestamp": 1763222933.298444,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:53Z"
+  },
+  {
+    "timestamp": 1763222934.198329,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:54Z"
+  },
+  {
+    "timestamp": 1763222934.198434,
+    "seed_id": "1988-8::1988",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.201533794403076
+    },
+    "iso_time": "2025-11-15T16:08:54Z"
+  },
+  {
+    "timestamp": 1763222934.1985059,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 3,
+      "seed_value": 1405836084
+    },
+    "iso_time": "2025-11-15T16:08:54Z"
+  },
+  {
+    "timestamp": 1763222935.11589,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:55Z"
+  },
+  {
+    "timestamp": 1763222936.062337,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:56Z"
+  },
+  {
+    "timestamp": 1763222937.004877,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:57Z"
+  },
+  {
+    "timestamp": 1763222937.917693,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:57Z"
+  },
+  {
+    "timestamp": 1763222938.834762,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:08:58Z"
+  },
+  {
+    "timestamp": 1763222939.7608252,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:08:59Z"
+  },
+  {
+    "timestamp": 1763222940.6841888,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:00Z"
+  },
+  {
+    "timestamp": 1763222941.6011882,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:01Z"
+  },
+  {
+    "timestamp": 1763222942.534313,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:02Z"
+  },
+  {
+    "timestamp": 1763222943.46125,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:03Z"
+  },
+  {
+    "timestamp": 1763222944.37468,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:04Z"
+  },
+  {
+    "timestamp": 1763222945.2969542,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:05Z"
+  },
+  {
+    "timestamp": 1763222945.2970529,
+    "seed_id": "1988-8::1988",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.098548889160156
+    },
+    "iso_time": "2025-11-15T16:09:05Z"
+  },
+  {
+    "timestamp": 1763222945.29712,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 4,
+      "seed_value": 1266242512
+    },
+    "iso_time": "2025-11-15T16:09:05Z"
+  },
+  {
+    "timestamp": 1763222946.232863,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:06Z"
+  },
+  {
+    "timestamp": 1763222947.156262,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:07Z"
+  },
+  {
+    "timestamp": 1763222948.073162,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:08Z"
+  },
+  {
+    "timestamp": 1763222948.994678,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:08Z"
+  },
+  {
+    "timestamp": 1763222949.9160461,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:09Z"
+  },
+  {
+    "timestamp": 1763222950.8343081,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:10Z"
+  },
+  {
+    "timestamp": 1763222951.761725,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:11Z"
+  },
+  {
+    "timestamp": 1763222952.649125,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:12Z"
+  },
+  {
+    "timestamp": 1763222953.527893,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:13Z"
+  },
+  {
+    "timestamp": 1763222954.4049459,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:14Z"
+  },
+  {
+    "timestamp": 1763222955.2876139,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:15Z"
+  },
+  {
+    "timestamp": 1763222956.1494179,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:16Z"
+  },
+  {
+    "timestamp": 1763222956.149533,
+    "seed_id": "1988-8::1988",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.852412939071655
+    },
+    "iso_time": "2025-11-15T16:09:16Z"
+  },
+  {
+    "timestamp": 1763222956.149604,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 5,
+      "seed_value": 947839670
+    },
+    "iso_time": "2025-11-15T16:09:16Z"
+  },
+  {
+    "timestamp": 1763222957.019425,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:17Z"
+  },
+  {
+    "timestamp": 1763222957.895587,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:17Z"
+  },
+  {
+    "timestamp": 1763222958.782871,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:18Z"
+  },
+  {
+    "timestamp": 1763222959.712281,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:19Z"
+  },
+  {
+    "timestamp": 1763222960.5818062,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:20Z"
+  },
+  {
+    "timestamp": 1763222961.447115,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:21Z"
+  },
+  {
+    "timestamp": 1763222962.3085089,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:22Z"
+  },
+  {
+    "timestamp": 1763222963.189145,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:23Z"
+  },
+  {
+    "timestamp": 1763222964.080906,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:24Z"
+  },
+  {
+    "timestamp": 1763222964.951485,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:24Z"
+  },
+  {
+    "timestamp": 1763222965.860072,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-15T16:09:25Z"
+  },
+  {
+    "timestamp": 1763222966.7559319,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-15T16:09:26Z"
+  },
+  {
+    "timestamp": 1763222966.7560399,
+    "seed_id": "1988-8::1988",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.606436967849731
+    },
+    "iso_time": "2025-11-15T16:09:26Z"
+  },
+  {
+    "timestamp": 1763222966.75607,
+    "seed_id": "1988-8::1988",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 5).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-15T16:09:26Z"
+  },
+  {
+    "timestamp": 1763222966.756087,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 5,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "The function $f$ , defined on the set of ordered pairs of positive integers, satisfies the following properties: \\[f(x, x) = x,\\; f(x, y) = f(y, x), {\\rm \\ and\\ } (x+y)f(x, y) = yf(x, x+y).\\] Calculate $f(14,52)$ .",
+      "answer": "364",
+      "example_id": "1988-8::1988"
+    },
+    "iso_time": "2025-11-15T16:09:26Z"
+  },
+  {
+    "timestamp": 1763223103.728766,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-8::1988_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 1,
+      "seed_value": 1042549740
+    },
+    "iso_time": "2025-11-15T16:11:43Z"
+  },
+  {
+    "timestamp": 1763223104.508986,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 3,
+        "k": 4,
+        "x_val": 6,
+        "y_val": 15
+      }
+    },
+    "iso_time": "2025-11-15T16:11:44Z"
+  },
+  {
+    "timestamp": 1763223105.255009,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 81000
+    },
+    "iso_time": "2025-11-15T16:11:45Z"
+  },
+  {
+    "timestamp": 1763223105.255154,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A function $f$ is defined on the set of ordered pairs of positive integers and depends on two fixed integer parameters, ",
+      "correct_answer": "81000",
+      "seed_value": 1042549740
+    },
+    "iso_time": "2025-11-15T16:11:45Z"
+  },
+  {
+    "timestamp": 1763223105.2552042,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "81004",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T16:11:45Z"
+  },
+  {
+    "timestamp": 1763223222.723132,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "81008",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T16:13:42Z"
+  },
+  {
+    "timestamp": 1763223343.188812,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "81000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T16:15:43Z"
+  },
+  {
+    "timestamp": 1763223430.639832,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "80992",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T16:17:10Z"
+  },
+  {
+    "timestamp": 1763223560.1163971,
+    "seed_id": "1988-8::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "81000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T16:19:20Z"
+  },
+  {
+    "timestamp": 1763223636.361656,
+    "seed_id": "1988-8::1988",
+    "stage": "variant_success",
+    "message": "Accepted variant 1988-8::1988_prompt05-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T16:20:36Z"
+  }
+]

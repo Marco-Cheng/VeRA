@@ -1,0 +1,990 @@
+[
+  {
+    "timestamp": 1764035184.2326138,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1995,
+      "question_preview": "Find the last three digits of the product of the positive roots of $\\sqrt{1995}x^{\\log_{1995}x}=x^2.$",
+      "answer": "25",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-25T01:46:24Z"
+  },
+  {
+    "timestamp": 1764035184.232695,
+    "seed_id": "1995-2::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-25T01:46:24Z"
+  },
+  {
+    "timestamp": 1764035184.232746,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find the last three digits of the product of the positive roots of $\\sqrt{1995}x^{\\log_{1995}x}=x^2.$",
+      "answer": "25",
+      "example_id": "1995-2::1995"
+    },
+    "iso_time": "2025-11-25T01:46:24Z"
+  },
+  {
+    "timestamp": 1764035285.96435,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-2::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 106260976
+    },
+    "iso_time": "2025-11-25T01:48:05Z"
+  },
+  {
+    "timestamp": 1764035286.7435908,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 12920,
+        "p": 124,
+        "q": 535,
+        "r": 5,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-25T01:48:06Z"
+  },
+  {
+    "timestamp": 1764035287.492513,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 248
+    },
+    "iso_time": "2025-11-25T01:48:07Z"
+  },
+  {
+    "timestamp": 1764035287.4926841,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Given integers a=12920, p=124, q=535, r=5 with a>1, consider the real equation a^p * x^{r * log_a(x)} = x^q, where log_a",
+      "correct_answer": "248",
+      "seed_value": 106260976
+    },
+    "iso_time": "2025-11-25T01:48:07Z"
+  },
+  {
+    "timestamp": 1764035287.492724,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:48:07Z"
+  },
+  {
+    "timestamp": 1764035330.602697,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "248",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T01:48:50Z"
+  },
+  {
+    "timestamp": 1764035356.7190661,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "249",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:49:16Z"
+  },
+  {
+    "timestamp": 1764035392.458706,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "239",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:49:52Z"
+  },
+  {
+    "timestamp": 1764035428.5651772,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "248",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T01:50:28Z"
+  },
+  {
+    "timestamp": 1764035465.472679,
+    "seed_id": "1995-2::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-2::1995_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T01:51:05Z"
+  },
+  {
+    "timestamp": 1764035465.472866,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-2::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1287130603
+    },
+    "iso_time": "2025-11-25T01:51:05Z"
+  },
+  {
+    "timestamp": 1764035466.25084,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 2750,
+        "p": 173,
+        "q": 395,
+        "r": 5,
+        "d": 6
+      }
+    },
+    "iso_time": "2025-11-25T01:51:06Z"
+  },
+  {
+    "timestamp": 1764035467.001547,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 46875
+    },
+    "iso_time": "2025-11-25T01:51:07Z"
+  },
+  {
+    "timestamp": 1764035467.001712,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Given integers a=2750, p=173, q=395, r=5 with a>1, consider the real equation a^p * x^{r * log_a(x)} = x^q, where log_a(",
+      "correct_answer": "46875",
+      "seed_value": 1287130603
+    },
+    "iso_time": "2025-11-25T01:51:07Z"
+  },
+  {
+    "timestamp": 1764035467.00176,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "46883",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:51:07Z"
+  },
+  {
+    "timestamp": 1764035503.968968,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "46875",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T01:51:43Z"
+  },
+  {
+    "timestamp": 1764035550.681439,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "46882",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:52:30Z"
+  },
+  {
+    "timestamp": 1764035591.934674,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "46876",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:53:11Z"
+  },
+  {
+    "timestamp": 1764037906.455937,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "46875",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T02:31:46Z"
+  },
+  {
+    "timestamp": 1764037967.0076501,
+    "seed_id": "1995-2::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T02:32:47Z"
+  },
+  {
+    "timestamp": 1764037967.007923,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-2::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1808592338
+    },
+    "iso_time": "2025-11-25T02:32:47Z"
+  },
+  {
+    "timestamp": 1764037967.8145092,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 146000,
+        "p": 334,
+        "q": 118,
+        "r": 2,
+        "d": 5
+      }
+    },
+    "iso_time": "2025-11-25T02:32:47Z"
+  },
+  {
+    "timestamp": 1764037968.559455,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 67456
+    },
+    "iso_time": "2025-11-25T02:32:48Z"
+  },
+  {
+    "timestamp": 1764037968.5596092,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Given integers a=146000, p=334, q=118, r=2 with a>1, consider the real equation a^p * x^{r * log_a(x)} = x^q, where log_",
+      "correct_answer": "67456",
+      "seed_value": 1808592338
+    },
+    "iso_time": "2025-11-25T02:32:48Z"
+  },
+  {
+    "timestamp": 1764037968.559653,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "67455",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T02:32:48Z"
+  },
+  {
+    "timestamp": 1764038100.9166772,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "67463",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T02:35:00Z"
+  },
+  {
+    "timestamp": 1764038161.9685051,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "67456",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T02:36:01Z"
+  },
+  {
+    "timestamp": 1764038207.143138,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "67462",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T02:36:47Z"
+  },
+  {
+    "timestamp": 1764038364.857022,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "67456",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T02:39:24Z"
+  },
+  {
+    "timestamp": 1764038407.1808379,
+    "seed_id": "1995-2::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-2::1995_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T02:40:07Z"
+  },
+  {
+    "timestamp": 1764038407.18104,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-2::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1483292388
+    },
+    "iso_time": "2025-11-25T02:40:07Z"
+  },
+  {
+    "timestamp": 1764038407.9404988,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 209000,
+        "p": 97,
+        "q": 768,
+        "r": 6,
+        "d": 5
+      }
+    },
+    "iso_time": "2025-11-25T02:40:07Z"
+  },
+  {
+    "timestamp": 1764038408.685149,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 81921
+    },
+    "iso_time": "2025-11-25T02:40:08Z"
+  },
+  {
+    "timestamp": 1764038408.685306,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Given integers a=209000, p=97, q=768, r=6 with a>1, consider the real equation a^p * x^{r * log_a(x)} = x^q, where log_a",
+      "correct_answer": "81921",
+      "seed_value": 1483292388
+    },
+    "iso_time": "2025-11-25T02:40:08Z"
+  },
+  {
+    "timestamp": 1764038408.685348,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "81921",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T02:40:08Z"
+  },
+  {
+    "timestamp": 1764038442.6915321,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "81920",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T02:40:42Z"
+  },
+  {
+    "timestamp": 1764038566.624099,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "81921",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T02:42:46Z"
+  },
+  {
+    "timestamp": 1764038605.436766,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "81913",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T02:43:25Z"
+  },
+  {
+    "timestamp": 1764038647.419811,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "81926",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T02:44:07Z"
+  },
+  {
+    "timestamp": 1764038683.2080262,
+    "seed_id": "1995-2::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-2::1995_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T02:44:43Z"
+  },
+  {
+    "timestamp": 1764038683.20822,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-2::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 29490159
+    },
+    "iso_time": "2025-11-25T02:44:43Z"
+  },
+  {
+    "timestamp": 1764038683.969082,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 8170,
+        "p": 150,
+        "q": 245,
+        "r": 5,
+        "d": 6
+      }
+    },
+    "iso_time": "2025-11-25T02:44:43Z"
+  },
+  {
+    "timestamp": 1764038684.709876,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 34097
+    },
+    "iso_time": "2025-11-25T02:44:44Z"
+  },
+  {
+    "timestamp": 1764038684.710026,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Given integers a=8170, p=150, q=245, r=5 with a>1, consider the real equation a^p * x^{r * log_a(x)} = x^q, where log_a(",
+      "correct_answer": "34097",
+      "seed_value": 29490159
+    },
+    "iso_time": "2025-11-25T02:44:44Z"
+  },
+  {
+    "timestamp": 1764038684.7100658,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "34089",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T02:44:44Z"
+  },
+  {
+    "timestamp": 1764038739.352916,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "34099",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T02:45:39Z"
+  },
+  {
+    "timestamp": 1764039762.1673222,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "34097",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T03:02:42Z"
+  },
+  {
+    "timestamp": 1764039823.573462,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "34097",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T03:03:43Z"
+  },
+  {
+    "timestamp": 1764039878.637146,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "34105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T03:04:38Z"
+  },
+  {
+    "timestamp": 1764039918.510855,
+    "seed_id": "1995-2::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-2::1995_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-25T03:05:18Z"
+  },
+  {
+    "timestamp": 1764039918.5110059,
+    "seed_id": "1995-2::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-25T03:05:18Z"
+  },
+  {
+    "timestamp": 1764039918.5110888,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 2 (successes=3).",
+      "question": "Find the last three digits of the product of the positive roots of $\\sqrt{1995}x^{\\log_{1995}x}=x^2.$",
+      "answer": "25",
+      "example_id": "1995-2::1995"
+    },
+    "iso_time": "2025-11-25T03:05:18Z"
+  },
+  {
+    "timestamp": 1764040024.904536,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-2::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1365709815
+    },
+    "iso_time": "2025-11-25T03:07:04Z"
+  },
+  {
+    "timestamp": 1764040025.683674,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 11,
+        "a0": 3432,
+        "A": 12,
+        "C": 24,
+        "alpha": 3,
+        "beta": -84,
+        "gamma": 1029,
+        "r1": 13,
+        "r2": 8,
+        "r3": 11,
+        "S1": 32
+      }
+    },
+    "iso_time": "2025-11-25T03:07:05Z"
+  },
+  {
+    "timestamp": 1764040026.430615,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 921
+    },
+    "iso_time": "2025-11-25T03:07:06Z"
+  },
+  {
+    "timestamp": 1764040026.430768,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the last three digits of the product of the positive real solutions x > 0 to the equation 11^3432 · x^{ {A}·log_{ 1",
+      "correct_answer": "921",
+      "seed_value": 1365709815
+    },
+    "iso_time": "2025-11-25T03:07:06Z"
+  },
+  {
+    "timestamp": 1764040026.430809,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "928",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T03:07:06Z"
+  },
+  {
+    "timestamp": 1764040047.7924511,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "921",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T03:07:27Z"
+  },
+  {
+    "timestamp": 1764040058.593303,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "917",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T03:07:38Z"
+  },
+  {
+    "timestamp": 1764040325.3267689,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "930",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T03:12:05Z"
+  },
+  {
+    "timestamp": 1764040345.619358,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "921",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T03:12:25Z"
+  },
+  {
+    "timestamp": 1764040359.804838,
+    "seed_id": "1995-2::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T03:12:39Z"
+  },
+  {
+    "timestamp": 1764040359.8051,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-2::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1198799813
+    },
+    "iso_time": "2025-11-25T03:12:39Z"
+  },
+  {
+    "timestamp": 1764040360.5903628,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 147,
+        "a0": 6650,
+        "A": 9,
+        "C": 4,
+        "alpha": 5,
+        "beta": -171,
+        "gamma": 1969,
+        "r1": 7,
+        "r2": 19,
+        "r3": 10,
+        "S1": 36
+      }
+    },
+    "iso_time": "2025-11-25T03:12:40Z"
+  },
+  {
+    "timestamp": 1764040361.337722,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 321
+    },
+    "iso_time": "2025-11-25T03:12:41Z"
+  },
+  {
+    "timestamp": 1764040361.337894,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the last three digits of the product of the positive real solutions x > 0 to the equation 147^6650 · x^{ {A}·log_{ ",
+      "correct_answer": "321",
+      "seed_value": 1198799813
+    },
+    "iso_time": "2025-11-25T03:12:41Z"
+  },
+  {
+    "timestamp": 1764040361.337944,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T03:12:41Z"
+  },
+  {
+    "timestamp": 1764040378.388822,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "327",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T03:12:58Z"
+  },
+  {
+    "timestamp": 1764040412.86202,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T03:13:32Z"
+  },
+  {
+    "timestamp": 1764040462.966149,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "322",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T03:14:22Z"
+  },
+  {
+    "timestamp": 1764040536.081661,
+    "seed_id": "1995-2::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "319",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T03:15:36Z"
+  },
+  {
+    "timestamp": 1764040554.672301,
+    "seed_id": "1995-2::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-2::1995_prompt02-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-25T03:15:54Z"
+  }
+]

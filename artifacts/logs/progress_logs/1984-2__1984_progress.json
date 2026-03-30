@@ -1,0 +1,711 @@
+[
+  {
+    "timestamp": 1762685813.984664,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1984,
+      "question_preview": "The integer $n$ is the smallest positive multiple of $15$ such that every digit of $n$ is either $8$ or $0$ . Compute $\\",
+      "answer": "592",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-09T10:56:53Z"
+  },
+  {
+    "timestamp": 1762685813.9846861,
+    "seed_id": "1984-2::1984",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-09T10:56:53Z"
+  },
+  {
+    "timestamp": 1762685813.9846961,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The integer $n$ is the smallest positive multiple of $15$ such that every digit of $n$ is either $8$ or $0$ . Compute $\\frac{n}{15}$ .",
+      "answer": "592",
+      "example_id": "1984-2::1984"
+    },
+    "iso_time": "2025-11-09T10:56:53Z"
+  },
+  {
+    "timestamp": 1762685993.083746,
+    "seed_id": "1984-2::1984",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 21 column 366 (char 4885)",
+    "payload": {},
+    "iso_time": "2025-11-09T10:59:53Z"
+  },
+  {
+    "timestamp": 1762685993.083785,
+    "seed_id": "1984-2::1984",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-09T10:59:53Z"
+  },
+  {
+    "timestamp": 1762685993.083811,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 21 column 366 (char 4885)",
+      "question": "The integer $n$ is the smallest positive multiple of $15$ such that every digit of $n$ is either $8$ or $0$ . Compute $\\frac{n}{15}$ .",
+      "answer": "592",
+      "example_id": "1984-2::1984"
+    },
+    "iso_time": "2025-11-09T10:59:53Z"
+  },
+  {
+    "timestamp": 1762686248.140471,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-2::1984_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 484716537
+    },
+    "iso_time": "2025-11-09T11:04:08Z"
+  },
+  {
+    "timestamp": 1762686248.909802,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "digit": 9,
+        "divisor": 82500
+      }
+    },
+    "iso_time": "2025-11-09T11:04:08Z"
+  },
+  {
+    "timestamp": 1762686249.692248,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12
+    },
+    "iso_time": "2025-11-09T11:04:09Z"
+  },
+  {
+    "timestamp": 1762686249.692388,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of positive integers whose decimal representation consists only of the digits $9$ and $0$. Find the s",
+      "correct_answer": "12",
+      "seed_value": 484716537
+    },
+    "iso_time": "2025-11-09T11:04:09Z"
+  },
+  {
+    "timestamp": 1762686249.6924329,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T11:04:09Z"
+  },
+  {
+    "timestamp": 1762686452.66134,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T11:07:32Z"
+  },
+  {
+    "timestamp": 1762686589.3085,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "11",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T11:09:49Z"
+  },
+  {
+    "timestamp": 1762686793.5560331,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T11:13:13Z"
+  },
+  {
+    "timestamp": 1762686916.5534341,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T11:15:16Z"
+  },
+  {
+    "timestamp": 1762687219.451533,
+    "seed_id": "1984-2::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-2::1984_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T11:20:19Z"
+  },
+  {
+    "timestamp": 1762687219.451602,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-2::1984_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1393773350
+    },
+    "iso_time": "2025-11-09T11:20:19Z"
+  },
+  {
+    "timestamp": 1762687220.4323452,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "digit": 5,
+        "divisor": 315000
+      }
+    },
+    "iso_time": "2025-11-09T11:20:20Z"
+  },
+  {
+    "timestamp": 1762687221.209306,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17635097
+    },
+    "iso_time": "2025-11-09T11:20:21Z"
+  },
+  {
+    "timestamp": 1762687221.209435,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of positive integers whose decimal representation consists only of the digits $5$ and $0$. Find the s",
+      "correct_answer": "17635097",
+      "seed_value": 1393773350
+    },
+    "iso_time": "2025-11-09T11:20:21Z"
+  },
+  {
+    "timestamp": 1762687221.2094789,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "17635097",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T11:20:21Z"
+  },
+  {
+    "timestamp": 1762687500.900543,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17635103",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T11:25:00Z"
+  },
+  {
+    "timestamp": 1762687795.220999,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "17635105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T11:29:55Z"
+  },
+  {
+    "timestamp": 1762688036.734323,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "17635097",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T11:33:56Z"
+  },
+  {
+    "timestamp": 1762688324.0916648,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17635100",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T11:38:44Z"
+  },
+  {
+    "timestamp": 1762688609.6609862,
+    "seed_id": "1984-2::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-2::1984_prompt02-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T11:43:29Z"
+  },
+  {
+    "timestamp": 1762688609.6610959,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-2::1984_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1654411088
+    },
+    "iso_time": "2025-11-09T11:43:29Z"
+  },
+  {
+    "timestamp": 1762688610.848112,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "digit": 6,
+        "divisor": 468
+      }
+    },
+    "iso_time": "2025-11-09T11:43:30Z"
+  },
+  {
+    "timestamp": 1762688611.800885,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1295
+    },
+    "iso_time": "2025-11-09T11:43:31Z"
+  },
+  {
+    "timestamp": 1762688611.8010392,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of positive integers whose decimal representation consists only of the digits $6$ and $0$. Find the s",
+      "correct_answer": "1295",
+      "seed_value": 1654411088
+    },
+    "iso_time": "2025-11-09T11:43:31Z"
+  },
+  {
+    "timestamp": 1762688611.801088,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1295",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T11:43:31Z"
+  },
+  {
+    "timestamp": 1762688725.871742,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1295",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T11:45:25Z"
+  },
+  {
+    "timestamp": 1762688873.4678621,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1288",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T11:47:53Z"
+  },
+  {
+    "timestamp": 1762689079.706433,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1299",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T11:51:19Z"
+  },
+  {
+    "timestamp": 1762689339.014766,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1298",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T11:55:39Z"
+  },
+  {
+    "timestamp": 1762689540.157758,
+    "seed_id": "1984-2::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-2::1984_prompt02-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T11:59:00Z"
+  },
+  {
+    "timestamp": 1762689540.1578019,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-2::1984_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1906629208
+    },
+    "iso_time": "2025-11-09T11:59:00Z"
+  },
+  {
+    "timestamp": 1762689541.122863,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "digit": 5,
+        "divisor": 15750
+      }
+    },
+    "iso_time": "2025-11-09T11:59:01Z"
+  },
+  {
+    "timestamp": 1762689541.9104571,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 35270194
+    },
+    "iso_time": "2025-11-09T11:59:01Z"
+  },
+  {
+    "timestamp": 1762689541.910593,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of positive integers whose decimal representation consists only of the digits $5$ and $0$. Find the s",
+      "correct_answer": "35270194",
+      "seed_value": 1906629208
+    },
+    "iso_time": "2025-11-09T11:59:01Z"
+  },
+  {
+    "timestamp": 1762689541.910641,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "35270194",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T11:59:01Z"
+  },
+  {
+    "timestamp": 1762689811.546792,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "35270203",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T12:03:31Z"
+  },
+  {
+    "timestamp": 1762690080.2716658,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "35270187",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T12:08:00Z"
+  },
+  {
+    "timestamp": 1762690375.673003,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "35270185",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T12:12:55Z"
+  },
+  {
+    "timestamp": 1762690580.788646,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "35270194",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T12:16:20Z"
+  },
+  {
+    "timestamp": 1762690819.318603,
+    "seed_id": "1984-2::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-2::1984_prompt02-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T12:20:19Z"
+  },
+  {
+    "timestamp": 1762690819.31867,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-2::1984_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 1845075507
+    },
+    "iso_time": "2025-11-09T12:20:19Z"
+  },
+  {
+    "timestamp": 1762690820.3215208,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "digit": 5,
+        "divisor": 1680
+      }
+    },
+    "iso_time": "2025-11-09T12:20:20Z"
+  },
+  {
+    "timestamp": 1762690821.1055439,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 300625
+    },
+    "iso_time": "2025-11-09T12:20:21Z"
+  },
+  {
+    "timestamp": 1762690821.105685,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of positive integers whose decimal representation consists only of the digits $5$ and $0$. Find the s",
+      "correct_answer": "300625",
+      "seed_value": 1845075507
+    },
+    "iso_time": "2025-11-09T12:20:21Z"
+  },
+  {
+    "timestamp": 1762690821.105727,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "300625",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T12:20:21Z"
+  },
+  {
+    "timestamp": 1762690942.347717,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "300625",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T12:22:22Z"
+  },
+  {
+    "timestamp": 1762691121.7672372,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "300629",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T12:25:21Z"
+  },
+  {
+    "timestamp": 1762691326.2203279,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "300626",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T12:28:46Z"
+  },
+  {
+    "timestamp": 1762691513.7394502,
+    "seed_id": "1984-2::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "300623",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T12:31:53Z"
+  },
+  {
+    "timestamp": 1762691705.566991,
+    "seed_id": "1984-2::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-2::1984_prompt02-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-09T12:35:05Z"
+  }
+]

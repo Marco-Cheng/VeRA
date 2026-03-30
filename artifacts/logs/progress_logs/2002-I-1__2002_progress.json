@@ -1,0 +1,745 @@
+[
+  {
+    "timestamp": 1764655318.737841,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2002,
+      "question_preview": "Many states use a sequence of three letters followed by a sequence of three digits as their standard license-plate patte",
+      "answer": "59",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-02T06:01:58Z"
+  },
+  {
+    "timestamp": 1764655318.737889,
+    "seed_id": "2002-I-1::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-02T06:01:58Z"
+  },
+  {
+    "timestamp": 1764655318.7379122,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Many states use a sequence of three letters followed by a sequence of three digits as their standard license-plate pattern. Given that each three-letter three-digit arrangement is equally likely, the probability that such a license plate will contain at least one palindrome (a three-letter arrangement or a three-digit arrangement that reads the same left-to-right as it does right-to-left) is $m/n$ , where $m$ and $n$ are relatively prime positive integers. Find $m+n$ .",
+      "answer": "59",
+      "example_id": "2002-I-1::2002"
+    },
+    "iso_time": "2025-12-02T06:01:58Z"
+  },
+  {
+    "timestamp": 1764655372.088537,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-1::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1161347659
+    },
+    "iso_time": "2025-12-02T06:02:52Z"
+  },
+  {
+    "timestamp": 1764655373.465534,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_blocks": 4,
+        "lengths": [
+          7,
+          2,
+          4,
+          4
+        ],
+        "alphabet_sizes": [
+          10,
+          10,
+          10,
+          9
+        ],
+        "target_k": 2
+      }
+    },
+    "iso_time": "2025-12-02T06:02:53Z"
+  },
+  {
+    "timestamp": 1764655374.599467,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3007309
+    },
+    "iso_time": "2025-12-02T06:02:54Z"
+  },
+  {
+    "timestamp": 1764655374.599605,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A vehicle registry code is formed by concatenating 4 independent blocks. The i-th block has length L_i and uses an alpha",
+      "correct_answer": "3007309",
+      "seed_value": 1161347659
+    },
+    "iso_time": "2025-12-02T06:02:54Z"
+  },
+  {
+    "timestamp": 1764655374.5996642,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3007308",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:02:54Z"
+  },
+  {
+    "timestamp": 1764655401.9551098,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3007309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T06:03:21Z"
+  },
+  {
+    "timestamp": 1764655429.167684,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3007313",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:03:49Z"
+  },
+  {
+    "timestamp": 1764655455.642782,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3007309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T06:04:15Z"
+  },
+  {
+    "timestamp": 1764655485.043842,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3007317",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:04:45Z"
+  },
+  {
+    "timestamp": 1764655640.606754,
+    "seed_id": "2002-I-1::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-1::2002_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T06:07:20Z"
+  },
+  {
+    "timestamp": 1764655640.606955,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-1::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1352828572
+    },
+    "iso_time": "2025-12-02T06:07:20Z"
+  },
+  {
+    "timestamp": 1764655642.016512,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_blocks": 3,
+        "lengths": [
+          7,
+          3,
+          7
+        ],
+        "alphabet_sizes": [
+          24,
+          24,
+          10
+        ],
+        "target_k": 2
+      }
+    },
+    "iso_time": "2025-12-02T06:07:22Z"
+  },
+  {
+    "timestamp": 1764655643.1439989,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 66358169
+    },
+    "iso_time": "2025-12-02T06:07:23Z"
+  },
+  {
+    "timestamp": 1764655643.144147,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A vehicle registry code is formed by concatenating 3 independent blocks. The i-th block has length L_i and uses an alpha",
+      "correct_answer": "66358169",
+      "seed_value": 1352828572
+    },
+    "iso_time": "2025-12-02T06:07:23Z"
+  },
+  {
+    "timestamp": 1764655643.144209,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "66358170",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:07:23Z"
+  },
+  {
+    "timestamp": 1764655669.8667462,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "66358169",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T06:07:49Z"
+  },
+  {
+    "timestamp": 1764655717.1774,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "66358166",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:08:37Z"
+  },
+  {
+    "timestamp": 1764655830.867774,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "66358169",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T06:10:30Z"
+  },
+  {
+    "timestamp": 1764655875.586876,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "66358164",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:11:15Z"
+  },
+  {
+    "timestamp": 1764655898.9340858,
+    "seed_id": "2002-I-1::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-1::2002_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T06:11:38Z"
+  },
+  {
+    "timestamp": 1764655898.934266,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-1::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1910470120
+    },
+    "iso_time": "2025-12-02T06:11:38Z"
+  },
+  {
+    "timestamp": 1764655900.293018,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_blocks": 5,
+        "lengths": [
+          3,
+          6,
+          4,
+          7,
+          2
+        ],
+        "alphabet_sizes": [
+          25,
+          12,
+          9,
+          24,
+          9
+        ],
+        "target_k": 4
+      }
+    },
+    "iso_time": "2025-12-02T06:11:40Z"
+  },
+  {
+    "timestamp": 1764655901.489384,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 217678241431
+    },
+    "iso_time": "2025-12-02T06:11:41Z"
+  },
+  {
+    "timestamp": 1764655901.489565,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A vehicle registry code is formed by concatenating 5 independent blocks. The i-th block has length L_i and uses an alpha",
+      "correct_answer": "217678241431",
+      "seed_value": 1910470120
+    },
+    "iso_time": "2025-12-02T06:11:41Z"
+  },
+  {
+    "timestamp": 1764655901.4896278,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "217678241438",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:11:41Z"
+  },
+  {
+    "timestamp": 1764655972.921869,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "217678241440",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:12:52Z"
+  },
+  {
+    "timestamp": 1764656144.843176,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "217678241431",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T06:15:44Z"
+  },
+  {
+    "timestamp": 1764656223.134634,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "217678241426",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:17:03Z"
+  },
+  {
+    "timestamp": 1764656393.324548,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "217678241431",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T06:19:53Z"
+  },
+  {
+    "timestamp": 1764656417.13691,
+    "seed_id": "2002-I-1::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-1::2002_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T06:20:17Z"
+  },
+  {
+    "timestamp": 1764656417.137098,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-1::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1962038299
+    },
+    "iso_time": "2025-12-02T06:20:17Z"
+  },
+  {
+    "timestamp": 1764656418.310378,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_blocks": 5,
+        "lengths": [
+          7,
+          6,
+          3,
+          5,
+          5
+        ],
+        "alphabet_sizes": [
+          11,
+          26,
+          22,
+          9,
+          22
+        ],
+        "target_k": 3
+      }
+    },
+    "iso_time": "2025-12-02T06:20:18Z"
+  },
+  {
+    "timestamp": 1764656419.408546,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 20176782041861
+    },
+    "iso_time": "2025-12-02T06:20:19Z"
+  },
+  {
+    "timestamp": 1764656419.408709,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A vehicle registry code is formed by concatenating 5 independent blocks. The i-th block has length L_i and uses an alpha",
+      "correct_answer": "20176782041861",
+      "seed_value": 1962038299
+    },
+    "iso_time": "2025-12-02T06:20:19Z"
+  },
+  {
+    "timestamp": 1764656419.4087732,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "20176782041870",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:20:19Z"
+  },
+  {
+    "timestamp": 1764656461.6000051,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "20176782041861",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T06:21:01Z"
+  },
+  {
+    "timestamp": 1764656579.28246,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "20176782041861",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T06:22:59Z"
+  },
+  {
+    "timestamp": 1764656611.4464262,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "20176782041863",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:23:31Z"
+  },
+  {
+    "timestamp": 1764656680.61184,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "20176782041862",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:24:40Z"
+  },
+  {
+    "timestamp": 1764656749.8821619,
+    "seed_id": "2002-I-1::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-1::2002_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T06:25:49Z"
+  },
+  {
+    "timestamp": 1764656749.8823848,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-1::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1331951044
+    },
+    "iso_time": "2025-12-02T06:25:49Z"
+  },
+  {
+    "timestamp": 1764656751.1702242,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_blocks": 6,
+        "lengths": [
+          2,
+          6,
+          4,
+          3,
+          6,
+          6
+        ],
+        "alphabet_sizes": [
+          25,
+          26,
+          22,
+          24,
+          24,
+          8
+        ],
+        "target_k": 2
+      }
+    },
+    "iso_time": "2025-12-02T06:25:51Z"
+  },
+  {
+    "timestamp": 1764656752.305862,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 36197864518792453
+    },
+    "iso_time": "2025-12-02T06:25:52Z"
+  },
+  {
+    "timestamp": 1764656752.3060129,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A vehicle registry code is formed by concatenating 6 independent blocks. The i-th block has length L_i and uses an alpha",
+      "correct_answer": "36197864518792453",
+      "seed_value": 1331951044
+    },
+    "iso_time": "2025-12-02T06:25:52Z"
+  },
+  {
+    "timestamp": 1764656752.306072,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "36197864518792453",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T06:25:52Z"
+  },
+  {
+    "timestamp": 1764656936.387605,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "36197864518792452",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:28:56Z"
+  },
+  {
+    "timestamp": 1764657075.425194,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "36197864518792465",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:31:15Z"
+  },
+  {
+    "timestamp": 1764657209.5177019,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "36197864518792453",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T06:33:29Z"
+  },
+  {
+    "timestamp": 1764657287.565734,
+    "seed_id": "2002-I-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "36197864518792451",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:34:47Z"
+  },
+  {
+    "timestamp": 1764658002.29137,
+    "seed_id": "2002-I-1::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-1::2002_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-02T06:46:42Z"
+  }
+]

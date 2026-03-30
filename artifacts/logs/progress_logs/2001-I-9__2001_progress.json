@@ -1,0 +1,734 @@
+[
+  {
+    "timestamp": 1764565003.059697,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "In triangle $ABC$ , $AB=13$ , $BC=15$ and $CA=17$ . Point $D$ is on $\\overline{AB}$ , $E$ is on $\\overline{BC}$ , and $F",
+      "answer": "61",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T04:56:43Z"
+  },
+  {
+    "timestamp": 1764565003.059732,
+    "seed_id": "2001-I-9::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T04:56:43Z"
+  },
+  {
+    "timestamp": 1764565003.0597482,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In triangle $ABC$ , $AB=13$ , $BC=15$ and $CA=17$ . Point $D$ is on $\\overline{AB}$ , $E$ is on $\\overline{BC}$ , and $F$ is on $\\overline{CA}$ . Let $AD=p\\cdot AB$ , $BE=q\\cdot BC$ , and $CF=r\\cdot CA$ , where $p$ , $q$ , and $r$ are positive and satisfy $p+q+r=2/3$ and $p^2+q^2+r^2=2/5$ . The ratio of the area of triangle $DEF$ to the area of triangle $ABC$ can be written in the form $m/n$ , where $m$ and $n$ are relatively prime positive integers. Find $m+n$ .",
+      "answer": "61",
+      "example_id": "2001-I-9::2001"
+    },
+    "iso_time": "2025-12-01T04:56:43Z"
+  },
+  {
+    "timestamp": 1764565095.684149,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-9::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1046050778
+    },
+    "iso_time": "2025-12-01T04:58:15Z"
+  },
+  {
+    "timestamp": 1764565096.9261131,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 20,
+        "bc": 49,
+        "ca": 48,
+        "p_num": 1,
+        "p_den": 4,
+        "q_num": 1,
+        "q_den": 6,
+        "r_num": 3,
+        "r_den": 8,
+        "s1_num": 19,
+        "s1_den": 24,
+        "s2_num": 133,
+        "s2_den": 576
+      }
+    },
+    "iso_time": "2025-12-01T04:58:16Z"
+  },
+  {
+    "timestamp": 1764565098.0266361,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 295
+    },
+    "iso_time": "2025-12-01T04:58:18Z"
+  },
+  {
+    "timestamp": 1764565098.02687,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC with side lengths 20, 49, and 48, points D, E, and F lie on AB, BC, and CA respectively so that AD = (1/",
+      "correct_answer": "295",
+      "seed_value": 1046050778
+    },
+    "iso_time": "2025-12-01T04:58:18Z"
+  },
+  {
+    "timestamp": 1764565098.0269382,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "304",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T04:58:18Z"
+  },
+  {
+    "timestamp": 1764565119.0821939,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "301",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T04:58:39Z"
+  },
+  {
+    "timestamp": 1764565160.7598982,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "300",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T04:59:20Z"
+  },
+  {
+    "timestamp": 1764565174.607859,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "295",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T04:59:34Z"
+  },
+  {
+    "timestamp": 1764565184.3082712,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "295",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T04:59:44Z"
+  },
+  {
+    "timestamp": 1764565202.613746,
+    "seed_id": "2001-I-9::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-9::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T05:00:02Z"
+  },
+  {
+    "timestamp": 1764565202.613877,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-9::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 972016370
+    },
+    "iso_time": "2025-12-01T05:00:02Z"
+  },
+  {
+    "timestamp": 1764565203.794909,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 55,
+        "bc": 46,
+        "ca": 51,
+        "p_num": 1,
+        "p_den": 7,
+        "q_num": 1,
+        "q_den": 2,
+        "r_num": 4,
+        "r_den": 5,
+        "s1_num": 101,
+        "s1_den": 70,
+        "s2_num": 4461,
+        "s2_den": 4900
+      }
+    },
+    "iso_time": "2025-12-01T05:00:03Z"
+  },
+  {
+    "timestamp": 1764565204.971499,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 409
+    },
+    "iso_time": "2025-12-01T05:00:04Z"
+  },
+  {
+    "timestamp": 1764565204.971694,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC with side lengths 55, 46, and 51, points D, E, and F lie on AB, BC, and CA respectively so that AD = (1/",
+      "correct_answer": "409",
+      "seed_value": 972016370
+    },
+    "iso_time": "2025-12-01T05:00:04Z"
+  },
+  {
+    "timestamp": 1764565204.971742,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "400",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:00:04Z"
+  },
+  {
+    "timestamp": 1764565218.918268,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "409",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:00:18Z"
+  },
+  {
+    "timestamp": 1764565244.827636,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "409",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:00:44Z"
+  },
+  {
+    "timestamp": 1764565255.891573,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "418",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:00:55Z"
+  },
+  {
+    "timestamp": 1764565273.479858,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "402",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:01:13Z"
+  },
+  {
+    "timestamp": 1764565288.886561,
+    "seed_id": "2001-I-9::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-9::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T05:01:28Z"
+  },
+  {
+    "timestamp": 1764565288.8867252,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-9::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 295920360
+    },
+    "iso_time": "2025-12-01T05:01:28Z"
+  },
+  {
+    "timestamp": 1764565290.013885,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 58,
+        "bc": 33,
+        "ca": 50,
+        "p_num": 2,
+        "p_den": 3,
+        "q_num": 3,
+        "q_den": 4,
+        "r_num": 4,
+        "r_den": 7,
+        "s1_num": 167,
+        "s1_den": 84,
+        "s2_num": 9409,
+        "s2_den": 7056
+      }
+    },
+    "iso_time": "2025-12-01T05:01:30Z"
+  },
+  {
+    "timestamp": 1764565291.1501288,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 409
+    },
+    "iso_time": "2025-12-01T05:01:31Z"
+  },
+  {
+    "timestamp": 1764565291.150294,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC with side lengths 58, 33, and 50, points D, E, and F lie on AB, BC, and CA respectively so that AD = (2/",
+      "correct_answer": "409",
+      "seed_value": 295920360
+    },
+    "iso_time": "2025-12-01T05:01:31Z"
+  },
+  {
+    "timestamp": 1764565291.1503549,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "409",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:01:31Z"
+  },
+  {
+    "timestamp": 1764565317.119602,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "409",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:01:57Z"
+  },
+  {
+    "timestamp": 1764565330.540381,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "403",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:02:10Z"
+  },
+  {
+    "timestamp": 1764565352.49407,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "413",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:02:32Z"
+  },
+  {
+    "timestamp": 1764565390.2027469,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "418",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:03:10Z"
+  },
+  {
+    "timestamp": 1764565412.3669171,
+    "seed_id": "2001-I-9::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-9::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T05:03:32Z"
+  },
+  {
+    "timestamp": 1764565412.367167,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-9::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2066268885
+    },
+    "iso_time": "2025-12-01T05:03:32Z"
+  },
+  {
+    "timestamp": 1764565413.4734561,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 51,
+        "bc": 15,
+        "ca": 64,
+        "p_num": 3,
+        "p_den": 7,
+        "q_num": 1,
+        "q_den": 4,
+        "r_num": 4,
+        "r_den": 7,
+        "s1_num": 5,
+        "s1_den": 4,
+        "s2_num": 449,
+        "s2_den": 784
+      }
+    },
+    "iso_time": "2025-12-01T05:03:33Z"
+  },
+  {
+    "timestamp": 1764565414.587638,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 83
+    },
+    "iso_time": "2025-12-01T05:03:34Z"
+  },
+  {
+    "timestamp": 1764565414.5877929,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC with side lengths 51, 15, and 64, points D, E, and F lie on AB, BC, and CA respectively so that AD = (3/",
+      "correct_answer": "83",
+      "seed_value": 2066268885
+    },
+    "iso_time": "2025-12-01T05:03:34Z"
+  },
+  {
+    "timestamp": 1764565414.587848,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "83",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:03:34Z"
+  },
+  {
+    "timestamp": 1764565436.006658,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "78",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:03:56Z"
+  },
+  {
+    "timestamp": 1764565449.5177112,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "83",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:04:09Z"
+  },
+  {
+    "timestamp": 1764565465.7008488,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "91",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:04:25Z"
+  },
+  {
+    "timestamp": 1764565504.410912,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "88",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:05:04Z"
+  },
+  {
+    "timestamp": 1764565522.738094,
+    "seed_id": "2001-I-9::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-9::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T05:05:22Z"
+  },
+  {
+    "timestamp": 1764565522.738174,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-9::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1138381556
+    },
+    "iso_time": "2025-12-01T05:05:22Z"
+  },
+  {
+    "timestamp": 1764565524.07634,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 44,
+        "bc": 36,
+        "ca": 35,
+        "p_num": 3,
+        "p_den": 4,
+        "q_num": 1,
+        "q_den": 2,
+        "r_num": 1,
+        "r_den": 3,
+        "s1_num": 19,
+        "s1_den": 12,
+        "s2_num": 133,
+        "s2_den": 144
+      }
+    },
+    "iso_time": "2025-12-01T05:05:24Z"
+  },
+  {
+    "timestamp": 1764565525.182797,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 211
+    },
+    "iso_time": "2025-12-01T05:05:25Z"
+  },
+  {
+    "timestamp": 1764565525.183019,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC with side lengths 44, 36, and 35, points D, E, and F lie on AB, BC, and CA respectively so that AD = (3/",
+      "correct_answer": "211",
+      "seed_value": 1138381556
+    },
+    "iso_time": "2025-12-01T05:05:25Z"
+  },
+  {
+    "timestamp": 1764565525.183087,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "211",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:05:25Z"
+  },
+  {
+    "timestamp": 1764565539.608861,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "211",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:05:39Z"
+  },
+  {
+    "timestamp": 1764565565.235733,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "213",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:06:05Z"
+  },
+  {
+    "timestamp": 1764565576.883151,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "205",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:06:16Z"
+  },
+  {
+    "timestamp": 1764565602.2957902,
+    "seed_id": "2001-I-9::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "214",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:06:42Z"
+  },
+  {
+    "timestamp": 1764565620.118349,
+    "seed_id": "2001-I-9::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-9::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T05:07:00Z"
+  }
+]

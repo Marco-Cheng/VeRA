@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764430602.321732,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "A sphere is inscribed in the tetrahedron whose vertices are $A = (6,0,0), B = (0,4,0), C = (0,0,2),$ and $D = (0,0,0).$ ",
+      "answer": "5",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T15:36:42Z"
+  },
+  {
+    "timestamp": 1764430602.321772,
+    "seed_id": "2001-I-12::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T15:36:42Z"
+  },
+  {
+    "timestamp": 1764430602.321792,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A sphere is inscribed in the tetrahedron whose vertices are $A = (6,0,0), B = (0,4,0), C = (0,0,2),$ and $D = (0,0,0).$ The radius of the sphere is $m/n,$ where $m$ and $n$ are relatively prime positive integers.  Find $m + n.$",
+      "answer": "5",
+      "example_id": "2001-I-12::2001"
+    },
+    "iso_time": "2025-11-29T15:36:42Z"
+  },
+  {
+    "timestamp": 1764430732.353576,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-12::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1352109767
+    },
+    "iso_time": "2025-11-29T15:38:52Z"
+  },
+  {
+    "timestamp": 1764430733.640127,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 88,
+        "b": 64,
+        "c": 44
+      }
+    },
+    "iso_time": "2025-11-29T15:38:53Z"
+  },
+  {
+    "timestamp": 1764430734.6506271,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5102
+    },
+    "iso_time": "2025-11-29T15:38:54Z"
+  },
+  {
+    "timestamp": 1764430734.65078,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In three-dimensional space, consider the tetrahedron with vertices A=(88, 0, 0), B=(0, 64, 0), C=(0, 0, 44), and D=(0, 0",
+      "correct_answer": "5102",
+      "seed_value": 1352109767
+    },
+    "iso_time": "2025-11-29T15:38:54Z"
+  },
+  {
+    "timestamp": 1764430734.650827,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:38:54Z"
+  },
+  {
+    "timestamp": 1764430796.527852,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5102",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T15:39:56Z"
+  },
+  {
+    "timestamp": 1764430826.4677708,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:40:26Z"
+  },
+  {
+    "timestamp": 1764430861.4489322,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5102",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T15:41:01Z"
+  },
+  {
+    "timestamp": 1764430883.17392,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5108",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:41:23Z"
+  },
+  {
+    "timestamp": 1764430915.931587,
+    "seed_id": "2001-I-12::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-12::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T15:41:55Z"
+  },
+  {
+    "timestamp": 1764430915.9317162,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-12::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1861083001
+    },
+    "iso_time": "2025-11-29T15:41:55Z"
+  },
+  {
+    "timestamp": 1764430917.029556,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 18,
+        "b": 4,
+        "c": 6
+      }
+    },
+    "iso_time": "2025-11-29T15:41:57Z"
+  },
+  {
+    "timestamp": 1764430918.050245,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1123
+    },
+    "iso_time": "2025-11-29T15:41:58Z"
+  },
+  {
+    "timestamp": 1764430918.0504,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In three-dimensional space, consider the tetrahedron with vertices A=(18, 0, 0), B=(0, 4, 0), C=(0, 0, 6), and D=(0, 0, ",
+      "correct_answer": "1123",
+      "seed_value": 1861083001
+    },
+    "iso_time": "2025-11-29T15:41:58Z"
+  },
+  {
+    "timestamp": 1764430918.050445,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:41:58Z"
+  },
+  {
+    "timestamp": 1764430942.765385,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1123",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T15:42:22Z"
+  },
+  {
+    "timestamp": 1764430959.660824,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1130",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:42:39Z"
+  },
+  {
+    "timestamp": 1764430980.1106439,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1123",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T15:43:00Z"
+  },
+  {
+    "timestamp": 1764431002.28848,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1116",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:43:22Z"
+  },
+  {
+    "timestamp": 1764431025.082079,
+    "seed_id": "2001-I-12::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-12::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T15:43:45Z"
+  },
+  {
+    "timestamp": 1764431025.082269,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-12::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1005593805
+    },
+    "iso_time": "2025-11-29T15:43:45Z"
+  },
+  {
+    "timestamp": 1764431026.16831,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 30,
+        "b": 40,
+        "c": 18
+      }
+    },
+    "iso_time": "2025-11-29T15:43:46Z"
+  },
+  {
+    "timestamp": 1764431027.192756,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6475
+    },
+    "iso_time": "2025-11-29T15:43:47Z"
+  },
+  {
+    "timestamp": 1764431027.192935,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In three-dimensional space, consider the tetrahedron with vertices A=(30, 0, 0), B=(0, 40, 0), C=(0, 0, 18), and D=(0, 0",
+      "correct_answer": "6475",
+      "seed_value": 1005593805
+    },
+    "iso_time": "2025-11-29T15:43:47Z"
+  },
+  {
+    "timestamp": 1764431027.1929789,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6475",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T15:43:47Z"
+  },
+  {
+    "timestamp": 1764431047.102705,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6475",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T15:44:07Z"
+  },
+  {
+    "timestamp": 1764431070.955673,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6479",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:44:30Z"
+  },
+  {
+    "timestamp": 1764431096.557564,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6473",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:44:56Z"
+  },
+  {
+    "timestamp": 1764431120.313976,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6470",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:45:20Z"
+  },
+  {
+    "timestamp": 1764431151.530333,
+    "seed_id": "2001-I-12::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-12::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T15:45:51Z"
+  },
+  {
+    "timestamp": 1764431151.530488,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-12::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 883382457
+    },
+    "iso_time": "2025-11-29T15:45:51Z"
+  },
+  {
+    "timestamp": 1764431152.777935,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 18,
+        "b": 27,
+        "c": 24
+      }
+    },
+    "iso_time": "2025-11-29T15:45:52Z"
+  },
+  {
+    "timestamp": 1764431153.87906,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 58909
+    },
+    "iso_time": "2025-11-29T15:45:53Z"
+  },
+  {
+    "timestamp": 1764431153.879225,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In three-dimensional space, consider the tetrahedron with vertices A=(18, 0, 0), B=(0, 27, 0), C=(0, 0, 24), and D=(0, 0",
+      "correct_answer": "58909",
+      "seed_value": 883382457
+    },
+    "iso_time": "2025-11-29T15:45:53Z"
+  },
+  {
+    "timestamp": 1764431153.8792782,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "58909",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T15:45:53Z"
+  },
+  {
+    "timestamp": 1764431177.05319,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "58914",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:46:17Z"
+  },
+  {
+    "timestamp": 1764431209.748644,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "58909",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T15:46:49Z"
+  },
+  {
+    "timestamp": 1764431239.2246552,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "58900",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:47:19Z"
+  },
+  {
+    "timestamp": 1764431264.905706,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "58918",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:47:44Z"
+  },
+  {
+    "timestamp": 1764431293.447488,
+    "seed_id": "2001-I-12::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-12::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T15:48:13Z"
+  },
+  {
+    "timestamp": 1764431293.4475892,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-12::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1730457915
+    },
+    "iso_time": "2025-11-29T15:48:13Z"
+  },
+  {
+    "timestamp": 1764431294.529174,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 10,
+        "b": 15,
+        "c": 45
+      }
+    },
+    "iso_time": "2025-11-29T15:48:14Z"
+  },
+  {
+    "timestamp": 1764431295.53602,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 26017
+    },
+    "iso_time": "2025-11-29T15:48:15Z"
+  },
+  {
+    "timestamp": 1764431295.536163,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In three-dimensional space, consider the tetrahedron with vertices A=(10, 0, 0), B=(0, 15, 0), C=(0, 0, 45), and D=(0, 0",
+      "correct_answer": "26017",
+      "seed_value": 1730457915
+    },
+    "iso_time": "2025-11-29T15:48:15Z"
+  },
+  {
+    "timestamp": 1764431295.536205,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "26011",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:48:15Z"
+  },
+  {
+    "timestamp": 1764431324.0391521,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "26017",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T15:48:44Z"
+  },
+  {
+    "timestamp": 1764431345.18903,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "26012",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:49:05Z"
+  },
+  {
+    "timestamp": 1764431377.0357661,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "26008",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T15:49:37Z"
+  },
+  {
+    "timestamp": 1764431407.663121,
+    "seed_id": "2001-I-12::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "26017",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T15:50:07Z"
+  },
+  {
+    "timestamp": 1764431429.669424,
+    "seed_id": "2001-I-12::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-12::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T15:50:29Z"
+  }
+]

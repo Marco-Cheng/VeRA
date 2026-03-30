@@ -1,0 +1,1461 @@
+[
+  {
+    "timestamp": 1764040554.762174,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1995,
+      "question_preview": "Starting at $(0,0),$ an object moves in the coordinate plane via a sequence of steps, each of length one.  Each step is ",
+      "answer": "67",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-25T03:15:54Z"
+  },
+  {
+    "timestamp": 1764040554.762203,
+    "seed_id": "1995-3::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-25T03:15:54Z"
+  },
+  {
+    "timestamp": 1764040554.762218,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Starting at $(0,0),$ an object moves in the coordinate plane via a sequence of steps, each of length one.  Each step is left, right, up, or down, all four equally likely.  Let $p$ be the probability that the object reaches $(2,2)$ in six or fewer steps.  Given that $p$ can be written in the form $m/n,$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$",
+      "answer": "67",
+      "example_id": "1995-3::1995"
+    },
+    "iso_time": "2025-11-25T03:15:54Z"
+  },
+  {
+    "timestamp": 1764040626.767434,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-3::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 769095946
+    },
+    "iso_time": "2025-11-25T03:17:06Z"
+  },
+  {
+    "timestamp": 1764040627.5283399,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_den": 18,
+        "p_e_num": 1,
+        "p_w_num": 6,
+        "p_n_num": 2,
+        "p_s_num": 9,
+        "u_max": 3,
+        "v_max": 6,
+        "x_target": 3,
+        "y_target": 6,
+        "t_steps": 13,
+        "blocked_points": [
+          [
+            1,
+            6
+          ]
+        ],
+        "blocked_points_str": "(1,6)"
+      }
+    },
+    "iso_time": "2025-11-25T03:17:07Z"
+  },
+  {
+    "timestamp": 1764040628.2773938,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3012581900501
+    },
+    "iso_time": "2025-11-25T03:17:08Z"
+  },
+  {
+    "timestamp": 1764040628.277573,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Starting at (0,0), a lattice walker takes unit steps. Each step is right with probability 1/18, left with probability 6/",
+      "correct_answer": "3012581900501",
+      "seed_value": 769095946
+    },
+    "iso_time": "2025-11-25T03:17:08Z"
+  },
+  {
+    "timestamp": 1764040628.277631,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3012581900494",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T03:17:08Z"
+  },
+  {
+    "timestamp": 1764042553.5379431,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3012581900501",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T03:49:13Z"
+  },
+  {
+    "timestamp": 1764042671.92481,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3012581900501",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T03:51:11Z"
+  },
+  {
+    "timestamp": 1764042831.54621,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3012581900503",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T03:53:51Z"
+  },
+  {
+    "timestamp": 1764043166.2997918,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3012581900507",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T03:59:26Z"
+  },
+  {
+    "timestamp": 1764043272.793375,
+    "seed_id": "1995-3::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-25T04:01:12Z"
+  },
+  {
+    "timestamp": 1764043272.793625,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-3::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1911169509
+    },
+    "iso_time": "2025-11-25T04:01:12Z"
+  },
+  {
+    "timestamp": 1764043273.575973,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_den": 12,
+        "p_e_num": 5,
+        "p_w_num": 2,
+        "p_n_num": 2,
+        "p_s_num": 3,
+        "u_max": 4,
+        "v_max": 4,
+        "x_target": 3,
+        "y_target": 3,
+        "t_steps": 8,
+        "blocked_points": [
+          [
+            3,
+            2
+          ]
+        ],
+        "blocked_points_str": "(3,2)"
+      }
+    },
+    "iso_time": "2025-11-25T04:01:13Z"
+  },
+  {
+    "timestamp": 1764043274.329691,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 27050981
+    },
+    "iso_time": "2025-11-25T04:01:14Z"
+  },
+  {
+    "timestamp": 1764043274.3298619,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Starting at (0,0), a lattice walker takes unit steps. Each step is right with probability 5/12, left with probability 2/",
+      "correct_answer": "27050981",
+      "seed_value": 1911169509
+    },
+    "iso_time": "2025-11-25T04:01:14Z"
+  },
+  {
+    "timestamp": 1764043274.329924,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "27050981",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T04:01:14Z"
+  },
+  {
+    "timestamp": 1764043461.5194461,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "27050976",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T04:04:21Z"
+  },
+  {
+    "timestamp": 1764043781.881213,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "27050988",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T04:09:41Z"
+  },
+  {
+    "timestamp": 1764043923.43216,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "27050980",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T04:12:03Z"
+  },
+  {
+    "timestamp": 1764044049.11731,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "27050981",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T04:14:09Z"
+  },
+  {
+    "timestamp": 1764044139.313192,
+    "seed_id": "1995-3::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-3::1995_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T04:15:39Z"
+  },
+  {
+    "timestamp": 1764044139.3133981,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-3::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1499133740
+    },
+    "iso_time": "2025-11-25T04:15:39Z"
+  },
+  {
+    "timestamp": 1764044140.092778,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_den": 12,
+        "p_e_num": 2,
+        "p_w_num": 5,
+        "p_n_num": 1,
+        "p_s_num": 4,
+        "u_max": 5,
+        "v_max": 5,
+        "x_target": 5,
+        "y_target": 5,
+        "t_steps": 13,
+        "blocked_points": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "blocked_points_str": "(2,0), (2,3)"
+      }
+    },
+    "iso_time": "2025-11-25T04:15:40Z"
+  },
+  {
+    "timestamp": 1764044140.8373618,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 34828521731
+    },
+    "iso_time": "2025-11-25T04:15:40Z"
+  },
+  {
+    "timestamp": 1764044140.8375528,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Starting at (0,0), a lattice walker takes unit steps. Each step is right with probability 2/12, left with probability 5/",
+      "correct_answer": "34828521731",
+      "seed_value": 1499133740
+    },
+    "iso_time": "2025-11-25T04:15:40Z"
+  },
+  {
+    "timestamp": 1764044140.837621,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "34828521733",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T04:15:40Z"
+  },
+  {
+    "timestamp": 1764044292.234284,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "34828521725",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T04:18:12Z"
+  },
+  {
+    "timestamp": 1764044398.8511748,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "34828521722",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T04:19:58Z"
+  },
+  {
+    "timestamp": 1764045955.019508,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "34828521731",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T04:45:55Z"
+  },
+  {
+    "timestamp": 1764046236.549977,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "34828521731",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T04:50:36Z"
+  },
+  {
+    "timestamp": 1764046303.085495,
+    "seed_id": "1995-3::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T04:51:43Z"
+  },
+  {
+    "timestamp": 1764046303.0857909,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-3::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1355182200
+    },
+    "iso_time": "2025-11-25T04:51:43Z"
+  },
+  {
+    "timestamp": 1764046303.914392,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_den": 16,
+        "p_e_num": 6,
+        "p_w_num": 3,
+        "p_n_num": 4,
+        "p_s_num": 3,
+        "u_max": 5,
+        "v_max": 3,
+        "x_target": 4,
+        "y_target": 1,
+        "t_steps": 8,
+        "blocked_points": [
+          [
+            4,
+            0
+          ]
+        ],
+        "blocked_points_str": "(4,0)"
+      }
+    },
+    "iso_time": "2025-11-25T04:51:43Z"
+  },
+  {
+    "timestamp": 1764046304.744937,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1088023
+    },
+    "iso_time": "2025-11-25T04:51:44Z"
+  },
+  {
+    "timestamp": 1764046304.7451122,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Starting at (0,0), a lattice walker takes unit steps. Each step is right with probability 6/16, left with probability 3/",
+      "correct_answer": "1088023",
+      "seed_value": 1355182200
+    },
+    "iso_time": "2025-11-25T04:51:44Z"
+  },
+  {
+    "timestamp": 1764046304.745193,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1088023",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T04:51:44Z"
+  },
+  {
+    "timestamp": 1764047382.181481,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1088025",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T05:09:42Z"
+  },
+  {
+    "timestamp": 1764047522.350392,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1088016",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T05:12:02Z"
+  },
+  {
+    "timestamp": 1764047654.707233,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1088023",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T05:14:14Z"
+  },
+  {
+    "timestamp": 1764047870.6702359,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1088032",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T05:17:50Z"
+  },
+  {
+    "timestamp": 1764047996.749131,
+    "seed_id": "1995-3::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-3::1995_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-25T05:19:56Z"
+  },
+  {
+    "timestamp": 1764047996.749313,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-3::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1885869398
+    },
+    "iso_time": "2025-11-25T05:19:56Z"
+  },
+  {
+    "timestamp": 1764047997.558363,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_den": 18,
+        "p_e_num": 7,
+        "p_w_num": 2,
+        "p_n_num": 7,
+        "p_s_num": 2,
+        "u_max": 4,
+        "v_max": 3,
+        "x_target": 1,
+        "y_target": 2,
+        "t_steps": 6,
+        "blocked_points": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "blocked_points_str": "(1,3), (2,2)"
+      }
+    },
+    "iso_time": "2025-11-25T05:19:57Z"
+  },
+  {
+    "timestamp": 1764047998.3264918,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1157101
+    },
+    "iso_time": "2025-11-25T05:19:58Z"
+  },
+  {
+    "timestamp": 1764047998.326661,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Starting at (0,0), a lattice walker takes unit steps. Each step is right with probability 7/18, left with probability 2/",
+      "correct_answer": "1157101",
+      "seed_value": 1885869398
+    },
+    "iso_time": "2025-11-25T05:19:58Z"
+  },
+  {
+    "timestamp": 1764047998.32672,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1157101",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T05:19:58Z"
+  },
+  {
+    "timestamp": 1764048091.547333,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1157101",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T05:21:31Z"
+  },
+  {
+    "timestamp": 1764048166.6091049,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1157098",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T05:22:46Z"
+  },
+  {
+    "timestamp": 1764048251.1922,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1157106",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T05:24:11Z"
+  },
+  {
+    "timestamp": 1764048353.5519,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1157095",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T05:25:53Z"
+  },
+  {
+    "timestamp": 1764048437.667861,
+    "seed_id": "1995-3::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-3::1995_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T05:27:17Z"
+  },
+  {
+    "timestamp": 1764048437.667947,
+    "seed_id": "1995-3::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-25T05:27:17Z"
+  },
+  {
+    "timestamp": 1764048437.6680079,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=2). | Judge rejected variant 3 (successes=3).",
+      "question": "Starting at $(0,0),$ an object moves in the coordinate plane via a sequence of steps, each of length one.  Each step is left, right, up, or down, all four equally likely.  Let $p$ be the probability that the object reaches $(2,2)$ in six or fewer steps.  Given that $p$ can be written in the form $m/n,$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$",
+      "answer": "67",
+      "example_id": "1995-3::1995"
+    },
+    "iso_time": "2025-11-25T05:27:17Z"
+  },
+  {
+    "timestamp": 1764048553.922526,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-3::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 2060690041
+    },
+    "iso_time": "2025-11-25T05:29:13Z"
+  },
+  {
+    "timestamp": 1764048554.7112372,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_steps": 10,
+        "w_right": 2,
+        "w_left": 1,
+        "w_up": 3,
+        "w_down": 2,
+        "barrier_depth": 3,
+        "t1_x": 6,
+        "t1_y": 5,
+        "t2_x": 3,
+        "t2_y": 5
+      }
+    },
+    "iso_time": "2025-11-25T05:29:14Z"
+  },
+  {
+    "timestamp": 1764048555.4645472,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17088499
+    },
+    "iso_time": "2025-11-25T05:29:15Z"
+  },
+  {
+    "timestamp": 1764048555.46473,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On the integer lattice, an object starts at (0,0) and may take up to 10 unit steps. At each step it moves right, left, u",
+      "correct_answer": "17088499",
+      "seed_value": 2060690041
+    },
+    "iso_time": "2025-11-25T05:29:15Z"
+  },
+  {
+    "timestamp": 1764048555.4648042,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "17088508",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T05:29:15Z"
+  },
+  {
+    "timestamp": 1764048639.2932649,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17088500",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T05:30:39Z"
+  },
+  {
+    "timestamp": 1764048751.821665,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "17088499",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T05:32:31Z"
+  },
+  {
+    "timestamp": 1764049207.0675058,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "17088490",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T05:40:07Z"
+  },
+  {
+    "timestamp": 1764049977.518155,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17088499",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T05:52:57Z"
+  },
+  {
+    "timestamp": 1764050192.080734,
+    "seed_id": "1995-3::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-3::1995_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T05:56:32Z"
+  },
+  {
+    "timestamp": 1764050192.0809321,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-3::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 587425195
+    },
+    "iso_time": "2025-11-25T05:56:32Z"
+  },
+  {
+    "timestamp": 1764050192.8562932,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_steps": 11,
+        "w_right": 1,
+        "w_left": 2,
+        "w_up": 1,
+        "w_down": 1,
+        "barrier_depth": 1,
+        "t1_x": 5,
+        "t1_y": 5,
+        "t2_x": 3,
+        "t2_y": 0
+      }
+    },
+    "iso_time": "2025-11-25T05:56:32Z"
+  },
+  {
+    "timestamp": 1764050193.608354,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 50246267
+    },
+    "iso_time": "2025-11-25T05:56:33Z"
+  },
+  {
+    "timestamp": 1764050193.6085482,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On the integer lattice, an object starts at (0,0) and may take up to 11 unit steps. At each step it moves right, left, u",
+      "correct_answer": "50246267",
+      "seed_value": 587425195
+    },
+    "iso_time": "2025-11-25T05:56:33Z"
+  },
+  {
+    "timestamp": 1764050193.608613,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "50246271",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T05:56:33Z"
+  },
+  {
+    "timestamp": 1764050412.096243,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "50246267",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T06:00:12Z"
+  },
+  {
+    "timestamp": 1764051267.801315,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "50246261",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T06:14:27Z"
+  },
+  {
+    "timestamp": 1764051395.519872,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "50246269",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T06:16:35Z"
+  },
+  {
+    "timestamp": 1764051480.468378,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "50246267",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T06:18:00Z"
+  },
+  {
+    "timestamp": 1764051695.3271072,
+    "seed_id": "1995-3::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T06:21:35Z"
+  },
+  {
+    "timestamp": 1764051695.327368,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-3::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1675364088
+    },
+    "iso_time": "2025-11-25T06:21:35Z"
+  },
+  {
+    "timestamp": 1764051696.135935,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_steps": 12,
+        "w_right": 2,
+        "w_left": 1,
+        "w_up": 2,
+        "w_down": 3,
+        "barrier_depth": 1,
+        "t1_x": 6,
+        "t1_y": 3,
+        "t2_x": 3,
+        "t2_y": 1
+      }
+    },
+    "iso_time": "2025-11-25T06:21:36Z"
+  },
+  {
+    "timestamp": 1764051696.886343,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 146045751
+    },
+    "iso_time": "2025-11-25T06:21:36Z"
+  },
+  {
+    "timestamp": 1764051696.886561,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On the integer lattice, an object starts at (0,0) and may take up to 12 unit steps. At each step it moves right, left, u",
+      "correct_answer": "146045751",
+      "seed_value": 1675364088
+    },
+    "iso_time": "2025-11-25T06:21:36Z"
+  },
+  {
+    "timestamp": 1764051696.886645,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "146045751",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T06:21:36Z"
+  },
+  {
+    "timestamp": 1764051771.2054772,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "146045760",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T06:22:51Z"
+  },
+  {
+    "timestamp": 1764051811.219313,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "146045746",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T06:23:31Z"
+  },
+  {
+    "timestamp": 1764051841.658659,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "146045750",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T06:24:01Z"
+  },
+  {
+    "timestamp": 1764051860.3865778,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "146045751",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T06:24:20Z"
+  },
+  {
+    "timestamp": 1764051890.0000699,
+    "seed_id": "1995-3::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T06:24:50Z"
+  },
+  {
+    "timestamp": 1764051890.0003798,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-3::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 112507354
+    },
+    "iso_time": "2025-11-25T06:24:50Z"
+  },
+  {
+    "timestamp": 1764051890.79501,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_steps": 14,
+        "w_right": 1,
+        "w_left": 2,
+        "w_up": 1,
+        "w_down": 3,
+        "barrier_depth": 3,
+        "t1_x": 5,
+        "t1_y": 5,
+        "t2_x": 5,
+        "t2_y": 4
+      }
+    },
+    "iso_time": "2025-11-25T06:24:50Z"
+  },
+  {
+    "timestamp": 1764051891.568167,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 678235504957
+    },
+    "iso_time": "2025-11-25T06:24:51Z"
+  },
+  {
+    "timestamp": 1764051891.568337,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On the integer lattice, an object starts at (0,0) and may take up to 14 unit steps. At each step it moves right, left, u",
+      "correct_answer": "678235504957",
+      "seed_value": 112507354
+    },
+    "iso_time": "2025-11-25T06:24:51Z"
+  },
+  {
+    "timestamp": 1764051891.5684018,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "678235504948",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T06:24:51Z"
+  },
+  {
+    "timestamp": 1764051930.031338,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "678235504949",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T06:25:30Z"
+  },
+  {
+    "timestamp": 1764052001.722326,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "678235504957",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T06:26:41Z"
+  },
+  {
+    "timestamp": 1764053340.613389,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "678235504960",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T06:49:00Z"
+  },
+  {
+    "timestamp": 1764053435.380206,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "678235504957",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T06:50:35Z"
+  },
+  {
+    "timestamp": 1764053670.5669708,
+    "seed_id": "1995-3::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T06:54:30Z"
+  },
+  {
+    "timestamp": 1764053670.567221,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-3::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 1979318184
+    },
+    "iso_time": "2025-11-25T06:54:30Z"
+  },
+  {
+    "timestamp": 1764053671.313934,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_steps": 10,
+        "w_right": 1,
+        "w_left": 1,
+        "w_up": 3,
+        "w_down": 2,
+        "barrier_depth": 2,
+        "t1_x": 6,
+        "t1_y": 0,
+        "t2_x": 5,
+        "t2_y": 2
+      }
+    },
+    "iso_time": "2025-11-25T06:54:31Z"
+  },
+  {
+    "timestamp": 1764053672.058891,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 282788795
+    },
+    "iso_time": "2025-11-25T06:54:32Z"
+  },
+  {
+    "timestamp": 1764053672.059076,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On the integer lattice, an object starts at (0,0) and may take up to 10 unit steps. At each step it moves right, left, u",
+      "correct_answer": "282788795",
+      "seed_value": 1979318184
+    },
+    "iso_time": "2025-11-25T06:54:32Z"
+  },
+  {
+    "timestamp": 1764053672.059155,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "282788795",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T06:54:32Z"
+  },
+  {
+    "timestamp": 1764054144.979721,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "282788793",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T07:02:24Z"
+  },
+  {
+    "timestamp": 1764054322.994837,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "282788795",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T07:05:22Z"
+  },
+  {
+    "timestamp": 1764054375.1578639,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "282788797",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T07:06:15Z"
+  },
+  {
+    "timestamp": 1764054626.978772,
+    "seed_id": "1995-3::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "282788791",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T07:10:26Z"
+  },
+  {
+    "timestamp": 1764054839.326281,
+    "seed_id": "1995-3::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-3::1995_prompt02-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-25T07:13:59Z"
+  }
+]

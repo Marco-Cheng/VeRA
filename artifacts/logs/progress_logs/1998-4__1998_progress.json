@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764307615.645561,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1998,
+      "question_preview": "Nine tiles are numbered $1, 2, 3, \\cdots, 9,$ respectively.  Each of three players randomly selects and keeps three of t",
+      "answer": "17",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T05:26:55Z"
+  },
+  {
+    "timestamp": 1764307615.645611,
+    "seed_id": "1998-4::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T05:26:55Z"
+  },
+  {
+    "timestamp": 1764307615.64564,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Nine tiles are numbered $1, 2, 3, \\cdots, 9,$ respectively.  Each of three players randomly selects and keeps three of the tiles, and sums those three values.  The probability that all three players obtain an odd sum is $m/n,$ where $m$ and $n$ are relatively prime positive integers .  Find $m+n.$",
+      "answer": "17",
+      "example_id": "1998-4::1998"
+    },
+    "iso_time": "2025-11-28T05:26:55Z"
+  },
+  {
+    "timestamp": 1764307692.854491,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-4::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 739336779
+    },
+    "iso_time": "2025-11-28T05:28:12Z"
+  },
+  {
+    "timestamp": 1764307693.951024,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "players": 4,
+        "hand_size": 2,
+        "n_tiles": 8,
+        "target_odd_count": 2
+      }
+    },
+    "iso_time": "2025-11-28T05:28:13Z"
+  },
+  {
+    "timestamp": 1764307695.005607,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 59
+    },
+    "iso_time": "2025-11-28T05:28:15Z"
+  },
+  {
+    "timestamp": 1764307695.0057511,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 4 students randomly and uniformly partition the tiles labeled 1 through 8 into 4 ordered hands of 2 t",
+      "correct_answer": "59",
+      "seed_value": 739336779
+    },
+    "iso_time": "2025-11-28T05:28:15Z"
+  },
+  {
+    "timestamp": 1764307695.005794,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "53",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:28:15Z"
+  },
+  {
+    "timestamp": 1764307725.441738,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "68",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:28:45Z"
+  },
+  {
+    "timestamp": 1764307743.4290361,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:29:03Z"
+  },
+  {
+    "timestamp": 1764307769.843461,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "61",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:29:29Z"
+  },
+  {
+    "timestamp": 1764307808.451311,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:30:08Z"
+  },
+  {
+    "timestamp": 1764307840.1059442,
+    "seed_id": "1998-4::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-4::1998_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T05:30:40Z"
+  },
+  {
+    "timestamp": 1764307840.106045,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-4::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 539557120
+    },
+    "iso_time": "2025-11-28T05:30:40Z"
+  },
+  {
+    "timestamp": 1764307841.185764,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "players": 5,
+        "hand_size": 3,
+        "n_tiles": 15,
+        "target_odd_count": 4
+      }
+    },
+    "iso_time": "2025-11-28T05:30:41Z"
+  },
+  {
+    "timestamp": 1764307842.221785,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 185
+    },
+    "iso_time": "2025-11-28T05:30:42Z"
+  },
+  {
+    "timestamp": 1764307842.2219362,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 5 students randomly and uniformly partition the tiles labeled 1 through 15 into 5 ordered hands of 3 ",
+      "correct_answer": "185",
+      "seed_value": 539557120
+    },
+    "iso_time": "2025-11-28T05:30:42Z"
+  },
+  {
+    "timestamp": 1764307842.2219782,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "179",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:30:42Z"
+  },
+  {
+    "timestamp": 1764307893.443489,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "187",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:31:33Z"
+  },
+  {
+    "timestamp": 1764307929.563842,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "182",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:32:09Z"
+  },
+  {
+    "timestamp": 1764307972.39595,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "185",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:32:52Z"
+  },
+  {
+    "timestamp": 1764308021.57388,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "185",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:33:41Z"
+  },
+  {
+    "timestamp": 1764308064.042906,
+    "seed_id": "1998-4::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-4::1998_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T05:34:24Z"
+  },
+  {
+    "timestamp": 1764308064.042975,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-4::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 672888215
+    },
+    "iso_time": "2025-11-28T05:34:24Z"
+  },
+  {
+    "timestamp": 1764308065.528437,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "players": 6,
+        "hand_size": 2,
+        "n_tiles": 12,
+        "target_odd_count": 4
+      }
+    },
+    "iso_time": "2025-11-28T05:34:25Z"
+  },
+  {
+    "timestamp": 1764308066.7924411,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 117
+    },
+    "iso_time": "2025-11-28T05:34:26Z"
+  },
+  {
+    "timestamp": 1764308066.792613,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 6 students randomly and uniformly partition the tiles labeled 1 through 12 into 6 ordered hands of 2 ",
+      "correct_answer": "117",
+      "seed_value": 672888215
+    },
+    "iso_time": "2025-11-28T05:34:26Z"
+  },
+  {
+    "timestamp": 1764308066.792656,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "117",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:34:26Z"
+  },
+  {
+    "timestamp": 1764308094.187567,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "117",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:34:54Z"
+  },
+  {
+    "timestamp": 1764308118.785804,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "113",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:35:18Z"
+  },
+  {
+    "timestamp": 1764308168.693464,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "112",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:36:08Z"
+  },
+  {
+    "timestamp": 1764308221.734913,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "118",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:37:01Z"
+  },
+  {
+    "timestamp": 1764308267.40861,
+    "seed_id": "1998-4::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-4::1998_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T05:37:47Z"
+  },
+  {
+    "timestamp": 1764308267.408811,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-4::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2089328466
+    },
+    "iso_time": "2025-11-28T05:37:47Z"
+  },
+  {
+    "timestamp": 1764308268.69889,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "players": 3,
+        "hand_size": 3,
+        "n_tiles": 9,
+        "target_odd_count": 1
+      }
+    },
+    "iso_time": "2025-11-28T05:37:48Z"
+  },
+  {
+    "timestamp": 1764308269.753846,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 25
+    },
+    "iso_time": "2025-11-28T05:37:49Z"
+  },
+  {
+    "timestamp": 1764308269.7539961,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 3 students randomly and uniformly partition the tiles labeled 1 through 9 into 3 ordered hands of 3 t",
+      "correct_answer": "25",
+      "seed_value": 2089328466
+    },
+    "iso_time": "2025-11-28T05:37:49Z"
+  },
+  {
+    "timestamp": 1764308269.754036,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "25",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:37:49Z"
+  },
+  {
+    "timestamp": 1764308306.420172,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "21",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:38:26Z"
+  },
+  {
+    "timestamp": 1764308346.669607,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "28",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:39:06Z"
+  },
+  {
+    "timestamp": 1764308373.800708,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "17",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:39:33Z"
+  },
+  {
+    "timestamp": 1764308409.211939,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "25",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:40:09Z"
+  },
+  {
+    "timestamp": 1764308439.046837,
+    "seed_id": "1998-4::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-4::1998_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T05:40:39Z"
+  },
+  {
+    "timestamp": 1764308439.047055,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-4::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1841471451
+    },
+    "iso_time": "2025-11-28T05:40:39Z"
+  },
+  {
+    "timestamp": 1764308440.2347388,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "players": 4,
+        "hand_size": 4,
+        "n_tiles": 16,
+        "target_odd_count": 2
+      }
+    },
+    "iso_time": "2025-11-28T05:40:40Z"
+  },
+  {
+    "timestamp": 1764308441.26348,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 749
+    },
+    "iso_time": "2025-11-28T05:40:41Z"
+  },
+  {
+    "timestamp": 1764308441.263642,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 4 students randomly and uniformly partition the tiles labeled 1 through 16 into 4 ordered hands of 4 ",
+      "correct_answer": "749",
+      "seed_value": 1841471451
+    },
+    "iso_time": "2025-11-28T05:40:41Z"
+  },
+  {
+    "timestamp": 1764308441.2636852,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "745",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:40:41Z"
+  },
+  {
+    "timestamp": 1764308505.38368,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "746",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:41:45Z"
+  },
+  {
+    "timestamp": 1764308583.579617,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "744",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:43:03Z"
+  },
+  {
+    "timestamp": 1764308785.653198,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "749",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:46:25Z"
+  },
+  {
+    "timestamp": 1764308823.304239,
+    "seed_id": "1998-4::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "749",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:47:03Z"
+  },
+  {
+    "timestamp": 1764309009.2932858,
+    "seed_id": "1998-4::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-4::1998_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T05:50:09Z"
+  }
+]

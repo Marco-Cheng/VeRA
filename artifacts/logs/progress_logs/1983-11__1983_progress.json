@@ -1,0 +1,1673 @@
+[
+  {
+    "timestamp": 1762499931.394309,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1983,
+      "question_preview": "The solid shown has a square base of side length $s$ . The upper edge is parallel to the base and has length $2s$ . All ",
+      "answer": "288",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-07T07:18:51Z"
+  },
+  {
+    "timestamp": 1762499931.3943648,
+    "seed_id": "1983-11::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-07T07:18:51Z"
+  },
+  {
+    "timestamp": 1762499931.3943958,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The solid shown has a square base of side length $s$ . The upper edge is parallel to the base and has length $2s$ . All other edges have length $s$ . Given that $s=6\\sqrt{2}$ , what is the volume of the solid? [asy] import three; size(170); pathpen = black+linewidth(0.65); pointpen = black; currentprojection = perspective(30,-20,10); real s = 6 * 2^.5; triple A=(0,0,0),B=(s,0,0),C=(s,s,0),D=(0,s,0),E=(-s/2,s/2,6),F=(3*s/2,s/2,6); draw(A--B--C--D--A--E--D); draw(B--F--C);  draw(E--F); label(\"A\",A, S); label(\"B\",B, S); label(\"C\",C, S); label(\"D\",D, S); label(\"E\",E,N); label(\"F\",F,N); [/asy]",
+      "answer": "288",
+      "example_id": "1983-11::1983"
+    },
+    "iso_time": "2025-11-07T07:18:51Z"
+  },
+  {
+    "timestamp": 1762500151.339893,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-11::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 71233692
+    },
+    "iso_time": "2025-11-07T07:22:31Z"
+  },
+  {
+    "timestamp": 1762500152.4752839,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 12,
+        "b": 18,
+        "c": 20,
+        "L_sq": 101
+      }
+    },
+    "iso_time": "2025-11-07T07:22:32Z"
+  },
+  {
+    "timestamp": 1762500153.369718,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:33Z"
+  },
+  {
+    "timestamp": 1762500154.255386,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 16,
+        "b": 18,
+        "c": 44,
+        "L_sq": 377
+      }
+    },
+    "iso_time": "2025-11-07T07:22:34Z"
+  },
+  {
+    "timestamp": 1762500155.1448672,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:35Z"
+  },
+  {
+    "timestamp": 1762500156.0419042,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 16,
+        "b": 20,
+        "c": 14,
+        "L_sq": 137
+      }
+    },
+    "iso_time": "2025-11-07T07:22:36Z"
+  },
+  {
+    "timestamp": 1762500156.943574,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:36Z"
+  },
+  {
+    "timestamp": 1762500157.86126,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 8,
+        "b": 16,
+        "c": 40,
+        "L_sq": 644
+      }
+    },
+    "iso_time": "2025-11-07T07:22:37Z"
+  },
+  {
+    "timestamp": 1762500158.761096,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:38Z"
+  },
+  {
+    "timestamp": 1762500159.6677902,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 14,
+        "b": 18,
+        "c": 30,
+        "L_sq": 149
+      }
+    },
+    "iso_time": "2025-11-07T07:22:39Z"
+  },
+  {
+    "timestamp": 1762500160.5688472,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:40Z"
+  },
+  {
+    "timestamp": 1762500161.462104,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "a": 8,
+        "b": 18,
+        "c": 48,
+        "L_sq": 602
+      }
+    },
+    "iso_time": "2025-11-07T07:22:41Z"
+  },
+  {
+    "timestamp": 1762500162.407319,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:42Z"
+  },
+  {
+    "timestamp": 1762500162.407399,
+    "seed_id": "1983-11::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 11.067510843276978
+    },
+    "iso_time": "2025-11-07T07:22:42Z"
+  },
+  {
+    "timestamp": 1762500162.4074528,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-11::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 184704917
+    },
+    "iso_time": "2025-11-07T07:22:42Z"
+  },
+  {
+    "timestamp": 1762500163.380772,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 6,
+        "b": 12,
+        "c": 48,
+        "L_sq": 558
+      }
+    },
+    "iso_time": "2025-11-07T07:22:43Z"
+  },
+  {
+    "timestamp": 1762500164.2767549,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:44Z"
+  },
+  {
+    "timestamp": 1762500165.172825,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 8,
+        "b": 16,
+        "c": 34,
+        "L_sq": 458
+      }
+    },
+    "iso_time": "2025-11-07T07:22:45Z"
+  },
+  {
+    "timestamp": 1762500166.051199,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:46Z"
+  },
+  {
+    "timestamp": 1762500166.9474308,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 16,
+        "b": 20,
+        "c": 22,
+        "L_sq": 209
+      }
+    },
+    "iso_time": "2025-11-07T07:22:46Z"
+  },
+  {
+    "timestamp": 1762500167.921624,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:47Z"
+  },
+  {
+    "timestamp": 1762500168.918623,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 6,
+        "b": 8,
+        "c": 16,
+        "L_sq": 50
+      }
+    },
+    "iso_time": "2025-11-07T07:22:48Z"
+  },
+  {
+    "timestamp": 1762500169.8862789,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:49Z"
+  },
+  {
+    "timestamp": 1762500170.831402,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 16,
+        "b": 20,
+        "c": 36,
+        "L_sq": 209
+      }
+    },
+    "iso_time": "2025-11-07T07:22:50Z"
+  },
+  {
+    "timestamp": 1762500171.769483,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:51Z"
+  },
+  {
+    "timestamp": 1762500172.6864169,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "a": 12,
+        "b": 18,
+        "c": 8,
+        "L_sq": 86
+      }
+    },
+    "iso_time": "2025-11-07T07:22:52Z"
+  },
+  {
+    "timestamp": 1762500173.59075,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:53Z"
+  },
+  {
+    "timestamp": 1762500173.590828,
+    "seed_id": "1983-11::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.18337607383728
+    },
+    "iso_time": "2025-11-07T07:22:53Z"
+  },
+  {
+    "timestamp": 1762500173.590879,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-11::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1372338678
+    },
+    "iso_time": "2025-11-07T07:22:53Z"
+  },
+  {
+    "timestamp": 1762500174.5356748,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 14,
+        "b": 18,
+        "c": 16,
+        "L_sq": 131
+      }
+    },
+    "iso_time": "2025-11-07T07:22:54Z"
+  },
+  {
+    "timestamp": 1762500175.479039,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:55Z"
+  },
+  {
+    "timestamp": 1762500176.445952,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 12,
+        "b": 20,
+        "c": 42,
+        "L_sq": 326
+      }
+    },
+    "iso_time": "2025-11-07T07:22:56Z"
+  },
+  {
+    "timestamp": 1762500177.361639,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:57Z"
+  },
+  {
+    "timestamp": 1762500178.297893,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 12,
+        "b": 16,
+        "c": 14,
+        "L_sq": 101
+      }
+    },
+    "iso_time": "2025-11-07T07:22:58Z"
+  },
+  {
+    "timestamp": 1762500179.2530282,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:22:59Z"
+  },
+  {
+    "timestamp": 1762500180.1731892,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 16,
+        "b": 18,
+        "c": 12,
+        "L_sq": 89
+      }
+    },
+    "iso_time": "2025-11-07T07:23:00Z"
+  },
+  {
+    "timestamp": 1762500181.17524,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:01Z"
+  },
+  {
+    "timestamp": 1762500182.176918,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 16,
+        "b": 18,
+        "c": 20,
+        "L_sq": 101
+      }
+    },
+    "iso_time": "2025-11-07T07:23:02Z"
+  },
+  {
+    "timestamp": 1762500183.1702552,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:03Z"
+  },
+  {
+    "timestamp": 1762500184.1491,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "a": 12,
+        "b": 16,
+        "c": 8,
+        "L_sq": 77
+      }
+    },
+    "iso_time": "2025-11-07T07:23:04Z"
+  },
+  {
+    "timestamp": 1762500185.084843,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:05Z"
+  },
+  {
+    "timestamp": 1762500185.0849311,
+    "seed_id": "1983-11::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.49405312538147
+    },
+    "iso_time": "2025-11-07T07:23:05Z"
+  },
+  {
+    "timestamp": 1762500185.085,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-11::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 835554707
+    },
+    "iso_time": "2025-11-07T07:23:05Z"
+  },
+  {
+    "timestamp": 1762500186.074813,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 10,
+        "b": 20,
+        "c": 32,
+        "L_sq": 257
+      }
+    },
+    "iso_time": "2025-11-07T07:23:06Z"
+  },
+  {
+    "timestamp": 1762500187.0444522,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:07Z"
+  },
+  {
+    "timestamp": 1762500187.9956741,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 16,
+        "b": 18,
+        "c": 20,
+        "L_sq": 101
+      }
+    },
+    "iso_time": "2025-11-07T07:23:07Z"
+  },
+  {
+    "timestamp": 1762500188.9576519,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:08Z"
+  },
+  {
+    "timestamp": 1762500189.971515,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 10,
+        "b": 14,
+        "c": 4,
+        "L_sq": 59
+      }
+    },
+    "iso_time": "2025-11-07T07:23:09Z"
+  },
+  {
+    "timestamp": 1762500190.91727,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:10Z"
+  },
+  {
+    "timestamp": 1762500191.859992,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 10,
+        "b": 16,
+        "c": 28,
+        "L_sq": 545
+      }
+    },
+    "iso_time": "2025-11-07T07:23:11Z"
+  },
+  {
+    "timestamp": 1762500192.7286541,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:12Z"
+  },
+  {
+    "timestamp": 1762500193.665416,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 8,
+        "b": 20,
+        "c": 12,
+        "L_sq": 113
+      }
+    },
+    "iso_time": "2025-11-07T07:23:13Z"
+  },
+  {
+    "timestamp": 1762500194.5827,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:14Z"
+  },
+  {
+    "timestamp": 1762500195.481652,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "a": 10,
+        "b": 18,
+        "c": 20,
+        "L_sq": 467
+      }
+    },
+    "iso_time": "2025-11-07T07:23:15Z"
+  },
+  {
+    "timestamp": 1762500196.349428,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:16Z"
+  },
+  {
+    "timestamp": 1762500196.3495,
+    "seed_id": "1983-11::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.264501094818115
+    },
+    "iso_time": "2025-11-07T07:23:16Z"
+  },
+  {
+    "timestamp": 1762500196.34955,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-11::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1738466874
+    },
+    "iso_time": "2025-11-07T07:23:16Z"
+  },
+  {
+    "timestamp": 1762500197.25617,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 6,
+        "b": 12,
+        "c": 44,
+        "L_sq": 461
+      }
+    },
+    "iso_time": "2025-11-07T07:23:17Z"
+  },
+  {
+    "timestamp": 1762500198.179866,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:18Z"
+  },
+  {
+    "timestamp": 1762500199.119348,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 6,
+        "b": 18,
+        "c": 20,
+        "L_sq": 299
+      }
+    },
+    "iso_time": "2025-11-07T07:23:19Z"
+  },
+  {
+    "timestamp": 1762500200.071237,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:20Z"
+  },
+  {
+    "timestamp": 1762500200.952495,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 6,
+        "b": 18,
+        "c": 10,
+        "L_sq": 89
+      }
+    },
+    "iso_time": "2025-11-07T07:23:20Z"
+  },
+  {
+    "timestamp": 1762500201.8291168,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:21Z"
+  },
+  {
+    "timestamp": 1762500202.7143402,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 6,
+        "b": 18,
+        "c": 4,
+        "L_sq": 107
+      }
+    },
+    "iso_time": "2025-11-07T07:23:22Z"
+  },
+  {
+    "timestamp": 1762500203.5840719,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:23Z"
+  },
+  {
+    "timestamp": 1762500204.4409652,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 10,
+        "b": 12,
+        "c": 24,
+        "L_sq": 86
+      }
+    },
+    "iso_time": "2025-11-07T07:23:24Z"
+  },
+  {
+    "timestamp": 1762500205.330233,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:25Z"
+  },
+  {
+    "timestamp": 1762500206.236803,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "a": 10,
+        "b": 20,
+        "c": 44,
+        "L_sq": 425
+      }
+    },
+    "iso_time": "2025-11-07T07:23:26Z"
+  },
+  {
+    "timestamp": 1762500207.150858,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-07T07:23:27Z"
+  },
+  {
+    "timestamp": 1762500207.150924,
+    "seed_id": "1983-11::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.80137586593628
+    },
+    "iso_time": "2025-11-07T07:23:27Z"
+  },
+  {
+    "timestamp": 1762500207.1509519,
+    "seed_id": "1983-11::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-07T07:23:27Z"
+  },
+  {
+    "timestamp": 1762500207.150966,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "The solid shown has a square base of side length $s$ . The upper edge is parallel to the base and has length $2s$ . All other edges have length $s$ . Given that $s=6\\sqrt{2}$ , what is the volume of the solid? [asy] import three; size(170); pathpen = black+linewidth(0.65); pointpen = black; currentprojection = perspective(30,-20,10); real s = 6 * 2^.5; triple A=(0,0,0),B=(s,0,0),C=(s,s,0),D=(0,s,0),E=(-s/2,s/2,6),F=(3*s/2,s/2,6); draw(A--B--C--D--A--E--D); draw(B--F--C);  draw(E--F); label(\"A\",A, S); label(\"B\",B, S); label(\"C\",C, S); label(\"D\",D, S); label(\"E\",E,N); label(\"F\",F,N); [/asy]",
+      "answer": "288",
+      "example_id": "1983-11::1983"
+    },
+    "iso_time": "2025-11-07T07:23:27Z"
+  },
+  {
+    "timestamp": 1762500422.9780328,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-11::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 401196946
+    },
+    "iso_time": "2025-11-07T07:27:02Z"
+  },
+  {
+    "timestamp": 1762500424.188915,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_long": 204,
+        "p_short": 12,
+        "p_top": 92,
+        "h_obelisk": 15
+      }
+    },
+    "iso_time": "2025-11-07T07:27:04Z"
+  },
+  {
+    "timestamp": 1762500425.106146,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 55440
+    },
+    "iso_time": "2025-11-07T07:27:05Z"
+  },
+  {
+    "timestamp": 1762500425.1062899,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The base of a solid obelisk is an isosceles trapezoid with parallel sides of length 204 and 12. The top of the obelisk i",
+      "correct_answer": "55440",
+      "seed_value": 401196946
+    },
+    "iso_time": "2025-11-07T07:27:05Z"
+  },
+  {
+    "timestamp": 1762500425.106335,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "55439",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T07:27:05Z"
+  },
+  {
+    "timestamp": 1762500609.3216908,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "55437",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T07:30:09Z"
+  },
+  {
+    "timestamp": 1762500786.335358,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "55440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T07:33:06Z"
+  },
+  {
+    "timestamp": 1762500926.04162,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "55440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T07:35:26Z"
+  },
+  {
+    "timestamp": 1762501050.659456,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "55443",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T07:37:30Z"
+  },
+  {
+    "timestamp": 1762501255.643976,
+    "seed_id": "1983-11::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-11::1983_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-07T07:40:55Z"
+  },
+  {
+    "timestamp": 1762501255.6440241,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-11::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1332992983
+    },
+    "iso_time": "2025-11-07T07:40:55Z"
+  },
+  {
+    "timestamp": 1762501256.873173,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_long": 186,
+        "p_short": 30,
+        "p_top": 104,
+        "h_obelisk": 10
+      }
+    },
+    "iso_time": "2025-11-07T07:40:56Z"
+  },
+  {
+    "timestamp": 1762501257.892004,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 19200
+    },
+    "iso_time": "2025-11-07T07:40:57Z"
+  },
+  {
+    "timestamp": 1762501257.892194,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The base of a solid obelisk is an isosceles trapezoid with parallel sides of length 186 and 30. The top of the obelisk i",
+      "correct_answer": "19200",
+      "seed_value": 1332992983
+    },
+    "iso_time": "2025-11-07T07:40:57Z"
+  },
+  {
+    "timestamp": 1762501257.89225,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "19200",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T07:40:57Z"
+  },
+  {
+    "timestamp": 1762501374.3786829,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "19196",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T07:42:54Z"
+  },
+  {
+    "timestamp": 1762501564.226378,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "19201",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T07:46:04Z"
+  },
+  {
+    "timestamp": 1762501735.417462,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "19200",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T07:48:55Z"
+  },
+  {
+    "timestamp": 1762501904.747616,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "19204",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T07:51:44Z"
+  },
+  {
+    "timestamp": 1762502106.125674,
+    "seed_id": "1983-11::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-11::1983_prompt02-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-07T07:55:06Z"
+  },
+  {
+    "timestamp": 1762502106.125731,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-11::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1803766597
+    },
+    "iso_time": "2025-11-07T07:55:06Z"
+  },
+  {
+    "timestamp": 1762502107.419581,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_long": 140,
+        "p_short": 76,
+        "p_top": 104,
+        "h_obelisk": 24
+      }
+    },
+    "iso_time": "2025-11-07T07:55:07Z"
+  },
+  {
+    "timestamp": 1762502108.57547,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 46080
+    },
+    "iso_time": "2025-11-07T07:55:08Z"
+  },
+  {
+    "timestamp": 1762502108.575638,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The base of a solid obelisk is an isosceles trapezoid with parallel sides of length 140 and 76. The top of the obelisk i",
+      "correct_answer": "46080",
+      "seed_value": 1803766597
+    },
+    "iso_time": "2025-11-07T07:55:08Z"
+  },
+  {
+    "timestamp": 1762502108.575683,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "46080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T07:55:08Z"
+  },
+  {
+    "timestamp": 1762502236.542884,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "46078",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T07:57:16Z"
+  },
+  {
+    "timestamp": 1762502408.499883,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "46085",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T08:00:08Z"
+  },
+  {
+    "timestamp": 1762502600.508372,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "46083",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T08:03:20Z"
+  },
+  {
+    "timestamp": 1762502771.264765,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "46080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T08:06:11Z"
+  },
+  {
+    "timestamp": 1762502925.5821629,
+    "seed_id": "1983-11::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-11::1983_prompt02-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-07T08:08:45Z"
+  },
+  {
+    "timestamp": 1762502925.58223,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-11::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1349046773
+    },
+    "iso_time": "2025-11-07T08:08:45Z"
+  },
+  {
+    "timestamp": 1762502926.8473039,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_long": 166,
+        "p_short": 50,
+        "p_top": 72,
+        "h_obelisk": 4
+      }
+    },
+    "iso_time": "2025-11-07T08:08:46Z"
+  },
+  {
+    "timestamp": 1762502927.929963,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 20736
+    },
+    "iso_time": "2025-11-07T08:08:47Z"
+  },
+  {
+    "timestamp": 1762502927.9301069,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The base of a solid obelisk is an isosceles trapezoid with parallel sides of length 166 and 50. The top of the obelisk i",
+      "correct_answer": "20736",
+      "seed_value": 1349046773
+    },
+    "iso_time": "2025-11-07T08:08:47Z"
+  },
+  {
+    "timestamp": 1762502927.930162,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "20731",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T08:08:47Z"
+  },
+  {
+    "timestamp": 1762503137.0089228,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "20736",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T08:12:17Z"
+  },
+  {
+    "timestamp": 1762503254.2900019,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "20736",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T08:14:14Z"
+  },
+  {
+    "timestamp": 1762503378.909065,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "20730",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T08:16:18Z"
+  },
+  {
+    "timestamp": 1762503592.0722702,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "20737",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T08:19:52Z"
+  },
+  {
+    "timestamp": 1762503755.1385632,
+    "seed_id": "1983-11::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-11::1983_prompt02-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-07T08:22:35Z"
+  },
+  {
+    "timestamp": 1762503755.138624,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-11::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 934453276
+    },
+    "iso_time": "2025-11-07T08:22:35Z"
+  },
+  {
+    "timestamp": 1762503756.739043,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_long": 146,
+        "p_short": 4,
+        "p_top": 50,
+        "h_obelisk": 6
+      }
+    },
+    "iso_time": "2025-11-07T08:22:36Z"
+  },
+  {
+    "timestamp": 1762503758.0330791,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 15000
+    },
+    "iso_time": "2025-11-07T08:22:38Z"
+  },
+  {
+    "timestamp": 1762503758.0332742,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The base of a solid obelisk is an isosceles trapezoid with parallel sides of length 146 and 4. The top of the obelisk is",
+      "correct_answer": "15000",
+      "seed_value": 934453276
+    },
+    "iso_time": "2025-11-07T08:22:38Z"
+  },
+  {
+    "timestamp": 1762503758.0333261,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "15000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T08:22:38Z"
+  },
+  {
+    "timestamp": 1762503866.592509,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "14994",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T08:24:26Z"
+  },
+  {
+    "timestamp": 1762504125.590497,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "15001",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T08:28:45Z"
+  },
+  {
+    "timestamp": 1762504294.169596,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14997",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-07T08:31:34Z"
+  },
+  {
+    "timestamp": 1762504483.810536,
+    "seed_id": "1983-11::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "15000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-07T08:34:43Z"
+  },
+  {
+    "timestamp": 1762504660.8974988,
+    "seed_id": "1983-11::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-11::1983_prompt02-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-07T08:37:40Z"
+  }
+]

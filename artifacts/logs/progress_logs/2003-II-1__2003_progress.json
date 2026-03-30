@@ -1,0 +1,674 @@
+[
+  {
+    "timestamp": 1764876564.567086,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "The product $N$ of three positive integers is 6 times their sum, and one of the integers is the sum of the other two. Fi",
+      "answer": "336",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-04T19:29:24Z"
+  },
+  {
+    "timestamp": 1764876564.567146,
+    "seed_id": "2003-II-1::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-04T19:29:24Z"
+  },
+  {
+    "timestamp": 1764876564.567167,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The product $N$ of three positive integers is 6 times their sum, and one of the integers is the sum of the other two. Find the sum of all possible values of $N$ .",
+      "answer": "336",
+      "example_id": "2003-II-1::2003"
+    },
+    "iso_time": "2025-12-04T19:29:24Z"
+  },
+  {
+    "timestamp": 1764876654.378529,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-1::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1169826137
+    },
+    "iso_time": "2025-12-04T19:30:54Z"
+  },
+  {
+    "timestamp": 1764876655.7657862,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 3077525
+      }
+    },
+    "iso_time": "2025-12-04T19:30:55Z"
+  },
+  {
+    "timestamp": 1764876656.806886,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3964738527200
+    },
+    "iso_time": "2025-12-04T19:30:56Z"
+  },
+  {
+    "timestamp": 1764876656.8070521,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider four positive integers a, b, c, d with the following properties: (i) one of them equals the sum of the other th",
+      "correct_answer": "3964738527200",
+      "seed_value": 1169826137
+    },
+    "iso_time": "2025-12-04T19:30:56Z"
+  },
+  {
+    "timestamp": 1764876656.807096,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3964738527206",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T19:30:56Z"
+  },
+  {
+    "timestamp": 1764876701.176296,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3964738527203",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T19:31:41Z"
+  },
+  {
+    "timestamp": 1764876755.241442,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3964738527200",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T19:32:35Z"
+  },
+  {
+    "timestamp": 1764876814.434119,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3964738527200",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T19:33:34Z"
+  },
+  {
+    "timestamp": 1764876926.246583,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3964738527208",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T19:35:26Z"
+  },
+  {
+    "timestamp": 1764877078.307018,
+    "seed_id": "2003-II-1::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-1::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T19:37:58Z"
+  },
+  {
+    "timestamp": 1764877078.307194,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-1::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 993566731
+    },
+    "iso_time": "2025-12-04T19:37:58Z"
+  },
+  {
+    "timestamp": 1764877079.6625779,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 1535457
+      }
+    },
+    "iso_time": "2025-12-04T19:37:59Z"
+  },
+  {
+    "timestamp": 1764877080.7752378,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6231670659984
+    },
+    "iso_time": "2025-12-04T19:38:00Z"
+  },
+  {
+    "timestamp": 1764877080.775379,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider four positive integers a, b, c, d with the following properties: (i) one of them equals the sum of the other th",
+      "correct_answer": "6231670659984",
+      "seed_value": 993566731
+    },
+    "iso_time": "2025-12-04T19:38:00Z"
+  },
+  {
+    "timestamp": 1764877080.775438,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6231670659984",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T19:38:00Z"
+  },
+  {
+    "timestamp": 1764877468.8672798,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6231670659986",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T19:44:28Z"
+  },
+  {
+    "timestamp": 1764877542.3542988,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6231670659992",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T19:45:42Z"
+  },
+  {
+    "timestamp": 1764877633.934078,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6231670659984",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T19:47:13Z"
+  },
+  {
+    "timestamp": 1764878309.078231,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6231670659989",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T19:58:29Z"
+  },
+  {
+    "timestamp": 1764878618.112463,
+    "seed_id": "2003-II-1::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-1::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T20:03:38Z"
+  },
+  {
+    "timestamp": 1764878618.112663,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-1::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 363798782
+    },
+    "iso_time": "2025-12-04T20:03:38Z"
+  },
+  {
+    "timestamp": 1764878619.485279,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 53509225
+      }
+    },
+    "iso_time": "2025-12-04T20:03:39Z"
+  },
+  {
+    "timestamp": 1764878620.579103,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 453004390038200
+    },
+    "iso_time": "2025-12-04T20:03:40Z"
+  },
+  {
+    "timestamp": 1764878620.579242,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider four positive integers a, b, c, d with the following properties: (i) one of them equals the sum of the other th",
+      "correct_answer": "453004390038200",
+      "seed_value": 363798782
+    },
+    "iso_time": "2025-12-04T20:03:40Z"
+  },
+  {
+    "timestamp": 1764878620.579286,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "453004390038209",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:03:40Z"
+  },
+  {
+    "timestamp": 1764878884.239115,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "453004390038206",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:08:04Z"
+  },
+  {
+    "timestamp": 1764878950.292869,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "453004390038200",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T20:09:10Z"
+  },
+  {
+    "timestamp": 1764879032.6744168,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "453004390038200",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T20:10:32Z"
+  },
+  {
+    "timestamp": 1764879262.5808718,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "453004390038201",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:14:22Z"
+  },
+  {
+    "timestamp": 1764879343.304717,
+    "seed_id": "2003-II-1::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-1::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T20:15:43Z"
+  },
+  {
+    "timestamp": 1764879343.304899,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-1::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 662838921
+    },
+    "iso_time": "2025-12-04T20:15:43Z"
+  },
+  {
+    "timestamp": 1764879344.6836522,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 422807
+      }
+    },
+    "iso_time": "2025-12-04T20:15:44Z"
+  },
+  {
+    "timestamp": 1764879345.848612,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 154211242724
+    },
+    "iso_time": "2025-12-04T20:15:45Z"
+  },
+  {
+    "timestamp": 1764879345.848822,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider four positive integers a, b, c, d with the following properties: (i) one of them equals the sum of the other th",
+      "correct_answer": "154211242724",
+      "seed_value": 662838921
+    },
+    "iso_time": "2025-12-04T20:15:45Z"
+  },
+  {
+    "timestamp": 1764879345.848876,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "154211242724",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T20:15:45Z"
+  },
+  {
+    "timestamp": 1764879450.11011,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "154211242724",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T20:17:30Z"
+  },
+  {
+    "timestamp": 1764879542.7716851,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "154211242717",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:19:02Z"
+  },
+  {
+    "timestamp": 1764879687.266326,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "154211242719",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:21:27Z"
+  },
+  {
+    "timestamp": 1764879821.8233118,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "154211242733",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:23:41Z"
+  },
+  {
+    "timestamp": 1764879913.055561,
+    "seed_id": "2003-II-1::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-1::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T20:25:13Z"
+  },
+  {
+    "timestamp": 1764879913.0557399,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-1::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 113848172
+    },
+    "iso_time": "2025-12-04T20:25:13Z"
+  },
+  {
+    "timestamp": 1764879914.403168,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 1006029453
+      }
+    },
+    "iso_time": "2025-12-04T20:25:14Z"
+  },
+  {
+    "timestamp": 1764879915.600244,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 946949793899610072
+    },
+    "iso_time": "2025-12-04T20:25:15Z"
+  },
+  {
+    "timestamp": 1764879915.6004312,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider four positive integers a, b, c, d with the following properties: (i) one of them equals the sum of the other th",
+      "correct_answer": "946949793899610072",
+      "seed_value": 113848172
+    },
+    "iso_time": "2025-12-04T20:25:15Z"
+  },
+  {
+    "timestamp": 1764879915.6004832,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "946949793899610103",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:25:15Z"
+  },
+  {
+    "timestamp": 1764879973.358776,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "946949793899610105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:26:13Z"
+  },
+  {
+    "timestamp": 1764880148.990098,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "946949793899610072",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T20:29:08Z"
+  },
+  {
+    "timestamp": 1764880356.473276,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "946949793899610116",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:32:36Z"
+  },
+  {
+    "timestamp": 1764880495.1053388,
+    "seed_id": "2003-II-1::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "946949793899610072",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T20:34:55Z"
+  },
+  {
+    "timestamp": 1764880886.994493,
+    "seed_id": "2003-II-1::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-1::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T20:41:26Z"
+  }
+]

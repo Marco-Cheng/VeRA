@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1763052130.8324108,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1987,
+      "question_preview": "By a proper divisor of a natural number we mean a positive integral divisor other than 1 and the number itself. A natura",
+      "answer": "182",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-13T16:42:10Z"
+  },
+  {
+    "timestamp": 1763052130.832435,
+    "seed_id": "1987-3::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-13T16:42:10Z"
+  },
+  {
+    "timestamp": 1763052130.8324502,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "By a proper divisor of a natural number we mean a positive integral divisor other than 1 and the number itself. A natural number greater than 1 will be called \"nice\" if it is equal to the product of its distinct proper divisors. What is the sum of the first ten nice numbers?",
+      "answer": "182",
+      "example_id": "1987-3::1987"
+    },
+    "iso_time": "2025-11-13T16:42:10Z"
+  },
+  {
+    "timestamp": 1763052234.9780931,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-3::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1397508245
+    },
+    "iso_time": "2025-11-13T16:43:54Z"
+  },
+  {
+    "timestamp": 1763052235.795475,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 2,
+        "m": 10,
+        "answer": 364
+      }
+    },
+    "iso_time": "2025-11-13T16:43:55Z"
+  },
+  {
+    "timestamp": 1763052236.609707,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 364
+    },
+    "iso_time": "2025-11-13T16:43:56Z"
+  },
+  {
+    "timestamp": 1763052236.609854,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "By a proper divisor of a natural number, we mean a positive integral divisor other than 1 and the number itself. A natur",
+      "correct_answer": "364",
+      "seed_value": 1397508245
+    },
+    "iso_time": "2025-11-13T16:43:56Z"
+  },
+  {
+    "timestamp": 1763052236.609896,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "369",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:43:56Z"
+  },
+  {
+    "timestamp": 1763052364.3320398,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "364",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T16:46:04Z"
+  },
+  {
+    "timestamp": 1763052418.3381472,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "364",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T16:46:58Z"
+  },
+  {
+    "timestamp": 1763052474.456172,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "360",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:47:54Z"
+  },
+  {
+    "timestamp": 1763052595.1852689,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "363",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:49:55Z"
+  },
+  {
+    "timestamp": 1763052685.092559,
+    "seed_id": "1987-3::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-3::1987_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T16:51:25Z"
+  },
+  {
+    "timestamp": 1763052685.092602,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-3::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1270656357
+    },
+    "iso_time": "2025-11-13T16:51:25Z"
+  },
+  {
+    "timestamp": 1763052685.858368,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 4,
+        "m": 14,
+        "answer": 4174
+      }
+    },
+    "iso_time": "2025-11-13T16:51:25Z"
+  },
+  {
+    "timestamp": 1763052686.642863,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4174
+    },
+    "iso_time": "2025-11-13T16:51:26Z"
+  },
+  {
+    "timestamp": 1763052686.642996,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "By a proper divisor of a natural number, we mean a positive integral divisor other than 1 and the number itself. A natur",
+      "correct_answer": "4174",
+      "seed_value": 1270656357
+    },
+    "iso_time": "2025-11-13T16:51:26Z"
+  },
+  {
+    "timestamp": 1763052686.64304,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4174",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T16:51:26Z"
+  },
+  {
+    "timestamp": 1763052766.912419,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4174",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T16:52:46Z"
+  },
+  {
+    "timestamp": 1763052845.518662,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4176",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:54:05Z"
+  },
+  {
+    "timestamp": 1763053013.193074,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4166",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:56:53Z"
+  },
+  {
+    "timestamp": 1763053170.359085,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4180",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:59:30Z"
+  },
+  {
+    "timestamp": 1763053335.8673742,
+    "seed_id": "1987-3::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-3::1987_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T17:02:15Z"
+  },
+  {
+    "timestamp": 1763053335.867421,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-3::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1368465065
+    },
+    "iso_time": "2025-11-13T17:02:15Z"
+  },
+  {
+    "timestamp": 1763053336.6613178,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 2,
+        "m": 9,
+        "answer": 301
+      }
+    },
+    "iso_time": "2025-11-13T17:02:16Z"
+  },
+  {
+    "timestamp": 1763053337.433086,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 301
+    },
+    "iso_time": "2025-11-13T17:02:17Z"
+  },
+  {
+    "timestamp": 1763053337.433218,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "By a proper divisor of a natural number, we mean a positive integral divisor other than 1 and the number itself. A natur",
+      "correct_answer": "301",
+      "seed_value": 1368465065
+    },
+    "iso_time": "2025-11-13T17:02:17Z"
+  },
+  {
+    "timestamp": 1763053337.43326,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "304",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T17:02:17Z"
+  },
+  {
+    "timestamp": 1763053449.406811,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "298",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T17:04:09Z"
+  },
+  {
+    "timestamp": 1763053569.367747,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "301",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T17:06:09Z"
+  },
+  {
+    "timestamp": 1763053626.184292,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "294",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T17:07:06Z"
+  },
+  {
+    "timestamp": 1763053764.749658,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "301",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T17:09:24Z"
+  },
+  {
+    "timestamp": 1763053835.872125,
+    "seed_id": "1987-3::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-3::1987_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T17:10:35Z"
+  },
+  {
+    "timestamp": 1763053835.872179,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-3::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1597561751
+    },
+    "iso_time": "2025-11-13T17:10:35Z"
+  },
+  {
+    "timestamp": 1763053836.6495428,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 4,
+        "m": 11,
+        "answer": 2599
+      }
+    },
+    "iso_time": "2025-11-13T17:10:36Z"
+  },
+  {
+    "timestamp": 1763053837.426271,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2599
+    },
+    "iso_time": "2025-11-13T17:10:37Z"
+  },
+  {
+    "timestamp": 1763053837.426422,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "By a proper divisor of a natural number, we mean a positive integral divisor other than 1 and the number itself. A natur",
+      "correct_answer": "2599",
+      "seed_value": 1597561751
+    },
+    "iso_time": "2025-11-13T17:10:37Z"
+  },
+  {
+    "timestamp": 1763053837.4264681,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2595",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T17:10:37Z"
+  },
+  {
+    "timestamp": 1763053963.319662,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2599",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T17:12:43Z"
+  },
+  {
+    "timestamp": 1763054037.7491379,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2594",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T17:13:57Z"
+  },
+  {
+    "timestamp": 1763054183.9370072,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2603",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T17:16:23Z"
+  },
+  {
+    "timestamp": 1763054369.177973,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2599",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T17:19:29Z"
+  },
+  {
+    "timestamp": 1763054450.995438,
+    "seed_id": "1987-3::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-3::1987_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T17:20:50Z"
+  },
+  {
+    "timestamp": 1763054450.9955058,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-3::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 180841789
+    },
+    "iso_time": "2025-11-13T17:20:50Z"
+  },
+  {
+    "timestamp": 1763054451.749136,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 4,
+        "m": 11,
+        "answer": 2599
+      }
+    },
+    "iso_time": "2025-11-13T17:20:51Z"
+  },
+  {
+    "timestamp": 1763054452.523905,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2599
+    },
+    "iso_time": "2025-11-13T17:20:52Z"
+  },
+  {
+    "timestamp": 1763054452.524045,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "By a proper divisor of a natural number, we mean a positive integral divisor other than 1 and the number itself. A natur",
+      "correct_answer": "2599",
+      "seed_value": 180841789
+    },
+    "iso_time": "2025-11-13T17:20:52Z"
+  },
+  {
+    "timestamp": 1763054452.5240939,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2596",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T17:20:52Z"
+  },
+  {
+    "timestamp": 1763054614.775594,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2599",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T17:23:34Z"
+  },
+  {
+    "timestamp": 1763054690.936343,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2597",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T17:24:50Z"
+  },
+  {
+    "timestamp": 1763054854.008095,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2599",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T17:27:34Z"
+  },
+  {
+    "timestamp": 1763054934.298793,
+    "seed_id": "1987-3::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2600",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T17:28:54Z"
+  },
+  {
+    "timestamp": 1763055084.170342,
+    "seed_id": "1987-3::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-3::1987_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T17:31:24Z"
+  }
+]

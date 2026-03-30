@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764897630.779902,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "Find the area of rhombus $ABCD$ given that the radii of the circles circumscribed around triangles $ABD$ and $ACD$ are $",
+      "answer": "400",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-05T01:20:30Z"
+  },
+  {
+    "timestamp": 1764897630.779934,
+    "seed_id": "2003-II-7::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-05T01:20:30Z"
+  },
+  {
+    "timestamp": 1764897630.779946,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find the area of rhombus $ABCD$ given that the radii of the circles circumscribed around triangles $ABD$ and $ACD$ are $12.5$ and $25$ , respectively.",
+      "answer": "400",
+      "example_id": "2003-II-7::2003"
+    },
+    "iso_time": "2025-12-05T01:20:30Z"
+  },
+  {
+    "timestamp": 1764897765.677207,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-7::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1754161183
+    },
+    "iso_time": "2025-12-05T01:22:45Z"
+  },
+  {
+    "timestamp": 1764897767.0047529,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 144.24548590538848,
+        "r2": 398.19827001745995,
+        "s_sum": 28125,
+        "phi_cos": 0.9368415147273569
+      }
+    },
+    "iso_time": "2025-12-05T01:22:47Z"
+  },
+  {
+    "timestamp": 1764897768.1535602,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3150.000000000001
+    },
+    "iso_time": "2025-12-05T01:22:48Z"
+  },
+  {
+    "timestamp": 1764897768.153721,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a geometry contest, a parallelogram ABCD satisfies the following: the circumradii of triangles ABD and ACD are 144.24",
+      "correct_answer": "3150",
+      "seed_value": 1754161183
+    },
+    "iso_time": "2025-12-05T01:22:48Z"
+  },
+  {
+    "timestamp": 1764897768.153785,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3145",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T01:22:48Z"
+  },
+  {
+    "timestamp": 1764897908.52252,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3149",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T01:25:08Z"
+  },
+  {
+    "timestamp": 1764897953.356383,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3158",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T01:25:53Z"
+  },
+  {
+    "timestamp": 1764898092.398922,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3150",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T01:28:12Z"
+  },
+  {
+    "timestamp": 1764898197.775548,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3150",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T01:29:57Z"
+  },
+  {
+    "timestamp": 1764898446.9772701,
+    "seed_id": "2003-II-7::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-7::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T01:34:06Z"
+  },
+  {
+    "timestamp": 1764898446.977372,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-7::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 12434812
+    },
+    "iso_time": "2025-12-05T01:34:06Z"
+  },
+  {
+    "timestamp": 1764898448.303772,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 11.180339887498949,
+        "r2": 23.86303510546059,
+        "s_sum": 500,
+        "phi_cos": 0.7808688094430303
+      }
+    },
+    "iso_time": "2025-12-05T01:34:08Z"
+  },
+  {
+    "timestamp": 1764898449.323317,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 120.0
+    },
+    "iso_time": "2025-12-05T01:34:09Z"
+  },
+  {
+    "timestamp": 1764898449.323489,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a geometry contest, a parallelogram ABCD satisfies the following: the circumradii of triangles ABD and ACD are 11.180",
+      "correct_answer": "120",
+      "seed_value": 12434812
+    },
+    "iso_time": "2025-12-05T01:34:09Z"
+  },
+  {
+    "timestamp": 1764898449.3235478,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T01:34:09Z"
+  },
+  {
+    "timestamp": 1764898636.2669199,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T01:37:16Z"
+  },
+  {
+    "timestamp": 1764898706.459509,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T01:38:26Z"
+  },
+  {
+    "timestamp": 1764898738.410927,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "118",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T01:38:58Z"
+  },
+  {
+    "timestamp": 1764898800.46268,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "112",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T01:40:00Z"
+  },
+  {
+    "timestamp": 1764898842.675235,
+    "seed_id": "2003-II-7::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-7::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T01:40:42Z"
+  },
+  {
+    "timestamp": 1764898842.675338,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-7::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1746751926
+    },
+    "iso_time": "2025-12-05T01:40:42Z"
+  },
+  {
+    "timestamp": 1764898844.050389,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 39.18306394349477,
+        "r2": 70.63827308902731,
+        "s_sum": 2890,
+        "phi_cos": 0.9429903335828896
+      }
+    },
+    "iso_time": "2025-12-05T01:40:44Z"
+  },
+  {
+    "timestamp": 1764898845.157164,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 407.99999999999983
+    },
+    "iso_time": "2025-12-05T01:40:45Z"
+  },
+  {
+    "timestamp": 1764898845.15733,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a geometry contest, a parallelogram ABCD satisfies the following: the circumradii of triangles ABD and ACD are 39.183",
+      "correct_answer": "408",
+      "seed_value": 1746751926
+    },
+    "iso_time": "2025-12-05T01:40:45Z"
+  },
+  {
+    "timestamp": 1764898845.1573892,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "408",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T01:40:45Z"
+  },
+  {
+    "timestamp": 1764898916.079624,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "407",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T01:41:56Z"
+  },
+  {
+    "timestamp": 1764899020.188372,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "414",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T01:43:40Z"
+  },
+  {
+    "timestamp": 1764899076.604649,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "406",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T01:44:36Z"
+  },
+  {
+    "timestamp": 1764899183.439743,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "408",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T01:46:23Z"
+  },
+  {
+    "timestamp": 1764899394.487356,
+    "seed_id": "2003-II-7::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-7::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T01:49:54Z"
+  },
+  {
+    "timestamp": 1764899394.4875362,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-7::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 135734963
+    },
+    "iso_time": "2025-12-05T01:49:54Z"
+  },
+  {
+    "timestamp": 1764899395.7244318,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 13.565683830083088,
+        "r2": 20.155644370746373,
+        "s_sum": 425,
+        "phi_cos": 0.9524241471993242
+      }
+    },
+    "iso_time": "2025-12-05T01:49:55Z"
+  },
+  {
+    "timestamp": 1764899396.891747,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 59.99999999999997
+    },
+    "iso_time": "2025-12-05T01:49:56Z"
+  },
+  {
+    "timestamp": 1764899396.891906,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a geometry contest, a parallelogram ABCD satisfies the following: the circumradii of triangles ABD and ACD are 13.565",
+      "correct_answer": "60",
+      "seed_value": 135734963
+    },
+    "iso_time": "2025-12-05T01:49:56Z"
+  },
+  {
+    "timestamp": 1764899396.891971,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "61",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T01:49:56Z"
+  },
+  {
+    "timestamp": 1764899603.266606,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "62",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T01:53:23Z"
+  },
+  {
+    "timestamp": 1764900008.830065,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "60",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:00:08Z"
+  },
+  {
+    "timestamp": 1764900349.631256,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "60",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:05:49Z"
+  },
+  {
+    "timestamp": 1764900511.149793,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "68",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:08:31Z"
+  },
+  {
+    "timestamp": 1764900816.857745,
+    "seed_id": "2003-II-7::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-7::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T02:13:36Z"
+  },
+  {
+    "timestamp": 1764900816.8579462,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-7::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 395396295
+    },
+    "iso_time": "2025-12-05T02:13:36Z"
+  },
+  {
+    "timestamp": 1764900818.206311,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 56.950396453843936,
+        "r2": 88.59619154484011,
+        "s_sum": 4913,
+        "phi_cos": -0.9699183460823689
+      }
+    },
+    "iso_time": "2025-12-05T02:13:38Z"
+  },
+  {
+    "timestamp": 1764900819.283306,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 543.9999999999992
+    },
+    "iso_time": "2025-12-05T02:13:39Z"
+  },
+  {
+    "timestamp": 1764900819.283475,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a geometry contest, a parallelogram ABCD satisfies the following: the circumradii of triangles ABD and ACD are 56.950",
+      "correct_answer": "544",
+      "seed_value": 395396295
+    },
+    "iso_time": "2025-12-05T02:13:39Z"
+  },
+  {
+    "timestamp": 1764900819.2835379,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "546",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:13:39Z"
+  },
+  {
+    "timestamp": 1764900916.346646,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "544",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:15:16Z"
+  },
+  {
+    "timestamp": 1764901034.9559228,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "542",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:17:14Z"
+  },
+  {
+    "timestamp": 1764901332.936597,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "551",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:22:12Z"
+  },
+  {
+    "timestamp": 1764901692.672587,
+    "seed_id": "2003-II-7::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "544",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:28:12Z"
+  },
+  {
+    "timestamp": 1764901805.3804858,
+    "seed_id": "2003-II-7::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-7::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T02:30:05Z"
+  }
+]

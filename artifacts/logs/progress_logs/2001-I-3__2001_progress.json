@@ -1,0 +1,4334 @@
+[
+  {
+    "timestamp": 1764445977.7074702,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "Find the sum of the roots, real and non-real, of the equation $x^{2001}+\\left(\\frac 12-x\\right)^{2001}=0$ , given that t",
+      "answer": "500",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T19:52:57Z"
+  },
+  {
+    "timestamp": 1764445977.707546,
+    "seed_id": "2001-I-3::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T19:52:57Z"
+  },
+  {
+    "timestamp": 1764445977.707576,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find the sum of the roots, real and non-real, of the equation $x^{2001}+\\left(\\frac 12-x\\right)^{2001}=0$ , given that there are no multiple roots.",
+      "answer": "500",
+      "example_id": "2001-I-3::2001"
+    },
+    "iso_time": "2025-11-29T19:52:57Z"
+  },
+  {
+    "timestamp": 1764446073.123358,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 48647643
+    },
+    "iso_time": "2025-11-29T19:54:33Z"
+  },
+  {
+    "timestamp": 1764446074.2453911,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 761,
+        "m": 5,
+        "weights_str": "w_1=5/23, w_2=8/23, w_3=1/23, w_4=8/23, w_5=1/23",
+        "a_list_str": "a_1=12, a_2=36, a_3=34, a_4=17, a_5=23",
+        "p_list": [
+          5,
+          8,
+          1,
+          8,
+          1
+        ],
+        "p_total": 23,
+        "a_list": [
+          12,
+          36,
+          34,
+          17,
+          23
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T19:54:34Z"
+  },
+  {
+    "timestamp": 1764446075.256315,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "5732300/541"
+    },
+    "iso_time": "2025-11-29T19:54:35Z"
+  },
+  {
+    "timestamp": 1764446075.25647,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n=761 be an odd integer and m=5≥3. Define positive rational weights w_1,...,w_m that sum to 1 by w_1=5/23, w_2=8/23,",
+      "correct_answer": "5732300/541",
+      "seed_value": 48647643
+    },
+    "iso_time": "2025-11-29T19:54:35Z"
+  },
+  {
+    "timestamp": 1764446075.2565298,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5732300/541 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:54:35Z"
+  },
+  {
+    "timestamp": 1764446094.38955,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5732300/541",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:54:54Z"
+  },
+  {
+    "timestamp": 1764446111.6939242,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5732300/541",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:55:11Z"
+  },
+  {
+    "timestamp": 1764446129.8174138,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5732300/541 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:55:29Z"
+  },
+  {
+    "timestamp": 1764446152.756914,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5732300/541 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:55:52Z"
+  },
+  {
+    "timestamp": 1764446166.995171,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T19:56:06Z"
+  },
+  {
+    "timestamp": 1764446166.9953878,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 122592846
+    },
+    "iso_time": "2025-11-29T19:56:06Z"
+  },
+  {
+    "timestamp": 1764446168.257715,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 493,
+        "m": 3,
+        "weights_str": "w_1=5/15, w_2=8/15, w_3=2/15",
+        "a_list_str": "a_1=34, a_2=7, a_3=4",
+        "p_list": [
+          5,
+          8,
+          2
+        ],
+        "p_total": 15,
+        "a_list": [
+          34,
+          7,
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T19:56:08Z"
+  },
+  {
+    "timestamp": 1764446169.3688698,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "84788/13"
+    },
+    "iso_time": "2025-11-29T19:56:09Z"
+  },
+  {
+    "timestamp": 1764446169.369038,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n=493 be an odd integer and m=3≥3. Define positive rational weights w_1,...,w_m that sum to 1 by w_1=5/15, w_2=8/15,",
+      "correct_answer": "84788/13",
+      "seed_value": 122592846
+    },
+    "iso_time": "2025-11-29T19:56:09Z"
+  },
+  {
+    "timestamp": 1764446169.369078,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "84788/13 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:56:09Z"
+  },
+  {
+    "timestamp": 1764446184.984525,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "84788/13 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:56:24Z"
+  },
+  {
+    "timestamp": 1764446208.4604428,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "84788/13",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:56:48Z"
+  },
+  {
+    "timestamp": 1764446226.0794702,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "84788/13 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:57:06Z"
+  },
+  {
+    "timestamp": 1764446245.843401,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "84788/13",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:57:25Z"
+  },
+  {
+    "timestamp": 1764446267.036423,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T19:57:47Z"
+  },
+  {
+    "timestamp": 1764446267.036587,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 963224365
+    },
+    "iso_time": "2025-11-29T19:57:47Z"
+  },
+  {
+    "timestamp": 1764446268.1258838,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 677,
+        "m": 5,
+        "weights_str": "w_1=6/28, w_2=5/28, w_3=8/28, w_4=6/28, w_5=3/28",
+        "a_list_str": "a_1=23, a_2=4, a_3=20, a_4=24, a_5=27",
+        "p_list": [
+          6,
+          5,
+          8,
+          6,
+          3
+        ],
+        "p_total": 28,
+        "a_list": [
+          23,
+          4,
+          20,
+          24,
+          27
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T19:57:48Z"
+  },
+  {
+    "timestamp": 1764446269.305322,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "4088786/543"
+    },
+    "iso_time": "2025-11-29T19:57:49Z"
+  },
+  {
+    "timestamp": 1764446269.30549,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n=677 be an odd integer and m=5≥3. Define positive rational weights w_1,...,w_m that sum to 1 by w_1=6/28, w_2=5/28,",
+      "correct_answer": "4088786/543",
+      "seed_value": 963224365
+    },
+    "iso_time": "2025-11-29T19:57:49Z"
+  },
+  {
+    "timestamp": 1764446269.3055449,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4088786/543",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:57:49Z"
+  },
+  {
+    "timestamp": 1764446290.134654,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4088786/543 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:58:10Z"
+  },
+  {
+    "timestamp": 1764446317.30917,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4088786/543",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:58:37Z"
+  },
+  {
+    "timestamp": 1764446332.336512,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4088786/543 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:58:52Z"
+  },
+  {
+    "timestamp": 1764446354.591212,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4088786/543 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:59:14Z"
+  },
+  {
+    "timestamp": 1764446376.6986449,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T19:59:36Z"
+  },
+  {
+    "timestamp": 1764446376.698828,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 198663589
+    },
+    "iso_time": "2025-11-29T19:59:36Z"
+  },
+  {
+    "timestamp": 1764446377.743841,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 631,
+        "m": 3,
+        "weights_str": "w_1=8/13, w_2=1/13, w_3=4/13",
+        "a_list_str": "a_1=4, a_2=27, a_3=20",
+        "p_list": [
+          8,
+          1,
+          4
+        ],
+        "p_total": 13,
+        "a_list": [
+          4,
+          27,
+          20
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T19:59:37Z"
+  },
+  {
+    "timestamp": 1764446378.763118,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "773955/139"
+    },
+    "iso_time": "2025-11-29T19:59:38Z"
+  },
+  {
+    "timestamp": 1764446378.763286,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n=631 be an odd integer and m=3≥3. Define positive rational weights w_1,...,w_m that sum to 1 by w_1=8/13, w_2=1/13,",
+      "correct_answer": "773955/139",
+      "seed_value": 198663589
+    },
+    "iso_time": "2025-11-29T19:59:38Z"
+  },
+  {
+    "timestamp": 1764446378.763341,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "773955/139",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:59:38Z"
+  },
+  {
+    "timestamp": 1764446392.787325,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "773955/139 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:59:52Z"
+  },
+  {
+    "timestamp": 1764446415.006999,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "773955/139 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:00:15Z"
+  },
+  {
+    "timestamp": 1764446432.8754299,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "773955/139 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:00:32Z"
+  },
+  {
+    "timestamp": 1764446452.417645,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "773955/139",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:00:52Z"
+  },
+  {
+    "timestamp": 1764446466.152102,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:01:06Z"
+  },
+  {
+    "timestamp": 1764446466.152184,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 836375957
+    },
+    "iso_time": "2025-11-29T20:01:06Z"
+  },
+  {
+    "timestamp": 1764446467.259289,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 471,
+        "m": 4,
+        "weights_str": "w_1=2/12, w_2=6/12, w_3=3/12, w_4=1/12",
+        "a_list_str": "a_1=37, a_2=25, a_3=12, a_4=17",
+        "p_list": [
+          2,
+          6,
+          3,
+          1
+        ],
+        "p_total": 12,
+        "a_list": [
+          37,
+          25,
+          12,
+          17
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T20:01:07Z"
+  },
+  {
+    "timestamp": 1764446468.266478,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "1694115/277"
+    },
+    "iso_time": "2025-11-29T20:01:08Z"
+  },
+  {
+    "timestamp": 1764446468.2666419,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n=471 be an odd integer and m=4≥3. Define positive rational weights w_1,...,w_m that sum to 1 by w_1=2/12, w_2=6/12,",
+      "correct_answer": "1694115/277",
+      "seed_value": 836375957
+    },
+    "iso_time": "2025-11-29T20:01:08Z"
+  },
+  {
+    "timestamp": 1764446468.2667,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1694115/277",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:01:08Z"
+  },
+  {
+    "timestamp": 1764446483.717937,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1694115/277",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:01:23Z"
+  },
+  {
+    "timestamp": 1764446502.2517529,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1694115/277 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:01:42Z"
+  },
+  {
+    "timestamp": 1764446538.5626922,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1694115/277 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:02:18Z"
+  },
+  {
+    "timestamp": 1764446566.046283,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1694115/277 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:02:46Z"
+  },
+  {
+    "timestamp": 1764446597.8972642,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:03:17Z"
+  },
+  {
+    "timestamp": 1764446597.897391,
+    "seed_id": "2001-I-3::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-29T20:03:17Z"
+  },
+  {
+    "timestamp": 1764446597.897444,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=2). | Judge rejected variant 2 (successes=2). | Judge rejected variant 3 (successes=2).",
+      "question": "Find the sum of the roots, real and non-real, of the equation $x^{2001}+\\left(\\frac 12-x\\right)^{2001}=0$ , given that there are no multiple roots.",
+      "answer": "500",
+      "example_id": "2001-I-3::2001"
+    },
+    "iso_time": "2025-11-29T20:03:17Z"
+  },
+  {
+    "timestamp": 1764446663.124002,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 552683767
+    },
+    "iso_time": "2025-11-29T20:04:23Z"
+  },
+  {
+    "timestamp": 1764446664.50969,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 71,
+        "m": 60,
+        "a": 27,
+        "b": 71
+      }
+    },
+    "iso_time": "2025-11-29T20:04:24Z"
+  },
+  {
+    "timestamp": 1764446665.595372,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 324
+    },
+    "iso_time": "2025-11-29T20:04:25Z"
+  },
+  {
+    "timestamp": 1764446665.595547,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the polynomial equation x^{ {n} } + ( 27 - x )^{ {n} } + 71 x^{ 60 } ( 27 - x )^{ {n} - 60 } = 0. Assume it has",
+      "correct_answer": "324",
+      "seed_value": 552683767
+    },
+    "iso_time": "2025-11-29T20:04:25Z"
+  },
+  {
+    "timestamp": 1764446665.595603,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "324",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:04:25Z"
+  },
+  {
+    "timestamp": 1764446709.053983,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "322",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:05:09Z"
+  },
+  {
+    "timestamp": 1764446739.630673,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "328",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:05:39Z"
+  },
+  {
+    "timestamp": 1764446766.757205,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "324",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:06:06Z"
+  },
+  {
+    "timestamp": 1764446807.817197,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "327",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:06:47Z"
+  },
+  {
+    "timestamp": 1764446839.558121,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T20:07:19Z"
+  },
+  {
+    "timestamp": 1764446839.558263,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1726507008
+    },
+    "iso_time": "2025-11-29T20:07:19Z"
+  },
+  {
+    "timestamp": 1764446840.917526,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 95,
+        "m": 60,
+        "a": 11,
+        "b": 1
+      }
+    },
+    "iso_time": "2025-11-29T20:07:20Z"
+  },
+  {
+    "timestamp": 1764446841.968491,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1430
+    },
+    "iso_time": "2025-11-29T20:07:21Z"
+  },
+  {
+    "timestamp": 1764446841.9686542,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the polynomial equation x^{ {n} } + ( 11 - x )^{ {n} } + 1 x^{ 60 } ( 11 - x )^{ {n} - 60 } = 0. Assume it has ",
+      "correct_answer": "1430",
+      "seed_value": 1726507008
+    },
+    "iso_time": "2025-11-29T20:07:21Z"
+  },
+  {
+    "timestamp": 1764446841.968699,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1433",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:07:21Z"
+  },
+  {
+    "timestamp": 1764446876.424316,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1436",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:07:56Z"
+  },
+  {
+    "timestamp": 1764446901.6142788,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1430",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:08:21Z"
+  },
+  {
+    "timestamp": 1764446931.230904,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1437",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:08:51Z"
+  },
+  {
+    "timestamp": 1764446959.593513,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1430",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:09:19Z"
+  },
+  {
+    "timestamp": 1764446988.551556,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T20:09:48Z"
+  },
+  {
+    "timestamp": 1764446988.551751,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1624152713
+    },
+    "iso_time": "2025-11-29T20:09:48Z"
+  },
+  {
+    "timestamp": 1764446989.8703501,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 45,
+        "m": 19,
+        "a": 22,
+        "b": 1
+      }
+    },
+    "iso_time": "2025-11-29T20:09:49Z"
+  },
+  {
+    "timestamp": 1764446990.979672,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -418
+    },
+    "iso_time": "2025-11-29T20:09:50Z"
+  },
+  {
+    "timestamp": 1764446990.979862,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the polynomial equation x^{ {n} } + ( 22 - x )^{ {n} } + 1 x^{ 19 } ( 22 - x )^{ {n} - 19 } = 0. Assume it has ",
+      "correct_answer": "-418",
+      "seed_value": 1624152713
+    },
+    "iso_time": "2025-11-29T20:09:50Z"
+  },
+  {
+    "timestamp": 1764446990.979906,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:09:50Z"
+  },
+  {
+    "timestamp": 1764447018.541697,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-418",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:10:18Z"
+  },
+  {
+    "timestamp": 1764447044.161976,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-417",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:10:44Z"
+  },
+  {
+    "timestamp": 1764447077.9286468,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-418",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:11:17Z"
+  },
+  {
+    "timestamp": 1764447107.337366,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-413",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:11:47Z"
+  },
+  {
+    "timestamp": 1764447143.140657,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T20:12:23Z"
+  },
+  {
+    "timestamp": 1764447143.14079,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1561553265
+    },
+    "iso_time": "2025-11-29T20:12:23Z"
+  },
+  {
+    "timestamp": 1764447144.213652,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 53,
+        "m": 5,
+        "a": 12,
+        "b": 53
+      }
+    },
+    "iso_time": "2025-11-29T20:12:24Z"
+  },
+  {
+    "timestamp": 1764447145.268107,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 564
+    },
+    "iso_time": "2025-11-29T20:12:25Z"
+  },
+  {
+    "timestamp": 1764447145.268285,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the polynomial equation x^{ {n} } + ( 12 - x )^{ {n} } + 53 x^{ 5 } ( 12 - x )^{ {n} - 5 } = 0. Assume it has n",
+      "correct_answer": "564",
+      "seed_value": 1561553265
+    },
+    "iso_time": "2025-11-29T20:12:25Z"
+  },
+  {
+    "timestamp": 1764447145.2683342,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "569",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:12:25Z"
+  },
+  {
+    "timestamp": 1764447220.388551,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "560",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:13:40Z"
+  },
+  {
+    "timestamp": 1764447256.465033,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "564",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:14:16Z"
+  },
+  {
+    "timestamp": 1764447285.5157351,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "564",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:14:45Z"
+  },
+  {
+    "timestamp": 1764447317.219022,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "558",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:15:17Z"
+  },
+  {
+    "timestamp": 1764447343.579029,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T20:15:43Z"
+  },
+  {
+    "timestamp": 1764447343.579232,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 2129930870
+    },
+    "iso_time": "2025-11-29T20:15:43Z"
+  },
+  {
+    "timestamp": 1764447344.74177,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 65,
+        "m": 26,
+        "a": 17,
+        "b": 65
+      }
+    },
+    "iso_time": "2025-11-29T20:15:44Z"
+  },
+  {
+    "timestamp": 1764447345.82913,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 680
+    },
+    "iso_time": "2025-11-29T20:15:45Z"
+  },
+  {
+    "timestamp": 1764447345.829325,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the polynomial equation x^{ {n} } + ( 17 - x )^{ {n} } + 65 x^{ 26 } ( 17 - x )^{ {n} - 26 } = 0. Assume it has",
+      "correct_answer": "680",
+      "seed_value": 2129930870
+    },
+    "iso_time": "2025-11-29T20:15:45Z"
+  },
+  {
+    "timestamp": 1764447345.8293812,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "687",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:15:45Z"
+  },
+  {
+    "timestamp": 1764447383.301146,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "680",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:16:23Z"
+  },
+  {
+    "timestamp": 1764447425.3016121,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "681",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:17:05Z"
+  },
+  {
+    "timestamp": 1764447458.5729501,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "680",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:17:38Z"
+  },
+  {
+    "timestamp": 1764447502.4584079,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "686",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:18:22Z"
+  },
+  {
+    "timestamp": 1764447541.209733,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T20:19:01Z"
+  },
+  {
+    "timestamp": 1764447541.209849,
+    "seed_id": "2001-I-3::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-29T20:19:01Z"
+  },
+  {
+    "timestamp": 1764447541.209889,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Find the sum of the roots, real and non-real, of the equation $x^{2001}+\\left(\\frac 12-x\\right)^{2001}=0$ , given that there are no multiple roots.",
+      "answer": "500",
+      "example_id": "2001-I-3::2001"
+    },
+    "iso_time": "2025-11-29T20:19:01Z"
+  },
+  {
+    "timestamp": 1764447618.873611,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1620000250
+    },
+    "iso_time": "2025-11-29T20:20:18Z"
+  },
+  {
+    "timestamp": 1764447620.035001,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 41,
+        "a_num": 13,
+        "a_den": 3,
+        "r_num": -1,
+        "r_den": 12
+      }
+    },
+    "iso_time": "2025-11-29T20:20:20Z"
+  },
+  {
+    "timestamp": 1764447621.190458,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "-92368558880/40947201"
+    },
+    "iso_time": "2025-11-29T20:20:21Z"
+  },
+  {
+    "timestamp": 1764447621.190603,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, let 41 be an odd integer and let the rationals a and r be given by a = 13/3 and r = -1/12. Consider t",
+      "correct_answer": "-92368558880/40947201",
+      "seed_value": 1620000250
+    },
+    "iso_time": "2025-11-29T20:20:21Z"
+  },
+  {
+    "timestamp": 1764447621.1906428,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-92368558880/40947201 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:20:21Z"
+  },
+  {
+    "timestamp": 1764447661.766094,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-92368558880/40947201 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:21:01Z"
+  },
+  {
+    "timestamp": 1764447699.506457,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-92368558880/40947201",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:21:39Z"
+  },
+  {
+    "timestamp": 1764447749.166115,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-92368558880/40947201 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:22:29Z"
+  },
+  {
+    "timestamp": 1764447784.802121,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-92368558880/40947201",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:23:04Z"
+  },
+  {
+    "timestamp": 1764447820.635963,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:23:40Z"
+  },
+  {
+    "timestamp": 1764447820.63614,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 19529302
+    },
+    "iso_time": "2025-11-29T20:23:40Z"
+  },
+  {
+    "timestamp": 1764447821.83373,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 39,
+        "a_num": 22,
+        "a_den": 5,
+        "r_num": -1,
+        "r_den": 1
+      }
+    },
+    "iso_time": "2025-11-29T20:23:41Z"
+  },
+  {
+    "timestamp": 1764447822.946419,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "-39335117536/18619225"
+    },
+    "iso_time": "2025-11-29T20:23:42Z"
+  },
+  {
+    "timestamp": 1764447822.946582,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, let 39 be an odd integer and let the rationals a and r be given by a = 22/5 and r = -1/1. Consider th",
+      "correct_answer": "-39335117536/18619225",
+      "seed_value": 19529302
+    },
+    "iso_time": "2025-11-29T20:23:42Z"
+  },
+  {
+    "timestamp": 1764447822.946615,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-39335117536/18619225 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:23:42Z"
+  },
+  {
+    "timestamp": 1764447857.510619,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-39335117536/18619225 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:24:17Z"
+  },
+  {
+    "timestamp": 1764447886.576661,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-39335117536/18619225 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:24:46Z"
+  },
+  {
+    "timestamp": 1764447919.5616472,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-39335117536/18619225",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:25:19Z"
+  },
+  {
+    "timestamp": 1764447968.096328,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-39335117536/18619225",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:26:08Z"
+  },
+  {
+    "timestamp": 1764448005.782729,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:26:45Z"
+  },
+  {
+    "timestamp": 1764448005.78285,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 664950973
+    },
+    "iso_time": "2025-11-29T20:26:45Z"
+  },
+  {
+    "timestamp": 1764448006.877311,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 49,
+        "a_num": 19,
+        "a_den": 7,
+        "r_num": -5,
+        "r_den": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:26:46Z"
+  },
+  {
+    "timestamp": 1764448007.929659,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "-95148048/71407"
+    },
+    "iso_time": "2025-11-29T20:26:47Z"
+  },
+  {
+    "timestamp": 1764448007.9298282,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, let 49 be an odd integer and let the rationals a and r be given by a = 19/7 and r = -5/3. Consider th",
+      "correct_answer": "-95148048/71407",
+      "seed_value": 664950973
+    },
+    "iso_time": "2025-11-29T20:26:47Z"
+  },
+  {
+    "timestamp": 1764448007.929871,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-95148048/71407 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:26:47Z"
+  },
+  {
+    "timestamp": 1764448036.2323709,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-95148048/71407",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:27:16Z"
+  },
+  {
+    "timestamp": 1764448068.963645,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-95148048/71407",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:27:48Z"
+  },
+  {
+    "timestamp": 1764448095.585353,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-95148048/71407 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:28:15Z"
+  },
+  {
+    "timestamp": 1764448132.655222,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-95148048/71407 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:28:52Z"
+  },
+  {
+    "timestamp": 1764448167.3050969,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:29:27Z"
+  },
+  {
+    "timestamp": 1764448167.305376,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1633577928
+    },
+    "iso_time": "2025-11-29T20:29:27Z"
+  },
+  {
+    "timestamp": 1764448168.4080079,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 31,
+        "a_num": 14,
+        "a_den": 9,
+        "r_num": -9,
+        "r_den": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:29:28Z"
+  },
+  {
+    "timestamp": 1764448169.4446871,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "-13594928480/72948681"
+    },
+    "iso_time": "2025-11-29T20:29:29Z"
+  },
+  {
+    "timestamp": 1764448169.444841,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, let 31 be an odd integer and let the rationals a and r be given by a = 14/9 and r = -9/2. Consider th",
+      "correct_answer": "-13594928480/72948681",
+      "seed_value": 1633577928
+    },
+    "iso_time": "2025-11-29T20:29:29Z"
+  },
+  {
+    "timestamp": 1764448169.444878,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-13594928480/72948681 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:29:29Z"
+  },
+  {
+    "timestamp": 1764448203.622622,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-13594928480/72948681 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:30:03Z"
+  },
+  {
+    "timestamp": 1764448249.82102,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-13594928480/72948681",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:30:49Z"
+  },
+  {
+    "timestamp": 1764448293.480908,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-13594928480/72948681",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:31:33Z"
+  },
+  {
+    "timestamp": 1764448331.1426072,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-13594928480/72948681 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:32:11Z"
+  },
+  {
+    "timestamp": 1764448378.15127,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:32:58Z"
+  },
+  {
+    "timestamp": 1764448378.1514728,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 783767595
+    },
+    "iso_time": "2025-11-29T20:32:58Z"
+  },
+  {
+    "timestamp": 1764448379.255456,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 43,
+        "a_num": 2,
+        "a_den": 1,
+        "r_num": 3,
+        "r_den": 7
+      }
+    },
+    "iso_time": "2025-11-29T20:32:59Z"
+  },
+  {
+    "timestamp": 1764448380.271996,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "-188652352/358801"
+    },
+    "iso_time": "2025-11-29T20:33:00Z"
+  },
+  {
+    "timestamp": 1764448380.2721741,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, let 43 be an odd integer and let the rationals a and r be given by a = 2/1 and r = 3/7. Consider the ",
+      "correct_answer": "-188652352/358801",
+      "seed_value": 783767595
+    },
+    "iso_time": "2025-11-29T20:33:00Z"
+  },
+  {
+    "timestamp": 1764448380.272219,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-188652352/358801 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:33:00Z"
+  },
+  {
+    "timestamp": 1764448413.081811,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-188652352/358801 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:33:33Z"
+  },
+  {
+    "timestamp": 1764448444.7722921,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-188652352/358801 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:34:04Z"
+  },
+  {
+    "timestamp": 1764448463.417676,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-188652352/358801",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:34:23Z"
+  },
+  {
+    "timestamp": 1764448499.997408,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-188652352/358801",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:34:59Z"
+  },
+  {
+    "timestamp": 1764448522.496623,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:35:22Z"
+  },
+  {
+    "timestamp": 1764448522.496851,
+    "seed_id": "2001-I-3::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-29T20:35:22Z"
+  },
+  {
+    "timestamp": 1764448522.496959,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Judge rejected variant 1 (successes=2). | Judge rejected variant 2 (successes=2). | Judge rejected variant 3 (successes=2).",
+      "question": "Find the sum of the roots, real and non-real, of the equation $x^{2001}+\\left(\\frac 12-x\\right)^{2001}=0$ , given that there are no multiple roots.",
+      "answer": "500",
+      "example_id": "2001-I-3::2001"
+    },
+    "iso_time": "2025-11-29T20:35:22Z"
+  },
+  {
+    "timestamp": 1764448615.8895109,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 186817521
+    },
+    "iso_time": "2025-11-29T20:36:55Z"
+  },
+  {
+    "timestamp": 1764448617.174737,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 53,
+        "a_num": 5,
+        "a_den": 2,
+        "kappa": 14
+      }
+    },
+    "iso_time": "2025-11-29T20:36:57Z"
+  },
+  {
+    "timestamp": 1764448618.240795,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": [
+        -116350,
+        79
+      ]
+    },
+    "iso_time": "2025-11-29T20:36:58Z"
+  },
+  {
+    "timestamp": 1764448618.240988,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, fix an odd integer 53 >= 9, a positive rational number 5/2, and a nonzero integer 14. Consider the eq",
+      "correct_answer": "[-116350, 79]",
+      "seed_value": 186817521
+    },
+    "iso_time": "2025-11-29T20:36:58Z"
+  },
+  {
+    "timestamp": 1764448618.241033,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "[-116350, 79]",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:36:58Z"
+  },
+  {
+    "timestamp": 1764448659.584942,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "[-116350, 79]",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:37:39Z"
+  },
+  {
+    "timestamp": 1764448704.063066,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "[-116350, 79] (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:38:24Z"
+  },
+  {
+    "timestamp": 1764448749.412286,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "[-116350, 79] (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:39:09Z"
+  },
+  {
+    "timestamp": 1764448792.725356,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "[-116350, 79] (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:39:52Z"
+  },
+  {
+    "timestamp": 1764448837.786269,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:40:37Z"
+  },
+  {
+    "timestamp": 1764448837.786649,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 1399335951
+    },
+    "iso_time": "2025-11-29T20:40:37Z"
+  },
+  {
+    "timestamp": 1764448839.182507,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 19,
+        "a_num": 7,
+        "a_den": 12,
+        "kappa": 13
+      }
+    },
+    "iso_time": "2025-11-29T20:40:39Z"
+  },
+  {
+    "timestamp": 1764448840.265617,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": [
+        -22687,
+        13872
+      ]
+    },
+    "iso_time": "2025-11-29T20:40:40Z"
+  },
+  {
+    "timestamp": 1764448840.2658272,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, fix an odd integer 19 >= 9, a positive rational number 7/12, and a nonzero integer 13. Consider the e",
+      "correct_answer": "[-22687, 13872]",
+      "seed_value": 1399335951
+    },
+    "iso_time": "2025-11-29T20:40:40Z"
+  },
+  {
+    "timestamp": 1764448840.265876,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "[-22687, 13872] (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:40:40Z"
+  },
+  {
+    "timestamp": 1764448902.8086112,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "[-22687, 13872]",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:41:42Z"
+  },
+  {
+    "timestamp": 1764448949.808087,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "[-22687, 13872] (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:42:29Z"
+  },
+  {
+    "timestamp": 1764449000.636728,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "[-22687, 13872]",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:43:20Z"
+  },
+  {
+    "timestamp": 1764449057.7356071,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "[-22687, 13872] (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:44:17Z"
+  },
+  {
+    "timestamp": 1764449107.109277,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:45:07Z"
+  },
+  {
+    "timestamp": 1764449107.109545,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 3,
+      "seed_value": 1073008869
+    },
+    "iso_time": "2025-11-29T20:45:07Z"
+  },
+  {
+    "timestamp": 1764449108.2845418,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 83,
+        "a_num": 1,
+        "a_den": 1,
+        "kappa": 8
+      }
+    },
+    "iso_time": "2025-11-29T20:45:08Z"
+  },
+  {
+    "timestamp": 1764449109.393207,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": [
+        -6273,
+        13
+      ]
+    },
+    "iso_time": "2025-11-29T20:45:09Z"
+  },
+  {
+    "timestamp": 1764449109.393399,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, fix an odd integer 83 >= 9, a positive rational number 1/1, and a nonzero integer 8. Consider the equ",
+      "correct_answer": "[-6273, 13]",
+      "seed_value": 1073008869
+    },
+    "iso_time": "2025-11-29T20:45:09Z"
+  },
+  {
+    "timestamp": 1764449109.393443,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "[-6273, 13]",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:45:09Z"
+  },
+  {
+    "timestamp": 1764449159.2280178,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "[-6273, 13] (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:45:59Z"
+  },
+  {
+    "timestamp": 1764449194.340158,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "[-6273, 13]",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:46:34Z"
+  },
+  {
+    "timestamp": 1764449230.177686,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "[-6273, 13] (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:47:10Z"
+  },
+  {
+    "timestamp": 1764449280.551768,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "[-6273, 13] (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:48:00Z"
+  },
+  {
+    "timestamp": 1764449315.3187451,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:48:35Z"
+  },
+  {
+    "timestamp": 1764449315.318891,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 4,
+      "seed_value": 607526733
+    },
+    "iso_time": "2025-11-29T20:48:35Z"
+  },
+  {
+    "timestamp": 1764449316.457342,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 65,
+        "a_num": 7,
+        "a_den": 1,
+        "kappa": 21
+      }
+    },
+    "iso_time": "2025-11-29T20:48:36Z"
+  },
+  {
+    "timestamp": 1764449317.4794571,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": [
+        -511952,
+        31
+      ]
+    },
+    "iso_time": "2025-11-29T20:48:37Z"
+  },
+  {
+    "timestamp": 1764449317.4796531,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, fix an odd integer 65 >= 9, a positive rational number 7/1, and a nonzero integer 21. Consider the eq",
+      "correct_answer": "[-511952, 31]",
+      "seed_value": 607526733
+    },
+    "iso_time": "2025-11-29T20:48:37Z"
+  },
+  {
+    "timestamp": 1764449317.4796932,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "[-511952, 31] (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:48:37Z"
+  },
+  {
+    "timestamp": 1764449369.442394,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "[-511952, 31]",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:49:29Z"
+  },
+  {
+    "timestamp": 1764449432.215106,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "[-511952, 31] (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:50:32Z"
+  },
+  {
+    "timestamp": 1764449480.546431,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "[-511952, 31] (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:51:20Z"
+  },
+  {
+    "timestamp": 1764449529.801829,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "[-511952, 31]",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:52:09Z"
+  },
+  {
+    "timestamp": 1764449568.901005,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:52:48Z"
+  },
+  {
+    "timestamp": 1764449568.9012501,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 5,
+      "seed_value": 226111238
+    },
+    "iso_time": "2025-11-29T20:52:48Z"
+  },
+  {
+    "timestamp": 1764449569.9721,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 17,
+        "a_num": 17,
+        "a_den": 9,
+        "kappa": 16
+      }
+    },
+    "iso_time": "2025-11-29T20:52:49Z"
+  },
+  {
+    "timestamp": 1764449570.999521,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": [
+        -1669264,
+        11745
+      ]
+    },
+    "iso_time": "2025-11-29T20:52:50Z"
+  },
+  {
+    "timestamp": 1764449570.9997199,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, fix an odd integer 17 >= 9, a positive rational number 17/9, and a nonzero integer 16. Consider the e",
+      "correct_answer": "[-1669264, 11745]",
+      "seed_value": 226111238
+    },
+    "iso_time": "2025-11-29T20:52:50Z"
+  },
+  {
+    "timestamp": 1764449570.9997618,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "[-1669264, 11745] (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:52:50Z"
+  },
+  {
+    "timestamp": 1764449602.685343,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "[-1669264, 11745] (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:53:22Z"
+  },
+  {
+    "timestamp": 1764449640.0127811,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "[-1669264, 11745] (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:54:00Z"
+  },
+  {
+    "timestamp": 1764449675.862338,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "[-1669264, 11745]",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:54:35Z"
+  },
+  {
+    "timestamp": 1764449711.064642,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "[-1669264, 11745]",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:55:11Z"
+  },
+  {
+    "timestamp": 1764449746.8792279,
+    "seed_id": "2001-I-3::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-29T20:55:46Z"
+  },
+  {
+    "timestamp": 1764449746.879392,
+    "seed_id": "2001-I-3::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 5).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-29T20:55:46Z"
+  },
+  {
+    "timestamp": 1764449746.87945,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 5,
+      "feedback": "Judge rejected variant 1 (successes=2). | Judge rejected variant 2 (successes=2). | Judge rejected variant 3 (successes=2).",
+      "question": "Find the sum of the roots, real and non-real, of the equation $x^{2001}+\\left(\\frac 12-x\\right)^{2001}=0$ , given that there are no multiple roots.",
+      "answer": "500",
+      "example_id": "2001-I-3::2001"
+    },
+    "iso_time": "2025-11-29T20:55:46Z"
+  },
+  {
+    "timestamp": 1764449844.7625291,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 1,
+      "seed_value": 869714413
+    },
+    "iso_time": "2025-11-29T20:57:24Z"
+  },
+  {
+    "timestamp": 1764449845.867384,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 31,
+        "a_num": 30,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:57:25Z"
+  },
+  {
+    "timestamp": 1764449846.891225,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:26Z"
+  },
+  {
+    "timestamp": 1764449847.9483452,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n": 37,
+        "a_num": 54,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:57:27Z"
+  },
+  {
+    "timestamp": 1764449848.981961,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:28Z"
+  },
+  {
+    "timestamp": 1764449850.022464,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n": 51,
+        "a_num": 60,
+        "a_den": 1,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:57:30Z"
+  },
+  {
+    "timestamp": 1764449851.0572832,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:31Z"
+  },
+  {
+    "timestamp": 1764449852.0970812,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n": 49,
+        "a_num": 54,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:57:32Z"
+  },
+  {
+    "timestamp": 1764449853.1551108,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:33Z"
+  },
+  {
+    "timestamp": 1764449854.235689,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n": 9,
+        "a_num": 18,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:57:34Z"
+  },
+  {
+    "timestamp": 1764449855.268034,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:35Z"
+  },
+  {
+    "timestamp": 1764449855.2681332,
+    "seed_id": "2001-I-3::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.505608081817627
+    },
+    "iso_time": "2025-11-29T20:57:35Z"
+  },
+  {
+    "timestamp": 1764449855.268207,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 2,
+      "seed_value": 1549940667
+    },
+    "iso_time": "2025-11-29T20:57:35Z"
+  },
+  {
+    "timestamp": 1764449856.30418,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 17,
+        "a_num": 24,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:57:36Z"
+  },
+  {
+    "timestamp": 1764449857.337035,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:37Z"
+  },
+  {
+    "timestamp": 1764449858.387348,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n": 41,
+        "a_num": 18,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:57:38Z"
+  },
+  {
+    "timestamp": 1764449859.450641,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:39Z"
+  },
+  {
+    "timestamp": 1764449860.482123,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n": 51,
+        "a_num": 6,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:57:40Z"
+  },
+  {
+    "timestamp": 1764449861.545551,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:41Z"
+  },
+  {
+    "timestamp": 1764449862.591537,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n": 19,
+        "a_num": 18,
+        "a_den": 1,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:57:42Z"
+  },
+  {
+    "timestamp": 1764449863.631623,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:43Z"
+  },
+  {
+    "timestamp": 1764449864.6737459,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n": 99,
+        "a_num": 54,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:57:44Z"
+  },
+  {
+    "timestamp": 1764449865.7227688,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:45Z"
+  },
+  {
+    "timestamp": 1764449865.722854,
+    "seed_id": "2001-I-3::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.454645872116089
+    },
+    "iso_time": "2025-11-29T20:57:45Z"
+  },
+  {
+    "timestamp": 1764449865.722927,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 3,
+      "seed_value": 1194946660
+    },
+    "iso_time": "2025-11-29T20:57:45Z"
+  },
+  {
+    "timestamp": 1764449866.763735,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 73,
+        "a_num": 6,
+        "a_den": 1,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:57:46Z"
+  },
+  {
+    "timestamp": 1764449867.795489,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:47Z"
+  },
+  {
+    "timestamp": 1764449868.8558211,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n": 25,
+        "a_num": 30,
+        "a_den": 1,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:57:48Z"
+  },
+  {
+    "timestamp": 1764449869.946692,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:49Z"
+  },
+  {
+    "timestamp": 1764449871.015967,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n": 53,
+        "a_num": 42,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:57:51Z"
+  },
+  {
+    "timestamp": 1764449872.067776,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:52Z"
+  },
+  {
+    "timestamp": 1764449873.164819,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n": 11,
+        "a_num": 18,
+        "a_den": 1,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:57:53Z"
+  },
+  {
+    "timestamp": 1764449874.234694,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:54Z"
+  },
+  {
+    "timestamp": 1764449875.276153,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n": 21,
+        "a_num": 36,
+        "a_den": 1,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:57:55Z"
+  },
+  {
+    "timestamp": 1764449876.3097322,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:56Z"
+  },
+  {
+    "timestamp": 1764449876.309818,
+    "seed_id": "2001-I-3::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.586892127990723
+    },
+    "iso_time": "2025-11-29T20:57:56Z"
+  },
+  {
+    "timestamp": 1764449876.3098722,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 4,
+      "seed_value": 1812379223
+    },
+    "iso_time": "2025-11-29T20:57:56Z"
+  },
+  {
+    "timestamp": 1764449877.359628,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 17,
+        "a_num": 12,
+        "a_den": 1,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:57:57Z"
+  },
+  {
+    "timestamp": 1764449878.414031,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:57:58Z"
+  },
+  {
+    "timestamp": 1764449879.442367,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n": 19,
+        "a_num": 48,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:57:59Z"
+  },
+  {
+    "timestamp": 1764449880.4945889,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:58:00Z"
+  },
+  {
+    "timestamp": 1764449881.5264928,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n": 63,
+        "a_num": 60,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:58:01Z"
+  },
+  {
+    "timestamp": 1764449882.590347,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:58:02Z"
+  },
+  {
+    "timestamp": 1764449883.676045,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n": 41,
+        "a_num": 36,
+        "a_den": 1,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:58:03Z"
+  },
+  {
+    "timestamp": 1764449884.722101,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:58:04Z"
+  },
+  {
+    "timestamp": 1764449885.7625222,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n": 59,
+        "a_num": 24,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:58:05Z"
+  },
+  {
+    "timestamp": 1764449886.811293,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:58:06Z"
+  },
+  {
+    "timestamp": 1764449886.811379,
+    "seed_id": "2001-I-3::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.501507997512817
+    },
+    "iso_time": "2025-11-29T20:58:06Z"
+  },
+  {
+    "timestamp": 1764449886.811434,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 5,
+      "seed_value": 1603234611
+    },
+    "iso_time": "2025-11-29T20:58:06Z"
+  },
+  {
+    "timestamp": 1764449887.855093,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 91,
+        "a_num": 12,
+        "a_den": 1,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:58:07Z"
+  },
+  {
+    "timestamp": 1764449888.892094,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:58:08Z"
+  },
+  {
+    "timestamp": 1764449889.94048,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n": 47,
+        "a_num": 48,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:58:09Z"
+  },
+  {
+    "timestamp": 1764449890.995067,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:58:10Z"
+  },
+  {
+    "timestamp": 1764449892.0374641,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n": 15,
+        "a_num": 30,
+        "a_den": 1,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:58:12Z"
+  },
+  {
+    "timestamp": 1764449893.093608,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:58:13Z"
+  },
+  {
+    "timestamp": 1764449894.117462,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n": 51,
+        "a_num": 6,
+        "a_den": 1,
+        "m": 2
+      }
+    },
+    "iso_time": "2025-11-29T20:58:14Z"
+  },
+  {
+    "timestamp": 1764449895.14516,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:58:15Z"
+  },
+  {
+    "timestamp": 1764449896.1896892,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n": 97,
+        "a_num": 60,
+        "a_den": 1,
+        "m": 3
+      }
+    },
+    "iso_time": "2025-11-29T20:58:16Z"
+  },
+  {
+    "timestamp": 1764449897.2530801,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T20:58:17Z"
+  },
+  {
+    "timestamp": 1764449897.2531688,
+    "seed_id": "2001-I-3::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.441734075546265
+    },
+    "iso_time": "2025-11-29T20:58:17Z"
+  },
+  {
+    "timestamp": 1764449897.253203,
+    "seed_id": "2001-I-3::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 6).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-29T20:58:17Z"
+  },
+  {
+    "timestamp": 1764449897.253218,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 6,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "Find the sum of the roots, real and non-real, of the equation $x^{2001}+\\left(\\frac 12-x\\right)^{2001}=0$ , given that there are no multiple roots.",
+      "answer": "500",
+      "example_id": "2001-I-3::2001"
+    },
+    "iso_time": "2025-11-29T20:58:17Z"
+  },
+  {
+    "timestamp": 1764449960.648829,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 1,
+      "seed_value": 1848511529
+    },
+    "iso_time": "2025-11-29T20:59:20Z"
+  },
+  {
+    "timestamp": 1764449961.89654,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 29,
+        "k": 3,
+        "c_list": [
+          9,
+          2,
+          -11
+        ],
+        "a_list": [
+          0,
+          11,
+          2
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T20:59:21Z"
+  },
+  {
+    "timestamp": 1764449963.001884,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 117
+    },
+    "iso_time": "2025-11-29T20:59:23Z"
+  },
+  {
+    "timestamp": 1764449963.002064,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation sum_{j=1}^3 c_j * (a_j - x)^29 = 0, where n=29, k=3, c=[9, 2, -11], and a=[0, 11, 2]. Assume n is ",
+      "correct_answer": "117",
+      "seed_value": 1848511529
+    },
+    "iso_time": "2025-11-29T20:59:23Z"
+  },
+  {
+    "timestamp": 1764449963.002111,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "124",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T20:59:23Z"
+  },
+  {
+    "timestamp": 1764449986.4085078,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "117",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T20:59:46Z"
+  },
+  {
+    "timestamp": 1764450004.649358,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "110",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:00:04Z"
+  },
+  {
+    "timestamp": 1764450027.8580108,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "117",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:00:27Z"
+  },
+  {
+    "timestamp": 1764450044.368194,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "123",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:00:44Z"
+  },
+  {
+    "timestamp": 1764450073.964132,
+    "seed_id": "2001-I-3::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-3::2001_prompt06-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T21:01:13Z"
+  },
+  {
+    "timestamp": 1764450073.964226,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 2,
+      "seed_value": 1539614375
+    },
+    "iso_time": "2025-11-29T21:01:13Z"
+  },
+  {
+    "timestamp": 1764450075.1825988,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 53,
+        "k": 3,
+        "c_list": [
+          2,
+          6,
+          -8
+        ],
+        "a_list": [
+          0,
+          8,
+          6
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T21:01:15Z"
+  },
+  {
+    "timestamp": 1764450076.2978728,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 238
+    },
+    "iso_time": "2025-11-29T21:01:16Z"
+  },
+  {
+    "timestamp": 1764450076.298056,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation sum_{j=1}^3 c_j * (a_j - x)^53 = 0, where n=53, k=3, c=[2, 6, -8], and a=[0, 8, 6]. Assume n is od",
+      "correct_answer": "238",
+      "seed_value": 1539614375
+    },
+    "iso_time": "2025-11-29T21:01:16Z"
+  },
+  {
+    "timestamp": 1764450076.298102,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:01:16Z"
+  },
+  {
+    "timestamp": 1764450123.698272,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "238",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:02:03Z"
+  },
+  {
+    "timestamp": 1764450141.89676,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "238",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:02:21Z"
+  },
+  {
+    "timestamp": 1764450160.0806432,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "234",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:02:40Z"
+  },
+  {
+    "timestamp": 1764450179.398627,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "230",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:02:59Z"
+  },
+  {
+    "timestamp": 1764450200.231251,
+    "seed_id": "2001-I-3::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-3::2001_prompt06-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T21:03:20Z"
+  },
+  {
+    "timestamp": 1764450200.23136,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 3,
+      "seed_value": 741744199
+    },
+    "iso_time": "2025-11-29T21:03:20Z"
+  },
+  {
+    "timestamp": 1764450201.23054,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 41,
+        "k": 3,
+        "c_list": [
+          2,
+          6,
+          -8
+        ],
+        "a_list": [
+          0,
+          8,
+          6
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T21:03:21Z"
+  },
+  {
+    "timestamp": 1764450202.215868,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 182
+    },
+    "iso_time": "2025-11-29T21:03:22Z"
+  },
+  {
+    "timestamp": 1764450202.216039,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation sum_{j=1}^3 c_j * (a_j - x)^41 = 0, where n=41, k=3, c=[2, 6, -8], and a=[0, 8, 6]. Assume n is od",
+      "correct_answer": "182",
+      "seed_value": 741744199
+    },
+    "iso_time": "2025-11-29T21:03:22Z"
+  },
+  {
+    "timestamp": 1764450202.216083,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "182",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:03:22Z"
+  },
+  {
+    "timestamp": 1764450223.7731688,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "180",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:03:43Z"
+  },
+  {
+    "timestamp": 1764450242.229077,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "190",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:04:02Z"
+  },
+  {
+    "timestamp": 1764450259.912568,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "182",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:04:19Z"
+  },
+  {
+    "timestamp": 1764450275.956931,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "177",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:04:35Z"
+  },
+  {
+    "timestamp": 1764450293.9897542,
+    "seed_id": "2001-I-3::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-3::2001_prompt06-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T21:04:53Z"
+  },
+  {
+    "timestamp": 1764450293.989943,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 4,
+      "seed_value": 113332395
+    },
+    "iso_time": "2025-11-29T21:04:53Z"
+  },
+  {
+    "timestamp": 1764450295.3222332,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 35,
+        "k": 3,
+        "c_list": [
+          -9,
+          12,
+          -3
+        ],
+        "a_list": [
+          0,
+          3,
+          12
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T21:04:55Z"
+  },
+  {
+    "timestamp": 1764450296.343151,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 165
+    },
+    "iso_time": "2025-11-29T21:04:56Z"
+  },
+  {
+    "timestamp": 1764450296.343317,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation sum_{j=1}^3 c_j * (a_j - x)^35 = 0, where n=35, k=3, c=[-9, 12, -3], and a=[0, 3, 12]. Assume n is",
+      "correct_answer": "165",
+      "seed_value": 113332395
+    },
+    "iso_time": "2025-11-29T21:04:56Z"
+  },
+  {
+    "timestamp": 1764450296.343364,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "167",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:04:56Z"
+  },
+  {
+    "timestamp": 1764450310.7147908,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "165",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:05:10Z"
+  },
+  {
+    "timestamp": 1764450328.122002,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "163",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:05:28Z"
+  },
+  {
+    "timestamp": 1764450343.3784761,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "169",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:05:43Z"
+  },
+  {
+    "timestamp": 1764450362.830406,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "165",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:06:02Z"
+  },
+  {
+    "timestamp": 1764450379.620251,
+    "seed_id": "2001-I-3::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-3::2001_prompt06-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T21:06:19Z"
+  },
+  {
+    "timestamp": 1764450379.6203039,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-3::2001_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 5,
+      "seed_value": 460954076
+    },
+    "iso_time": "2025-11-29T21:06:19Z"
+  },
+  {
+    "timestamp": 1764450380.96641,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 47,
+        "k": 3,
+        "c_list": [
+          10,
+          2,
+          -12
+        ],
+        "a_list": [
+          0,
+          12,
+          2
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T21:06:20Z"
+  },
+  {
+    "timestamp": 1764450382.072278,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 210
+    },
+    "iso_time": "2025-11-29T21:06:22Z"
+  },
+  {
+    "timestamp": 1764450382.072452,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation sum_{j=1}^3 c_j * (a_j - x)^47 = 0, where n=47, k=3, c=[10, 2, -12], and a=[0, 12, 2]. Assume n is",
+      "correct_answer": "210",
+      "seed_value": 460954076
+    },
+    "iso_time": "2025-11-29T21:06:22Z"
+  },
+  {
+    "timestamp": 1764450382.072504,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "218",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:06:22Z"
+  },
+  {
+    "timestamp": 1764450398.254685,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "210",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:06:38Z"
+  },
+  {
+    "timestamp": 1764450411.726042,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "216",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:06:51Z"
+  },
+  {
+    "timestamp": 1764450429.498677,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "210",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:07:09Z"
+  },
+  {
+    "timestamp": 1764450447.013046,
+    "seed_id": "2001-I-3::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "205",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:07:27Z"
+  },
+  {
+    "timestamp": 1764450461.964054,
+    "seed_id": "2001-I-3::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-3::2001_prompt06-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T21:07:41Z"
+  }
+]

@@ -1,0 +1,831 @@
+[
+  {
+    "timestamp": 1763925778.393963,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1993,
+      "question_preview": "What is the smallest positive integer than can be expressed as the sum of nine consecutive integers, the sum of ten cons",
+      "answer": "495",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-23T19:22:58Z"
+  },
+  {
+    "timestamp": 1763925778.394047,
+    "seed_id": "1993-6::1993",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-23T19:22:58Z"
+  },
+  {
+    "timestamp": 1763925778.394102,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "What is the smallest positive integer than can be expressed as the sum of nine consecutive integers, the sum of ten consecutive integers, and the sum of eleven consecutive integers?",
+      "answer": "495",
+      "example_id": "1993-6::1993"
+    },
+    "iso_time": "2025-11-23T19:22:58Z"
+  },
+  {
+    "timestamp": 1763925903.212245,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-6::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1099046680
+    },
+    "iso_time": "2025-11-23T19:25:03Z"
+  },
+  {
+    "timestamp": 1763925903.9636831,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "odd_lengths": "19, 11, 7",
+        "even_lengths": "14, 18, 6",
+        "odd_moduli": "17, 5, 11",
+        "even_moduli": "19, 11, 19",
+        "odd_first_residues": "0, 0, 8",
+        "even_last_residues": "16, 3, 12",
+        "odd_lengths_list": [
+          19,
+          11,
+          7
+        ],
+        "even_lengths_list": [
+          14,
+          18,
+          6
+        ],
+        "odd_moduli_list": [
+          17,
+          5,
+          11
+        ],
+        "even_moduli_list": [
+          19,
+          11,
+          19
+        ],
+        "odd_first_residues_list": [
+          0,
+          0,
+          8
+        ],
+        "even_last_residues_list": [
+          16,
+          3,
+          12
+        ]
+      }
+    },
+    "iso_time": "2025-11-23T19:25:03Z"
+  },
+  {
+    "timestamp": 1763925904.7094479,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2040885
+    },
+    "iso_time": "2025-11-23T19:25:04Z"
+  },
+  {
+    "timestamp": 1763925904.709583,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the least positive integer that can be written, for each odd length in 19, 11, 7, as a sum of that many consecutive",
+      "correct_answer": "2040885",
+      "seed_value": 1099046680
+    },
+    "iso_time": "2025-11-23T19:25:04Z"
+  },
+  {
+    "timestamp": 1763925904.7096498,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2040887",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:25:04Z"
+  },
+  {
+    "timestamp": 1763925986.327901,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2040884",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:26:26Z"
+  },
+  {
+    "timestamp": 1763926035.365783,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2040883",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:27:15Z"
+  },
+  {
+    "timestamp": 1763926058.7568462,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2040885",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:27:38Z"
+  },
+  {
+    "timestamp": 1763926134.7412648,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2040885",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:28:54Z"
+  },
+  {
+    "timestamp": 1763926205.9811819,
+    "seed_id": "1993-6::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-6::1993_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T19:30:05Z"
+  },
+  {
+    "timestamp": 1763926205.981364,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-6::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1649940798
+    },
+    "iso_time": "2025-11-23T19:30:05Z"
+  },
+  {
+    "timestamp": 1763926206.939719,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "odd_lengths": "13, 7",
+        "even_lengths": "18, 10",
+        "odd_moduli": "17, 3",
+        "even_moduli": "5, 7",
+        "odd_first_residues": "14, 0",
+        "even_last_residues": "1, 1",
+        "odd_lengths_list": [
+          13,
+          7
+        ],
+        "even_lengths_list": [
+          18,
+          10
+        ],
+        "odd_moduli_list": [
+          17,
+          3
+        ],
+        "even_moduli_list": [
+          5,
+          7
+        ],
+        "odd_first_residues_list": [
+          14,
+          0
+        ],
+        "even_last_residues_list": [
+          1,
+          1
+        ]
+      }
+    },
+    "iso_time": "2025-11-23T19:30:06Z"
+  },
+  {
+    "timestamp": 1763926207.8847911,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 94185
+    },
+    "iso_time": "2025-11-23T19:30:07Z"
+  },
+  {
+    "timestamp": 1763926207.884939,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the least positive integer that can be written, for each odd length in 13, 7, as a sum of that many consecutive int",
+      "correct_answer": "94185",
+      "seed_value": 1649940798
+    },
+    "iso_time": "2025-11-23T19:30:07Z"
+  },
+  {
+    "timestamp": 1763926207.8850079,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "94187",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:30:07Z"
+  },
+  {
+    "timestamp": 1763926239.181472,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "94185",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:30:39Z"
+  },
+  {
+    "timestamp": 1763926279.736747,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "94185",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:31:19Z"
+  },
+  {
+    "timestamp": 1763926318.07933,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "94179",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:31:58Z"
+  },
+  {
+    "timestamp": 1763926363.366845,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "94194",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:32:43Z"
+  },
+  {
+    "timestamp": 1763926398.553756,
+    "seed_id": "1993-6::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-6::1993_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T19:33:18Z"
+  },
+  {
+    "timestamp": 1763926398.553959,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-6::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 918423580
+    },
+    "iso_time": "2025-11-23T19:33:18Z"
+  },
+  {
+    "timestamp": 1763926399.34607,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "odd_lengths": "21, 19",
+        "even_lengths": "22, 18, 10",
+        "odd_moduli": "7, 3",
+        "even_moduli": "7, 3, 11",
+        "odd_first_residues": "1, 0",
+        "even_last_residues": "0, 0, 10",
+        "odd_lengths_list": [
+          21,
+          19
+        ],
+        "even_lengths_list": [
+          22,
+          18,
+          10
+        ],
+        "odd_moduli_list": [
+          7,
+          3
+        ],
+        "even_moduli_list": [
+          7,
+          3,
+          11
+        ],
+        "odd_first_residues_list": [
+          1,
+          0
+        ],
+        "even_last_residues_list": [
+          0,
+          0,
+          10
+        ]
+      }
+    },
+    "iso_time": "2025-11-23T19:33:19Z"
+  },
+  {
+    "timestamp": 1763926400.101563,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2040885
+    },
+    "iso_time": "2025-11-23T19:33:20Z"
+  },
+  {
+    "timestamp": 1763926400.101728,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the least positive integer that can be written, for each odd length in 21, 19, as a sum of that many consecutive in",
+      "correct_answer": "2040885",
+      "seed_value": 918423580
+    },
+    "iso_time": "2025-11-23T19:33:20Z"
+  },
+  {
+    "timestamp": 1763926400.1018,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2040884",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:33:20Z"
+  },
+  {
+    "timestamp": 1763926429.807601,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2040886",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:33:49Z"
+  },
+  {
+    "timestamp": 1763926454.160596,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2040885",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:34:14Z"
+  },
+  {
+    "timestamp": 1763926499.419331,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2040885",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:34:59Z"
+  },
+  {
+    "timestamp": 1763926581.645901,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2040889",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:36:21Z"
+  },
+  {
+    "timestamp": 1763926618.9202828,
+    "seed_id": "1993-6::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-6::1993_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T19:36:58Z"
+  },
+  {
+    "timestamp": 1763926618.920459,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-6::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1320143427
+    },
+    "iso_time": "2025-11-23T19:36:58Z"
+  },
+  {
+    "timestamp": 1763926619.686311,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "odd_lengths": "5, 11, 13",
+        "even_lengths": "12, 20",
+        "odd_moduli": "7, 11, 3",
+        "even_moduli": "13, 11",
+        "odd_first_residues": "4, 4, 0",
+        "even_last_residues": "12, 4",
+        "odd_lengths_list": [
+          5,
+          11,
+          13
+        ],
+        "even_lengths_list": [
+          12,
+          20
+        ],
+        "odd_moduli_list": [
+          7,
+          11,
+          3
+        ],
+        "even_moduli_list": [
+          13,
+          11
+        ],
+        "odd_first_residues_list": [
+          4,
+          4,
+          0
+        ],
+        "even_last_residues_list": [
+          12,
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-23T19:36:59Z"
+  },
+  {
+    "timestamp": 1763926620.434835,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 441870
+    },
+    "iso_time": "2025-11-23T19:37:00Z"
+  },
+  {
+    "timestamp": 1763926620.435013,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the least positive integer that can be written, for each odd length in 5, 11, 13, as a sum of that many consecutive",
+      "correct_answer": "441870",
+      "seed_value": 1320143427
+    },
+    "iso_time": "2025-11-23T19:37:00Z"
+  },
+  {
+    "timestamp": 1763926620.435078,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "441869",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:37:00Z"
+  },
+  {
+    "timestamp": 1763926655.717448,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "441870",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:37:35Z"
+  },
+  {
+    "timestamp": 1763926708.525693,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "441876",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:38:28Z"
+  },
+  {
+    "timestamp": 1763926723.609819,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "441870",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:38:43Z"
+  },
+  {
+    "timestamp": 1763926773.547681,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "441864",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:39:33Z"
+  },
+  {
+    "timestamp": 1763926792.539712,
+    "seed_id": "1993-6::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-6::1993_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T19:39:52Z"
+  },
+  {
+    "timestamp": 1763926792.539903,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-6::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 502995799
+    },
+    "iso_time": "2025-11-23T19:39:52Z"
+  },
+  {
+    "timestamp": 1763926793.3343868,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "odd_lengths": "23, 11",
+        "even_lengths": "18, 10",
+        "odd_moduli": "11, 17",
+        "even_moduli": "11, 19",
+        "odd_first_residues": "0, 8",
+        "even_last_residues": "3, 16",
+        "odd_lengths_list": [
+          23,
+          11
+        ],
+        "even_lengths_list": [
+          18,
+          10
+        ],
+        "odd_moduli_list": [
+          11,
+          17
+        ],
+        "even_moduli_list": [
+          11,
+          19
+        ],
+        "odd_first_residues_list": [
+          0,
+          8
+        ],
+        "even_last_residues_list": [
+          3,
+          16
+        ]
+      }
+    },
+    "iso_time": "2025-11-23T19:39:53Z"
+  },
+  {
+    "timestamp": 1763926794.084477,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5248485
+    },
+    "iso_time": "2025-11-23T19:39:54Z"
+  },
+  {
+    "timestamp": 1763926794.0846279,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the least positive integer that can be written, for each odd length in 23, 11, as a sum of that many consecutive in",
+      "correct_answer": "5248485",
+      "seed_value": 502995799
+    },
+    "iso_time": "2025-11-23T19:39:54Z"
+  },
+  {
+    "timestamp": 1763926794.084686,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5248478",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:39:54Z"
+  },
+  {
+    "timestamp": 1763926813.815177,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5248485",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:40:13Z"
+  },
+  {
+    "timestamp": 1763926862.697827,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5248482",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:41:02Z"
+  },
+  {
+    "timestamp": 1763926966.816902,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5248491",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T19:42:46Z"
+  },
+  {
+    "timestamp": 1763927789.778072,
+    "seed_id": "1993-6::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5248485",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T19:56:29Z"
+  },
+  {
+    "timestamp": 1763927831.147535,
+    "seed_id": "1993-6::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-6::1993_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T19:57:11Z"
+  }
+]

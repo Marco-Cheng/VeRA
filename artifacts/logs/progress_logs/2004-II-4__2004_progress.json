@@ -1,0 +1,751 @@
+[
+  {
+    "timestamp": 1765122751.9981508,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "How many positive integers less than 10,000 have at most two different digits?",
+      "answer": "927",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-07T15:52:31Z"
+  },
+  {
+    "timestamp": 1765122751.9981802,
+    "seed_id": "2004-II-4::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-07T15:52:31Z"
+  },
+  {
+    "timestamp": 1765122751.998191,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "How many positive integers less than 10,000 have at most two different digits?",
+      "answer": "927",
+      "example_id": "2004-II-4::2004"
+    },
+    "iso_time": "2025-12-07T15:52:31Z"
+  },
+  {
+    "timestamp": 1765122888.163247,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-4::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1077438275
+    },
+    "iso_time": "2025-12-07T15:54:48Z"
+  },
+  {
+    "timestamp": 1765122889.369163,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 7,
+        "max_length": 5,
+        "k_max": 3,
+        "allowed_digits_str": "{0,1,2,3,4,5,6}",
+        "required_digits_str": "{0,2}",
+        "allowed_digits_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "required_digits_list": [
+          0,
+          2
+        ]
+      }
+    },
+    "iso_time": "2025-12-07T15:54:49Z"
+  },
+  {
+    "timestamp": 1765122890.526164,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 666
+    },
+    "iso_time": "2025-12-07T15:54:50Z"
+  },
+  {
+    "timestamp": 1765122890.526322,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 7, consider positive integers less than 7^5 whose base-7 representation has no leading zeros, uses only digits f",
+      "correct_answer": "666",
+      "seed_value": 1077438275
+    },
+    "iso_time": "2025-12-07T15:54:50Z"
+  },
+  {
+    "timestamp": 1765122890.5263722,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "672",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T15:54:50Z"
+  },
+  {
+    "timestamp": 1765122924.955186,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "663",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T15:55:24Z"
+  },
+  {
+    "timestamp": 1765122976.332382,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "662",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T15:56:16Z"
+  },
+  {
+    "timestamp": 1765123016.465898,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "666",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T15:56:56Z"
+  },
+  {
+    "timestamp": 1765123080.317468,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "666",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T15:58:00Z"
+  },
+  {
+    "timestamp": 1765123171.324387,
+    "seed_id": "2004-II-4::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-4::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T15:59:31Z"
+  },
+  {
+    "timestamp": 1765123171.32453,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-4::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 572915665
+    },
+    "iso_time": "2025-12-07T15:59:31Z"
+  },
+  {
+    "timestamp": 1765123172.5828722,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 8,
+        "max_length": 6,
+        "k_max": 3,
+        "allowed_digits_str": "{0,1,4,5,6,7}",
+        "required_digits_str": "{0,4}",
+        "allowed_digits_list": [
+          0,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "required_digits_list": [
+          0,
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-12-07T15:59:32Z"
+  },
+  {
+    "timestamp": 1765123173.797426,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2009
+    },
+    "iso_time": "2025-12-07T15:59:33Z"
+  },
+  {
+    "timestamp": 1765123173.797633,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 8, consider positive integers less than 8^6 whose base-8 representation has no leading zeros, uses only digits f",
+      "correct_answer": "2009",
+      "seed_value": 572915665
+    },
+    "iso_time": "2025-12-07T15:59:33Z"
+  },
+  {
+    "timestamp": 1765123173.7976818,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2007",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T15:59:33Z"
+  },
+  {
+    "timestamp": 1765123261.101519,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2005",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:01:01Z"
+  },
+  {
+    "timestamp": 1765123412.3255522,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2010",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:03:32Z"
+  },
+  {
+    "timestamp": 1765123481.9779751,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2009",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:04:41Z"
+  },
+  {
+    "timestamp": 1765123597.016015,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2009",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:06:37Z"
+  },
+  {
+    "timestamp": 1765123701.883679,
+    "seed_id": "2004-II-4::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-4::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T16:08:21Z"
+  },
+  {
+    "timestamp": 1765123701.8838642,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-4::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 465798603
+    },
+    "iso_time": "2025-12-07T16:08:21Z"
+  },
+  {
+    "timestamp": 1765123703.257628,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 6,
+        "max_length": 6,
+        "k_max": 3,
+        "allowed_digits_str": "{0,1,3,4,5}",
+        "required_digits_str": "{0}",
+        "allowed_digits_list": [
+          0,
+          1,
+          3,
+          4,
+          5
+        ],
+        "required_digits_list": [
+          0
+        ]
+      }
+    },
+    "iso_time": "2025-12-07T16:08:23Z"
+  },
+  {
+    "timestamp": 1765123704.335426,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3156
+    },
+    "iso_time": "2025-12-07T16:08:24Z"
+  },
+  {
+    "timestamp": 1765123704.335586,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 6, consider positive integers less than 6^6 whose base-6 representation has no leading zeros, uses only digits f",
+      "correct_answer": "3156",
+      "seed_value": 465798603
+    },
+    "iso_time": "2025-12-07T16:08:24Z"
+  },
+  {
+    "timestamp": 1765123704.335639,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3156",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:08:24Z"
+  },
+  {
+    "timestamp": 1765123815.435596,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3153",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:10:15Z"
+  },
+  {
+    "timestamp": 1765123916.598515,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3163",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:11:56Z"
+  },
+  {
+    "timestamp": 1765124083.678725,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3151",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:14:43Z"
+  },
+  {
+    "timestamp": 1765124231.773788,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3156",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:17:11Z"
+  },
+  {
+    "timestamp": 1765124292.582197,
+    "seed_id": "2004-II-4::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-4::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T16:18:12Z"
+  },
+  {
+    "timestamp": 1765124292.5823722,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-4::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1884821737
+    },
+    "iso_time": "2025-12-07T16:18:12Z"
+  },
+  {
+    "timestamp": 1765124293.924809,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "max_length": 4,
+        "k_max": 3,
+        "allowed_digits_str": "{0,1,6,7,8}",
+        "required_digits_str": "{0,7}",
+        "allowed_digits_list": [
+          0,
+          1,
+          6,
+          7,
+          8
+        ],
+        "required_digits_list": [
+          0,
+          7
+        ]
+      }
+    },
+    "iso_time": "2025-12-07T16:18:13Z"
+  },
+  {
+    "timestamp": 1765124294.983443,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 95
+    },
+    "iso_time": "2025-12-07T16:18:14Z"
+  },
+  {
+    "timestamp": 1765124294.983587,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, consider positive integers less than 10^4 whose base-10 representation has no leading zeros, uses only digit",
+      "correct_answer": "95",
+      "seed_value": 1884821737
+    },
+    "iso_time": "2025-12-07T16:18:14Z"
+  },
+  {
+    "timestamp": 1765124294.983638,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "95",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:18:14Z"
+  },
+  {
+    "timestamp": 1765124341.015137,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "95",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:19:01Z"
+  },
+  {
+    "timestamp": 1765124465.021641,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "87",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:21:05Z"
+  },
+  {
+    "timestamp": 1765124566.503463,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "103",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:22:46Z"
+  },
+  {
+    "timestamp": 1765124657.9444978,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "102",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:24:17Z"
+  },
+  {
+    "timestamp": 1765124844.021328,
+    "seed_id": "2004-II-4::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-4::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T16:27:24Z"
+  },
+  {
+    "timestamp": 1765124844.021481,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-4::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 918062914
+    },
+    "iso_time": "2025-12-07T16:27:24Z"
+  },
+  {
+    "timestamp": 1765124845.151413,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 7,
+        "max_length": 5,
+        "k_max": 2,
+        "allowed_digits_str": "{0,1,2,4,5,6}",
+        "required_digits_str": "{0}",
+        "allowed_digits_list": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "required_digits_list": [
+          0
+        ]
+      }
+    },
+    "iso_time": "2025-12-07T16:27:25Z"
+  },
+  {
+    "timestamp": 1765124846.4027781,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 130
+    },
+    "iso_time": "2025-12-07T16:27:26Z"
+  },
+  {
+    "timestamp": 1765124846.402965,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 7, consider positive integers less than 7^5 whose base-7 representation has no leading zeros, uses only digits f",
+      "correct_answer": "130",
+      "seed_value": 918062914
+    },
+    "iso_time": "2025-12-07T16:27:26Z"
+  },
+  {
+    "timestamp": 1765124846.403014,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "130",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:27:26Z"
+  },
+  {
+    "timestamp": 1765124890.879943,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "130",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:28:10Z"
+  },
+  {
+    "timestamp": 1765124942.27379,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "125",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:29:02Z"
+  },
+  {
+    "timestamp": 1765124974.270942,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "137",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:29:34Z"
+  },
+  {
+    "timestamp": 1765125064.353826,
+    "seed_id": "2004-II-4::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "132",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:31:04Z"
+  },
+  {
+    "timestamp": 1765125125.8785532,
+    "seed_id": "2004-II-4::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-4::2004_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T16:32:05Z"
+  }
+]

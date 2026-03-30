@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764250660.4911182,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1998,
+      "question_preview": "An $m\\times n\\times p$ rectangular box has half the volume of an $(m + 2)\\times(n + 2)\\times(p + 2)$ rectangular box, wh",
+      "answer": "130",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-27T13:37:40Z"
+  },
+  {
+    "timestamp": 1764250660.491202,
+    "seed_id": "1998-14::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-27T13:37:40Z"
+  },
+  {
+    "timestamp": 1764250660.491256,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "An $m\\times n\\times p$ rectangular box has half the volume of an $(m + 2)\\times(n + 2)\\times(p + 2)$ rectangular box, where $m, n,$ and $p$ are integers, and $m\\le n\\le p.$ What is the largest possible value of $p$ ?",
+      "answer": "130",
+      "example_id": "1998-14::1998"
+    },
+    "iso_time": "2025-11-27T13:37:40Z"
+  },
+  {
+    "timestamp": 1764250808.863899,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-14::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1118564640
+    },
+    "iso_time": "2025-11-27T13:40:08Z"
+  },
+  {
+    "timestamp": 1764250810.2263622,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "offset": 4,
+        "dimension": 4,
+        "coprime_count": 2
+      }
+    },
+    "iso_time": "2025-11-27T13:40:10Z"
+  },
+  {
+    "timestamp": 1764250811.461596,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2185956
+    },
+    "iso_time": "2025-11-27T13:40:11Z"
+  },
+  {
+    "timestamp": 1764250811.461764,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 4-dimensional rectangular box with strictly increasing positive integer side lengths x_1 < x_2 < ... < x_4. I",
+      "correct_answer": "2185956",
+      "seed_value": 1118564640
+    },
+    "iso_time": "2025-11-27T13:40:11Z"
+  },
+  {
+    "timestamp": 1764250811.4618099,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2185956",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T13:40:11Z"
+  },
+  {
+    "timestamp": 1764250923.4303958,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2185959",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T13:42:03Z"
+  },
+  {
+    "timestamp": 1764251010.9981408,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2185948",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T13:43:30Z"
+  },
+  {
+    "timestamp": 1764251126.7418509,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2185956",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T13:45:26Z"
+  },
+  {
+    "timestamp": 1764251518.675026,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2185962",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T13:51:58Z"
+  },
+  {
+    "timestamp": 1764251627.45579,
+    "seed_id": "1998-14::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-14::1998_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T13:53:47Z"
+  },
+  {
+    "timestamp": 1764251627.455986,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-14::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 912581089
+    },
+    "iso_time": "2025-11-27T13:53:47Z"
+  },
+  {
+    "timestamp": 1764251628.8356538,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "offset": 4,
+        "dimension": 4,
+        "coprime_count": 2
+      }
+    },
+    "iso_time": "2025-11-27T13:53:48Z"
+  },
+  {
+    "timestamp": 1764251629.992967,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2185956
+    },
+    "iso_time": "2025-11-27T13:53:49Z"
+  },
+  {
+    "timestamp": 1764251629.993122,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 4-dimensional rectangular box with strictly increasing positive integer side lengths x_1 < x_2 < ... < x_4. I",
+      "correct_answer": "2185956",
+      "seed_value": 912581089
+    },
+    "iso_time": "2025-11-27T13:53:49Z"
+  },
+  {
+    "timestamp": 1764251629.993164,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2185947",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T13:53:49Z"
+  },
+  {
+    "timestamp": 1764251724.199266,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2185959",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T13:55:24Z"
+  },
+  {
+    "timestamp": 1764251808.866622,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2185963",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T13:56:48Z"
+  },
+  {
+    "timestamp": 1764252196.745762,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2185956",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T14:03:16Z"
+  },
+  {
+    "timestamp": 1764252326.63436,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2185956",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T14:05:26Z"
+  },
+  {
+    "timestamp": 1764252430.277953,
+    "seed_id": "1998-14::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-14::1998_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T14:07:10Z"
+  },
+  {
+    "timestamp": 1764252430.278163,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-14::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1400523133
+    },
+    "iso_time": "2025-11-27T14:07:10Z"
+  },
+  {
+    "timestamp": 1764252431.5527601,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "offset": 2,
+        "dimension": 4,
+        "coprime_count": 2
+      }
+    },
+    "iso_time": "2025-11-27T14:07:11Z"
+  },
+  {
+    "timestamp": 1764252432.6350908,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17290
+    },
+    "iso_time": "2025-11-27T14:07:12Z"
+  },
+  {
+    "timestamp": 1764252432.635239,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 4-dimensional rectangular box with strictly increasing positive integer side lengths x_1 < x_2 < ... < x_4. I",
+      "correct_answer": "17290",
+      "seed_value": 1400523133
+    },
+    "iso_time": "2025-11-27T14:07:12Z"
+  },
+  {
+    "timestamp": 1764252432.635278,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "17290",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T14:07:12Z"
+  },
+  {
+    "timestamp": 1764252533.694431,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17292",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T14:08:53Z"
+  },
+  {
+    "timestamp": 1764252807.7245922,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "17290",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T14:13:27Z"
+  },
+  {
+    "timestamp": 1764253274.2456,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "17288",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T14:21:14Z"
+  },
+  {
+    "timestamp": 1764253311.875356,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17294",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T14:21:51Z"
+  },
+  {
+    "timestamp": 1764253764.868049,
+    "seed_id": "1998-14::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-14::1998_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T14:29:24Z"
+  },
+  {
+    "timestamp": 1764253764.8682508,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-14::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2092476858
+    },
+    "iso_time": "2025-11-27T14:29:24Z"
+  },
+  {
+    "timestamp": 1764253766.29168,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "offset": 4,
+        "dimension": 4,
+        "coprime_count": 2
+      }
+    },
+    "iso_time": "2025-11-27T14:29:26Z"
+  },
+  {
+    "timestamp": 1764253767.550677,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2185956
+    },
+    "iso_time": "2025-11-27T14:29:27Z"
+  },
+  {
+    "timestamp": 1764253767.550862,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 4-dimensional rectangular box with strictly increasing positive integer side lengths x_1 < x_2 < ... < x_4. I",
+      "correct_answer": "2185956",
+      "seed_value": 2092476858
+    },
+    "iso_time": "2025-11-27T14:29:27Z"
+  },
+  {
+    "timestamp": 1764253767.550914,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2185956",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T14:29:27Z"
+  },
+  {
+    "timestamp": 1764254288.731005,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2185956",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T14:38:08Z"
+  },
+  {
+    "timestamp": 1764254368.787086,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2185962",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T14:39:28Z"
+  },
+  {
+    "timestamp": 1764254467.835118,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2185950",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T14:41:07Z"
+  },
+  {
+    "timestamp": 1764254743.906003,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2185965",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T14:45:43Z"
+  },
+  {
+    "timestamp": 1764254820.387728,
+    "seed_id": "1998-14::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-14::1998_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-27T14:47:00Z"
+  },
+  {
+    "timestamp": 1764254820.387896,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-14::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 702153358
+    },
+    "iso_time": "2025-11-27T14:47:00Z"
+  },
+  {
+    "timestamp": 1764254821.739363,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "offset": 4,
+        "dimension": 4,
+        "coprime_count": 2
+      }
+    },
+    "iso_time": "2025-11-27T14:47:01Z"
+  },
+  {
+    "timestamp": 1764254822.9014752,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2185956
+    },
+    "iso_time": "2025-11-27T14:47:02Z"
+  },
+  {
+    "timestamp": 1764254822.9016461,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 4-dimensional rectangular box with strictly increasing positive integer side lengths x_1 < x_2 < ... < x_4. I",
+      "correct_answer": "2185956",
+      "seed_value": 702153358
+    },
+    "iso_time": "2025-11-27T14:47:02Z"
+  },
+  {
+    "timestamp": 1764254822.9016929,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2185954",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T14:47:02Z"
+  },
+  {
+    "timestamp": 1764254922.241289,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2185956",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T14:48:42Z"
+  },
+  {
+    "timestamp": 1764255017.9766579,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2185953",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T14:50:17Z"
+  },
+  {
+    "timestamp": 1764255115.753364,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2185956",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T14:51:55Z"
+  },
+  {
+    "timestamp": 1764255407.4499462,
+    "seed_id": "1998-14::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2185951",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T14:56:47Z"
+  },
+  {
+    "timestamp": 1764255478.964581,
+    "seed_id": "1998-14::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-14::1998_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T14:57:58Z"
+  }
+]

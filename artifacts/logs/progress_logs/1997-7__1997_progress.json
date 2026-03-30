@@ -1,0 +1,709 @@
+[
+  {
+    "timestamp": 1764222305.886333,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1997,
+      "question_preview": "A car travels due east at $\\frac 23$ miles per minute on a long, straight road. At the same time, a circular storm, whos",
+      "answer": "198",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-27T05:45:05Z"
+  },
+  {
+    "timestamp": 1764222305.886397,
+    "seed_id": "1997-7::1997",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-27T05:45:05Z"
+  },
+  {
+    "timestamp": 1764222305.886427,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A car travels due east at $\\frac 23$ miles per minute on a long, straight road. At the same time, a circular storm, whose radius is $51$ miles, moves southeast at $\\frac 12\\sqrt{2}$ miles per minute. At time $t=0$ , the center of the storm is $110$ miles due north of the car. At time $t=t_1$ minutes, the car enters the storm circle, and at time $t=t_2$ minutes, the car leaves the storm circle. Find $\\frac 12(t_1+t_2)$ .",
+      "answer": "198",
+      "example_id": "1997-7::1997"
+    },
+    "iso_time": "2025-11-27T05:45:05Z"
+  },
+  {
+    "timestamp": 1764222395.7674859,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-7::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 104140797
+    },
+    "iso_time": "2025-11-27T05:46:35Z"
+  },
+  {
+    "timestamp": 1764222396.602988,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "car_vx": 4.0,
+        "car_vy": -3.0,
+        "storm_x0": 343.634764,
+        "storm_y0": -826.047855,
+        "storm_vx": 1.0,
+        "storm_vy": -1.0,
+        "radius0": 67,
+        "growth_rate": 2
+      }
+    },
+    "iso_time": "2025-11-27T05:46:36Z"
+  },
+  {
+    "timestamp": 1764222397.3630831,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 313.00000022222224
+    },
+    "iso_time": "2025-11-27T05:46:37Z"
+  },
+  {
+    "timestamp": 1764222397.363254,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a plane, a car starts at the origin and moves with constant velocity vector (4.0, -3.0) miles per minute. A circular ",
+      "correct_answer": "313.000000222",
+      "seed_value": 104140797
+    },
+    "iso_time": "2025-11-27T05:46:37Z"
+  },
+  {
+    "timestamp": 1764222397.363292,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "307.520326",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:46:37Z"
+  },
+  {
+    "timestamp": 1764222422.77382,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "340.548209",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:47:02Z"
+  },
+  {
+    "timestamp": 1764222440.654146,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "313.000000222",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T05:47:20Z"
+  },
+  {
+    "timestamp": 1764222465.4353228,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "328.355700",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:47:45Z"
+  },
+  {
+    "timestamp": 1764222504.34828,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "313.000000222",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T05:48:24Z"
+  },
+  {
+    "timestamp": 1764222533.3269892,
+    "seed_id": "1997-7::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-7::1997_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T05:48:53Z"
+  },
+  {
+    "timestamp": 1764222533.3271942,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-7::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1954242166
+    },
+    "iso_time": "2025-11-27T05:48:53Z"
+  },
+  {
+    "timestamp": 1764222534.0944371,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "car_vx": 2.0,
+        "car_vy": -2.0,
+        "storm_x0": 711.239058,
+        "storm_y0": -620.521884,
+        "storm_vx": -2.0,
+        "storm_vy": 0.0,
+        "radius0": 113,
+        "growth_rate": 1
+      }
+    },
+    "iso_time": "2025-11-27T05:48:54Z"
+  },
+  {
+    "timestamp": 1764222534.840541,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 221.0
+    },
+    "iso_time": "2025-11-27T05:48:54Z"
+  },
+  {
+    "timestamp": 1764222534.840717,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a plane, a car starts at the origin and moves with constant velocity vector (2.0, -2.0) miles per minute. A circular ",
+      "correct_answer": "221",
+      "seed_value": 1954242166
+    },
+    "iso_time": "2025-11-27T05:48:54Z"
+  },
+  {
+    "timestamp": 1764222534.840769,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "214",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:48:54Z"
+  },
+  {
+    "timestamp": 1764222557.577916,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "221",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T05:49:17Z"
+  },
+  {
+    "timestamp": 1764222572.641227,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "221",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T05:49:32Z"
+  },
+  {
+    "timestamp": 1764222596.5557451,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "215",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:49:56Z"
+  },
+  {
+    "timestamp": 1764222618.2225761,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "228",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:50:18Z"
+  },
+  {
+    "timestamp": 1764222634.195404,
+    "seed_id": "1997-7::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-7::1997_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T05:50:34Z"
+  },
+  {
+    "timestamp": 1764222634.1956108,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-7::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1351606332
+    },
+    "iso_time": "2025-11-27T05:50:34Z"
+  },
+  {
+    "timestamp": 1764222635.012566,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "car_vx": 1.0,
+        "car_vy": -3.5,
+        "storm_x0": -414.005424,
+        "storm_y0": -791.751356,
+        "storm_vx": 0.0,
+        "storm_vy": 0.5,
+        "radius0": 101,
+        "growth_rate": 3
+      }
+    },
+    "iso_time": "2025-11-27T05:50:35Z"
+  },
+  {
+    "timestamp": 1764222635.747443,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 382.0
+    },
+    "iso_time": "2025-11-27T05:50:35Z"
+  },
+  {
+    "timestamp": 1764222635.747634,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a plane, a car starts at the origin and moves with constant velocity vector (1.0, -3.5) miles per minute. A circular ",
+      "correct_answer": "382",
+      "seed_value": 1351606332
+    },
+    "iso_time": "2025-11-27T05:50:35Z"
+  },
+  {
+    "timestamp": 1764222635.7476869,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "382",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T05:50:35Z"
+  },
+  {
+    "timestamp": 1764222649.12664,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "379",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:50:49Z"
+  },
+  {
+    "timestamp": 1764222677.689037,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "387",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:51:17Z"
+  },
+  {
+    "timestamp": 1764222708.440008,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "384",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:51:48Z"
+  },
+  {
+    "timestamp": 1764222728.73874,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "382",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T05:52:08Z"
+  },
+  {
+    "timestamp": 1764222782.2641711,
+    "seed_id": "1997-7::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-7::1997_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T05:53:02Z"
+  },
+  {
+    "timestamp": 1764222782.264382,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-7::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1310995736
+    },
+    "iso_time": "2025-11-27T05:53:02Z"
+  },
+  {
+    "timestamp": 1764222783.060051,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "car_vx": -0.5,
+        "car_vy": 2.5,
+        "storm_x0": 18.977746,
+        "storm_y0": 295.659249,
+        "storm_vx": 0.5,
+        "storm_vy": -0.5,
+        "radius0": 32,
+        "growth_rate": 1
+      }
+    },
+    "iso_time": "2025-11-27T05:53:03Z"
+  },
+  {
+    "timestamp": 1764222783.808019,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 100.00000011111109
+    },
+    "iso_time": "2025-11-27T05:53:03Z"
+  },
+  {
+    "timestamp": 1764222783.808176,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a plane, a car starts at the origin and moves with constant velocity vector (-0.5, 2.5) miles per minute. A circular ",
+      "correct_answer": "100.000000111",
+      "seed_value": 1310995736
+    },
+    "iso_time": "2025-11-27T05:53:03Z"
+  },
+  {
+    "timestamp": 1764222783.808213,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "94.763400",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:53:03Z"
+  },
+  {
+    "timestamp": 1764222807.591976,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "107.892298",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:53:27Z"
+  },
+  {
+    "timestamp": 1764222841.1386082,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "100.000000111",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T05:54:01Z"
+  },
+  {
+    "timestamp": 1764222864.895971,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "100.000000111",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T05:54:24Z"
+  },
+  {
+    "timestamp": 1764222883.735907,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "95.528816",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:54:43Z"
+  },
+  {
+    "timestamp": 1764222905.543206,
+    "seed_id": "1997-7::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-7::1997_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-27T05:55:05Z"
+  },
+  {
+    "timestamp": 1764222905.54337,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-7::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1085270897
+    },
+    "iso_time": "2025-11-27T05:55:05Z"
+  },
+  {
+    "timestamp": 1764222906.332063,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "car_vx": -4.0,
+        "car_vy": -1.5,
+        "storm_x0": -284.216434,
+        "storm_y0": -58.189044,
+        "storm_vx": -2.0,
+        "storm_vy": 1.5,
+        "radius0": 181,
+        "growth_rate": 1
+      }
+    },
+    "iso_time": "2025-11-27T05:55:06Z"
+  },
+  {
+    "timestamp": 1764222907.0740428,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 77.0
+    },
+    "iso_time": "2025-11-27T05:55:07Z"
+  },
+  {
+    "timestamp": 1764222907.0742168,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a plane, a car starts at the origin and moves with constant velocity vector (-4.0, -1.5) miles per minute. A circular",
+      "correct_answer": "77",
+      "seed_value": 1085270897
+    },
+    "iso_time": "2025-11-27T05:55:07Z"
+  },
+  {
+    "timestamp": 1764222907.07426,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "77",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T05:55:07Z"
+  },
+  {
+    "timestamp": 1764222920.974498,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "77",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T05:55:20Z"
+  },
+  {
+    "timestamp": 1764222956.357887,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "79",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:55:56Z"
+  },
+  {
+    "timestamp": 1764223024.639632,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "76",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:57:04Z"
+  },
+  {
+    "timestamp": 1764223050.4486752,
+    "seed_id": "1997-7::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "78",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T05:57:30Z"
+  },
+  {
+    "timestamp": 1764223125.30461,
+    "seed_id": "1997-7::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-7::1997_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T05:58:45Z"
+  }
+]

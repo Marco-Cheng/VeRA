@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764822874.2205682,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "Triangle $ABC$ is a right triangle with $AC = 7,$ $BC = 24,$ and right angle at $C.$ Point $M$ is the midpoint of $AB,$ ",
+      "answer": "578",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-04T04:34:34Z"
+  },
+  {
+    "timestamp": 1764822874.22064,
+    "seed_id": "2003-II-11::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-04T04:34:34Z"
+  },
+  {
+    "timestamp": 1764822874.22068,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Triangle $ABC$ is a right triangle with $AC = 7,$ $BC = 24,$ and right angle at $C.$ Point $M$ is the midpoint of $AB,$ and $D$ is on the same side of line $AB$ as $C$ so that $AD = BD = 15.$ Given that the area of triangle $CDM$ may be expressed as $\\frac {m\\sqrt {n}}{p},$ where $m,$ $n,$ and $p$ are positive integers, $m$ and $p$ are relatively prime, and $n$ is not divisible by the square of any prime, find $m + n + p.$",
+      "answer": "578",
+      "example_id": "2003-II-11::2003"
+    },
+    "iso_time": "2025-12-04T04:34:34Z"
+  },
+  {
+    "timestamp": 1764822956.3287911,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-11::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1399687778
+    },
+    "iso_time": "2025-12-04T04:35:56Z"
+  },
+  {
+    "timestamp": 1764822957.714533,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ac": 17,
+        "bc": 18,
+        "ab": 25,
+        "r": 14
+      }
+    },
+    "iso_time": "2025-12-04T04:35:57Z"
+  },
+  {
+    "timestamp": 1764822958.9492102,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 206
+    },
+    "iso_time": "2025-12-04T04:35:58Z"
+  },
+  {
+    "timestamp": 1764822958.949394,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the side lengths are AC = 17, BC = 18, and AB = 25. Let M be the midpoint of AB. On the same side of li",
+      "correct_answer": "206",
+      "seed_value": 1399687778
+    },
+    "iso_time": "2025-12-04T04:35:58Z"
+  },
+  {
+    "timestamp": 1764822958.949472,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "210",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:35:58Z"
+  },
+  {
+    "timestamp": 1764822973.6100428,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "207",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:36:13Z"
+  },
+  {
+    "timestamp": 1764822990.2716422,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "206",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:36:30Z"
+  },
+  {
+    "timestamp": 1764823000.615807,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "206",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:36:40Z"
+  },
+  {
+    "timestamp": 1764823044.6460779,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "208",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:37:24Z"
+  },
+  {
+    "timestamp": 1764823060.846271,
+    "seed_id": "2003-II-11::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-11::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T04:37:40Z"
+  },
+  {
+    "timestamp": 1764823060.846348,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-11::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1501952907
+    },
+    "iso_time": "2025-12-04T04:37:40Z"
+  },
+  {
+    "timestamp": 1764823062.060392,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ac": 14,
+        "bc": 12,
+        "ab": 20,
+        "r": 31
+      }
+    },
+    "iso_time": "2025-12-04T04:37:42Z"
+  },
+  {
+    "timestamp": 1764823063.240569,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 894
+    },
+    "iso_time": "2025-12-04T04:37:43Z"
+  },
+  {
+    "timestamp": 1764823063.24075,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the side lengths are AC = 14, BC = 12, and AB = 20. Let M be the midpoint of AB. On the same side of li",
+      "correct_answer": "894",
+      "seed_value": 1501952907
+    },
+    "iso_time": "2025-12-04T04:37:43Z"
+  },
+  {
+    "timestamp": 1764823063.24082,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "894",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:37:43Z"
+  },
+  {
+    "timestamp": 1764823104.377789,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "894",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:38:24Z"
+  },
+  {
+    "timestamp": 1764823124.3131242,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "891",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:38:44Z"
+  },
+  {
+    "timestamp": 1764823143.460348,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "889",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:39:03Z"
+  },
+  {
+    "timestamp": 1764823157.489332,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "893",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:39:17Z"
+  },
+  {
+    "timestamp": 1764823178.074105,
+    "seed_id": "2003-II-11::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-11::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T04:39:38Z"
+  },
+  {
+    "timestamp": 1764823178.074212,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-11::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 918601167
+    },
+    "iso_time": "2025-12-04T04:39:38Z"
+  },
+  {
+    "timestamp": 1764823179.356562,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ac": 41,
+        "bc": 55,
+        "ab": 81,
+        "r": 89
+      }
+    },
+    "iso_time": "2025-12-04T04:39:39Z"
+  },
+  {
+    "timestamp": 1764823180.4039419,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 25206
+    },
+    "iso_time": "2025-12-04T04:39:40Z"
+  },
+  {
+    "timestamp": 1764823180.404095,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the side lengths are AC = 41, BC = 55, and AB = 81. Let M be the midpoint of AB. On the same side of li",
+      "correct_answer": "25206",
+      "seed_value": 918601167
+    },
+    "iso_time": "2025-12-04T04:39:40Z"
+  },
+  {
+    "timestamp": 1764823180.404159,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "25206",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:39:40Z"
+  },
+  {
+    "timestamp": 1764823197.409037,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "25215",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:39:57Z"
+  },
+  {
+    "timestamp": 1764823216.749278,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "25214",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:40:16Z"
+  },
+  {
+    "timestamp": 1764823245.145008,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "25206",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:40:45Z"
+  },
+  {
+    "timestamp": 1764823287.747045,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "25205",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:41:27Z"
+  },
+  {
+    "timestamp": 1764823339.8663418,
+    "seed_id": "2003-II-11::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-11::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T04:42:19Z"
+  },
+  {
+    "timestamp": 1764823339.8664792,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-11::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 644964529
+    },
+    "iso_time": "2025-12-04T04:42:19Z"
+  },
+  {
+    "timestamp": 1764823341.2040288,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ac": 56,
+        "bc": 28,
+        "ab": 72,
+        "r": 86
+      }
+    },
+    "iso_time": "2025-12-04T04:42:21Z"
+  },
+  {
+    "timestamp": 1764823342.395145,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 309
+    },
+    "iso_time": "2025-12-04T04:42:22Z"
+  },
+  {
+    "timestamp": 1764823342.395322,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the side lengths are AC = 56, BC = 28, and AB = 72. Let M be the midpoint of AB. On the same side of li",
+      "correct_answer": "309",
+      "seed_value": 644964529
+    },
+    "iso_time": "2025-12-04T04:42:22Z"
+  },
+  {
+    "timestamp": 1764823342.39539,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:42:22Z"
+  },
+  {
+    "timestamp": 1764823355.021282,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "314",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:42:35Z"
+  },
+  {
+    "timestamp": 1764823372.634455,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "315",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:42:52Z"
+  },
+  {
+    "timestamp": 1764823385.421549,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:43:05Z"
+  },
+  {
+    "timestamp": 1764823417.590639,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "303",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:43:37Z"
+  },
+  {
+    "timestamp": 1764823468.279371,
+    "seed_id": "2003-II-11::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-11::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T04:44:28Z"
+  },
+  {
+    "timestamp": 1764823468.279547,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-11::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1109877536
+    },
+    "iso_time": "2025-12-04T04:44:28Z"
+  },
+  {
+    "timestamp": 1764823469.6125388,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ac": 25,
+        "bc": 64,
+        "ab": 72,
+        "r": 55
+      }
+    },
+    "iso_time": "2025-12-04T04:44:29Z"
+  },
+  {
+    "timestamp": 1764823470.770824,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2982
+    },
+    "iso_time": "2025-12-04T04:44:30Z"
+  },
+  {
+    "timestamp": 1764823470.770983,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the side lengths are AC = 25, BC = 64, and AB = 72. Let M be the midpoint of AB. On the same side of li",
+      "correct_answer": "2982",
+      "seed_value": 1109877536
+    },
+    "iso_time": "2025-12-04T04:44:30Z"
+  },
+  {
+    "timestamp": 1764823470.771042,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2974",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:44:30Z"
+  },
+  {
+    "timestamp": 1764823491.226455,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2973",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:44:51Z"
+  },
+  {
+    "timestamp": 1764823514.356064,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2980",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:45:14Z"
+  },
+  {
+    "timestamp": 1764823539.9589179,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2982",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:45:39Z"
+  },
+  {
+    "timestamp": 1764823554.1334121,
+    "seed_id": "2003-II-11::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2982",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:45:54Z"
+  },
+  {
+    "timestamp": 1764823605.2334101,
+    "seed_id": "2003-II-11::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-11::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T04:46:45Z"
+  }
+]

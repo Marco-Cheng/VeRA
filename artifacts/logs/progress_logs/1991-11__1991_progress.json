@@ -1,0 +1,758 @@
+[
+  {
+    "timestamp": 1763345580.270388,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1991,
+      "question_preview": "Twelve congruent disks are placed on a circle $C^{}_{}$ of radius 1 in such a way that the twelve disks cover $C^{}_{}$ ",
+      "answer": "135",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-17T02:13:00Z"
+  },
+  {
+    "timestamp": 1763345580.270443,
+    "seed_id": "1991-11::1991",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-17T02:13:00Z"
+  },
+  {
+    "timestamp": 1763345580.270468,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Twelve congruent disks are placed on a circle $C^{}_{}$ of radius 1 in such a way that the twelve disks cover $C^{}_{}$ , no two of the disks overlap, and so that each of the twelve disks is tangent to its two neighbors. The resulting arrangement of disks is shown in the figure below.  The sum of the areas of the twelve disks can be written in the form $\\pi(a-b\\sqrt{c})$ , where $a,b,c^{}_{}$ are positive integers and $c^{}_{}$ is not divisible by the square of any prime. Find $a+b+c^{}_{}$ . [asy] unitsize(100); draw(Circle((0,0),1)); dot((0,0)); draw((0,0)--(1,0)); label(\"$1$\", (0.5,0), S);  for (int i=0; i<12; ++i) { dot((cos(i*pi/6), sin(i*pi/6))); }  for (int a=1; a<24; a+=2) { dot(((1/cos(pi/12))*cos(a*pi/12), (1/cos(pi/12))*sin(a*pi/12))); draw(((1/cos(pi/12))*cos(a*pi/12), (1/cos(pi/12))*sin(a*pi/12))--((1/cos(pi/12))*cos((a+2)*pi/12), (1/cos(pi/12))*sin((a+2)*pi/12))); draw(Circle(((1/cos(pi/12))*cos(a*pi/12), (1/cos(pi/12))*sin(a*pi/12)), tan(pi/12))); } [/asy]",
+      "answer": "135",
+      "example_id": "1991-11::1991"
+    },
+    "iso_time": "2025-11-17T02:13:00Z"
+  },
+  {
+    "timestamp": 1763345778.049872,
+    "seed_id": "1991-11::1991",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 22 column 127 (char 5582)",
+    "payload": {},
+    "iso_time": "2025-11-17T02:16:18Z"
+  },
+  {
+    "timestamp": 1763345778.050071,
+    "seed_id": "1991-11::1991",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-17T02:16:18Z"
+  },
+  {
+    "timestamp": 1763345778.050169,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 22 column 127 (char 5582)",
+      "question": "Twelve congruent disks are placed on a circle $C^{}_{}$ of radius 1 in such a way that the twelve disks cover $C^{}_{}$ , no two of the disks overlap, and so that each of the twelve disks is tangent to its two neighbors. The resulting arrangement of disks is shown in the figure below.  The sum of the areas of the twelve disks can be written in the form $\\pi(a-b\\sqrt{c})$ , where $a,b,c^{}_{}$ are positive integers and $c^{}_{}$ is not divisible by the square of any prime. Find $a+b+c^{}_{}$ . [asy] unitsize(100); draw(Circle((0,0),1)); dot((0,0)); draw((0,0)--(1,0)); label(\"$1$\", (0.5,0), S);  for (int i=0; i<12; ++i) { dot((cos(i*pi/6), sin(i*pi/6))); }  for (int a=1; a<24; a+=2) { dot(((1/cos(pi/12))*cos(a*pi/12), (1/cos(pi/12))*sin(a*pi/12))); draw(((1/cos(pi/12))*cos(a*pi/12), (1/cos(pi/12))*sin(a*pi/12))--((1/cos(pi/12))*cos((a+2)*pi/12), (1/cos(pi/12))*sin((a+2)*pi/12))); draw(Circle(((1/cos(pi/12))*cos(a*pi/12), (1/cos(pi/12))*sin(a*pi/12)), tan(pi/12))); } [/asy]",
+      "answer": "135",
+      "example_id": "1991-11::1991"
+    },
+    "iso_time": "2025-11-17T02:16:18Z"
+  },
+  {
+    "timestamp": 1763345999.116708,
+    "seed_id": "1991-11::1991",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 18 column 1247 (char 4062)",
+    "payload": {},
+    "iso_time": "2025-11-17T02:19:59Z"
+  },
+  {
+    "timestamp": 1763345999.116878,
+    "seed_id": "1991-11::1991",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-17T02:19:59Z"
+  },
+  {
+    "timestamp": 1763345999.116937,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 18 column 1247 (char 4062)",
+      "question": "Twelve congruent disks are placed on a circle $C^{}_{}$ of radius 1 in such a way that the twelve disks cover $C^{}_{}$ , no two of the disks overlap, and so that each of the twelve disks is tangent to its two neighbors. The resulting arrangement of disks is shown in the figure below.  The sum of the areas of the twelve disks can be written in the form $\\pi(a-b\\sqrt{c})$ , where $a,b,c^{}_{}$ are positive integers and $c^{}_{}$ is not divisible by the square of any prime. Find $a+b+c^{}_{}$ . [asy] unitsize(100); draw(Circle((0,0),1)); dot((0,0)); draw((0,0)--(1,0)); label(\"$1$\", (0.5,0), S);  for (int i=0; i<12; ++i) { dot((cos(i*pi/6), sin(i*pi/6))); }  for (int a=1; a<24; a+=2) { dot(((1/cos(pi/12))*cos(a*pi/12), (1/cos(pi/12))*sin(a*pi/12))); draw(((1/cos(pi/12))*cos(a*pi/12), (1/cos(pi/12))*sin(a*pi/12))--((1/cos(pi/12))*cos((a+2)*pi/12), (1/cos(pi/12))*sin((a+2)*pi/12))); draw(Circle(((1/cos(pi/12))*cos(a*pi/12), (1/cos(pi/12))*sin(a*pi/12)), tan(pi/12))); } [/asy]",
+      "answer": "135",
+      "example_id": "1991-11::1991"
+    },
+    "iso_time": "2025-11-17T02:19:59Z"
+  },
+  {
+    "timestamp": 1763346165.825249,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1991-11::1991_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1864585183
+    },
+    "iso_time": "2025-11-17T02:22:45Z"
+  },
+  {
+    "timestamp": 1763346166.583562,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "R0": 3,
+        "n1": 4,
+        "n2": 6,
+        "n1_plus_n2": 10,
+        "answer": 1748
+      }
+    },
+    "iso_time": "2025-11-17T02:22:46Z"
+  },
+  {
+    "timestamp": 1763346167.328969,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1748
+    },
+    "iso_time": "2025-11-17T02:22:47Z"
+  },
+  {
+    "timestamp": 1763346167.32912,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $C_0$ be a circle of radius $R_0 = 3$. A ring of $4$ congruent disks is placed around $C_0$ such that each disk is t",
+      "correct_answer": "1748",
+      "seed_value": 1864585183
+    },
+    "iso_time": "2025-11-17T02:22:47Z"
+  },
+  {
+    "timestamp": 1763346167.3291671,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1756",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T02:22:47Z"
+  },
+  {
+    "timestamp": 1763346367.210741,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1743",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T02:26:07Z"
+  },
+  {
+    "timestamp": 1763346545.936131,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1748",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T02:29:05Z"
+  },
+  {
+    "timestamp": 1763346634.925111,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1748",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T02:30:34Z"
+  },
+  {
+    "timestamp": 1763346742.270161,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1757",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T02:32:22Z"
+  },
+  {
+    "timestamp": 1763346874.385519,
+    "seed_id": "1991-11::1991",
+    "stage": "variant_success",
+    "message": "Accepted variant 1991-11::1991_prompt03-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T02:34:34Z"
+  },
+  {
+    "timestamp": 1763346874.385749,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1991-11::1991_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 709766183
+    },
+    "iso_time": "2025-11-17T02:34:34Z"
+  },
+  {
+    "timestamp": 1763346875.453845,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "R0": 3,
+        "n1": 6,
+        "n2": 4,
+        "n1_plus_n2": 10,
+        "answer": 1676
+      }
+    },
+    "iso_time": "2025-11-17T02:34:35Z"
+  },
+  {
+    "timestamp": 1763346876.189685,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1676
+    },
+    "iso_time": "2025-11-17T02:34:36Z"
+  },
+  {
+    "timestamp": 1763346876.1898282,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $C_0$ be a circle of radius $R_0 = 3$. A ring of $6$ congruent disks is placed around $C_0$ such that each disk is t",
+      "correct_answer": "1676",
+      "seed_value": 709766183
+    },
+    "iso_time": "2025-11-17T02:34:36Z"
+  },
+  {
+    "timestamp": 1763346876.189872,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1683",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T02:34:36Z"
+  },
+  {
+    "timestamp": 1763347054.052514,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1681",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T02:37:34Z"
+  },
+  {
+    "timestamp": 1763347282.642653,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1674",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T02:41:22Z"
+  },
+  {
+    "timestamp": 1763347433.8575082,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1676",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T02:43:53Z"
+  },
+  {
+    "timestamp": 1763347525.6079779,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1676",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T02:45:25Z"
+  },
+  {
+    "timestamp": 1763347619.304876,
+    "seed_id": "1991-11::1991",
+    "stage": "variant_success",
+    "message": "Accepted variant 1991-11::1991_prompt03-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T02:46:59Z"
+  },
+  {
+    "timestamp": 1763347619.305077,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1991-11::1991_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 511721949
+    },
+    "iso_time": "2025-11-17T02:46:59Z"
+  },
+  {
+    "timestamp": 1763347620.082376,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "R0": 2,
+        "n1": 3,
+        "n2": 6,
+        "n1_plus_n2": 9,
+        "answer": 4071
+      }
+    },
+    "iso_time": "2025-11-17T02:47:00Z"
+  },
+  {
+    "timestamp": 1763347620.824018,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4071
+    },
+    "iso_time": "2025-11-17T02:47:00Z"
+  },
+  {
+    "timestamp": 1763347620.824148,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $C_0$ be a circle of radius $R_0 = 2$. A ring of $3$ congruent disks is placed around $C_0$ such that each disk is t",
+      "correct_answer": "4071",
+      "seed_value": 511721949
+    },
+    "iso_time": "2025-11-17T02:47:00Z"
+  },
+  {
+    "timestamp": 1763347620.824189,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4076",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T02:47:00Z"
+  },
+  {
+    "timestamp": 1763347850.593127,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4068",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T02:50:50Z"
+  },
+  {
+    "timestamp": 1763348039.6609359,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4071",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T02:53:59Z"
+  },
+  {
+    "timestamp": 1763348115.404187,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4071",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T02:55:15Z"
+  },
+  {
+    "timestamp": 1763348220.7539961,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4066",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T02:57:00Z"
+  },
+  {
+    "timestamp": 1763348378.6060228,
+    "seed_id": "1991-11::1991",
+    "stage": "variant_success",
+    "message": "Accepted variant 1991-11::1991_prompt03-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T02:59:38Z"
+  },
+  {
+    "timestamp": 1763348378.6062012,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1991-11::1991_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1891463730
+    },
+    "iso_time": "2025-11-17T02:59:38Z"
+  },
+  {
+    "timestamp": 1763348379.385686,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "R0": 2,
+        "n1": 4,
+        "n2": 6,
+        "n1_plus_n2": 10,
+        "answer": 778
+      }
+    },
+    "iso_time": "2025-11-17T02:59:39Z"
+  },
+  {
+    "timestamp": 1763348380.130189,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 778
+    },
+    "iso_time": "2025-11-17T02:59:40Z"
+  },
+  {
+    "timestamp": 1763348380.130341,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $C_0$ be a circle of radius $R_0 = 2$. A ring of $4$ congruent disks is placed around $C_0$ such that each disk is t",
+      "correct_answer": "778",
+      "seed_value": 1891463730
+    },
+    "iso_time": "2025-11-17T02:59:40Z"
+  },
+  {
+    "timestamp": 1763348380.130392,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "773",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T02:59:40Z"
+  },
+  {
+    "timestamp": 1763348543.156047,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "778",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T03:02:23Z"
+  },
+  {
+    "timestamp": 1763348636.743807,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "785",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T03:03:56Z"
+  },
+  {
+    "timestamp": 1763348774.029272,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "784",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T03:06:14Z"
+  },
+  {
+    "timestamp": 1763349008.400176,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "778",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T03:10:08Z"
+  },
+  {
+    "timestamp": 1763349089.164843,
+    "seed_id": "1991-11::1991",
+    "stage": "variant_success",
+    "message": "Accepted variant 1991-11::1991_prompt03-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T03:11:29Z"
+  },
+  {
+    "timestamp": 1763349089.164903,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1991-11::1991_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 966294029
+    },
+    "iso_time": "2025-11-17T03:11:29Z"
+  },
+  {
+    "timestamp": 1763349089.949386,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "R0": 1,
+        "n1": 4,
+        "n2": 6,
+        "n1_plus_n2": 10,
+        "answer": 196
+      }
+    },
+    "iso_time": "2025-11-17T03:11:29Z"
+  },
+  {
+    "timestamp": 1763349090.697172,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 196
+    },
+    "iso_time": "2025-11-17T03:11:30Z"
+  },
+  {
+    "timestamp": 1763349090.6973271,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $C_0$ be a circle of radius $R_0 = 1$. A ring of $4$ congruent disks is placed around $C_0$ such that each disk is t",
+      "correct_answer": "196",
+      "seed_value": 966294029
+    },
+    "iso_time": "2025-11-17T03:11:30Z"
+  },
+  {
+    "timestamp": 1763349090.6973708,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "198",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T03:11:30Z"
+  },
+  {
+    "timestamp": 1763349302.301257,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "196",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T03:15:02Z"
+  },
+  {
+    "timestamp": 1763349394.022614,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "195",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T03:16:34Z"
+  },
+  {
+    "timestamp": 1763349528.179266,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "196",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T03:18:48Z"
+  },
+  {
+    "timestamp": 1763349660.5630772,
+    "seed_id": "1991-11::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "201",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T03:21:00Z"
+  },
+  {
+    "timestamp": 1763349834.3357399,
+    "seed_id": "1991-11::1991",
+    "stage": "variant_success",
+    "message": "Accepted variant 1991-11::1991_prompt03-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T03:23:54Z"
+  }
+]

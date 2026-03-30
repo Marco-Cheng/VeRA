@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1765263572.344272,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "Let $P(x)$ be a polynomial with integer coefficients that satisfies $P(17)=10$ and $P(24)=17.$ Given that $P(n)=n+3$ has",
+      "answer": "418",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T06:59:32Z"
+  },
+  {
+    "timestamp": 1765263572.344361,
+    "seed_id": "2005-II-13::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T06:59:32Z"
+  },
+  {
+    "timestamp": 1765263572.344409,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $P(x)$ be a polynomial with integer coefficients that satisfies $P(17)=10$ and $P(24)=17.$ Given that $P(n)=n+3$ has two distinct integer solutions $n_1$ and $n_2,$ find the product $n_1\\cdot n_2.$",
+      "answer": "418",
+      "example_id": "2005-II-13::2005"
+    },
+    "iso_time": "2025-12-09T06:59:32Z"
+  },
+  {
+    "timestamp": 1765263938.63576,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-13::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 160261573
+    },
+    "iso_time": "2025-12-09T07:05:38Z"
+  },
+  {
+    "timestamp": 1765263939.7280488,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "start": 46,
+        "length": 4,
+        "slope": 4,
+        "intercept": -8,
+        "k_value": 24
+      }
+    },
+    "iso_time": "2025-12-09T07:05:39Z"
+  },
+  {
+    "timestamp": 1765263940.882348,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2250
+    },
+    "iso_time": "2025-12-09T07:05:40Z"
+  },
+  {
+    "timestamp": 1765263940.882522,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let P(x) be a polynomial with integer coefficients. Define the affine function L(x) = 4x + -8. For each integer j with 0",
+      "correct_answer": "2250",
+      "seed_value": 160261573
+    },
+    "iso_time": "2025-12-09T07:05:40Z"
+  },
+  {
+    "timestamp": 1765263940.882575,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T07:05:40Z"
+  },
+  {
+    "timestamp": 1765264092.867579,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2258",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:08:12Z"
+  },
+  {
+    "timestamp": 1765264194.145403,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2246",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:09:54Z"
+  },
+  {
+    "timestamp": 1765264249.577833,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2241",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:10:49Z"
+  },
+  {
+    "timestamp": 1765264398.829221,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T07:13:18Z"
+  },
+  {
+    "timestamp": 1765264429.137899,
+    "seed_id": "2005-II-13::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-13::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T07:13:49Z"
+  },
+  {
+    "timestamp": 1765264429.1380968,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-13::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 620540852
+    },
+    "iso_time": "2025-12-09T07:13:49Z"
+  },
+  {
+    "timestamp": 1765264430.3992581,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "start": 30,
+        "length": 4,
+        "slope": 2,
+        "intercept": 14,
+        "k_value": -24
+      }
+    },
+    "iso_time": "2025-12-09T07:13:50Z"
+  },
+  {
+    "timestamp": 1765264431.6072981,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 986
+    },
+    "iso_time": "2025-12-09T07:13:51Z"
+  },
+  {
+    "timestamp": 1765264431.607508,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let P(x) be a polynomial with integer coefficients. Define the affine function L(x) = 2x + 14. For each integer j with 0",
+      "correct_answer": "986",
+      "seed_value": 620540852
+    },
+    "iso_time": "2025-12-09T07:13:51Z"
+  },
+  {
+    "timestamp": 1765264431.607566,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "986",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T07:13:51Z"
+  },
+  {
+    "timestamp": 1765264502.355576,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "986",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T07:15:02Z"
+  },
+  {
+    "timestamp": 1765264547.2618291,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "981",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:15:47Z"
+  },
+  {
+    "timestamp": 1765264593.5962298,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "977",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:16:33Z"
+  },
+  {
+    "timestamp": 1765264675.720635,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "983",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:17:55Z"
+  },
+  {
+    "timestamp": 1765264770.1304,
+    "seed_id": "2005-II-13::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-13::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T07:19:30Z"
+  },
+  {
+    "timestamp": 1765264770.130461,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-13::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 896434216
+    },
+    "iso_time": "2025-12-09T07:19:30Z"
+  },
+  {
+    "timestamp": 1765264771.275771,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "start": 34,
+        "length": 5,
+        "slope": 8,
+        "intercept": -17,
+        "k_value": -120
+      }
+    },
+    "iso_time": "2025-12-09T07:19:31Z"
+  },
+  {
+    "timestamp": 1765264772.433492,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1287
+    },
+    "iso_time": "2025-12-09T07:19:32Z"
+  },
+  {
+    "timestamp": 1765264772.433661,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let P(x) be a polynomial with integer coefficients. Define the affine function L(x) = 8x + -17. For each integer j with ",
+      "correct_answer": "1287",
+      "seed_value": 896434216
+    },
+    "iso_time": "2025-12-09T07:19:32Z"
+  },
+  {
+    "timestamp": 1765264772.433713,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1290",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:19:32Z"
+  },
+  {
+    "timestamp": 1765264958.143869,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1279",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:22:38Z"
+  },
+  {
+    "timestamp": 1765265073.8548229,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1287",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T07:24:33Z"
+  },
+  {
+    "timestamp": 1765265196.224693,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1287",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T07:26:36Z"
+  },
+  {
+    "timestamp": 1765265281.317517,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1280",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:28:01Z"
+  },
+  {
+    "timestamp": 1765265416.077354,
+    "seed_id": "2005-II-13::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-13::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T07:30:16Z"
+  },
+  {
+    "timestamp": 1765265416.0775628,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-13::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1191984341
+    },
+    "iso_time": "2025-12-09T07:30:16Z"
+  },
+  {
+    "timestamp": 1765265417.3213341,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "start": 13,
+        "length": 5,
+        "slope": 2,
+        "intercept": -14,
+        "k_value": 120
+      }
+    },
+    "iso_time": "2025-12-09T07:30:17Z"
+  },
+  {
+    "timestamp": 1765265418.5382552,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 216
+    },
+    "iso_time": "2025-12-09T07:30:18Z"
+  },
+  {
+    "timestamp": 1765265418.538456,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let P(x) be a polynomial with integer coefficients. Define the affine function L(x) = 2x + -14. For each integer j with ",
+      "correct_answer": "216",
+      "seed_value": 1191984341
+    },
+    "iso_time": "2025-12-09T07:30:18Z"
+  },
+  {
+    "timestamp": 1765265418.538521,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "223",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:30:18Z"
+  },
+  {
+    "timestamp": 1765265518.519186,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "216",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T07:31:58Z"
+  },
+  {
+    "timestamp": 1765265596.397077,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "212",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:33:16Z"
+  },
+  {
+    "timestamp": 1765265751.741379,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "221",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:35:51Z"
+  },
+  {
+    "timestamp": 1765265875.528042,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "216",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T07:37:55Z"
+  },
+  {
+    "timestamp": 1765266165.237888,
+    "seed_id": "2005-II-13::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-13::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T07:42:45Z"
+  },
+  {
+    "timestamp": 1765266165.238066,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-13::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 524123125
+    },
+    "iso_time": "2025-12-09T07:42:45Z"
+  },
+  {
+    "timestamp": 1765266166.414657,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "start": 17,
+        "length": 6,
+        "slope": 6,
+        "intercept": -6,
+        "k_value": 720
+      }
+    },
+    "iso_time": "2025-12-09T07:42:46Z"
+  },
+  {
+    "timestamp": 1765266167.527331,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 368
+    },
+    "iso_time": "2025-12-09T07:42:47Z"
+  },
+  {
+    "timestamp": 1765266167.527484,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let P(x) be a polynomial with integer coefficients. Define the affine function L(x) = 6x + -6. For each integer j with 0",
+      "correct_answer": "368",
+      "seed_value": 524123125
+    },
+    "iso_time": "2025-12-09T07:42:47Z"
+  },
+  {
+    "timestamp": 1765266167.527534,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "375",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:42:47Z"
+  },
+  {
+    "timestamp": 1765266312.179502,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "368",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T07:45:12Z"
+  },
+  {
+    "timestamp": 1765266367.099654,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "368",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T07:46:07Z"
+  },
+  {
+    "timestamp": 1765266431.3729541,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "364",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:47:11Z"
+  },
+  {
+    "timestamp": 1765266485.1452959,
+    "seed_id": "2005-II-13::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "374",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T07:48:05Z"
+  },
+  {
+    "timestamp": 1765266545.8617952,
+    "seed_id": "2005-II-13::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-13::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T07:49:05Z"
+  }
+]

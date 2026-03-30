@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764331482.71881,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1999,
+      "question_preview": "Point $P_{}$ is located inside triangle $ABC$ so that angles $PAB, PBC,$ and $PCA$ are all congruent.  The sides of the ",
+      "answer": "463",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T12:04:42Z"
+  },
+  {
+    "timestamp": 1764331482.718868,
+    "seed_id": "1999-14::1999",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T12:04:42Z"
+  },
+  {
+    "timestamp": 1764331482.718894,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Point $P_{}$ is located inside triangle $ABC$ so that angles $PAB, PBC,$ and $PCA$ are all congruent.  The sides of the triangle have lengths $AB=13, BC=14,$ and $CA=15,$ and the tangent of angle $PAB$ is $m/n,$ where $m_{}$ and $n_{}$ are relatively prime positive integers.  Find $m+n.$",
+      "answer": "463",
+      "example_id": "1999-14::1999"
+    },
+    "iso_time": "2025-11-28T12:04:42Z"
+  },
+  {
+    "timestamp": 1764331579.7225442,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-14::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 136530164
+    },
+    "iso_time": "2025-11-28T12:06:19Z"
+  },
+  {
+    "timestamp": 1764331580.908963,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 52,
+        "b": 165,
+        "c": 173
+      }
+    },
+    "iso_time": "2025-11-28T12:06:20Z"
+  },
+  {
+    "timestamp": 1764331581.939848,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 67470
+    },
+    "iso_time": "2025-11-28T12:06:21Z"
+  },
+  {
+    "timestamp": 1764331581.939996,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC with side lengths AB=52, BC=165, and CA=173, there is a unique interior point P such that the three dire",
+      "correct_answer": "67470",
+      "seed_value": 136530164
+    },
+    "iso_time": "2025-11-28T12:06:21Z"
+  },
+  {
+    "timestamp": 1764331581.9400399,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "67471",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:06:21Z"
+  },
+  {
+    "timestamp": 1764331632.9680781,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "67463",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:07:12Z"
+  },
+  {
+    "timestamp": 1764331668.296156,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "67470",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T12:07:48Z"
+  },
+  {
+    "timestamp": 1764331703.955035,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "67478",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:08:23Z"
+  },
+  {
+    "timestamp": 1764331741.103113,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "67470",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T12:09:01Z"
+  },
+  {
+    "timestamp": 1764331777.4736571,
+    "seed_id": "1999-14::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-14::1999_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T12:09:37Z"
+  },
+  {
+    "timestamp": 1764331777.47375,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-14::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 936972156
+    },
+    "iso_time": "2025-11-28T12:09:37Z"
+  },
+  {
+    "timestamp": 1764331779.103776,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 78,
+        "b": 160,
+        "c": 178
+      }
+    },
+    "iso_time": "2025-11-28T12:09:39Z"
+  },
+  {
+    "timestamp": 1764331780.432827,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 18512
+    },
+    "iso_time": "2025-11-28T12:09:40Z"
+  },
+  {
+    "timestamp": 1764331780.4330611,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC with side lengths AB=78, BC=160, and CA=178, there is a unique interior point P such that the three dire",
+      "correct_answer": "18512",
+      "seed_value": 936972156
+    },
+    "iso_time": "2025-11-28T12:09:40Z"
+  },
+  {
+    "timestamp": 1764331780.433135,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "18518",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:09:40Z"
+  },
+  {
+    "timestamp": 1764331873.3034072,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "18512",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T12:11:13Z"
+  },
+  {
+    "timestamp": 1764331911.336524,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "18510",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:11:51Z"
+  },
+  {
+    "timestamp": 1764331955.4194,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "18512",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T12:12:35Z"
+  },
+  {
+    "timestamp": 1764331985.4373918,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "18515",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:13:05Z"
+  },
+  {
+    "timestamp": 1764332019.922657,
+    "seed_id": "1999-14::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-14::1999_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T12:13:39Z"
+  },
+  {
+    "timestamp": 1764332019.922901,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-14::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1243790539
+    },
+    "iso_time": "2025-11-28T12:13:39Z"
+  },
+  {
+    "timestamp": 1764332021.029419,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 19,
+        "b": 180,
+        "c": 181
+      }
+    },
+    "iso_time": "2025-11-28T12:13:41Z"
+  },
+  {
+    "timestamp": 1764332022.027495,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 68780
+    },
+    "iso_time": "2025-11-28T12:13:42Z"
+  },
+  {
+    "timestamp": 1764332022.027647,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC with side lengths AB=19, BC=180, and CA=181, there is a unique interior point P such that the three dire",
+      "correct_answer": "68780",
+      "seed_value": 1243790539
+    },
+    "iso_time": "2025-11-28T12:13:42Z"
+  },
+  {
+    "timestamp": 1764332022.027694,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "68787",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:13:42Z"
+  },
+  {
+    "timestamp": 1764332058.645966,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "68780",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T12:14:18Z"
+  },
+  {
+    "timestamp": 1764332086.27086,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "68786",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:14:46Z"
+  },
+  {
+    "timestamp": 1764332136.7578182,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "68780",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T12:15:36Z"
+  },
+  {
+    "timestamp": 1764332179.89012,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "68781",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:16:19Z"
+  },
+  {
+    "timestamp": 1764332227.709785,
+    "seed_id": "1999-14::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-14::1999_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T12:17:07Z"
+  },
+  {
+    "timestamp": 1764332227.709876,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-14::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1086533779
+    },
+    "iso_time": "2025-11-28T12:17:07Z"
+  },
+  {
+    "timestamp": 1764332228.8103948,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 84,
+        "b": 187,
+        "c": 205
+      }
+    },
+    "iso_time": "2025-11-28T12:17:08Z"
+  },
+  {
+    "timestamp": 1764332229.855411,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 97580
+    },
+    "iso_time": "2025-11-28T12:17:09Z"
+  },
+  {
+    "timestamp": 1764332229.8555892,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC with side lengths AB=84, BC=187, and CA=205, there is a unique interior point P such that the three dire",
+      "correct_answer": "97580",
+      "seed_value": 1086533779
+    },
+    "iso_time": "2025-11-28T12:17:09Z"
+  },
+  {
+    "timestamp": 1764332229.855636,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "97576",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:17:09Z"
+  },
+  {
+    "timestamp": 1764332267.263089,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "97589",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:17:47Z"
+  },
+  {
+    "timestamp": 1764332318.783104,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "97580",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T12:18:38Z"
+  },
+  {
+    "timestamp": 1764332350.772935,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "97580",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T12:19:10Z"
+  },
+  {
+    "timestamp": 1764332389.953585,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "97583",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:19:49Z"
+  },
+  {
+    "timestamp": 1764332423.708022,
+    "seed_id": "1999-14::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-14::1999_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T12:20:23Z"
+  },
+  {
+    "timestamp": 1764332423.708103,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-14::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2060937092
+    },
+    "iso_time": "2025-11-28T12:20:23Z"
+  },
+  {
+    "timestamp": 1764332424.87438,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 186,
+        "b": 952,
+        "c": 970
+      }
+    },
+    "iso_time": "2025-11-28T12:20:24Z"
+  },
+  {
+    "timestamp": 1764332425.959984,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 511190
+    },
+    "iso_time": "2025-11-28T12:20:25Z"
+  },
+  {
+    "timestamp": 1764332425.960137,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC with side lengths AB=186, BC=952, and CA=970, there is a unique interior point P such that the three dir",
+      "correct_answer": "511190",
+      "seed_value": 2060937092
+    },
+    "iso_time": "2025-11-28T12:20:25Z"
+  },
+  {
+    "timestamp": 1764332425.960181,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "511190",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T12:20:25Z"
+  },
+  {
+    "timestamp": 1764332475.724928,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "511192",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:21:15Z"
+  },
+  {
+    "timestamp": 1764332528.0652359,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "511193",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:22:08Z"
+  },
+  {
+    "timestamp": 1764332588.40956,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "511196",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T12:23:08Z"
+  },
+  {
+    "timestamp": 1764332656.358023,
+    "seed_id": "1999-14::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "511190",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T12:24:16Z"
+  },
+  {
+    "timestamp": 1764332699.985646,
+    "seed_id": "1999-14::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-14::1999_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T12:24:59Z"
+  }
+]

@@ -1,0 +1,2183 @@
+[
+  {
+    "timestamp": 1764789921.17485,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "The sum of the areas of all triangles whose vertices are also vertices of a 1 by 1 by 1 cube is $m + \\sqrt{n} + \\sqrt{p}",
+      "answer": "348",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-03T19:25:21Z"
+  },
+  {
+    "timestamp": 1764789921.174907,
+    "seed_id": "2003-I-6::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-03T19:25:21Z"
+  },
+  {
+    "timestamp": 1764789921.174936,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The sum of the areas of all triangles whose vertices are also vertices of a 1 by 1 by 1 cube is $m + \\sqrt{n} + \\sqrt{p},$ where $m, n,$ and $p$ are integers. Find $m + n + p.$",
+      "answer": "348",
+      "example_id": "2003-I-6::2003"
+    },
+    "iso_time": "2025-12-03T19:25:21Z"
+  },
+  {
+    "timestamp": 1764790182.4365382,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 944899042
+    },
+    "iso_time": "2025-12-03T19:29:42Z"
+  },
+  {
+    "timestamp": 1764790183.79527,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 5,
+        "edge_len": 7
+      }
+    },
+    "iso_time": "2025-12-03T19:29:43Z"
+  },
+  {
+    "timestamp": 1764790184.92936,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3699
+    },
+    "iso_time": "2025-12-03T19:29:44Z"
+  },
+  {
+    "timestamp": 1764790184.9294982,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 5-dimensional axis-aligned hypercube with edge length 7. Let S be the sum of the areas of all distinct triang",
+      "correct_answer": "3699",
+      "seed_value": 944899042
+    },
+    "iso_time": "2025-12-03T19:29:44Z"
+  },
+  {
+    "timestamp": 1764790184.9295528,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3699",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T19:29:44Z"
+  },
+  {
+    "timestamp": 1764790523.483596,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3697",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T19:35:23Z"
+  },
+  {
+    "timestamp": 1764790598.281643,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3699",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T19:36:38Z"
+  },
+  {
+    "timestamp": 1764791006.7938728,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3705",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T19:43:26Z"
+  },
+  {
+    "timestamp": 1764791276.536918,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3700",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T19:47:56Z"
+  },
+  {
+    "timestamp": 1764791516.563158,
+    "seed_id": "2003-I-6::2003",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-03T19:51:56Z"
+  },
+  {
+    "timestamp": 1764791516.563448,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2022533368
+    },
+    "iso_time": "2025-12-03T19:51:56Z"
+  },
+  {
+    "timestamp": 1764791517.98102,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 5,
+        "edge_len": 7
+      }
+    },
+    "iso_time": "2025-12-03T19:51:57Z"
+  },
+  {
+    "timestamp": 1764791519.2431629,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3699
+    },
+    "iso_time": "2025-12-03T19:51:59Z"
+  },
+  {
+    "timestamp": 1764791519.2433438,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 5-dimensional axis-aligned hypercube with edge length 7. Let S be the sum of the areas of all distinct triang",
+      "correct_answer": "3699",
+      "seed_value": 2022533368
+    },
+    "iso_time": "2025-12-03T19:51:59Z"
+  },
+  {
+    "timestamp": 1764791519.2434182,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3700",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T19:51:59Z"
+  },
+  {
+    "timestamp": 1764791896.685164,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3693",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T19:58:16Z"
+  },
+  {
+    "timestamp": 1764792268.736358,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3699",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T20:04:28Z"
+  },
+  {
+    "timestamp": 1764792564.228906,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3698",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T20:09:24Z"
+  },
+  {
+    "timestamp": 1764792676.57156,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3699",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T20:11:16Z"
+  },
+  {
+    "timestamp": 1764793021.8287702,
+    "seed_id": "2003-I-6::2003",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-03T20:17:01Z"
+  },
+  {
+    "timestamp": 1764793021.8290648,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 499316173
+    },
+    "iso_time": "2025-12-03T20:17:01Z"
+  },
+  {
+    "timestamp": 1764793023.213962,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 5,
+        "edge_len": 7
+      }
+    },
+    "iso_time": "2025-12-03T20:17:03Z"
+  },
+  {
+    "timestamp": 1764793024.3634639,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3699
+    },
+    "iso_time": "2025-12-03T20:17:04Z"
+  },
+  {
+    "timestamp": 1764793024.363601,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 5-dimensional axis-aligned hypercube with edge length 7. Let S be the sum of the areas of all distinct triang",
+      "correct_answer": "3699",
+      "seed_value": 499316173
+    },
+    "iso_time": "2025-12-03T20:17:04Z"
+  },
+  {
+    "timestamp": 1764793024.363659,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3701",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T20:17:04Z"
+  },
+  {
+    "timestamp": 1764793285.698993,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3697",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T20:21:25Z"
+  },
+  {
+    "timestamp": 1764793410.623035,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3695",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T20:23:30Z"
+  },
+  {
+    "timestamp": 1764793835.74466,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3699",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T20:30:35Z"
+  },
+  {
+    "timestamp": 1764794120.782398,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3699",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T20:35:20Z"
+  },
+  {
+    "timestamp": 1764794489.254442,
+    "seed_id": "2003-I-6::2003",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-03T20:41:29Z"
+  },
+  {
+    "timestamp": 1764794489.25471,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1203851731
+    },
+    "iso_time": "2025-12-03T20:41:29Z"
+  },
+  {
+    "timestamp": 1764794490.629337,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 5,
+        "edge_len": 7
+      }
+    },
+    "iso_time": "2025-12-03T20:41:30Z"
+  },
+  {
+    "timestamp": 1764794491.787828,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3699
+    },
+    "iso_time": "2025-12-03T20:41:31Z"
+  },
+  {
+    "timestamp": 1764794491.788005,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 5-dimensional axis-aligned hypercube with edge length 7. Let S be the sum of the areas of all distinct triang",
+      "correct_answer": "3699",
+      "seed_value": 1203851731
+    },
+    "iso_time": "2025-12-03T20:41:31Z"
+  },
+  {
+    "timestamp": 1764794491.788089,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3699",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T20:41:31Z"
+  },
+  {
+    "timestamp": 1764794804.9934132,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3694",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T20:46:44Z"
+  },
+  {
+    "timestamp": 1764795201.31283,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3704",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T20:53:21Z"
+  },
+  {
+    "timestamp": 1764795299.850726,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3699",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T20:54:59Z"
+  },
+  {
+    "timestamp": 1764795399.383828,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3697",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T20:56:39Z"
+  },
+  {
+    "timestamp": 1764795659.1787121,
+    "seed_id": "2003-I-6::2003",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-03T21:00:59Z"
+  },
+  {
+    "timestamp": 1764795659.179012,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1536168866
+    },
+    "iso_time": "2025-12-03T21:00:59Z"
+  },
+  {
+    "timestamp": 1764795660.5387251,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 5,
+        "edge_len": 7
+      }
+    },
+    "iso_time": "2025-12-03T21:01:00Z"
+  },
+  {
+    "timestamp": 1764795661.608747,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3699
+    },
+    "iso_time": "2025-12-03T21:01:01Z"
+  },
+  {
+    "timestamp": 1764795661.608881,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 5-dimensional axis-aligned hypercube with edge length 7. Let S be the sum of the areas of all distinct triang",
+      "correct_answer": "3699",
+      "seed_value": 1536168866
+    },
+    "iso_time": "2025-12-03T21:01:01Z"
+  },
+  {
+    "timestamp": 1764795661.6089358,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3703",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:01:01Z"
+  },
+  {
+    "timestamp": 1764795756.97067,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3699",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:02:36Z"
+  },
+  {
+    "timestamp": 1764796070.649085,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3699",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:07:50Z"
+  },
+  {
+    "timestamp": 1764796166.7813828,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3704",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:09:26Z"
+  },
+  {
+    "timestamp": 1764796724.71932,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3708",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:18:44Z"
+  },
+  {
+    "timestamp": 1764796893.219608,
+    "seed_id": "2003-I-6::2003",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-03T21:21:33Z"
+  },
+  {
+    "timestamp": 1764796893.219859,
+    "seed_id": "2003-I-6::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-03T21:21:33Z"
+  },
+  {
+    "timestamp": 1764796893.219991,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "The sum of the areas of all triangles whose vertices are also vertices of a 1 by 1 by 1 cube is $m + \\sqrt{n} + \\sqrt{p},$ where $m, n,$ and $p$ are integers. Find $m + n + p.$",
+      "answer": "348",
+      "example_id": "2003-I-6::2003"
+    },
+    "iso_time": "2025-12-03T21:21:33Z"
+  },
+  {
+    "timestamp": 1764797110.51535,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1442187337
+    },
+    "iso_time": "2025-12-03T21:25:10Z"
+  },
+  {
+    "timestamp": 1764797111.8987892,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 13,
+        "b": 22,
+        "c": 3
+      }
+    },
+    "iso_time": "2025-12-03T21:25:11Z"
+  },
+  {
+    "timestamp": 1764797113.0992188,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:13Z"
+  },
+  {
+    "timestamp": 1764797114.252867,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 2,
+        "b": 12,
+        "c": 29
+      }
+    },
+    "iso_time": "2025-12-03T21:25:14Z"
+  },
+  {
+    "timestamp": 1764797115.3754802,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:15Z"
+  },
+  {
+    "timestamp": 1764797116.480866,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 8,
+        "b": 12,
+        "c": 27
+      }
+    },
+    "iso_time": "2025-12-03T21:25:16Z"
+  },
+  {
+    "timestamp": 1764797117.592982,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:17Z"
+  },
+  {
+    "timestamp": 1764797118.813142,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 10,
+        "b": 14,
+        "c": 23
+      }
+    },
+    "iso_time": "2025-12-03T21:25:18Z"
+  },
+  {
+    "timestamp": 1764797119.905232,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:19Z"
+  },
+  {
+    "timestamp": 1764797121.105825,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 26,
+        "b": 25,
+        "c": 6
+      }
+    },
+    "iso_time": "2025-12-03T21:25:21Z"
+  },
+  {
+    "timestamp": 1764797122.173352,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:22Z"
+  },
+  {
+    "timestamp": 1764797122.173413,
+    "seed_id": "2003-I-6::2003",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 11.658086061477661
+    },
+    "iso_time": "2025-12-03T21:25:22Z"
+  },
+  {
+    "timestamp": 1764797122.173485,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 348967541
+    },
+    "iso_time": "2025-12-03T21:25:22Z"
+  },
+  {
+    "timestamp": 1764797123.381036,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 15,
+        "b": 7,
+        "c": 2
+      }
+    },
+    "iso_time": "2025-12-03T21:25:23Z"
+  },
+  {
+    "timestamp": 1764797124.544149,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:24Z"
+  },
+  {
+    "timestamp": 1764797125.7768362,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 14,
+        "b": 15,
+        "c": 17
+      }
+    },
+    "iso_time": "2025-12-03T21:25:25Z"
+  },
+  {
+    "timestamp": 1764797126.906327,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:26Z"
+  },
+  {
+    "timestamp": 1764797128.054042,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 7,
+        "b": 10,
+        "c": 26
+      }
+    },
+    "iso_time": "2025-12-03T21:25:28Z"
+  },
+  {
+    "timestamp": 1764797129.2117062,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:29Z"
+  },
+  {
+    "timestamp": 1764797130.341861,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 28,
+        "b": 25,
+        "c": 19
+      }
+    },
+    "iso_time": "2025-12-03T21:25:30Z"
+  },
+  {
+    "timestamp": 1764797131.413972,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:31Z"
+  },
+  {
+    "timestamp": 1764797132.4957151,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 12,
+        "b": 28,
+        "c": 30
+      }
+    },
+    "iso_time": "2025-12-03T21:25:32Z"
+  },
+  {
+    "timestamp": 1764797133.7344582,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:33Z"
+  },
+  {
+    "timestamp": 1764797133.7345438,
+    "seed_id": "2003-I-6::2003",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.561060190200806
+    },
+    "iso_time": "2025-12-03T21:25:33Z"
+  },
+  {
+    "timestamp": 1764797133.734611,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1419820819
+    },
+    "iso_time": "2025-12-03T21:25:33Z"
+  },
+  {
+    "timestamp": 1764797134.888295,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 4,
+        "b": 10,
+        "c": 11
+      }
+    },
+    "iso_time": "2025-12-03T21:25:34Z"
+  },
+  {
+    "timestamp": 1764797136.128584,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:36Z"
+  },
+  {
+    "timestamp": 1764797137.216668,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 16,
+        "b": 17,
+        "c": 26
+      }
+    },
+    "iso_time": "2025-12-03T21:25:37Z"
+  },
+  {
+    "timestamp": 1764797138.436235,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:38Z"
+  },
+  {
+    "timestamp": 1764797139.5021188,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 12,
+        "b": 22,
+        "c": 28
+      }
+    },
+    "iso_time": "2025-12-03T21:25:39Z"
+  },
+  {
+    "timestamp": 1764797140.4884338,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:40Z"
+  },
+  {
+    "timestamp": 1764797141.710739,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 20,
+        "b": 3,
+        "c": 19
+      }
+    },
+    "iso_time": "2025-12-03T21:25:41Z"
+  },
+  {
+    "timestamp": 1764797142.8156312,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:42Z"
+  },
+  {
+    "timestamp": 1764797143.9508438,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 26,
+        "b": 23,
+        "c": 29
+      }
+    },
+    "iso_time": "2025-12-03T21:25:43Z"
+  },
+  {
+    "timestamp": 1764797145.093458,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:45Z"
+  },
+  {
+    "timestamp": 1764797145.0935209,
+    "seed_id": "2003-I-6::2003",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.358911037445068
+    },
+    "iso_time": "2025-12-03T21:25:45Z"
+  },
+  {
+    "timestamp": 1764797145.09358,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 769858841
+    },
+    "iso_time": "2025-12-03T21:25:45Z"
+  },
+  {
+    "timestamp": 1764797146.2394419,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 4,
+        "b": 25,
+        "c": 11
+      }
+    },
+    "iso_time": "2025-12-03T21:25:46Z"
+  },
+  {
+    "timestamp": 1764797147.326677,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:47Z"
+  },
+  {
+    "timestamp": 1764797148.479103,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 2,
+        "b": 11,
+        "c": 9
+      }
+    },
+    "iso_time": "2025-12-03T21:25:48Z"
+  },
+  {
+    "timestamp": 1764797149.5838091,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:49Z"
+  },
+  {
+    "timestamp": 1764797150.842159,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 19,
+        "b": 30,
+        "c": 15
+      }
+    },
+    "iso_time": "2025-12-03T21:25:50Z"
+  },
+  {
+    "timestamp": 1764797151.955306,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:51Z"
+  },
+  {
+    "timestamp": 1764797153.090687,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 17,
+        "b": 11,
+        "c": 20
+      }
+    },
+    "iso_time": "2025-12-03T21:25:53Z"
+  },
+  {
+    "timestamp": 1764797154.218038,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:54Z"
+  },
+  {
+    "timestamp": 1764797155.436378,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 22,
+        "b": 15,
+        "c": 24
+      }
+    },
+    "iso_time": "2025-12-03T21:25:55Z"
+  },
+  {
+    "timestamp": 1764797156.593974,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:56Z"
+  },
+  {
+    "timestamp": 1764797156.594056,
+    "seed_id": "2003-I-6::2003",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.50047492980957
+    },
+    "iso_time": "2025-12-03T21:25:56Z"
+  },
+  {
+    "timestamp": 1764797156.594099,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 815160419
+    },
+    "iso_time": "2025-12-03T21:25:56Z"
+  },
+  {
+    "timestamp": 1764797157.663991,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 28,
+        "b": 11,
+        "c": 27
+      }
+    },
+    "iso_time": "2025-12-03T21:25:57Z"
+  },
+  {
+    "timestamp": 1764797158.7404742,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:25:58Z"
+  },
+  {
+    "timestamp": 1764797159.942775,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "a": 22,
+        "b": 3,
+        "c": 26
+      }
+    },
+    "iso_time": "2025-12-03T21:25:59Z"
+  },
+  {
+    "timestamp": 1764797161.1741598,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:26:01Z"
+  },
+  {
+    "timestamp": 1764797162.266273,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "a": 18,
+        "b": 9,
+        "c": 10
+      }
+    },
+    "iso_time": "2025-12-03T21:26:02Z"
+  },
+  {
+    "timestamp": 1764797163.395741,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:26:03Z"
+  },
+  {
+    "timestamp": 1764797164.6603131,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "a": 5,
+        "b": 27,
+        "c": 10
+      }
+    },
+    "iso_time": "2025-12-03T21:26:04Z"
+  },
+  {
+    "timestamp": 1764797165.870154,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:26:05Z"
+  },
+  {
+    "timestamp": 1764797167.012008,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "a": 7,
+        "b": 30,
+        "c": 8
+      }
+    },
+    "iso_time": "2025-12-03T21:26:07Z"
+  },
+  {
+    "timestamp": 1764797168.0951512,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-03T21:26:08Z"
+  },
+  {
+    "timestamp": 1764797168.095211,
+    "seed_id": "2003-I-6::2003",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.501111030578613
+    },
+    "iso_time": "2025-12-03T21:26:08Z"
+  },
+  {
+    "timestamp": 1764797168.095238,
+    "seed_id": "2003-I-6::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-03T21:26:08Z"
+  },
+  {
+    "timestamp": 1764797168.0952508,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "The sum of the areas of all triangles whose vertices are also vertices of a 1 by 1 by 1 cube is $m + \\sqrt{n} + \\sqrt{p},$ where $m, n,$ and $p$ are integers. Find $m + n + p.$",
+      "answer": "348",
+      "example_id": "2003-I-6::2003"
+    },
+    "iso_time": "2025-12-03T21:26:08Z"
+  },
+  {
+    "timestamp": 1764797384.958762,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 953632737
+    },
+    "iso_time": "2025-12-03T21:29:44Z"
+  },
+  {
+    "timestamp": 1764797386.235785,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "axis_lengths": "8, 7, 5",
+        "a_list": [
+          8,
+          7,
+          5
+        ]
+      }
+    },
+    "iso_time": "2025-12-03T21:29:46Z"
+  },
+  {
+    "timestamp": 1764797387.4814222,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 47688
+    },
+    "iso_time": "2025-12-03T21:29:47Z"
+  },
+  {
+    "timestamp": 1764797387.481594,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In 3-dimensional Euclidean space, consider the axis-aligned orthogonal box whose edge lengths along the coordinate axes ",
+      "correct_answer": "47688",
+      "seed_value": 953632737
+    },
+    "iso_time": "2025-12-03T21:29:47Z"
+  },
+  {
+    "timestamp": 1764797387.481662,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "47695",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:29:47Z"
+  },
+  {
+    "timestamp": 1764797415.4759302,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "47696",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:30:15Z"
+  },
+  {
+    "timestamp": 1764797449.720315,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "47688",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:30:49Z"
+  },
+  {
+    "timestamp": 1764797564.8140218,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "47688",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:32:44Z"
+  },
+  {
+    "timestamp": 1764797611.2963278,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "47681",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:33:31Z"
+  },
+  {
+    "timestamp": 1764797702.868383,
+    "seed_id": "2003-I-6::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-6::2003_prompt03-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T21:35:02Z"
+  },
+  {
+    "timestamp": 1764797702.8686311,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1398672865
+    },
+    "iso_time": "2025-12-03T21:35:02Z"
+  },
+  {
+    "timestamp": 1764797704.2961621,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 4,
+        "axis_lengths": "4, 9, 3, 2",
+        "a_list": [
+          4,
+          9,
+          3,
+          2
+        ]
+      }
+    },
+    "iso_time": "2025-12-03T21:35:04Z"
+  },
+  {
+    "timestamp": 1764797705.4244769,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 165952
+    },
+    "iso_time": "2025-12-03T21:35:05Z"
+  },
+  {
+    "timestamp": 1764797705.424611,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In 4-dimensional Euclidean space, consider the axis-aligned orthogonal box whose edge lengths along the coordinate axes ",
+      "correct_answer": "165952",
+      "seed_value": 1398672865
+    },
+    "iso_time": "2025-12-03T21:35:05Z"
+  },
+  {
+    "timestamp": 1764797705.424671,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "165953",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:35:05Z"
+  },
+  {
+    "timestamp": 1764797725.152629,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "165946",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:35:25Z"
+  },
+  {
+    "timestamp": 1764797756.308921,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "165952",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:35:56Z"
+  },
+  {
+    "timestamp": 1764797830.9321349,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "165952",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:37:10Z"
+  },
+  {
+    "timestamp": 1764797857.063734,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "165959",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:37:37Z"
+  },
+  {
+    "timestamp": 1764797888.713547,
+    "seed_id": "2003-I-6::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-6::2003_prompt03-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T21:38:08Z"
+  },
+  {
+    "timestamp": 1764797888.713731,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1961281400
+    },
+    "iso_time": "2025-12-03T21:38:08Z"
+  },
+  {
+    "timestamp": 1764797890.0695748,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "axis_lengths": "4, 2, 2",
+        "a_list": [
+          4,
+          2,
+          2
+        ]
+      }
+    },
+    "iso_time": "2025-12-03T21:38:10Z"
+  },
+  {
+    "timestamp": 1764797891.190003,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1152
+    },
+    "iso_time": "2025-12-03T21:38:11Z"
+  },
+  {
+    "timestamp": 1764797891.190151,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In 3-dimensional Euclidean space, consider the axis-aligned orthogonal box whose edge lengths along the coordinate axes ",
+      "correct_answer": "1152",
+      "seed_value": 1961281400
+    },
+    "iso_time": "2025-12-03T21:38:11Z"
+  },
+  {
+    "timestamp": 1764797891.190211,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1152",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:38:11Z"
+  },
+  {
+    "timestamp": 1764797927.206712,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1147",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:38:47Z"
+  },
+  {
+    "timestamp": 1764797989.331077,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1152",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:39:49Z"
+  },
+  {
+    "timestamp": 1764798112.044397,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1154",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:41:52Z"
+  },
+  {
+    "timestamp": 1764798141.631979,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1145",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:42:21Z"
+  },
+  {
+    "timestamp": 1764798200.9186292,
+    "seed_id": "2003-I-6::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-6::2003_prompt03-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T21:43:20Z"
+  },
+  {
+    "timestamp": 1764798200.9187882,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1912443390
+    },
+    "iso_time": "2025-12-03T21:43:20Z"
+  },
+  {
+    "timestamp": 1764798202.1665988,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "axis_lengths": "6, 6, 9",
+        "a_list": [
+          6,
+          6,
+          9
+        ]
+      }
+    },
+    "iso_time": "2025-12-03T21:43:22Z"
+  },
+  {
+    "timestamp": 1764798203.395892,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 57024
+    },
+    "iso_time": "2025-12-03T21:43:23Z"
+  },
+  {
+    "timestamp": 1764798203.396068,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In 3-dimensional Euclidean space, consider the axis-aligned orthogonal box whose edge lengths along the coordinate axes ",
+      "correct_answer": "57024",
+      "seed_value": 1912443390
+    },
+    "iso_time": "2025-12-03T21:43:23Z"
+  },
+  {
+    "timestamp": 1764798203.3961442,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "57020",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:43:23Z"
+  },
+  {
+    "timestamp": 1764798270.494105,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "57023",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:44:30Z"
+  },
+  {
+    "timestamp": 1764798330.559498,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "57024",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:45:30Z"
+  },
+  {
+    "timestamp": 1764798371.926145,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "57024",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:46:11Z"
+  },
+  {
+    "timestamp": 1764798418.745316,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "57029",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:46:58Z"
+  },
+  {
+    "timestamp": 1764798481.8003268,
+    "seed_id": "2003-I-6::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-6::2003_prompt03-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T21:48:01Z"
+  },
+  {
+    "timestamp": 1764798481.800499,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-6::2003_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 953974832
+    },
+    "iso_time": "2025-12-03T21:48:01Z"
+  },
+  {
+    "timestamp": 1764798482.917019,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "axis_lengths": "3, 4, 6",
+        "a_list": [
+          3,
+          4,
+          6
+        ]
+      }
+    },
+    "iso_time": "2025-12-03T21:48:02Z"
+  },
+  {
+    "timestamp": 1764798484.147883,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8352
+    },
+    "iso_time": "2025-12-03T21:48:04Z"
+  },
+  {
+    "timestamp": 1764798484.148061,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In 3-dimensional Euclidean space, consider the axis-aligned orthogonal box whose edge lengths along the coordinate axes ",
+      "correct_answer": "8352",
+      "seed_value": 953974832
+    },
+    "iso_time": "2025-12-03T21:48:04Z"
+  },
+  {
+    "timestamp": 1764798484.148135,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8358",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:48:04Z"
+  },
+  {
+    "timestamp": 1764798506.433578,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8352",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:48:26Z"
+  },
+  {
+    "timestamp": 1764798548.502507,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8344",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:49:08Z"
+  },
+  {
+    "timestamp": 1764798599.100488,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8348",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T21:49:59Z"
+  },
+  {
+    "timestamp": 1764798650.192739,
+    "seed_id": "2003-I-6::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8352",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T21:50:50Z"
+  },
+  {
+    "timestamp": 1764798678.641494,
+    "seed_id": "2003-I-6::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-6::2003_prompt03-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T21:51:18Z"
+  }
+]

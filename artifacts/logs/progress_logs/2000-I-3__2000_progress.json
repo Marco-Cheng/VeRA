@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1764383052.3165429,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "In the expansion of $(ax + b)^{2000},$ where $a$ and $b$ are relatively prime positive integers, the coefficients of $x^",
+      "answer": "667",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T02:24:12Z"
+  },
+  {
+    "timestamp": 1764383052.316759,
+    "seed_id": "2000-I-3::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T02:24:12Z"
+  },
+  {
+    "timestamp": 1764383052.3168,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In the expansion of $(ax + b)^{2000},$ where $a$ and $b$ are relatively prime positive integers, the coefficients of $x^{2}$ and $x^{3}$ are equal. Find $a + b$ .",
+      "answer": "667",
+      "example_id": "2000-I-3::2000"
+    },
+    "iso_time": "2025-11-29T02:24:12Z"
+  },
+  {
+    "timestamp": 1764383193.6776278,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-3::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 783305433
+    },
+    "iso_time": "2025-11-29T02:26:33Z"
+  },
+  {
+    "timestamp": 1764383194.878624,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1023,
+        "k": 960
+      }
+    },
+    "iso_time": "2025-11-29T02:26:34Z"
+  },
+  {
+    "timestamp": 1764383195.912383,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 100
+    },
+    "iso_time": "2025-11-29T02:26:35Z"
+  },
+  {
+    "timestamp": 1764383195.9125462,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the expansion of (a x + b)^1023, where a and b are relatively prime positive integers. Suppose the three consec",
+      "correct_answer": "100",
+      "seed_value": 783305433
+    },
+    "iso_time": "2025-11-29T02:26:35Z"
+  },
+  {
+    "timestamp": 1764383195.9125881,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:26:35Z"
+  },
+  {
+    "timestamp": 1764383247.1417758,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "99",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:27:27Z"
+  },
+  {
+    "timestamp": 1764383329.758943,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "93",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:28:49Z"
+  },
+  {
+    "timestamp": 1764383358.894549,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "91",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:29:18Z"
+  },
+  {
+    "timestamp": 1764383389.3757849,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:29:49Z"
+  },
+  {
+    "timestamp": 1764383421.981309,
+    "seed_id": "2000-I-3::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-3::2000_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:30:21Z"
+  },
+  {
+    "timestamp": 1764383421.981544,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-3::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 137021348
+    },
+    "iso_time": "2025-11-29T02:30:21Z"
+  },
+  {
+    "timestamp": 1764383423.196586,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1155,
+        "k": 195
+      }
+    },
+    "iso_time": "2025-11-29T02:30:23Z"
+  },
+  {
+    "timestamp": 1764383424.267852,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 221
+    },
+    "iso_time": "2025-11-29T02:30:24Z"
+  },
+  {
+    "timestamp": 1764383424.268022,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the expansion of (a x + b)^1155, where a and b are relatively prime positive integers. Suppose the three consec",
+      "correct_answer": "221",
+      "seed_value": 137021348
+    },
+    "iso_time": "2025-11-29T02:30:24Z"
+  },
+  {
+    "timestamp": 1764383424.268064,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "217",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:30:24Z"
+  },
+  {
+    "timestamp": 1764383470.992018,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "229",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:31:10Z"
+  },
+  {
+    "timestamp": 1764383513.356894,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "221",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:31:53Z"
+  },
+  {
+    "timestamp": 1764383556.352343,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "219",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:32:36Z"
+  },
+  {
+    "timestamp": 1764383611.32412,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "221",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:33:31Z"
+  },
+  {
+    "timestamp": 1764383715.691134,
+    "seed_id": "2000-I-3::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-3::2000_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:35:15Z"
+  },
+  {
+    "timestamp": 1764383715.6912441,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-3::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 156073415
+    },
+    "iso_time": "2025-11-29T02:35:15Z"
+  },
+  {
+    "timestamp": 1764383717.056248,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 483,
+        "k": 195
+      }
+    },
+    "iso_time": "2025-11-29T02:35:17Z"
+  },
+  {
+    "timestamp": 1764383718.121254,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 55
+    },
+    "iso_time": "2025-11-29T02:35:18Z"
+  },
+  {
+    "timestamp": 1764383718.121404,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the expansion of (a x + b)^483, where a and b are relatively prime positive integers. Suppose the three consecu",
+      "correct_answer": "55",
+      "seed_value": 156073415
+    },
+    "iso_time": "2025-11-29T02:35:18Z"
+  },
+  {
+    "timestamp": 1764383718.121446,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "53",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:35:18Z"
+  },
+  {
+    "timestamp": 1764383789.519296,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "49",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:36:29Z"
+  },
+  {
+    "timestamp": 1764383841.414963,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "55",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:37:21Z"
+  },
+  {
+    "timestamp": 1764383881.8836532,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "57",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:38:01Z"
+  },
+  {
+    "timestamp": 1764383951.053479,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "55",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:39:11Z"
+  },
+  {
+    "timestamp": 1764383997.700765,
+    "seed_id": "2000-I-3::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-3::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:39:57Z"
+  },
+  {
+    "timestamp": 1764383997.7008939,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-3::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 778584541
+    },
+    "iso_time": "2025-11-29T02:39:57Z"
+  },
+  {
+    "timestamp": 1764383999.0240488,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 899,
+        "k": 675
+      }
+    },
+    "iso_time": "2025-11-29T02:39:59Z"
+  },
+  {
+    "timestamp": 1764384000.09434,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17
+    },
+    "iso_time": "2025-11-29T02:40:00Z"
+  },
+  {
+    "timestamp": 1764384000.0945349,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the expansion of (a x + b)^899, where a and b are relatively prime positive integers. Suppose the three consecu",
+      "correct_answer": "17",
+      "seed_value": 778584541
+    },
+    "iso_time": "2025-11-29T02:40:00Z"
+  },
+  {
+    "timestamp": 1764384000.0945868,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:40:00Z"
+  },
+  {
+    "timestamp": 1764384039.5112891,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:40:39Z"
+  },
+  {
+    "timestamp": 1764384090.759487,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:41:30Z"
+  },
+  {
+    "timestamp": 1764384402.583245,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "17",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:46:42Z"
+  },
+  {
+    "timestamp": 1764384442.930366,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "21",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:47:22Z"
+  },
+  {
+    "timestamp": 1764384476.718179,
+    "seed_id": "2000-I-3::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-3::2000_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:47:56Z"
+  },
+  {
+    "timestamp": 1764384476.71826,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-3::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 257792601
+    },
+    "iso_time": "2025-11-29T02:47:56Z"
+  },
+  {
+    "timestamp": 1764384477.969467,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 323,
+        "k": 35
+      }
+    },
+    "iso_time": "2025-11-29T02:47:57Z"
+  },
+  {
+    "timestamp": 1764384479.03438,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 39
+    },
+    "iso_time": "2025-11-29T02:47:59Z"
+  },
+  {
+    "timestamp": 1764384479.034529,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the expansion of (a x + b)^323, where a and b are relatively prime positive integers. Suppose the three consecu",
+      "correct_answer": "39",
+      "seed_value": 257792601
+    },
+    "iso_time": "2025-11-29T02:47:59Z"
+  },
+  {
+    "timestamp": 1764384479.034571,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "39",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:47:59Z"
+  },
+  {
+    "timestamp": 1764384549.0114229,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "37",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:49:09Z"
+  },
+  {
+    "timestamp": 1764384594.825483,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "39",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:49:54Z"
+  },
+  {
+    "timestamp": 1764384619.536978,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "45",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:50:19Z"
+  },
+  {
+    "timestamp": 1764384687.56146,
+    "seed_id": "2000-I-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "44",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:51:27Z"
+  },
+  {
+    "timestamp": 1764384716.9400609,
+    "seed_id": "2000-I-3::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-3::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:51:56Z"
+  }
+]

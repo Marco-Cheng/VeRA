@@ -1,0 +1,2012 @@
+[
+  {
+    "timestamp": 1764070992.515599,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1995,
+      "question_preview": "For how many ordered pairs of positive integers $(x,y),$ with $y<x\\le 100,$ are both $\\frac xy$ and $\\frac{x+1}{y+1}$ in",
+      "answer": "85",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-25T11:43:12Z"
+  },
+  {
+    "timestamp": 1764070992.5156648,
+    "seed_id": "1995-8::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-25T11:43:12Z"
+  },
+  {
+    "timestamp": 1764070992.515705,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "For how many ordered pairs of positive integers $(x,y),$ with $y<x\\le 100,$ are both $\\frac xy$ and $\\frac{x+1}{y+1}$ integers?",
+      "answer": "85",
+      "example_id": "1995-8::1995"
+    },
+    "iso_time": "2025-11-25T11:43:12Z"
+  },
+  {
+    "timestamp": 1764071063.66505,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 648415463
+    },
+    "iso_time": "2025-11-25T11:44:23Z"
+  },
+  {
+    "timestamp": 1764071064.47418,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 61417,
+        "a": 1,
+        "b": 2,
+        "c": 4
+      }
+    },
+    "iso_time": "2025-11-25T11:44:24Z"
+  },
+  {
+    "timestamp": 1764071065.227068,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 708
+    },
+    "iso_time": "2025-11-25T11:44:25Z"
+  },
+  {
+    "timestamp": 1764071065.227239,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let 61417 be a positive integer and let 1, 2, 4 be distinct positive integers. Determine the number of ordered pairs of ",
+      "correct_answer": "708",
+      "seed_value": 648415463
+    },
+    "iso_time": "2025-11-25T11:44:25Z"
+  },
+  {
+    "timestamp": 1764071065.227284,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "712",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T11:44:25Z"
+  },
+  {
+    "timestamp": 1764071125.102106,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "717",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T11:45:25Z"
+  },
+  {
+    "timestamp": 1764071758.092393,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "716",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T11:55:58Z"
+  },
+  {
+    "timestamp": 1764071791.864987,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "708",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T11:56:31Z"
+  },
+  {
+    "timestamp": 1764071830.672212,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "708",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T11:57:10Z"
+  },
+  {
+    "timestamp": 1764071879.9590342,
+    "seed_id": "1995-8::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T11:57:59Z"
+  },
+  {
+    "timestamp": 1764071879.959166,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1778243260
+    },
+    "iso_time": "2025-11-25T11:57:59Z"
+  },
+  {
+    "timestamp": 1764071880.772649,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 134714,
+        "a": 1,
+        "b": 2,
+        "c": 4
+      }
+    },
+    "iso_time": "2025-11-25T11:58:00Z"
+  },
+  {
+    "timestamp": 1764071881.5305269,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1556
+    },
+    "iso_time": "2025-11-25T11:58:01Z"
+  },
+  {
+    "timestamp": 1764071881.530686,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let 134714 be a positive integer and let 1, 2, 4 be distinct positive integers. Determine the number of ordered pairs of",
+      "correct_answer": "1556",
+      "seed_value": 1778243260
+    },
+    "iso_time": "2025-11-25T11:58:01Z"
+  },
+  {
+    "timestamp": 1764071881.5307462,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1549",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T11:58:01Z"
+  },
+  {
+    "timestamp": 1764071925.502146,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1560",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T11:58:45Z"
+  },
+  {
+    "timestamp": 1764072306.132898,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1556",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T12:05:06Z"
+  },
+  {
+    "timestamp": 1764072366.451576,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1556",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T12:06:06Z"
+  },
+  {
+    "timestamp": 1764073634.7062201,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1551",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T12:27:14Z"
+  },
+  {
+    "timestamp": 1764073703.475722,
+    "seed_id": "1995-8::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T12:28:23Z"
+  },
+  {
+    "timestamp": 1764073703.475942,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 682823361
+    },
+    "iso_time": "2025-11-25T12:28:23Z"
+  },
+  {
+    "timestamp": 1764073704.2905998,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 179758,
+        "a": 1,
+        "b": 2,
+        "c": 3
+      }
+    },
+    "iso_time": "2025-11-25T12:28:24Z"
+  },
+  {
+    "timestamp": 1764073705.0385091,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 398
+    },
+    "iso_time": "2025-11-25T12:28:25Z"
+  },
+  {
+    "timestamp": 1764073705.03867,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let 179758 be a positive integer and let 1, 2, 3 be distinct positive integers. Determine the number of ordered pairs of",
+      "correct_answer": "398",
+      "seed_value": 682823361
+    },
+    "iso_time": "2025-11-25T12:28:25Z"
+  },
+  {
+    "timestamp": 1764073705.038713,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "398",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T12:28:25Z"
+  },
+  {
+    "timestamp": 1764073821.7609012,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "406",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T12:30:21Z"
+  },
+  {
+    "timestamp": 1764073878.801193,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "399",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T12:31:18Z"
+  },
+  {
+    "timestamp": 1764074063.0610938,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "396",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T12:34:23Z"
+  },
+  {
+    "timestamp": 1764075063.925251,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "398",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T12:51:03Z"
+  },
+  {
+    "timestamp": 1764075200.449219,
+    "seed_id": "1995-8::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T12:53:20Z"
+  },
+  {
+    "timestamp": 1764075200.4494421,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 747550635
+    },
+    "iso_time": "2025-11-25T12:53:20Z"
+  },
+  {
+    "timestamp": 1764075201.270118,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 135830,
+        "a": 1,
+        "b": 2,
+        "c": 8
+      }
+    },
+    "iso_time": "2025-11-25T12:53:21Z"
+  },
+  {
+    "timestamp": 1764075202.019507,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 251
+    },
+    "iso_time": "2025-11-25T12:53:22Z"
+  },
+  {
+    "timestamp": 1764075202.0196722,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let 135830 be a positive integer and let 1, 2, 8 be distinct positive integers. Determine the number of ordered pairs of",
+      "correct_answer": "251",
+      "seed_value": 747550635
+    },
+    "iso_time": "2025-11-25T12:53:22Z"
+  },
+  {
+    "timestamp": 1764075202.019713,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "252",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T12:53:22Z"
+  },
+  {
+    "timestamp": 1764075311.7026381,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T12:55:11Z"
+  },
+  {
+    "timestamp": 1764075428.954575,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "257",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T12:57:08Z"
+  },
+  {
+    "timestamp": 1764075480.077767,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "251",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T12:58:00Z"
+  },
+  {
+    "timestamp": 1764075738.6981509,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "251",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T13:02:18Z"
+  },
+  {
+    "timestamp": 1764075802.7230499,
+    "seed_id": "1995-8::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T13:03:22Z"
+  },
+  {
+    "timestamp": 1764075802.723317,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 930737089
+    },
+    "iso_time": "2025-11-25T13:03:22Z"
+  },
+  {
+    "timestamp": 1764075803.5377011,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 172060,
+        "a": 1,
+        "b": 2,
+        "c": 3
+      }
+    },
+    "iso_time": "2025-11-25T13:03:23Z"
+  },
+  {
+    "timestamp": 1764075804.289303,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 382
+    },
+    "iso_time": "2025-11-25T13:03:24Z"
+  },
+  {
+    "timestamp": 1764075804.2894561,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let 172060 be a positive integer and let 1, 2, 3 be distinct positive integers. Determine the number of ordered pairs of",
+      "correct_answer": "382",
+      "seed_value": 930737089
+    },
+    "iso_time": "2025-11-25T13:03:24Z"
+  },
+  {
+    "timestamp": 1764075804.2895172,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "382",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T13:03:24Z"
+  },
+  {
+    "timestamp": 1764075834.8112068,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "381",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T13:03:54Z"
+  },
+  {
+    "timestamp": 1764075874.3869271,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "387",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T13:04:34Z"
+  },
+  {
+    "timestamp": 1764075919.837806,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "373",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T13:05:19Z"
+  },
+  {
+    "timestamp": 1764076136.9285052,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "382",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T13:08:56Z"
+  },
+  {
+    "timestamp": 1764076190.004771,
+    "seed_id": "1995-8::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T13:09:50Z"
+  },
+  {
+    "timestamp": 1764076190.005055,
+    "seed_id": "1995-8::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-25T13:09:50Z"
+  },
+  {
+    "timestamp": 1764076190.0051641,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "For how many ordered pairs of positive integers $(x,y),$ with $y<x\\le 100,$ are both $\\frac xy$ and $\\frac{x+1}{y+1}$ integers?",
+      "answer": "85",
+      "example_id": "1995-8::1995"
+    },
+    "iso_time": "2025-11-25T13:09:50Z"
+  },
+  {
+    "timestamp": 1764077753.122108,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 414780239
+    },
+    "iso_time": "2025-11-25T13:35:53Z"
+  },
+  {
+    "timestamp": 1764077753.914561,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 226113,
+        "s1": 4,
+        "s2": 5
+      }
+    },
+    "iso_time": "2025-11-25T13:35:53Z"
+  },
+  {
+    "timestamp": 1764077754.663736,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 93
+    },
+    "iso_time": "2025-11-25T13:35:54Z"
+  },
+  {
+    "timestamp": 1764077754.663907,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n = 226113, and let a = 4 and b = 5 be distinct positive integers. Determine the number of ordered pairs of positive",
+      "correct_answer": "93",
+      "seed_value": 414780239
+    },
+    "iso_time": "2025-11-25T13:35:54Z"
+  },
+  {
+    "timestamp": 1764077754.6639612,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "93",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T13:35:54Z"
+  },
+  {
+    "timestamp": 1764077832.988045,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "101",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T13:37:12Z"
+  },
+  {
+    "timestamp": 1764077890.2301152,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "91",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T13:38:10Z"
+  },
+  {
+    "timestamp": 1764077961.090392,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "88",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T13:39:21Z"
+  },
+  {
+    "timestamp": 1764078085.710794,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "93",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T13:41:25Z"
+  },
+  {
+    "timestamp": 1764078191.387559,
+    "seed_id": "1995-8::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T13:43:11Z"
+  },
+  {
+    "timestamp": 1764078191.387823,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 2055275187
+    },
+    "iso_time": "2025-11-25T13:43:11Z"
+  },
+  {
+    "timestamp": 1764078192.149292,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 663597,
+        "s1": 5,
+        "s2": 7
+      }
+    },
+    "iso_time": "2025-11-25T13:43:12Z"
+  },
+  {
+    "timestamp": 1764078192.900154,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 164
+    },
+    "iso_time": "2025-11-25T13:43:12Z"
+  },
+  {
+    "timestamp": 1764078192.900322,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n = 663597, and let a = 5 and b = 7 be distinct positive integers. Determine the number of ordered pairs of positive",
+      "correct_answer": "164",
+      "seed_value": 2055275187
+    },
+    "iso_time": "2025-11-25T13:43:12Z"
+  },
+  {
+    "timestamp": 1764078192.900383,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "169",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T13:43:12Z"
+  },
+  {
+    "timestamp": 1764078944.421207,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "164",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T13:55:44Z"
+  },
+  {
+    "timestamp": 1764080218.725528,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "156",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T14:16:58Z"
+  },
+  {
+    "timestamp": 1764080283.002783,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "166",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T14:18:03Z"
+  },
+  {
+    "timestamp": 1764080356.846268,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "164",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T14:19:16Z"
+  },
+  {
+    "timestamp": 1764080954.819018,
+    "seed_id": "1995-8::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T14:29:14Z"
+  },
+  {
+    "timestamp": 1764080954.819335,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1941478819
+    },
+    "iso_time": "2025-11-25T14:29:14Z"
+  },
+  {
+    "timestamp": 1764080955.833782,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1332663,
+        "s1": 4,
+        "s2": 5
+      }
+    },
+    "iso_time": "2025-11-25T14:29:15Z"
+  },
+  {
+    "timestamp": 1764080956.656331,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 255
+    },
+    "iso_time": "2025-11-25T14:29:16Z"
+  },
+  {
+    "timestamp": 1764080956.656522,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n = 1332663, and let a = 4 and b = 5 be distinct positive integers. Determine the number of ordered pairs of positiv",
+      "correct_answer": "255",
+      "seed_value": 1941478819
+    },
+    "iso_time": "2025-11-25T14:29:16Z"
+  },
+  {
+    "timestamp": 1764080956.656597,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "247",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T14:29:16Z"
+  },
+  {
+    "timestamp": 1764081955.579571,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "246",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T14:45:55Z"
+  },
+  {
+    "timestamp": 1764082014.35937,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "255",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T14:46:54Z"
+  },
+  {
+    "timestamp": 1764082082.3193758,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "255",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T14:48:02Z"
+  },
+  {
+    "timestamp": 1764082128.291115,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "253",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T14:48:48Z"
+  },
+  {
+    "timestamp": 1764082172.2223969,
+    "seed_id": "1995-8::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T14:49:32Z"
+  },
+  {
+    "timestamp": 1764082172.222464,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 134344741
+    },
+    "iso_time": "2025-11-25T14:49:32Z"
+  },
+  {
+    "timestamp": 1764082173.354951,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1333064,
+        "s1": 5,
+        "s2": 7
+      }
+    },
+    "iso_time": "2025-11-25T14:49:33Z"
+  },
+  {
+    "timestamp": 1764082174.392576,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 238
+    },
+    "iso_time": "2025-11-25T14:49:34Z"
+  },
+  {
+    "timestamp": 1764082174.392855,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n = 1333064, and let a = 5 and b = 7 be distinct positive integers. Determine the number of ordered pairs of positiv",
+      "correct_answer": "238",
+      "seed_value": 134344741
+    },
+    "iso_time": "2025-11-25T14:49:34Z"
+  },
+  {
+    "timestamp": 1764082174.392988,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "239",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T14:49:34Z"
+  },
+  {
+    "timestamp": 1764082233.196811,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "238",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T14:50:33Z"
+  },
+  {
+    "timestamp": 1764082336.2959092,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "238",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T14:52:16Z"
+  },
+  {
+    "timestamp": 1764082418.997867,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "241",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T14:53:38Z"
+  },
+  {
+    "timestamp": 1764082494.305244,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "230",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T14:54:54Z"
+  },
+  {
+    "timestamp": 1764083112.810784,
+    "seed_id": "1995-8::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T15:05:12Z"
+  },
+  {
+    "timestamp": 1764083112.81086,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 1149362969
+    },
+    "iso_time": "2025-11-25T15:05:12Z"
+  },
+  {
+    "timestamp": 1764083113.95664,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1509106,
+        "s1": 2,
+        "s2": 3
+      }
+    },
+    "iso_time": "2025-11-25T15:05:13Z"
+  },
+  {
+    "timestamp": 1764083114.876702,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 535
+    },
+    "iso_time": "2025-11-25T15:05:14Z"
+  },
+  {
+    "timestamp": 1764083114.876895,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n = 1509106, and let a = 2 and b = 3 be distinct positive integers. Determine the number of ordered pairs of positiv",
+      "correct_answer": "535",
+      "seed_value": 1149362969
+    },
+    "iso_time": "2025-11-25T15:05:14Z"
+  },
+  {
+    "timestamp": 1764083114.87698,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "535",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T15:05:14Z"
+  },
+  {
+    "timestamp": 1764083279.827163,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "527",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T15:07:59Z"
+  },
+  {
+    "timestamp": 1764083342.2908711,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "542",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T15:09:02Z"
+  },
+  {
+    "timestamp": 1764083451.2996988,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "535",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T15:10:51Z"
+  },
+  {
+    "timestamp": 1764083889.9592168,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "540",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T15:18:09Z"
+  },
+  {
+    "timestamp": 1764084024.860707,
+    "seed_id": "1995-8::1995",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-25T15:20:24Z"
+  },
+  {
+    "timestamp": 1764084024.8607621,
+    "seed_id": "1995-8::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-25T15:20:24Z"
+  },
+  {
+    "timestamp": 1764084024.860778,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "For how many ordered pairs of positive integers $(x,y),$ with $y<x\\le 100,$ are both $\\frac xy$ and $\\frac{x+1}{y+1}$ integers?",
+      "answer": "85",
+      "example_id": "1995-8::1995"
+    },
+    "iso_time": "2025-11-25T15:20:24Z"
+  },
+  {
+    "timestamp": 1764084110.697315,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 50627594
+    },
+    "iso_time": "2025-11-25T15:21:50Z"
+  },
+  {
+    "timestamp": 1764084111.7825322,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4120,
+        "b": 6
+      }
+    },
+    "iso_time": "2025-11-25T15:21:51Z"
+  },
+  {
+    "timestamp": 1764084112.719077,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 938
+    },
+    "iso_time": "2025-11-25T15:21:52Z"
+  },
+  {
+    "timestamp": 1764084112.719316,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let positive integers 4120 and 6 with b ≥ 2 be fixed. Determine the number of ordered pairs of positive integers (x, y) ",
+      "correct_answer": "938",
+      "seed_value": 50627594
+    },
+    "iso_time": "2025-11-25T15:21:52Z"
+  },
+  {
+    "timestamp": 1764084112.7194,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "938",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T15:21:52Z"
+  },
+  {
+    "timestamp": 1764084357.554256,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "936",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T15:25:57Z"
+  },
+  {
+    "timestamp": 1764084490.803807,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "938",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T15:28:10Z"
+  },
+  {
+    "timestamp": 1764085867.910614,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "947",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T15:51:07Z"
+  },
+  {
+    "timestamp": 1764086530.8849568,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "939",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T16:02:10Z"
+  },
+  {
+    "timestamp": 1764086711.280715,
+    "seed_id": "1995-8::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-8::1995_prompt03-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-25T16:05:11Z"
+  },
+  {
+    "timestamp": 1764086711.280766,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 351381996
+    },
+    "iso_time": "2025-11-25T16:05:11Z"
+  },
+  {
+    "timestamp": 1764086712.461542,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1153,
+        "b": 6
+      }
+    },
+    "iso_time": "2025-11-25T16:05:12Z"
+  },
+  {
+    "timestamp": 1764086713.392151,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 254
+    },
+    "iso_time": "2025-11-25T16:05:13Z"
+  },
+  {
+    "timestamp": 1764086713.392338,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let positive integers 1153 and 6 with b ≥ 2 be fixed. Determine the number of ordered pairs of positive integers (x, y) ",
+      "correct_answer": "254",
+      "seed_value": 351381996
+    },
+    "iso_time": "2025-11-25T16:05:13Z"
+  },
+  {
+    "timestamp": 1764086713.3923929,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "262",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T16:05:13Z"
+  },
+  {
+    "timestamp": 1764087512.0431669,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "254",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T16:18:32Z"
+  },
+  {
+    "timestamp": 1764088395.577661,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "254",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T16:33:15Z"
+  },
+  {
+    "timestamp": 1764089207.692111,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "259",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T16:46:47Z"
+  },
+  {
+    "timestamp": 1764089714.3186162,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "256",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T16:55:14Z"
+  },
+  {
+    "timestamp": 1764089860.2606258,
+    "seed_id": "1995-8::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-8::1995_prompt03-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T16:57:40Z"
+  },
+  {
+    "timestamp": 1764089860.260674,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1821452216
+    },
+    "iso_time": "2025-11-25T16:57:40Z"
+  },
+  {
+    "timestamp": 1764089861.506743,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4830,
+        "b": 4
+      }
+    },
+    "iso_time": "2025-11-25T16:57:41Z"
+  },
+  {
+    "timestamp": 1764089862.482396,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1658
+    },
+    "iso_time": "2025-11-25T16:57:42Z"
+  },
+  {
+    "timestamp": 1764089862.4825659,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let positive integers 4830 and 4 with b ≥ 2 be fixed. Determine the number of ordered pairs of positive integers (x, y) ",
+      "correct_answer": "1658",
+      "seed_value": 1821452216
+    },
+    "iso_time": "2025-11-25T16:57:42Z"
+  },
+  {
+    "timestamp": 1764089862.4826229,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1658",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T16:57:42Z"
+  },
+  {
+    "timestamp": 1764089940.412212,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1654",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T16:59:00Z"
+  },
+  {
+    "timestamp": 1764090075.682473,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1652",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:01:15Z"
+  },
+  {
+    "timestamp": 1764090175.693612,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1665",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:02:55Z"
+  },
+  {
+    "timestamp": 1764090267.5710669,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1658",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T17:04:27Z"
+  },
+  {
+    "timestamp": 1764090349.1723819,
+    "seed_id": "1995-8::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-8::1995_prompt03-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T17:05:49Z"
+  },
+  {
+    "timestamp": 1764090349.1724591,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 986967838
+    },
+    "iso_time": "2025-11-25T17:05:49Z"
+  },
+  {
+    "timestamp": 1764090350.133634,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 773,
+        "b": 8
+      }
+    },
+    "iso_time": "2025-11-25T17:05:50Z"
+  },
+  {
+    "timestamp": 1764090351.073109,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 110
+    },
+    "iso_time": "2025-11-25T17:05:51Z"
+  },
+  {
+    "timestamp": 1764090351.073306,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let positive integers 773 and 8 with b ≥ 2 be fixed. Determine the number of ordered pairs of positive integers (x, y) w",
+      "correct_answer": "110",
+      "seed_value": 986967838
+    },
+    "iso_time": "2025-11-25T17:05:51Z"
+  },
+  {
+    "timestamp": 1764090351.073374,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "110",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T17:05:51Z"
+  },
+  {
+    "timestamp": 1764090433.8697321,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "115",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:07:13Z"
+  },
+  {
+    "timestamp": 1764090961.948566,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:16:01Z"
+  },
+  {
+    "timestamp": 1764091090.154923,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "110",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T17:18:10Z"
+  },
+  {
+    "timestamp": 1764091146.883575,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "119",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:19:06Z"
+  },
+  {
+    "timestamp": 1764091240.990413,
+    "seed_id": "1995-8::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-8::1995_prompt03-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T17:20:40Z"
+  },
+  {
+    "timestamp": 1764091240.9904761,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-8::1995_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 120383659
+    },
+    "iso_time": "2025-11-25T17:20:40Z"
+  },
+  {
+    "timestamp": 1764091241.9702988,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 3463,
+        "b": 10
+      }
+    },
+    "iso_time": "2025-11-25T17:20:41Z"
+  },
+  {
+    "timestamp": 1764091242.9163342,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 709
+    },
+    "iso_time": "2025-11-25T17:20:42Z"
+  },
+  {
+    "timestamp": 1764091242.916544,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let positive integers 3463 and 10 with b ≥ 2 be fixed. Determine the number of ordered pairs of positive integers (x, y)",
+      "correct_answer": "709",
+      "seed_value": 120383659
+    },
+    "iso_time": "2025-11-25T17:20:42Z"
+  },
+  {
+    "timestamp": 1764091242.916597,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "709",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T17:20:42Z"
+  },
+  {
+    "timestamp": 1764092389.391367,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "700",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:39:49Z"
+  },
+  {
+    "timestamp": 1764092511.368503,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "709",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T17:41:51Z"
+  },
+  {
+    "timestamp": 1764092591.7452438,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "716",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:43:11Z"
+  },
+  {
+    "timestamp": 1764092689.531992,
+    "seed_id": "1995-8::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "710",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:44:49Z"
+  },
+  {
+    "timestamp": 1764092790.115289,
+    "seed_id": "1995-8::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-8::1995_prompt03-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T17:46:30Z"
+  }
+]

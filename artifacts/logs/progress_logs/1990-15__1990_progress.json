@@ -1,0 +1,704 @@
+[
+  {
+    "timestamp": 1763292193.54276,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1990,
+      "question_preview": "Find $ax^5 + by^5$ if the real numbers $a,b,x,$ and $y$ satisfy the equations \\begin{align*} ax + by &= 3, \\\\ ax^2 + by^",
+      "answer": "20",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-16T11:23:13Z"
+  },
+  {
+    "timestamp": 1763292193.542794,
+    "seed_id": "1990-15::1990",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-16T11:23:13Z"
+  },
+  {
+    "timestamp": 1763292193.5428128,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find $ax^5 + by^5$ if the real numbers $a,b,x,$ and $y$ satisfy the equations \\begin{align*} ax + by &= 3, \\\\ ax^2 + by^2 &= 7, \\\\ ax^3 + by^3 &= 16, \\\\ ax^4 + by^4 &= 42. \\end{align*}",
+      "answer": "20",
+      "example_id": "1990-15::1990"
+    },
+    "iso_time": "2025-11-16T11:23:13Z"
+  },
+  {
+    "timestamp": 1763292414.217678,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-15::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 709340753
+    },
+    "iso_time": "2025-11-16T11:26:54Z"
+  },
+  {
+    "timestamp": 1763292414.9858181,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s1": -12,
+        "s2": -26,
+        "s3": -84,
+        "s4": -242,
+        "s5": -732,
+        "s7": -6564,
+        "e2": -1
+      }
+    },
+    "iso_time": "2025-11-16T11:26:54Z"
+  },
+  {
+    "timestamp": 1763292415.744912,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -2186
+    },
+    "iso_time": "2025-11-16T11:26:55Z"
+  },
+  {
+    "timestamp": 1763292415.745066,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A team of biologists is studying three species of bacteria. The population of each species grows geometrically. Let the ",
+      "correct_answer": "-2186",
+      "seed_value": 709340753
+    },
+    "iso_time": "2025-11-16T11:26:55Z"
+  },
+  {
+    "timestamp": 1763292415.7451038,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-2184",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T11:26:55Z"
+  },
+  {
+    "timestamp": 1763292563.882634,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-2186",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T11:29:23Z"
+  },
+  {
+    "timestamp": 1763292631.9949172,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-2186",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T11:30:31Z"
+  },
+  {
+    "timestamp": 1763292697.520585,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-2180",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T11:31:37Z"
+  },
+  {
+    "timestamp": 1763292833.4016519,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T11:33:53Z"
+  },
+  {
+    "timestamp": 1763292968.9584699,
+    "seed_id": "1990-15::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-15::1990_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T11:36:08Z"
+  },
+  {
+    "timestamp": 1763292968.958661,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-15::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1747383758
+    },
+    "iso_time": "2025-11-16T11:36:08Z"
+  },
+  {
+    "timestamp": 1763292969.745715,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s1": -6,
+        "s2": 12,
+        "s3": -84,
+        "s4": 48,
+        "s5": -876,
+        "s7": -8364,
+        "e2": -9
+      }
+    },
+    "iso_time": "2025-11-16T11:36:09Z"
+  },
+  {
+    "timestamp": 1763292970.499818,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 192
+    },
+    "iso_time": "2025-11-16T11:36:10Z"
+  },
+  {
+    "timestamp": 1763292970.4999611,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A team of biologists is studying three species of bacteria. The population of each species grows geometrically. Let the ",
+      "correct_answer": "192",
+      "seed_value": 1747383758
+    },
+    "iso_time": "2025-11-16T11:36:10Z"
+  },
+  {
+    "timestamp": 1763292970.5000079,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "192",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T11:36:10Z"
+  },
+  {
+    "timestamp": 1763293020.551973,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "190",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T11:37:00Z"
+  },
+  {
+    "timestamp": 1763293156.06415,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "195",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T11:39:16Z"
+  },
+  {
+    "timestamp": 1763293262.125676,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "198",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T11:41:02Z"
+  },
+  {
+    "timestamp": 1763293381.6537,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "192",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T11:43:01Z"
+  },
+  {
+    "timestamp": 1763293482.005259,
+    "seed_id": "1990-15::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-15::1990_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T11:44:42Z"
+  },
+  {
+    "timestamp": 1763293482.005465,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-15::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1302409825
+    },
+    "iso_time": "2025-11-16T11:44:42Z"
+  },
+  {
+    "timestamp": 1763293482.911944,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s1": -4,
+        "s2": 24,
+        "s3": -100,
+        "s4": 432,
+        "s5": -1804,
+        "s7": -30580,
+        "e2": 5
+      }
+    },
+    "iso_time": "2025-11-16T11:44:42Z"
+  },
+  {
+    "timestamp": 1763293483.653478,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7464
+    },
+    "iso_time": "2025-11-16T11:44:43Z"
+  },
+  {
+    "timestamp": 1763293483.653631,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A team of biologists is studying three species of bacteria. The population of each species grows geometrically. Let the ",
+      "correct_answer": "7464",
+      "seed_value": 1302409825
+    },
+    "iso_time": "2025-11-16T11:44:43Z"
+  },
+  {
+    "timestamp": 1763293483.653687,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7472",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T11:44:43Z"
+  },
+  {
+    "timestamp": 1763293594.030292,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7464",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T11:46:34Z"
+  },
+  {
+    "timestamp": 1763293667.625717,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7455",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T11:47:47Z"
+  },
+  {
+    "timestamp": 1763293818.184638,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7464",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T11:50:18Z"
+  },
+  {
+    "timestamp": 1763293893.652236,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7467",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T11:51:33Z"
+  },
+  {
+    "timestamp": 1763294044.181567,
+    "seed_id": "1990-15::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-15::1990_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T11:54:04Z"
+  },
+  {
+    "timestamp": 1763294044.1817658,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-15::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1083431572
+    },
+    "iso_time": "2025-11-16T11:54:04Z"
+  },
+  {
+    "timestamp": 1763294044.934046,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s1": 4,
+        "s2": 12,
+        "s3": 22,
+        "s4": 48,
+        "s5": 94,
+        "s7": 382,
+        "e2": -1
+      }
+    },
+    "iso_time": "2025-11-16T11:54:04Z"
+  },
+  {
+    "timestamp": 1763294045.675789,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 192
+    },
+    "iso_time": "2025-11-16T11:54:05Z"
+  },
+  {
+    "timestamp": 1763294045.67594,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A team of biologists is studying three species of bacteria. The population of each species grows geometrically. Let the ",
+      "correct_answer": "192",
+      "seed_value": 1083431572
+    },
+    "iso_time": "2025-11-16T11:54:05Z"
+  },
+  {
+    "timestamp": 1763294045.675982,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "192",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T11:54:05Z"
+  },
+  {
+    "timestamp": 1763294097.691361,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "194",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T11:54:57Z"
+  },
+  {
+    "timestamp": 1763294222.1543,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "200",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T11:57:02Z"
+  },
+  {
+    "timestamp": 1763294362.428397,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "192",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T11:59:22Z"
+  },
+  {
+    "timestamp": 1763294410.0429828,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "185",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:00:10Z"
+  },
+  {
+    "timestamp": 1763294494.3844821,
+    "seed_id": "1990-15::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-15::1990_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T12:01:34Z"
+  },
+  {
+    "timestamp": 1763294494.3846679,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-15::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1279334550
+    },
+    "iso_time": "2025-11-16T12:01:34Z"
+  },
+  {
+    "timestamp": 1763294495.1457422,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s1": 2,
+        "s2": 8,
+        "s3": -10,
+        "s4": 32,
+        "s5": -58,
+        "s7": -250,
+        "e2": -1
+      }
+    },
+    "iso_time": "2025-11-16T12:01:35Z"
+  },
+  {
+    "timestamp": 1763294495.886431,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 128
+    },
+    "iso_time": "2025-11-16T12:01:35Z"
+  },
+  {
+    "timestamp": 1763294495.8865888,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A team of biologists is studying three species of bacteria. The population of each species grows geometrically. Let the ",
+      "correct_answer": "128",
+      "seed_value": 1279334550
+    },
+    "iso_time": "2025-11-16T12:01:35Z"
+  },
+  {
+    "timestamp": 1763294495.886639,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "128",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T12:01:35Z"
+  },
+  {
+    "timestamp": 1763294548.0103629,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "122",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:02:28Z"
+  },
+  {
+    "timestamp": 1763294648.63025,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "128",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T12:04:08Z"
+  },
+  {
+    "timestamp": 1763294692.866556,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "131",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:04:52Z"
+  },
+  {
+    "timestamp": 1763294805.458731,
+    "seed_id": "1990-15::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "133",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:06:45Z"
+  },
+  {
+    "timestamp": 1763294931.895741,
+    "seed_id": "1990-15::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-15::1990_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T12:08:51Z"
+  }
+]

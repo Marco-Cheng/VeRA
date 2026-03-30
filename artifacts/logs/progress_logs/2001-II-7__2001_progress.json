@@ -1,0 +1,1358 @@
+[
+  {
+    "timestamp": 1764610799.550045,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "Let $\\triangle{PQR}$ be a right triangle with $PQ = 90$ , $PR = 120$ , and $QR = 150$ . Let $C_{1}$ be the inscribed cir",
+      "answer": "725",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T17:39:59Z"
+  },
+  {
+    "timestamp": 1764610799.550112,
+    "seed_id": "2001-II-7::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T17:39:59Z"
+  },
+  {
+    "timestamp": 1764610799.550142,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $\\triangle{PQR}$ be a right triangle with $PQ = 90$ , $PR = 120$ , and $QR = 150$ . Let $C_{1}$ be the inscribed circle. Construct $\\overline{ST}$ with $S$ on $\\overline{PR}$ and $T$ on $\\overline{QR}$ , such that $\\overline{ST}$ is perpendicular to $\\overline{PR}$ and tangent to $C_{1}$ . Construct $\\overline{UV}$ with $U$ on $\\overline{PQ}$ and $V$ on $\\overline{QR}$ such that $\\overline{UV}$ is perpendicular to $\\overline{PQ}$ and tangent to $C_{1}$ . Let $C_{2}$ be the inscribed circle of $\\triangle{RST}$ and $C_{3}$ the inscribed circle of $\\triangle{QUV}$ . The distance between the centers of $C_{2}$ and $C_{3}$ can be written as $\\sqrt {10n}$ . What is $n$ ?",
+      "answer": "725",
+      "example_id": "2001-II-7::2001"
+    },
+    "iso_time": "2025-12-01T17:39:59Z"
+  },
+  {
+    "timestamp": 1764610911.287877,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-7::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1055774644
+    },
+    "iso_time": "2025-12-01T17:41:51Z"
+  },
+  {
+    "timestamp": 1764610912.657896,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_leg": 15,
+        "b_leg": 8,
+        "t1_num": 2,
+        "t1_den": 3,
+        "t2_num": 1,
+        "t2_den": 2
+      }
+    },
+    "iso_time": "2025-12-01T17:41:52Z"
+  },
+  {
+    "timestamp": 1764610913.7891579,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "6001/128"
+    },
+    "iso_time": "2025-12-01T17:41:53Z"
+  },
+  {
+    "timestamp": 1764610913.78933,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle PQR be a right triangle with legs PR = 15 and PQ = 8. Let C be its inscribed circle (incircle). Define two ",
+      "correct_answer": "6001/128",
+      "seed_value": 1055774644
+    },
+    "iso_time": "2025-12-01T17:41:53Z"
+  },
+  {
+    "timestamp": 1764610913.789388,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6001/128 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:41:53Z"
+  },
+  {
+    "timestamp": 1764610953.643553,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6001/128 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:42:33Z"
+  },
+  {
+    "timestamp": 1764610993.1689758,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6001/128",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T17:43:13Z"
+  },
+  {
+    "timestamp": 1764611037.392381,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6001/128",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T17:43:57Z"
+  },
+  {
+    "timestamp": 1764611074.685472,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6001/128 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:44:34Z"
+  },
+  {
+    "timestamp": 1764611111.184541,
+    "seed_id": "2001-II-7::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-12-01T17:45:11Z"
+  },
+  {
+    "timestamp": 1764611111.184798,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-7::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1326338090
+    },
+    "iso_time": "2025-12-01T17:45:11Z"
+  },
+  {
+    "timestamp": 1764611112.470058,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_leg": 19,
+        "b_leg": 180,
+        "t1_num": 1,
+        "t1_den": 1,
+        "t2_num": 3,
+        "t2_den": 5
+      }
+    },
+    "iso_time": "2025-12-01T17:45:12Z"
+  },
+  {
+    "timestamp": 1764611113.6856372,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "134705268/225625"
+    },
+    "iso_time": "2025-12-01T17:45:13Z"
+  },
+  {
+    "timestamp": 1764611113.6858099,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle PQR be a right triangle with legs PR = 19 and PQ = 180. Let C be its inscribed circle (incircle). Define tw",
+      "correct_answer": "134705268/225625",
+      "seed_value": 1326338090
+    },
+    "iso_time": "2025-12-01T17:45:13Z"
+  },
+  {
+    "timestamp": 1764611113.685874,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "134705268/225625 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:45:13Z"
+  },
+  {
+    "timestamp": 1764611140.2190888,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "134705268/225625 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:45:40Z"
+  },
+  {
+    "timestamp": 1764611264.841095,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "134705268/225625",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T17:47:44Z"
+  },
+  {
+    "timestamp": 1764611307.200078,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "134705268/225625",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T17:48:27Z"
+  },
+  {
+    "timestamp": 1764611425.840798,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "134705268/225625 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:50:25Z"
+  },
+  {
+    "timestamp": 1764611461.613064,
+    "seed_id": "2001-II-7::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-12-01T17:51:01Z"
+  },
+  {
+    "timestamp": 1764611461.61334,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-7::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 959676603
+    },
+    "iso_time": "2025-12-01T17:51:01Z"
+  },
+  {
+    "timestamp": 1764611462.783971,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_leg": 11,
+        "b_leg": 60,
+        "t1_num": 2,
+        "t1_den": 3,
+        "t2_num": 3,
+        "t2_den": 5
+      }
+    },
+    "iso_time": "2025-12-01T17:51:02Z"
+  },
+  {
+    "timestamp": 1764611463.862282,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "164273/1089"
+    },
+    "iso_time": "2025-12-01T17:51:03Z"
+  },
+  {
+    "timestamp": 1764611463.862432,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle PQR be a right triangle with legs PR = 11 and PQ = 60. Let C be its inscribed circle (incircle). Define two",
+      "correct_answer": "164273/1089",
+      "seed_value": 959676603
+    },
+    "iso_time": "2025-12-01T17:51:03Z"
+  },
+  {
+    "timestamp": 1764611463.862487,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "164273/1089",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T17:51:03Z"
+  },
+  {
+    "timestamp": 1764611500.0731268,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "164273/1089 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:51:40Z"
+  },
+  {
+    "timestamp": 1764611649.767825,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "164273/1089 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:54:09Z"
+  },
+  {
+    "timestamp": 1764611690.588275,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "164273/1089",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T17:54:50Z"
+  },
+  {
+    "timestamp": 1764611734.66338,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "164273/1089 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:55:34Z"
+  },
+  {
+    "timestamp": 1764611768.662744,
+    "seed_id": "2001-II-7::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-12-01T17:56:08Z"
+  },
+  {
+    "timestamp": 1764611768.663031,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-7::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 194017648
+    },
+    "iso_time": "2025-12-01T17:56:08Z"
+  },
+  {
+    "timestamp": 1764611769.8011148,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_leg": 117,
+        "b_leg": 44,
+        "t1_num": 3,
+        "t1_den": 5,
+        "t2_num": 1,
+        "t2_den": 1
+      }
+    },
+    "iso_time": "2025-12-01T17:56:09Z"
+  },
+  {
+    "timestamp": 1764611771.004915,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "44767080/20449"
+    },
+    "iso_time": "2025-12-01T17:56:11Z"
+  },
+  {
+    "timestamp": 1764611771.005099,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle PQR be a right triangle with legs PR = 117 and PQ = 44. Let C be its inscribed circle (incircle). Define tw",
+      "correct_answer": "44767080/20449",
+      "seed_value": 194017648
+    },
+    "iso_time": "2025-12-01T17:56:11Z"
+  },
+  {
+    "timestamp": 1764611771.00518,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "44767080/20449 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:56:11Z"
+  },
+  {
+    "timestamp": 1764611817.2068858,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "44767080/20449",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T17:56:57Z"
+  },
+  {
+    "timestamp": 1764611873.111267,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "44767080/20449 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:57:53Z"
+  },
+  {
+    "timestamp": 1764611913.2051709,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "44767080/20449 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:58:33Z"
+  },
+  {
+    "timestamp": 1764611952.688944,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "44767080/20449",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T17:59:12Z"
+  },
+  {
+    "timestamp": 1764611993.0248,
+    "seed_id": "2001-II-7::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-12-01T17:59:53Z"
+  },
+  {
+    "timestamp": 1764611993.025117,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-7::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1866641015
+    },
+    "iso_time": "2025-12-01T17:59:53Z"
+  },
+  {
+    "timestamp": 1764611994.2085912,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_leg": 7,
+        "b_leg": 24,
+        "t1_num": 1,
+        "t1_den": 1,
+        "t2_num": 1,
+        "t2_den": 2
+      }
+    },
+    "iso_time": "2025-12-01T17:59:54Z"
+  },
+  {
+    "timestamp": 1764611995.254281,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": "365625/6272"
+    },
+    "iso_time": "2025-12-01T17:59:55Z"
+  },
+  {
+    "timestamp": 1764611995.254414,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle PQR be a right triangle with legs PR = 7 and PQ = 24. Let C be its inscribed circle (incircle). Define two ",
+      "correct_answer": "365625/6272",
+      "seed_value": 1866641015
+    },
+    "iso_time": "2025-12-01T17:59:55Z"
+  },
+  {
+    "timestamp": 1764611995.2544599,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "365625/6272 (incorrect variant 3)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T17:59:55Z"
+  },
+  {
+    "timestamp": 1764612041.321704,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "365625/6272",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:00:41Z"
+  },
+  {
+    "timestamp": 1764612082.282387,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "365625/6272 (incorrect variant 1)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:01:22Z"
+  },
+  {
+    "timestamp": 1764612128.272605,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "365625/6272 (incorrect variant 2)",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:02:08Z"
+  },
+  {
+    "timestamp": 1764612178.871063,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "365625/6272",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:02:58Z"
+  },
+  {
+    "timestamp": 1764612221.6349351,
+    "seed_id": "2001-II-7::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-12-01T18:03:41Z"
+  },
+  {
+    "timestamp": 1764612221.6350799,
+    "seed_id": "2001-II-7::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-01T18:03:41Z"
+  },
+  {
+    "timestamp": 1764612221.635144,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=2). | Judge rejected variant 2 (successes=2). | Judge rejected variant 3 (successes=2).",
+      "question": "Let $\\triangle{PQR}$ be a right triangle with $PQ = 90$ , $PR = 120$ , and $QR = 150$ . Let $C_{1}$ be the inscribed circle. Construct $\\overline{ST}$ with $S$ on $\\overline{PR}$ and $T$ on $\\overline{QR}$ , such that $\\overline{ST}$ is perpendicular to $\\overline{PR}$ and tangent to $C_{1}$ . Construct $\\overline{UV}$ with $U$ on $\\overline{PQ}$ and $V$ on $\\overline{QR}$ such that $\\overline{UV}$ is perpendicular to $\\overline{PQ}$ and tangent to $C_{1}$ . Let $C_{2}$ be the inscribed circle of $\\triangle{RST}$ and $C_{3}$ the inscribed circle of $\\triangle{QUV}$ . The distance between the centers of $C_{2}$ and $C_{3}$ can be written as $\\sqrt {10n}$ . What is $n$ ?",
+      "answer": "725",
+      "example_id": "2001-II-7::2001"
+    },
+    "iso_time": "2025-12-01T18:03:41Z"
+  },
+  {
+    "timestamp": 1764612325.0003672,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-7::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1682493807
+    },
+    "iso_time": "2025-12-01T18:05:25Z"
+  },
+  {
+    "timestamp": 1764612326.367709,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_leg": 7344,
+        "b_leg": 2610
+      }
+    },
+    "iso_time": "2025-12-01T18:05:26Z"
+  },
+  {
+    "timestamp": 1764612327.601931,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2325779
+    },
+    "iso_time": "2025-12-01T18:05:27Z"
+  },
+  {
+    "timestamp": 1764612327.602124,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle PQR be right-angled at P, with PR = 7344, PQ = 2610, and hypotenuse QR. Let C1 be its incircle of radius r.",
+      "correct_answer": "2325779",
+      "seed_value": 1682493807
+    },
+    "iso_time": "2025-12-01T18:05:27Z"
+  },
+  {
+    "timestamp": 1764612327.602197,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2325774",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:05:27Z"
+  },
+  {
+    "timestamp": 1764612401.284511,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2325782",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:06:41Z"
+  },
+  {
+    "timestamp": 1764612458.320451,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2325779",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:07:38Z"
+  },
+  {
+    "timestamp": 1764612506.17969,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2325783",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:08:26Z"
+  },
+  {
+    "timestamp": 1764612582.8309891,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2325779",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:09:42Z"
+  },
+  {
+    "timestamp": 1764612638.403761,
+    "seed_id": "2001-II-7::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-7::2001_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T18:10:38Z"
+  },
+  {
+    "timestamp": 1764612638.403981,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-7::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 787628348
+    },
+    "iso_time": "2025-12-01T18:10:38Z"
+  },
+  {
+    "timestamp": 1764612639.7001102,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_leg": 35224,
+        "b_leg": 18315
+      }
+    },
+    "iso_time": "2025-12-01T18:10:39Z"
+  },
+  {
+    "timestamp": 1764612640.8004549,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7353049
+    },
+    "iso_time": "2025-12-01T18:10:40Z"
+  },
+  {
+    "timestamp": 1764612640.8005838,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle PQR be right-angled at P, with PR = 35224, PQ = 18315, and hypotenuse QR. Let C1 be its incircle of radius ",
+      "correct_answer": "7353049",
+      "seed_value": 787628348
+    },
+    "iso_time": "2025-12-01T18:10:40Z"
+  },
+  {
+    "timestamp": 1764612640.8006358,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7353056",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:10:40Z"
+  },
+  {
+    "timestamp": 1764612721.185733,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7353049",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:12:01Z"
+  },
+  {
+    "timestamp": 1764612774.435662,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7353044",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:12:54Z"
+  },
+  {
+    "timestamp": 1764612850.108941,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7353045",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:14:10Z"
+  },
+  {
+    "timestamp": 1764612914.6219,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7353049",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:15:14Z"
+  },
+  {
+    "timestamp": 1764613064.236453,
+    "seed_id": "2001-II-7::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-7::2001_prompt02-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T18:17:44Z"
+  },
+  {
+    "timestamp": 1764613064.236663,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-7::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1102671328
+    },
+    "iso_time": "2025-12-01T18:17:44Z"
+  },
+  {
+    "timestamp": 1764613065.566914,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_leg": 10880,
+        "b_leg": 660
+      }
+    },
+    "iso_time": "2025-12-01T18:17:45Z"
+  },
+  {
+    "timestamp": 1764613066.5592341,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3354731
+    },
+    "iso_time": "2025-12-01T18:17:46Z"
+  },
+  {
+    "timestamp": 1764613066.559385,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle PQR be right-angled at P, with PR = 10880, PQ = 660, and hypotenuse QR. Let C1 be its incircle of radius r.",
+      "correct_answer": "3354731",
+      "seed_value": 1102671328
+    },
+    "iso_time": "2025-12-01T18:17:46Z"
+  },
+  {
+    "timestamp": 1764613066.5594418,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3354723",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:17:46Z"
+  },
+  {
+    "timestamp": 1764613206.054307,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3354729",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:20:06Z"
+  },
+  {
+    "timestamp": 1764613277.120864,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3354731",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:21:17Z"
+  },
+  {
+    "timestamp": 1764613326.387997,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3354725",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:22:06Z"
+  },
+  {
+    "timestamp": 1764613378.709415,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3354731",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:22:58Z"
+  },
+  {
+    "timestamp": 1764613422.609846,
+    "seed_id": "2001-II-7::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-7::2001_prompt02-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T18:23:42Z"
+  },
+  {
+    "timestamp": 1764613422.610015,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-7::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1613800450
+    },
+    "iso_time": "2025-12-01T18:23:42Z"
+  },
+  {
+    "timestamp": 1764613423.7278268,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_leg": 13860,
+        "b_leg": 11253
+      }
+    },
+    "iso_time": "2025-12-01T18:23:43Z"
+  },
+  {
+    "timestamp": 1764613424.856447,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3826691
+    },
+    "iso_time": "2025-12-01T18:23:44Z"
+  },
+  {
+    "timestamp": 1764613424.856595,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle PQR be right-angled at P, with PR = 13860, PQ = 11253, and hypotenuse QR. Let C1 be its incircle of radius ",
+      "correct_answer": "3826691",
+      "seed_value": 1613800450
+    },
+    "iso_time": "2025-12-01T18:23:44Z"
+  },
+  {
+    "timestamp": 1764613424.856662,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3826693",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:23:44Z"
+  },
+  {
+    "timestamp": 1764613509.8776839,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3826695",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:25:09Z"
+  },
+  {
+    "timestamp": 1764613580.671829,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3826694",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:26:20Z"
+  },
+  {
+    "timestamp": 1764613646.484361,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3826691",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:27:26Z"
+  },
+  {
+    "timestamp": 1764613705.1615329,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3826691",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:28:25Z"
+  },
+  {
+    "timestamp": 1764613766.011036,
+    "seed_id": "2001-II-7::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-7::2001_prompt02-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T18:29:26Z"
+  },
+  {
+    "timestamp": 1764613766.011221,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-7::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 32921171
+    },
+    "iso_time": "2025-12-01T18:29:26Z"
+  },
+  {
+    "timestamp": 1764613767.3390489,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_leg": 9728,
+        "b_leg": 1680
+      }
+    },
+    "iso_time": "2025-12-01T18:29:27Z"
+  },
+  {
+    "timestamp": 1764613768.409606,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4486043
+    },
+    "iso_time": "2025-12-01T18:29:28Z"
+  },
+  {
+    "timestamp": 1764613768.409745,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle PQR be right-angled at P, with PR = 9728, PQ = 1680, and hypotenuse QR. Let C1 be its incircle of radius r.",
+      "correct_answer": "4486043",
+      "seed_value": 32921171
+    },
+    "iso_time": "2025-12-01T18:29:28Z"
+  },
+  {
+    "timestamp": 1764613768.409804,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4486046",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:29:28Z"
+  },
+  {
+    "timestamp": 1764613843.811049,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4486043",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:30:43Z"
+  },
+  {
+    "timestamp": 1764613908.517384,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4486036",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:31:48Z"
+  },
+  {
+    "timestamp": 1764613967.4485052,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4486044",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:32:47Z"
+  },
+  {
+    "timestamp": 1764614047.028378,
+    "seed_id": "2001-II-7::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4486043",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:34:07Z"
+  },
+  {
+    "timestamp": 1764614090.139313,
+    "seed_id": "2001-II-7::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-7::2001_prompt02-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T18:34:50Z"
+  }
+]

@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764164899.091549,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1997,
+      "question_preview": "The function $f$ defined by $f(x)= \\frac{ax+b}{cx+d}$ , where $a$ , $b$ , $c$ and $d$ are nonzero real numbers, has the ",
+      "answer": "58",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-26T13:48:19Z"
+  },
+  {
+    "timestamp": 1764164899.091598,
+    "seed_id": "1997-12::1997",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-26T13:48:19Z"
+  },
+  {
+    "timestamp": 1764164899.091624,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The function $f$ defined by $f(x)= \\frac{ax+b}{cx+d}$ , where $a$ , $b$ , $c$ and $d$ are nonzero real numbers, has the properties $f(19)=19$ , $f(97)=97$ and $f(f(x))=x$ for all values except $\\frac{-d}{c}$ . Find the unique number that is not in the range of $f$ .",
+      "answer": "58",
+      "example_id": "1997-12::1997"
+    },
+    "iso_time": "2025-11-26T13:48:19Z"
+  },
+  {
+    "timestamp": 1764165006.671238,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-12::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2047371056
+    },
+    "iso_time": "2025-11-26T13:50:06Z"
+  },
+  {
+    "timestamp": 1764165007.487288,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "fixed_point": 247,
+        "swap_from": 283,
+        "swap_to": 210
+      }
+    },
+    "iso_time": "2025-11-26T13:50:07Z"
+  },
+  {
+    "timestamp": 1764165008.229941,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1579.0
+    },
+    "iso_time": "2025-11-26T13:50:08Z"
+  },
+  {
+    "timestamp": 1764165008.230091,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let f(x) = (a x + b)/(c x + d) with nonzero real coefficients a, b, c, d, such that f(f(x)) = x for all real x except x ",
+      "correct_answer": "1579",
+      "seed_value": 2047371056
+    },
+    "iso_time": "2025-11-26T13:50:08Z"
+  },
+  {
+    "timestamp": 1764165008.2301598,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1586",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:50:08Z"
+  },
+  {
+    "timestamp": 1764165031.7539468,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1570",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:50:31Z"
+  },
+  {
+    "timestamp": 1764165053.4716532,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1574",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:50:53Z"
+  },
+  {
+    "timestamp": 1764165082.54425,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1579",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-26T13:51:22Z"
+  },
+  {
+    "timestamp": 1764165107.709814,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1579",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-26T13:51:47Z"
+  },
+  {
+    "timestamp": 1764165141.385395,
+    "seed_id": "1997-12::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-12::1997_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-26T13:52:21Z"
+  },
+  {
+    "timestamp": 1764165141.3855932,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-12::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 327582133
+    },
+    "iso_time": "2025-11-26T13:52:21Z"
+  },
+  {
+    "timestamp": 1764165142.143358,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "fixed_point": 113,
+        "swap_from": 125,
+        "swap_to": 100
+      }
+    },
+    "iso_time": "2025-11-26T13:52:22Z"
+  },
+  {
+    "timestamp": 1764165142.890144,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 269.0
+    },
+    "iso_time": "2025-11-26T13:52:22Z"
+  },
+  {
+    "timestamp": 1764165142.8903072,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let f(x) = (a x + b)/(c x + d) with nonzero real coefficients a, b, c, d, such that f(f(x)) = x for all real x except x ",
+      "correct_answer": "269",
+      "seed_value": 327582133
+    },
+    "iso_time": "2025-11-26T13:52:22Z"
+  },
+  {
+    "timestamp": 1764165142.8903491,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "269",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-26T13:52:22Z"
+  },
+  {
+    "timestamp": 1764165164.423715,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "269",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-26T13:52:44Z"
+  },
+  {
+    "timestamp": 1764165187.194965,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "266",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:53:07Z"
+  },
+  {
+    "timestamp": 1764165213.740735,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "278",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:53:33Z"
+  },
+  {
+    "timestamp": 1764165236.552555,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "270",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:53:56Z"
+  },
+  {
+    "timestamp": 1764165254.0435898,
+    "seed_id": "1997-12::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-12::1997_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-26T13:54:14Z"
+  },
+  {
+    "timestamp": 1764165254.04378,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-12::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 453412633
+    },
+    "iso_time": "2025-11-26T13:54:14Z"
+  },
+  {
+    "timestamp": 1764165254.8436532,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "fixed_point": 52,
+        "swap_from": 94,
+        "swap_to": 9
+      }
+    },
+    "iso_time": "2025-11-26T13:54:14Z"
+  },
+  {
+    "timestamp": 1764165255.599068,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1858.0
+    },
+    "iso_time": "2025-11-26T13:54:15Z"
+  },
+  {
+    "timestamp": 1764165255.599233,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let f(x) = (a x + b)/(c x + d) with nonzero real coefficients a, b, c, d, such that f(f(x)) = x for all real x except x ",
+      "correct_answer": "1858",
+      "seed_value": 453412633
+    },
+    "iso_time": "2025-11-26T13:54:15Z"
+  },
+  {
+    "timestamp": 1764165255.599282,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1854",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:54:15Z"
+  },
+  {
+    "timestamp": 1764165277.098804,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1858",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-26T13:54:37Z"
+  },
+  {
+    "timestamp": 1764165338.903859,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1863",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:55:38Z"
+  },
+  {
+    "timestamp": 1764165362.501893,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1858",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-26T13:56:02Z"
+  },
+  {
+    "timestamp": 1764165389.91116,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1860",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:56:29Z"
+  },
+  {
+    "timestamp": 1764165416.8602922,
+    "seed_id": "1997-12::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-12::1997_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-26T13:56:56Z"
+  },
+  {
+    "timestamp": 1764165416.8604128,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-12::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2015227552
+    },
+    "iso_time": "2025-11-26T13:56:56Z"
+  },
+  {
+    "timestamp": 1764165417.6533399,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "fixed_point": 68,
+        "swap_from": 82,
+        "swap_to": 53
+      }
+    },
+    "iso_time": "2025-11-26T13:56:57Z"
+  },
+  {
+    "timestamp": 1764165418.410881,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 278.0
+    },
+    "iso_time": "2025-11-26T13:56:58Z"
+  },
+  {
+    "timestamp": 1764165418.411083,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let f(x) = (a x + b)/(c x + d) with nonzero real coefficients a, b, c, d, such that f(f(x)) = x for all real x except x ",
+      "correct_answer": "278",
+      "seed_value": 2015227552
+    },
+    "iso_time": "2025-11-26T13:56:58Z"
+  },
+  {
+    "timestamp": 1764165418.411126,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "283",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:56:58Z"
+  },
+  {
+    "timestamp": 1764165437.896297,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "278",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-26T13:57:17Z"
+  },
+  {
+    "timestamp": 1764165466.462831,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "278",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-26T13:57:46Z"
+  },
+  {
+    "timestamp": 1764165487.9409752,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "277",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:58:07Z"
+  },
+  {
+    "timestamp": 1764165516.267967,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "276",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:58:36Z"
+  },
+  {
+    "timestamp": 1764165542.313319,
+    "seed_id": "1997-12::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-12::1997_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-26T13:59:02Z"
+  },
+  {
+    "timestamp": 1764165542.313518,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-12::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1238101791
+    },
+    "iso_time": "2025-11-26T13:59:02Z"
+  },
+  {
+    "timestamp": 1764165543.109334,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "fixed_point": 204,
+        "swap_from": 232,
+        "swap_to": 175
+      }
+    },
+    "iso_time": "2025-11-26T13:59:03Z"
+  },
+  {
+    "timestamp": 1764165543.851041,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1016.0
+    },
+    "iso_time": "2025-11-26T13:59:03Z"
+  },
+  {
+    "timestamp": 1764165543.8512142,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let f(x) = (a x + b)/(c x + d) with nonzero real coefficients a, b, c, d, such that f(f(x)) = x for all real x except x ",
+      "correct_answer": "1016",
+      "seed_value": 1238101791
+    },
+    "iso_time": "2025-11-26T13:59:03Z"
+  },
+  {
+    "timestamp": 1764165543.851255,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1016",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-26T13:59:03Z"
+  },
+  {
+    "timestamp": 1764165578.927444,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1023",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T13:59:38Z"
+  },
+  {
+    "timestamp": 1764165645.546195,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1025",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T14:00:45Z"
+  },
+  {
+    "timestamp": 1764165691.306575,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1011",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-26T14:01:31Z"
+  },
+  {
+    "timestamp": 1764165721.385951,
+    "seed_id": "1997-12::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1016",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-26T14:02:01Z"
+  },
+  {
+    "timestamp": 1764165744.223605,
+    "seed_id": "1997-12::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-12::1997_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-26T14:02:24Z"
+  }
+]

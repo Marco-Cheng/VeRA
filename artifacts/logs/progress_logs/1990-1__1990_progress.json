@@ -1,0 +1,704 @@
+[
+  {
+    "timestamp": 1763294931.901574,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1990,
+      "question_preview": "The increasing sequence $2,3,5,6,7,10,11,\\ldots$ consists of all positive integers that are neither the square nor the c",
+      "answer": "528",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-16T12:08:51Z"
+  },
+  {
+    "timestamp": 1763294931.901622,
+    "seed_id": "1990-1::1990",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-16T12:08:51Z"
+  },
+  {
+    "timestamp": 1763294931.901647,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The increasing sequence $2,3,5,6,7,10,11,\\ldots$ consists of all positive integers that are neither the square nor the cube of a positive integer. Find the 500th term of this sequence.",
+      "answer": "528",
+      "example_id": "1990-1::1990"
+    },
+    "iso_time": "2025-11-16T12:08:51Z"
+  },
+  {
+    "timestamp": 1763295115.710908,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-1::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1917163707
+    },
+    "iso_time": "2025-11-16T12:11:55Z"
+  },
+  {
+    "timestamp": 1763295116.4825752,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1337,
+        "a": 12,
+        "d": 13,
+        "p1": 2,
+        "p2": 3,
+        "p1_str": "square",
+        "p2_str": "cubic"
+      }
+    },
+    "iso_time": "2025-11-16T12:11:56Z"
+  },
+  {
+    "timestamp": 1763295117.229739,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17692
+    },
+    "iso_time": "2025-11-16T12:11:57Z"
+  },
+  {
+    "timestamp": 1763295117.229878,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the arithmetic progression starting with first term $12$ and having a common difference of $13$, i.e., $S = (",
+      "correct_answer": "17692",
+      "seed_value": 1917163707
+    },
+    "iso_time": "2025-11-16T12:11:57Z"
+  },
+  {
+    "timestamp": 1763295117.2299242,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "17698",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:11:57Z"
+  },
+  {
+    "timestamp": 1763295322.55338,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17692",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T12:15:22Z"
+  },
+  {
+    "timestamp": 1763295433.657092,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "17692",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T12:17:13Z"
+  },
+  {
+    "timestamp": 1763295550.182784,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "17699",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:19:10Z"
+  },
+  {
+    "timestamp": 1763295739.599,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17684",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:22:19Z"
+  },
+  {
+    "timestamp": 1763295937.4158778,
+    "seed_id": "1990-1::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-1::1990_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T12:25:37Z"
+  },
+  {
+    "timestamp": 1763295937.416097,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-1::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 899220721
+    },
+    "iso_time": "2025-11-16T12:25:37Z"
+  },
+  {
+    "timestamp": 1763295938.177438,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 760,
+        "a": 7,
+        "d": 19,
+        "p1": 2,
+        "p2": 3,
+        "p1_str": "square",
+        "p2_str": "cubic"
+      }
+    },
+    "iso_time": "2025-11-16T12:25:38Z"
+  },
+  {
+    "timestamp": 1763295938.9194748,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 14694
+    },
+    "iso_time": "2025-11-16T12:25:38Z"
+  },
+  {
+    "timestamp": 1763295938.919612,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the arithmetic progression starting with first term $7$ and having a common difference of $19$, i.e., $S = ($",
+      "correct_answer": "14694",
+      "seed_value": 899220721
+    },
+    "iso_time": "2025-11-16T12:25:38Z"
+  },
+  {
+    "timestamp": 1763295938.919661,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "14694",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T12:25:38Z"
+  },
+  {
+    "timestamp": 1763296086.947957,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "14702",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:28:06Z"
+  },
+  {
+    "timestamp": 1763296270.626391,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "14694",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T12:31:10Z"
+  },
+  {
+    "timestamp": 1763296406.773369,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14701",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:33:26Z"
+  },
+  {
+    "timestamp": 1763296567.189266,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "14700",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:36:07Z"
+  },
+  {
+    "timestamp": 1763296781.1277828,
+    "seed_id": "1990-1::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-1::1990_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T12:39:41Z"
+  },
+  {
+    "timestamp": 1763296781.127892,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-1::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1589733988
+    },
+    "iso_time": "2025-11-16T12:39:41Z"
+  },
+  {
+    "timestamp": 1763296782.086277,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1042,
+        "a": 12,
+        "d": 13,
+        "p1": 2,
+        "p2": 3,
+        "p1_str": "square",
+        "p2_str": "cubic"
+      }
+    },
+    "iso_time": "2025-11-16T12:39:42Z"
+  },
+  {
+    "timestamp": 1763296782.827163,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 13831
+    },
+    "iso_time": "2025-11-16T12:39:42Z"
+  },
+  {
+    "timestamp": 1763296782.8272939,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the arithmetic progression starting with first term $12$ and having a common difference of $13$, i.e., $S = (",
+      "correct_answer": "13831",
+      "seed_value": 1589733988
+    },
+    "iso_time": "2025-11-16T12:39:42Z"
+  },
+  {
+    "timestamp": 1763296782.827335,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "13833",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:39:42Z"
+  },
+  {
+    "timestamp": 1763296982.6463518,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "13828",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:43:02Z"
+  },
+  {
+    "timestamp": 1763297162.3550248,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "13831",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T12:46:02Z"
+  },
+  {
+    "timestamp": 1763297303.090616,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "13834",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:48:23Z"
+  },
+  {
+    "timestamp": 1763297498.062022,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13831",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T12:51:38Z"
+  },
+  {
+    "timestamp": 1763297644.640522,
+    "seed_id": "1990-1::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-1::1990_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T12:54:04Z"
+  },
+  {
+    "timestamp": 1763297644.6407208,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-1::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1626893749
+    },
+    "iso_time": "2025-11-16T12:54:04Z"
+  },
+  {
+    "timestamp": 1763297645.414262,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 634,
+        "a": 1,
+        "d": 7,
+        "p1": 2,
+        "p2": 3,
+        "p1_str": "square",
+        "p2_str": "cubic"
+      }
+    },
+    "iso_time": "2025-11-16T12:54:05Z"
+  },
+  {
+    "timestamp": 1763297646.15746,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4593
+    },
+    "iso_time": "2025-11-16T12:54:06Z"
+  },
+  {
+    "timestamp": 1763297646.157598,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the arithmetic progression starting with first term $1$ and having a common difference of $7$, i.e., $S = ($1",
+      "correct_answer": "4593",
+      "seed_value": 1626893749
+    },
+    "iso_time": "2025-11-16T12:54:06Z"
+  },
+  {
+    "timestamp": 1763297646.157643,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4588",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:54:06Z"
+  },
+  {
+    "timestamp": 1763297839.334659,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4593",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T12:57:19Z"
+  },
+  {
+    "timestamp": 1763297988.048055,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4589",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T12:59:48Z"
+  },
+  {
+    "timestamp": 1763298197.8648052,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4601",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T13:03:17Z"
+  },
+  {
+    "timestamp": 1763298383.9312909,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4593",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T13:06:23Z"
+  },
+  {
+    "timestamp": 1763298510.240027,
+    "seed_id": "1990-1::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-1::1990_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T13:08:30Z"
+  },
+  {
+    "timestamp": 1763298510.240341,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1990-1::1990_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1907552262
+    },
+    "iso_time": "2025-11-16T13:08:30Z"
+  },
+  {
+    "timestamp": 1763298511.2108932,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 512,
+        "a": 9,
+        "d": 17,
+        "p1": 2,
+        "p2": 3,
+        "p1_str": "square",
+        "p2_str": "cubic"
+      }
+    },
+    "iso_time": "2025-11-16T13:08:31Z"
+  },
+  {
+    "timestamp": 1763298511.94705,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8900
+    },
+    "iso_time": "2025-11-16T13:08:31Z"
+  },
+  {
+    "timestamp": 1763298511.947194,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the arithmetic progression starting with first term $9$ and having a common difference of $17$, i.e., $S = ($",
+      "correct_answer": "8900",
+      "seed_value": 1907552262
+    },
+    "iso_time": "2025-11-16T13:08:31Z"
+  },
+  {
+    "timestamp": 1763298511.947235,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8892",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T13:08:31Z"
+  },
+  {
+    "timestamp": 1763298694.524362,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8909",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T13:11:34Z"
+  },
+  {
+    "timestamp": 1763298905.944714,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8900",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T13:15:05Z"
+  },
+  {
+    "timestamp": 1763299032.136343,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8906",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T13:17:12Z"
+  },
+  {
+    "timestamp": 1763299208.718688,
+    "seed_id": "1990-1::1990",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8900",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T13:20:08Z"
+  },
+  {
+    "timestamp": 1763299339.302519,
+    "seed_id": "1990-1::1990",
+    "stage": "variant_success",
+    "message": "Accepted variant 1990-1::1990_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T13:22:19Z"
+  }
+]

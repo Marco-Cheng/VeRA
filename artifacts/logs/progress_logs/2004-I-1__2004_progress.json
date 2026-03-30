@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764986590.552435,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "The digits of a positive integer $n$ are four consecutive integers in decreasing order when read from left to right. Wha",
+      "answer": "217",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-06T02:03:10Z"
+  },
+  {
+    "timestamp": 1764986590.552505,
+    "seed_id": "2004-I-1::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-06T02:03:10Z"
+  },
+  {
+    "timestamp": 1764986590.552535,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The digits of a positive integer $n$ are four consecutive integers in decreasing order when read from left to right. What is the sum of the possible remainders when $n$ is divided by 37?",
+      "answer": "217",
+      "example_id": "2004-I-1::2004"
+    },
+    "iso_time": "2025-12-06T02:03:10Z"
+  },
+  {
+    "timestamp": 1764986958.0941372,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-1::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2352928
+    },
+    "iso_time": "2025-12-06T02:09:18Z"
+  },
+  {
+    "timestamp": 1764986959.4382348,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ell": 3,
+        "modulus_m": 37,
+        "r_max": 4,
+        "digits_t": 4
+      }
+    },
+    "iso_time": "2025-12-06T02:09:19Z"
+  },
+  {
+    "timestamp": 1764986960.547358,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 309
+    },
+    "iso_time": "2025-12-06T02:09:20Z"
+  },
+  {
+    "timestamp": 1764986960.547521,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the modulus 37 be coprime to 10 and satisfy 10^3 ≡ 1 (mod 37). Consider all base-10 integers with exactly 4 digits w",
+      "correct_answer": "309",
+      "seed_value": 2352928
+    },
+    "iso_time": "2025-12-06T02:09:20Z"
+  },
+  {
+    "timestamp": 1764986960.547589,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "304",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:09:20Z"
+  },
+  {
+    "timestamp": 1764987064.7936552,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T02:11:04Z"
+  },
+  {
+    "timestamp": 1764987180.424607,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "313",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:13:00Z"
+  },
+  {
+    "timestamp": 1764987327.298078,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "305",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:15:27Z"
+  },
+  {
+    "timestamp": 1764987366.4301708,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T02:16:06Z"
+  },
+  {
+    "timestamp": 1764987440.293226,
+    "seed_id": "2004-I-1::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-1::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T02:17:20Z"
+  },
+  {
+    "timestamp": 1764987440.2934341,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-1::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 471844028
+    },
+    "iso_time": "2025-12-06T02:17:20Z"
+  },
+  {
+    "timestamp": 1764987441.5312371,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ell": 3,
+        "modulus_m": 37,
+        "r_max": 3,
+        "digits_t": 4
+      }
+    },
+    "iso_time": "2025-12-06T02:17:21Z"
+  },
+  {
+    "timestamp": 1764987442.7130728,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 309
+    },
+    "iso_time": "2025-12-06T02:17:22Z"
+  },
+  {
+    "timestamp": 1764987442.713296,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the modulus 37 be coprime to 10 and satisfy 10^3 ≡ 1 (mod 37). Consider all base-10 integers with exactly 4 digits w",
+      "correct_answer": "309",
+      "seed_value": 471844028
+    },
+    "iso_time": "2025-12-06T02:17:22Z"
+  },
+  {
+    "timestamp": 1764987442.713386,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "307",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:17:22Z"
+  },
+  {
+    "timestamp": 1764987622.1294878,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "302",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:20:22Z"
+  },
+  {
+    "timestamp": 1764987658.594621,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T02:20:58Z"
+  },
+  {
+    "timestamp": 1764987734.7827032,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T02:22:14Z"
+  },
+  {
+    "timestamp": 1764987757.007195,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "316",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:22:37Z"
+  },
+  {
+    "timestamp": 1764987885.637162,
+    "seed_id": "2004-I-1::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-1::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T02:24:45Z"
+  },
+  {
+    "timestamp": 1764987885.637337,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-1::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1969467086
+    },
+    "iso_time": "2025-12-06T02:24:45Z"
+  },
+  {
+    "timestamp": 1764987886.882484,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ell": 3,
+        "modulus_m": 37,
+        "r_max": 3,
+        "digits_t": 4
+      }
+    },
+    "iso_time": "2025-12-06T02:24:46Z"
+  },
+  {
+    "timestamp": 1764987888.026691,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 309
+    },
+    "iso_time": "2025-12-06T02:24:48Z"
+  },
+  {
+    "timestamp": 1764987888.02687,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the modulus 37 be coprime to 10 and satisfy 10^3 ≡ 1 (mod 37). Consider all base-10 integers with exactly 4 digits w",
+      "correct_answer": "309",
+      "seed_value": 1969467086
+    },
+    "iso_time": "2025-12-06T02:24:48Z"
+  },
+  {
+    "timestamp": 1764987888.026943,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "316",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:24:48Z"
+  },
+  {
+    "timestamp": 1764987924.551261,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T02:25:24Z"
+  },
+  {
+    "timestamp": 1764987951.9922938,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T02:25:51Z"
+  },
+  {
+    "timestamp": 1764987972.515052,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "314",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:26:12Z"
+  },
+  {
+    "timestamp": 1764988014.969435,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "318",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:26:54Z"
+  },
+  {
+    "timestamp": 1764988048.335347,
+    "seed_id": "2004-I-1::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-1::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T02:27:28Z"
+  },
+  {
+    "timestamp": 1764988048.335553,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-1::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 217794627
+    },
+    "iso_time": "2025-12-06T02:27:28Z"
+  },
+  {
+    "timestamp": 1764988049.65186,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ell": 3,
+        "modulus_m": 37,
+        "r_max": 3,
+        "digits_t": 4
+      }
+    },
+    "iso_time": "2025-12-06T02:27:29Z"
+  },
+  {
+    "timestamp": 1764988050.776247,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 309
+    },
+    "iso_time": "2025-12-06T02:27:30Z"
+  },
+  {
+    "timestamp": 1764988050.7763898,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the modulus 37 be coprime to 10 and satisfy 10^3 ≡ 1 (mod 37). Consider all base-10 integers with exactly 4 digits w",
+      "correct_answer": "309",
+      "seed_value": 217794627
+    },
+    "iso_time": "2025-12-06T02:27:30Z"
+  },
+  {
+    "timestamp": 1764988050.776464,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "304",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:27:30Z"
+  },
+  {
+    "timestamp": 1764988075.5960479,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "318",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:27:55Z"
+  },
+  {
+    "timestamp": 1764988115.020096,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T02:28:35Z"
+  },
+  {
+    "timestamp": 1764988230.6871061,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "300",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:30:30Z"
+  },
+  {
+    "timestamp": 1764988332.462645,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T02:32:12Z"
+  },
+  {
+    "timestamp": 1764988359.487763,
+    "seed_id": "2004-I-1::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-1::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T02:32:39Z"
+  },
+  {
+    "timestamp": 1764988359.487942,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-1::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 691082777
+    },
+    "iso_time": "2025-12-06T02:32:39Z"
+  },
+  {
+    "timestamp": 1764988360.750143,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ell": 3,
+        "modulus_m": 37,
+        "r_max": 2,
+        "digits_t": 4
+      }
+    },
+    "iso_time": "2025-12-06T02:32:40Z"
+  },
+  {
+    "timestamp": 1764988361.990272,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 299
+    },
+    "iso_time": "2025-12-06T02:32:41Z"
+  },
+  {
+    "timestamp": 1764988361.9905002,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the modulus 37 be coprime to 10 and satisfy 10^3 ≡ 1 (mod 37). Consider all base-10 integers with exactly 4 digits w",
+      "correct_answer": "299",
+      "seed_value": 691082777
+    },
+    "iso_time": "2025-12-06T02:32:41Z"
+  },
+  {
+    "timestamp": 1764988361.9905841,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "299",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T02:32:41Z"
+  },
+  {
+    "timestamp": 1764988468.708586,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "292",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:34:28Z"
+  },
+  {
+    "timestamp": 1764988494.822839,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "300",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:34:54Z"
+  },
+  {
+    "timestamp": 1764988587.0889652,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "299",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T02:36:27Z"
+  },
+  {
+    "timestamp": 1764988666.912498,
+    "seed_id": "2004-I-1::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "303",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T02:37:46Z"
+  },
+  {
+    "timestamp": 1764988770.9536672,
+    "seed_id": "2004-I-1::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-1::2004_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T02:39:30Z"
+  }
+]

@@ -1,0 +1,906 @@
+[
+  {
+    "timestamp": 1764883411.810914,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "Define a $\\text{good word}$ as a sequence of letters that consists only of the letters $A$ , $B$ , and $C$ - some of the",
+      "answer": "192",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-04T21:23:31Z"
+  },
+  {
+    "timestamp": 1764883411.810943,
+    "seed_id": "2003-II-3::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-04T21:23:31Z"
+  },
+  {
+    "timestamp": 1764883411.810956,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Define a $\\text{good word}$ as a sequence of letters that consists only of the letters $A$ , $B$ , and $C$ - some of these letters may not appear in the sequence - and in which $A$ is never immediately followed by $B$ , $B$ is never immediately followed by $C$ , and $C$ is never immediately followed by $A$ . How many seven-letter good words are there?",
+      "answer": "192",
+      "example_id": "2003-II-3::2003"
+    },
+    "iso_time": "2025-12-04T21:23:31Z"
+  },
+  {
+    "timestamp": 1764883580.8745248,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-3::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1389911282
+    },
+    "iso_time": "2025-12-04T21:26:20Z"
+  },
+  {
+    "timestamp": 1764883582.231723,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 5,
+        "n": 18,
+        "forbidden_steps": [
+          2,
+          2,
+          2,
+          2,
+          1
+        ],
+        "start_letter": 2,
+        "end_letter": 5,
+        "required_letters": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-12-04T21:26:22Z"
+  },
+  {
+    "timestamp": 1764883583.414496,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 59878791
+    },
+    "iso_time": "2025-12-04T21:26:23Z"
+  },
+  {
+    "timestamp": 1764883583.414722,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Fix an integer m=5 and arrange the symbols 1,2,...,5 on a circle in the natural order 1->2->...->5->1. For i in {1,2,...",
+      "correct_answer": "59878791",
+      "seed_value": 1389911282
+    },
+    "iso_time": "2025-12-04T21:26:23Z"
+  },
+  {
+    "timestamp": 1764883583.414795,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "59878795",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:26:23Z"
+  },
+  {
+    "timestamp": 1764883709.2896929,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "59878792",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:28:29Z"
+  },
+  {
+    "timestamp": 1764883945.417461,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "59878797",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:32:25Z"
+  },
+  {
+    "timestamp": 1764884043.416171,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "59878791",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:34:03Z"
+  },
+  {
+    "timestamp": 1764884169.571965,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "59878791",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:36:09Z"
+  },
+  {
+    "timestamp": 1764884274.121228,
+    "seed_id": "2003-II-3::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-3::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T21:37:54Z"
+  },
+  {
+    "timestamp": 1764884274.121408,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-3::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2119951509
+    },
+    "iso_time": "2025-12-04T21:37:54Z"
+  },
+  {
+    "timestamp": 1764884275.475421,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 6,
+        "n": 17,
+        "forbidden_steps": [
+          3,
+          4,
+          3,
+          4,
+          4,
+          4
+        ],
+        "start_letter": 1,
+        "end_letter": 6,
+        "required_letters": [
+          1,
+          2,
+          4,
+          6
+        ]
+      }
+    },
+    "iso_time": "2025-12-04T21:37:55Z"
+  },
+  {
+    "timestamp": 1764884276.603782,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 65715
+    },
+    "iso_time": "2025-12-04T21:37:56Z"
+  },
+  {
+    "timestamp": 1764884276.6039412,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Fix an integer m=6 and arrange the symbols 1,2,...,6 on a circle in the natural order 1->2->...->6->1. For i in {1,2,...",
+      "correct_answer": "65715",
+      "seed_value": 2119951509
+    },
+    "iso_time": "2025-12-04T21:37:56Z"
+  },
+  {
+    "timestamp": 1764884276.604021,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "65716",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:37:56Z"
+  },
+  {
+    "timestamp": 1764884361.5141308,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "65715",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:39:21Z"
+  },
+  {
+    "timestamp": 1764884460.0842738,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "65719",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:41:00Z"
+  },
+  {
+    "timestamp": 1764884539.262378,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "65715",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:42:19Z"
+  },
+  {
+    "timestamp": 1764884611.851779,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "65708",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:43:31Z"
+  },
+  {
+    "timestamp": 1764884684.106637,
+    "seed_id": "2003-II-3::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-3::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T21:44:44Z"
+  },
+  {
+    "timestamp": 1764884684.106821,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-3::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 476476225
+    },
+    "iso_time": "2025-12-04T21:44:44Z"
+  },
+  {
+    "timestamp": 1764884685.437748,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 6,
+        "n": 21,
+        "forbidden_steps": [
+          4,
+          2,
+          2,
+          4,
+          4,
+          4
+        ],
+        "start_letter": 4,
+        "end_letter": 5,
+        "required_letters": [
+          4,
+          6
+        ]
+      }
+    },
+    "iso_time": "2025-12-04T21:44:45Z"
+  },
+  {
+    "timestamp": 1764884686.628154,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12779180
+    },
+    "iso_time": "2025-12-04T21:44:46Z"
+  },
+  {
+    "timestamp": 1764884686.628331,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Fix an integer m=6 and arrange the symbols 1,2,...,6 on a circle in the natural order 1->2->...->6->1. For i in {1,2,...",
+      "correct_answer": "12779180",
+      "seed_value": 476476225
+    },
+    "iso_time": "2025-12-04T21:44:46Z"
+  },
+  {
+    "timestamp": 1764884686.628412,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12779178",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:44:46Z"
+  },
+  {
+    "timestamp": 1764884786.849982,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12779180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:46:26Z"
+  },
+  {
+    "timestamp": 1764884965.53477,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12779180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:49:25Z"
+  },
+  {
+    "timestamp": 1764885095.929796,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12779182",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:51:35Z"
+  },
+  {
+    "timestamp": 1764885177.808979,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12779179",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:52:57Z"
+  },
+  {
+    "timestamp": 1764885251.335018,
+    "seed_id": "2003-II-3::2003",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-04T21:54:11Z"
+  },
+  {
+    "timestamp": 1764885251.335268,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-3::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1144345805
+    },
+    "iso_time": "2025-12-04T21:54:11Z"
+  },
+  {
+    "timestamp": 1764885252.588633,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 4,
+        "n": 26,
+        "forbidden_steps": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "start_letter": 1,
+        "end_letter": 2,
+        "required_letters": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-12-04T21:54:12Z"
+  },
+  {
+    "timestamp": 1764885253.715418,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 27721403575
+    },
+    "iso_time": "2025-12-04T21:54:13Z"
+  },
+  {
+    "timestamp": 1764885253.715578,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Fix an integer m=4 and arrange the symbols 1,2,...,4 on a circle in the natural order 1->2->...->4->1. For i in {1,2,...",
+      "correct_answer": "27721403575",
+      "seed_value": 1144345805
+    },
+    "iso_time": "2025-12-04T21:54:13Z"
+  },
+  {
+    "timestamp": 1764885253.7156448,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "27721403567",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:54:13Z"
+  },
+  {
+    "timestamp": 1764885485.130792,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "27721403575",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:58:05Z"
+  },
+  {
+    "timestamp": 1764885654.0712829,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "27721403575",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T22:00:54Z"
+  },
+  {
+    "timestamp": 1764885750.4288168,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "27721403584",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T22:02:30Z"
+  },
+  {
+    "timestamp": 1764885874.393383,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "27721403570",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T22:04:34Z"
+  },
+  {
+    "timestamp": 1764885945.851727,
+    "seed_id": "2003-II-3::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-3::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T22:05:45Z"
+  },
+  {
+    "timestamp": 1764885945.851895,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-3::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 795365724
+    },
+    "iso_time": "2025-12-04T22:05:45Z"
+  },
+  {
+    "timestamp": 1764885947.221034,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 5,
+        "n": 27,
+        "forbidden_steps": [
+          2,
+          2,
+          2,
+          2,
+          3
+        ],
+        "start_letter": 1,
+        "end_letter": 4,
+        "required_letters": [
+          2,
+          3,
+          5
+        ]
+      }
+    },
+    "iso_time": "2025-12-04T22:05:47Z"
+  },
+  {
+    "timestamp": 1764885948.464295,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 77672893267
+    },
+    "iso_time": "2025-12-04T22:05:48Z"
+  },
+  {
+    "timestamp": 1764885948.46449,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Fix an integer m=5 and arrange the symbols 1,2,...,5 on a circle in the natural order 1->2->...->5->1. For i in {1,2,...",
+      "correct_answer": "77672893267",
+      "seed_value": 795365724
+    },
+    "iso_time": "2025-12-04T22:05:48Z"
+  },
+  {
+    "timestamp": 1764885948.464597,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "77672893261",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T22:05:48Z"
+  },
+  {
+    "timestamp": 1764886212.870879,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "77672893267",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T22:10:12Z"
+  },
+  {
+    "timestamp": 1764886553.12288,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "77672893267",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T22:15:53Z"
+  },
+  {
+    "timestamp": 1764886641.262201,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "77672893271",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T22:17:21Z"
+  },
+  {
+    "timestamp": 1764886769.847801,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "77672893266",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T22:19:29Z"
+  },
+  {
+    "timestamp": 1764886983.229218,
+    "seed_id": "2003-II-3::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-3::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T22:23:03Z"
+  },
+  {
+    "timestamp": 1764886983.229366,
+    "seed_id": "2003-II-3::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-04T22:23:03Z"
+  },
+  {
+    "timestamp": 1764886983.229471,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 3 (successes=3).",
+      "question": "Define a $\\text{good word}$ as a sequence of letters that consists only of the letters $A$ , $B$ , and $C$ - some of these letters may not appear in the sequence - and in which $A$ is never immediately followed by $B$ , $B$ is never immediately followed by $C$ , and $C$ is never immediately followed by $A$ . How many seven-letter good words are there?",
+      "answer": "192",
+      "example_id": "2003-II-3::2003"
+    },
+    "iso_time": "2025-12-04T22:23:03Z"
+  },
+  {
+    "timestamp": 1764887055.015711,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-3::2003_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 901949466
+    },
+    "iso_time": "2025-12-04T22:24:15Z"
+  },
+  {
+    "timestamp": 1764887056.390856,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alphabet_size": 5,
+        "word_length": 10,
+        "step": 4,
+        "start_index": 4,
+        "end_index": 3
+      }
+    },
+    "iso_time": "2025-12-04T22:24:16Z"
+  },
+  {
+    "timestamp": 1764887057.5259311,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 29580
+    },
+    "iso_time": "2025-12-04T22:24:17Z"
+  },
+  {
+    "timestamp": 1764887057.526068,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider an alphabet of 5 letters labeled 1,2,...,5 arranged in a cyclic order. A length-10 word is called good if whene",
+      "correct_answer": "29580",
+      "seed_value": 901949466
+    },
+    "iso_time": "2025-12-04T22:24:17Z"
+  },
+  {
+    "timestamp": 1764887057.526125,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "29572",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T22:24:17Z"
+  },
+  {
+    "timestamp": 1764887144.1011899,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "29571",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T22:25:44Z"
+  },
+  {
+    "timestamp": 1764887584.013102,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "29587",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T22:33:04Z"
+  },
+  {
+    "timestamp": 1764887865.561586,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "29580",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T22:37:45Z"
+  },
+  {
+    "timestamp": 1764887947.5158012,
+    "seed_id": "2003-II-3::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "29580",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T22:39:07Z"
+  },
+  {
+    "timestamp": 1764888034.026305,
+    "seed_id": "2003-II-3::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-3::2003_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T22:40:34Z"
+  }
+]

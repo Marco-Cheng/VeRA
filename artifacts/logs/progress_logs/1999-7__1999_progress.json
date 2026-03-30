@@ -1,0 +1,709 @@
+[
+  {
+    "timestamp": 1764349551.640634,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1999,
+      "question_preview": "There is a set of 1000 switches, each of which has four positions, called $A, B, C$ , and $D$ .  When the position of an",
+      "answer": "650",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T17:05:51Z"
+  },
+  {
+    "timestamp": 1764349551.640693,
+    "seed_id": "1999-7::1999",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T17:05:51Z"
+  },
+  {
+    "timestamp": 1764349551.640718,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "There is a set of 1000 switches, each of which has four positions, called $A, B, C$ , and $D$ .  When the position of any switch changes, it is only from $A$ to $B$ , from $B$ to $C$ , from $C$ to $D$ , or from $D$ to $A$ .  Initially each switch is in position $A$ .  The switches are labeled with the 1000 different integers $(2^{x})(3^{y})(5^{z})$ , where $x, y$ , and $z$ take on the values $0, 1, \\ldots, 9$ .  At step $i$ of a 1000-step process, the $i$ -th switch is advanced one step, and so are all the other switches whose labels divide the label on the $i$ -th switch.  After step 1000 has been completed, how many switches will be in position $A$ ?",
+      "answer": "650",
+      "example_id": "1999-7::1999"
+    },
+    "iso_time": "2025-11-28T17:05:51Z"
+  },
+  {
+    "timestamp": 1764349647.361207,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-7::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 253537481
+    },
+    "iso_time": "2025-11-28T17:07:27Z"
+  },
+  {
+    "timestamp": 1764349648.963663,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "primes_str": "11, 13, 19",
+        "max_exponents_str": "8, 7, 7",
+        "a_coeffs_str": "1, 5, 4",
+        "b_coeffs_str": "2, 5, 1",
+        "cycle_length": 221,
+        "k": 3,
+        "cycle_prime_1": 13,
+        "cycle_prime_2": 17
+      }
+    },
+    "iso_time": "2025-11-28T17:07:28Z"
+  },
+  {
+    "timestamp": 1764349650.260247,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 23
+    },
+    "iso_time": "2025-11-28T17:07:30Z"
+  },
+  {
+    "timestamp": 1764349650.260488,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "There is a family of switches labeled by all products ∏ p_i^{x_i}, where the primes p_i are 11, 13, 19, and each exponen",
+      "correct_answer": "23",
+      "seed_value": 253537481
+    },
+    "iso_time": "2025-11-28T17:07:30Z"
+  },
+  {
+    "timestamp": 1764349650.2605782,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "23",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:07:30Z"
+  },
+  {
+    "timestamp": 1764349700.146729,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "25",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:08:20Z"
+  },
+  {
+    "timestamp": 1764349762.3022459,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "23",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:09:22Z"
+  },
+  {
+    "timestamp": 1764349798.352258,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:09:58Z"
+  },
+  {
+    "timestamp": 1764349871.668962,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:11:11Z"
+  },
+  {
+    "timestamp": 1764349920.1801841,
+    "seed_id": "1999-7::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-7::1999_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:12:00Z"
+  },
+  {
+    "timestamp": 1764349920.180275,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-7::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1853511711
+    },
+    "iso_time": "2025-11-28T17:12:00Z"
+  },
+  {
+    "timestamp": 1764349921.4321978,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "primes_str": "11, 13, 17",
+        "max_exponents_str": "6, 8, 7",
+        "a_coeffs_str": "2, 4, 6",
+        "b_coeffs_str": "1, 6, 5",
+        "cycle_length": 51,
+        "k": 3,
+        "cycle_prime_1": 17,
+        "cycle_prime_2": 3
+      }
+    },
+    "iso_time": "2025-11-28T17:12:01Z"
+  },
+  {
+    "timestamp": 1764349922.542082,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 56
+    },
+    "iso_time": "2025-11-28T17:12:02Z"
+  },
+  {
+    "timestamp": 1764349922.542248,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "There is a family of switches labeled by all products ∏ p_i^{x_i}, where the primes p_i are 11, 13, 17, and each exponen",
+      "correct_answer": "56",
+      "seed_value": 1853511711
+    },
+    "iso_time": "2025-11-28T17:12:02Z"
+  },
+  {
+    "timestamp": 1764349922.542322,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "56",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:12:02Z"
+  },
+  {
+    "timestamp": 1764349969.685646,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "56",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:12:49Z"
+  },
+  {
+    "timestamp": 1764350052.3519309,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "51",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:14:12Z"
+  },
+  {
+    "timestamp": 1764350105.293538,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "47",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:15:05Z"
+  },
+  {
+    "timestamp": 1764350231.676619,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "61",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:17:11Z"
+  },
+  {
+    "timestamp": 1764350299.0522082,
+    "seed_id": "1999-7::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-7::1999_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:18:19Z"
+  },
+  {
+    "timestamp": 1764350299.052395,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-7::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1396473551
+    },
+    "iso_time": "2025-11-28T17:18:19Z"
+  },
+  {
+    "timestamp": 1764350300.2337852,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "primes_str": "2, 3, 5, 19",
+        "max_exponents_str": "8, 3, 3, 4",
+        "a_coeffs_str": "1, 4, 4, 7",
+        "b_coeffs_str": "5, 6, 4, 5",
+        "cycle_length": 15,
+        "k": 4,
+        "cycle_prime_1": 5,
+        "cycle_prime_2": 3
+      }
+    },
+    "iso_time": "2025-11-28T17:18:20Z"
+  },
+  {
+    "timestamp": 1764350301.286335,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 474
+    },
+    "iso_time": "2025-11-28T17:18:21Z"
+  },
+  {
+    "timestamp": 1764350301.286529,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "There is a family of switches labeled by all products ∏ p_i^{x_i}, where the primes p_i are 2, 3, 5, 19, and each expone",
+      "correct_answer": "474",
+      "seed_value": 1396473551
+    },
+    "iso_time": "2025-11-28T17:18:21Z"
+  },
+  {
+    "timestamp": 1764350301.2866108,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "466",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:18:21Z"
+  },
+  {
+    "timestamp": 1764350343.2890408,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "474",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:19:03Z"
+  },
+  {
+    "timestamp": 1764350412.284419,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "471",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:20:12Z"
+  },
+  {
+    "timestamp": 1764350459.720501,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "473",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:20:59Z"
+  },
+  {
+    "timestamp": 1764350509.278096,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "474",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:21:49Z"
+  },
+  {
+    "timestamp": 1764350563.245273,
+    "seed_id": "1999-7::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-7::1999_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:22:43Z"
+  },
+  {
+    "timestamp": 1764350563.245405,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-7::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2044169672
+    },
+    "iso_time": "2025-11-28T17:22:43Z"
+  },
+  {
+    "timestamp": 1764350564.315128,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "primes_str": "2, 5, 7, 13",
+        "max_exponents_str": "6, 6, 3, 4",
+        "a_coeffs_str": "5, 3, 7, 7",
+        "b_coeffs_str": "2, 6, 7, 5",
+        "cycle_length": 55,
+        "k": 4,
+        "cycle_prime_1": 5,
+        "cycle_prime_2": 11
+      }
+    },
+    "iso_time": "2025-11-28T17:22:44Z"
+  },
+  {
+    "timestamp": 1764350565.329323,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 296
+    },
+    "iso_time": "2025-11-28T17:22:45Z"
+  },
+  {
+    "timestamp": 1764350565.329489,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "There is a family of switches labeled by all products ∏ p_i^{x_i}, where the primes p_i are 2, 5, 7, 13, and each expone",
+      "correct_answer": "296",
+      "seed_value": 2044169672
+    },
+    "iso_time": "2025-11-28T17:22:45Z"
+  },
+  {
+    "timestamp": 1764350565.329568,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "288",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:22:45Z"
+  },
+  {
+    "timestamp": 1764350620.142438,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "301",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:23:40Z"
+  },
+  {
+    "timestamp": 1764350707.3370318,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "296",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:25:07Z"
+  },
+  {
+    "timestamp": 1764350752.8884811,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "296",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:25:52Z"
+  },
+  {
+    "timestamp": 1764350794.36046,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "304",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:26:34Z"
+  },
+  {
+    "timestamp": 1764350838.699712,
+    "seed_id": "1999-7::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-7::1999_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:27:18Z"
+  },
+  {
+    "timestamp": 1764350838.69981,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-7::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1303418899
+    },
+    "iso_time": "2025-11-28T17:27:18Z"
+  },
+  {
+    "timestamp": 1764350839.963663,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "primes_str": "2, 3, 17",
+        "max_exponents_str": "8, 8, 8",
+        "a_coeffs_str": "3, 4, 1",
+        "b_coeffs_str": "5, 2, 1",
+        "cycle_length": 187,
+        "k": 3,
+        "cycle_prime_1": 17,
+        "cycle_prime_2": 11
+      }
+    },
+    "iso_time": "2025-11-28T17:27:19Z"
+  },
+  {
+    "timestamp": 1764350841.041642,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 48
+    },
+    "iso_time": "2025-11-28T17:27:21Z"
+  },
+  {
+    "timestamp": 1764350841.0417979,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "There is a family of switches labeled by all products ∏ p_i^{x_i}, where the primes p_i are 2, 3, 17, and each exponent ",
+      "correct_answer": "48",
+      "seed_value": 1303418899
+    },
+    "iso_time": "2025-11-28T17:27:21Z"
+  },
+  {
+    "timestamp": 1764350841.0418692,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "48",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:27:21Z"
+  },
+  {
+    "timestamp": 1764350901.191117,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "48",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:28:21Z"
+  },
+  {
+    "timestamp": 1764350950.0698218,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "56",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:29:10Z"
+  },
+  {
+    "timestamp": 1764351016.46464,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "52",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:30:16Z"
+  },
+  {
+    "timestamp": 1764351054.9529018,
+    "seed_id": "1999-7::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "49",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:30:54Z"
+  },
+  {
+    "timestamp": 1764351095.111755,
+    "seed_id": "1999-7::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-7::1999_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:31:35Z"
+  }
+]

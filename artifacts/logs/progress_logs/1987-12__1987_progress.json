@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1762999286.8931031,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1987,
+      "question_preview": "Let $m$ be the smallest integer whose cube root is of the form $n+r$ , where $n$ is a positive integer and $r$ is a posi",
+      "answer": "19",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-13T02:01:26Z"
+  },
+  {
+    "timestamp": 1762999286.8931332,
+    "seed_id": "1987-12::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-13T02:01:26Z"
+  },
+  {
+    "timestamp": 1762999286.893149,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $m$ be the smallest integer whose cube root is of the form $n+r$ , where $n$ is a positive integer and $r$ is a positive real number less than $1/1000$ . Find $n$ .",
+      "answer": "19",
+      "example_id": "1987-12::1987"
+    },
+    "iso_time": "2025-11-13T02:01:26Z"
+  },
+  {
+    "timestamp": 1762999498.391826,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-12::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 314823999
+    },
+    "iso_time": "2025-11-13T02:04:58Z"
+  },
+  {
+    "timestamp": 1762999499.237003,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 5,
+        "K": 629
+      }
+    },
+    "iso_time": "2025-11-13T02:04:59Z"
+  },
+  {
+    "timestamp": 1762999500.051739,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 49
+    },
+    "iso_time": "2025-11-13T02:05:00Z"
+  },
+  {
+    "timestamp": 1762999500.0519612,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $k=5$ be an odd integer and $K=629$ be an integer, both greater than 2. Find the smallest positive integer $n$ that ",
+      "correct_answer": "49",
+      "seed_value": 314823999
+    },
+    "iso_time": "2025-11-13T02:05:00Z"
+  },
+  {
+    "timestamp": 1762999500.052157,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "46",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:05:00Z"
+  },
+  {
+    "timestamp": 1762999682.8278809,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T02:08:02Z"
+  },
+  {
+    "timestamp": 1762999818.945469,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T02:10:18Z"
+  },
+  {
+    "timestamp": 1762999935.166377,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "56",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:12:15Z"
+  },
+  {
+    "timestamp": 1763000115.581182,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "43",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:15:15Z"
+  },
+  {
+    "timestamp": 1763000294.165759,
+    "seed_id": "1987-12::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-12::1987_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T02:18:14Z"
+  },
+  {
+    "timestamp": 1763000294.1658292,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-12::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1568075423
+    },
+    "iso_time": "2025-11-13T02:18:14Z"
+  },
+  {
+    "timestamp": 1763000294.969981,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 5,
+        "K": 1785
+      }
+    },
+    "iso_time": "2025-11-13T02:18:14Z"
+  },
+  {
+    "timestamp": 1763000295.7626681,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 81
+    },
+    "iso_time": "2025-11-13T02:18:15Z"
+  },
+  {
+    "timestamp": 1763000295.762816,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $k=5$ be an odd integer and $K=1785$ be an integer, both greater than 2. Find the smallest positive integer $n$ that",
+      "correct_answer": "81",
+      "seed_value": 1568075423
+    },
+    "iso_time": "2025-11-13T02:18:15Z"
+  },
+  {
+    "timestamp": 1763000295.7628732,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "73",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:18:15Z"
+  },
+  {
+    "timestamp": 1763000486.978327,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "81",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T02:21:26Z"
+  },
+  {
+    "timestamp": 1763000610.7777689,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "81",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T02:23:30Z"
+  },
+  {
+    "timestamp": 1763000744.779562,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "75",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:25:44Z"
+  },
+  {
+    "timestamp": 1763001031.244838,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "79",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:30:31Z"
+  },
+  {
+    "timestamp": 1763001221.295462,
+    "seed_id": "1987-12::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-12::1987_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T02:33:41Z"
+  },
+  {
+    "timestamp": 1763001221.295517,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-12::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 120729017
+    },
+    "iso_time": "2025-11-13T02:33:41Z"
+  },
+  {
+    "timestamp": 1763001222.0850601,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 5,
+        "K": 2488
+      }
+    },
+    "iso_time": "2025-11-13T02:33:42Z"
+  },
+  {
+    "timestamp": 1763001222.8630002,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 100
+    },
+    "iso_time": "2025-11-13T02:33:42Z"
+  },
+  {
+    "timestamp": 1763001222.863122,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $k=5$ be an odd integer and $K=2488$ be an integer, both greater than 2. Find the smallest positive integer $n$ that",
+      "correct_answer": "100",
+      "seed_value": 120729017
+    },
+    "iso_time": "2025-11-13T02:33:42Z"
+  },
+  {
+    "timestamp": 1763001222.863178,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "92",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:33:42Z"
+  },
+  {
+    "timestamp": 1763001376.233923,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:36:16Z"
+  },
+  {
+    "timestamp": 1763001571.27407,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T02:39:31Z"
+  },
+  {
+    "timestamp": 1763001715.369694,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "91",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:41:55Z"
+  },
+  {
+    "timestamp": 1763001887.2002938,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T02:44:47Z"
+  },
+  {
+    "timestamp": 1763002007.60099,
+    "seed_id": "1987-12::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-12::1987_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T02:46:47Z"
+  },
+  {
+    "timestamp": 1763002007.601033,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-12::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1661323923
+    },
+    "iso_time": "2025-11-13T02:46:47Z"
+  },
+  {
+    "timestamp": 1763002008.3652968,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 3,
+        "K": 137
+      }
+    },
+    "iso_time": "2025-11-13T02:46:48Z"
+  },
+  {
+    "timestamp": 1763002009.1452491,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8464
+    },
+    "iso_time": "2025-11-13T02:46:49Z"
+  },
+  {
+    "timestamp": 1763002009.145372,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $k=3$ be an odd integer and $K=137$ be an integer, both greater than 2. Find the smallest positive integer $n$ that ",
+      "correct_answer": "8464",
+      "seed_value": 1661323923
+    },
+    "iso_time": "2025-11-13T02:46:49Z"
+  },
+  {
+    "timestamp": 1763002009.1454122,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8464",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T02:46:49Z"
+  },
+  {
+    "timestamp": 1763002115.874006,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8466",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:48:35Z"
+  },
+  {
+    "timestamp": 1763002264.0166872,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8455",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:51:04Z"
+  },
+  {
+    "timestamp": 1763002512.848589,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8469",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T02:55:12Z"
+  },
+  {
+    "timestamp": 1763002662.005486,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8464",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T02:57:42Z"
+  },
+  {
+    "timestamp": 1763002756.842401,
+    "seed_id": "1987-12::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-12::1987_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T02:59:16Z"
+  },
+  {
+    "timestamp": 1763002756.842444,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-12::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 484155598
+    },
+    "iso_time": "2025-11-13T02:59:16Z"
+  },
+  {
+    "timestamp": 1763002757.6418188,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 5,
+        "K": 2283
+      }
+    },
+    "iso_time": "2025-11-13T02:59:17Z"
+  },
+  {
+    "timestamp": 1763002758.4090471,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 100
+    },
+    "iso_time": "2025-11-13T02:59:18Z"
+  },
+  {
+    "timestamp": 1763002758.409174,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $k=5$ be an odd integer and $K=2283$ be an integer, both greater than 2. Find the smallest positive integer $n$ that",
+      "correct_answer": "100",
+      "seed_value": 484155598
+    },
+    "iso_time": "2025-11-13T02:59:18Z"
+  },
+  {
+    "timestamp": 1763002758.409215,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T02:59:18Z"
+  },
+  {
+    "timestamp": 1763002915.254039,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "91",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T03:01:55Z"
+  },
+  {
+    "timestamp": 1763003259.365432,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "95",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T03:07:39Z"
+  },
+  {
+    "timestamp": 1763003465.292053,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T03:11:05Z"
+  },
+  {
+    "timestamp": 1763003734.0732229,
+    "seed_id": "1987-12::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "94",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T03:15:34Z"
+  },
+  {
+    "timestamp": 1763003952.2264462,
+    "seed_id": "1987-12::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-12::1987_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T03:19:12Z"
+  }
+]

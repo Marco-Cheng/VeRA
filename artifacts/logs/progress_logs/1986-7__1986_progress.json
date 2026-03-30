@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1762969921.73807,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1986,
+      "question_preview": "The increasing sequence $1,3,4,9,10,12,13\\cdots$ consists of all those positive integers which are powers of 3 or sums o",
+      "answer": "981",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-12T17:52:01Z"
+  },
+  {
+    "timestamp": 1762969921.738095,
+    "seed_id": "1986-7::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-12T17:52:01Z"
+  },
+  {
+    "timestamp": 1762969921.738106,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The increasing sequence $1,3,4,9,10,12,13\\cdots$ consists of all those positive integers which are powers of 3 or sums of distinct powers of 3. Find the $100^{\\mbox{th}}$ term of this sequence.",
+      "answer": "981",
+      "example_id": "1986-7::1986"
+    },
+    "iso_time": "2025-11-12T17:52:01Z"
+  },
+  {
+    "timestamp": 1762970095.706538,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-7::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1720393558
+    },
+    "iso_time": "2025-11-12T17:54:55Z"
+  },
+  {
+    "timestamp": 1762970096.504489,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 6,
+        "X": 775,
+        "digits_str": "0, 1, 3, 4",
+        "N": 169
+      }
+    },
+    "iso_time": "2025-11-12T17:54:56Z"
+  },
+  {
+    "timestamp": 1762970097.287301,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 169
+    },
+    "iso_time": "2025-11-12T17:54:57Z"
+  },
+  {
+    "timestamp": 1762970097.2874408,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be an increasing sequence of all positive integers whose base-6 representation consists only of digits from the ",
+      "correct_answer": "169",
+      "seed_value": 1720393558
+    },
+    "iso_time": "2025-11-12T17:54:57Z"
+  },
+  {
+    "timestamp": 1762970097.287508,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "169",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T17:54:57Z"
+  },
+  {
+    "timestamp": 1762970296.61698,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "177",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T17:58:16Z"
+  },
+  {
+    "timestamp": 1762970454.415672,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "162",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T18:00:54Z"
+  },
+  {
+    "timestamp": 1762970696.311127,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "161",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T18:04:56Z"
+  },
+  {
+    "timestamp": 1762970853.8419251,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "169",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T18:07:33Z"
+  },
+  {
+    "timestamp": 1762971018.884423,
+    "seed_id": "1986-7::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-7::1986_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-12T18:10:18Z"
+  },
+  {
+    "timestamp": 1762971018.88447,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-7::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 632247041
+    },
+    "iso_time": "2025-11-12T18:10:18Z"
+  },
+  {
+    "timestamp": 1762971019.675275,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 8,
+        "X": 234,
+        "digits_str": "2, 3, 5",
+        "N": 28
+      }
+    },
+    "iso_time": "2025-11-12T18:10:19Z"
+  },
+  {
+    "timestamp": 1762971020.457246,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 28
+    },
+    "iso_time": "2025-11-12T18:10:20Z"
+  },
+  {
+    "timestamp": 1762971020.457404,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be an increasing sequence of all positive integers whose base-8 representation consists only of digits from the ",
+      "correct_answer": "28",
+      "seed_value": 632247041
+    },
+    "iso_time": "2025-11-12T18:10:20Z"
+  },
+  {
+    "timestamp": 1762971020.45745,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "28",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T18:10:20Z"
+  },
+  {
+    "timestamp": 1762971137.462296,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "22",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T18:12:17Z"
+  },
+  {
+    "timestamp": 1762971327.657578,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "31",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T18:15:27Z"
+  },
+  {
+    "timestamp": 1762971556.1232069,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "21",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T18:19:16Z"
+  },
+  {
+    "timestamp": 1762971752.423926,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "28",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T18:22:32Z"
+  },
+  {
+    "timestamp": 1762971877.009793,
+    "seed_id": "1986-7::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-7::1986_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-12T18:24:37Z"
+  },
+  {
+    "timestamp": 1762971877.009838,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-7::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1740904906
+    },
+    "iso_time": "2025-11-12T18:24:37Z"
+  },
+  {
+    "timestamp": 1762971877.841324,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 9,
+        "X": 704,
+        "digits_str": "1, 2, 3, 4, 5, 6, 8",
+        "N": 387
+      }
+    },
+    "iso_time": "2025-11-12T18:24:37Z"
+  },
+  {
+    "timestamp": 1762971878.6628952,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 387
+    },
+    "iso_time": "2025-11-12T18:24:38Z"
+  },
+  {
+    "timestamp": 1762971878.663035,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be an increasing sequence of all positive integers whose base-9 representation consists only of digits from the ",
+      "correct_answer": "387",
+      "seed_value": 1740904906
+    },
+    "iso_time": "2025-11-12T18:24:38Z"
+  },
+  {
+    "timestamp": 1762971878.66308,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "387",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T18:24:38Z"
+  },
+  {
+    "timestamp": 1762972003.251353,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "387",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T18:26:43Z"
+  },
+  {
+    "timestamp": 1762972200.542153,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "382",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T18:30:00Z"
+  },
+  {
+    "timestamp": 1762972486.1629171,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "381",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T18:34:46Z"
+  },
+  {
+    "timestamp": 1762972665.198061,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "396",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T18:37:45Z"
+  },
+  {
+    "timestamp": 1762972856.3936598,
+    "seed_id": "1986-7::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-7::1986_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-12T18:40:56Z"
+  },
+  {
+    "timestamp": 1762972856.393708,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-7::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 18563036
+    },
+    "iso_time": "2025-11-12T18:40:56Z"
+  },
+  {
+    "timestamp": 1762972857.173156,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 10,
+        "X": 839,
+        "digits_str": "1, 2, 3, 5, 6, 7, 8, 9",
+        "N": 480
+      }
+    },
+    "iso_time": "2025-11-12T18:40:57Z"
+  },
+  {
+    "timestamp": 1762972857.949877,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 480
+    },
+    "iso_time": "2025-11-12T18:40:57Z"
+  },
+  {
+    "timestamp": 1762972857.950027,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be an increasing sequence of all positive integers whose base-10 representation consists only of digits from the",
+      "correct_answer": "480",
+      "seed_value": 18563036
+    },
+    "iso_time": "2025-11-12T18:40:57Z"
+  },
+  {
+    "timestamp": 1762972857.9500842,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "489",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T18:40:57Z"
+  },
+  {
+    "timestamp": 1762973110.6707442,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "486",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T18:45:10Z"
+  },
+  {
+    "timestamp": 1762973402.2440052,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "480",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T18:50:02Z"
+  },
+  {
+    "timestamp": 1762973566.929364,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "476",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T18:52:46Z"
+  },
+  {
+    "timestamp": 1762973827.402074,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "480",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T18:57:07Z"
+  },
+  {
+    "timestamp": 1762973993.5164921,
+    "seed_id": "1986-7::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-7::1986_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-12T18:59:53Z"
+  },
+  {
+    "timestamp": 1762973993.516535,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-7::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1526795498
+    },
+    "iso_time": "2025-11-12T18:59:53Z"
+  },
+  {
+    "timestamp": 1762973994.3217359,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 7,
+        "X": 1939,
+        "digits_str": "0, 3, 4, 5",
+        "N": 232
+      }
+    },
+    "iso_time": "2025-11-12T18:59:54Z"
+  },
+  {
+    "timestamp": 1762973995.103074,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 232
+    },
+    "iso_time": "2025-11-12T18:59:55Z"
+  },
+  {
+    "timestamp": 1762973995.103224,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be an increasing sequence of all positive integers whose base-7 representation consists only of digits from the ",
+      "correct_answer": "232",
+      "seed_value": 1526795498
+    },
+    "iso_time": "2025-11-12T18:59:55Z"
+  },
+  {
+    "timestamp": 1762973995.103285,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "232",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T18:59:55Z"
+  },
+  {
+    "timestamp": 1762974119.445746,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "232",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T19:01:59Z"
+  },
+  {
+    "timestamp": 1762974239.5292711,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "234",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T19:03:59Z"
+  },
+  {
+    "timestamp": 1762974506.619352,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "229",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T19:08:26Z"
+  },
+  {
+    "timestamp": 1762974635.940254,
+    "seed_id": "1986-7::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "235",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T19:10:35Z"
+  },
+  {
+    "timestamp": 1762974872.4971719,
+    "seed_id": "1986-7::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-7::1986_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-12T19:14:32Z"
+  }
+]

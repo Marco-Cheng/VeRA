@@ -1,0 +1,794 @@
+[
+  {
+    "timestamp": 1764111975.143142,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1996,
+      "question_preview": "Find the smallest positive integer $n$ for which the expansion of $(xy-3x+7y-21)^n$ , after like terms have been collect",
+      "answer": "44",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-25T23:06:15Z"
+  },
+  {
+    "timestamp": 1764111975.143234,
+    "seed_id": "1996-3::1996",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-25T23:06:15Z"
+  },
+  {
+    "timestamp": 1764111975.143287,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find the smallest positive integer $n$ for which the expansion of $(xy-3x+7y-21)^n$ , after like terms have been collected, has at least 1996 terms.",
+      "answer": "44",
+      "example_id": "1996-3::1996"
+    },
+    "iso_time": "2025-11-25T23:06:15Z"
+  },
+  {
+    "timestamp": 1764112073.266022,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-3::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1103218919
+    },
+    "iso_time": "2025-11-25T23:07:53Z"
+  },
+  {
+    "timestamp": 1764112074.058131,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "poly_text": "P(x, y, z) = 1 + 3*x^3 + 4*y^5 + 9*x^3*y^5 + 8*z^7 + 8*x^3*z^7 + 5*y^5*z^7 + 4*x^3*y^5*z^7",
+        "target_terms": 1093044,
+        "varsyms": [
+          "x",
+          "y",
+          "z"
+        ],
+        "exponents": [
+          3,
+          5,
+          7
+        ],
+        "coeffs": [
+          1,
+          3,
+          4,
+          9,
+          8,
+          8,
+          5,
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-25T23:07:54Z"
+  },
+  {
+    "timestamp": 1764112074.807035,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 103
+    },
+    "iso_time": "2025-11-25T23:07:54Z"
+  },
+  {
+    "timestamp": 1764112074.807209,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial in 3 variables defined by P(x, y, z) = 1 + 3*x^3 + 4*y^5 + 9*x^3*y^5 + 8*z^7 ",
+      "correct_answer": "103",
+      "seed_value": 1103218919
+    },
+    "iso_time": "2025-11-25T23:07:54Z"
+  },
+  {
+    "timestamp": 1764112074.807254,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "100",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:07:54Z"
+  },
+  {
+    "timestamp": 1764112102.0025191,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:08:22Z"
+  },
+  {
+    "timestamp": 1764112137.5636349,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "102",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:08:57Z"
+  },
+  {
+    "timestamp": 1764112158.4327402,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "103",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:09:18Z"
+  },
+  {
+    "timestamp": 1764112203.997857,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "103",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:10:03Z"
+  },
+  {
+    "timestamp": 1764112231.192275,
+    "seed_id": "1996-3::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-3::1996_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:10:31Z"
+  },
+  {
+    "timestamp": 1764112231.19248,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-3::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2022332574
+    },
+    "iso_time": "2025-11-25T23:10:31Z"
+  },
+  {
+    "timestamp": 1764112231.95007,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "poly_text": "P(x, y, z) = 6 + 5*x^2 + 9*y^3 + 4*x^2*y^3 + 7*z^7 + 2*x^2*z^7 + 4*y^3*z^7 + 6*x^2*y^3*z^7",
+        "target_terms": 848666,
+        "varsyms": [
+          "x",
+          "y",
+          "z"
+        ],
+        "exponents": [
+          2,
+          3,
+          7
+        ],
+        "coeffs": [
+          6,
+          5,
+          9,
+          4,
+          7,
+          2,
+          4,
+          6
+        ]
+      }
+    },
+    "iso_time": "2025-11-25T23:10:31Z"
+  },
+  {
+    "timestamp": 1764112232.700808,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 94
+    },
+    "iso_time": "2025-11-25T23:10:32Z"
+  },
+  {
+    "timestamp": 1764112232.7009778,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial in 3 variables defined by P(x, y, z) = 6 + 5*x^2 + 9*y^3 + 4*x^2*y^3 + 7*z^7 ",
+      "correct_answer": "94",
+      "seed_value": 2022332574
+    },
+    "iso_time": "2025-11-25T23:10:32Z"
+  },
+  {
+    "timestamp": 1764112232.701042,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "102",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:10:32Z"
+  },
+  {
+    "timestamp": 1764112261.620023,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "94",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:11:01Z"
+  },
+  {
+    "timestamp": 1764112289.81532,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "94",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:11:29Z"
+  },
+  {
+    "timestamp": 1764112324.933509,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "89",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:12:04Z"
+  },
+  {
+    "timestamp": 1764112364.581345,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "90",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:12:44Z"
+  },
+  {
+    "timestamp": 1764112388.420289,
+    "seed_id": "1996-3::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-3::1996_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:13:08Z"
+  },
+  {
+    "timestamp": 1764112388.420489,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-3::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1105842216
+    },
+    "iso_time": "2025-11-25T23:13:08Z"
+  },
+  {
+    "timestamp": 1764112389.2063181,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "poly_text": "P(x, y, z) = 3 + x^3 + 4*y^6 + x^3*y^6 + 2*z^5 + 7*x^3*z^5 + 9*y^6*z^5 + 8*x^3*y^6*z^5",
+        "target_terms": 1314294,
+        "varsyms": [
+          "x",
+          "y",
+          "z"
+        ],
+        "exponents": [
+          3,
+          6,
+          5
+        ],
+        "coeffs": [
+          3,
+          1,
+          4,
+          1,
+          2,
+          7,
+          9,
+          8
+        ]
+      }
+    },
+    "iso_time": "2025-11-25T23:13:09Z"
+  },
+  {
+    "timestamp": 1764112389.950797,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 109
+    },
+    "iso_time": "2025-11-25T23:13:09Z"
+  },
+  {
+    "timestamp": 1764112389.950942,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial in 3 variables defined by P(x, y, z) = 3 + x^3 + 4*y^6 + x^3*y^6 + 2*z^5 + 7*",
+      "correct_answer": "109",
+      "seed_value": 1105842216
+    },
+    "iso_time": "2025-11-25T23:13:09Z"
+  },
+  {
+    "timestamp": 1764112389.950987,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:13:09Z"
+  },
+  {
+    "timestamp": 1764112442.900796,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "107",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:14:02Z"
+  },
+  {
+    "timestamp": 1764112475.877815,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "109",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:14:35Z"
+  },
+  {
+    "timestamp": 1764112519.2262452,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "113",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:15:19Z"
+  },
+  {
+    "timestamp": 1764112547.682254,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "109",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:15:47Z"
+  },
+  {
+    "timestamp": 1764112583.292053,
+    "seed_id": "1996-3::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-3::1996_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:16:23Z"
+  },
+  {
+    "timestamp": 1764112583.292245,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-3::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 546373839
+    },
+    "iso_time": "2025-11-25T23:16:23Z"
+  },
+  {
+    "timestamp": 1764112584.054731,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "poly_text": "P(x, y, z) = 7 + x^4 + 6*y^4 + 9*x^4*y^4 + 6*z^6 + 4*x^4*z^6 + 8*y^4*z^6 + 3*x^4*y^4*z^6",
+        "target_terms": 1734922,
+        "varsyms": [
+          "x",
+          "y",
+          "z"
+        ],
+        "exponents": [
+          4,
+          4,
+          6
+        ],
+        "coeffs": [
+          7,
+          1,
+          6,
+          9,
+          6,
+          4,
+          8,
+          3
+        ]
+      }
+    },
+    "iso_time": "2025-11-25T23:16:24Z"
+  },
+  {
+    "timestamp": 1764112584.803987,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 120
+    },
+    "iso_time": "2025-11-25T23:16:24Z"
+  },
+  {
+    "timestamp": 1764112584.8041658,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial in 3 variables defined by P(x, y, z) = 7 + x^4 + 6*y^4 + 9*x^4*y^4 + 6*z^6 + ",
+      "correct_answer": "120",
+      "seed_value": 546373839
+    },
+    "iso_time": "2025-11-25T23:16:24Z"
+  },
+  {
+    "timestamp": 1764112584.8042161,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:16:24Z"
+  },
+  {
+    "timestamp": 1764112614.6153758,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "124",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:16:54Z"
+  },
+  {
+    "timestamp": 1764112659.3796248,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "128",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:17:39Z"
+  },
+  {
+    "timestamp": 1764112698.008509,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:18:18Z"
+  },
+  {
+    "timestamp": 1764112718.871532,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "115",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:18:38Z"
+  },
+  {
+    "timestamp": 1764112743.9650729,
+    "seed_id": "1996-3::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-3::1996_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:19:03Z"
+  },
+  {
+    "timestamp": 1764112743.965257,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-3::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2113801679
+    },
+    "iso_time": "2025-11-25T23:19:03Z"
+  },
+  {
+    "timestamp": 1764112744.755323,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 4,
+        "poly_text": "P(x, y, z, w) = 5 + 8*x^3 + 6*y^5 + 2*x^3*y^5 + 6*z^6 + 7*x^3*z^6 + 3*y^5*z^6 + 9*x^3*y^5*z^6 + 2*w^2 + 5*x^3*w^2 + 7*y^5*w^2 + 8*x^3*y^5*w^2 + 9*z^6*w^2 + 5*x^3*z^6*w^2 + 3*y^5*z^6*w^2 + 7*x^3*y^5*z^6*w^2",
+        "target_terms": 112383642,
+        "varsyms": [
+          "x",
+          "y",
+          "z",
+          "w"
+        ],
+        "exponents": [
+          3,
+          5,
+          6,
+          2
+        ],
+        "coeffs": [
+          5,
+          8,
+          6,
+          2,
+          6,
+          7,
+          3,
+          9,
+          2,
+          5,
+          7,
+          8,
+          9,
+          5,
+          3,
+          7
+        ]
+      }
+    },
+    "iso_time": "2025-11-25T23:19:04Z"
+  },
+  {
+    "timestamp": 1764112745.498833,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 102
+    },
+    "iso_time": "2025-11-25T23:19:05Z"
+  },
+  {
+    "timestamp": 1764112745.4990132,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial in 4 variables defined by P(x, y, z, w) = 5 + 8*x^3 + 6*y^5 + 2*x^3*y^5 + 6*z",
+      "correct_answer": "102",
+      "seed_value": 2113801679
+    },
+    "iso_time": "2025-11-25T23:19:05Z"
+  },
+  {
+    "timestamp": 1764112745.4990778,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "102",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:19:05Z"
+  },
+  {
+    "timestamp": 1764112770.4855108,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "108",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:19:30Z"
+  },
+  {
+    "timestamp": 1764112836.12194,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "93",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:20:36Z"
+  },
+  {
+    "timestamp": 1764112867.559041,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "102",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:21:07Z"
+  },
+  {
+    "timestamp": 1764112999.757996,
+    "seed_id": "1996-3::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "106",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:23:19Z"
+  },
+  {
+    "timestamp": 1764113019.8281841,
+    "seed_id": "1996-3::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-3::1996_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:23:39Z"
+  }
+]

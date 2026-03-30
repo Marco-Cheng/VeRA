@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764710641.187988,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2002,
+      "question_preview": "The perimeter of triangle $APM$ is $152$ , and the angle $PAM$ is a right angle. A circle of radius $19$ with center $O$",
+      "answer": "98",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-02T21:24:01Z"
+  },
+  {
+    "timestamp": 1764710641.188102,
+    "seed_id": "2002-II-14::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-02T21:24:01Z"
+  },
+  {
+    "timestamp": 1764710641.1881652,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The perimeter of triangle $APM$ is $152$ , and the angle $PAM$ is a right angle. A circle of radius $19$ with center $O$ on $\\overline{AP}$ is drawn so that it is tangent to $\\overline{AM}$ and $\\overline{PM}$ . Given that $OP=m/n$ where $m$ and $n$ are relatively prime positive integers, find $m+n$ .",
+      "answer": "98",
+      "example_id": "2002-II-14::2002"
+    },
+    "iso_time": "2025-12-02T21:24:01Z"
+  },
+  {
+    "timestamp": 1764710782.697669,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-14::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1991798912
+    },
+    "iso_time": "2025-12-02T21:26:22Z"
+  },
+  {
+    "timestamp": 1764710783.994624,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 986,
+        "k": 18,
+        "perimeter": 37584
+      }
+    },
+    "iso_time": "2025-12-02T21:26:23Z"
+  },
+  {
+    "timestamp": 1764710785.1865962,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 18869
+    },
+    "iso_time": "2025-12-02T21:26:25Z"
+  },
+  {
+    "timestamp": 1764710785.1867452,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a right triangle APM with right angle at A, a circle of radius 986 is drawn with center O on segment AP so that it is",
+      "correct_answer": "18869",
+      "seed_value": 1991798912
+    },
+    "iso_time": "2025-12-02T21:26:25Z"
+  },
+  {
+    "timestamp": 1764710785.186815,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "18869",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T21:26:25Z"
+  },
+  {
+    "timestamp": 1764710820.585954,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "18869",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T21:27:00Z"
+  },
+  {
+    "timestamp": 1764710863.2198908,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "18872",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:27:43Z"
+  },
+  {
+    "timestamp": 1764710901.901309,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "18871",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:28:21Z"
+  },
+  {
+    "timestamp": 1764710945.0385,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "18874",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:29:05Z"
+  },
+  {
+    "timestamp": 1764710975.808327,
+    "seed_id": "2002-II-14::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-14::2002_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T21:29:35Z"
+  },
+  {
+    "timestamp": 1764710975.808427,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-14::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1409649675
+    },
+    "iso_time": "2025-12-02T21:29:35Z"
+  },
+  {
+    "timestamp": 1764710976.805759,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 4365,
+        "k": 16,
+        "perimeter": 148992
+      }
+    },
+    "iso_time": "2025-12-02T21:29:36Z"
+  },
+  {
+    "timestamp": 1764710977.8904572,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 74804
+    },
+    "iso_time": "2025-12-02T21:29:37Z"
+  },
+  {
+    "timestamp": 1764710977.8906088,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a right triangle APM with right angle at A, a circle of radius 4365 is drawn with center O on segment AP so that it i",
+      "correct_answer": "74804",
+      "seed_value": 1409649675
+    },
+    "iso_time": "2025-12-02T21:29:37Z"
+  },
+  {
+    "timestamp": 1764710977.890684,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "74803",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:29:37Z"
+  },
+  {
+    "timestamp": 1764711021.3203452,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "74804",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T21:30:21Z"
+  },
+  {
+    "timestamp": 1764711063.980989,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "74807",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:31:03Z"
+  },
+  {
+    "timestamp": 1764711093.766355,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "74804",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T21:31:33Z"
+  },
+  {
+    "timestamp": 1764711133.2952042,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "74809",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:32:13Z"
+  },
+  {
+    "timestamp": 1764711206.851818,
+    "seed_id": "2002-II-14::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-14::2002_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T21:33:26Z"
+  },
+  {
+    "timestamp": 1764711206.851988,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-14::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 126855341
+    },
+    "iso_time": "2025-12-02T21:33:26Z"
+  },
+  {
+    "timestamp": 1764711207.98161,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 918,
+        "k": 18,
+        "perimeter": 34992
+      }
+    },
+    "iso_time": "2025-12-02T21:33:27Z"
+  },
+  {
+    "timestamp": 1764711209.083086,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17569
+    },
+    "iso_time": "2025-12-02T21:33:29Z"
+  },
+  {
+    "timestamp": 1764711209.083223,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a right triangle APM with right angle at A, a circle of radius 918 is drawn with center O on segment AP so that it is",
+      "correct_answer": "17569",
+      "seed_value": 126855341
+    },
+    "iso_time": "2025-12-02T21:33:29Z"
+  },
+  {
+    "timestamp": 1764711209.083284,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "17561",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:33:29Z"
+  },
+  {
+    "timestamp": 1764711262.525375,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17569",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T21:34:22Z"
+  },
+  {
+    "timestamp": 1764711297.965507,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "17578",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:34:57Z"
+  },
+  {
+    "timestamp": 1764711332.833157,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "17567",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:35:32Z"
+  },
+  {
+    "timestamp": 1764711427.19247,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17569",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T21:37:07Z"
+  },
+  {
+    "timestamp": 1764711471.38667,
+    "seed_id": "2002-II-14::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-14::2002_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T21:37:51Z"
+  },
+  {
+    "timestamp": 1764711471.386873,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-14::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1980400694
+    },
+    "iso_time": "2025-12-02T21:37:51Z"
+  },
+  {
+    "timestamp": 1764711472.748779,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 1444,
+        "k": 20,
+        "perimeter": 60800
+      }
+    },
+    "iso_time": "2025-12-02T21:37:52Z"
+  },
+  {
+    "timestamp": 1764711473.8960588,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 30497
+    },
+    "iso_time": "2025-12-02T21:37:53Z"
+  },
+  {
+    "timestamp": 1764711473.896215,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a right triangle APM with right angle at A, a circle of radius 1444 is drawn with center O on segment AP so that it i",
+      "correct_answer": "30497",
+      "seed_value": 1980400694
+    },
+    "iso_time": "2025-12-02T21:37:53Z"
+  },
+  {
+    "timestamp": 1764711473.896271,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "30499",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:37:53Z"
+  },
+  {
+    "timestamp": 1764711503.3768132,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "30488",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:38:23Z"
+  },
+  {
+    "timestamp": 1764711545.053056,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "30497",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T21:39:05Z"
+  },
+  {
+    "timestamp": 1764711576.3260841,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "30497",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T21:39:36Z"
+  },
+  {
+    "timestamp": 1764711606.999392,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "30494",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:40:06Z"
+  },
+  {
+    "timestamp": 1764711639.569736,
+    "seed_id": "2002-II-14::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-14::2002_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T21:40:39Z"
+  },
+  {
+    "timestamp": 1764711639.569907,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-14::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1727178866
+    },
+    "iso_time": "2025-12-02T21:40:39Z"
+  },
+  {
+    "timestamp": 1764711640.848067,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 1510,
+        "k": 11,
+        "perimeter": 36542
+      }
+    },
+    "iso_time": "2025-12-02T21:40:40Z"
+  },
+  {
+    "timestamp": 1764711642.086205,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 9217
+    },
+    "iso_time": "2025-12-02T21:40:42Z"
+  },
+  {
+    "timestamp": 1764711642.086384,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a right triangle APM with right angle at A, a circle of radius 1510 is drawn with center O on segment AP so that it i",
+      "correct_answer": "9217",
+      "seed_value": 1727178866
+    },
+    "iso_time": "2025-12-02T21:40:42Z"
+  },
+  {
+    "timestamp": 1764711642.086462,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "9222",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:40:42Z"
+  },
+  {
+    "timestamp": 1764711729.4180942,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "9218",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:42:09Z"
+  },
+  {
+    "timestamp": 1764711807.922035,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "9217",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T21:43:27Z"
+  },
+  {
+    "timestamp": 1764711848.76802,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "9217",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T21:44:08Z"
+  },
+  {
+    "timestamp": 1764711881.387764,
+    "seed_id": "2002-II-14::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "9209",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:44:41Z"
+  },
+  {
+    "timestamp": 1764711918.609963,
+    "seed_id": "2002-II-14::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-14::2002_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T21:45:18Z"
+  }
+]

@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1763199857.4586189,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1988,
+      "question_preview": "Find $(\\log_2 x)^2$ if $\\log_2 (\\log_8 x) = \\log_8 (\\log_2 x)$ .",
+      "answer": "27",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-15T09:44:17Z"
+  },
+  {
+    "timestamp": 1763199857.458637,
+    "seed_id": "1988-3::1988",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-15T09:44:17Z"
+  },
+  {
+    "timestamp": 1763199857.458647,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find $(\\log_2 x)^2$ if $\\log_2 (\\log_8 x) = \\log_8 (\\log_2 x)$ .",
+      "answer": "27",
+      "example_id": "1988-3::1988"
+    },
+    "iso_time": "2025-11-15T09:44:17Z"
+  },
+  {
+    "timestamp": 1763199980.769748,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-3::1988_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 742250121
+    },
+    "iso_time": "2025-11-15T09:46:20Z"
+  },
+  {
+    "timestamp": 1763199981.5623522,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1": 5,
+        "c2": 2,
+        "a": 3,
+        "b": 9,
+        "P": 8
+      }
+    },
+    "iso_time": "2025-11-15T09:46:21Z"
+  },
+  {
+    "timestamp": 1763199982.3394802,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1024
+    },
+    "iso_time": "2025-11-15T09:46:22Z"
+  },
+  {
+    "timestamp": 1763199982.339608,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $x$ be a real number satisfying the equation $5 \\log_3(\\log_9 x) = 2 \\log_9(\\log_3 x)$. Find the value of $(\\log_3 x",
+      "correct_answer": "1024",
+      "seed_value": 742250121
+    },
+    "iso_time": "2025-11-15T09:46:22Z"
+  },
+  {
+    "timestamp": 1763199982.3396502,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1024",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T09:46:22Z"
+  },
+  {
+    "timestamp": 1763200032.253484,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1030",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T09:47:12Z"
+  },
+  {
+    "timestamp": 1763200079.051702,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1023",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T09:47:59Z"
+  },
+  {
+    "timestamp": 1763200151.961762,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1024",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T09:49:11Z"
+  },
+  {
+    "timestamp": 1763200190.97364,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1029",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T09:49:50Z"
+  },
+  {
+    "timestamp": 1763200271.337863,
+    "seed_id": "1988-3::1988",
+    "stage": "variant_success",
+    "message": "Accepted variant 1988-3::1988_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T09:51:11Z"
+  },
+  {
+    "timestamp": 1763200271.337916,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-3::1988_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 894473297
+    },
+    "iso_time": "2025-11-15T09:51:11Z"
+  },
+  {
+    "timestamp": 1763200272.122066,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1": 2,
+        "c2": 1,
+        "a": 2,
+        "b": 4,
+        "P": 3
+      }
+    },
+    "iso_time": "2025-11-15T09:51:12Z"
+  },
+  {
+    "timestamp": 1763200272.899286,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16
+    },
+    "iso_time": "2025-11-15T09:51:12Z"
+  },
+  {
+    "timestamp": 1763200272.899424,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $x$ be a real number satisfying the equation $2 \\log_2(\\log_4 x) = 1 \\log_4(\\log_2 x)$. Find the value of $(\\log_2 x",
+      "correct_answer": "16",
+      "seed_value": 894473297
+    },
+    "iso_time": "2025-11-15T09:51:12Z"
+  },
+  {
+    "timestamp": 1763200272.899488,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T09:51:12Z"
+  },
+  {
+    "timestamp": 1763200309.6565802,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "21",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T09:51:49Z"
+  },
+  {
+    "timestamp": 1763200387.565065,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T09:53:07Z"
+  },
+  {
+    "timestamp": 1763200453.326827,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "24",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T09:54:13Z"
+  },
+  {
+    "timestamp": 1763200548.498959,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T09:55:48Z"
+  },
+  {
+    "timestamp": 1763200589.726075,
+    "seed_id": "1988-3::1988",
+    "stage": "variant_success",
+    "message": "Accepted variant 1988-3::1988_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T09:56:29Z"
+  },
+  {
+    "timestamp": 1763200589.726128,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-3::1988_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 794107026
+    },
+    "iso_time": "2025-11-15T09:56:29Z"
+  },
+  {
+    "timestamp": 1763200590.499527,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1": 5,
+        "c2": 7,
+        "a": 3,
+        "b": 9,
+        "P": 3
+      }
+    },
+    "iso_time": "2025-11-15T09:56:30Z"
+  },
+  {
+    "timestamp": 1763200591.268561,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1024
+    },
+    "iso_time": "2025-11-15T09:56:31Z"
+  },
+  {
+    "timestamp": 1763200591.2686982,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $x$ be a real number satisfying the equation $5 \\log_3(\\log_9 x) = 7 \\log_9(\\log_3 x)$. Find the value of $(\\log_3 x",
+      "correct_answer": "1024",
+      "seed_value": 794107026
+    },
+    "iso_time": "2025-11-15T09:56:31Z"
+  },
+  {
+    "timestamp": 1763200591.268746,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1029",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T09:56:31Z"
+  },
+  {
+    "timestamp": 1763200659.565183,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1021",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T09:57:39Z"
+  },
+  {
+    "timestamp": 1763200723.564049,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1024",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T09:58:43Z"
+  },
+  {
+    "timestamp": 1763200773.027573,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1024",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T09:59:33Z"
+  },
+  {
+    "timestamp": 1763200807.40809,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1017",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T10:00:07Z"
+  },
+  {
+    "timestamp": 1763200837.9447029,
+    "seed_id": "1988-3::1988",
+    "stage": "variant_success",
+    "message": "Accepted variant 1988-3::1988_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T10:00:37Z"
+  },
+  {
+    "timestamp": 1763200837.9447439,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-3::1988_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1286831628
+    },
+    "iso_time": "2025-11-15T10:00:37Z"
+  },
+  {
+    "timestamp": 1763200838.732128,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1": 2,
+        "c2": 3,
+        "a": 3,
+        "b": 9,
+        "P": 1
+      }
+    },
+    "iso_time": "2025-11-15T10:00:38Z"
+  },
+  {
+    "timestamp": 1763200839.516547,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16
+    },
+    "iso_time": "2025-11-15T10:00:39Z"
+  },
+  {
+    "timestamp": 1763200839.516685,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $x$ be a real number satisfying the equation $2 \\log_3(\\log_9 x) = 3 \\log_9(\\log_3 x)$. Find the value of $(\\log_3 x",
+      "correct_answer": "16",
+      "seed_value": 1286831628
+    },
+    "iso_time": "2025-11-15T10:00:39Z"
+  },
+  {
+    "timestamp": 1763200839.5167282,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "18",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T10:00:39Z"
+  },
+  {
+    "timestamp": 1763200923.561134,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "24",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T10:02:03Z"
+  },
+  {
+    "timestamp": 1763201003.4741719,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T10:03:23Z"
+  },
+  {
+    "timestamp": 1763201070.0768058,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T10:04:30Z"
+  },
+  {
+    "timestamp": 1763201110.728811,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T10:05:10Z"
+  },
+  {
+    "timestamp": 1763201166.748139,
+    "seed_id": "1988-3::1988",
+    "stage": "variant_success",
+    "message": "Accepted variant 1988-3::1988_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T10:06:06Z"
+  },
+  {
+    "timestamp": 1763201166.748182,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1988-3::1988_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 175110773
+    },
+    "iso_time": "2025-11-15T10:06:06Z"
+  },
+  {
+    "timestamp": 1763201167.58652,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1": 2,
+        "c2": 1,
+        "a": 2,
+        "b": 4,
+        "P": 3
+      }
+    },
+    "iso_time": "2025-11-15T10:06:07Z"
+  },
+  {
+    "timestamp": 1763201168.373999,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16
+    },
+    "iso_time": "2025-11-15T10:06:08Z"
+  },
+  {
+    "timestamp": 1763201168.3741581,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $x$ be a real number satisfying the equation $2 \\log_2(\\log_4 x) = 1 \\log_4(\\log_2 x)$. Find the value of $(\\log_2 x",
+      "correct_answer": "16",
+      "seed_value": 175110773
+    },
+    "iso_time": "2025-11-15T10:06:08Z"
+  },
+  {
+    "timestamp": 1763201168.374201,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T10:06:08Z"
+  },
+  {
+    "timestamp": 1763201255.833987,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T10:07:35Z"
+  },
+  {
+    "timestamp": 1763201304.5735512,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T10:08:24Z"
+  },
+  {
+    "timestamp": 1763201365.4454331,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T10:09:25Z"
+  },
+  {
+    "timestamp": 1763201416.102777,
+    "seed_id": "1988-3::1988",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T10:10:16Z"
+  },
+  {
+    "timestamp": 1763201500.164981,
+    "seed_id": "1988-3::1988",
+    "stage": "variant_success",
+    "message": "Accepted variant 1988-3::1988_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T10:11:40Z"
+  }
+]

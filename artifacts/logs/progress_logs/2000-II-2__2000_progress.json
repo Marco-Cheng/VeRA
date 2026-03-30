@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764407866.718528,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "A point whose coordinates are both integers is called a lattice point.  How many lattice points lie on the hyperbola $x^",
+      "answer": "98",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T09:17:46Z"
+  },
+  {
+    "timestamp": 1764407866.718566,
+    "seed_id": "2000-II-2::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T09:17:46Z"
+  },
+  {
+    "timestamp": 1764407866.7186382,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A point whose coordinates are both integers is called a lattice point.  How many lattice points lie on the hyperbola $x^2 - y^2 = 2000^2$ ?",
+      "answer": "98",
+      "example_id": "2000-II-2::2000"
+    },
+    "iso_time": "2025-11-29T09:17:46Z"
+  },
+  {
+    "timestamp": 1764408189.9012532,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-2::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 335623100
+    },
+    "iso_time": "2025-11-29T09:23:09Z"
+  },
+  {
+    "timestamp": 1764408191.008526,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 8083608596,
+        "g": 34,
+        "t": 19,
+        "s": 37
+      }
+    },
+    "iso_time": "2025-11-29T09:23:11Z"
+  },
+  {
+    "timestamp": 1764408192.0410502,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8
+    },
+    "iso_time": "2025-11-29T09:23:12Z"
+  },
+  {
+    "timestamp": 1764408192.041203,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider integer lattice points (x, y). How many such pairs satisfy x^2 - y^2 = 8083608596, with gcd(x, y) = 34, and add",
+      "correct_answer": "8",
+      "seed_value": 335623100
+    },
+    "iso_time": "2025-11-29T09:23:12Z"
+  },
+  {
+    "timestamp": 1764408192.041248,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:23:12Z"
+  },
+  {
+    "timestamp": 1764408551.082816,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:29:11Z"
+  },
+  {
+    "timestamp": 1764408593.51684,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:29:53Z"
+  },
+  {
+    "timestamp": 1764408657.263523,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T09:30:57Z"
+  },
+  {
+    "timestamp": 1764408698.01618,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T09:31:38Z"
+  },
+  {
+    "timestamp": 1764408746.531876,
+    "seed_id": "2000-II-2::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-2::2000_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T09:32:26Z"
+  },
+  {
+    "timestamp": 1764408746.531988,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-2::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1210188577
+    },
+    "iso_time": "2025-11-29T09:32:26Z"
+  },
+  {
+    "timestamp": 1764408747.6161458,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 176002096725,
+        "g": 21,
+        "t": 5,
+        "s": 169
+      }
+    },
+    "iso_time": "2025-11-29T09:32:27Z"
+  },
+  {
+    "timestamp": 1764408748.6415942,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16
+    },
+    "iso_time": "2025-11-29T09:32:28Z"
+  },
+  {
+    "timestamp": 1764408748.6417558,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider integer lattice points (x, y). How many such pairs satisfy x^2 - y^2 = 176002096725, with gcd(x, y) = 21, and a",
+      "correct_answer": "16",
+      "seed_value": 1210188577
+    },
+    "iso_time": "2025-11-29T09:32:28Z"
+  },
+  {
+    "timestamp": 1764408748.6417978,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T09:32:28Z"
+  },
+  {
+    "timestamp": 1764408799.606207,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "19",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:33:19Z"
+  },
+  {
+    "timestamp": 1764408872.311373,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T09:34:32Z"
+  },
+  {
+    "timestamp": 1764408947.7091131,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:35:47Z"
+  },
+  {
+    "timestamp": 1764409027.8615592,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:37:07Z"
+  },
+  {
+    "timestamp": 1764409099.246561,
+    "seed_id": "2000-II-2::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-2::2000_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T09:38:19Z"
+  },
+  {
+    "timestamp": 1764409099.246667,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-2::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1044771921
+    },
+    "iso_time": "2025-11-29T09:38:19Z"
+  },
+  {
+    "timestamp": 1764409100.430909,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1844936692098500,
+        "g": 22,
+        "t": 11011,
+        "s": 25
+      }
+    },
+    "iso_time": "2025-11-29T09:38:20Z"
+  },
+  {
+    "timestamp": 1764409101.4779708,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8
+    },
+    "iso_time": "2025-11-29T09:38:21Z"
+  },
+  {
+    "timestamp": 1764409101.4781141,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider integer lattice points (x, y). How many such pairs satisfy x^2 - y^2 = 1844936692098500, with gcd(x, y) = 22, a",
+      "correct_answer": "8",
+      "seed_value": 1044771921
+    },
+    "iso_time": "2025-11-29T09:38:21Z"
+  },
+  {
+    "timestamp": 1764409101.4781618,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:38:21Z"
+  },
+  {
+    "timestamp": 1764409201.663209,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:40:01Z"
+  },
+  {
+    "timestamp": 1764409309.26447,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "14",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:41:49Z"
+  },
+  {
+    "timestamp": 1764409442.014091,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T09:44:02Z"
+  },
+  {
+    "timestamp": 1764409533.460653,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T09:45:33Z"
+  },
+  {
+    "timestamp": 1764409785.706271,
+    "seed_id": "2000-II-2::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-2::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T09:49:45Z"
+  },
+  {
+    "timestamp": 1764409785.706348,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-2::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1087972256
+    },
+    "iso_time": "2025-11-29T09:49:45Z"
+  },
+  {
+    "timestamp": 1764409786.8209221,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 9214614402467551,
+        "g": 7,
+        "t": 529,
+        "s": 20387
+      }
+    },
+    "iso_time": "2025-11-29T09:49:46Z"
+  },
+  {
+    "timestamp": 1764409787.885909,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8
+    },
+    "iso_time": "2025-11-29T09:49:47Z"
+  },
+  {
+    "timestamp": 1764409787.886104,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider integer lattice points (x, y). How many such pairs satisfy x^2 - y^2 = 9214614402467551, with gcd(x, y) = 7, an",
+      "correct_answer": "8",
+      "seed_value": 1087972256
+    },
+    "iso_time": "2025-11-29T09:49:47Z"
+  },
+  {
+    "timestamp": 1764409787.886144,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:49:47Z"
+  },
+  {
+    "timestamp": 1764409873.885273,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:51:13Z"
+  },
+  {
+    "timestamp": 1764410014.5146828,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T09:53:34Z"
+  },
+  {
+    "timestamp": 1764410111.960462,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T09:55:11Z"
+  },
+  {
+    "timestamp": 1764410238.232573,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:57:18Z"
+  },
+  {
+    "timestamp": 1764410328.0266151,
+    "seed_id": "2000-II-2::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-2::2000_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T09:58:48Z"
+  },
+  {
+    "timestamp": 1764410328.0268118,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-2::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 38634064
+    },
+    "iso_time": "2025-11-29T09:58:48Z"
+  },
+  {
+    "timestamp": 1764410329.1100612,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 47392175979200,
+        "g": 40,
+        "t": 29,
+        "s": 943
+      }
+    },
+    "iso_time": "2025-11-29T09:58:49Z"
+  },
+  {
+    "timestamp": 1764410330.1333199,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8
+    },
+    "iso_time": "2025-11-29T09:58:50Z"
+  },
+  {
+    "timestamp": 1764410330.1334689,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider integer lattice points (x, y). How many such pairs satisfy x^2 - y^2 = 47392175979200, with gcd(x, y) = 40, and",
+      "correct_answer": "8",
+      "seed_value": 38634064
+    },
+    "iso_time": "2025-11-29T09:58:50Z"
+  },
+  {
+    "timestamp": 1764410330.133512,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T09:58:50Z"
+  },
+  {
+    "timestamp": 1764410421.421077,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:00:21Z"
+  },
+  {
+    "timestamp": 1764410565.907736,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:02:45Z"
+  },
+  {
+    "timestamp": 1764410759.03591,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:05:59Z"
+  },
+  {
+    "timestamp": 1764410822.665189,
+    "seed_id": "2000-II-2::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:07:02Z"
+  },
+  {
+    "timestamp": 1764410895.9325628,
+    "seed_id": "2000-II-2::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-2::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T10:08:15Z"
+  }
+]

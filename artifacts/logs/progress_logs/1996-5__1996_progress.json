@@ -1,0 +1,699 @@
+[
+  {
+    "timestamp": 1764113786.0414941,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1996,
+      "question_preview": "Suppose that the roots of $x^3+3x^2+4x-11=0$ are $a$ , $b$ , and $c$ , and that the roots of $x^3+rx^2+sx+t=0$ are $a+b$",
+      "answer": "23",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-25T23:36:26Z"
+  },
+  {
+    "timestamp": 1764113786.0415208,
+    "seed_id": "1996-5::1996",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-25T23:36:26Z"
+  },
+  {
+    "timestamp": 1764113786.041538,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Suppose that the roots of $x^3+3x^2+4x-11=0$ are $a$ , $b$ , and $c$ , and that the roots of $x^3+rx^2+sx+t=0$ are $a+b$ , $b+c$ , and $c+a$ . Find $t$ .",
+      "answer": "23",
+      "example_id": "1996-5::1996"
+    },
+    "iso_time": "2025-11-25T23:36:26Z"
+  },
+  {
+    "timestamp": 1764113836.5412211,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-5::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 656129233
+    },
+    "iso_time": "2025-11-25T23:37:16Z"
+  },
+  {
+    "timestamp": 1764113837.298934,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": -10,
+        "q": 10,
+        "r": 8,
+        "k1": 5,
+        "k2": 7,
+        "k3": 1
+      }
+    },
+    "iso_time": "2025-11-25T23:37:17Z"
+  },
+  {
+    "timestamp": 1764113838.044304,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -765520
+    },
+    "iso_time": "2025-11-25T23:37:18Z"
+  },
+  {
+    "timestamp": 1764113838.04447,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the monic cubic P(x) = x^3 + -10 x^2 + 10 x + 8 with (possibly complex) roots a, b, c. Let Q(x) be the monic cu",
+      "correct_answer": "-765520",
+      "seed_value": 656129233
+    },
+    "iso_time": "2025-11-25T23:37:18Z"
+  },
+  {
+    "timestamp": 1764113838.044509,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-765512",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:37:18Z"
+  },
+  {
+    "timestamp": 1764113982.266285,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:39:42Z"
+  },
+  {
+    "timestamp": 1764114000.890411,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-765520",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:40:00Z"
+  },
+  {
+    "timestamp": 1764114093.8930502,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-765520",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:41:33Z"
+  },
+  {
+    "timestamp": 1764114104.928416,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-765519",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:41:44Z"
+  },
+  {
+    "timestamp": 1764114126.190429,
+    "seed_id": "1996-5::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-5::1996_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:42:06Z"
+  },
+  {
+    "timestamp": 1764114126.190594,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-5::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 782034620
+    },
+    "iso_time": "2025-11-25T23:42:06Z"
+  },
+  {
+    "timestamp": 1764114126.9487512,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": -12,
+        "q": -7,
+        "r": -4,
+        "k1": 5,
+        "k2": 3,
+        "k3": 2
+      }
+    },
+    "iso_time": "2025-11-25T23:42:06Z"
+  },
+  {
+    "timestamp": 1764114127.687243,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 771000
+    },
+    "iso_time": "2025-11-25T23:42:07Z"
+  },
+  {
+    "timestamp": 1764114127.687404,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the monic cubic P(x) = x^3 + -12 x^2 + -7 x + -4 with (possibly complex) roots a, b, c. Let Q(x) be the monic c",
+      "correct_answer": "771000",
+      "seed_value": 782034620
+    },
+    "iso_time": "2025-11-25T23:42:07Z"
+  },
+  {
+    "timestamp": 1764114127.687449,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "771000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:42:07Z"
+  },
+  {
+    "timestamp": 1764114171.147094,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "770999",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:42:51Z"
+  },
+  {
+    "timestamp": 1764114185.728416,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "770995",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:43:05Z"
+  },
+  {
+    "timestamp": 1764114208.2519748,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "771008",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:43:28Z"
+  },
+  {
+    "timestamp": 1764114227.518753,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "771000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:43:47Z"
+  },
+  {
+    "timestamp": 1764114247.87831,
+    "seed_id": "1996-5::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-5::1996_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:44:07Z"
+  },
+  {
+    "timestamp": 1764114247.878509,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-5::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 619884200
+    },
+    "iso_time": "2025-11-25T23:44:07Z"
+  },
+  {
+    "timestamp": 1764114248.6753159,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": -3,
+        "q": -3,
+        "r": 8,
+        "k1": 7,
+        "k2": 4,
+        "k3": 3
+      }
+    },
+    "iso_time": "2025-11-25T23:44:08Z"
+  },
+  {
+    "timestamp": 1764114249.422687,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -52164
+    },
+    "iso_time": "2025-11-25T23:44:09Z"
+  },
+  {
+    "timestamp": 1764114249.422838,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the monic cubic P(x) = x^3 + -3 x^2 + -3 x + 8 with (possibly complex) roots a, b, c. Let Q(x) be the monic cub",
+      "correct_answer": "-52164",
+      "seed_value": 619884200
+    },
+    "iso_time": "2025-11-25T23:44:09Z"
+  },
+  {
+    "timestamp": 1764114249.422884,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-52160",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:44:09Z"
+  },
+  {
+    "timestamp": 1764114264.467874,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-52162",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:44:24Z"
+  },
+  {
+    "timestamp": 1764114279.418627,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-52164",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:44:39Z"
+  },
+  {
+    "timestamp": 1764114289.348491,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:44:49Z"
+  },
+  {
+    "timestamp": 1764114302.122494,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-52164",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:45:02Z"
+  },
+  {
+    "timestamp": 1764114313.857543,
+    "seed_id": "1996-5::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-5::1996_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:45:13Z"
+  },
+  {
+    "timestamp": 1764114313.8576572,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-5::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1407132436
+    },
+    "iso_time": "2025-11-25T23:45:13Z"
+  },
+  {
+    "timestamp": 1764114314.647804,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": -10,
+        "q": 8,
+        "r": -8,
+        "k1": 2,
+        "k2": 2,
+        "k3": 4
+      }
+    },
+    "iso_time": "2025-11-25T23:45:14Z"
+  },
+  {
+    "timestamp": 1764114315.4015381,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 285696
+    },
+    "iso_time": "2025-11-25T23:45:15Z"
+  },
+  {
+    "timestamp": 1764114315.4016929,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the monic cubic P(x) = x^3 + -10 x^2 + 8 x + -8 with (possibly complex) roots a, b, c. Let Q(x) be the monic cu",
+      "correct_answer": "285696",
+      "seed_value": 1407132436
+    },
+    "iso_time": "2025-11-25T23:45:15Z"
+  },
+  {
+    "timestamp": 1764114315.401731,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "285696",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:45:15Z"
+  },
+  {
+    "timestamp": 1764114334.726221,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "285696",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:45:34Z"
+  },
+  {
+    "timestamp": 1764114349.666302,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "285687",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:45:49Z"
+  },
+  {
+    "timestamp": 1764114411.3057432,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "285699",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:46:51Z"
+  },
+  {
+    "timestamp": 1764114432.2854311,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "285698",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:47:12Z"
+  },
+  {
+    "timestamp": 1764114449.340461,
+    "seed_id": "1996-5::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-5::1996_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:47:29Z"
+  },
+  {
+    "timestamp": 1764114449.34063,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-5::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 365498766
+    },
+    "iso_time": "2025-11-25T23:47:29Z"
+  },
+  {
+    "timestamp": 1764114450.0942101,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 8,
+        "q": 6,
+        "r": 6,
+        "k1": 6,
+        "k2": 1,
+        "k3": 2
+      }
+    },
+    "iso_time": "2025-11-25T23:47:30Z"
+  },
+  {
+    "timestamp": 1764114450.8106802,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 79632
+    },
+    "iso_time": "2025-11-25T23:47:30Z"
+  },
+  {
+    "timestamp": 1764114450.810843,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the monic cubic P(x) = x^3 + 8 x^2 + 6 x + 6 with (possibly complex) roots a, b, c. Let Q(x) be the monic cubic",
+      "correct_answer": "79632",
+      "seed_value": 365498766
+    },
+    "iso_time": "2025-11-25T23:47:30Z"
+  },
+  {
+    "timestamp": 1764114450.8108969,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "79632",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:47:30Z"
+  },
+  {
+    "timestamp": 1764114462.3046882,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "79624",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:47:42Z"
+  },
+  {
+    "timestamp": 1764114479.5462358,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "79632",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:47:59Z"
+  },
+  {
+    "timestamp": 1764114495.510226,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "79628",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:48:15Z"
+  },
+  {
+    "timestamp": 1764114510.2254431,
+    "seed_id": "1996-5::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "79638",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:48:30Z"
+  },
+  {
+    "timestamp": 1764114531.7538931,
+    "seed_id": "1996-5::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-5::1996_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:48:51Z"
+  }
+]

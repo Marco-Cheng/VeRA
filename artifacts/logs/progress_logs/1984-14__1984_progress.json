@@ -1,0 +1,711 @@
+[
+  {
+    "timestamp": 1762678784.251462,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1984,
+      "question_preview": "What is the largest even integer that cannot be written as the sum of two odd composite numbers?",
+      "answer": "38",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-09T08:59:44Z"
+  },
+  {
+    "timestamp": 1762678784.251502,
+    "seed_id": "1984-14::1984",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-09T08:59:44Z"
+  },
+  {
+    "timestamp": 1762678784.2515252,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "What is the largest even integer that cannot be written as the sum of two odd composite numbers?",
+      "answer": "38",
+      "example_id": "1984-14::1984"
+    },
+    "iso_time": "2025-11-09T08:59:44Z"
+  },
+  {
+    "timestamp": 1762679014.356732,
+    "seed_id": "1984-14::1984",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 23 column 916 (char 5148)",
+    "payload": {},
+    "iso_time": "2025-11-09T09:03:34Z"
+  },
+  {
+    "timestamp": 1762679014.356781,
+    "seed_id": "1984-14::1984",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-09T09:03:34Z"
+  },
+  {
+    "timestamp": 1762679014.3568,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 23 column 916 (char 5148)",
+      "question": "What is the largest even integer that cannot be written as the sum of two odd composite numbers?",
+      "answer": "38",
+      "example_id": "1984-14::1984"
+    },
+    "iso_time": "2025-11-09T09:03:34Z"
+  },
+  {
+    "timestamp": 1762679211.528312,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-14::1984_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1202937874
+    },
+    "iso_time": "2025-11-09T09:06:51Z"
+  },
+  {
+    "timestamp": 1762679212.490825,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 6,
+        "b": 1
+      }
+    },
+    "iso_time": "2025-11-09T09:06:52Z"
+  },
+  {
+    "timestamp": 1762679213.265837,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 152
+    },
+    "iso_time": "2025-11-09T09:06:53Z"
+  },
+  {
+    "timestamp": 1762679213.2659829,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of composite integers of the form $6k + 1$ for some non-negative integer $k$. What is the largest int",
+      "correct_answer": "152",
+      "seed_value": 1202937874
+    },
+    "iso_time": "2025-11-09T09:06:53Z"
+  },
+  {
+    "timestamp": 1762679213.266025,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "156",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T09:06:53Z"
+  },
+  {
+    "timestamp": 1762679417.779407,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "152",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T09:10:17Z"
+  },
+  {
+    "timestamp": 1762679590.660575,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "157",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T09:13:10Z"
+  },
+  {
+    "timestamp": 1762679816.577003,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "152",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T09:16:56Z"
+  },
+  {
+    "timestamp": 1762679956.074952,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "159",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T09:19:16Z"
+  },
+  {
+    "timestamp": 1762680154.987343,
+    "seed_id": "1984-14::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-14::1984_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T09:22:34Z"
+  },
+  {
+    "timestamp": 1762680154.987392,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-14::1984_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 575171146
+    },
+    "iso_time": "2025-11-09T09:22:34Z"
+  },
+  {
+    "timestamp": 1762680155.829047,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 8,
+        "b": 5
+      }
+    },
+    "iso_time": "2025-11-09T09:22:35Z"
+  },
+  {
+    "timestamp": 1762680156.593002,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 82
+    },
+    "iso_time": "2025-11-09T09:22:36Z"
+  },
+  {
+    "timestamp": 1762680156.5931342,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of composite integers of the form $8k + 5$ for some non-negative integer $k$. What is the largest int",
+      "correct_answer": "82",
+      "seed_value": 575171146
+    },
+    "iso_time": "2025-11-09T09:22:36Z"
+  },
+  {
+    "timestamp": 1762680156.593173,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "88",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T09:22:36Z"
+  },
+  {
+    "timestamp": 1762680356.973202,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "82",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T09:25:56Z"
+  },
+  {
+    "timestamp": 1762680512.2552378,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "82",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T09:28:32Z"
+  },
+  {
+    "timestamp": 1762680668.255745,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "83",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T09:31:08Z"
+  },
+  {
+    "timestamp": 1762680931.4641762,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "73",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T09:35:31Z"
+  },
+  {
+    "timestamp": 1762681120.540962,
+    "seed_id": "1984-14::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-14::1984_prompt02-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T09:38:40Z"
+  },
+  {
+    "timestamp": 1762681120.541013,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-14::1984_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1428497550
+    },
+    "iso_time": "2025-11-09T09:38:40Z"
+  },
+  {
+    "timestamp": 1762681121.316633,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 4,
+        "b": 3
+      }
+    },
+    "iso_time": "2025-11-09T09:38:41Z"
+  },
+  {
+    "timestamp": 1762681122.1216471,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 58
+    },
+    "iso_time": "2025-11-09T09:38:42Z"
+  },
+  {
+    "timestamp": 1762681122.121776,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of composite integers of the form $4k + 3$ for some non-negative integer $k$. What is the largest int",
+      "correct_answer": "58",
+      "seed_value": 1428497550
+    },
+    "iso_time": "2025-11-09T09:38:42Z"
+  },
+  {
+    "timestamp": 1762681122.121818,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "64",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T09:38:42Z"
+  },
+  {
+    "timestamp": 1762681349.794417,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "50",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T09:42:29Z"
+  },
+  {
+    "timestamp": 1762681520.488543,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "56",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T09:45:20Z"
+  },
+  {
+    "timestamp": 1762681704.097752,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "58",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T09:48:24Z"
+  },
+  {
+    "timestamp": 1762681838.440035,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "58",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T09:50:38Z"
+  },
+  {
+    "timestamp": 1762681989.150856,
+    "seed_id": "1984-14::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-14::1984_prompt02-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T09:53:09Z"
+  },
+  {
+    "timestamp": 1762681989.150911,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-14::1984_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1855665660
+    },
+    "iso_time": "2025-11-09T09:53:09Z"
+  },
+  {
+    "timestamp": 1762681990.0884821,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 7,
+        "b": 4
+      }
+    },
+    "iso_time": "2025-11-09T09:53:10Z"
+  },
+  {
+    "timestamp": 1762681990.8532841,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 15
+    },
+    "iso_time": "2025-11-09T09:53:10Z"
+  },
+  {
+    "timestamp": 1762681990.8534179,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of composite integers of the form $7k + 4$ for some non-negative integer $k$. What is the largest int",
+      "correct_answer": "15",
+      "seed_value": 1855665660
+    },
+    "iso_time": "2025-11-09T09:53:10Z"
+  },
+  {
+    "timestamp": 1762681990.853457,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T09:53:10Z"
+  },
+  {
+    "timestamp": 1762682137.758535,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T09:55:37Z"
+  },
+  {
+    "timestamp": 1762682308.845515,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T09:58:28Z"
+  },
+  {
+    "timestamp": 1762682474.751245,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T10:01:14Z"
+  },
+  {
+    "timestamp": 1762682632.5496771,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T10:03:52Z"
+  },
+  {
+    "timestamp": 1762682759.316536,
+    "seed_id": "1984-14::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-14::1984_prompt02-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-09T10:05:59Z"
+  },
+  {
+    "timestamp": 1762682759.3165948,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-14::1984_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 430325363
+    },
+    "iso_time": "2025-11-09T10:05:59Z"
+  },
+  {
+    "timestamp": 1762682760.0755808,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 3,
+        "b": 1
+      }
+    },
+    "iso_time": "2025-11-09T10:06:00Z"
+  },
+  {
+    "timestamp": 1762682760.8376262,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 23
+    },
+    "iso_time": "2025-11-09T10:06:00Z"
+  },
+  {
+    "timestamp": 1762682760.837758,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of composite integers of the form $3k + 1$ for some non-negative integer $k$. What is the largest int",
+      "correct_answer": "23",
+      "seed_value": 430325363
+    },
+    "iso_time": "2025-11-09T10:06:00Z"
+  },
+  {
+    "timestamp": 1762682760.8377962,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "28",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T10:06:00Z"
+  },
+  {
+    "timestamp": 1762682988.801791,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "22",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T10:09:48Z"
+  },
+  {
+    "timestamp": 1762683140.9961011,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "23",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T10:12:20Z"
+  },
+  {
+    "timestamp": 1762683268.2839942,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "21",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T10:14:28Z"
+  },
+  {
+    "timestamp": 1762683449.522903,
+    "seed_id": "1984-14::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "23",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T10:17:29Z"
+  },
+  {
+    "timestamp": 1762683591.8983161,
+    "seed_id": "1984-14::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-14::1984_prompt02-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T10:19:51Z"
+  }
+]

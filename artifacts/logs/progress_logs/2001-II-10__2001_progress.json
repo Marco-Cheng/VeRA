@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764565620.1228778,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "How many positive integer multiples of 1001 can be expressed in the form $10^{j} - 10^{i}$ , where $i$ and $j$ are integ",
+      "answer": "784",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T05:07:00Z"
+  },
+  {
+    "timestamp": 1764565620.122941,
+    "seed_id": "2001-II-10::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T05:07:00Z"
+  },
+  {
+    "timestamp": 1764565620.1229708,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "How many positive integer multiples of 1001 can be expressed in the form $10^{j} - 10^{i}$ , where $i$ and $j$ are integers and $0\\leq i < j \\leq 99$ ?",
+      "answer": "784",
+      "example_id": "2001-II-10::2001"
+    },
+    "iso_time": "2025-12-01T05:07:00Z"
+  },
+  {
+    "timestamp": 1764565722.017087,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-10::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1754893212
+    },
+    "iso_time": "2025-12-01T05:08:42Z"
+  },
+  {
+    "timestamp": 1764565723.357713,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_b": 7,
+        "mod_m": 1010135,
+        "upper_n": 287
+      }
+    },
+    "iso_time": "2025-12-01T05:08:43Z"
+  },
+  {
+    "timestamp": 1764565724.468297,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 540
+    },
+    "iso_time": "2025-12-01T05:08:44Z"
+  },
+  {
+    "timestamp": 1764565724.468441,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a number theory round, fix an integer base 7 and a modulus 1010135 with 2 <= 7 < 1010135. Consider all pairs of integ",
+      "correct_answer": "540",
+      "seed_value": 1754893212
+    },
+    "iso_time": "2025-12-01T05:08:44Z"
+  },
+  {
+    "timestamp": 1764565724.468502,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "531",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:08:44Z"
+  },
+  {
+    "timestamp": 1764565771.980483,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "542",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:09:31Z"
+  },
+  {
+    "timestamp": 1764565805.987072,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "540",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:10:05Z"
+  },
+  {
+    "timestamp": 1764565846.224061,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "540",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:10:46Z"
+  },
+  {
+    "timestamp": 1764565884.255154,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "534",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:11:24Z"
+  },
+  {
+    "timestamp": 1764565924.794154,
+    "seed_id": "2001-II-10::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-10::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T05:12:04Z"
+  },
+  {
+    "timestamp": 1764565924.794324,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-10::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 343631986
+    },
+    "iso_time": "2025-12-01T05:12:04Z"
+  },
+  {
+    "timestamp": 1764565925.937514,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_b": 16,
+        "mod_m": 3680,
+        "upper_n": 88
+      }
+    },
+    "iso_time": "2025-12-01T05:12:05Z"
+  },
+  {
+    "timestamp": 1764565927.041982,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 301
+    },
+    "iso_time": "2025-12-01T05:12:07Z"
+  },
+  {
+    "timestamp": 1764565927.04214,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a number theory round, fix an integer base 16 and a modulus 3680 with 2 <= 16 < 3680. Consider all pairs of integers ",
+      "correct_answer": "301",
+      "seed_value": 343631986
+    },
+    "iso_time": "2025-12-01T05:12:07Z"
+  },
+  {
+    "timestamp": 1764565927.042196,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "306",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:12:07Z"
+  },
+  {
+    "timestamp": 1764565957.7637959,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "301",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:12:37Z"
+  },
+  {
+    "timestamp": 1764565982.253115,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "297",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:13:02Z"
+  },
+  {
+    "timestamp": 1764566051.63466,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "301",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:14:11Z"
+  },
+  {
+    "timestamp": 1764566091.162789,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "292",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:14:51Z"
+  },
+  {
+    "timestamp": 1764566130.551031,
+    "seed_id": "2001-II-10::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-10::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T05:15:30Z"
+  },
+  {
+    "timestamp": 1764566130.551151,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-10::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1466322553
+    },
+    "iso_time": "2025-12-01T05:15:30Z"
+  },
+  {
+    "timestamp": 1764566131.6759858,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_b": 21,
+        "mod_m": 5814,
+        "upper_n": 186
+      }
+    },
+    "iso_time": "2025-12-01T05:15:31Z"
+  },
+  {
+    "timestamp": 1764566132.769525,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 385
+    },
+    "iso_time": "2025-12-01T05:15:32Z"
+  },
+  {
+    "timestamp": 1764566132.769678,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a number theory round, fix an integer base 21 and a modulus 5814 with 2 <= 21 < 5814. Consider all pairs of integers ",
+      "correct_answer": "385",
+      "seed_value": 1466322553
+    },
+    "iso_time": "2025-12-01T05:15:32Z"
+  },
+  {
+    "timestamp": 1764566132.769731,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "376",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:15:32Z"
+  },
+  {
+    "timestamp": 1764566175.603729,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "389",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:16:15Z"
+  },
+  {
+    "timestamp": 1764566212.734925,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "385",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:16:52Z"
+  },
+  {
+    "timestamp": 1764566243.811105,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "387",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:17:23Z"
+  },
+  {
+    "timestamp": 1764566291.664178,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "385",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:18:11Z"
+  },
+  {
+    "timestamp": 1764566330.857821,
+    "seed_id": "2001-II-10::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-10::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T05:18:50Z"
+  },
+  {
+    "timestamp": 1764566330.857995,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-10::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 770132466
+    },
+    "iso_time": "2025-12-01T05:18:50Z"
+  },
+  {
+    "timestamp": 1764566332.187221,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_b": 23,
+        "mod_m": 21827598,
+        "upper_n": 48
+      }
+    },
+    "iso_time": "2025-12-01T05:18:52Z"
+  },
+  {
+    "timestamp": 1764566333.328325,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 147
+    },
+    "iso_time": "2025-12-01T05:18:53Z"
+  },
+  {
+    "timestamp": 1764566333.328513,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a number theory round, fix an integer base 23 and a modulus 21827598 with 2 <= 23 < 21827598. Consider all pairs of i",
+      "correct_answer": "147",
+      "seed_value": 770132466
+    },
+    "iso_time": "2025-12-01T05:18:53Z"
+  },
+  {
+    "timestamp": 1764566333.3285801,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "143",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:18:53Z"
+  },
+  {
+    "timestamp": 1764566392.9382138,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "147",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:19:52Z"
+  },
+  {
+    "timestamp": 1764566439.554027,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "147",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:20:39Z"
+  },
+  {
+    "timestamp": 1764566472.94353,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "155",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:21:12Z"
+  },
+  {
+    "timestamp": 1764566512.642646,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "146",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:21:52Z"
+  },
+  {
+    "timestamp": 1764566556.777388,
+    "seed_id": "2001-II-10::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-10::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T05:22:36Z"
+  },
+  {
+    "timestamp": 1764566556.777743,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-10::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1980482404
+    },
+    "iso_time": "2025-12-01T05:22:36Z"
+  },
+  {
+    "timestamp": 1764566557.9117818,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_b": 15,
+        "mod_m": 95325,
+        "upper_n": 223
+      }
+    },
+    "iso_time": "2025-12-01T05:22:37Z"
+  },
+  {
+    "timestamp": 1764566559.0324469,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 510
+    },
+    "iso_time": "2025-12-01T05:22:39Z"
+  },
+  {
+    "timestamp": 1764566559.032639,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a number theory round, fix an integer base 15 and a modulus 95325 with 2 <= 15 < 95325. Consider all pairs of integer",
+      "correct_answer": "510",
+      "seed_value": 1980482404
+    },
+    "iso_time": "2025-12-01T05:22:39Z"
+  },
+  {
+    "timestamp": 1764566559.032707,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "512",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:22:39Z"
+  },
+  {
+    "timestamp": 1764566601.8324292,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "514",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:23:21Z"
+  },
+  {
+    "timestamp": 1764566648.5292501,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "510",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:24:08Z"
+  },
+  {
+    "timestamp": 1764566680.394419,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "510",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T05:24:40Z"
+  },
+  {
+    "timestamp": 1764566741.4042208,
+    "seed_id": "2001-II-10::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "517",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T05:25:41Z"
+  },
+  {
+    "timestamp": 1764566804.1614652,
+    "seed_id": "2001-II-10::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-10::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T05:26:44Z"
+  }
+]

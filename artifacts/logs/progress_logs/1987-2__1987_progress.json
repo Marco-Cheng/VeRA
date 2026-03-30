@@ -1,0 +1,729 @@
+[
+  {
+    "timestamp": 1763045984.916856,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1987,
+      "question_preview": "What is the largest possible distance between two points, one on the sphere of radius 19 with center $(-2,-10,5),$ and t",
+      "answer": "137",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-13T14:59:44Z"
+  },
+  {
+    "timestamp": 1763045984.9168901,
+    "seed_id": "1987-2::1987",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-13T14:59:44Z"
+  },
+  {
+    "timestamp": 1763045984.9169018,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "What is the largest possible distance between two points, one on the sphere of radius 19 with center $(-2,-10,5),$ and the other on the sphere of radius 87 with center $(12,8,-16)$ ?",
+      "answer": "137",
+      "example_id": "1987-2::1987"
+    },
+    "iso_time": "2025-11-13T14:59:44Z"
+  },
+  {
+    "timestamp": 1763046215.776376,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-2::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 794211166
+    },
+    "iso_time": "2025-11-13T15:03:35Z"
+  },
+  {
+    "timestamp": 1763046216.786807,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1x": 8,
+        "c1y": -2,
+        "c1z": -1,
+        "c2x": 8,
+        "c2y": -32,
+        "c2z": -17,
+        "c3x": 8,
+        "c3y": -77,
+        "c3z": -41,
+        "r1": 15,
+        "r2": 5,
+        "r3": 14
+      }
+    },
+    "iso_time": "2025-11-13T15:03:36Z"
+  },
+  {
+    "timestamp": 1763046217.560244,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 19832
+    },
+    "iso_time": "2025-11-13T15:03:37Z"
+  },
+  {
+    "timestamp": 1763046217.5603788,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Three spheres, $S_1, S_2,$ and $S_3$, are located in 3-dimensional space.\nSphere $S_1$ has center $C_1=(8, -2, -1)$ and ",
+      "correct_answer": "19832",
+      "seed_value": 794211166
+    },
+    "iso_time": "2025-11-13T15:03:37Z"
+  },
+  {
+    "timestamp": 1763046217.5604322,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "19832",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T15:03:37Z"
+  },
+  {
+    "timestamp": 1763046412.72275,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "19841",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T15:06:52Z"
+  },
+  {
+    "timestamp": 1763046681.221046,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "19832",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T15:11:21Z"
+  },
+  {
+    "timestamp": 1763046871.786606,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "19831",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T15:14:31Z"
+  },
+  {
+    "timestamp": 1763047084.8935502,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "19833",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T15:18:04Z"
+  },
+  {
+    "timestamp": 1763047326.752432,
+    "seed_id": "1987-2::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-2::1987_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T15:22:06Z"
+  },
+  {
+    "timestamp": 1763047326.752473,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-2::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1943777959
+    },
+    "iso_time": "2025-11-13T15:22:06Z"
+  },
+  {
+    "timestamp": 1763047327.6196082,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1x": 4,
+        "c1y": 6,
+        "c1z": 0,
+        "c2x": -6,
+        "c2y": 11,
+        "c2z": 10,
+        "c3x": -46,
+        "c3y": 31,
+        "c3z": 50,
+        "r1": 6,
+        "r2": 2,
+        "r3": 17
+      }
+    },
+    "iso_time": "2025-11-13T15:22:07Z"
+  },
+  {
+    "timestamp": 1763047328.408996,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16206
+    },
+    "iso_time": "2025-11-13T15:22:08Z"
+  },
+  {
+    "timestamp": 1763047328.4091678,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Three spheres, $S_1, S_2,$ and $S_3$, are located in 3-dimensional space.\nSphere $S_1$ has center $C_1=(4, 6, 0)$ and ra",
+      "correct_answer": "16206",
+      "seed_value": 1943777959
+    },
+    "iso_time": "2025-11-13T15:22:08Z"
+  },
+  {
+    "timestamp": 1763047328.409224,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16203",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T15:22:08Z"
+  },
+  {
+    "timestamp": 1763047625.411903,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "16204",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T15:27:05Z"
+  },
+  {
+    "timestamp": 1763047873.427665,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16206",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T15:31:13Z"
+  },
+  {
+    "timestamp": 1763048152.6037278,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16206",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T15:35:52Z"
+  },
+  {
+    "timestamp": 1763048301.951626,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "16207",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T15:38:21Z"
+  },
+  {
+    "timestamp": 1763048545.730054,
+    "seed_id": "1987-2::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-2::1987_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T15:42:25Z"
+  },
+  {
+    "timestamp": 1763048545.730098,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-2::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1313043937
+    },
+    "iso_time": "2025-11-13T15:42:25Z"
+  },
+  {
+    "timestamp": 1763048546.529401,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1x": -10,
+        "c1y": -4,
+        "c1z": -3,
+        "c2x": 32,
+        "c2y": -46,
+        "c2z": 46,
+        "c3x": -52,
+        "c3y": 38,
+        "c3z": -52,
+        "r1": 7,
+        "r2": 17,
+        "r3": 20
+      }
+    },
+    "iso_time": "2025-11-13T15:42:26Z"
+  },
+  {
+    "timestamp": 1763048547.304831,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 54866
+    },
+    "iso_time": "2025-11-13T15:42:27Z"
+  },
+  {
+    "timestamp": 1763048547.304993,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Three spheres, $S_1, S_2,$ and $S_3$, are located in 3-dimensional space.\nSphere $S_1$ has center $C_1=(-10, -4, -3)$ an",
+      "correct_answer": "54866",
+      "seed_value": 1313043937
+    },
+    "iso_time": "2025-11-13T15:42:27Z"
+  },
+  {
+    "timestamp": 1763048547.3050508,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "54861",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T15:42:27Z"
+  },
+  {
+    "timestamp": 1763048783.40077,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "54866",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T15:46:23Z"
+  },
+  {
+    "timestamp": 1763049026.832344,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "54866",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T15:50:26Z"
+  },
+  {
+    "timestamp": 1763049233.963326,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "54874",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T15:53:53Z"
+  },
+  {
+    "timestamp": 1763049455.797388,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "54863",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T15:57:35Z"
+  },
+  {
+    "timestamp": 1763049723.127723,
+    "seed_id": "1987-2::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-2::1987_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-13T16:02:03Z"
+  },
+  {
+    "timestamp": 1763049723.127765,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-2::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 983281192
+    },
+    "iso_time": "2025-11-13T16:02:03Z"
+  },
+  {
+    "timestamp": 1763049723.934656,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1x": 8,
+        "c1y": 10,
+        "c1z": -1,
+        "c2x": 40,
+        "c2y": 6,
+        "c2z": -17,
+        "c3x": -8,
+        "c3y": 12,
+        "c3z": 7,
+        "r1": 1,
+        "r2": 5,
+        "r3": 6
+      }
+    },
+    "iso_time": "2025-11-13T16:02:03Z"
+  },
+  {
+    "timestamp": 1763049724.718396,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6518
+    },
+    "iso_time": "2025-11-13T16:02:04Z"
+  },
+  {
+    "timestamp": 1763049724.718535,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Three spheres, $S_1, S_2,$ and $S_3$, are located in 3-dimensional space.\nSphere $S_1$ has center $C_1=(8, 10, -1)$ and ",
+      "correct_answer": "6518",
+      "seed_value": 983281192
+    },
+    "iso_time": "2025-11-13T16:02:04Z"
+  },
+  {
+    "timestamp": 1763049724.7185879,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6526",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:02:04Z"
+  },
+  {
+    "timestamp": 1763049978.951266,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6518",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T16:06:18Z"
+  },
+  {
+    "timestamp": 1763050227.060281,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6518",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T16:10:27Z"
+  },
+  {
+    "timestamp": 1763050417.025291,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6514",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:13:37Z"
+  },
+  {
+    "timestamp": 1763050622.491712,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6512",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:17:02Z"
+  },
+  {
+    "timestamp": 1763050908.3388631,
+    "seed_id": "1987-2::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-2::1987_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T16:21:48Z"
+  },
+  {
+    "timestamp": 1763050908.3389099,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1987-2::1987_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1041823176
+    },
+    "iso_time": "2025-11-13T16:21:48Z"
+  },
+  {
+    "timestamp": 1763050909.126005,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c1x": 2,
+        "c1y": 0,
+        "c1z": -10,
+        "c2x": 38,
+        "c2y": 36,
+        "c2z": 8,
+        "c3x": 20,
+        "c3y": 18,
+        "c3z": -1,
+        "r1": 4,
+        "r2": 10,
+        "r3": 9
+      }
+    },
+    "iso_time": "2025-11-13T16:21:49Z"
+  },
+  {
+    "timestamp": 1763050909.900165,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7224
+    },
+    "iso_time": "2025-11-13T16:21:49Z"
+  },
+  {
+    "timestamp": 1763050909.9003148,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Three spheres, $S_1, S_2,$ and $S_3$, are located in 3-dimensional space.\nSphere $S_1$ has center $C_1=(2, 0, -10)$ and ",
+      "correct_answer": "7224",
+      "seed_value": 1041823176
+    },
+    "iso_time": "2025-11-13T16:21:49Z"
+  },
+  {
+    "timestamp": 1763050909.900364,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7232",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:21:49Z"
+  },
+  {
+    "timestamp": 1763051171.710676,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7215",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:26:11Z"
+  },
+  {
+    "timestamp": 1763051463.286911,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7216",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-13T16:31:03Z"
+  },
+  {
+    "timestamp": 1763051719.0909529,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7224",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T16:35:19Z"
+  },
+  {
+    "timestamp": 1763051926.816192,
+    "seed_id": "1987-2::1987",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7224",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-13T16:38:46Z"
+  },
+  {
+    "timestamp": 1763052130.8015912,
+    "seed_id": "1987-2::1987",
+    "stage": "variant_success",
+    "message": "Accepted variant 1987-2::1987_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-13T16:42:10Z"
+  }
+]

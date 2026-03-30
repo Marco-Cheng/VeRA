@@ -1,0 +1,709 @@
+[
+  {
+    "timestamp": 1761860491.6524868,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2024,
+      "question_preview": "Among the $900$ residents of Aimeville, there are $195$ who own a diamond ring, $367$ who own a set of golf clubs, and $",
+      "answer": "73",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-10-30T21:41:31Z"
+  },
+  {
+    "timestamp": 1761860491.65251,
+    "seed_id": "2024-II-1::2024",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-10-30T21:41:31Z"
+  },
+  {
+    "timestamp": 1761860491.652521,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Among the $900$ residents of Aimeville, there are $195$ who own a diamond ring, $367$ who own a set of golf clubs, and $562$ who own a garden spade. In addition, each of the $900$ residents owns a bag of candy hearts. There are $437$ residents who own exactly two of these things, and $234$ residents who own exactly three of these things. Find the number of residents of Aimeville who own all four of these things.",
+      "answer": "73",
+      "example_id": "2024-II-1::2024"
+    },
+    "iso_time": "2025-10-30T21:41:31Z"
+  },
+  {
+    "timestamp": 1761860567.372399,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-1::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1280391228
+    },
+    "iso_time": "2025-10-30T21:42:47Z"
+  },
+  {
+    "timestamp": 1761860568.296051,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_residents": 1676,
+        "count_emerald_pendant": 763,
+        "count_tennis_rackets": 1043,
+        "count_fountain_pen": 895,
+        "count_hiking_backpack": 659,
+        "exact_two": 740,
+        "exact_three": 306,
+        "exact_four": 200
+      }
+    },
+    "iso_time": "2025-10-30T21:42:48Z"
+  },
+  {
+    "timestamp": 1761860569.191478,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 352
+    },
+    "iso_time": "2025-10-30T21:42:49Z"
+  },
+  {
+    "timestamp": 1761860569.191607,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In Mathopolis, there are 1676 residents. Each resident owns a notebook. Besides the notebook, there are four other items",
+      "correct_answer": "352",
+      "seed_value": 1280391228
+    },
+    "iso_time": "2025-10-30T21:42:49Z"
+  },
+  {
+    "timestamp": 1761860569.191648,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "344",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:42:49Z"
+  },
+  {
+    "timestamp": 1761860601.4497879,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "352",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T21:43:21Z"
+  },
+  {
+    "timestamp": 1761860624.550344,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "352",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T21:43:44Z"
+  },
+  {
+    "timestamp": 1761860635.670829,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "345",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:43:55Z"
+  },
+  {
+    "timestamp": 1761860651.9536262,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "350",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:44:11Z"
+  },
+  {
+    "timestamp": 1761860670.381748,
+    "seed_id": "2024-II-1::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-1::2024_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T21:44:30Z"
+  },
+  {
+    "timestamp": 1761860670.381899,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-1::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1317492948
+    },
+    "iso_time": "2025-10-30T21:44:30Z"
+  },
+  {
+    "timestamp": 1761860671.3012621,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_residents": 1086,
+        "count_emerald_pendant": 922,
+        "count_tennis_rackets": 767,
+        "count_fountain_pen": 627,
+        "count_hiking_backpack": 580,
+        "exact_two": 43,
+        "exact_three": 330,
+        "exact_four": 143
+      }
+    },
+    "iso_time": "2025-10-30T21:44:31Z"
+  },
+  {
+    "timestamp": 1761860672.202871,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 441
+    },
+    "iso_time": "2025-10-30T21:44:32Z"
+  },
+  {
+    "timestamp": 1761860672.2030022,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In Mathopolis, there are 1086 residents. Each resident owns a notebook. Besides the notebook, there are four other items",
+      "correct_answer": "441",
+      "seed_value": 1317492948
+    },
+    "iso_time": "2025-10-30T21:44:32Z"
+  },
+  {
+    "timestamp": 1761860672.203042,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "441",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T21:44:32Z"
+  },
+  {
+    "timestamp": 1761860682.775937,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "441",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T21:44:42Z"
+  },
+  {
+    "timestamp": 1761860692.401952,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "450",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:44:52Z"
+  },
+  {
+    "timestamp": 1761860706.7354581,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "449",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:45:06Z"
+  },
+  {
+    "timestamp": 1761860716.8734899,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "442",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:45:16Z"
+  },
+  {
+    "timestamp": 1761860731.824845,
+    "seed_id": "2024-II-1::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-1::2024_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T21:45:31Z"
+  },
+  {
+    "timestamp": 1761860731.824995,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-1::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1118673406
+    },
+    "iso_time": "2025-10-30T21:45:31Z"
+  },
+  {
+    "timestamp": 1761860732.7568488,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_residents": 806,
+        "count_emerald_pendant": 560,
+        "count_tennis_rackets": 599,
+        "count_fountain_pen": 532,
+        "count_hiking_backpack": 412,
+        "exact_two": 196,
+        "exact_three": 161,
+        "exact_four": 31
+      }
+    },
+    "iso_time": "2025-10-30T21:45:32Z"
+  },
+  {
+    "timestamp": 1761860733.6588001,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 373
+    },
+    "iso_time": "2025-10-30T21:45:33Z"
+  },
+  {
+    "timestamp": 1761860733.658934,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In Mathopolis, there are 806 residents. Each resident owns a notebook. Besides the notebook, there are four other items:",
+      "correct_answer": "373",
+      "seed_value": 1118673406
+    },
+    "iso_time": "2025-10-30T21:45:33Z"
+  },
+  {
+    "timestamp": 1761860733.658977,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "373",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T21:45:33Z"
+  },
+  {
+    "timestamp": 1761860754.4889548,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "368",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:45:54Z"
+  },
+  {
+    "timestamp": 1761860780.715429,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "378",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:46:20Z"
+  },
+  {
+    "timestamp": 1761860797.712924,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "373",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T21:46:37Z"
+  },
+  {
+    "timestamp": 1761860821.012574,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "369",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:47:01Z"
+  },
+  {
+    "timestamp": 1761860833.407426,
+    "seed_id": "2024-II-1::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-1::2024_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T21:47:13Z"
+  },
+  {
+    "timestamp": 1761860833.407587,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-1::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 205009098
+    },
+    "iso_time": "2025-10-30T21:47:13Z"
+  },
+  {
+    "timestamp": 1761860834.3017468,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_residents": 1317,
+        "count_emerald_pendant": 648,
+        "count_tennis_rackets": 649,
+        "count_fountain_pen": 931,
+        "count_hiking_backpack": 490,
+        "exact_two": 137,
+        "exact_three": 359,
+        "exact_four": 497
+      }
+    },
+    "iso_time": "2025-10-30T21:47:14Z"
+  },
+  {
+    "timestamp": 1761860835.1960828,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 93
+    },
+    "iso_time": "2025-10-30T21:47:15Z"
+  },
+  {
+    "timestamp": 1761860835.196239,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In Mathopolis, there are 1317 residents. Each resident owns a notebook. Besides the notebook, there are four other items",
+      "correct_answer": "93",
+      "seed_value": 205009098
+    },
+    "iso_time": "2025-10-30T21:47:15Z"
+  },
+  {
+    "timestamp": 1761860835.196285,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "88",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:47:15Z"
+  },
+  {
+    "timestamp": 1761860846.514364,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "93",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T21:47:26Z"
+  },
+  {
+    "timestamp": 1761860855.946208,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "90",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:47:35Z"
+  },
+  {
+    "timestamp": 1761860873.9493701,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "102",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:47:53Z"
+  },
+  {
+    "timestamp": 1761860885.0219488,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "93",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T21:48:05Z"
+  },
+  {
+    "timestamp": 1761860896.58852,
+    "seed_id": "2024-II-1::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-1::2024_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T21:48:16Z"
+  },
+  {
+    "timestamp": 1761860896.588715,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-1::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2144113712
+    },
+    "iso_time": "2025-10-30T21:48:16Z"
+  },
+  {
+    "timestamp": 1761860897.4975202,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_residents": 1167,
+        "count_emerald_pendant": 584,
+        "count_tennis_rackets": 521,
+        "count_fountain_pen": 905,
+        "count_hiking_backpack": 690,
+        "exact_two": 126,
+        "exact_three": 357,
+        "exact_four": 292
+      }
+    },
+    "iso_time": "2025-10-30T21:48:17Z"
+  },
+  {
+    "timestamp": 1761860898.391221,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 246
+    },
+    "iso_time": "2025-10-30T21:48:18Z"
+  },
+  {
+    "timestamp": 1761860898.391358,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In Mathopolis, there are 1167 residents. Each resident owns a notebook. Besides the notebook, there are four other items",
+      "correct_answer": "246",
+      "seed_value": 2144113712
+    },
+    "iso_time": "2025-10-30T21:48:18Z"
+  },
+  {
+    "timestamp": 1761860898.3913972,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "242",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:48:18Z"
+  },
+  {
+    "timestamp": 1761860945.704004,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "246",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T21:49:05Z"
+  },
+  {
+    "timestamp": 1761860960.670885,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "244",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:49:20Z"
+  },
+  {
+    "timestamp": 1761860984.6510231,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "246",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T21:49:44Z"
+  },
+  {
+    "timestamp": 1761860998.7840698,
+    "seed_id": "2024-II-1::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "252",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T21:49:58Z"
+  },
+  {
+    "timestamp": 1761861009.012943,
+    "seed_id": "2024-II-1::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-1::2024_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T21:50:09Z"
+  }
+]

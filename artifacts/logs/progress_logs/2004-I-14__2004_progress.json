@@ -1,0 +1,709 @@
+[
+  {
+    "timestamp": 1764955246.473662,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "A unicorn is tethered by a 20-foot silver rope to the base of a magician's cylindrical tower whose radius is 8 feet. The",
+      "answer": "813",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-05T17:20:46Z"
+  },
+  {
+    "timestamp": 1764955246.4737222,
+    "seed_id": "2004-I-14::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-05T17:20:46Z"
+  },
+  {
+    "timestamp": 1764955246.473751,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A unicorn is tethered by a 20-foot silver rope to the base of a magician's cylindrical tower whose radius is 8 feet. The rope is attached to the tower at ground level and to the unicorn at a height of 4 feet. The unicorn has pulled the rope taut, the end of the rope is 4 feet from the nearest point on the tower, and the length of the rope that is touching the tower is $\\frac{a-\\sqrt{b}}c$ feet, where $a, b,$ and $c$ are positive integers, and $c$ is prime. Find $a+b+c.$",
+      "answer": "813",
+      "example_id": "2004-I-14::2004"
+    },
+    "iso_time": "2025-12-05T17:20:46Z"
+  },
+  {
+    "timestamp": 1764955330.6725729,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-14::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1201386364
+    },
+    "iso_time": "2025-12-05T17:22:10Z"
+  },
+  {
+    "timestamp": 1764955331.9179368,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 6,
+        "wraps": 1,
+        "peg_distance": 8,
+        "unicorn_distance": 10,
+        "peg_height": 0,
+        "unicorn_height": 7,
+        "rope_length": 56.137251982152264,
+        "scaling": 25
+      }
+    },
+    "iso_time": "2025-12-05T17:22:11Z"
+  },
+  {
+    "timestamp": 1764955333.038961,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 949
+    },
+    "iso_time": "2025-12-05T17:22:13Z"
+  },
+  {
+    "timestamp": 1764955333.039107,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rope is fastened to a peg located at height 0 along the radial line of a vertical cylindrical tower of radius 6. The p",
+      "correct_answer": "949",
+      "seed_value": 1201386364
+    },
+    "iso_time": "2025-12-05T17:22:13Z"
+  },
+  {
+    "timestamp": 1764955333.039171,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "949",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T17:22:13Z"
+  },
+  {
+    "timestamp": 1764955400.621902,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "949",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T17:23:20Z"
+  },
+  {
+    "timestamp": 1764955732.647448,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "955",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T17:28:52Z"
+  },
+  {
+    "timestamp": 1764955822.204844,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "945",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T17:30:22Z"
+  },
+  {
+    "timestamp": 1764955869.737959,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "952",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T17:31:09Z"
+  },
+  {
+    "timestamp": 1764956383.910027,
+    "seed_id": "2004-I-14::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-14::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T17:39:43Z"
+  },
+  {
+    "timestamp": 1764956383.910207,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-14::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1066716575
+    },
+    "iso_time": "2025-12-05T17:39:43Z"
+  },
+  {
+    "timestamp": 1764956385.282316,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 7,
+        "wraps": 2,
+        "peg_distance": 13,
+        "unicorn_distance": 14,
+        "peg_height": 3,
+        "unicorn_height": -7,
+        "rope_length": 115.39869125203208,
+        "scaling": 10
+      }
+    },
+    "iso_time": "2025-12-05T17:39:45Z"
+  },
+  {
+    "timestamp": 1764956386.359883,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 882
+    },
+    "iso_time": "2025-12-05T17:39:46Z"
+  },
+  {
+    "timestamp": 1764956386.3600278,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rope is fastened to a peg located at height 3 along the radial line of a vertical cylindrical tower of radius 7. The p",
+      "correct_answer": "882",
+      "seed_value": 1066716575
+    },
+    "iso_time": "2025-12-05T17:39:46Z"
+  },
+  {
+    "timestamp": 1764956386.360097,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "882",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T17:39:46Z"
+  },
+  {
+    "timestamp": 1764956846.665345,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "874",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T17:47:26Z"
+  },
+  {
+    "timestamp": 1764956890.1217878,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "878",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T17:48:10Z"
+  },
+  {
+    "timestamp": 1764956947.5400178,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "882",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T17:49:07Z"
+  },
+  {
+    "timestamp": 1764957050.7590091,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "880",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T17:50:50Z"
+  },
+  {
+    "timestamp": 1764957089.868404,
+    "seed_id": "2004-I-14::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-14::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T17:51:29Z"
+  },
+  {
+    "timestamp": 1764957089.8685682,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-14::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 137422750
+    },
+    "iso_time": "2025-12-05T17:51:29Z"
+  },
+  {
+    "timestamp": 1764957091.1196558,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 7,
+        "wraps": 2,
+        "peg_distance": 4,
+        "unicorn_distance": 4,
+        "peg_height": 4,
+        "unicorn_height": 13,
+        "rope_length": 96.38570101037956,
+        "scaling": 5
+      }
+    },
+    "iso_time": "2025-12-05T17:51:31Z"
+  },
+  {
+    "timestamp": 1764957092.102356,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 441
+    },
+    "iso_time": "2025-12-05T17:51:32Z"
+  },
+  {
+    "timestamp": 1764957092.1025112,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rope is fastened to a peg located at height 4 along the radial line of a vertical cylindrical tower of radius 7. The p",
+      "correct_answer": "441",
+      "seed_value": 137422750
+    },
+    "iso_time": "2025-12-05T17:51:32Z"
+  },
+  {
+    "timestamp": 1764957092.102574,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "441",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T17:51:32Z"
+  },
+  {
+    "timestamp": 1764957173.540166,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "441",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T17:52:53Z"
+  },
+  {
+    "timestamp": 1764957325.518731,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "448",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T17:55:25Z"
+  },
+  {
+    "timestamp": 1764957365.440576,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "434",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T17:56:05Z"
+  },
+  {
+    "timestamp": 1764957441.38758,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "436",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T17:57:21Z"
+  },
+  {
+    "timestamp": 1764957476.753711,
+    "seed_id": "2004-I-14::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-14::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T17:57:56Z"
+  },
+  {
+    "timestamp": 1764957476.753901,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-14::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 330139302
+    },
+    "iso_time": "2025-12-05T17:57:56Z"
+  },
+  {
+    "timestamp": 1764957478.034989,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 9,
+        "wraps": 1,
+        "peg_distance": 7,
+        "unicorn_distance": 8,
+        "peg_height": 3,
+        "unicorn_height": 9,
+        "rope_length": 71.79980403101001,
+        "scaling": 10
+      }
+    },
+    "iso_time": "2025-12-05T17:57:58Z"
+  },
+  {
+    "timestamp": 1764957479.270425,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 567
+    },
+    "iso_time": "2025-12-05T17:57:59Z"
+  },
+  {
+    "timestamp": 1764957479.270625,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rope is fastened to a peg located at height 3 along the radial line of a vertical cylindrical tower of radius 9. The p",
+      "correct_answer": "567",
+      "seed_value": 330139302
+    },
+    "iso_time": "2025-12-05T17:57:59Z"
+  },
+  {
+    "timestamp": 1764957479.270706,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "558",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T17:57:59Z"
+  },
+  {
+    "timestamp": 1764957795.8391922,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "572",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T18:03:15Z"
+  },
+  {
+    "timestamp": 1764957918.301997,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "559",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T18:05:18Z"
+  },
+  {
+    "timestamp": 1764958317.2217112,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "567",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T18:11:57Z"
+  },
+  {
+    "timestamp": 1764958435.4885151,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "567",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T18:13:55Z"
+  },
+  {
+    "timestamp": 1764958490.275379,
+    "seed_id": "2004-I-14::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-14::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T18:14:50Z"
+  },
+  {
+    "timestamp": 1764958490.275563,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-14::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 909224395
+    },
+    "iso_time": "2025-12-05T18:14:50Z"
+  },
+  {
+    "timestamp": 1764958491.630769,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "radius": 12,
+        "wraps": 1,
+        "peg_distance": 6,
+        "unicorn_distance": 6,
+        "peg_height": 6,
+        "unicorn_height": -4,
+        "rope_length": 87.96845743501014,
+        "scaling": 5
+      }
+    },
+    "iso_time": "2025-12-05T18:14:51Z"
+  },
+  {
+    "timestamp": 1764958492.778456,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 379
+    },
+    "iso_time": "2025-12-05T18:14:52Z"
+  },
+  {
+    "timestamp": 1764958492.77861,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rope is fastened to a peg located at height 6 along the radial line of a vertical cylindrical tower of radius 12. The ",
+      "correct_answer": "379",
+      "seed_value": 909224395
+    },
+    "iso_time": "2025-12-05T18:14:52Z"
+  },
+  {
+    "timestamp": 1764958492.778677,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "378",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T18:14:52Z"
+  },
+  {
+    "timestamp": 1764958730.3515048,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "379",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T18:18:50Z"
+  },
+  {
+    "timestamp": 1764959081.323671,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "381",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T18:24:41Z"
+  },
+  {
+    "timestamp": 1764959129.4508789,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "379",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T18:25:29Z"
+  },
+  {
+    "timestamp": 1764959184.654285,
+    "seed_id": "2004-I-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "370",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T18:26:24Z"
+  },
+  {
+    "timestamp": 1764959391.048959,
+    "seed_id": "2004-I-14::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-14::2004_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T18:29:51Z"
+  }
+]

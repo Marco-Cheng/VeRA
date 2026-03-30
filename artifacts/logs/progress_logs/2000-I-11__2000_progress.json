@@ -1,0 +1,852 @@
+[
+  {
+    "timestamp": 1764354461.039156,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "Let $S$ be the sum of all numbers of the form $\\frac{a}{b}$ , where $a$ and $b$ are relatively prime positive divisors o",
+      "answer": "248",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T18:27:41Z"
+  },
+  {
+    "timestamp": 1764354461.0391831,
+    "seed_id": "2000-I-11::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T18:27:41Z"
+  },
+  {
+    "timestamp": 1764354461.039194,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $S$ be the sum of all numbers of the form $\\frac{a}{b}$ , where $a$ and $b$ are relatively prime positive divisors of $1000.$ What is the greatest integer that does not exceed $\\frac{S}{10}$ ?",
+      "answer": "248",
+      "example_id": "2000-I-11::2000"
+    },
+    "iso_time": "2025-11-28T18:27:41Z"
+  },
+  {
+    "timestamp": 1764354540.316105,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-11::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 567519113
+    },
+    "iso_time": "2025-11-28T18:29:00Z"
+  },
+  {
+    "timestamp": 1764354541.373308,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 20322064,
+        "factorization": "7^4 * 2^4 * 23^2",
+        "r": 1,
+        "s": 2,
+        "t": 14
+      }
+    },
+    "iso_time": "2025-11-28T18:29:01Z"
+  },
+  {
+    "timestamp": 1764354542.427228,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 14
+    },
+    "iso_time": "2025-11-28T18:29:02Z"
+  },
+  {
+    "timestamp": 1764354542.427395,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, let n = 20322064 with prime factorization 7^4 * 2^4 * 23^2. Consider all ordered pairs (a, b) of posi",
+      "correct_answer": "14",
+      "seed_value": 567519113
+    },
+    "iso_time": "2025-11-28T18:29:02Z"
+  },
+  {
+    "timestamp": 1764354542.4274418,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "23",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:29:02Z"
+  },
+  {
+    "timestamp": 1764354586.385941,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:29:46Z"
+  },
+  {
+    "timestamp": 1764354638.329615,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:30:38Z"
+  },
+  {
+    "timestamp": 1764354679.566169,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:31:19Z"
+  },
+  {
+    "timestamp": 1764354726.391386,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "14",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:32:06Z"
+  },
+  {
+    "timestamp": 1764354766.058054,
+    "seed_id": "2000-I-11::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-11::2000_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T18:32:46Z"
+  },
+  {
+    "timestamp": 1764354766.05825,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-11::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 748548481
+    },
+    "iso_time": "2025-11-28T18:32:46Z"
+  },
+  {
+    "timestamp": 1764354767.276413,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 2922168019225,
+        "factorization": "7^2 * 13^4 * 17^4 * 5^2",
+        "r": 2,
+        "s": 1,
+        "t": 21
+      }
+    },
+    "iso_time": "2025-11-28T18:32:47Z"
+  },
+  {
+    "timestamp": 1764354768.367136,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 52867080
+    },
+    "iso_time": "2025-11-28T18:32:48Z"
+  },
+  {
+    "timestamp": 1764354768.367297,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, let n = 2922168019225 with prime factorization 7^2 * 13^4 * 17^4 * 5^2. Consider all ordered pairs (a",
+      "correct_answer": "52867080",
+      "seed_value": 748548481
+    },
+    "iso_time": "2025-11-28T18:32:48Z"
+  },
+  {
+    "timestamp": 1764354768.367338,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "52867076",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:32:48Z"
+  },
+  {
+    "timestamp": 1764354848.264076,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "52867080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:34:08Z"
+  },
+  {
+    "timestamp": 1764354933.938272,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "52867077",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:35:33Z"
+  },
+  {
+    "timestamp": 1764355012.817413,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "52867080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:36:52Z"
+  },
+  {
+    "timestamp": 1764355130.216094,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "52867079",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:38:50Z"
+  },
+  {
+    "timestamp": 1764355237.8559701,
+    "seed_id": "2000-I-11::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-11::2000_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T18:40:37Z"
+  },
+  {
+    "timestamp": 1764355237.8560839,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-11::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 2111786097
+    },
+    "iso_time": "2025-11-28T18:40:37Z"
+  },
+  {
+    "timestamp": 1764355239.211465,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 27300168596,
+        "factorization": "23^4 * 2^2 * 29^3",
+        "r": 1,
+        "s": 1,
+        "t": 8
+      }
+    },
+    "iso_time": "2025-11-28T18:40:39Z"
+  },
+  {
+    "timestamp": 1764355240.2424908,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 31245
+    },
+    "iso_time": "2025-11-28T18:40:40Z"
+  },
+  {
+    "timestamp": 1764355240.2426639,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, let n = 27300168596 with prime factorization 23^4 * 2^2 * 29^3. Consider all ordered pairs (a, b) of ",
+      "correct_answer": "31245",
+      "seed_value": 2111786097
+    },
+    "iso_time": "2025-11-28T18:40:40Z"
+  },
+  {
+    "timestamp": 1764355240.242713,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "31245",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:40:40Z"
+  },
+  {
+    "timestamp": 1764355319.1645539,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "31245",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:41:59Z"
+  },
+  {
+    "timestamp": 1764355388.129241,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "31248",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:43:08Z"
+  },
+  {
+    "timestamp": 1764355453.742229,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "31251",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:44:13Z"
+  },
+  {
+    "timestamp": 1764355547.390989,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "31238",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:45:47Z"
+  },
+  {
+    "timestamp": 1764355676.298708,
+    "seed_id": "2000-I-11::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-11::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T18:47:56Z"
+  },
+  {
+    "timestamp": 1764355676.298829,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-11::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 518173876
+    },
+    "iso_time": "2025-11-28T18:47:56Z"
+  },
+  {
+    "timestamp": 1764355677.4389818,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 17908929031822829,
+        "factorization": "11^2 * 13^3 * 7^2 * 23^4 * 17^3",
+        "r": 2,
+        "s": 2,
+        "t": 19
+      }
+    },
+    "iso_time": "2025-11-28T18:47:57Z"
+  },
+  {
+    "timestamp": 1764355678.5782259,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4347611
+    },
+    "iso_time": "2025-11-28T18:47:58Z"
+  },
+  {
+    "timestamp": 1764355678.578388,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, let n = 17908929031822829 with prime factorization 11^2 * 13^3 * 7^2 * 23^4 * 17^3. Consider all orde",
+      "correct_answer": "4347611",
+      "seed_value": 518173876
+    },
+    "iso_time": "2025-11-28T18:47:58Z"
+  },
+  {
+    "timestamp": 1764355678.578432,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4347606",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:47:58Z"
+  },
+  {
+    "timestamp": 1764356091.4625049,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4347611",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:54:51Z"
+  },
+  {
+    "timestamp": 1764356215.886268,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4347605",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:56:55Z"
+  },
+  {
+    "timestamp": 1764356844.807775,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4347611",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T19:07:24Z"
+  },
+  {
+    "timestamp": 1764357550.202593,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4347609",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T19:19:10Z"
+  },
+  {
+    "timestamp": 1764357796.870728,
+    "seed_id": "2000-I-11::2000",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T19:23:16Z"
+  },
+  {
+    "timestamp": 1764357796.870962,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-11::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 296432398
+    },
+    "iso_time": "2025-11-28T19:23:16Z"
+  },
+  {
+    "timestamp": 1764357798.052366,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 967097194921,
+        "factorization": "13^4 * 11^2 * 23^4",
+        "r": 2,
+        "s": 1,
+        "t": 6
+      }
+    },
+    "iso_time": "2025-11-28T19:23:18Z"
+  },
+  {
+    "timestamp": 1764357799.134016,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 150183915
+    },
+    "iso_time": "2025-11-28T19:23:19Z"
+  },
+  {
+    "timestamp": 1764357799.1343338,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, let n = 967097194921 with prime factorization 13^4 * 11^2 * 23^4. Consider all ordered pairs (a, b) o",
+      "correct_answer": "150183915",
+      "seed_value": 296432398
+    },
+    "iso_time": "2025-11-28T19:23:19Z"
+  },
+  {
+    "timestamp": 1764357799.135639,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "150183920",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T19:23:19Z"
+  },
+  {
+    "timestamp": 1764357865.026103,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "150183924",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T19:24:25Z"
+  },
+  {
+    "timestamp": 1764357941.022474,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "150183916",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T19:25:41Z"
+  },
+  {
+    "timestamp": 1764358068.921654,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "150183915",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T19:27:48Z"
+  },
+  {
+    "timestamp": 1764358126.979289,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "150183915",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T19:28:46Z"
+  },
+  {
+    "timestamp": 1764358175.864303,
+    "seed_id": "2000-I-11::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-11::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T19:29:35Z"
+  },
+  {
+    "timestamp": 1764358175.8643682,
+    "seed_id": "2000-I-11::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-28T19:29:35Z"
+  },
+  {
+    "timestamp": 1764358175.864409,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 4 (successes=3).",
+      "question": "Let $S$ be the sum of all numbers of the form $\\frac{a}{b}$ , where $a$ and $b$ are relatively prime positive divisors of $1000.$ What is the greatest integer that does not exceed $\\frac{S}{10}$ ?",
+      "answer": "248",
+      "example_id": "2000-I-11::2000"
+    },
+    "iso_time": "2025-11-28T19:29:35Z"
+  },
+  {
+    "timestamp": 1764358252.447883,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-11::2000_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 376843566
+    },
+    "iso_time": "2025-11-28T19:30:52Z"
+  },
+  {
+    "timestamp": 1764358253.595341,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 51653448,
+        "r": 3,
+        "u": 1,
+        "v_exponents": "2, 3",
+        "m": 66,
+        "v_list": [
+          2,
+          3
+        ]
+      }
+    },
+    "iso_time": "2025-11-28T19:30:53Z"
+  },
+  {
+    "timestamp": 1764358254.618262,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2833350
+    },
+    "iso_time": "2025-11-28T19:30:54Z"
+  },
+  {
+    "timestamp": 1764358254.61843,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a number theory exercise, let n = 51653448. Consider ordered 3-tuples of positive divisors (d_1, ..., d_3) of n such ",
+      "correct_answer": "2833350",
+      "seed_value": 376843566
+    },
+    "iso_time": "2025-11-28T19:30:54Z"
+  },
+  {
+    "timestamp": 1764358254.618467,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2833354",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T19:30:54Z"
+  },
+  {
+    "timestamp": 1764358669.662307,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2833350",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T19:37:49Z"
+  },
+  {
+    "timestamp": 1764358785.2586,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2833345",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T19:39:45Z"
+  },
+  {
+    "timestamp": 1764358961.177073,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2833350",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T19:42:41Z"
+  },
+  {
+    "timestamp": 1764359210.9289641,
+    "seed_id": "2000-I-11::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2833348",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T19:46:50Z"
+  },
+  {
+    "timestamp": 1764359335.795938,
+    "seed_id": "2000-I-11::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-11::2000_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T19:48:55Z"
+  }
+]

@@ -1,0 +1,4190 @@
+[
+  {
+    "timestamp": 1762731723.0552719,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1985,
+      "question_preview": "How many of the first $1000$ positive integers can be expressed in the form $\\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\",
+      "answer": "600",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-09T23:42:03Z"
+  },
+  {
+    "timestamp": 1762731723.055296,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-09T23:42:03Z"
+  },
+  {
+    "timestamp": 1762731723.055308,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "How many of the first $1000$ positive integers can be expressed in the form $\\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\lfloor 6x \\rfloor + \\lfloor 8x \\rfloor$ , where $x$ is a real number, and $\\lfloor z \\rfloor$ denotes the greatest integer less than or equal to $z$ ?",
+      "answer": "600",
+      "example_id": "1985-10::1985"
+    },
+    "iso_time": "2025-11-09T23:42:03Z"
+  },
+  {
+    "timestamp": 1762731896.773111,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 23 column 357 (char 5091)",
+    "payload": {},
+    "iso_time": "2025-11-09T23:44:56Z"
+  },
+  {
+    "timestamp": 1762731896.773168,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-09T23:44:56Z"
+  },
+  {
+    "timestamp": 1762731896.7731872,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 23 column 357 (char 5091)",
+      "question": "How many of the first $1000$ positive integers can be expressed in the form $\\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\lfloor 6x \\rfloor + \\lfloor 8x \\rfloor$ , where $x$ is a real number, and $\\lfloor z \\rfloor$ denotes the greatest integer less than or equal to $z$ ?",
+      "answer": "600",
+      "example_id": "1985-10::1985"
+    },
+    "iso_time": "2025-11-09T23:44:56Z"
+  },
+  {
+    "timestamp": 1762732099.218359,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1679746385
+    },
+    "iso_time": "2025-11-09T23:48:19Z"
+  },
+  {
+    "timestamp": 1762732100.243226,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 10,
+        "N": 10420
+      }
+    },
+    "iso_time": "2025-11-09T23:48:20Z"
+  },
+  {
+    "timestamp": 1762732101.2934752,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6064
+    },
+    "iso_time": "2025-11-09T23:48:21Z"
+  },
+  {
+    "timestamp": 1762732101.293654,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S_{{n}}$ be the set of positive integers that can be expressed in the form $\\sum_{k=1}^{{n}} \\lfloor kx \\rfloor$ fo",
+      "correct_answer": "6064",
+      "seed_value": 1679746385
+    },
+    "iso_time": "2025-11-09T23:48:21Z"
+  },
+  {
+    "timestamp": 1762732101.2937212,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6057",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T23:48:21Z"
+  },
+  {
+    "timestamp": 1762732357.566106,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6056",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T23:52:37Z"
+  },
+  {
+    "timestamp": 1762732476.3103309,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6064",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T23:54:36Z"
+  },
+  {
+    "timestamp": 1762732738.818673,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6071",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T23:58:58Z"
+  },
+  {
+    "timestamp": 1762733025.75823,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6064",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T00:03:45Z"
+  },
+  {
+    "timestamp": 1762733300.847541,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-10T00:08:20Z"
+  },
+  {
+    "timestamp": 1762733300.847639,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 651180537
+    },
+    "iso_time": "2025-11-10T00:08:20Z"
+  },
+  {
+    "timestamp": 1762733301.680901,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 10,
+        "N": 7784
+      }
+    },
+    "iso_time": "2025-11-10T00:08:21Z"
+  },
+  {
+    "timestamp": 1762733302.447393,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4531
+    },
+    "iso_time": "2025-11-10T00:08:22Z"
+  },
+  {
+    "timestamp": 1762733302.44753,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S_{{n}}$ be the set of positive integers that can be expressed in the form $\\sum_{k=1}^{{n}} \\lfloor kx \\rfloor$ fo",
+      "correct_answer": "4531",
+      "seed_value": 651180537
+    },
+    "iso_time": "2025-11-10T00:08:22Z"
+  },
+  {
+    "timestamp": 1762733302.447572,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4534",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T00:08:22Z"
+  },
+  {
+    "timestamp": 1762733566.0388448,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4527",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T00:12:46Z"
+  },
+  {
+    "timestamp": 1762733862.433865,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4528",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T00:17:42Z"
+  },
+  {
+    "timestamp": 1762734126.9180338,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4531",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T00:22:06Z"
+  },
+  {
+    "timestamp": 1762734412.671594,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4531",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T00:26:52Z"
+  },
+  {
+    "timestamp": 1762734763.3015912,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-10T00:32:43Z"
+  },
+  {
+    "timestamp": 1762734763.3017359,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 373138178
+    },
+    "iso_time": "2025-11-10T00:32:43Z"
+  },
+  {
+    "timestamp": 1762734764.082807,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 10,
+        "N": 8656
+      }
+    },
+    "iso_time": "2025-11-10T00:32:44Z"
+  },
+  {
+    "timestamp": 1762734764.855634,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5039
+    },
+    "iso_time": "2025-11-10T00:32:44Z"
+  },
+  {
+    "timestamp": 1762734764.8557749,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S_{{n}}$ be the set of positive integers that can be expressed in the form $\\sum_{k=1}^{{n}} \\lfloor kx \\rfloor$ fo",
+      "correct_answer": "5039",
+      "seed_value": 373138178
+    },
+    "iso_time": "2025-11-10T00:32:44Z"
+  },
+  {
+    "timestamp": 1762734764.85582,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5039",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T00:32:44Z"
+  },
+  {
+    "timestamp": 1762735050.846569,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5032",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T00:37:30Z"
+  },
+  {
+    "timestamp": 1762735308.804922,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5039",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T00:41:48Z"
+  },
+  {
+    "timestamp": 1762735574.552035,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5041",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T00:46:14Z"
+  },
+  {
+    "timestamp": 1762735821.798284,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5031",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T00:50:21Z"
+  },
+  {
+    "timestamp": 1762736185.074247,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 1
+    },
+    "iso_time": "2025-11-10T00:56:25Z"
+  },
+  {
+    "timestamp": 1762736185.07435,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1887898157
+    },
+    "iso_time": "2025-11-10T00:56:25Z"
+  },
+  {
+    "timestamp": 1762736185.829831,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 9,
+        "N": 18912
+      }
+    },
+    "iso_time": "2025-11-10T00:56:25Z"
+  },
+  {
+    "timestamp": 1762736186.635972,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 11769
+    },
+    "iso_time": "2025-11-10T00:56:26Z"
+  },
+  {
+    "timestamp": 1762736186.636108,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S_{{n}}$ be the set of positive integers that can be expressed in the form $\\sum_{k=1}^{{n}} \\lfloor kx \\rfloor$ fo",
+      "correct_answer": "11769",
+      "seed_value": 1887898157
+    },
+    "iso_time": "2025-11-10T00:56:26Z"
+  },
+  {
+    "timestamp": 1762736186.636153,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "11774",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T00:56:26Z"
+  },
+  {
+    "timestamp": 1762736451.936529,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "11769",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T01:00:51Z"
+  },
+  {
+    "timestamp": 1762736743.4531388,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "11769",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T01:05:43Z"
+  },
+  {
+    "timestamp": 1762737006.273694,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "11762",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T01:10:06Z"
+  },
+  {
+    "timestamp": 1762737223.563709,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "11778",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T01:13:43Z"
+  },
+  {
+    "timestamp": 1762737506.531714,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 1
+    },
+    "iso_time": "2025-11-10T01:18:26Z"
+  },
+  {
+    "timestamp": 1762737506.531809,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 1187366976
+    },
+    "iso_time": "2025-11-10T01:18:26Z"
+  },
+  {
+    "timestamp": 1762737507.592149,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 13,
+        "N": 6071
+      }
+    },
+    "iso_time": "2025-11-10T01:18:27Z"
+  },
+  {
+    "timestamp": 1762737508.583198,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3874
+    },
+    "iso_time": "2025-11-10T01:18:28Z"
+  },
+  {
+    "timestamp": 1762737508.583345,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S_{{n}}$ be the set of positive integers that can be expressed in the form $\\sum_{k=1}^{{n}} \\lfloor kx \\rfloor$ fo",
+      "correct_answer": "3874",
+      "seed_value": 1187366976
+    },
+    "iso_time": "2025-11-10T01:18:28Z"
+  },
+  {
+    "timestamp": 1762737508.583391,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3878",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T01:18:28Z"
+  },
+  {
+    "timestamp": 1762737761.258881,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3869",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T01:22:41Z"
+  },
+  {
+    "timestamp": 1762738049.14401,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3870",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T01:27:29Z"
+  },
+  {
+    "timestamp": 1762738333.3682718,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3874",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T01:32:13Z"
+  },
+  {
+    "timestamp": 1762738562.2421272,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3874",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T01:36:02Z"
+  },
+  {
+    "timestamp": 1762738856.466796,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 1
+    },
+    "iso_time": "2025-11-10T01:40:56Z"
+  },
+  {
+    "timestamp": 1762738856.4668758,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-10T01:40:56Z"
+  },
+  {
+    "timestamp": 1762738856.466893,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=2). | Judge rejected variant 2 (successes=2). | Judge rejected variant 3 (successes=1).",
+      "question": "How many of the first $1000$ positive integers can be expressed in the form $\\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\lfloor 6x \\rfloor + \\lfloor 8x \\rfloor$ , where $x$ is a real number, and $\\lfloor z \\rfloor$ denotes the greatest integer less than or equal to $z$ ?",
+      "answer": "600",
+      "example_id": "1985-10::1985"
+    },
+    "iso_time": "2025-11-10T01:40:56Z"
+  },
+  {
+    "timestamp": 1762739070.647323,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 912752880
+    },
+    "iso_time": "2025-11-10T01:44:30Z"
+  },
+  {
+    "timestamp": 1762739071.469017,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:31Z"
+  },
+  {
+    "timestamp": 1762739072.2496371,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:32Z"
+  },
+  {
+    "timestamp": 1762739073.0425081,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:33Z"
+  },
+  {
+    "timestamp": 1762739073.8702762,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:33Z"
+  },
+  {
+    "timestamp": 1762739074.685329,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:34Z"
+  },
+  {
+    "timestamp": 1762739075.479394,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:35Z"
+  },
+  {
+    "timestamp": 1762739076.2844281,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:36Z"
+  },
+  {
+    "timestamp": 1762739077.123426,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:37Z"
+  },
+  {
+    "timestamp": 1762739077.9261281,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:37Z"
+  },
+  {
+    "timestamp": 1762739078.7266712,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:38Z"
+  },
+  {
+    "timestamp": 1762739079.545708,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:39Z"
+  },
+  {
+    "timestamp": 1762739080.328398,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:40Z"
+  },
+  {
+    "timestamp": 1762739081.1144562,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:41Z"
+  },
+  {
+    "timestamp": 1762739081.907954,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:41Z"
+  },
+  {
+    "timestamp": 1762739081.908038,
+    "seed_id": "1985-10::1985",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 11.260717868804932
+    },
+    "iso_time": "2025-11-10T01:44:41Z"
+  },
+  {
+    "timestamp": 1762739081.908125,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 502008115
+    },
+    "iso_time": "2025-11-10T01:44:41Z"
+  },
+  {
+    "timestamp": 1762739082.723827,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:42Z"
+  },
+  {
+    "timestamp": 1762739083.502238,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:43Z"
+  },
+  {
+    "timestamp": 1762739084.2941508,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:44Z"
+  },
+  {
+    "timestamp": 1762739085.053788,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:45Z"
+  },
+  {
+    "timestamp": 1762739086.0085719,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:46Z"
+  },
+  {
+    "timestamp": 1762739087.0239081,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:47Z"
+  },
+  {
+    "timestamp": 1762739088.039516,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:48Z"
+  },
+  {
+    "timestamp": 1762739089.012785,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:49Z"
+  },
+  {
+    "timestamp": 1762739089.981212,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:49Z"
+  },
+  {
+    "timestamp": 1762739090.944173,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:50Z"
+  },
+  {
+    "timestamp": 1762739091.938129,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:51Z"
+  },
+  {
+    "timestamp": 1762739092.9277701,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:52Z"
+  },
+  {
+    "timestamp": 1762739092.92786,
+    "seed_id": "1985-10::1985",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.019736051559448
+    },
+    "iso_time": "2025-11-10T01:44:52Z"
+  },
+  {
+    "timestamp": 1762739092.927914,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1258770507
+    },
+    "iso_time": "2025-11-10T01:44:52Z"
+  },
+  {
+    "timestamp": 1762739093.922582,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:53Z"
+  },
+  {
+    "timestamp": 1762739094.904835,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:54Z"
+  },
+  {
+    "timestamp": 1762739095.911295,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:55Z"
+  },
+  {
+    "timestamp": 1762739096.9487941,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:56Z"
+  },
+  {
+    "timestamp": 1762739097.9347231,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:57Z"
+  },
+  {
+    "timestamp": 1762739098.935542,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:44:58Z"
+  },
+  {
+    "timestamp": 1762739099.941729,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:44:59Z"
+  },
+  {
+    "timestamp": 1762739100.9480069,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:00Z"
+  },
+  {
+    "timestamp": 1762739101.9523351,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:01Z"
+  },
+  {
+    "timestamp": 1762739102.9435909,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:02Z"
+  },
+  {
+    "timestamp": 1762739102.943688,
+    "seed_id": "1985-10::1985",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.015774965286255
+    },
+    "iso_time": "2025-11-10T01:45:02Z"
+  },
+  {
+    "timestamp": 1762739102.943742,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1423178008
+    },
+    "iso_time": "2025-11-10T01:45:02Z"
+  },
+  {
+    "timestamp": 1762739103.933907,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:03Z"
+  },
+  {
+    "timestamp": 1762739104.928214,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:04Z"
+  },
+  {
+    "timestamp": 1762739105.9150279,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:05Z"
+  },
+  {
+    "timestamp": 1762739106.920019,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:06Z"
+  },
+  {
+    "timestamp": 1762739107.911157,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:07Z"
+  },
+  {
+    "timestamp": 1762739108.906422,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:08Z"
+  },
+  {
+    "timestamp": 1762739109.901044,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:09Z"
+  },
+  {
+    "timestamp": 1762739110.889525,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:10Z"
+  },
+  {
+    "timestamp": 1762739111.884524,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:11Z"
+  },
+  {
+    "timestamp": 1762739112.881422,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:12Z"
+  },
+  {
+    "timestamp": 1762739113.873865,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:13Z"
+  },
+  {
+    "timestamp": 1762739114.867597,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:14Z"
+  },
+  {
+    "timestamp": 1762739114.8676732,
+    "seed_id": "1985-10::1985",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.923932075500488
+    },
+    "iso_time": "2025-11-10T01:45:14Z"
+  },
+  {
+    "timestamp": 1762739114.8677278,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 2101009590
+    },
+    "iso_time": "2025-11-10T01:45:14Z"
+  },
+  {
+    "timestamp": 1762739115.858911,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:15Z"
+  },
+  {
+    "timestamp": 1762739116.850562,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:16Z"
+  },
+  {
+    "timestamp": 1762739117.8578439,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:17Z"
+  },
+  {
+    "timestamp": 1762739118.850088,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:18Z"
+  },
+  {
+    "timestamp": 1762739119.8489878,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:19Z"
+  },
+  {
+    "timestamp": 1762739120.859244,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:20Z"
+  },
+  {
+    "timestamp": 1762739121.855402,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:21Z"
+  },
+  {
+    "timestamp": 1762739122.853458,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:22Z"
+  },
+  {
+    "timestamp": 1762739123.8431418,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:23Z"
+  },
+  {
+    "timestamp": 1762739124.792581,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:24Z"
+  },
+  {
+    "timestamp": 1762739125.743016,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T01:45:25Z"
+  },
+  {
+    "timestamp": 1762739126.745485,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T01:45:26Z"
+  },
+  {
+    "timestamp": 1762739126.745578,
+    "seed_id": "1985-10::1985",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.877850770950317
+    },
+    "iso_time": "2025-11-10T01:45:26Z"
+  },
+  {
+    "timestamp": 1762739126.745619,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-10T01:45:26Z"
+  },
+  {
+    "timestamp": 1762739126.7456472,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "How many of the first $1000$ positive integers can be expressed in the form $\\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\lfloor 6x \\rfloor + \\lfloor 8x \\rfloor$ , where $x$ is a real number, and $\\lfloor z \\rfloor$ denotes the greatest integer less than or equal to $z$ ?",
+      "answer": "600",
+      "example_id": "1985-10::1985"
+    },
+    "iso_time": "2025-11-10T01:45:26Z"
+  },
+  {
+    "timestamp": 1762739326.1282601,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 1368628354
+    },
+    "iso_time": "2025-11-10T01:48:46Z"
+  },
+  {
+    "timestamp": 1762739326.9192052,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 5,
+        "coeffs_str": "24, 26, 34, 38, 76",
+        "coeffs": [
+          24,
+          26,
+          34,
+          38,
+          76
+        ],
+        "L": 2287
+      }
+    },
+    "iso_time": "2025-11-10T01:48:46Z"
+  },
+  {
+    "timestamp": 1762739327.714144,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1756
+    },
+    "iso_time": "2025-11-10T01:48:47Z"
+  },
+  {
+    "timestamp": 1762739327.714303,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $C = \\{{coeffs_str}\\}$ be a set of 5 positive integer coefficients. Let the function $f(x)$ be defined as $f(x) = \\s",
+      "correct_answer": "1756",
+      "seed_value": 1368628354
+    },
+    "iso_time": "2025-11-10T01:48:47Z"
+  },
+  {
+    "timestamp": 1762739327.714354,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1748",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T01:48:47Z"
+  },
+  {
+    "timestamp": 1762739536.676768,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1756",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T01:52:16Z"
+  },
+  {
+    "timestamp": 1762739797.9126022,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1757",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T01:56:37Z"
+  },
+  {
+    "timestamp": 1762740009.459626,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1760",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T02:00:09Z"
+  },
+  {
+    "timestamp": 1762740270.367718,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1756",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T02:04:30Z"
+  },
+  {
+    "timestamp": 1762740522.414258,
+    "seed_id": "1985-10::1985",
+    "stage": "variant_success",
+    "message": "Accepted variant 1985-10::1985_prompt04-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-10T02:08:42Z"
+  },
+  {
+    "timestamp": 1762740522.414313,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 750050011
+    },
+    "iso_time": "2025-11-10T02:08:42Z"
+  },
+  {
+    "timestamp": 1762740523.158359,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 5,
+        "coeffs_str": "16, 28, 32, 71, 77",
+        "coeffs": [
+          16,
+          28,
+          32,
+          71,
+          77
+        ],
+        "L": 2605
+      }
+    },
+    "iso_time": "2025-11-10T02:08:43Z"
+  },
+  {
+    "timestamp": 1762740523.9214358,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2281
+    },
+    "iso_time": "2025-11-10T02:08:43Z"
+  },
+  {
+    "timestamp": 1762740523.9215732,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $C = \\{{coeffs_str}\\}$ be a set of 5 positive integer coefficients. Let the function $f(x)$ be defined as $f(x) = \\s",
+      "correct_answer": "2281",
+      "seed_value": 750050011
+    },
+    "iso_time": "2025-11-10T02:08:43Z"
+  },
+  {
+    "timestamp": 1762740523.921623,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2284",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T02:08:43Z"
+  },
+  {
+    "timestamp": 1762740752.878858,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2281",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T02:12:32Z"
+  },
+  {
+    "timestamp": 1762741024.2271712,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2282",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T02:17:04Z"
+  },
+  {
+    "timestamp": 1762741327.033217,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2275",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T02:22:07Z"
+  },
+  {
+    "timestamp": 1762741589.852268,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2281",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T02:26:29Z"
+  },
+  {
+    "timestamp": 1762741822.635387,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-10T02:30:22Z"
+  },
+  {
+    "timestamp": 1762741822.635499,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 3,
+      "seed_value": 185540984
+    },
+    "iso_time": "2025-11-10T02:30:22Z"
+  },
+  {
+    "timestamp": 1762741823.422719,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 5,
+        "coeffs_str": "29, 56, 60, 78, 80",
+        "coeffs": [
+          29,
+          56,
+          60,
+          78,
+          80
+        ],
+        "L": 2876
+      }
+    },
+    "iso_time": "2025-11-10T02:30:23Z"
+  },
+  {
+    "timestamp": 1762741824.1951869,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2545
+    },
+    "iso_time": "2025-11-10T02:30:24Z"
+  },
+  {
+    "timestamp": 1762741824.195321,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $C = \\{{coeffs_str}\\}$ be a set of 5 positive integer coefficients. Let the function $f(x)$ be defined as $f(x) = \\s",
+      "correct_answer": "2545",
+      "seed_value": 185540984
+    },
+    "iso_time": "2025-11-10T02:30:24Z"
+  },
+  {
+    "timestamp": 1762741824.1953862,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2538",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T02:30:24Z"
+  },
+  {
+    "timestamp": 1762742113.3675299,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2542",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T02:35:13Z"
+  },
+  {
+    "timestamp": 1762742388.6103501,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2548",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T02:39:48Z"
+  },
+  {
+    "timestamp": 1762742567.794494,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2545",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T02:42:47Z"
+  },
+  {
+    "timestamp": 1762742756.500544,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2545",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T02:45:56Z"
+  },
+  {
+    "timestamp": 1762743024.213362,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-10T02:50:24Z"
+  },
+  {
+    "timestamp": 1762743024.213465,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 4,
+      "seed_value": 755070583
+    },
+    "iso_time": "2025-11-10T02:50:24Z"
+  },
+  {
+    "timestamp": 1762743025.0261,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 5,
+        "coeffs_str": "32, 44, 54, 66, 71",
+        "coeffs": [
+          32,
+          44,
+          54,
+          66,
+          71
+        ],
+        "L": 1480
+      }
+    },
+    "iso_time": "2025-11-10T02:50:25Z"
+  },
+  {
+    "timestamp": 1762743025.821172,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1298
+    },
+    "iso_time": "2025-11-10T02:50:25Z"
+  },
+  {
+    "timestamp": 1762743025.8213089,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $C = \\{{coeffs_str}\\}$ be a set of 5 positive integer coefficients. Let the function $f(x)$ be defined as $f(x) = \\s",
+      "correct_answer": "1298",
+      "seed_value": 755070583
+    },
+    "iso_time": "2025-11-10T02:50:25Z"
+  },
+  {
+    "timestamp": 1762743025.821353,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1306",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T02:50:25Z"
+  },
+  {
+    "timestamp": 1762743249.091124,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1296",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T02:54:09Z"
+  },
+  {
+    "timestamp": 1762743487.98614,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1301",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T02:58:07Z"
+  },
+  {
+    "timestamp": 1762743752.1901891,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1298",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T03:02:32Z"
+  },
+  {
+    "timestamp": 1762744018.0434828,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1298",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T03:06:58Z"
+  },
+  {
+    "timestamp": 1762744290.020134,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-10T03:11:30Z"
+  },
+  {
+    "timestamp": 1762744290.020243,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 5,
+      "seed_value": 695665837
+    },
+    "iso_time": "2025-11-10T03:11:30Z"
+  },
+  {
+    "timestamp": 1762744290.778571,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 5,
+        "coeffs_str": "24, 33, 41, 44, 76",
+        "coeffs": [
+          24,
+          33,
+          41,
+          44,
+          76
+        ],
+        "L": 3364
+      }
+    },
+    "iso_time": "2025-11-10T03:11:30Z"
+  },
+  {
+    "timestamp": 1762744291.55381,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3027
+    },
+    "iso_time": "2025-11-10T03:11:31Z"
+  },
+  {
+    "timestamp": 1762744291.553951,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $C = \\{{coeffs_str}\\}$ be a set of 5 positive integer coefficients. Let the function $f(x)$ be defined as $f(x) = \\s",
+      "correct_answer": "3027",
+      "seed_value": 695665837
+    },
+    "iso_time": "2025-11-10T03:11:31Z"
+  },
+  {
+    "timestamp": 1762744291.5539908,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3027",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T03:11:31Z"
+  },
+  {
+    "timestamp": 1762744520.545397,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3034",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T03:15:20Z"
+  },
+  {
+    "timestamp": 1762744781.08596,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3030",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T03:19:41Z"
+  },
+  {
+    "timestamp": 1762745045.9528892,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3022",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T03:24:05Z"
+  },
+  {
+    "timestamp": 1762745292.627218,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3027",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T03:28:12Z"
+  },
+  {
+    "timestamp": 1762745815.3192809,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-10T03:36:55Z"
+  },
+  {
+    "timestamp": 1762745815.3193758,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 5).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-10T03:36:55Z"
+  },
+  {
+    "timestamp": 1762745815.319393,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 5,
+      "feedback": "Judge rejected variant 2 (successes=2). | Judge rejected variant 3 (successes=3). | Judge rejected variant 4 (successes=2).",
+      "question": "How many of the first $1000$ positive integers can be expressed in the form $\\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\lfloor 6x \\rfloor + \\lfloor 8x \\rfloor$ , where $x$ is a real number, and $\\lfloor z \\rfloor$ denotes the greatest integer less than or equal to $z$ ?",
+      "answer": "600",
+      "example_id": "1985-10::1985"
+    },
+    "iso_time": "2025-11-10T03:36:55Z"
+  },
+  {
+    "timestamp": 1762746017.7895942,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 1,
+      "seed_value": 169097290
+    },
+    "iso_time": "2025-11-10T03:40:17Z"
+  },
+  {
+    "timestamp": 1762746018.570747,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s_coeffs": "1, 2, 3, 4, 6, 12",
+        "M": 35,
+        "_s_list": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T03:40:18Z"
+  },
+  {
+    "timestamp": 1762746019.342238,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 30
+    },
+    "iso_time": "2025-11-10T03:40:19Z"
+  },
+  {
+    "timestamp": 1762746019.342366,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of positive integers $\\{ {s_coeffs} \\}$. A function is defined as $f(x) = \\sum_{c \\in S} \\lfloor c x ",
+      "correct_answer": "30",
+      "seed_value": 169097290
+    },
+    "iso_time": "2025-11-10T03:40:19Z"
+  },
+  {
+    "timestamp": 1762746019.342415,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "30",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T03:40:19Z"
+  },
+  {
+    "timestamp": 1762746198.450073,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "22",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T03:43:18Z"
+  },
+  {
+    "timestamp": 1762746387.220821,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "36",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T03:46:27Z"
+  },
+  {
+    "timestamp": 1762746589.118627,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "30",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T03:49:49Z"
+  },
+  {
+    "timestamp": 1762746793.363917,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "33",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T03:53:13Z"
+  },
+  {
+    "timestamp": 1762747089.031412,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-10T03:58:09Z"
+  },
+  {
+    "timestamp": 1762747089.031488,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 2,
+      "seed_value": 1902931975
+    },
+    "iso_time": "2025-11-10T03:58:09Z"
+  },
+  {
+    "timestamp": 1762747089.8263261,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s_coeffs": "1, 8, 12, 24",
+        "M": 12,
+        "_s_list": [
+          1,
+          8,
+          12,
+          24
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T03:58:09Z"
+  },
+  {
+    "timestamp": 1762747090.61118,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T03:58:10Z"
+  },
+  {
+    "timestamp": 1762747091.390302,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "s_coeffs": "1, 2, 6, 18",
+        "M": 45,
+        "_s_list": [
+          1,
+          2,
+          6,
+          18
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T03:58:11Z"
+  },
+  {
+    "timestamp": 1762747092.166455,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": true,
+      "answer": 40
+    },
+    "iso_time": "2025-11-10T03:58:12Z"
+  },
+  {
+    "timestamp": 1762747092.166581,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of positive integers $\\{ {s_coeffs} \\}$. A function is defined as $f(x) = \\sum_{c \\in S} \\lfloor c x ",
+      "correct_answer": "40",
+      "seed_value": 1902931975
+    },
+    "iso_time": "2025-11-10T03:58:12Z"
+  },
+  {
+    "timestamp": 1762747092.166626,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "32",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T03:58:12Z"
+  },
+  {
+    "timestamp": 1762747379.30338,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "40",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T04:02:59Z"
+  },
+  {
+    "timestamp": 1762747641.069674,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "45",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T04:07:21Z"
+  },
+  {
+    "timestamp": 1762747930.4054852,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "40",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T04:12:10Z"
+  },
+  {
+    "timestamp": 1762748176.27707,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "42",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T04:16:16Z"
+  },
+  {
+    "timestamp": 1762748442.813926,
+    "seed_id": "1985-10::1985",
+    "stage": "variant_success",
+    "message": "Accepted variant 1985-10::1985_prompt05-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-10T04:20:42Z"
+  },
+  {
+    "timestamp": 1762748442.813993,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 3,
+      "seed_value": 866822548
+    },
+    "iso_time": "2025-11-10T04:20:42Z"
+  },
+  {
+    "timestamp": 1762748443.596271,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s_coeffs": "1, 2, 7, 42",
+        "M": 39,
+        "_s_list": [
+          1,
+          2,
+          7,
+          42
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T04:20:43Z"
+  },
+  {
+    "timestamp": 1762748444.367362,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T04:20:44Z"
+  },
+  {
+    "timestamp": 1762748445.1339111,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "s_coeffs": "1, 2, 10, 20",
+        "M": 12,
+        "_s_list": [
+          1,
+          2,
+          10,
+          20
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T04:20:45Z"
+  },
+  {
+    "timestamp": 1762748445.901855,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T04:20:45Z"
+  },
+  {
+    "timestamp": 1762748446.667809,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "s_coeffs": "1, 2, 3, 6, 9, 18",
+        "M": 6,
+        "_s_list": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          18
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T04:20:46Z"
+  },
+  {
+    "timestamp": 1762748447.438267,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T04:20:47Z"
+  },
+  {
+    "timestamp": 1762748448.199703,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "s_coeffs": "1, 6, 7, 14, 21, 42",
+        "M": 39,
+        "_s_list": [
+          1,
+          6,
+          7,
+          14,
+          21,
+          42
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T04:20:48Z"
+  },
+  {
+    "timestamp": 1762748448.968197,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": true,
+      "answer": 30
+    },
+    "iso_time": "2025-11-10T04:20:48Z"
+  },
+  {
+    "timestamp": 1762748448.9683368,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of positive integers $\\{ {s_coeffs} \\}$. A function is defined as $f(x) = \\sum_{c \\in S} \\lfloor c x ",
+      "correct_answer": "30",
+      "seed_value": 866822548
+    },
+    "iso_time": "2025-11-10T04:20:48Z"
+  },
+  {
+    "timestamp": 1762748448.968381,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "30",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T04:20:48Z"
+  },
+  {
+    "timestamp": 1762748757.720723,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "26",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T04:25:57Z"
+  },
+  {
+    "timestamp": 1762748947.190249,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "30",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T04:29:07Z"
+  },
+  {
+    "timestamp": 1762749191.709568,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "23",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T04:33:11Z"
+  },
+  {
+    "timestamp": 1762749414.722386,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "25",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T04:36:54Z"
+  },
+  {
+    "timestamp": 1762749699.082797,
+    "seed_id": "1985-10::1985",
+    "stage": "variant_success",
+    "message": "Accepted variant 1985-10::1985_prompt05-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-10T04:41:39Z"
+  },
+  {
+    "timestamp": 1762749699.082871,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 4,
+      "seed_value": 836570666
+    },
+    "iso_time": "2025-11-10T04:41:39Z"
+  },
+  {
+    "timestamp": 1762749699.852363,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s_coeffs": "1, 3, 12, 24",
+        "M": 30,
+        "_s_list": [
+          1,
+          3,
+          12,
+          24
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T04:41:39Z"
+  },
+  {
+    "timestamp": 1762749700.629208,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 27
+    },
+    "iso_time": "2025-11-10T04:41:40Z"
+  },
+  {
+    "timestamp": 1762749700.629334,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of positive integers $\\{ {s_coeffs} \\}$. A function is defined as $f(x) = \\sum_{c \\in S} \\lfloor c x ",
+      "correct_answer": "27",
+      "seed_value": 836570666
+    },
+    "iso_time": "2025-11-10T04:41:40Z"
+  },
+  {
+    "timestamp": 1762749700.6293828,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "24",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T04:41:40Z"
+  },
+  {
+    "timestamp": 1762749912.4356291,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "27",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T04:45:12Z"
+  },
+  {
+    "timestamp": 1762750090.526932,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "26",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T04:48:10Z"
+  },
+  {
+    "timestamp": 1762750307.324206,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "28",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T04:51:47Z"
+  },
+  {
+    "timestamp": 1762750525.36918,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "27",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T04:55:25Z"
+  },
+  {
+    "timestamp": 1762750740.776312,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-10T04:59:00Z"
+  },
+  {
+    "timestamp": 1762750740.776384,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 5,
+      "seed_value": 247558348
+    },
+    "iso_time": "2025-11-10T04:59:00Z"
+  },
+  {
+    "timestamp": 1762750741.575831,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s_coeffs": "1, 3, 12, 18, 36",
+        "M": 30,
+        "_s_list": [
+          1,
+          3,
+          12,
+          18,
+          36
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T04:59:01Z"
+  },
+  {
+    "timestamp": 1762750742.361994,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T04:59:02Z"
+  },
+  {
+    "timestamp": 1762750743.146679,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "s_coeffs": "1, 2, 3, 4, 6, 8",
+        "M": 40,
+        "_s_list": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T04:59:03Z"
+  },
+  {
+    "timestamp": 1762750743.926839,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": true,
+      "answer": 35
+    },
+    "iso_time": "2025-11-10T04:59:03Z"
+  },
+  {
+    "timestamp": 1762750743.926975,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S$ be the set of positive integers $\\{ {s_coeffs} \\}$. A function is defined as $f(x) = \\sum_{c \\in S} \\lfloor c x ",
+      "correct_answer": "35",
+      "seed_value": 247558348
+    },
+    "iso_time": "2025-11-10T04:59:03Z"
+  },
+  {
+    "timestamp": 1762750743.927017,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "29",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T04:59:03Z"
+  },
+  {
+    "timestamp": 1762751000.459472,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "35",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T05:03:20Z"
+  },
+  {
+    "timestamp": 1762751184.7490869,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "43",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T05:06:24Z"
+  },
+  {
+    "timestamp": 1762751349.312478,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "38",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T05:09:09Z"
+  },
+  {
+    "timestamp": 1762751601.148572,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "35",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T05:13:21Z"
+  },
+  {
+    "timestamp": 1762751863.762194,
+    "seed_id": "1985-10::1985",
+    "stage": "variant_success",
+    "message": "Accepted variant 1985-10::1985_prompt05-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-10T05:17:43Z"
+  },
+  {
+    "timestamp": 1762751863.7622242,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 6).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-10T05:17:43Z"
+  },
+  {
+    "timestamp": 1762751863.762239,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 6,
+      "feedback": "Judge rejected variant 1 (successes=2). | Judge rejected variant 4 (successes=3).",
+      "question": "How many of the first $1000$ positive integers can be expressed in the form $\\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\lfloor 6x \\rfloor + \\lfloor 8x \\rfloor$ , where $x$ is a real number, and $\\lfloor z \\rfloor$ denotes the greatest integer less than or equal to $z$ ?",
+      "answer": "600",
+      "example_id": "1985-10::1985"
+    },
+    "iso_time": "2025-11-10T05:17:43Z"
+  },
+  {
+    "timestamp": 1762752073.742294,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 1,
+      "seed_value": 1410879682
+    },
+    "iso_time": "2025-11-10T05:21:13Z"
+  },
+  {
+    "timestamp": 1762752074.5301812,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s1_coeffs": "12",
+        "s2_coeffs": "2, 8, 10",
+        "N": 1506,
+        "_coeffs": [
+          2,
+          8,
+          10,
+          12
+        ],
+        "_s1_indices": [
+          3
+        ],
+        "_s2_indices": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T05:21:14Z"
+  },
+  {
+    "timestamp": 1762752075.3083892,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1269
+    },
+    "iso_time": "2025-11-10T05:21:15Z"
+  },
+  {
+    "timestamp": 1762752075.308531,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S_1 = \\{{s1_coeffs}\\}$ and $S_2 = \\{{s2_coeffs}\\}$. A positive integer $k$ is called 'achievable' if it can be expr",
+      "correct_answer": "1269",
+      "seed_value": 1410879682
+    },
+    "iso_time": "2025-11-10T05:21:15Z"
+  },
+  {
+    "timestamp": 1762752075.308576,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1277",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T05:21:15Z"
+  },
+  {
+    "timestamp": 1762752327.9078798,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1269",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T05:25:27Z"
+  },
+  {
+    "timestamp": 1762752607.8150861,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1269",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T05:30:07Z"
+  },
+  {
+    "timestamp": 1762752906.9610088,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1272",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T05:35:06Z"
+  },
+  {
+    "timestamp": 1762753176.347192,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1263",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T05:39:36Z"
+  },
+  {
+    "timestamp": 1762753471.349526,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-10T05:44:31Z"
+  },
+  {
+    "timestamp": 1762753471.349586,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 2,
+      "seed_value": 2133574878
+    },
+    "iso_time": "2025-11-10T05:44:31Z"
+  },
+  {
+    "timestamp": 1762753472.1346638,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s1_coeffs": "6, 12",
+        "s2_coeffs": "9, 18, 21",
+        "N": 3812,
+        "_coeffs": [
+          6,
+          9,
+          12,
+          18,
+          21
+        ],
+        "_s1_indices": [
+          0,
+          2
+        ],
+        "_s2_indices": [
+          1,
+          3,
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T05:44:32Z"
+  },
+  {
+    "timestamp": 1762753472.916985,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2715
+    },
+    "iso_time": "2025-11-10T05:44:32Z"
+  },
+  {
+    "timestamp": 1762753472.917114,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S_1 = \\{{s1_coeffs}\\}$ and $S_2 = \\{{s2_coeffs}\\}$. A positive integer $k$ is called 'achievable' if it can be expr",
+      "correct_answer": "2715",
+      "seed_value": 2133574878
+    },
+    "iso_time": "2025-11-10T05:44:32Z"
+  },
+  {
+    "timestamp": 1762753472.917155,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2715",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T05:44:32Z"
+  },
+  {
+    "timestamp": 1762753767.411393,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2715",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T05:49:27Z"
+  },
+  {
+    "timestamp": 1762754065.1604218,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2724",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T05:54:25Z"
+  },
+  {
+    "timestamp": 1762754447.0762749,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2717",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T06:00:47Z"
+  },
+  {
+    "timestamp": 1762754715.67412,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2714",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T06:05:15Z"
+  },
+  {
+    "timestamp": 1762755004.47436,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-10T06:10:04Z"
+  },
+  {
+    "timestamp": 1762755004.474457,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 3,
+      "seed_value": 165324411
+    },
+    "iso_time": "2025-11-10T06:10:04Z"
+  },
+  {
+    "timestamp": 1762755005.251107,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s1_coeffs": "4, 8",
+        "s2_coeffs": "20, 24, 28",
+        "N": 4043,
+        "_coeffs": [
+          4,
+          8,
+          20,
+          24,
+          28
+        ],
+        "_s1_indices": [
+          0,
+          1
+        ],
+        "_s2_indices": [
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T06:10:05Z"
+  },
+  {
+    "timestamp": 1762755006.0324569,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3417
+    },
+    "iso_time": "2025-11-10T06:10:06Z"
+  },
+  {
+    "timestamp": 1762755006.032587,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S_1 = \\{{s1_coeffs}\\}$ and $S_2 = \\{{s2_coeffs}\\}$. A positive integer $k$ is called 'achievable' if it can be expr",
+      "correct_answer": "3417",
+      "seed_value": 165324411
+    },
+    "iso_time": "2025-11-10T06:10:06Z"
+  },
+  {
+    "timestamp": 1762755006.032635,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3417",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T06:10:06Z"
+  },
+  {
+    "timestamp": 1762755311.7176409,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3416",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T06:15:11Z"
+  },
+  {
+    "timestamp": 1762755617.3102322,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3417",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T06:20:17Z"
+  },
+  {
+    "timestamp": 1762755924.237459,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3411",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T06:25:24Z"
+  },
+  {
+    "timestamp": 1762756218.981555,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3426",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T06:30:18Z"
+  },
+  {
+    "timestamp": 1762756505.670711,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-10T06:35:05Z"
+  },
+  {
+    "timestamp": 1762756505.670788,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 4,
+      "seed_value": 514823416
+    },
+    "iso_time": "2025-11-10T06:35:05Z"
+  },
+  {
+    "timestamp": 1762756506.453212,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s1_coeffs": "8",
+        "s2_coeffs": "2, 4, 10, 12",
+        "N": 1943,
+        "_coeffs": [
+          2,
+          4,
+          8,
+          10,
+          12
+        ],
+        "_s1_indices": [
+          2
+        ],
+        "_s2_indices": [
+          0,
+          1,
+          3,
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T06:35:06Z"
+  },
+  {
+    "timestamp": 1762756507.229137,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1458
+    },
+    "iso_time": "2025-11-10T06:35:07Z"
+  },
+  {
+    "timestamp": 1762756507.2292721,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S_1 = \\{{s1_coeffs}\\}$ and $S_2 = \\{{s2_coeffs}\\}$. A positive integer $k$ is called 'achievable' if it can be expr",
+      "correct_answer": "1458",
+      "seed_value": 514823416
+    },
+    "iso_time": "2025-11-10T06:35:07Z"
+  },
+  {
+    "timestamp": 1762756507.229316,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1452",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T06:35:07Z"
+  },
+  {
+    "timestamp": 1762756781.456346,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1453",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T06:39:41Z"
+  },
+  {
+    "timestamp": 1762757074.678625,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1458",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T06:44:34Z"
+  },
+  {
+    "timestamp": 1762757364.2215722,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1451",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T06:49:24Z"
+  },
+  {
+    "timestamp": 1762757691.438438,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1458",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T06:54:51Z"
+  },
+  {
+    "timestamp": 1762757978.042917,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-10T06:59:38Z"
+  },
+  {
+    "timestamp": 1762757978.042997,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 5,
+      "seed_value": 752111575
+    },
+    "iso_time": "2025-11-10T06:59:38Z"
+  },
+  {
+    "timestamp": 1762757978.81456,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "s1_coeffs": "6, 9, 15, 18",
+        "s2_coeffs": "12",
+        "N": 3558,
+        "_coeffs": [
+          6,
+          9,
+          12,
+          15,
+          18
+        ],
+        "_s1_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "_s2_indices": [
+          2
+        ]
+      }
+    },
+    "iso_time": "2025-11-10T06:59:38Z"
+  },
+  {
+    "timestamp": 1762757979.596732,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2432
+    },
+    "iso_time": "2025-11-10T06:59:39Z"
+  },
+  {
+    "timestamp": 1762757979.5968761,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $S_1 = \\{{s1_coeffs}\\}$ and $S_2 = \\{{s2_coeffs}\\}$. A positive integer $k$ is called 'achievable' if it can be expr",
+      "correct_answer": "2432",
+      "seed_value": 752111575
+    },
+    "iso_time": "2025-11-10T06:59:39Z"
+  },
+  {
+    "timestamp": 1762757979.5969222,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2432",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T06:59:39Z"
+  },
+  {
+    "timestamp": 1762758260.8152509,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2435",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T07:04:20Z"
+  },
+  {
+    "timestamp": 1762758481.3949592,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2429",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T07:08:01Z"
+  },
+  {
+    "timestamp": 1762758725.31357,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2426",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T07:12:05Z"
+  },
+  {
+    "timestamp": 1762759022.0820212,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2432",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T07:17:02Z"
+  },
+  {
+    "timestamp": 1762759359.515876,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 0
+    },
+    "iso_time": "2025-11-10T07:22:39Z"
+  },
+  {
+    "timestamp": 1762759359.515946,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 7).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-10T07:22:39Z"
+  },
+  {
+    "timestamp": 1762759359.515965,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 7,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "How many of the first $1000$ positive integers can be expressed in the form $\\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\lfloor 6x \\rfloor + \\lfloor 8x \\rfloor$ , where $x$ is a real number, and $\\lfloor z \\rfloor$ denotes the greatest integer less than or equal to $z$ ?",
+      "answer": "600",
+      "example_id": "1985-10::1985"
+    },
+    "iso_time": "2025-11-10T07:22:39Z"
+  },
+  {
+    "timestamp": 1762759610.4551091,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "payload": {},
+    "iso_time": "2025-11-10T07:26:50Z"
+  },
+  {
+    "timestamp": 1762759610.45514,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 8).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-10T07:26:50Z"
+  },
+  {
+    "timestamp": 1762759610.4551659,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 8,
+      "feedback": "Teacher call raised JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "question": "How many of the first $1000$ positive integers can be expressed in the form $\\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\lfloor 6x \\rfloor + \\lfloor 8x \\rfloor$ , where $x$ is a real number, and $\\lfloor z \\rfloor$ denotes the greatest integer less than or equal to $z$ ?",
+      "answer": "600",
+      "example_id": "1985-10::1985"
+    },
+    "iso_time": "2025-11-10T07:26:50Z"
+  },
+  {
+    "timestamp": 1762759808.961141,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 25 column 377 (char 5725)",
+    "payload": {},
+    "iso_time": "2025-11-10T07:30:08Z"
+  },
+  {
+    "timestamp": 1762759808.961177,
+    "seed_id": "1985-10::1985",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 9).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-10T07:30:08Z"
+  },
+  {
+    "timestamp": 1762759808.961198,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 9,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 25 column 377 (char 5725)",
+      "question": "How many of the first $1000$ positive integers can be expressed in the form $\\lfloor 2x \\rfloor + \\lfloor 4x \\rfloor + \\lfloor 6x \\rfloor + \\lfloor 8x \\rfloor$ , where $x$ is a real number, and $\\lfloor z \\rfloor$ denotes the greatest integer less than or equal to $z$ ?",
+      "answer": "600",
+      "example_id": "1985-10::1985"
+    },
+    "iso_time": "2025-11-10T07:30:08Z"
+  },
+  {
+    "timestamp": 1762759978.41963,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt09",
+      "prompt_attempt": 9,
+      "sample_index": 1,
+      "seed_value": 1087661344
+    },
+    "iso_time": "2025-11-10T07:32:58Z"
+  },
+  {
+    "timestamp": 1762759979.19604,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 2,
+        "d": 4,
+        "k": 4,
+        "N": 3079
+      }
+    },
+    "iso_time": "2025-11-10T07:32:59Z"
+  },
+  {
+    "timestamp": 1762759979.979577,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2503
+    },
+    "iso_time": "2025-11-10T07:32:59Z"
+  },
+  {
+    "timestamp": 1762759979.979706,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $c_1, c_2, \\dots, c_4$ be an arithmetic progression of positive integers with first term $c_1=2$, common difference ",
+      "correct_answer": "2503",
+      "seed_value": 1087661344
+    },
+    "iso_time": "2025-11-10T07:32:59Z"
+  },
+  {
+    "timestamp": 1762759979.9797518,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2503",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T07:32:59Z"
+  },
+  {
+    "timestamp": 1762760157.189564,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2503",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T07:35:57Z"
+  },
+  {
+    "timestamp": 1762760315.332347,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2504",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T07:38:35Z"
+  },
+  {
+    "timestamp": 1762760589.1465092,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2497",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T07:43:09Z"
+  },
+  {
+    "timestamp": 1762760854.08693,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2508",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T07:47:34Z"
+  },
+  {
+    "timestamp": 1762761096.3037682,
+    "seed_id": "1985-10::1985",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-10T07:51:36Z"
+  },
+  {
+    "timestamp": 1762761096.3039129,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-10::1985_prompt09",
+      "prompt_attempt": 9,
+      "sample_index": 2,
+      "seed_value": 955511790
+    },
+    "iso_time": "2025-11-10T07:51:36Z"
+  },
+  {
+    "timestamp": 1762761097.073248,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 2,
+        "d": 6,
+        "k": 4,
+        "N": 1947
+      }
+    },
+    "iso_time": "2025-11-10T07:51:37Z"
+  },
+  {
+    "timestamp": 1762761097.843628,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1594
+    },
+    "iso_time": "2025-11-10T07:51:37Z"
+  },
+  {
+    "timestamp": 1762761097.843764,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $c_1, c_2, \\dots, c_4$ be an arithmetic progression of positive integers with first term $c_1=2$, common difference ",
+      "correct_answer": "1594",
+      "seed_value": 955511790
+    },
+    "iso_time": "2025-11-10T07:51:37Z"
+  },
+  {
+    "timestamp": 1762761097.84381,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1586",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T07:51:37Z"
+  },
+  {
+    "timestamp": 1762761341.8955688,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1594",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T07:55:41Z"
+  },
+  {
+    "timestamp": 1762761504.74627,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1592",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T07:58:24Z"
+  },
+  {
+    "timestamp": 1762761753.617665,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1594",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T08:02:33Z"
+  },
+  {
+    "timestamp": 1762761924.647397,
+    "seed_id": "1985-10::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1591",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T08:05:24Z"
+  },
+  {
+    "timestamp": 1762762168.2216609,
+    "seed_id": "1985-10::1985",
+    "stage": "variant_success",
+    "message": "Accepted variant 1985-10::1985_prompt09-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-10T08:09:28Z"
+  }
+]

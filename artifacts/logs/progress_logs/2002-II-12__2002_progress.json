@@ -1,0 +1,854 @@
+[
+  {
+    "timestamp": 1764703923.713257,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2002,
+      "question_preview": "A basketball player has a constant probability of $.4$ of making any given shot, independent of previous shots. Let $a_n",
+      "answer": "660",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-02T19:32:03Z"
+  },
+  {
+    "timestamp": 1764703923.71333,
+    "seed_id": "2002-II-12::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-02T19:32:03Z"
+  },
+  {
+    "timestamp": 1764703923.7133608,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A basketball player has a constant probability of $.4$ of making any given shot, independent of previous shots. Let $a_n$ be the ratio of shots made to shots attempted after $n$ shots. The probability that $a_{10}=.4$ and $a_n\\le.4$ for all $n$ such that $1\\le n\\le9$ is given to be $p^aq^br/\\left(s^c\\right)$ where $p$ , $q$ , $r$ , and $s$ are primes, and $a$ , $b$ , and $c$ are positive integers. Find $\\left(p+q+r+s\\right)\\left(a+b+c\\right)$ .",
+      "answer": "660",
+      "example_id": "2002-II-12::2002"
+    },
+    "iso_time": "2025-12-02T19:32:03Z"
+  },
+  {
+    "timestamp": 1764704002.857238,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-12::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2133799845
+    },
+    "iso_time": "2025-12-02T19:33:22Z"
+  },
+  {
+    "timestamp": 1764704004.1528268,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_shots": 25,
+        "p_num": 3,
+        "p_den": 8,
+        "u_num": 2,
+        "u_den": 5,
+        "hit_upper": 1
+      }
+    },
+    "iso_time": "2025-12-02T19:33:24Z"
+  },
+  {
+    "timestamp": 1764704005.318027,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 18919147208303532026659
+    },
+    "iso_time": "2025-12-02T19:33:25Z"
+  },
+  {
+    "timestamp": 1764704005.31817,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A player takes 25 independent basketball shots, each made with probability 3/8. After k shots, let a_k denote the fracti",
+      "correct_answer": "18919147208303532026659",
+      "seed_value": 2133799845
+    },
+    "iso_time": "2025-12-02T19:33:25Z"
+  },
+  {
+    "timestamp": 1764704005.318221,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "18919147208303532048375",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T19:33:25Z"
+  },
+  {
+    "timestamp": 1764704365.958189,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "18919147208303532026659",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T19:39:25Z"
+  },
+  {
+    "timestamp": 1764704523.4285738,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "18919147208303532048390",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T19:42:03Z"
+  },
+  {
+    "timestamp": 1764705500.0324202,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "18919147208303532048393",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T19:58:20Z"
+  },
+  {
+    "timestamp": 1764705661.054407,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "18919147208303532026659",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T20:01:01Z"
+  },
+  {
+    "timestamp": 1764705825.16492,
+    "seed_id": "2002-II-12::2002",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-02T20:03:45Z"
+  },
+  {
+    "timestamp": 1764705825.165163,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-12::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1180289198
+    },
+    "iso_time": "2025-12-02T20:03:45Z"
+  },
+  {
+    "timestamp": 1764705826.5037131,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_shots": 18,
+        "p_num": 8,
+        "p_den": 11,
+        "u_num": 2,
+        "u_den": 3,
+        "hit_upper": 3
+      }
+    },
+    "iso_time": "2025-12-02T20:03:46Z"
+  },
+  {
+    "timestamp": 1764705827.493084,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5562522331416339769
+    },
+    "iso_time": "2025-12-02T20:03:47Z"
+  },
+  {
+    "timestamp": 1764705827.493221,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A player takes 18 independent basketball shots, each made with probability 8/11. After k shots, let a_k denote the fract",
+      "correct_answer": "5562522331416339769",
+      "seed_value": 1180289198
+    },
+    "iso_time": "2025-12-02T20:03:47Z"
+  },
+  {
+    "timestamp": 1764705827.4932811,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5562522331416339769",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T20:03:47Z"
+  },
+  {
+    "timestamp": 1764705959.892364,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5562522331416339452",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:05:59Z"
+  },
+  {
+    "timestamp": 1764706011.893446,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5562522331416339455",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:06:51Z"
+  },
+  {
+    "timestamp": 1764706129.399342,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5562522331416339448",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:08:49Z"
+  },
+  {
+    "timestamp": 1764706461.9916701,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5562522331416339769",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T20:14:21Z"
+  },
+  {
+    "timestamp": 1764706605.576689,
+    "seed_id": "2002-II-12::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-12::2002_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T20:16:45Z"
+  },
+  {
+    "timestamp": 1764706605.576881,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-12::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 752265451
+    },
+    "iso_time": "2025-12-02T20:16:45Z"
+  },
+  {
+    "timestamp": 1764706606.9496372,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_shots": 20,
+        "p_num": 4,
+        "p_den": 7,
+        "u_num": 1,
+        "u_den": 5,
+        "hit_upper": 2
+      }
+    },
+    "iso_time": "2025-12-02T20:16:46Z"
+  },
+  {
+    "timestamp": 1764706608.086883,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 79792398537138913
+    },
+    "iso_time": "2025-12-02T20:16:48Z"
+  },
+  {
+    "timestamp": 1764706608.087021,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A player takes 20 independent basketball shots, each made with probability 4/7. After k shots, let a_k denote the fracti",
+      "correct_answer": "79792398537138913",
+      "seed_value": 752265451
+    },
+    "iso_time": "2025-12-02T20:16:48Z"
+  },
+  {
+    "timestamp": 1764706608.087082,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "79792398537138914",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:16:48Z"
+  },
+  {
+    "timestamp": 1764706679.695787,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "79792398537138913",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T20:17:59Z"
+  },
+  {
+    "timestamp": 1764706774.62235,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "79792398537138913",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T20:19:34Z"
+  },
+  {
+    "timestamp": 1764706851.278783,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "79792398537138915",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:20:51Z"
+  },
+  {
+    "timestamp": 1764707224.464183,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "79792398537138908",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:27:04Z"
+  },
+  {
+    "timestamp": 1764707303.4919791,
+    "seed_id": "2002-II-12::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-12::2002_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T20:28:23Z"
+  },
+  {
+    "timestamp": 1764707303.492108,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-12::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1249898046
+    },
+    "iso_time": "2025-12-02T20:28:23Z"
+  },
+  {
+    "timestamp": 1764707304.8071392,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_shots": 32,
+        "p_num": 2,
+        "p_den": 9,
+        "u_num": 1,
+        "u_den": 4,
+        "hit_upper": 2
+      }
+    },
+    "iso_time": "2025-12-02T20:28:24Z"
+  },
+  {
+    "timestamp": 1764707305.919338,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 42413473657047411890243861681
+    },
+    "iso_time": "2025-12-02T20:28:25Z"
+  },
+  {
+    "timestamp": 1764707305.919499,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A player takes 32 independent basketball shots, each made with probability 2/9. After k shots, let a_k denote the fracti",
+      "correct_answer": "42413473657047411890243861681",
+      "seed_value": 1249898046
+    },
+    "iso_time": "2025-12-02T20:28:25Z"
+  },
+  {
+    "timestamp": 1764707305.919551,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "42413473657047411890243861681",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T20:28:25Z"
+  },
+  {
+    "timestamp": 1764707395.192215,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "42413473657047407626844897273",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:29:55Z"
+  },
+  {
+    "timestamp": 1764707588.494498,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "42413473657047411890243861681",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T20:33:08Z"
+  },
+  {
+    "timestamp": 1764707848.386276,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "42413473657047407626844897279",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:37:28Z"
+  },
+  {
+    "timestamp": 1764708025.6645179,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "42413473657047407626844897284",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:40:25Z"
+  },
+  {
+    "timestamp": 1764708212.520573,
+    "seed_id": "2002-II-12::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-12::2002_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-02T20:43:32Z"
+  },
+  {
+    "timestamp": 1764708212.520756,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-12::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 42472264
+    },
+    "iso_time": "2025-12-02T20:43:32Z"
+  },
+  {
+    "timestamp": 1764708213.887275,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_shots": 21,
+        "p_num": 3,
+        "p_den": 7,
+        "u_num": 2,
+        "u_den": 3,
+        "hit_upper": 1
+      }
+    },
+    "iso_time": "2025-12-02T20:43:33Z"
+  },
+  {
+    "timestamp": 1764708215.080916,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 558737699556991015
+    },
+    "iso_time": "2025-12-02T20:43:35Z"
+  },
+  {
+    "timestamp": 1764708215.081106,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A player takes 21 independent basketball shots, each made with probability 3/7. After k shots, let a_k denote the fracti",
+      "correct_answer": "558737699556991015",
+      "seed_value": 42472264
+    },
+    "iso_time": "2025-12-02T20:43:35Z"
+  },
+  {
+    "timestamp": 1764708215.0811799,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "558737699556991015",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T20:43:35Z"
+  },
+  {
+    "timestamp": 1764708298.545315,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "558737699556991041",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:44:58Z"
+  },
+  {
+    "timestamp": 1764708499.899348,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "558737699556991048",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:48:19Z"
+  },
+  {
+    "timestamp": 1764708608.652436,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "558737699556991039",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:50:08Z"
+  },
+  {
+    "timestamp": 1764708658.745134,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "558737699556991015",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T20:50:58Z"
+  },
+  {
+    "timestamp": 1764708880.879862,
+    "seed_id": "2002-II-12::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-12::2002_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T20:54:40Z"
+  },
+  {
+    "timestamp": 1764708880.8800142,
+    "seed_id": "2002-II-12::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-02T20:54:40Z"
+  },
+  {
+    "timestamp": 1764708880.880136,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3).",
+      "question": "A basketball player has a constant probability of $.4$ of making any given shot, independent of previous shots. Let $a_n$ be the ratio of shots made to shots attempted after $n$ shots. The probability that $a_{10}=.4$ and $a_n\\le.4$ for all $n$ such that $1\\le n\\le9$ is given to be $p^aq^br/\\left(s^c\\right)$ where $p$ , $q$ , $r$ , and $s$ are primes, and $a$ , $b$ , and $c$ are positive integers. Find $\\left(p+q+r+s\\right)\\left(a+b+c\\right)$ .",
+      "answer": "660",
+      "example_id": "2002-II-12::2002"
+    },
+    "iso_time": "2025-12-02T20:54:40Z"
+  },
+  {
+    "timestamp": 1764708982.269557,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-12::2002_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 809257749
+    },
+    "iso_time": "2025-12-02T20:56:22Z"
+  },
+  {
+    "timestamp": 1764708983.6386938,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 20,
+        "p_num": 3,
+        "p_den": 5,
+        "l_num": 1,
+        "l_den": 9,
+        "t0": 11
+      }
+    },
+    "iso_time": "2025-12-02T20:56:23Z"
+  },
+  {
+    "timestamp": 1764708984.7913542,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 96350929109809
+    },
+    "iso_time": "2025-12-02T20:56:24Z"
+  },
+  {
+    "timestamp": 1764708984.7915032,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A basketball player takes 20 independent shots, each made with constant probability 3/5. Let a_t denote the ratio of sho",
+      "correct_answer": "96350929109809",
+      "seed_value": 809257749
+    },
+    "iso_time": "2025-12-02T20:56:24Z"
+  },
+  {
+    "timestamp": 1764708984.791563,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "96350929109809",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T20:56:24Z"
+  },
+  {
+    "timestamp": 1764709085.032107,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "96350929109813",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:58:05Z"
+  },
+  {
+    "timestamp": 1764709102.0765471,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "96350929109811",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T20:58:22Z"
+  },
+  {
+    "timestamp": 1764709163.515049,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "96350929109809",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T20:59:23Z"
+  },
+  {
+    "timestamp": 1764709258.914557,
+    "seed_id": "2002-II-12::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "96350929109804",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T21:00:58Z"
+  },
+  {
+    "timestamp": 1764709358.080728,
+    "seed_id": "2002-II-12::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-12::2002_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T21:02:38Z"
+  }
+]

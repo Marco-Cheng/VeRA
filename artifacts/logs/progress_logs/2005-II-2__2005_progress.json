@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1765281598.850788,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "A hotel packed breakfast for each of three guests. Each breakfast should have consisted of three types of rolls, one eac",
+      "answer": "79",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T11:59:58Z"
+  },
+  {
+    "timestamp": 1765281598.850883,
+    "seed_id": "2005-II-2::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T11:59:58Z"
+  },
+  {
+    "timestamp": 1765281598.8509362,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A hotel packed breakfast for each of three guests. Each breakfast should have consisted of three types of rolls, one each of nut, cheese, and fruit rolls. The preparer wrapped each of the nine rolls and once wrapped, the rolls were indistinguishable from one another. She then randomly put three rolls in a bag for each of the guests. Given that the probability each guest got one roll of each type is $\\frac mn,$ where $m$ and $n$ are relatively prime integers, find $m+n.$",
+      "answer": "79",
+      "example_id": "2005-II-2::2005"
+    },
+    "iso_time": "2025-12-09T11:59:58Z"
+  },
+  {
+    "timestamp": 1765281687.604248,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-2::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1224412214
+    },
+    "iso_time": "2025-12-09T12:01:27Z"
+  },
+  {
+    "timestamp": 1765281688.926313,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "guest_count": 4,
+        "type_count": 4,
+        "bag_size": 5,
+        "r_list_str": "1, 1, 2, 1"
+      }
+    },
+    "iso_time": "2025-12-09T12:01:28Z"
+  },
+  {
+    "timestamp": 1765281690.016609,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 324283
+    },
+    "iso_time": "2025-12-09T12:01:30Z"
+  },
+  {
+    "timestamp": 1765281690.016758,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A hotel is preparing breakfast bags for 4 guests using 4 types of rolls. For each type i (from 1 to 4), the kitchen prep",
+      "correct_answer": "324283",
+      "seed_value": 1224412214
+    },
+    "iso_time": "2025-12-09T12:01:30Z"
+  },
+  {
+    "timestamp": 1765281690.016803,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "324283",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T12:01:30Z"
+  },
+  {
+    "timestamp": 1765281792.1523159,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "324277",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T12:03:12Z"
+  },
+  {
+    "timestamp": 1765281897.999409,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "324283",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T12:04:57Z"
+  },
+  {
+    "timestamp": 1765281975.3243892,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "324292",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T12:06:15Z"
+  },
+  {
+    "timestamp": 1765282090.139323,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "324290",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T12:08:10Z"
+  },
+  {
+    "timestamp": 1765283036.8275478,
+    "seed_id": "2005-II-2::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-2::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T12:23:56Z"
+  },
+  {
+    "timestamp": 1765283036.827729,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-2::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 190271662
+    },
+    "iso_time": "2025-12-09T12:23:56Z"
+  },
+  {
+    "timestamp": 1765283038.201468,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "guest_count": 3,
+        "type_count": 3,
+        "bag_size": 7,
+        "r_list_str": "1, 3, 3"
+      }
+    },
+    "iso_time": "2025-12-09T12:23:58Z"
+  },
+  {
+    "timestamp": 1765283039.393939,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 48149
+    },
+    "iso_time": "2025-12-09T12:23:59Z"
+  },
+  {
+    "timestamp": 1765283039.3941061,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A hotel is preparing breakfast bags for 3 guests using 3 types of rolls. For each type i (from 1 to 3), the kitchen prep",
+      "correct_answer": "48149",
+      "seed_value": 190271662
+    },
+    "iso_time": "2025-12-09T12:23:59Z"
+  },
+  {
+    "timestamp": 1765283039.394154,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "48149",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T12:23:59Z"
+  },
+  {
+    "timestamp": 1765283193.497914,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "48154",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T12:26:33Z"
+  },
+  {
+    "timestamp": 1765283388.364188,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "48140",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T12:29:48Z"
+  },
+  {
+    "timestamp": 1765283513.702262,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "48153",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T12:31:53Z"
+  },
+  {
+    "timestamp": 1765283606.029404,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "48149",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T12:33:26Z"
+  },
+  {
+    "timestamp": 1765283630.365178,
+    "seed_id": "2005-II-2::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-2::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T12:33:50Z"
+  },
+  {
+    "timestamp": 1765283630.36536,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-2::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1475786240
+    },
+    "iso_time": "2025-12-09T12:33:50Z"
+  },
+  {
+    "timestamp": 1765283631.653265,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "guest_count": 5,
+        "type_count": 5,
+        "bag_size": 6,
+        "r_list_str": "1, 1, 1, 1, 2"
+      }
+    },
+    "iso_time": "2025-12-09T12:33:51Z"
+  },
+  {
+    "timestamp": 1765283632.787052,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1511130602087
+    },
+    "iso_time": "2025-12-09T12:33:52Z"
+  },
+  {
+    "timestamp": 1765283632.787221,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A hotel is preparing breakfast bags for 5 guests using 5 types of rolls. For each type i (from 1 to 5), the kitchen prep",
+      "correct_answer": "1511130602087",
+      "seed_value": 1475786240
+    },
+    "iso_time": "2025-12-09T12:33:52Z"
+  },
+  {
+    "timestamp": 1765283632.7872698,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1511130602095",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T12:33:52Z"
+  },
+  {
+    "timestamp": 1765283800.0737169,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1511130602090",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T12:36:40Z"
+  },
+  {
+    "timestamp": 1765283956.344624,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1511130602078",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T12:39:16Z"
+  },
+  {
+    "timestamp": 1765285082.7698948,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1511130602087",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T12:58:02Z"
+  },
+  {
+    "timestamp": 1765285149.3254762,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1511130602087",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T12:59:09Z"
+  },
+  {
+    "timestamp": 1765285223.5734642,
+    "seed_id": "2005-II-2::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-2::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T13:00:23Z"
+  },
+  {
+    "timestamp": 1765285223.573643,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-2::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2111050485
+    },
+    "iso_time": "2025-12-09T13:00:23Z"
+  },
+  {
+    "timestamp": 1765285224.939486,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "guest_count": 4,
+        "type_count": 5,
+        "bag_size": 7,
+        "r_list_str": "1, 1, 3, 1, 1"
+      }
+    },
+    "iso_time": "2025-12-09T13:00:24Z"
+  },
+  {
+    "timestamp": 1765285226.0825741,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 13814095
+    },
+    "iso_time": "2025-12-09T13:00:26Z"
+  },
+  {
+    "timestamp": 1765285226.0827498,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A hotel is preparing breakfast bags for 4 guests using 5 types of rolls. For each type i (from 1 to 5), the kitchen prep",
+      "correct_answer": "13814095",
+      "seed_value": 2111050485
+    },
+    "iso_time": "2025-12-09T13:00:26Z"
+  },
+  {
+    "timestamp": 1765285226.082814,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "13814095",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T13:00:26Z"
+  },
+  {
+    "timestamp": 1765285326.989986,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "13814097",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T13:02:06Z"
+  },
+  {
+    "timestamp": 1765285425.720726,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "13814101",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T13:03:45Z"
+  },
+  {
+    "timestamp": 1765285553.3935769,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "13814104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T13:05:53Z"
+  },
+  {
+    "timestamp": 1765285655.7698581,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13814095",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T13:07:35Z"
+  },
+  {
+    "timestamp": 1765285739.117341,
+    "seed_id": "2005-II-2::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-2::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T13:08:59Z"
+  },
+  {
+    "timestamp": 1765285739.117515,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-2::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 843149042
+    },
+    "iso_time": "2025-12-09T13:08:59Z"
+  },
+  {
+    "timestamp": 1765285740.463802,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "guest_count": 5,
+        "type_count": 4,
+        "bag_size": 6,
+        "r_list_str": "3, 1, 1, 1"
+      }
+    },
+    "iso_time": "2025-12-09T13:09:00Z"
+  },
+  {
+    "timestamp": 1765285741.577754,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1509915087
+    },
+    "iso_time": "2025-12-09T13:09:01Z"
+  },
+  {
+    "timestamp": 1765285741.577894,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A hotel is preparing breakfast bags for 5 guests using 4 types of rolls. For each type i (from 1 to 4), the kitchen prep",
+      "correct_answer": "1509915087",
+      "seed_value": 843149042
+    },
+    "iso_time": "2025-12-09T13:09:01Z"
+  },
+  {
+    "timestamp": 1765285741.577937,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1509915095",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T13:09:01Z"
+  },
+  {
+    "timestamp": 1765285843.6861892,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1509915093",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T13:10:43Z"
+  },
+  {
+    "timestamp": 1765286001.090403,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1509915087",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T13:13:21Z"
+  },
+  {
+    "timestamp": 1765286138.086582,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1509915091",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T13:15:38Z"
+  },
+  {
+    "timestamp": 1765286285.9720562,
+    "seed_id": "2005-II-2::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1509915087",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T13:18:05Z"
+  },
+  {
+    "timestamp": 1765286325.2828412,
+    "seed_id": "2005-II-2::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-2::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T13:18:45Z"
+  }
+]

@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1765146639.6998231,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "A semicircle with diameter $d$ is contained in a square whose sides have length 8. Given the maximum value of $d$ is $m ",
+      "answer": "544",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-07T22:30:39Z"
+  },
+  {
+    "timestamp": 1765146639.6998951,
+    "seed_id": "2005-I-11::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-07T22:30:39Z"
+  },
+  {
+    "timestamp": 1765146639.699927,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A semicircle with diameter $d$ is contained in a square whose sides have length 8. Given the maximum value of $d$ is $m - \\sqrt{n},$ find $m+n.$",
+      "answer": "544",
+      "example_id": "2005-I-11::2005"
+    },
+    "iso_time": "2025-12-07T22:30:39Z"
+  },
+  {
+    "timestamp": 1765146879.407871,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-11::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 77271540
+    },
+    "iso_time": "2025-12-07T22:34:39Z"
+  },
+  {
+    "timestamp": 1765146880.7741451,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 7,
+        "height": 7
+      }
+    },
+    "iso_time": "2025-12-07T22:34:40Z"
+  },
+  {
+    "timestamp": 1765146881.846019,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 420
+    },
+    "iso_time": "2025-12-07T22:34:41Z"
+  },
+  {
+    "timestamp": 1765146881.846188,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle has side lengths 7 and 7. A semicircle may be placed anywhere and at any orientation, provided its diameter’",
+      "correct_answer": "420",
+      "seed_value": 77271540
+    },
+    "iso_time": "2025-12-07T22:34:41Z"
+  },
+  {
+    "timestamp": 1765146881.846244,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "420",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T22:34:41Z"
+  },
+  {
+    "timestamp": 1765146996.762075,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "413",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T22:36:36Z"
+  },
+  {
+    "timestamp": 1765147066.907567,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "419",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T22:37:46Z"
+  },
+  {
+    "timestamp": 1765147162.646395,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "412",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T22:39:22Z"
+  },
+  {
+    "timestamp": 1765147233.815433,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "420",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T22:40:33Z"
+  },
+  {
+    "timestamp": 1765147355.933541,
+    "seed_id": "2005-I-11::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-11::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T22:42:35Z"
+  },
+  {
+    "timestamp": 1765147355.9337358,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-11::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 849013534
+    },
+    "iso_time": "2025-12-07T22:42:35Z"
+  },
+  {
+    "timestamp": 1765147357.298579,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 9,
+        "height": 9
+      }
+    },
+    "iso_time": "2025-12-07T22:42:37Z"
+  },
+  {
+    "timestamp": 1765147358.503896,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 684
+    },
+    "iso_time": "2025-12-07T22:42:38Z"
+  },
+  {
+    "timestamp": 1765147358.50411,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle has side lengths 9 and 9. A semicircle may be placed anywhere and at any orientation, provided its diameter’",
+      "correct_answer": "684",
+      "seed_value": 849013534
+    },
+    "iso_time": "2025-12-07T22:42:38Z"
+  },
+  {
+    "timestamp": 1765147358.5041869,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "692",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T22:42:38Z"
+  },
+  {
+    "timestamp": 1765147418.548439,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "678",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T22:43:38Z"
+  },
+  {
+    "timestamp": 1765147452.8531342,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "684",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T22:44:12Z"
+  },
+  {
+    "timestamp": 1765147546.8525078,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "683",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T22:45:46Z"
+  },
+  {
+    "timestamp": 1765147621.702373,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "684",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T22:47:01Z"
+  },
+  {
+    "timestamp": 1765147783.916009,
+    "seed_id": "2005-I-11::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-11::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T22:49:43Z"
+  },
+  {
+    "timestamp": 1765147783.9161909,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-11::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 644239716
+    },
+    "iso_time": "2025-12-07T22:49:43Z"
+  },
+  {
+    "timestamp": 1765147785.169455,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 9,
+        "height": 9
+      }
+    },
+    "iso_time": "2025-12-07T22:49:45Z"
+  },
+  {
+    "timestamp": 1765147786.389222,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 684
+    },
+    "iso_time": "2025-12-07T22:49:46Z"
+  },
+  {
+    "timestamp": 1765147786.3894022,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle has side lengths 9 and 9. A semicircle may be placed anywhere and at any orientation, provided its diameter’",
+      "correct_answer": "684",
+      "seed_value": 644239716
+    },
+    "iso_time": "2025-12-07T22:49:46Z"
+  },
+  {
+    "timestamp": 1765147786.389492,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "684",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T22:49:46Z"
+  },
+  {
+    "timestamp": 1765147899.4141362,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "675",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T22:51:39Z"
+  },
+  {
+    "timestamp": 1765148024.380672,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "693",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T22:53:44Z"
+  },
+  {
+    "timestamp": 1765148061.7773418,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "680",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T22:54:21Z"
+  },
+  {
+    "timestamp": 1765148157.335368,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "684",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T22:55:57Z"
+  },
+  {
+    "timestamp": 1765148320.698992,
+    "seed_id": "2005-I-11::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-11::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T22:58:40Z"
+  },
+  {
+    "timestamp": 1765148320.699157,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-11::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 799473556
+    },
+    "iso_time": "2025-12-07T22:58:40Z"
+  },
+  {
+    "timestamp": 1765148322.0031738,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 9,
+        "height": 10
+      }
+    },
+    "iso_time": "2025-12-07T22:58:42Z"
+  },
+  {
+    "timestamp": 1765148323.2094872,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 758
+    },
+    "iso_time": "2025-12-07T22:58:43Z"
+  },
+  {
+    "timestamp": 1765148323.209738,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle has side lengths 9 and 10. A semicircle may be placed anywhere and at any orientation, provided its diameter",
+      "correct_answer": "758",
+      "seed_value": 799473556
+    },
+    "iso_time": "2025-12-07T22:58:43Z"
+  },
+  {
+    "timestamp": 1765148323.2097988,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "758",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T22:58:43Z"
+  },
+  {
+    "timestamp": 1765148456.983792,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "761",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:00:56Z"
+  },
+  {
+    "timestamp": 1765148609.381522,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "753",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:03:29Z"
+  },
+  {
+    "timestamp": 1765148747.6700978,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "762",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:05:47Z"
+  },
+  {
+    "timestamp": 1765148809.342196,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "758",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T23:06:49Z"
+  },
+  {
+    "timestamp": 1765148912.1580281,
+    "seed_id": "2005-I-11::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-11::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T23:08:32Z"
+  },
+  {
+    "timestamp": 1765148912.15821,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-11::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2008242799
+    },
+    "iso_time": "2025-12-07T23:08:32Z"
+  },
+  {
+    "timestamp": 1765148913.498035,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 6,
+        "height": 8
+      }
+    },
+    "iso_time": "2025-12-07T23:08:33Z"
+  },
+  {
+    "timestamp": 1765148914.701787,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 412
+    },
+    "iso_time": "2025-12-07T23:08:34Z"
+  },
+  {
+    "timestamp": 1765148914.702028,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle has side lengths 6 and 8. A semicircle may be placed anywhere and at any orientation, provided its diameter’",
+      "correct_answer": "412",
+      "seed_value": 2008242799
+    },
+    "iso_time": "2025-12-07T23:08:34Z"
+  },
+  {
+    "timestamp": 1765148914.7021298,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "416",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:08:34Z"
+  },
+  {
+    "timestamp": 1765149044.658411,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "404",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:10:44Z"
+  },
+  {
+    "timestamp": 1765149099.372431,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "412",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T23:11:39Z"
+  },
+  {
+    "timestamp": 1765149149.53791,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "413",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:12:29Z"
+  },
+  {
+    "timestamp": 1765149213.7235572,
+    "seed_id": "2005-I-11::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "412",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T23:13:33Z"
+  },
+  {
+    "timestamp": 1765149303.3244212,
+    "seed_id": "2005-I-11::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-11::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T23:15:03Z"
+  }
+]

@@ -1,0 +1,2991 @@
+[
+  {
+    "timestamp": 1764293546.169179,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1998,
+      "question_preview": "The graph of $y^2 + 2xy + 40|x|= 400$ partitions the plane into several regions.  What is the area of the bounded region",
+      "answer": "800",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T01:32:26Z"
+  },
+  {
+    "timestamp": 1764293546.1692219,
+    "seed_id": "1998-3::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T01:32:26Z"
+  },
+  {
+    "timestamp": 1764293546.1692429,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The graph of $y^2 + 2xy + 40|x|= 400$ partitions the plane into several regions.  What is the area of the bounded region?",
+      "answer": "800",
+      "example_id": "1998-3::1998"
+    },
+    "iso_time": "2025-11-28T01:32:26Z"
+  },
+  {
+    "timestamp": 1764293621.38874,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1445873743
+    },
+    "iso_time": "2025-11-28T01:33:41Z"
+  },
+  {
+    "timestamp": 1764293623.037063,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 5,
+        "m": 250,
+        "a": -9,
+        "b": -7,
+        "n": 625
+      }
+    },
+    "iso_time": "2025-11-28T01:33:43Z"
+  },
+  {
+    "timestamp": 1764293624.402499,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 250
+    },
+    "iso_time": "2025-11-28T01:33:44Z"
+  },
+  {
+    "timestamp": 1764293624.402682,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve in the plane defined by (y - -7)^2 + 25(x - -9)(y - -7) + 250|x - -9| = 625. The graph partitions the",
+      "correct_answer": "250",
+      "seed_value": 1445873743
+    },
+    "iso_time": "2025-11-28T01:33:44Z"
+  },
+  {
+    "timestamp": 1764293624.402741,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "251",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:33:44Z"
+  },
+  {
+    "timestamp": 1764293701.092492,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "241",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:35:01Z"
+  },
+  {
+    "timestamp": 1764293794.0932841,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:36:34Z"
+  },
+  {
+    "timestamp": 1764293852.6390479,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:37:32Z"
+  },
+  {
+    "timestamp": 1764293931.494986,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "248",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:38:51Z"
+  },
+  {
+    "timestamp": 1764294051.715429,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T01:40:51Z"
+  },
+  {
+    "timestamp": 1764294051.715673,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 287005505
+    },
+    "iso_time": "2025-11-28T01:40:51Z"
+  },
+  {
+    "timestamp": 1764294053.035103,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 4,
+        "m": 192,
+        "a": -5,
+        "b": -5,
+        "n": 576
+      }
+    },
+    "iso_time": "2025-11-28T01:40:53Z"
+  },
+  {
+    "timestamp": 1764294054.064348,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 288
+    },
+    "iso_time": "2025-11-28T01:40:54Z"
+  },
+  {
+    "timestamp": 1764294054.064502,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve in the plane defined by (y - -5)^2 + 24(x - -5)(y - -5) + 192|x - -5| = 576. The graph partitions the",
+      "correct_answer": "288",
+      "seed_value": 287005505
+    },
+    "iso_time": "2025-11-28T01:40:54Z"
+  },
+  {
+    "timestamp": 1764294054.064543,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "293",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:40:54Z"
+  },
+  {
+    "timestamp": 1764294122.2681549,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "288",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:42:02Z"
+  },
+  {
+    "timestamp": 1764294216.16997,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "282",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:43:36Z"
+  },
+  {
+    "timestamp": 1764294293.072777,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "285",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:44:53Z"
+  },
+  {
+    "timestamp": 1764294343.4318469,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "288",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:45:43Z"
+  },
+  {
+    "timestamp": 1764294466.587577,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T01:47:46Z"
+  },
+  {
+    "timestamp": 1764294466.5878022,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 147783180
+    },
+    "iso_time": "2025-11-28T01:47:46Z"
+  },
+  {
+    "timestamp": 1764294467.705821,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 3,
+        "m": 144,
+        "a": 3,
+        "b": 14,
+        "n": 576
+      }
+    },
+    "iso_time": "2025-11-28T01:47:47Z"
+  },
+  {
+    "timestamp": 1764294468.726476,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 384
+    },
+    "iso_time": "2025-11-28T01:47:48Z"
+  },
+  {
+    "timestamp": 1764294468.726625,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve in the plane defined by (y - 14)^2 + 23(x - 3)(y - 14) + 144|x - 3| = 576. The graph partitions the p",
+      "correct_answer": "384",
+      "seed_value": 147783180
+    },
+    "iso_time": "2025-11-28T01:47:48Z"
+  },
+  {
+    "timestamp": 1764294468.7266638,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "389",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:47:48Z"
+  },
+  {
+    "timestamp": 1764294529.960542,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "377",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:48:49Z"
+  },
+  {
+    "timestamp": 1764294647.9597282,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "384",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:50:47Z"
+  },
+  {
+    "timestamp": 1764294746.6890519,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "384",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:52:26Z"
+  },
+  {
+    "timestamp": 1764294819.47015,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "380",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:53:39Z"
+  },
+  {
+    "timestamp": 1764294893.4388301,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T01:54:53Z"
+  },
+  {
+    "timestamp": 1764294893.4390981,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1314598698
+    },
+    "iso_time": "2025-11-28T01:54:53Z"
+  },
+  {
+    "timestamp": 1764294894.5691571,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 3,
+        "m": 90,
+        "a": -12,
+        "b": 0,
+        "n": 225
+      }
+    },
+    "iso_time": "2025-11-28T01:54:54Z"
+  },
+  {
+    "timestamp": 1764294895.611171,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 150
+    },
+    "iso_time": "2025-11-28T01:54:55Z"
+  },
+  {
+    "timestamp": 1764294895.611318,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve in the plane defined by (y - 0)^2 + 23(x - -12)(y - 0) + 90|x - -12| = 225. The graph partitions the ",
+      "correct_answer": "150",
+      "seed_value": 1314598698
+    },
+    "iso_time": "2025-11-28T01:54:55Z"
+  },
+  {
+    "timestamp": 1764294895.61136,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "150",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:54:55Z"
+  },
+  {
+    "timestamp": 1764294985.8042839,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "156",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:56:25Z"
+  },
+  {
+    "timestamp": 1764295030.351441,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "154",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:57:10Z"
+  },
+  {
+    "timestamp": 1764295063.0737019,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "150",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T01:57:43Z"
+  },
+  {
+    "timestamp": 1764295123.3492548,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "157",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:58:43Z"
+  },
+  {
+    "timestamp": 1764295162.761626,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T01:59:22Z"
+  },
+  {
+    "timestamp": 1764295162.7617679,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1913138545
+    },
+    "iso_time": "2025-11-28T01:59:22Z"
+  },
+  {
+    "timestamp": 1764295163.8058162,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 2,
+        "m": 40,
+        "a": 6,
+        "b": -27,
+        "n": 100
+      }
+    },
+    "iso_time": "2025-11-28T01:59:23Z"
+  },
+  {
+    "timestamp": 1764295164.8668318,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 100
+    },
+    "iso_time": "2025-11-28T01:59:24Z"
+  },
+  {
+    "timestamp": 1764295164.866998,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve in the plane defined by (y - -27)^2 + 22(x - 6)(y - -27) + 40|x - 6| = 100. The graph partitions the ",
+      "correct_answer": "100",
+      "seed_value": 1913138545
+    },
+    "iso_time": "2025-11-28T01:59:24Z"
+  },
+  {
+    "timestamp": 1764295164.8670368,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "95",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T01:59:24Z"
+  },
+  {
+    "timestamp": 1764295251.6702678,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:00:51Z"
+  },
+  {
+    "timestamp": 1764295328.735013,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "101",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:02:08Z"
+  },
+  {
+    "timestamp": 1764295392.376964,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:03:12Z"
+  },
+  {
+    "timestamp": 1764295463.565883,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "103",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:04:23Z"
+  },
+  {
+    "timestamp": 1764295520.951568,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T02:05:20Z"
+  },
+  {
+    "timestamp": 1764295520.951797,
+    "seed_id": "1998-3::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-28T02:05:20Z"
+  },
+  {
+    "timestamp": 1764295520.9521868,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "The graph of $y^2 + 2xy + 40|x|= 400$ partitions the plane into several regions.  What is the area of the bounded region?",
+      "answer": "800",
+      "example_id": "1998-3::1998"
+    },
+    "iso_time": "2025-11-28T02:05:20Z"
+  },
+  {
+    "timestamp": 1764295614.3414552,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1649893773
+    },
+    "iso_time": "2025-11-28T02:06:54Z"
+  },
+  {
+    "timestamp": 1764295615.44465,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 6,
+        "A": 144,
+        "h": -9,
+        "c": -6,
+        "B": 144
+      }
+    },
+    "iso_time": "2025-11-28T02:06:55Z"
+  },
+  {
+    "timestamp": 1764295616.5050602,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 48
+    },
+    "iso_time": "2025-11-28T02:06:56Z"
+  },
+  {
+    "timestamp": 1764295616.505198,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve defined by (y - -6)^2 + 26x(y - -6) + 144|x - -9| = 144. Its graph partitions the plane into several ",
+      "correct_answer": "48",
+      "seed_value": 1649893773
+    },
+    "iso_time": "2025-11-28T02:06:56Z"
+  },
+  {
+    "timestamp": 1764295616.50524,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "49",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:06:56Z"
+  },
+  {
+    "timestamp": 1764295692.675313,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "48",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:08:12Z"
+  },
+  {
+    "timestamp": 1764295748.377353,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "57",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:09:08Z"
+  },
+  {
+    "timestamp": 1764295846.5845041,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "53",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:10:46Z"
+  },
+  {
+    "timestamp": 1764295935.161933,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "48",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:12:15Z"
+  },
+  {
+    "timestamp": 1764295995.687211,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T02:13:15Z"
+  },
+  {
+    "timestamp": 1764295995.687493,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1219084293
+    },
+    "iso_time": "2025-11-28T02:13:15Z"
+  },
+  {
+    "timestamp": 1764295996.8137238,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 2,
+        "A": 40,
+        "h": 4,
+        "c": -12,
+        "B": 100
+      }
+    },
+    "iso_time": "2025-11-28T02:13:16Z"
+  },
+  {
+    "timestamp": 1764295997.855624,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 100
+    },
+    "iso_time": "2025-11-28T02:13:17Z"
+  },
+  {
+    "timestamp": 1764295997.855791,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve defined by (y - -12)^2 + 22x(y - -12) + 40|x - 4| = 100. Its graph partitions the plane into several ",
+      "correct_answer": "100",
+      "seed_value": 1219084293
+    },
+    "iso_time": "2025-11-28T02:13:17Z"
+  },
+  {
+    "timestamp": 1764295997.855828,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "98",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:13:17Z"
+  },
+  {
+    "timestamp": 1764296063.5518389,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:14:23Z"
+  },
+  {
+    "timestamp": 1764296147.62958,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "93",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:15:47Z"
+  },
+  {
+    "timestamp": 1764296340.977474,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:19:00Z"
+  },
+  {
+    "timestamp": 1764296411.304626,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "97",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:20:11Z"
+  },
+  {
+    "timestamp": 1764296487.6784441,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T02:21:27Z"
+  },
+  {
+    "timestamp": 1764296487.6786869,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 220339747
+    },
+    "iso_time": "2025-11-28T02:21:27Z"
+  },
+  {
+    "timestamp": 1764296488.784087,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 4,
+        "A": 32,
+        "h": -10,
+        "c": 11,
+        "B": 16
+      }
+    },
+    "iso_time": "2025-11-28T02:21:28Z"
+  },
+  {
+    "timestamp": 1764296489.801151,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8
+    },
+    "iso_time": "2025-11-28T02:21:29Z"
+  },
+  {
+    "timestamp": 1764296489.801354,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve defined by (y - 11)^2 + 24x(y - 11) + 32|x - -10| = 16. Its graph partitions the plane into several r",
+      "correct_answer": "8",
+      "seed_value": 220339747
+    },
+    "iso_time": "2025-11-28T02:21:29Z"
+  },
+  {
+    "timestamp": 1764296489.801397,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:21:29Z"
+  },
+  {
+    "timestamp": 1764296572.358499,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:22:52Z"
+  },
+  {
+    "timestamp": 1764296632.9908721,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:23:52Z"
+  },
+  {
+    "timestamp": 1764296687.285001,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:24:47Z"
+  },
+  {
+    "timestamp": 1764296770.0899498,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:26:10Z"
+  },
+  {
+    "timestamp": 1764296836.5551329,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T02:27:16Z"
+  },
+  {
+    "timestamp": 1764296836.555276,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1168238679
+    },
+    "iso_time": "2025-11-28T02:27:16Z"
+  },
+  {
+    "timestamp": 1764296837.615935,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 3,
+        "A": 18,
+        "h": -4,
+        "c": -11,
+        "B": 9
+      }
+    },
+    "iso_time": "2025-11-28T02:27:17Z"
+  },
+  {
+    "timestamp": 1764296838.721846,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6
+    },
+    "iso_time": "2025-11-28T02:27:18Z"
+  },
+  {
+    "timestamp": 1764296838.7220109,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve defined by (y - -11)^2 + 23x(y - -11) + 18|x - -4| = 9. Its graph partitions the plane into several r",
+      "correct_answer": "6",
+      "seed_value": 1168238679
+    },
+    "iso_time": "2025-11-28T02:27:18Z"
+  },
+  {
+    "timestamp": 1764296838.72205,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "15",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:27:18Z"
+  },
+  {
+    "timestamp": 1764296977.6949272,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:29:37Z"
+  },
+  {
+    "timestamp": 1764297201.231788,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:33:21Z"
+  },
+  {
+    "timestamp": 1764297292.86735,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "13",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:34:52Z"
+  },
+  {
+    "timestamp": 1764297386.78641,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:36:26Z"
+  },
+  {
+    "timestamp": 1764297468.090518,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-28T02:37:48Z"
+  },
+  {
+    "timestamp": 1764297468.090681,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 341660105
+    },
+    "iso_time": "2025-11-28T02:37:48Z"
+  },
+  {
+    "timestamp": 1764297469.450907,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 2,
+        "A": 48,
+        "h": 11,
+        "c": -5,
+        "B": 144
+      }
+    },
+    "iso_time": "2025-11-28T02:37:49Z"
+  },
+  {
+    "timestamp": 1764297470.416547,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 144
+    },
+    "iso_time": "2025-11-28T02:37:50Z"
+  },
+  {
+    "timestamp": 1764297470.416703,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve defined by (y - -5)^2 + 22x(y - -5) + 48|x - 11| = 144. Its graph partitions the plane into several r",
+      "correct_answer": "144",
+      "seed_value": 341660105
+    },
+    "iso_time": "2025-11-28T02:37:50Z"
+  },
+  {
+    "timestamp": 1764297470.416745,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "144",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:37:50Z"
+  },
+  {
+    "timestamp": 1764297560.1018372,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "144",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:39:20Z"
+  },
+  {
+    "timestamp": 1764297641.7631428,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "142",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:40:41Z"
+  },
+  {
+    "timestamp": 1764297697.238888,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "136",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:41:37Z"
+  },
+  {
+    "timestamp": 1764297750.706926,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "143",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:42:30Z"
+  },
+  {
+    "timestamp": 1764297820.450894,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T02:43:40Z"
+  },
+  {
+    "timestamp": 1764297820.451029,
+    "seed_id": "1998-3::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-28T02:43:40Z"
+  },
+  {
+    "timestamp": 1764297820.451078,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "The graph of $y^2 + 2xy + 40|x|= 400$ partitions the plane into several regions.  What is the area of the bounded region?",
+      "answer": "800",
+      "example_id": "1998-3::1998"
+    },
+    "iso_time": "2025-11-28T02:43:40Z"
+  },
+  {
+    "timestamp": 1764297930.566287,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 52596159
+    },
+    "iso_time": "2025-11-28T02:45:30Z"
+  },
+  {
+    "timestamp": 1764297931.6352909,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_param": -2,
+        "t_param": 3,
+        "q_param": 30,
+        "s_param": 359
+      }
+    },
+    "iso_time": "2025-11-28T02:45:31Z"
+  },
+  {
+    "timestamp": 1764297932.68291,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 382.8680357967768
+    },
+    "iso_time": "2025-11-28T02:45:32Z"
+  },
+  {
+    "timestamp": 1764297932.6830668,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, consider the curve defined by y^2 + 2 -2 x y + (-2^2 + 3) x^2 + 30 |x| = 359. This graph partitions the pl",
+      "correct_answer": "382.868035797",
+      "seed_value": 52596159
+    },
+    "iso_time": "2025-11-28T02:45:32Z"
+  },
+  {
+    "timestamp": 1764297932.683108,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "363.783047",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:45:32Z"
+  },
+  {
+    "timestamp": 1764298024.298805,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "364.071677",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:47:04Z"
+  },
+  {
+    "timestamp": 1764298140.822788,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "365.931213",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:49:00Z"
+  },
+  {
+    "timestamp": 1764298193.696539,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "382.868035797",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:49:53Z"
+  },
+  {
+    "timestamp": 1764298374.8444202,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "382.868035797",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:52:54Z"
+  },
+  {
+    "timestamp": 1764298420.929601,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T02:53:40Z"
+  },
+  {
+    "timestamp": 1764298420.929759,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1307428178
+    },
+    "iso_time": "2025-11-28T02:53:40Z"
+  },
+  {
+    "timestamp": 1764298422.024796,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_param": 2,
+        "t_param": 4,
+        "q_param": 34,
+        "s_param": 273
+      }
+    },
+    "iso_time": "2025-11-28T02:53:42Z"
+  },
+  {
+    "timestamp": 1764298423.0533361,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 237.83386755246917
+    },
+    "iso_time": "2025-11-28T02:53:43Z"
+  },
+  {
+    "timestamp": 1764298423.0534809,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, consider the curve defined by y^2 + 2 2 x y + (2^2 + 4) x^2 + 34 |x| = 273. This graph partitions the plan",
+      "correct_answer": "237.833867552",
+      "seed_value": 1307428178
+    },
+    "iso_time": "2025-11-28T02:53:43Z"
+  },
+  {
+    "timestamp": 1764298423.0535219,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "222.021631",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:53:43Z"
+  },
+  {
+    "timestamp": 1764298615.752237,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "234.696210",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T02:56:55Z"
+  },
+  {
+    "timestamp": 1764298784.960803,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "237.833867552",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T02:59:44Z"
+  },
+  {
+    "timestamp": 1764298905.837673,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "223.193608",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T03:01:45Z"
+  },
+  {
+    "timestamp": 1764299003.669832,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "237.833867552",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T03:03:23Z"
+  },
+  {
+    "timestamp": 1764299813.0572102,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T03:16:53Z"
+  },
+  {
+    "timestamp": 1764299813.057576,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1649981685
+    },
+    "iso_time": "2025-11-28T03:16:53Z"
+  },
+  {
+    "timestamp": 1764299814.4041688,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_param": 4,
+        "t_param": 13,
+        "q_param": 43,
+        "s_param": 357
+      }
+    },
+    "iso_time": "2025-11-28T03:16:54Z"
+  },
+  {
+    "timestamp": 1764299815.438537,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 212.97922402336684
+    },
+    "iso_time": "2025-11-28T03:16:55Z"
+  },
+  {
+    "timestamp": 1764299815.4387012,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, consider the curve defined by y^2 + 2 4 x y + (4^2 + 13) x^2 + 43 |x| = 357. This graph partitions the pla",
+      "correct_answer": "212.979224023",
+      "seed_value": 1649981685
+    },
+    "iso_time": "2025-11-28T03:16:55Z"
+  },
+  {
+    "timestamp": 1764299815.438742,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "195.926321",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T03:16:55Z"
+  },
+  {
+    "timestamp": 1764299943.9245389,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "212.979224023",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T03:19:03Z"
+  },
+  {
+    "timestamp": 1764300047.7615519,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "224.429711",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T03:20:47Z"
+  },
+  {
+    "timestamp": 1764300254.8378649,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "212.979224023",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T03:24:14Z"
+  },
+  {
+    "timestamp": 1764300495.3502898,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "206.289774",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T03:28:15Z"
+  },
+  {
+    "timestamp": 1764300706.7189498,
+    "seed_id": "1998-3::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-3::1998_prompt03-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T03:31:46Z"
+  },
+  {
+    "timestamp": 1764300706.719166,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1603238499
+    },
+    "iso_time": "2025-11-28T03:31:46Z"
+  },
+  {
+    "timestamp": 1764300707.873541,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_param": 3,
+        "t_param": 7,
+        "q_param": 52,
+        "s_param": 440
+      }
+    },
+    "iso_time": "2025-11-28T03:31:47Z"
+  },
+  {
+    "timestamp": 1764300708.90157,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 303.60114247022784
+    },
+    "iso_time": "2025-11-28T03:31:48Z"
+  },
+  {
+    "timestamp": 1764300708.901719,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, consider the curve defined by y^2 + 2 3 x y + (3^2 + 7) x^2 + 52 |x| = 440. This graph partitions the plan",
+      "correct_answer": "303.60114247",
+      "seed_value": 1603238499
+    },
+    "iso_time": "2025-11-28T03:31:48Z"
+  },
+  {
+    "timestamp": 1764300708.901763,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "293.359557",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T03:31:48Z"
+  },
+  {
+    "timestamp": 1764300840.748513,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "303.60114247",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T03:34:00Z"
+  },
+  {
+    "timestamp": 1764301039.087123,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "274.920268",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T03:37:19Z"
+  },
+  {
+    "timestamp": 1764301250.259964,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "280.696433",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T03:40:50Z"
+  },
+  {
+    "timestamp": 1764301474.6789398,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "303.60114247",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T03:44:34Z"
+  },
+  {
+    "timestamp": 1764301622.309839,
+    "seed_id": "1998-3::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-3::1998_prompt03-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-28T03:47:02Z"
+  },
+  {
+    "timestamp": 1764301622.309974,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 1653939864
+    },
+    "iso_time": "2025-11-28T03:47:02Z"
+  },
+  {
+    "timestamp": 1764301623.421856,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_param": 5,
+        "t_param": 13,
+        "q_param": 40,
+        "s_param": 418
+      }
+    },
+    "iso_time": "2025-11-28T03:47:03Z"
+  },
+  {
+    "timestamp": 1764301624.466648,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 262.16333545988147
+    },
+    "iso_time": "2025-11-28T03:47:04Z"
+  },
+  {
+    "timestamp": 1764301624.466789,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, consider the curve defined by y^2 + 2 5 x y + (5^2 + 13) x^2 + 40 |x| = 418. This graph partitions the pla",
+      "correct_answer": "262.16333546",
+      "seed_value": 1653939864
+    },
+    "iso_time": "2025-11-28T03:47:04Z"
+  },
+  {
+    "timestamp": 1764301624.466828,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "277.018427",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T03:47:04Z"
+  },
+  {
+    "timestamp": 1764301909.211939,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "253.417558",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T03:51:49Z"
+  },
+  {
+    "timestamp": 1764302046.889268,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "262.16333546",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T03:54:06Z"
+  },
+  {
+    "timestamp": 1764302180.228841,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "262.16333546",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T03:56:20Z"
+  },
+  {
+    "timestamp": 1764302332.173779,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "246.893362",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T03:58:52Z"
+  },
+  {
+    "timestamp": 1764302460.06631,
+    "seed_id": "1998-3::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-3::1998_prompt03-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T04:01:00Z"
+  },
+  {
+    "timestamp": 1764302460.066365,
+    "seed_id": "1998-3::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-28T04:01:00Z"
+  },
+  {
+    "timestamp": 1764302460.066405,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3).",
+      "question": "The graph of $y^2 + 2xy + 40|x|= 400$ partitions the plane into several regions.  What is the area of the bounded region?",
+      "answer": "800",
+      "example_id": "1998-3::1998"
+    },
+    "iso_time": "2025-11-28T04:01:00Z"
+  },
+  {
+    "timestamp": 1764302555.173755,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 599878378
+    },
+    "iso_time": "2025-11-28T04:02:35Z"
+  },
+  {
+    "timestamp": 1764302556.361621,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_num": 5,
+        "p_den": 20,
+        "q": 26,
+        "h": -15,
+        "r": 2704
+      }
+    },
+    "iso_time": "2025-11-28T04:02:36Z"
+  },
+  {
+    "timestamp": 1764302557.40543,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 21632
+    },
+    "iso_time": "2025-11-28T04:02:37Z"
+  },
+  {
+    "timestamp": 1764302557.4055848,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve in the plane defined by y^2 + 2*(5/20)*x*y + 26|x - -15| = 2704. The graph of this curve partitions t",
+      "correct_answer": "21632",
+      "seed_value": 599878378
+    },
+    "iso_time": "2025-11-28T04:02:37Z"
+  },
+  {
+    "timestamp": 1764302557.4056242,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "21639",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:02:37Z"
+  },
+  {
+    "timestamp": 1764302686.672988,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "21632",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T04:04:46Z"
+  },
+  {
+    "timestamp": 1764303008.318281,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "21634",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:10:08Z"
+  },
+  {
+    "timestamp": 1764303385.669827,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "21632",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T04:16:25Z"
+  },
+  {
+    "timestamp": 1764303522.339833,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "21623",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:18:42Z"
+  },
+  {
+    "timestamp": 1764303913.636551,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T04:25:13Z"
+  },
+  {
+    "timestamp": 1764303913.636697,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 1719910325
+    },
+    "iso_time": "2025-11-28T04:25:13Z"
+  },
+  {
+    "timestamp": 1764303914.8582962,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_num": 5,
+        "p_den": 15,
+        "q": 22,
+        "h": 7,
+        "r": 1089
+      }
+    },
+    "iso_time": "2025-11-28T04:25:14Z"
+  },
+  {
+    "timestamp": 1764303915.8589911,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6534
+    },
+    "iso_time": "2025-11-28T04:25:15Z"
+  },
+  {
+    "timestamp": 1764303915.8591418,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve in the plane defined by y^2 + 2*(5/15)*x*y + 22|x - 7| = 1089. The graph of this curve partitions the",
+      "correct_answer": "6534",
+      "seed_value": 1719910325
+    },
+    "iso_time": "2025-11-28T04:25:15Z"
+  },
+  {
+    "timestamp": 1764303915.859189,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6534",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T04:25:15Z"
+  },
+  {
+    "timestamp": 1764304042.933154,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6537",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:27:22Z"
+  },
+  {
+    "timestamp": 1764304150.90655,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6535",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:29:10Z"
+  },
+  {
+    "timestamp": 1764304246.769817,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6534",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T04:30:46Z"
+  },
+  {
+    "timestamp": 1764304499.268322,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6539",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:34:59Z"
+  },
+  {
+    "timestamp": 1764304590.213305,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T04:36:30Z"
+  },
+  {
+    "timestamp": 1764304590.213665,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 3,
+      "seed_value": 524587325
+    },
+    "iso_time": "2025-11-28T04:36:30Z"
+  },
+  {
+    "timestamp": 1764304591.507506,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_num": 2,
+        "p_den": 10,
+        "q": 22,
+        "h": 12,
+        "r": 3025
+      }
+    },
+    "iso_time": "2025-11-28T04:36:31Z"
+  },
+  {
+    "timestamp": 1764304592.539056,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 30250
+    },
+    "iso_time": "2025-11-28T04:36:32Z"
+  },
+  {
+    "timestamp": 1764304592.539231,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve in the plane defined by y^2 + 2*(2/10)*x*y + 22|x - 12| = 3025. The graph of this curve partitions th",
+      "correct_answer": "30250",
+      "seed_value": 524587325
+    },
+    "iso_time": "2025-11-28T04:36:32Z"
+  },
+  {
+    "timestamp": 1764304592.53928,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "30258",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:36:32Z"
+  },
+  {
+    "timestamp": 1764304697.227799,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "30250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T04:38:17Z"
+  },
+  {
+    "timestamp": 1764304843.327512,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "30250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T04:40:43Z"
+  },
+  {
+    "timestamp": 1764304994.263563,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "30241",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:43:14Z"
+  },
+  {
+    "timestamp": 1764305144.762723,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "30243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:45:44Z"
+  },
+  {
+    "timestamp": 1764305399.588445,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T04:49:59Z"
+  },
+  {
+    "timestamp": 1764305399.5885959,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 4,
+      "seed_value": 1846980635
+    },
+    "iso_time": "2025-11-28T04:49:59Z"
+  },
+  {
+    "timestamp": 1764305400.678356,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_num": 8,
+        "p_den": 32,
+        "q": 6,
+        "h": -19,
+        "r": 144
+      }
+    },
+    "iso_time": "2025-11-28T04:50:00Z"
+  },
+  {
+    "timestamp": 1764305401.707052,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1152
+    },
+    "iso_time": "2025-11-28T04:50:01Z"
+  },
+  {
+    "timestamp": 1764305401.707215,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve in the plane defined by y^2 + 2*(8/32)*x*y + 6|x - -19| = 144. The graph of this curve partitions the",
+      "correct_answer": "1152",
+      "seed_value": 1846980635
+    },
+    "iso_time": "2025-11-28T04:50:01Z"
+  },
+  {
+    "timestamp": 1764305401.707267,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1150",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:50:01Z"
+  },
+  {
+    "timestamp": 1764305530.971597,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1151",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:52:10Z"
+  },
+  {
+    "timestamp": 1764305636.120537,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1160",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T04:53:56Z"
+  },
+  {
+    "timestamp": 1764305778.758046,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1152",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T04:56:18Z"
+  },
+  {
+    "timestamp": 1764305934.0576808,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1152",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T04:58:54Z"
+  },
+  {
+    "timestamp": 1764306091.494808,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T05:01:31Z"
+  },
+  {
+    "timestamp": 1764306091.494974,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 5,
+      "seed_value": 1769554260
+    },
+    "iso_time": "2025-11-28T05:01:31Z"
+  },
+  {
+    "timestamp": 1764306092.6129842,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p_num": 8,
+        "p_den": 32,
+        "q": 20,
+        "h": 4,
+        "r": 1600
+      }
+    },
+    "iso_time": "2025-11-28T05:01:32Z"
+  },
+  {
+    "timestamp": 1764306093.628848,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12800
+    },
+    "iso_time": "2025-11-28T05:01:33Z"
+  },
+  {
+    "timestamp": 1764306093.628999,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the curve in the plane defined by y^2 + 2*(8/32)*x*y + 20|x - 4| = 1600. The graph of this curve partitions the",
+      "correct_answer": "12800",
+      "seed_value": 1769554260
+    },
+    "iso_time": "2025-11-28T05:01:33Z"
+  },
+  {
+    "timestamp": 1764306093.629044,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:01:33Z"
+  },
+  {
+    "timestamp": 1764306244.5247622,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12794",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:04:04Z"
+  },
+  {
+    "timestamp": 1764306423.791208,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12802",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:07:03Z"
+  },
+  {
+    "timestamp": 1764306555.517003,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:09:15Z"
+  },
+  {
+    "timestamp": 1764306680.535587,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12791",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:11:20Z"
+  },
+  {
+    "timestamp": 1764306843.269481,
+    "seed_id": "1998-3::1998",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T05:14:03Z"
+  },
+  {
+    "timestamp": 1764306843.269668,
+    "seed_id": "1998-3::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 5).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-28T05:14:03Z"
+  },
+  {
+    "timestamp": 1764306843.269925,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 5,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "The graph of $y^2 + 2xy + 40|x|= 400$ partitions the plane into several regions.  What is the area of the bounded region?",
+      "answer": "800",
+      "example_id": "1998-3::1998"
+    },
+    "iso_time": "2025-11-28T05:14:03Z"
+  },
+  {
+    "timestamp": 1764307000.459808,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 1,
+      "seed_value": 72032425
+    },
+    "iso_time": "2025-11-28T05:16:40Z"
+  },
+  {
+    "timestamp": 1764307001.772491,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 250,
+        "b": -24,
+        "d": 625
+      }
+    },
+    "iso_time": "2025-11-28T05:16:41Z"
+  },
+  {
+    "timestamp": 1764307002.8304121,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 250
+    },
+    "iso_time": "2025-11-28T05:16:42Z"
+  },
+  {
+    "timestamp": 1764307002.8305678,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the plane curve defined by y^2 + 2xy + -24x^2 + 250|x| = 625. Its graph partitions the plane into several regio",
+      "correct_answer": "250",
+      "seed_value": 72032425
+    },
+    "iso_time": "2025-11-28T05:16:42Z"
+  },
+  {
+    "timestamp": 1764307002.8306088,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "254",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:16:42Z"
+  },
+  {
+    "timestamp": 1764307037.7303,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:17:17Z"
+  },
+  {
+    "timestamp": 1764307182.8141398,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:19:42Z"
+  },
+  {
+    "timestamp": 1764307305.495483,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "244",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:21:45Z"
+  },
+  {
+    "timestamp": 1764307333.847711,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "255",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:22:13Z"
+  },
+  {
+    "timestamp": 1764307382.281543,
+    "seed_id": "1998-3::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-3::1998_prompt05-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T05:23:02Z"
+  },
+  {
+    "timestamp": 1764307382.281719,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-3::1998_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 2,
+      "seed_value": 1256366193
+    },
+    "iso_time": "2025-11-28T05:23:02Z"
+  },
+  {
+    "timestamp": 1764307383.594176,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 588,
+        "b": -48,
+        "d": 1764
+      }
+    },
+    "iso_time": "2025-11-28T05:23:03Z"
+  },
+  {
+    "timestamp": 1764307384.6341288,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 504
+    },
+    "iso_time": "2025-11-28T05:23:04Z"
+  },
+  {
+    "timestamp": 1764307384.634277,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the plane curve defined by y^2 + 2xy + -48x^2 + 588|x| = 1764. Its graph partitions the plane into several regi",
+      "correct_answer": "504",
+      "seed_value": 1256366193
+    },
+    "iso_time": "2025-11-28T05:23:04Z"
+  },
+  {
+    "timestamp": 1764307384.634318,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "498",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:23:04Z"
+  },
+  {
+    "timestamp": 1764307423.5319328,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "509",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:23:43Z"
+  },
+  {
+    "timestamp": 1764307448.105328,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "510",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T05:24:08Z"
+  },
+  {
+    "timestamp": 1764307486.357785,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "504",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:24:46Z"
+  },
+  {
+    "timestamp": 1764307525.7270532,
+    "seed_id": "1998-3::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "504",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T05:25:25Z"
+  },
+  {
+    "timestamp": 1764307615.633316,
+    "seed_id": "1998-3::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-3::1998_prompt05-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T05:26:55Z"
+  }
+]

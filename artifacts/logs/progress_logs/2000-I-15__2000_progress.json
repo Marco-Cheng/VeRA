@@ -1,0 +1,1380 @@
+[
+  {
+    "timestamp": 1764369442.907433,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "A stack of $2000$ cards is labelled with the integers from $1$ to $2000,$ with different integers on different cards. Th",
+      "answer": "927",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T22:37:22Z"
+  },
+  {
+    "timestamp": 1764369442.907454,
+    "seed_id": "2000-I-15::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T22:37:22Z"
+  },
+  {
+    "timestamp": 1764369442.907468,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A stack of $2000$ cards is labelled with the integers from $1$ to $2000,$ with different integers on different cards. The cards in the stack are not in numerical order. The top card is removed from the stack and placed on the table, and the next card is moved to the bottom of the stack. The new top card is removed from the stack and placed on the table, to the right of the card already there, and the next card in the stack is moved to the bottom of the stack. The process - placing the top card to the right of the cards already on the table and moving the next card in the stack to the bottom of the stack - is repeated until all cards are on the table. It is found that, reading from left to right, the labels on the cards are now in ascending order: $1,2,3,\\ldots,1999,2000.$ In the original stack of cards, how many cards were above the card labeled $1999$ ?",
+      "answer": "927",
+      "example_id": "2000-I-15::2000"
+    },
+    "iso_time": "2025-11-28T22:37:22Z"
+  },
+  {
+    "timestamp": 1764369504.0399702,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-15::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1566313563
+    },
+    "iso_time": "2025-11-28T22:38:24Z"
+  },
+  {
+    "timestamp": 1764369505.319655,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "deck_size": 1594,
+        "skip_pattern_csv": "7,5,5,6,2",
+        "target_label": 1477
+      }
+    },
+    "iso_time": "2025-11-28T22:38:25Z"
+  },
+  {
+    "timestamp": 1764369506.48319,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 515
+    },
+    "iso_time": "2025-11-28T22:38:26Z"
+  },
+  {
+    "timestamp": 1764369506.483351,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A stack of 1594 distinct cards labeled 1 through 1594 is arranged in some unknown order. Repeat the following operation ",
+      "correct_answer": "515",
+      "seed_value": 1566313563
+    },
+    "iso_time": "2025-11-28T22:38:26Z"
+  },
+  {
+    "timestamp": 1764369506.4833941,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "515",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T22:38:26Z"
+  },
+  {
+    "timestamp": 1764369619.422657,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "517",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T22:40:19Z"
+  },
+  {
+    "timestamp": 1764369791.379046,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "515",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T22:43:11Z"
+  },
+  {
+    "timestamp": 1764369899.610206,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "513",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T22:44:59Z"
+  },
+  {
+    "timestamp": 1764370266.3461928,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "514",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T22:51:06Z"
+  },
+  {
+    "timestamp": 1764370328.436862,
+    "seed_id": "2000-I-15::2000",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T22:52:08Z"
+  },
+  {
+    "timestamp": 1764370328.4370089,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-15::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1030662437
+    },
+    "iso_time": "2025-11-28T22:52:08Z"
+  },
+  {
+    "timestamp": 1764370329.728488,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "deck_size": 1715,
+        "skip_pattern_csv": "1,9",
+        "target_label": 1523
+      }
+    },
+    "iso_time": "2025-11-28T22:52:09Z"
+  },
+  {
+    "timestamp": 1764370330.804018,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-28T22:52:10Z"
+  },
+  {
+    "timestamp": 1764370331.816906,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "deck_size": 2029,
+        "skip_pattern_csv": "7,6,6,5,3",
+        "target_label": 1044
+      }
+    },
+    "iso_time": "2025-11-28T22:52:11Z"
+  },
+  {
+    "timestamp": 1764370332.897505,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": true,
+      "answer": 541
+    },
+    "iso_time": "2025-11-28T22:52:12Z"
+  },
+  {
+    "timestamp": 1764370332.897674,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A stack of 2029 distinct cards labeled 1 through 2029 is arranged in some unknown order. Repeat the following operation ",
+      "correct_answer": "541",
+      "seed_value": 1030662437
+    },
+    "iso_time": "2025-11-28T22:52:12Z"
+  },
+  {
+    "timestamp": 1764370332.897724,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "541",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T22:52:12Z"
+  },
+  {
+    "timestamp": 1764370567.704127,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "536",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T22:56:07Z"
+  },
+  {
+    "timestamp": 1764370733.0760078,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "540",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T22:58:53Z"
+  },
+  {
+    "timestamp": 1764370868.049526,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "544",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:01:08Z"
+  },
+  {
+    "timestamp": 1764370981.856902,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "541",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:03:01Z"
+  },
+  {
+    "timestamp": 1764371075.43349,
+    "seed_id": "2000-I-15::2000",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T23:04:35Z"
+  },
+  {
+    "timestamp": 1764371075.433753,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-15::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 696705675
+    },
+    "iso_time": "2025-11-28T23:04:35Z"
+  },
+  {
+    "timestamp": 1764371076.8259368,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "deck_size": 2134,
+        "skip_pattern_csv": "9,7",
+        "target_label": 1307
+      }
+    },
+    "iso_time": "2025-11-28T23:04:36Z"
+  },
+  {
+    "timestamp": 1764371077.877223,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 95
+    },
+    "iso_time": "2025-11-28T23:04:37Z"
+  },
+  {
+    "timestamp": 1764371077.877405,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A stack of 2134 distinct cards labeled 1 through 2134 is arranged in some unknown order. Repeat the following operation ",
+      "correct_answer": "95",
+      "seed_value": 696705675
+    },
+    "iso_time": "2025-11-28T23:04:37Z"
+  },
+  {
+    "timestamp": 1764371077.877453,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "95",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:04:37Z"
+  },
+  {
+    "timestamp": 1764371238.128351,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "90",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:07:18Z"
+  },
+  {
+    "timestamp": 1764371356.7126231,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "97",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:09:16Z"
+  },
+  {
+    "timestamp": 1764371473.758049,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:11:13Z"
+  },
+  {
+    "timestamp": 1764371598.374309,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "95",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:13:18Z"
+  },
+  {
+    "timestamp": 1764371676.640906,
+    "seed_id": "2000-I-15::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-15::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T23:14:36Z"
+  },
+  {
+    "timestamp": 1764371676.6410089,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-15::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 253151991
+    },
+    "iso_time": "2025-11-28T23:14:36Z"
+  },
+  {
+    "timestamp": 1764371677.806072,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "deck_size": 1946,
+        "skip_pattern_csv": "7,6",
+        "target_label": 1136
+      }
+    },
+    "iso_time": "2025-11-28T23:14:37Z"
+  },
+  {
+    "timestamp": 1764371678.911534,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 246
+    },
+    "iso_time": "2025-11-28T23:14:38Z"
+  },
+  {
+    "timestamp": 1764371678.911691,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A stack of 1946 distinct cards labeled 1 through 1946 is arranged in some unknown order. Repeat the following operation ",
+      "correct_answer": "246",
+      "seed_value": 253151991
+    },
+    "iso_time": "2025-11-28T23:14:38Z"
+  },
+  {
+    "timestamp": 1764371678.911744,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "252",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:14:38Z"
+  },
+  {
+    "timestamp": 1764371774.712351,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "246",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:16:14Z"
+  },
+  {
+    "timestamp": 1764371922.392064,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "246",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:18:42Z"
+  },
+  {
+    "timestamp": 1764372064.5101051,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "251",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:21:04Z"
+  },
+  {
+    "timestamp": 1764372248.1572149,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "239",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:24:08Z"
+  },
+  {
+    "timestamp": 1764372348.6768398,
+    "seed_id": "2000-I-15::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-15::2000_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T23:25:48Z"
+  },
+  {
+    "timestamp": 1764372348.677044,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-15::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 74358560
+    },
+    "iso_time": "2025-11-28T23:25:48Z"
+  },
+  {
+    "timestamp": 1764372349.886179,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "deck_size": 2644,
+        "skip_pattern_csv": "4,6,7,8",
+        "target_label": 1441
+      }
+    },
+    "iso_time": "2025-11-28T23:25:49Z"
+  },
+  {
+    "timestamp": 1764372350.910096,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 840
+    },
+    "iso_time": "2025-11-28T23:25:50Z"
+  },
+  {
+    "timestamp": 1764372350.9102411,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A stack of 2644 distinct cards labeled 1 through 2644 is arranged in some unknown order. Repeat the following operation ",
+      "correct_answer": "840",
+      "seed_value": 74358560
+    },
+    "iso_time": "2025-11-28T23:25:50Z"
+  },
+  {
+    "timestamp": 1764372350.9102862,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "835",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:25:50Z"
+  },
+  {
+    "timestamp": 1764372479.752931,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "844",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:27:59Z"
+  },
+  {
+    "timestamp": 1764372569.8579981,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "840",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:29:29Z"
+  },
+  {
+    "timestamp": 1764372732.414117,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "840",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:32:12Z"
+  },
+  {
+    "timestamp": 1764372870.39632,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "838",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:34:30Z"
+  },
+  {
+    "timestamp": 1764373008.968142,
+    "seed_id": "2000-I-15::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-15::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-28T23:36:48Z"
+  },
+  {
+    "timestamp": 1764373008.9681878,
+    "seed_id": "2000-I-15::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-28T23:36:48Z"
+  },
+  {
+    "timestamp": 1764373008.968215,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3).",
+      "question": "A stack of $2000$ cards is labelled with the integers from $1$ to $2000,$ with different integers on different cards. The cards in the stack are not in numerical order. The top card is removed from the stack and placed on the table, and the next card is moved to the bottom of the stack. The new top card is removed from the stack and placed on the table, to the right of the card already there, and the next card in the stack is moved to the bottom of the stack. The process - placing the top card to the right of the cards already on the table and moving the next card in the stack to the bottom of the stack - is repeated until all cards are on the table. It is found that, reading from left to right, the labels on the cards are now in ascending order: $1,2,3,\\ldots,1999,2000.$ In the original stack of cards, how many cards were above the card labeled $1999$ ?",
+      "answer": "927",
+      "example_id": "2000-I-15::2000"
+    },
+    "iso_time": "2025-11-28T23:36:48Z"
+  },
+  {
+    "timestamp": 1764373079.394006,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-15::2000_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1867384352
+    },
+    "iso_time": "2025-11-28T23:37:59Z"
+  },
+  {
+    "timestamp": 1764373080.65528,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_cards": 4809,
+        "skip_first": 10,
+        "skip_second": 6,
+        "target_label": 925
+      }
+    },
+    "iso_time": "2025-11-28T23:38:00Z"
+  },
+  {
+    "timestamp": 1764373081.6755478,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2005
+    },
+    "iso_time": "2025-11-28T23:38:01Z"
+  },
+  {
+    "timestamp": 1764373081.675717,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A stack of 4809 distinct cards is labeled with the integers from 1 to 4809, with different integers on different cards. ",
+      "correct_answer": "2005",
+      "seed_value": 1867384352
+    },
+    "iso_time": "2025-11-28T23:38:01Z"
+  },
+  {
+    "timestamp": 1764373081.6757581,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2005",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:38:01Z"
+  },
+  {
+    "timestamp": 1764373191.111885,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2008",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:39:51Z"
+  },
+  {
+    "timestamp": 1764373367.096062,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2013",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:42:47Z"
+  },
+  {
+    "timestamp": 1764373514.1846569,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2002",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:45:14Z"
+  },
+  {
+    "timestamp": 1764373670.649764,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2005",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:47:50Z"
+  },
+  {
+    "timestamp": 1764373754.418921,
+    "seed_id": "2000-I-15::2000",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T23:49:14Z"
+  },
+  {
+    "timestamp": 1764373754.419146,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-15::2000_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1833040404
+    },
+    "iso_time": "2025-11-28T23:49:14Z"
+  },
+  {
+    "timestamp": 1764373755.710958,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_cards": 2893,
+        "skip_first": 9,
+        "skip_second": 7,
+        "target_label": 2373
+      }
+    },
+    "iso_time": "2025-11-28T23:49:15Z"
+  },
+  {
+    "timestamp": 1764373756.814036,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 444
+    },
+    "iso_time": "2025-11-28T23:49:16Z"
+  },
+  {
+    "timestamp": 1764373756.8142002,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A stack of 2893 distinct cards is labeled with the integers from 1 to 2893, with different integers on different cards. ",
+      "correct_answer": "444",
+      "seed_value": 1833040404
+    },
+    "iso_time": "2025-11-28T23:49:16Z"
+  },
+  {
+    "timestamp": 1764373756.814246,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "444",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:49:16Z"
+  },
+  {
+    "timestamp": 1764373815.1363142,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "444",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:50:15Z"
+  },
+  {
+    "timestamp": 1764373878.525017,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "452",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:51:18Z"
+  },
+  {
+    "timestamp": 1764373965.989239,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "449",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:52:45Z"
+  },
+  {
+    "timestamp": 1764374019.326386,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "451",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T23:53:39Z"
+  },
+  {
+    "timestamp": 1764374072.13889,
+    "seed_id": "2000-I-15::2000",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-28T23:54:32Z"
+  },
+  {
+    "timestamp": 1764374072.139064,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-15::2000_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1480839356
+    },
+    "iso_time": "2025-11-28T23:54:32Z"
+  },
+  {
+    "timestamp": 1764374073.392299,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_cards": 1033,
+        "skip_first": 6,
+        "skip_second": 3,
+        "target_label": 334
+      }
+    },
+    "iso_time": "2025-11-28T23:54:33Z"
+  },
+  {
+    "timestamp": 1764374074.469428,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 186
+    },
+    "iso_time": "2025-11-28T23:54:34Z"
+  },
+  {
+    "timestamp": 1764374074.469594,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A stack of 1033 distinct cards is labeled with the integers from 1 to 1033, with different integers on different cards. ",
+      "correct_answer": "186",
+      "seed_value": 1480839356
+    },
+    "iso_time": "2025-11-28T23:54:34Z"
+  },
+  {
+    "timestamp": 1764374074.469635,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "186",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T23:54:34Z"
+  },
+  {
+    "timestamp": 1764374442.101598,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "181",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T00:00:42Z"
+  },
+  {
+    "timestamp": 1764374491.90673,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "184",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T00:01:31Z"
+  },
+  {
+    "timestamp": 1764374623.613533,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "177",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T00:03:43Z"
+  },
+  {
+    "timestamp": 1764374811.704802,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "186",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T00:06:51Z"
+  },
+  {
+    "timestamp": 1764374899.9037418,
+    "seed_id": "2000-I-15::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-15::2000_prompt02-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T00:08:19Z"
+  },
+  {
+    "timestamp": 1764374899.903818,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-15::2000_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1487847938
+    },
+    "iso_time": "2025-11-29T00:08:19Z"
+  },
+  {
+    "timestamp": 1764374901.263746,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_cards": 3938,
+        "skip_first": 8,
+        "skip_second": 4,
+        "target_label": 1344
+      }
+    },
+    "iso_time": "2025-11-29T00:08:21Z"
+  },
+  {
+    "timestamp": 1764374902.296261,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 523
+    },
+    "iso_time": "2025-11-29T00:08:22Z"
+  },
+  {
+    "timestamp": 1764374902.296439,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A stack of 3938 distinct cards is labeled with the integers from 1 to 3938, with different integers on different cards. ",
+      "correct_answer": "523",
+      "seed_value": 1487847938
+    },
+    "iso_time": "2025-11-29T00:08:22Z"
+  },
+  {
+    "timestamp": 1764374902.2964969,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "525",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T00:08:22Z"
+  },
+  {
+    "timestamp": 1764374976.749712,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "523",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T00:09:36Z"
+  },
+  {
+    "timestamp": 1764375032.165555,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "523",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T00:10:32Z"
+  },
+  {
+    "timestamp": 1764375118.311303,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "531",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T00:11:58Z"
+  },
+  {
+    "timestamp": 1764375132.328696,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "517",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T00:12:12Z"
+  },
+  {
+    "timestamp": 1764375269.738327,
+    "seed_id": "2000-I-15::2000",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T00:14:29Z"
+  },
+  {
+    "timestamp": 1764375269.7384992,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-15::2000_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 2029769378
+    },
+    "iso_time": "2025-11-29T00:14:29Z"
+  },
+  {
+    "timestamp": 1764375270.821904,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_cards": 879,
+        "skip_first": 11,
+        "skip_second": 8,
+        "target_label": 601
+      }
+    },
+    "iso_time": "2025-11-29T00:14:30Z"
+  },
+  {
+    "timestamp": 1764375271.846236,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 670
+    },
+    "iso_time": "2025-11-29T00:14:31Z"
+  },
+  {
+    "timestamp": 1764375271.846418,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A stack of 879 distinct cards is labeled with the integers from 1 to 879, with different integers on different cards. Th",
+      "correct_answer": "670",
+      "seed_value": 2029769378
+    },
+    "iso_time": "2025-11-29T00:14:31Z"
+  },
+  {
+    "timestamp": 1764375271.8464582,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "670",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T00:14:31Z"
+  },
+  {
+    "timestamp": 1764375399.6889331,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "670",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T00:16:39Z"
+  },
+  {
+    "timestamp": 1764375557.413032,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "677",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T00:19:17Z"
+  },
+  {
+    "timestamp": 1764375654.2507782,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "676",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T00:20:54Z"
+  },
+  {
+    "timestamp": 1764375728.7813199,
+    "seed_id": "2000-I-15::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "668",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T00:22:08Z"
+  },
+  {
+    "timestamp": 1764375880.439328,
+    "seed_id": "2000-I-15::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-15::2000_prompt02-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T00:24:40Z"
+  }
+]

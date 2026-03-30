@@ -1,0 +1,1114 @@
+[
+  {
+    "timestamp": 1765245298.0731242,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "Twenty-seven unit cubes are painted orange on a set of four faces so that the two unpainted faces share an edge. The 27 ",
+      "answer": "74",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T01:54:58Z"
+  },
+  {
+    "timestamp": 1765245298.073169,
+    "seed_id": "2005-I-9::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T01:54:58Z"
+  },
+  {
+    "timestamp": 1765245298.07319,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Twenty-seven unit cubes are painted orange on a set of four faces so that the two unpainted faces share an edge. The 27 cubes are then randomly arranged to form a $3\\times 3 \\times 3$ cube. Given that the probability that the entire surface of the larger cube is orange is $\\frac{p^a}{q^br^c},$ where $p,q,$ and $r$ are distinct primes and $a,b,$ and $c$ are positive integers, find $a+b+c+p+q+r.$",
+      "answer": "74",
+      "example_id": "2005-I-9::2005"
+    },
+    "iso_time": "2025-12-09T01:54:58Z"
+  },
+  {
+    "timestamp": 1765245738.9675179,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-9::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 311596903
+    },
+    "iso_time": "2025-12-09T02:02:18Z"
+  },
+  {
+    "timestamp": 1765245740.204263,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "total_cubes": 64,
+        "count_a": 23,
+        "count_b": 41,
+        "pattern_a": "2adj",
+        "pattern_b": "2opp",
+        "pattern_a_text": "two adjacent faces are unpainted",
+        "pattern_b_text": "two opposite faces are unpainted"
+      }
+    },
+    "iso_time": "2025-12-09T02:02:20Z"
+  },
+  {
+    "timestamp": 1765245741.374837,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 613597650730337651679332185086920577648980815
+    },
+    "iso_time": "2025-12-09T02:02:21Z"
+  },
+  {
+    "timestamp": 1765245741.37502,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A larger 4 by 4 by 4 cube is assembled from 64 unit cubes of two types. There are 23 type-A cubes, each painted on all f",
+      "correct_answer": "613597650730337651679332185086920577648980815",
+      "seed_value": 311596903
+    },
+    "iso_time": "2025-12-09T02:02:21Z"
+  },
+  {
+    "timestamp": 1765245741.375073,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "613597650730337651679332185086920577648980815",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T02:02:21Z"
+  },
+  {
+    "timestamp": 1765246246.371567,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "613597650730337625763939756495357177952731127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T02:10:46Z"
+  },
+  {
+    "timestamp": 1765246523.056894,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "613597650730337625763939756495357177952731140",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T02:15:23Z"
+  },
+  {
+    "timestamp": 1765246850.1646762,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "613597650730337625763939756495357177952731133",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T02:20:50Z"
+  },
+  {
+    "timestamp": 1765247009.901643,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "613597650730337651679332185086920577648980815",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T02:23:29Z"
+  },
+  {
+    "timestamp": 1765247329.698538,
+    "seed_id": "2005-I-9::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T02:28:49Z"
+  },
+  {
+    "timestamp": 1765247329.698804,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-9::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 57179852
+    },
+    "iso_time": "2025-12-09T02:28:49Z"
+  },
+  {
+    "timestamp": 1765247331.10967,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "total_cubes": 64,
+        "count_a": 49,
+        "count_b": 15,
+        "pattern_a": "2adj",
+        "pattern_b": "2opp",
+        "pattern_a_text": "two adjacent faces are unpainted",
+        "pattern_b_text": "two opposite faces are unpainted"
+      }
+    },
+    "iso_time": "2025-12-09T02:28:51Z"
+  },
+  {
+    "timestamp": 1765247332.242381,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 87440471048272599569801383463951389514916347687
+    },
+    "iso_time": "2025-12-09T02:28:52Z"
+  },
+  {
+    "timestamp": 1765247332.2425349,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A larger 4 by 4 by 4 cube is assembled from 64 unit cubes of two types. There are 49 type-A cubes, each painted on all f",
+      "correct_answer": "87440471048272599569801383463951389514916347687",
+      "seed_value": 57179852
+    },
+    "iso_time": "2025-12-09T02:28:52Z"
+  },
+  {
+    "timestamp": 1765247332.242599,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "87440471048272599569801383463951389514916347687",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T02:28:52Z"
+  },
+  {
+    "timestamp": 1765247763.2641978,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "87440471048272602161174776904371470013038592006",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T02:36:03Z"
+  },
+  {
+    "timestamp": 1765247992.875459,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "87440471048272602161174776904371470013038592001",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T02:39:52Z"
+  },
+  {
+    "timestamp": 1765248265.999743,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "87440471048272599569801383463951389514916347687",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T02:44:25Z"
+  },
+  {
+    "timestamp": 1765248523.727828,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "87440471048272602161174776904371470013038591993",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T02:48:43Z"
+  },
+  {
+    "timestamp": 1765248845.438247,
+    "seed_id": "2005-I-9::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T02:54:05Z"
+  },
+  {
+    "timestamp": 1765248845.438528,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-9::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1183144556
+    },
+    "iso_time": "2025-12-09T02:54:05Z"
+  },
+  {
+    "timestamp": 1765248846.889878,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "total_cubes": 64,
+        "count_a": 29,
+        "count_b": 35,
+        "pattern_a": "3corner",
+        "pattern_b": "2opp",
+        "pattern_a_text": "three faces meeting at one corner are unpainted",
+        "pattern_b_text": "two opposite faces are unpainted"
+      }
+    },
+    "iso_time": "2025-12-09T02:54:06Z"
+  },
+  {
+    "timestamp": 1765248847.993383,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5673812043090766800376445440856695651
+    },
+    "iso_time": "2025-12-09T02:54:07Z"
+  },
+  {
+    "timestamp": 1765248847.993515,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A larger 4 by 4 by 4 cube is assembled from 64 unit cubes of two types. There are 29 type-A cubes, each painted on all f",
+      "correct_answer": "5673812043090766800376445440856695651",
+      "seed_value": 1183144556
+    },
+    "iso_time": "2025-12-09T02:54:07Z"
+  },
+  {
+    "timestamp": 1765248847.993597,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5673812043090767369680705257088221182",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T02:54:07Z"
+  },
+  {
+    "timestamp": 1765249319.1819289,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5673812043090766800376445440856695651",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T03:01:59Z"
+  },
+  {
+    "timestamp": 1765250154.653034,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5673812043090766800376445440856695651",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T03:15:54Z"
+  },
+  {
+    "timestamp": 1765250487.330028,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5673812043090767369680705257088221190",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T03:21:27Z"
+  },
+  {
+    "timestamp": 1765250758.588344,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5673812043090767369680705257088221192",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T03:25:58Z"
+  },
+  {
+    "timestamp": 1765250990.70516,
+    "seed_id": "2005-I-9::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-09T03:29:50Z"
+  },
+  {
+    "timestamp": 1765250990.705358,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-9::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 131281579
+    },
+    "iso_time": "2025-12-09T03:29:50Z"
+  },
+  {
+    "timestamp": 1765250992.0364711,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "total_cubes": 64,
+        "count_a": 52,
+        "count_b": 12,
+        "pattern_a": "3corner",
+        "pattern_b": "2opp",
+        "pattern_a_text": "three faces meeting at one corner are unpainted",
+        "pattern_b_text": "two opposite faces are unpainted"
+      }
+    },
+    "iso_time": "2025-12-09T03:29:52Z"
+  },
+  {
+    "timestamp": 1765250993.2931468,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 135041180183938651907118752660370972845777957
+    },
+    "iso_time": "2025-12-09T03:29:53Z"
+  },
+  {
+    "timestamp": 1765250993.2933602,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A larger 4 by 4 by 4 cube is assembled from 64 unit cubes of two types. There are 52 type-A cubes, each painted on all f",
+      "correct_answer": "135041180183938651907118752660370972845777957",
+      "seed_value": 131281579
+    },
+    "iso_time": "2025-12-09T03:29:53Z"
+  },
+  {
+    "timestamp": 1765250993.29346,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "135041180183938655620938870510658174284988415",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T03:29:53Z"
+  },
+  {
+    "timestamp": 1765251580.034561,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "135041180183938651907118752660370972845777957",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T03:39:40Z"
+  },
+  {
+    "timestamp": 1765252376.464897,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "135041180183938651907118752660370972845777957",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T03:52:56Z"
+  },
+  {
+    "timestamp": 1765253270.1415648,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "135041180183938655620938870510658174284988422",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T04:07:50Z"
+  },
+  {
+    "timestamp": 1765253389.4358132,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "135041180183938655620938870510658174284988412",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T04:09:49Z"
+  },
+  {
+    "timestamp": 1765253604.227574,
+    "seed_id": "2005-I-9::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-9::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-09T04:13:24Z"
+  },
+  {
+    "timestamp": 1765253604.2277682,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-9::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1791543894
+    },
+    "iso_time": "2025-12-09T04:13:24Z"
+  },
+  {
+    "timestamp": 1765253605.59187,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 3,
+        "total_cubes": 27,
+        "count_a": 16,
+        "count_b": 11,
+        "pattern_a": "2adj",
+        "pattern_b": "2opp",
+        "pattern_a_text": "two adjacent faces are unpainted",
+        "pattern_b_text": "two opposite faces are unpainted"
+      }
+    },
+    "iso_time": "2025-12-09T04:13:25Z"
+  },
+  {
+    "timestamp": 1765253606.750576,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 22598452074622618955809
+    },
+    "iso_time": "2025-12-09T04:13:26Z"
+  },
+  {
+    "timestamp": 1765253606.7507122,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A larger 3 by 3 by 3 cube is assembled from 27 unit cubes of two types. There are 16 type-A cubes, each painted on all f",
+      "correct_answer": "22598452074622618955809",
+      "seed_value": 1791543894
+    },
+    "iso_time": "2025-12-09T04:13:26Z"
+  },
+  {
+    "timestamp": 1765253606.7507572,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "22598452074622618697734",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T04:13:26Z"
+  },
+  {
+    "timestamp": 1765254184.174326,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "22598452074622618955809",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T04:23:04Z"
+  },
+  {
+    "timestamp": 1765254913.945656,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "22598452074622618697724",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T04:35:13Z"
+  },
+  {
+    "timestamp": 1765255343.5025349,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "22598452074622618955809",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T04:42:23Z"
+  },
+  {
+    "timestamp": 1765255879.418936,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "22598452074622618697732",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T04:51:19Z"
+  },
+  {
+    "timestamp": 1765256440.114238,
+    "seed_id": "2005-I-9::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-9::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T05:00:40Z"
+  },
+  {
+    "timestamp": 1765256440.114381,
+    "seed_id": "2005-I-9::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-09T05:00:40Z"
+  },
+  {
+    "timestamp": 1765256440.114492,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Twenty-seven unit cubes are painted orange on a set of four faces so that the two unpainted faces share an edge. The 27 cubes are then randomly arranged to form a $3\\times 3 \\times 3$ cube. Given that the probability that the entire surface of the larger cube is orange is $\\frac{p^a}{q^br^c},$ where $p,q,$ and $r$ are distinct primes and $a,b,$ and $c$ are positive integers, find $a+b+c+p+q+r.$",
+      "answer": "74",
+      "example_id": "2005-I-9::2005"
+    },
+    "iso_time": "2025-12-09T05:00:40Z"
+  },
+  {
+    "timestamp": 1765256940.010083,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-9::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1410917853
+    },
+    "iso_time": "2025-12-09T05:09:00Z"
+  },
+  {
+    "timestamp": 1765256941.445705,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 27,
+        "u": 1
+      }
+    },
+    "iso_time": "2025-12-09T05:09:01Z"
+  },
+  {
+    "timestamp": 1765256942.6930418,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 19066
+    },
+    "iso_time": "2025-12-09T05:09:02Z"
+  },
+  {
+    "timestamp": 1765256942.693234,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A solid 27×27×27 cube is assembled from 27^3 unit cubes. Each unit cube is orange on exactly 6−1 faces; the remaining 1 ",
+      "correct_answer": "19066",
+      "seed_value": 1410917853
+    },
+    "iso_time": "2025-12-09T05:09:02Z"
+  },
+  {
+    "timestamp": 1765256942.6933172,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "19066",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T05:09:02Z"
+  },
+  {
+    "timestamp": 1765257041.158606,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "19068",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:10:41Z"
+  },
+  {
+    "timestamp": 1765257114.263157,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "19065",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:11:54Z"
+  },
+  {
+    "timestamp": 1765257141.304043,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "19066",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T05:12:21Z"
+  },
+  {
+    "timestamp": 1765257203.569973,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "19064",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:13:23Z"
+  },
+  {
+    "timestamp": 1765257284.8616588,
+    "seed_id": "2005-I-9::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-9::2005_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T05:14:44Z"
+  },
+  {
+    "timestamp": 1765257284.8618329,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-9::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1220733558
+    },
+    "iso_time": "2025-12-09T05:14:44Z"
+  },
+  {
+    "timestamp": 1765257286.17654,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 30,
+        "u": 3
+      }
+    },
+    "iso_time": "2025-12-09T05:14:46Z"
+  },
+  {
+    "timestamp": 1765257287.314223,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10800
+    },
+    "iso_time": "2025-12-09T05:14:47Z"
+  },
+  {
+    "timestamp": 1765257287.3144152,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A solid 30×30×30 cube is assembled from 30^3 unit cubes. Each unit cube is orange on exactly 6−3 faces; the remaining 3 ",
+      "correct_answer": "10800",
+      "seed_value": 1220733558
+    },
+    "iso_time": "2025-12-09T05:14:47Z"
+  },
+  {
+    "timestamp": 1765257287.314494,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10802",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:14:47Z"
+  },
+  {
+    "timestamp": 1765257522.948419,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10803",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:18:42Z"
+  },
+  {
+    "timestamp": 1765257617.154229,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T05:20:17Z"
+  },
+  {
+    "timestamp": 1765257666.206662,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10794",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:21:06Z"
+  },
+  {
+    "timestamp": 1765257738.49697,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T05:22:18Z"
+  },
+  {
+    "timestamp": 1765257935.49782,
+    "seed_id": "2005-I-9::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-9::2005_prompt02-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T05:25:35Z"
+  },
+  {
+    "timestamp": 1765257935.4980102,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-9::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1618278805
+    },
+    "iso_time": "2025-12-09T05:25:35Z"
+  },
+  {
+    "timestamp": 1765257936.861985,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 10,
+        "u": 1
+      }
+    },
+    "iso_time": "2025-12-09T05:25:36Z"
+  },
+  {
+    "timestamp": 1765257938.0105011,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2032
+    },
+    "iso_time": "2025-12-09T05:25:38Z"
+  },
+  {
+    "timestamp": 1765257938.0106611,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A solid 10×10×10 cube is assembled from 10^3 unit cubes. Each unit cube is orange on exactly 6−1 faces; the remaining 1 ",
+      "correct_answer": "2032",
+      "seed_value": 1618278805
+    },
+    "iso_time": "2025-12-09T05:25:38Z"
+  },
+  {
+    "timestamp": 1765257938.010745,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2025",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:25:38Z"
+  },
+  {
+    "timestamp": 1765257958.149191,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2032",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T05:25:58Z"
+  },
+  {
+    "timestamp": 1765258025.723655,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2032",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T05:27:05Z"
+  },
+  {
+    "timestamp": 1765258080.621984,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2034",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:28:00Z"
+  },
+  {
+    "timestamp": 1765258113.961496,
+    "seed_id": "2005-I-9::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2033",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T05:28:33Z"
+  },
+  {
+    "timestamp": 1765258226.0280051,
+    "seed_id": "2005-I-9::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-9::2005_prompt02-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T05:30:26Z"
+  }
+]

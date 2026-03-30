@@ -1,0 +1,788 @@
+[
+  {
+    "timestamp": 1765288756.03512,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "Find the number of positive integers that are divisors of at least one of $10^{10},15^7,18^{11}.$",
+      "answer": "435",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T13:59:16Z"
+  },
+  {
+    "timestamp": 1765288756.0351949,
+    "seed_id": "2005-II-4::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T13:59:16Z"
+  },
+  {
+    "timestamp": 1765288756.0352252,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find the number of positive integers that are divisors of at least one of $10^{10},15^7,18^{11}.$",
+      "answer": "435",
+      "example_id": "2005-II-4::2005"
+    },
+    "iso_time": "2025-12-09T13:59:16Z"
+  },
+  {
+    "timestamp": 1765288980.485604,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-4::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1787389076
+    },
+    "iso_time": "2025-12-09T14:03:00Z"
+  },
+  {
+    "timestamp": 1765288981.714071,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 3,
+        "m": 5,
+        "primes": [
+          3,
+          5,
+          13
+        ],
+        "x_list": [
+          4,
+          2,
+          3
+        ],
+        "u_list": [
+          3,
+          4,
+          8,
+          9,
+          11
+        ],
+        "threshold_t": 2,
+        "upper_r": 3
+      }
+    },
+    "iso_time": "2025-12-09T14:03:01Z"
+  },
+  {
+    "timestamp": 1765288982.855032,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17695
+    },
+    "iso_time": "2025-12-09T14:03:02Z"
+  },
+  {
+    "timestamp": 1765288982.855179,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let [3, 5, 13] be 3 distinct primes, let [4, 2, 3] be 3 positive integers, and let [3, 4, 8, 9, 11] be 5 distinct positi",
+      "correct_answer": "17695",
+      "seed_value": 1787389076
+    },
+    "iso_time": "2025-12-09T14:03:02Z"
+  },
+  {
+    "timestamp": 1765288982.855226,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "17696",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:03:02Z"
+  },
+  {
+    "timestamp": 1765289044.509102,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17689",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:04:04Z"
+  },
+  {
+    "timestamp": 1765289125.18543,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "17695",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T14:05:25Z"
+  },
+  {
+    "timestamp": 1765289222.1793668,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "17695",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T14:07:02Z"
+  },
+  {
+    "timestamp": 1765289276.091375,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17700",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:07:56Z"
+  },
+  {
+    "timestamp": 1765289323.547185,
+    "seed_id": "2005-II-4::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-4::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T14:08:43Z"
+  },
+  {
+    "timestamp": 1765289323.5472739,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-4::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 509887721
+    },
+    "iso_time": "2025-12-09T14:08:43Z"
+  },
+  {
+    "timestamp": 1765289324.98084,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 5,
+        "m": 6,
+        "primes": [
+          5,
+          7,
+          13,
+          17,
+          19
+        ],
+        "x_list": [
+          4,
+          3,
+          4,
+          4,
+          3
+        ],
+        "u_list": [
+          3,
+          4,
+          7,
+          8,
+          11,
+          12
+        ],
+        "threshold_t": 4,
+        "upper_r": 4
+      }
+    },
+    "iso_time": "2025-12-09T14:08:44Z"
+  },
+  {
+    "timestamp": 1765289326.060844,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10973979
+    },
+    "iso_time": "2025-12-09T14:08:46Z"
+  },
+  {
+    "timestamp": 1765289326.061051,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let [5, 7, 13, 17, 19] be 5 distinct primes, let [4, 3, 4, 4, 3] be 5 positive integers, and let [3, 4, 7, 8, 11, 12] be",
+      "correct_answer": "10973979",
+      "seed_value": 509887721
+    },
+    "iso_time": "2025-12-09T14:08:46Z"
+  },
+  {
+    "timestamp": 1765289326.061098,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10973976",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:08:46Z"
+  },
+  {
+    "timestamp": 1765289404.5468748,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10973974",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:10:04Z"
+  },
+  {
+    "timestamp": 1765289489.9080598,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10973980",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:11:29Z"
+  },
+  {
+    "timestamp": 1765289528.552087,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10973979",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T14:12:08Z"
+  },
+  {
+    "timestamp": 1765289597.6774,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10973979",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T14:13:17Z"
+  },
+  {
+    "timestamp": 1765289631.77822,
+    "seed_id": "2005-II-4::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-4::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T14:13:51Z"
+  },
+  {
+    "timestamp": 1765289631.7783911,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-4::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 441213150
+    },
+    "iso_time": "2025-12-09T14:13:51Z"
+  },
+  {
+    "timestamp": 1765289633.116191,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 5,
+        "m": 6,
+        "primes": [
+          2,
+          3,
+          13,
+          17,
+          19
+        ],
+        "x_list": [
+          4,
+          1,
+          3,
+          1,
+          4
+        ],
+        "u_list": [
+          2,
+          6,
+          7,
+          8,
+          9,
+          11
+        ],
+        "threshold_t": 4,
+        "upper_r": 4
+      }
+    },
+    "iso_time": "2025-12-09T14:13:53Z"
+  },
+  {
+    "timestamp": 1765289634.180575,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 602253
+    },
+    "iso_time": "2025-12-09T14:13:54Z"
+  },
+  {
+    "timestamp": 1765289634.180755,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let [2, 3, 13, 17, 19] be 5 distinct primes, let [4, 1, 3, 1, 4] be 5 positive integers, and let [2, 6, 7, 8, 9, 11] be ",
+      "correct_answer": "602253",
+      "seed_value": 441213150
+    },
+    "iso_time": "2025-12-09T14:13:54Z"
+  },
+  {
+    "timestamp": 1765289634.180809,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "602245",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:13:54Z"
+  },
+  {
+    "timestamp": 1765289730.0292668,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "602253",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T14:15:30Z"
+  },
+  {
+    "timestamp": 1765289778.407497,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "602246",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:16:18Z"
+  },
+  {
+    "timestamp": 1765289809.231775,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "602253",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T14:16:49Z"
+  },
+  {
+    "timestamp": 1765289836.8803709,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "602258",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:17:16Z"
+  },
+  {
+    "timestamp": 1765289889.5150888,
+    "seed_id": "2005-II-4::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-4::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T14:18:09Z"
+  },
+  {
+    "timestamp": 1765289889.51526,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-4::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 506693270
+    },
+    "iso_time": "2025-12-09T14:18:09Z"
+  },
+  {
+    "timestamp": 1765289890.803633,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 5,
+        "m": 6,
+        "primes": [
+          5,
+          11,
+          13,
+          17,
+          19
+        ],
+        "x_list": [
+          4,
+          3,
+          2,
+          1,
+          1
+        ],
+        "u_list": [
+          2,
+          4,
+          5,
+          6,
+          10,
+          11
+        ],
+        "threshold_t": 2,
+        "upper_r": 4
+      }
+    },
+    "iso_time": "2025-12-09T14:18:10Z"
+  },
+  {
+    "timestamp": 1765289891.9439979,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3179886
+    },
+    "iso_time": "2025-12-09T14:18:11Z"
+  },
+  {
+    "timestamp": 1765289891.94417,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let [5, 11, 13, 17, 19] be 5 distinct primes, let [4, 3, 2, 1, 1] be 5 positive integers, and let [2, 4, 5, 6, 10, 11] b",
+      "correct_answer": "3179886",
+      "seed_value": 506693270
+    },
+    "iso_time": "2025-12-09T14:18:11Z"
+  },
+  {
+    "timestamp": 1765289891.944221,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3179890",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:18:11Z"
+  },
+  {
+    "timestamp": 1765289974.9202182,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3179886",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T14:19:34Z"
+  },
+  {
+    "timestamp": 1765290063.923197,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3179886",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T14:21:03Z"
+  },
+  {
+    "timestamp": 1765290103.014643,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3179880",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:21:43Z"
+  },
+  {
+    "timestamp": 1765290170.234122,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3179883",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:22:50Z"
+  },
+  {
+    "timestamp": 1765290270.111902,
+    "seed_id": "2005-II-4::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-4::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T14:24:30Z"
+  },
+  {
+    "timestamp": 1765290270.111968,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-II-4::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 18768220
+    },
+    "iso_time": "2025-12-09T14:24:30Z"
+  },
+  {
+    "timestamp": 1765290271.2471528,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 3,
+        "m": 4,
+        "primes": [
+          3,
+          11,
+          19
+        ],
+        "x_list": [
+          3,
+          4,
+          1
+        ],
+        "u_list": [
+          3,
+          4,
+          5,
+          10
+        ],
+        "threshold_t": 3,
+        "upper_r": 3
+      }
+    },
+    "iso_time": "2025-12-09T14:24:31Z"
+  },
+  {
+    "timestamp": 1765290272.479311,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 585
+    },
+    "iso_time": "2025-12-09T14:24:32Z"
+  },
+  {
+    "timestamp": 1765290272.47951,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let [3, 11, 19] be 3 distinct primes, let [3, 4, 1] be 3 positive integers, and let [3, 4, 5, 10] be 4 distinct positive",
+      "correct_answer": "585",
+      "seed_value": 18768220
+    },
+    "iso_time": "2025-12-09T14:24:32Z"
+  },
+  {
+    "timestamp": 1765290272.479564,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "585",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T14:24:32Z"
+  },
+  {
+    "timestamp": 1765290315.822619,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "579",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:25:15Z"
+  },
+  {
+    "timestamp": 1765290372.030221,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "585",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T14:26:12Z"
+  },
+  {
+    "timestamp": 1765290408.8450718,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "587",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:26:48Z"
+  },
+  {
+    "timestamp": 1765290483.790528,
+    "seed_id": "2005-II-4::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "586",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T14:28:03Z"
+  },
+  {
+    "timestamp": 1765290551.156797,
+    "seed_id": "2005-II-4::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-II-4::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T14:29:11Z"
+  }
+]

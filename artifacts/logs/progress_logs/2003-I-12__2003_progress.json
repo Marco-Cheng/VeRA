@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764737583.23998,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "In convex quadrilateral $ABCD, \\angle A \\cong \\angle C, AB = CD = 180,$ and $AD \\neq BC.$ The perimeter of $ABCD$ is 640",
+      "answer": "777",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-03T04:53:03Z"
+  },
+  {
+    "timestamp": 1764737583.2400482,
+    "seed_id": "2003-I-12::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-03T04:53:03Z"
+  },
+  {
+    "timestamp": 1764737583.2400799,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In convex quadrilateral $ABCD, \\angle A \\cong \\angle C, AB = CD = 180,$ and $AD \\neq BC.$ The perimeter of $ABCD$ is 640. Find $\\lfloor 1000 \\cos A \\rfloor.$ (The notation $\\lfloor x \\rfloor$ means the greatest integer that is less than or equal to $x.$ )",
+      "answer": "777",
+      "example_id": "2003-I-12::2003"
+    },
+    "iso_time": "2025-12-03T04:53:03Z"
+  },
+  {
+    "timestamp": 1764737717.028265,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-12::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1661533678
+    },
+    "iso_time": "2025-12-03T04:55:17Z"
+  },
+  {
+    "timestamp": 1764737718.158132,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "equal_side": 280,
+        "perimeter": 980,
+        "bd": 227,
+        "scale": 800
+      }
+    },
+    "iso_time": "2025-12-03T04:55:18Z"
+  },
+  {
+    "timestamp": 1764737719.231644,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3651
+    },
+    "iso_time": "2025-12-03T04:55:19Z"
+  },
+  {
+    "timestamp": 1764737719.2317939,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a convex quadrilateral ABCD with angle A equal to angle C and AB = CD = 280, the perimeter is 980, the diagonal BD ha",
+      "correct_answer": "3651",
+      "seed_value": 1661533678
+    },
+    "iso_time": "2025-12-03T04:55:19Z"
+  },
+  {
+    "timestamp": 1764737719.231862,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3653",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T04:55:19Z"
+  },
+  {
+    "timestamp": 1764737745.739058,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3651",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T04:55:45Z"
+  },
+  {
+    "timestamp": 1764737767.6877482,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3660",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T04:56:07Z"
+  },
+  {
+    "timestamp": 1764737798.231606,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3651",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T04:56:38Z"
+  },
+  {
+    "timestamp": 1764737819.448071,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3650",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T04:56:59Z"
+  },
+  {
+    "timestamp": 1764737937.141859,
+    "seed_id": "2003-I-12::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-12::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T04:58:57Z"
+  },
+  {
+    "timestamp": 1764737937.1420429,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-12::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 829688314
+    },
+    "iso_time": "2025-12-03T04:58:57Z"
+  },
+  {
+    "timestamp": 1764737938.4579892,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "equal_side": 420,
+        "perimeter": 1440,
+        "bd": 344,
+        "scale": 1100
+      }
+    },
+    "iso_time": "2025-12-03T04:58:58Z"
+  },
+  {
+    "timestamp": 1764737939.620621,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4620
+    },
+    "iso_time": "2025-12-03T04:58:59Z"
+  },
+  {
+    "timestamp": 1764737939.620755,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a convex quadrilateral ABCD with angle A equal to angle C and AB = CD = 420, the perimeter is 1440, the diagonal BD h",
+      "correct_answer": "4620",
+      "seed_value": 829688314
+    },
+    "iso_time": "2025-12-03T04:58:59Z"
+  },
+  {
+    "timestamp": 1764737939.6208131,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4624",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T04:58:59Z"
+  },
+  {
+    "timestamp": 1764737982.080523,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4612",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T04:59:42Z"
+  },
+  {
+    "timestamp": 1764738013.41429,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4614",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T05:00:13Z"
+  },
+  {
+    "timestamp": 1764738060.727343,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4620",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T05:01:00Z"
+  },
+  {
+    "timestamp": 1764738088.1468532,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4620",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T05:01:28Z"
+  },
+  {
+    "timestamp": 1764738122.477539,
+    "seed_id": "2003-I-12::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-12::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T05:02:02Z"
+  },
+  {
+    "timestamp": 1764738122.47771,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-12::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1530955060
+    },
+    "iso_time": "2025-12-03T05:02:02Z"
+  },
+  {
+    "timestamp": 1764738123.607981,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "equal_side": 336,
+        "perimeter": 1176,
+        "bd": 241,
+        "scale": 1100
+      }
+    },
+    "iso_time": "2025-12-03T05:02:03Z"
+  },
+  {
+    "timestamp": 1764738124.667902,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2897
+    },
+    "iso_time": "2025-12-03T05:02:04Z"
+  },
+  {
+    "timestamp": 1764738124.6680572,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a convex quadrilateral ABCD with angle A equal to angle C and AB = CD = 336, the perimeter is 1176, the diagonal BD h",
+      "correct_answer": "2897",
+      "seed_value": 1530955060
+    },
+    "iso_time": "2025-12-03T05:02:04Z"
+  },
+  {
+    "timestamp": 1764738124.6681201,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2899",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T05:02:04Z"
+  },
+  {
+    "timestamp": 1764738194.870404,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2897",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T05:03:14Z"
+  },
+  {
+    "timestamp": 1764738268.598528,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2897",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T05:04:28Z"
+  },
+  {
+    "timestamp": 1764738289.0913641,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2889",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T05:04:49Z"
+  },
+  {
+    "timestamp": 1764738390.143671,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2898",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T05:06:30Z"
+  },
+  {
+    "timestamp": 1764738486.260496,
+    "seed_id": "2003-I-12::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-12::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T05:08:06Z"
+  },
+  {
+    "timestamp": 1764738486.260591,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-12::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 914761861
+    },
+    "iso_time": "2025-12-03T05:08:06Z"
+  },
+  {
+    "timestamp": 1764738487.606091,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "equal_side": 544,
+        "perimeter": 2040,
+        "bd": 444,
+        "scale": 1200
+      }
+    },
+    "iso_time": "2025-12-03T05:08:07Z"
+  },
+  {
+    "timestamp": 1764738488.732126,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8607
+    },
+    "iso_time": "2025-12-03T05:08:08Z"
+  },
+  {
+    "timestamp": 1764738488.7322571,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a convex quadrilateral ABCD with angle A equal to angle C and AB = CD = 544, the perimeter is 2040, the diagonal BD h",
+      "correct_answer": "8607",
+      "seed_value": 914761861
+    },
+    "iso_time": "2025-12-03T05:08:08Z"
+  },
+  {
+    "timestamp": 1764738488.732353,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8612",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T05:08:08Z"
+  },
+  {
+    "timestamp": 1764738524.699467,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8607",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T05:08:44Z"
+  },
+  {
+    "timestamp": 1764738566.479357,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8615",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T05:09:26Z"
+  },
+  {
+    "timestamp": 1764738679.632185,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8607",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T05:11:19Z"
+  },
+  {
+    "timestamp": 1764738756.846431,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8600",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T05:12:36Z"
+  },
+  {
+    "timestamp": 1764738786.651841,
+    "seed_id": "2003-I-12::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-12::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T05:13:06Z"
+  },
+  {
+    "timestamp": 1764738786.652012,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-12::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 364548082
+    },
+    "iso_time": "2025-12-03T05:13:06Z"
+  },
+  {
+    "timestamp": 1764738787.77971,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "equal_side": 210,
+        "perimeter": 700,
+        "bd": 166,
+        "scale": 1000
+      }
+    },
+    "iso_time": "2025-12-03T05:13:07Z"
+  },
+  {
+    "timestamp": 1764738788.9621398,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2738
+    },
+    "iso_time": "2025-12-03T05:13:08Z"
+  },
+  {
+    "timestamp": 1764738788.962304,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a convex quadrilateral ABCD with angle A equal to angle C and AB = CD = 210, the perimeter is 700, the diagonal BD ha",
+      "correct_answer": "2738",
+      "seed_value": 364548082
+    },
+    "iso_time": "2025-12-03T05:13:08Z"
+  },
+  {
+    "timestamp": 1764738788.962362,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2747",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T05:13:08Z"
+  },
+  {
+    "timestamp": 1764738856.077872,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2746",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T05:14:16Z"
+  },
+  {
+    "timestamp": 1764738896.105383,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2741",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T05:14:56Z"
+  },
+  {
+    "timestamp": 1764738922.7929192,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2738",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T05:15:22Z"
+  },
+  {
+    "timestamp": 1764738944.7444952,
+    "seed_id": "2003-I-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2738",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T05:15:44Z"
+  },
+  {
+    "timestamp": 1764738972.7051961,
+    "seed_id": "2003-I-12::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-12::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T05:16:12Z"
+  }
+]

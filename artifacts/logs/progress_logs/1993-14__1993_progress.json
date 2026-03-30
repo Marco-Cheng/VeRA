@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1763904938.461152,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1993,
+      "question_preview": "A rectangle that is inscribed in a larger rectangle (with one vertex on each side) is called unstuck if it is possible t",
+      "answer": "448",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-23T13:35:38Z"
+  },
+  {
+    "timestamp": 1763904938.461225,
+    "seed_id": "1993-14::1993",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-23T13:35:38Z"
+  },
+  {
+    "timestamp": 1763904938.461256,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A rectangle that is inscribed in a larger rectangle (with one vertex on each side) is called unstuck if it is possible to rotate (however slightly) the smaller rectangle about its center within the confines of the larger. Of all the rectangles that can be inscribed unstuck in a 6 by 8 rectangle, the smallest perimeter has the form $\\sqrt{N}\\,$ , for a positive integer $N\\,$ . Find $N\\,$ .",
+      "answer": "448",
+      "example_id": "1993-14::1993"
+    },
+    "iso_time": "2025-11-23T13:35:38Z"
+  },
+  {
+    "timestamp": 1763905104.120651,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-14::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 780013202
+    },
+    "iso_time": "2025-11-23T13:38:24Z"
+  },
+  {
+    "timestamp": 1763905104.913999,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "outer_w": 70,
+        "outer_h": 30
+      }
+    },
+    "iso_time": "2025-11-23T13:38:24Z"
+  },
+  {
+    "timestamp": 1763905105.6639009,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 28000
+    },
+    "iso_time": "2025-11-23T13:38:25Z"
+  },
+  {
+    "timestamp": 1763905105.664051,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 70 by 30 axis-aligned rectangle. A smaller rectangle is inscribed with exactly one vertex on each side of the",
+      "correct_answer": "28000",
+      "seed_value": 780013202
+    },
+    "iso_time": "2025-11-23T13:38:25Z"
+  },
+  {
+    "timestamp": 1763905105.664098,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "28000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T13:38:25Z"
+  },
+  {
+    "timestamp": 1763905202.747187,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "27994",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T13:40:02Z"
+  },
+  {
+    "timestamp": 1763905262.4470131,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "28006",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T13:41:02Z"
+  },
+  {
+    "timestamp": 1763905316.820491,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "27999",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T13:41:56Z"
+  },
+  {
+    "timestamp": 1763905373.959317,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "28000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T13:42:53Z"
+  },
+  {
+    "timestamp": 1763905896.8068428,
+    "seed_id": "1993-14::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-14::1993_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T13:51:36Z"
+  },
+  {
+    "timestamp": 1763905896.80704,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-14::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2049906047
+    },
+    "iso_time": "2025-11-23T13:51:36Z"
+  },
+  {
+    "timestamp": 1763905897.575687,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "outer_w": 37,
+        "outer_h": 23
+      }
+    },
+    "iso_time": "2025-11-23T13:51:37Z"
+  },
+  {
+    "timestamp": 1763905898.320844,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8880
+    },
+    "iso_time": "2025-11-23T13:51:38Z"
+  },
+  {
+    "timestamp": 1763905898.320975,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 37 by 23 axis-aligned rectangle. A smaller rectangle is inscribed with exactly one vertex on each side of the",
+      "correct_answer": "8880",
+      "seed_value": 2049906047
+    },
+    "iso_time": "2025-11-23T13:51:38Z"
+  },
+  {
+    "timestamp": 1763905898.321016,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8880",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T13:51:38Z"
+  },
+  {
+    "timestamp": 1763905971.298949,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8889",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T13:52:51Z"
+  },
+  {
+    "timestamp": 1763906050.267515,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8888",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T13:54:10Z"
+  },
+  {
+    "timestamp": 1763906170.009829,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8885",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T13:56:10Z"
+  },
+  {
+    "timestamp": 1763907193.5968451,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8880",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T14:13:13Z"
+  },
+  {
+    "timestamp": 1763907250.499912,
+    "seed_id": "1993-14::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-14::1993_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T14:14:10Z"
+  },
+  {
+    "timestamp": 1763907250.4999738,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-14::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 21673478
+    },
+    "iso_time": "2025-11-23T14:14:10Z"
+  },
+  {
+    "timestamp": 1763907251.440137,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "outer_w": 45,
+        "outer_h": 6
+      }
+    },
+    "iso_time": "2025-11-23T14:14:11Z"
+  },
+  {
+    "timestamp": 1763907252.348188,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 9180
+    },
+    "iso_time": "2025-11-23T14:14:12Z"
+  },
+  {
+    "timestamp": 1763907252.3483698,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 45 by 6 axis-aligned rectangle. A smaller rectangle is inscribed with exactly one vertex on each side of the ",
+      "correct_answer": "9180",
+      "seed_value": 21673478
+    },
+    "iso_time": "2025-11-23T14:14:12Z"
+  },
+  {
+    "timestamp": 1763907252.348418,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "9186",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T14:14:12Z"
+  },
+  {
+    "timestamp": 1763907311.377059,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "9178",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T14:15:11Z"
+  },
+  {
+    "timestamp": 1763907384.984819,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "9180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T14:16:24Z"
+  },
+  {
+    "timestamp": 1763907462.296575,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "9173",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T14:17:42Z"
+  },
+  {
+    "timestamp": 1763907540.827153,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "9180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T14:19:00Z"
+  },
+  {
+    "timestamp": 1763907623.270585,
+    "seed_id": "1993-14::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-14::1993_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T14:20:23Z"
+  },
+  {
+    "timestamp": 1763907623.2706401,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-14::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 871330893
+    },
+    "iso_time": "2025-11-23T14:20:23Z"
+  },
+  {
+    "timestamp": 1763907624.249747,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "outer_w": 29,
+        "outer_h": 10
+      }
+    },
+    "iso_time": "2025-11-23T14:20:24Z"
+  },
+  {
+    "timestamp": 1763907625.225955,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4524
+    },
+    "iso_time": "2025-11-23T14:20:25Z"
+  },
+  {
+    "timestamp": 1763907625.226125,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 29 by 10 axis-aligned rectangle. A smaller rectangle is inscribed with exactly one vertex on each side of the",
+      "correct_answer": "4524",
+      "seed_value": 871330893
+    },
+    "iso_time": "2025-11-23T14:20:25Z"
+  },
+  {
+    "timestamp": 1763907625.226186,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4524",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T14:20:25Z"
+  },
+  {
+    "timestamp": 1763907676.92741,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4522",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T14:21:16Z"
+  },
+  {
+    "timestamp": 1763907747.5508149,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4519",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T14:22:27Z"
+  },
+  {
+    "timestamp": 1763908128.274393,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4515",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T14:28:48Z"
+  },
+  {
+    "timestamp": 1763908191.198142,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4524",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T14:29:51Z"
+  },
+  {
+    "timestamp": 1763908283.0028749,
+    "seed_id": "1993-14::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-14::1993_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T14:31:23Z"
+  },
+  {
+    "timestamp": 1763908283.002958,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-14::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 633946411
+    },
+    "iso_time": "2025-11-23T14:31:23Z"
+  },
+  {
+    "timestamp": 1763908284.0769742,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "outer_w": 67,
+        "outer_h": 23
+      }
+    },
+    "iso_time": "2025-11-23T14:31:24Z"
+  },
+  {
+    "timestamp": 1763908285.086949,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 24120
+    },
+    "iso_time": "2025-11-23T14:31:25Z"
+  },
+  {
+    "timestamp": 1763908285.087143,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a 67 by 23 axis-aligned rectangle. A smaller rectangle is inscribed with exactly one vertex on each side of the",
+      "correct_answer": "24120",
+      "seed_value": 633946411
+    },
+    "iso_time": "2025-11-23T14:31:25Z"
+  },
+  {
+    "timestamp": 1763908285.087193,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "24125",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T14:31:25Z"
+  },
+  {
+    "timestamp": 1763908359.463828,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "24124",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T14:32:39Z"
+  },
+  {
+    "timestamp": 1763908469.9031858,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "24128",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T14:34:29Z"
+  },
+  {
+    "timestamp": 1763908513.7314382,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "24120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T14:35:13Z"
+  },
+  {
+    "timestamp": 1763908578.117888,
+    "seed_id": "1993-14::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "24120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T14:36:18Z"
+  },
+  {
+    "timestamp": 1763908680.738823,
+    "seed_id": "1993-14::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-14::1993_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T14:38:00Z"
+  }
+]

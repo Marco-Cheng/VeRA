@@ -1,0 +1,1242 @@
+[
+  {
+    "timestamp": 1764888895.617852,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "A cylindrical log has diameter $12$ inches. A wedge is cut from the log by making two planar cuts that go entirely throu",
+      "answer": "216",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-04T22:54:55Z"
+  },
+  {
+    "timestamp": 1764888895.617931,
+    "seed_id": "2003-II-5::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-04T22:54:55Z"
+  },
+  {
+    "timestamp": 1764888895.617961,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A cylindrical log has diameter $12$ inches. A wedge is cut from the log by making two planar cuts that go entirely through the log. The first is perpendicular to the axis of the cylinder, and the plane of the second cut forms a $45^\\circ$ angle with the plane of the first cut. The intersection of these two planes has exactly one point in common with the log. The number of cubic inches in the wedge can be expressed as $n\\pi$ , where n is a positive integer. Find $n$ .",
+      "answer": "216",
+      "example_id": "2003-II-5::2003"
+    },
+    "iso_time": "2025-12-04T22:54:55Z"
+  },
+  {
+    "timestamp": 1764889270.248517,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-5::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1151734068
+    },
+    "iso_time": "2025-12-04T23:01:10Z"
+  },
+  {
+    "timestamp": 1764889271.595499,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "diameter": 42,
+        "cos_num": 7,
+        "cos_den": 25,
+        "tan_num": 1,
+        "tan_den": 1
+      }
+    },
+    "iso_time": "2025-12-04T23:01:11Z"
+  },
+  {
+    "timestamp": 1764889272.7232718,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 33075
+    },
+    "iso_time": "2025-12-04T23:01:12Z"
+  },
+  {
+    "timestamp": 1764889272.7234502,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right circular cylinder has diameter 42. A plane Π1 slices the cylinder, making a dihedral angle α with a plane perpen",
+      "correct_answer": "33075",
+      "seed_value": 1151734068
+    },
+    "iso_time": "2025-12-04T23:01:12Z"
+  },
+  {
+    "timestamp": 1764889272.723525,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "33075",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T23:01:12Z"
+  },
+  {
+    "timestamp": 1764889569.938069,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "33080",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T23:06:09Z"
+  },
+  {
+    "timestamp": 1764889936.105081,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "33069",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T23:12:16Z"
+  },
+  {
+    "timestamp": 1764890058.2925282,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "33078",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T23:14:18Z"
+  },
+  {
+    "timestamp": 1764890156.2194428,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "33075",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T23:15:56Z"
+  },
+  {
+    "timestamp": 1764890430.564597,
+    "seed_id": "2003-II-5::2003",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-04T23:20:30Z"
+  },
+  {
+    "timestamp": 1764890430.564856,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-5::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1326461258
+    },
+    "iso_time": "2025-12-04T23:20:30Z"
+  },
+  {
+    "timestamp": 1764890431.903486,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "diameter": 416,
+        "cos_num": 13,
+        "cos_den": 85,
+        "tan_num": 3,
+        "tan_den": 4
+      }
+    },
+    "iso_time": "2025-12-04T23:20:31Z"
+  },
+  {
+    "timestamp": 1764890433.020319,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 44129280
+    },
+    "iso_time": "2025-12-04T23:20:33Z"
+  },
+  {
+    "timestamp": 1764890433.020496,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right circular cylinder has diameter 416. A plane Π1 slices the cylinder, making a dihedral angle α with a plane perpe",
+      "correct_answer": "44129280",
+      "seed_value": 1326461258
+    },
+    "iso_time": "2025-12-04T23:20:33Z"
+  },
+  {
+    "timestamp": 1764890433.020579,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "44129280",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T23:20:33Z"
+  },
+  {
+    "timestamp": 1764890475.244152,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "44129271",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T23:21:15Z"
+  },
+  {
+    "timestamp": 1764890771.0857449,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "44129280",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T23:26:11Z"
+  },
+  {
+    "timestamp": 1764891175.693633,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "44129272",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T23:32:55Z"
+  },
+  {
+    "timestamp": 1764891449.003114,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "44129278",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T23:37:29Z"
+  },
+  {
+    "timestamp": 1764891506.44936,
+    "seed_id": "2003-II-5::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-5::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-04T23:38:26Z"
+  },
+  {
+    "timestamp": 1764891506.449467,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-5::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 792025484
+    },
+    "iso_time": "2025-12-04T23:38:26Z"
+  },
+  {
+    "timestamp": 1764891507.812182,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "diameter": 12,
+        "cos_num": 3,
+        "cos_den": 5,
+        "tan_num": 2,
+        "tan_den": 5
+      }
+    },
+    "iso_time": "2025-12-04T23:38:27Z"
+  },
+  {
+    "timestamp": 1764891508.876917,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 144
+    },
+    "iso_time": "2025-12-04T23:38:28Z"
+  },
+  {
+    "timestamp": 1764891508.877074,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right circular cylinder has diameter 12. A plane Π1 slices the cylinder, making a dihedral angle α with a plane perpen",
+      "correct_answer": "144",
+      "seed_value": 792025484
+    },
+    "iso_time": "2025-12-04T23:38:28Z"
+  },
+  {
+    "timestamp": 1764891508.87715,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "143",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T23:38:28Z"
+  },
+  {
+    "timestamp": 1764891622.666611,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "144",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T23:40:22Z"
+  },
+  {
+    "timestamp": 1764892193.28295,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "144",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T23:49:53Z"
+  },
+  {
+    "timestamp": 1764892312.3837929,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "151",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T23:51:52Z"
+  },
+  {
+    "timestamp": 1764892456.606974,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "153",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T23:54:16Z"
+  },
+  {
+    "timestamp": 1764892760.219274,
+    "seed_id": "2003-II-5::2003",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-04T23:59:20Z"
+  },
+  {
+    "timestamp": 1764892760.2194738,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-5::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 239286912
+    },
+    "iso_time": "2025-12-04T23:59:20Z"
+  },
+  {
+    "timestamp": 1764892761.6035972,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "diameter": 56,
+        "cos_num": 7,
+        "cos_den": 25,
+        "tan_num": 3,
+        "tan_den": 1
+      }
+    },
+    "iso_time": "2025-12-04T23:59:21Z"
+  },
+  {
+    "timestamp": 1764892762.7614698,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 235200
+    },
+    "iso_time": "2025-12-04T23:59:22Z"
+  },
+  {
+    "timestamp": 1764892762.761627,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right circular cylinder has diameter 56. A plane Π1 slices the cylinder, making a dihedral angle α with a plane perpen",
+      "correct_answer": "235200",
+      "seed_value": 239286912
+    },
+    "iso_time": "2025-12-04T23:59:22Z"
+  },
+  {
+    "timestamp": 1764892762.761695,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "235203",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T23:59:22Z"
+  },
+  {
+    "timestamp": 1764893375.947148,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "235200",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:09:35Z"
+  },
+  {
+    "timestamp": 1764893504.714095,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "235208",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:11:44Z"
+  },
+  {
+    "timestamp": 1764893801.319735,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "235200",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:16:41Z"
+  },
+  {
+    "timestamp": 1764893974.3771572,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "235209",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:19:34Z"
+  },
+  {
+    "timestamp": 1764894130.7452228,
+    "seed_id": "2003-II-5::2003",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T00:22:10Z"
+  },
+  {
+    "timestamp": 1764894130.7455208,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-5::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1289689594
+    },
+    "iso_time": "2025-12-05T00:22:10Z"
+  },
+  {
+    "timestamp": 1764894132.112446,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "diameter": 30,
+        "cos_num": 5,
+        "cos_den": 13,
+        "tan_num": 2,
+        "tan_den": 1
+      }
+    },
+    "iso_time": "2025-12-05T00:22:12Z"
+  },
+  {
+    "timestamp": 1764894133.205354,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17550
+    },
+    "iso_time": "2025-12-05T00:22:13Z"
+  },
+  {
+    "timestamp": 1764894133.2054882,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right circular cylinder has diameter 30. A plane Π1 slices the cylinder, making a dihedral angle α with a plane perpen",
+      "correct_answer": "17550",
+      "seed_value": 1289689594
+    },
+    "iso_time": "2025-12-05T00:22:13Z"
+  },
+  {
+    "timestamp": 1764894133.205555,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "17550",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:22:13Z"
+  },
+  {
+    "timestamp": 1764894307.9997241,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17558",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:25:07Z"
+  },
+  {
+    "timestamp": 1764894408.793428,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "17544",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:26:48Z"
+  },
+  {
+    "timestamp": 1764894437.2297049,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "17542",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:27:17Z"
+  },
+  {
+    "timestamp": 1764894533.467742,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17550",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:28:53Z"
+  },
+  {
+    "timestamp": 1764894710.801193,
+    "seed_id": "2003-II-5::2003",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T00:31:50Z"
+  },
+  {
+    "timestamp": 1764894710.801449,
+    "seed_id": "2003-II-5::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-05T00:31:50Z"
+  },
+  {
+    "timestamp": 1764894710.801562,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 3 (successes=3). | Judge rejected variant 4 (successes=3).",
+      "question": "A cylindrical log has diameter $12$ inches. A wedge is cut from the log by making two planar cuts that go entirely through the log. The first is perpendicular to the axis of the cylinder, and the plane of the second cut forms a $45^\\circ$ angle with the plane of the first cut. The intersection of these two planes has exactly one point in common with the log. The number of cubic inches in the wedge can be expressed as $n\\pi$ , where n is a positive integer. Find $n$ .",
+      "answer": "216",
+      "example_id": "2003-II-5::2003"
+    },
+    "iso_time": "2025-12-05T00:31:50Z"
+  },
+  {
+    "timestamp": 1764894971.817337,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-5::2003_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 383080034
+    },
+    "iso_time": "2025-12-05T00:36:11Z"
+  },
+  {
+    "timestamp": 1764894973.277521,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 17,
+        "b": 9,
+        "tan_num": 3,
+        "tan_den": 2,
+        "u_x": -5,
+        "u_y": 4
+      }
+    },
+    "iso_time": "2025-12-05T00:36:13Z"
+  },
+  {
+    "timestamp": 1764894974.340845,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 349902
+    },
+    "iso_time": "2025-12-05T00:36:14Z"
+  },
+  {
+    "timestamp": 1764894974.3409972,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right elliptic cylinder has cross-sectional ellipse x^2/17^2 + y^2/9^2 = 1 in a plane Π that is perpendicular to the c",
+      "correct_answer": "349902",
+      "seed_value": 383080034
+    },
+    "iso_time": "2025-12-05T00:36:14Z"
+  },
+  {
+    "timestamp": 1764894974.341076,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "349896",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:36:14Z"
+  },
+  {
+    "timestamp": 1764895023.91415,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "349902",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:37:03Z"
+  },
+  {
+    "timestamp": 1764895122.63848,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "349900",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:38:42Z"
+  },
+  {
+    "timestamp": 1764895160.945614,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "349902",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:39:20Z"
+  },
+  {
+    "timestamp": 1764895193.900494,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "349908",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:39:53Z"
+  },
+  {
+    "timestamp": 1764895233.032452,
+    "seed_id": "2003-II-5::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-5::2003_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T00:40:33Z"
+  },
+  {
+    "timestamp": 1764895233.032636,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-5::2003_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1626898402
+    },
+    "iso_time": "2025-12-05T00:40:33Z"
+  },
+  {
+    "timestamp": 1764895234.452022,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 16,
+        "b": 14,
+        "tan_num": 4,
+        "tan_den": 9,
+        "u_x": 1,
+        "u_y": -3
+      }
+    },
+    "iso_time": "2025-12-05T00:40:34Z"
+  },
+  {
+    "timestamp": 1764895235.6815832,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1107
+    },
+    "iso_time": "2025-12-05T00:40:35Z"
+  },
+  {
+    "timestamp": 1764895235.68177,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right elliptic cylinder has cross-sectional ellipse x^2/16^2 + y^2/14^2 = 1 in a plane Π that is perpendicular to the ",
+      "correct_answer": "1107",
+      "seed_value": 1626898402
+    },
+    "iso_time": "2025-12-05T00:40:35Z"
+  },
+  {
+    "timestamp": 1764895235.681846,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1113",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:40:35Z"
+  },
+  {
+    "timestamp": 1764895336.405609,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:42:16Z"
+  },
+  {
+    "timestamp": 1764895471.36916,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1106",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:44:31Z"
+  },
+  {
+    "timestamp": 1764895504.614313,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1107",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:45:04Z"
+  },
+  {
+    "timestamp": 1764895522.5037498,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1107",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:45:22Z"
+  },
+  {
+    "timestamp": 1764895556.360769,
+    "seed_id": "2003-II-5::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-5::2003_prompt02-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T00:45:56Z"
+  },
+  {
+    "timestamp": 1764895556.3609622,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-5::2003_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1013919673
+    },
+    "iso_time": "2025-12-05T00:45:56Z"
+  },
+  {
+    "timestamp": 1764895557.709049,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 14,
+        "b": 12,
+        "tan_num": 5,
+        "tan_den": 2,
+        "u_x": 5,
+        "u_y": 1
+      }
+    },
+    "iso_time": "2025-12-05T00:45:57Z"
+  },
+  {
+    "timestamp": 1764895558.922134,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 615
+    },
+    "iso_time": "2025-12-05T00:45:58Z"
+  },
+  {
+    "timestamp": 1764895558.92232,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right elliptic cylinder has cross-sectional ellipse x^2/14^2 + y^2/12^2 = 1 in a plane Π that is perpendicular to the ",
+      "correct_answer": "615",
+      "seed_value": 1013919673
+    },
+    "iso_time": "2025-12-05T00:45:58Z"
+  },
+  {
+    "timestamp": 1764895558.922396,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "615",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:45:58Z"
+  },
+  {
+    "timestamp": 1764895600.221369,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "607",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:46:40Z"
+  },
+  {
+    "timestamp": 1764895664.288679,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "618",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:47:44Z"
+  },
+  {
+    "timestamp": 1764895683.6129742,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "615",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:48:03Z"
+  },
+  {
+    "timestamp": 1764895705.170348,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "620",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:48:25Z"
+  },
+  {
+    "timestamp": 1764895732.43291,
+    "seed_id": "2003-II-5::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-5::2003_prompt02-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T00:48:52Z"
+  },
+  {
+    "timestamp": 1764895732.43309,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-5::2003_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 2120607435
+    },
+    "iso_time": "2025-12-05T00:48:52Z"
+  },
+  {
+    "timestamp": 1764895733.592242,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 16,
+        "b": 13,
+        "tan_num": 4,
+        "tan_den": 9,
+        "u_x": -5,
+        "u_y": 2
+      }
+    },
+    "iso_time": "2025-12-05T00:48:53Z"
+  },
+  {
+    "timestamp": 1764895734.713484,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1734
+    },
+    "iso_time": "2025-12-05T00:48:54Z"
+  },
+  {
+    "timestamp": 1764895734.7136462,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right elliptic cylinder has cross-sectional ellipse x^2/16^2 + y^2/13^2 = 1 in a plane Π that is perpendicular to the ",
+      "correct_answer": "1734",
+      "seed_value": 2120607435
+    },
+    "iso_time": "2025-12-05T00:48:54Z"
+  },
+  {
+    "timestamp": 1764895734.713726,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1734",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:48:54Z"
+  },
+  {
+    "timestamp": 1764895780.886794,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1727",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:49:40Z"
+  },
+  {
+    "timestamp": 1764895838.824575,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1731",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:50:38Z"
+  },
+  {
+    "timestamp": 1764895893.603449,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1734",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T00:51:33Z"
+  },
+  {
+    "timestamp": 1764895921.9261591,
+    "seed_id": "2003-II-5::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1726",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T00:52:01Z"
+  },
+  {
+    "timestamp": 1764895945.5310621,
+    "seed_id": "2003-II-5::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-5::2003_prompt02-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T00:52:25Z"
+  }
+]

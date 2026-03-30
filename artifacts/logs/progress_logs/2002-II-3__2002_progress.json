@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764716950.7749991,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2002,
+      "question_preview": "It is given that $\\log_{6}a + \\log_{6}b + \\log_{6}c = 6$ , where $a$ , $b$ , and $c$ are positive integers that form an ",
+      "answer": "111",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-02T23:09:10Z"
+  },
+  {
+    "timestamp": 1764716950.775091,
+    "seed_id": "2002-II-3::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-02T23:09:10Z"
+  },
+  {
+    "timestamp": 1764716950.775148,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "It is given that $\\log_{6}a + \\log_{6}b + \\log_{6}c = 6$ , where $a$ , $b$ , and $c$ are positive integers that form an increasing geometric sequence and $b - a$ is the square of an integer. Find $a + b + c$ .",
+      "answer": "111",
+      "example_id": "2002-II-3::2002"
+    },
+    "iso_time": "2025-12-02T23:09:10Z"
+  },
+  {
+    "timestamp": 1764717025.41143,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-3::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1610159763
+    },
+    "iso_time": "2025-12-02T23:10:25Z"
+  },
+  {
+    "timestamp": 1764717026.691963,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_terms": 6,
+        "s_value": 189,
+        "square_index": 4,
+        "cube_index": 5
+      }
+    },
+    "iso_time": "2025-12-02T23:10:26Z"
+  },
+  {
+    "timestamp": 1764717027.853976,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 33822867456
+    },
+    "iso_time": "2025-12-02T23:10:27Z"
+  },
+  {
+    "timestamp": 1764717027.854123,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let positive integers a_1, a_2, ..., a_6 form an increasing geometric progression. It is given that log_2(a_1) + log_2(a",
+      "correct_answer": "33822867456",
+      "seed_value": 1610159763
+    },
+    "iso_time": "2025-12-02T23:10:27Z"
+  },
+  {
+    "timestamp": 1764717027.8541791,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "33822867447",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:10:27Z"
+  },
+  {
+    "timestamp": 1764717061.353973,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "33822867456",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T23:11:01Z"
+  },
+  {
+    "timestamp": 1764717090.702518,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "33822867453",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:11:30Z"
+  },
+  {
+    "timestamp": 1764717127.79515,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "33822867452",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:12:07Z"
+  },
+  {
+    "timestamp": 1764717154.00634,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "33822867456",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T23:12:34Z"
+  },
+  {
+    "timestamp": 1764717182.783735,
+    "seed_id": "2002-II-3::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-3::2002_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T23:13:02Z"
+  },
+  {
+    "timestamp": 1764717182.7839282,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-3::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 445302062
+    },
+    "iso_time": "2025-12-02T23:13:02Z"
+  },
+  {
+    "timestamp": 1764717184.0522518,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_terms": 4,
+        "s_value": 38,
+        "square_index": 1,
+        "cube_index": 2
+      }
+    },
+    "iso_time": "2025-12-02T23:13:04Z"
+  },
+  {
+    "timestamp": 1764717185.1299899,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3840
+    },
+    "iso_time": "2025-12-02T23:13:05Z"
+  },
+  {
+    "timestamp": 1764717185.1301289,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let positive integers a_1, a_2, ..., a_4 form an increasing geometric progression. It is given that log_2(a_1) + log_2(a",
+      "correct_answer": "3840",
+      "seed_value": 445302062
+    },
+    "iso_time": "2025-12-02T23:13:05Z"
+  },
+  {
+    "timestamp": 1764717185.130198,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3844",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:13:05Z"
+  },
+  {
+    "timestamp": 1764717213.813872,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3837",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:13:33Z"
+  },
+  {
+    "timestamp": 1764717303.21731,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3836",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:15:03Z"
+  },
+  {
+    "timestamp": 1764717327.6774552,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3840",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T23:15:27Z"
+  },
+  {
+    "timestamp": 1764717346.9309728,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3840",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T23:15:46Z"
+  },
+  {
+    "timestamp": 1764717370.7932951,
+    "seed_id": "2002-II-3::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-3::2002_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T23:16:10Z"
+  },
+  {
+    "timestamp": 1764717370.793608,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-3::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1992320589
+    },
+    "iso_time": "2025-12-02T23:16:10Z"
+  },
+  {
+    "timestamp": 1764717371.8977711,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_terms": 4,
+        "s_value": 86,
+        "square_index": 3,
+        "cube_index": 2
+      }
+    },
+    "iso_time": "2025-12-02T23:16:11Z"
+  },
+  {
+    "timestamp": 1764717372.996733,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 15728640
+    },
+    "iso_time": "2025-12-02T23:16:12Z"
+  },
+  {
+    "timestamp": 1764717372.996866,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let positive integers a_1, a_2, ..., a_4 form an increasing geometric progression. It is given that log_2(a_1) + log_2(a",
+      "correct_answer": "15728640",
+      "seed_value": 1992320589
+    },
+    "iso_time": "2025-12-02T23:16:12Z"
+  },
+  {
+    "timestamp": 1764717372.99692,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "15728642",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:16:12Z"
+  },
+  {
+    "timestamp": 1764717401.109174,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "15728640",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T23:16:41Z"
+  },
+  {
+    "timestamp": 1764717450.965399,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "15728640",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T23:17:30Z"
+  },
+  {
+    "timestamp": 1764717501.190222,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "15728631",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:18:21Z"
+  },
+  {
+    "timestamp": 1764717551.521282,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "15728635",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:19:11Z"
+  },
+  {
+    "timestamp": 1764717633.630392,
+    "seed_id": "2002-II-3::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-3::2002_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T23:20:33Z"
+  },
+  {
+    "timestamp": 1764717633.63057,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-3::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1730718510
+    },
+    "iso_time": "2025-12-02T23:20:33Z"
+  },
+  {
+    "timestamp": 1764717634.973557,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_terms": 6,
+        "s_value": 171,
+        "square_index": 3,
+        "cube_index": 2
+      }
+    },
+    "iso_time": "2025-12-02T23:20:34Z"
+  },
+  {
+    "timestamp": 1764717636.229562,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4227858432
+    },
+    "iso_time": "2025-12-02T23:20:36Z"
+  },
+  {
+    "timestamp": 1764717636.229764,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let positive integers a_1, a_2, ..., a_6 form an increasing geometric progression. It is given that log_2(a_1) + log_2(a",
+      "correct_answer": "4227858432",
+      "seed_value": 1730718510
+    },
+    "iso_time": "2025-12-02T23:20:36Z"
+  },
+  {
+    "timestamp": 1764717636.229847,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4227858432",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T23:20:36Z"
+  },
+  {
+    "timestamp": 1764717671.314256,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4227858432",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T23:21:11Z"
+  },
+  {
+    "timestamp": 1764717711.0285618,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4227858429",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:21:51Z"
+  },
+  {
+    "timestamp": 1764717738.766586,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4227858425",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:22:18Z"
+  },
+  {
+    "timestamp": 1764717766.153772,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4227858431",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:22:46Z"
+  },
+  {
+    "timestamp": 1764717801.141255,
+    "seed_id": "2002-II-3::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-3::2002_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T23:23:21Z"
+  },
+  {
+    "timestamp": 1764717801.1414568,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-3::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 307895034
+    },
+    "iso_time": "2025-12-02T23:23:21Z"
+  },
+  {
+    "timestamp": 1764717802.430322,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_terms": 5,
+        "s_value": 160,
+        "square_index": 3,
+        "cube_index": 4
+      }
+    },
+    "iso_time": "2025-12-02T23:23:22Z"
+  },
+  {
+    "timestamp": 1764717803.5105338,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 33285996544
+    },
+    "iso_time": "2025-12-02T23:23:23Z"
+  },
+  {
+    "timestamp": 1764717803.5106828,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let positive integers a_1, a_2, ..., a_5 form an increasing geometric progression. It is given that log_2(a_1) + log_2(a",
+      "correct_answer": "33285996544",
+      "seed_value": 307895034
+    },
+    "iso_time": "2025-12-02T23:23:23Z"
+  },
+  {
+    "timestamp": 1764717803.5107388,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "33285996544",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T23:23:23Z"
+  },
+  {
+    "timestamp": 1764717825.237761,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "33285996550",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:23:45Z"
+  },
+  {
+    "timestamp": 1764717849.557812,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "33285996544",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T23:24:09Z"
+  },
+  {
+    "timestamp": 1764717876.743119,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "33285996549",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:24:36Z"
+  },
+  {
+    "timestamp": 1764717900.7117271,
+    "seed_id": "2002-II-3::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "33285996547",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T23:25:00Z"
+  },
+  {
+    "timestamp": 1764717930.167372,
+    "seed_id": "2002-II-3::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-3::2002_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T23:25:30Z"
+  }
+]

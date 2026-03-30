@@ -1,0 +1,1542 @@
+[
+  {
+    "timestamp": 1763651248.151736,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1992,
+      "question_preview": "For how many pairs of consecutive integers in $\\{1000,1001,1002^{}_{},\\ldots,2000\\}$ is no carrying required when the tw",
+      "answer": "156",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-20T15:07:28Z"
+  },
+  {
+    "timestamp": 1763651248.1517692,
+    "seed_id": "1992-6::1992",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-20T15:07:28Z"
+  },
+  {
+    "timestamp": 1763651248.151783,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "For how many pairs of consecutive integers in $\\{1000,1001,1002^{}_{},\\ldots,2000\\}$ is no carrying required when the two integers are added?",
+      "answer": "156",
+      "example_id": "1992-6::1992"
+    },
+    "iso_time": "2025-11-20T15:07:28Z"
+  },
+  {
+    "timestamp": 1763651465.366606,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-6::1992_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2086371988
+    },
+    "iso_time": "2025-11-20T15:11:05Z"
+  },
+  {
+    "timestamp": 1763651466.150456,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 16,
+        "L": 91430,
+        "R": 13002258
+      }
+    },
+    "iso_time": "2025-11-20T15:11:06Z"
+  },
+  {
+    "timestamp": 1763651466.891495,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1982584
+    },
+    "iso_time": "2025-11-20T15:11:06Z"
+  },
+  {
+    "timestamp": 1763651466.8916469,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $b=16$ be an even integer. When computing an expression in base $b$, the number of carries is the total count of car",
+      "correct_answer": "1982584",
+      "seed_value": 2086371988
+    },
+    "iso_time": "2025-11-20T15:11:06Z"
+  },
+  {
+    "timestamp": 1763651466.8917,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1982584",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T15:11:06Z"
+  },
+  {
+    "timestamp": 1763651755.984674,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1982584",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T15:15:55Z"
+  },
+  {
+    "timestamp": 1763652003.090224,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1982580",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T15:20:03Z"
+  },
+  {
+    "timestamp": 1763652221.566765,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1982589",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T15:23:41Z"
+  },
+  {
+    "timestamp": 1763652482.258067,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1982585",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T15:28:02Z"
+  },
+  {
+    "timestamp": 1763652753.6555488,
+    "seed_id": "1992-6::1992",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-20T15:32:33Z"
+  },
+  {
+    "timestamp": 1763652753.655723,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-6::1992_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2129161390
+    },
+    "iso_time": "2025-11-20T15:32:33Z"
+  },
+  {
+    "timestamp": 1763652754.6061928,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 4,
+        "L": 151,
+        "R": 1578
+      }
+    },
+    "iso_time": "2025-11-20T15:32:34Z"
+  },
+  {
+    "timestamp": 1763652755.474848,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 240
+    },
+    "iso_time": "2025-11-20T15:32:35Z"
+  },
+  {
+    "timestamp": 1763652755.474984,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $b=4$ be an even integer. When computing an expression in base $b$, the number of carries is the total count of carr",
+      "correct_answer": "240",
+      "seed_value": 2129161390
+    },
+    "iso_time": "2025-11-20T15:32:35Z"
+  },
+  {
+    "timestamp": 1763652755.47503,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "232",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T15:32:35Z"
+  },
+  {
+    "timestamp": 1763653020.635249,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "240",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T15:37:00Z"
+  },
+  {
+    "timestamp": 1763653215.6140301,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "246",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T15:40:15Z"
+  },
+  {
+    "timestamp": 1763653471.993817,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "234",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T15:44:31Z"
+  },
+  {
+    "timestamp": 1763653733.5396612,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "240",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T15:48:53Z"
+  },
+  {
+    "timestamp": 1763653910.443192,
+    "seed_id": "1992-6::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-6::1992_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-20T15:51:50Z"
+  },
+  {
+    "timestamp": 1763653910.443433,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-6::1992_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 772950284
+    },
+    "iso_time": "2025-11-20T15:51:50Z"
+  },
+  {
+    "timestamp": 1763653911.19949,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 12,
+        "L": 2285,
+        "R": 202582
+      }
+    },
+    "iso_time": "2025-11-20T15:51:51Z"
+  },
+  {
+    "timestamp": 1763653911.9420302,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 257184
+    },
+    "iso_time": "2025-11-20T15:51:51Z"
+  },
+  {
+    "timestamp": 1763653911.9421802,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $b=12$ be an even integer. When computing an expression in base $b$, the number of carries is the total count of car",
+      "correct_answer": "257184",
+      "seed_value": 772950284
+    },
+    "iso_time": "2025-11-20T15:51:51Z"
+  },
+  {
+    "timestamp": 1763653911.942229,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "257184",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T15:51:51Z"
+  },
+  {
+    "timestamp": 1763654155.762897,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "257190",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T15:55:55Z"
+  },
+  {
+    "timestamp": 1763654430.367312,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "257184",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T16:00:30Z"
+  },
+  {
+    "timestamp": 1763654694.0757592,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "257182",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T16:04:54Z"
+  },
+  {
+    "timestamp": 1763654960.218224,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "257178",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T16:09:20Z"
+  },
+  {
+    "timestamp": 1763655227.7967591,
+    "seed_id": "1992-6::1992",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-20T16:13:47Z"
+  },
+  {
+    "timestamp": 1763655227.797069,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-6::1992_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 964328541
+    },
+    "iso_time": "2025-11-20T16:13:47Z"
+  },
+  {
+    "timestamp": 1763655228.566755,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 14,
+        "L": 443410,
+        "R": 6812425
+      }
+    },
+    "iso_time": "2025-11-20T16:13:48Z"
+  },
+  {
+    "timestamp": 1763655229.308012,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7709268
+    },
+    "iso_time": "2025-11-20T16:13:49Z"
+  },
+  {
+    "timestamp": 1763655229.308141,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $b=14$ be an even integer. When computing an expression in base $b$, the number of carries is the total count of car",
+      "correct_answer": "7709268",
+      "seed_value": 964328541
+    },
+    "iso_time": "2025-11-20T16:13:49Z"
+  },
+  {
+    "timestamp": 1763655229.3081799,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7709261",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T16:13:49Z"
+  },
+  {
+    "timestamp": 1763655465.161622,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7709275",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T16:17:45Z"
+  },
+  {
+    "timestamp": 1763655667.040832,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7709268",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T16:21:07Z"
+  },
+  {
+    "timestamp": 1763655888.459129,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7709271",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T16:24:48Z"
+  },
+  {
+    "timestamp": 1763656090.113346,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7709268",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T16:28:10Z"
+  },
+  {
+    "timestamp": 1763656289.0797288,
+    "seed_id": "1992-6::1992",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-20T16:31:29Z"
+  },
+  {
+    "timestamp": 1763656289.07992,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-6::1992_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 637536134
+    },
+    "iso_time": "2025-11-20T16:31:29Z"
+  },
+  {
+    "timestamp": 1763656290.0237231,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 8,
+        "L": 12065975,
+        "R": 24058327
+      }
+    },
+    "iso_time": "2025-11-20T16:31:30Z"
+  },
+  {
+    "timestamp": 1763656290.7988858,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 473600
+    },
+    "iso_time": "2025-11-20T16:31:30Z"
+  },
+  {
+    "timestamp": 1763656290.799024,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $b=8$ be an even integer. When computing an expression in base $b$, the number of carries is the total count of carr",
+      "correct_answer": "473600",
+      "seed_value": 637536134
+    },
+    "iso_time": "2025-11-20T16:31:30Z"
+  },
+  {
+    "timestamp": 1763656290.799071,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "473597",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T16:31:30Z"
+  },
+  {
+    "timestamp": 1763656529.320679,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "473595",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T16:35:29Z"
+  },
+  {
+    "timestamp": 1763656821.6338382,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "473606",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T16:40:21Z"
+  },
+  {
+    "timestamp": 1763657079.3036559,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "473600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T16:44:39Z"
+  },
+  {
+    "timestamp": 1763657323.736383,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "473600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T16:48:43Z"
+  },
+  {
+    "timestamp": 1763657505.764607,
+    "seed_id": "1992-6::1992",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-20T16:51:45Z"
+  },
+  {
+    "timestamp": 1763657505.764843,
+    "seed_id": "1992-6::1992",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-20T16:51:45Z"
+  },
+  {
+    "timestamp": 1763657505.7649438,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 3 (successes=3). | Judge rejected variant 4 (successes=3).",
+      "question": "For how many pairs of consecutive integers in $\\{1000,1001,1002^{}_{},\\ldots,2000\\}$ is no carrying required when the two integers are added?",
+      "answer": "156",
+      "example_id": "1992-6::1992"
+    },
+    "iso_time": "2025-11-20T16:51:45Z"
+  },
+  {
+    "timestamp": 1763657746.9616508,
+    "seed_id": "1992-6::1992",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "payload": {},
+    "iso_time": "2025-11-20T16:55:46Z"
+  },
+  {
+    "timestamp": 1763657746.961838,
+    "seed_id": "1992-6::1992",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-20T16:55:46Z"
+  },
+  {
+    "timestamp": 1763657746.961931,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Teacher call raised JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "question": "For how many pairs of consecutive integers in $\\{1000,1001,1002^{}_{},\\ldots,2000\\}$ is no carrying required when the two integers are added?",
+      "answer": "156",
+      "example_id": "1992-6::1992"
+    },
+    "iso_time": "2025-11-20T16:55:46Z"
+  },
+  {
+    "timestamp": 1763658010.336473,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-6::1992_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1785761747
+    },
+    "iso_time": "2025-11-20T17:00:10Z"
+  },
+  {
+    "timestamp": 1763658011.109768,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 8,
+        "L": 29889,
+        "R": 198128
+      }
+    },
+    "iso_time": "2025-11-20T17:00:11Z"
+  },
+  {
+    "timestamp": 1763658011.847208,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-20T17:00:11Z"
+  },
+  {
+    "timestamp": 1763658012.5847769,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "b": 10,
+        "L": 82,
+        "R": 86454
+      }
+    },
+    "iso_time": "2025-11-20T17:00:12Z"
+  },
+  {
+    "timestamp": 1763658013.327073,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": true,
+      "answer": 24
+    },
+    "iso_time": "2025-11-20T17:00:13Z"
+  },
+  {
+    "timestamp": 1763658013.327223,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the base-10 numeral system, we define a curious operation on a positive integer $n$. Let the base-10 representation o",
+      "correct_answer": "24",
+      "seed_value": 1785761747
+    },
+    "iso_time": "2025-11-20T17:00:13Z"
+  },
+  {
+    "timestamp": 1763658013.327269,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "24",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T17:00:13Z"
+  },
+  {
+    "timestamp": 1763658144.605723,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "19",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:02:24Z"
+  },
+  {
+    "timestamp": 1763658330.7596009,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "21",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:05:30Z"
+  },
+  {
+    "timestamp": 1763658540.155273,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "24",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T17:09:00Z"
+  },
+  {
+    "timestamp": 1763658662.57791,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "18",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:11:02Z"
+  },
+  {
+    "timestamp": 1763658842.549794,
+    "seed_id": "1992-6::1992",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-20T17:14:02Z"
+  },
+  {
+    "timestamp": 1763658842.550109,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-6::1992_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1811970798
+    },
+    "iso_time": "2025-11-20T17:14:02Z"
+  },
+  {
+    "timestamp": 1763658843.323797,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 14,
+        "L": 168,
+        "R": 83115740
+      }
+    },
+    "iso_time": "2025-11-20T17:14:03Z"
+  },
+  {
+    "timestamp": 1763658844.069205,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 59
+    },
+    "iso_time": "2025-11-20T17:14:04Z"
+  },
+  {
+    "timestamp": 1763658844.0693529,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the base-14 numeral system, we define a curious operation on a positive integer $n$. Let the base-14 representation o",
+      "correct_answer": "59",
+      "seed_value": 1811970798
+    },
+    "iso_time": "2025-11-20T17:14:04Z"
+  },
+  {
+    "timestamp": 1763658844.069401,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "55",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:14:04Z"
+  },
+  {
+    "timestamp": 1763659095.61475,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T17:18:15Z"
+  },
+  {
+    "timestamp": 1763659243.582761,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "61",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:20:43Z"
+  },
+  {
+    "timestamp": 1763659458.305829,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T17:24:18Z"
+  },
+  {
+    "timestamp": 1763659590.7315662,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "53",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:26:30Z"
+  },
+  {
+    "timestamp": 1763659815.750278,
+    "seed_id": "1992-6::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-6::1992_prompt03-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-20T17:30:15Z"
+  },
+  {
+    "timestamp": 1763659815.751322,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-6::1992_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 928999555
+    },
+    "iso_time": "2025-11-20T17:30:15Z"
+  },
+  {
+    "timestamp": 1763659816.511224,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 10,
+        "L": 687,
+        "R": 7346
+      }
+    },
+    "iso_time": "2025-11-20T17:30:16Z"
+  },
+  {
+    "timestamp": 1763659817.263597,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-20T17:30:17Z"
+  },
+  {
+    "timestamp": 1763659818.00436,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "b": 11,
+        "L": 8344,
+        "R": 101783
+      }
+    },
+    "iso_time": "2025-11-20T17:30:18Z"
+  },
+  {
+    "timestamp": 1763659818.752625,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-20T17:30:18Z"
+  },
+  {
+    "timestamp": 1763659819.498372,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "b": 16,
+        "L": 3831,
+        "R": 34370
+      }
+    },
+    "iso_time": "2025-11-20T17:30:19Z"
+  },
+  {
+    "timestamp": 1763659820.2401228,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-20T17:30:20Z"
+  },
+  {
+    "timestamp": 1763659820.987063,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "b": 13,
+        "L": 2132,
+        "R": 4253088
+      }
+    },
+    "iso_time": "2025-11-20T17:30:20Z"
+  },
+  {
+    "timestamp": 1763659821.7296698,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": true,
+      "answer": 32
+    },
+    "iso_time": "2025-11-20T17:30:21Z"
+  },
+  {
+    "timestamp": 1763659821.7298272,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the base-13 numeral system, we define a curious operation on a positive integer $n$. Let the base-13 representation o",
+      "correct_answer": "32",
+      "seed_value": 928999555
+    },
+    "iso_time": "2025-11-20T17:30:21Z"
+  },
+  {
+    "timestamp": 1763659821.7298691,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "24",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:30:21Z"
+  },
+  {
+    "timestamp": 1763659994.564115,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "32",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T17:33:14Z"
+  },
+  {
+    "timestamp": 1763660136.3773959,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "32",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T17:35:36Z"
+  },
+  {
+    "timestamp": 1763660241.747844,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "26",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:37:21Z"
+  },
+  {
+    "timestamp": 1763660443.381002,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "36",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:40:43Z"
+  },
+  {
+    "timestamp": 1763660669.376981,
+    "seed_id": "1992-6::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-6::1992_prompt03-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-20T17:44:29Z"
+  },
+  {
+    "timestamp": 1763660669.377196,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-6::1992_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1094000272
+    },
+    "iso_time": "2025-11-20T17:44:29Z"
+  },
+  {
+    "timestamp": 1763660670.1416461,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 7,
+        "L": 255,
+        "R": 1689
+      }
+    },
+    "iso_time": "2025-11-20T17:44:30Z"
+  },
+  {
+    "timestamp": 1763660670.879554,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-20T17:44:30Z"
+  },
+  {
+    "timestamp": 1763660671.615443,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "b": 5,
+        "L": 11247,
+        "R": 44685
+      }
+    },
+    "iso_time": "2025-11-20T17:44:31Z"
+  },
+  {
+    "timestamp": 1763660672.352623,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-20T17:44:32Z"
+  },
+  {
+    "timestamp": 1763660673.09669,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "b": 16,
+        "L": 244,
+        "R": 8395581
+      }
+    },
+    "iso_time": "2025-11-20T17:44:33Z"
+  },
+  {
+    "timestamp": 1763660673.83701,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": true,
+      "answer": 49
+    },
+    "iso_time": "2025-11-20T17:44:33Z"
+  },
+  {
+    "timestamp": 1763660673.837164,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the base-16 numeral system, we define a curious operation on a positive integer $n$. Let the base-16 representation o",
+      "correct_answer": "49",
+      "seed_value": 1094000272
+    },
+    "iso_time": "2025-11-20T17:44:33Z"
+  },
+  {
+    "timestamp": 1763660673.837207,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T17:44:33Z"
+  },
+  {
+    "timestamp": 1763660833.422249,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "53",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:47:13Z"
+  },
+  {
+    "timestamp": 1763661082.459477,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "47",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:51:22Z"
+  },
+  {
+    "timestamp": 1763661250.19602,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T17:54:10Z"
+  },
+  {
+    "timestamp": 1763661367.339256,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "58",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T17:56:07Z"
+  },
+  {
+    "timestamp": 1763661601.111074,
+    "seed_id": "1992-6::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-6::1992_prompt03-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-20T18:00:01Z"
+  },
+  {
+    "timestamp": 1763661601.11127,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-6::1992_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 312877598
+    },
+    "iso_time": "2025-11-20T18:00:01Z"
+  },
+  {
+    "timestamp": 1763661601.949867,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "b": 15,
+        "L": 569616,
+        "R": 166575543
+      }
+    },
+    "iso_time": "2025-11-20T18:00:01Z"
+  },
+  {
+    "timestamp": 1763661602.716785,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 29
+    },
+    "iso_time": "2025-11-20T18:00:02Z"
+  },
+  {
+    "timestamp": 1763661602.716925,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the base-15 numeral system, we define a curious operation on a positive integer $n$. Let the base-15 representation o",
+      "correct_answer": "29",
+      "seed_value": 312877598
+    },
+    "iso_time": "2025-11-20T18:00:02Z"
+  },
+  {
+    "timestamp": 1763661602.7169678,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "33",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T18:00:02Z"
+  },
+  {
+    "timestamp": 1763662032.6588879,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "31",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T18:07:12Z"
+  },
+  {
+    "timestamp": 1763662232.434231,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "29",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T18:10:32Z"
+  },
+  {
+    "timestamp": 1763662371.554224,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "30",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T18:12:51Z"
+  },
+  {
+    "timestamp": 1763662549.319754,
+    "seed_id": "1992-6::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "29",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T18:15:49Z"
+  },
+  {
+    "timestamp": 1763662673.017266,
+    "seed_id": "1992-6::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-6::1992_prompt03-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-20T18:17:53Z"
+  }
+]

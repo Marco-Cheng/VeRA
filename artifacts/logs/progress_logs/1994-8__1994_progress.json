@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1763960013.566587,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1994,
+      "question_preview": "The points $(0,0)\\,$ , $(a,11)\\,$ , and $(b,37)\\,$ are the vertices of an equilateral triangle.  Find the value of $ab\\,",
+      "answer": "315",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-24T04:53:33Z"
+  },
+  {
+    "timestamp": 1763960013.5666208,
+    "seed_id": "1994-8::1994",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-24T04:53:33Z"
+  },
+  {
+    "timestamp": 1763960013.566635,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The points $(0,0)\\,$ , $(a,11)\\,$ , and $(b,37)\\,$ are the vertices of an equilateral triangle.  Find the value of $ab\\,$ .",
+      "answer": "315",
+      "example_id": "1994-8::1994"
+    },
+    "iso_time": "2025-11-24T04:53:33Z"
+  },
+  {
+    "timestamp": 1763960140.301833,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-8::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 665485507
+    },
+    "iso_time": "2025-11-24T04:55:40Z"
+  },
+  {
+    "timestamp": 1763960141.0646799,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x0": -8,
+        "y0": -4,
+        "y1": -10,
+        "y2": -34,
+        "theta": 60
+      }
+    },
+    "iso_time": "2025-11-24T04:55:41Z"
+  },
+  {
+    "timestamp": 1763960141.816471,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 324
+    },
+    "iso_time": "2025-11-24T04:55:41Z"
+  },
+  {
+    "timestamp": 1763960141.8166258,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the coordinate plane, let A=(-8,-4). Points B=(a,-10) and C=(b,-34) are such that triangle ABC is isosceles with AB=A",
+      "correct_answer": "324",
+      "seed_value": 665485507
+    },
+    "iso_time": "2025-11-24T04:55:41Z"
+  },
+  {
+    "timestamp": 1763960141.8166678,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "320",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T04:55:41Z"
+  },
+  {
+    "timestamp": 1763960172.149183,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "324",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T04:56:12Z"
+  },
+  {
+    "timestamp": 1763960219.811641,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "327",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T04:56:59Z"
+  },
+  {
+    "timestamp": 1763960266.8667421,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "323",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T04:57:46Z"
+  },
+  {
+    "timestamp": 1763961391.680107,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "324",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T05:16:31Z"
+  },
+  {
+    "timestamp": 1763961429.523552,
+    "seed_id": "1994-8::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-8::1994_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T05:17:09Z"
+  },
+  {
+    "timestamp": 1763961429.5237288,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-8::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 209300459
+    },
+    "iso_time": "2025-11-24T05:17:09Z"
+  },
+  {
+    "timestamp": 1763961430.3338099,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x0": 10,
+        "y0": 10,
+        "y1": 34,
+        "y2": -26,
+        "theta": 60
+      }
+    },
+    "iso_time": "2025-11-24T05:17:10Z"
+  },
+  {
+    "timestamp": 1763961431.078753,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2688
+    },
+    "iso_time": "2025-11-24T05:17:11Z"
+  },
+  {
+    "timestamp": 1763961431.07892,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the coordinate plane, let A=(10,10). Points B=(a,34) and C=(b,-26) are such that triangle ABC is isosceles with AB=AC",
+      "correct_answer": "2688",
+      "seed_value": 209300459
+    },
+    "iso_time": "2025-11-24T05:17:11Z"
+  },
+  {
+    "timestamp": 1763961431.0789828,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2688",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T05:17:11Z"
+  },
+  {
+    "timestamp": 1763961478.981741,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2679",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:17:58Z"
+  },
+  {
+    "timestamp": 1763961506.515583,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2685",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:18:26Z"
+  },
+  {
+    "timestamp": 1763961528.3610618,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2688",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T05:18:48Z"
+  },
+  {
+    "timestamp": 1763961556.586503,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2696",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:19:16Z"
+  },
+  {
+    "timestamp": 1763961580.533416,
+    "seed_id": "1994-8::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-8::1994_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T05:19:40Z"
+  },
+  {
+    "timestamp": 1763961580.533623,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-8::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 521634958
+    },
+    "iso_time": "2025-11-24T05:19:40Z"
+  },
+  {
+    "timestamp": 1763961581.303584,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x0": 5,
+        "y0": 0,
+        "y1": 9,
+        "y2": -9,
+        "theta": 90
+      }
+    },
+    "iso_time": "2025-11-24T05:19:41Z"
+  },
+  {
+    "timestamp": 1763961582.0725682,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 81
+    },
+    "iso_time": "2025-11-24T05:19:42Z"
+  },
+  {
+    "timestamp": 1763961582.072747,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the coordinate plane, let A=(5,0). Points B=(a,9) and C=(b,-9) are such that triangle ABC is isosceles with AB=AC and",
+      "correct_answer": "81",
+      "seed_value": 521634958
+    },
+    "iso_time": "2025-11-24T05:19:42Z"
+  },
+  {
+    "timestamp": 1763961582.072792,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "81",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T05:19:42Z"
+  },
+  {
+    "timestamp": 1763961587.8190908,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "86",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:19:47Z"
+  },
+  {
+    "timestamp": 1763961599.608781,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "81",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T05:19:59Z"
+  },
+  {
+    "timestamp": 1763961610.447904,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "88",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:20:10Z"
+  },
+  {
+    "timestamp": 1763961939.571872,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "83",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:25:39Z"
+  },
+  {
+    "timestamp": 1763961952.258965,
+    "seed_id": "1994-8::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-8::1994_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T05:25:52Z"
+  },
+  {
+    "timestamp": 1763961952.2591639,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-8::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1246967194
+    },
+    "iso_time": "2025-11-24T05:25:52Z"
+  },
+  {
+    "timestamp": 1763961953.022791,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x0": -15,
+        "y0": -4,
+        "y1": -28,
+        "y2": -40,
+        "theta": 120
+      }
+    },
+    "iso_time": "2025-11-24T05:25:53Z"
+  },
+  {
+    "timestamp": 1763961953.7691689,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -2688
+    },
+    "iso_time": "2025-11-24T05:25:53Z"
+  },
+  {
+    "timestamp": 1763961953.769334,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the coordinate plane, let A=(-15,-4). Points B=(a,-28) and C=(b,-40) are such that triangle ABC is isosceles with AB=",
+      "correct_answer": "-2688",
+      "seed_value": 1246967194
+    },
+    "iso_time": "2025-11-24T05:25:53Z"
+  },
+  {
+    "timestamp": 1763961953.7694001,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-2688",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T05:25:53Z"
+  },
+  {
+    "timestamp": 1763961985.25239,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:26:25Z"
+  },
+  {
+    "timestamp": 1763962019.446002,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-2688",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T05:26:59Z"
+  },
+  {
+    "timestamp": 1763962045.870641,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-2686",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:27:25Z"
+  },
+  {
+    "timestamp": 1763962072.273277,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-2681",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:27:52Z"
+  },
+  {
+    "timestamp": 1763962092.613854,
+    "seed_id": "1994-8::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-8::1994_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T05:28:12Z"
+  },
+  {
+    "timestamp": 1763962092.614062,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-8::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 207585443
+    },
+    "iso_time": "2025-11-24T05:28:12Z"
+  },
+  {
+    "timestamp": 1763962093.404209,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x0": -1,
+        "y0": -13,
+        "y1": -23,
+        "y2": -25,
+        "theta": 90
+      }
+    },
+    "iso_time": "2025-11-24T05:28:13Z"
+  },
+  {
+    "timestamp": 1763962094.1663349,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -120
+    },
+    "iso_time": "2025-11-24T05:28:14Z"
+  },
+  {
+    "timestamp": 1763962094.166497,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the coordinate plane, let A=(-1,-13). Points B=(a,-23) and C=(b,-25) are such that triangle ABC is isosceles with AB=",
+      "correct_answer": "-120",
+      "seed_value": 207585443
+    },
+    "iso_time": "2025-11-24T05:28:14Z"
+  },
+  {
+    "timestamp": 1763962094.166555,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:28:14Z"
+  },
+  {
+    "timestamp": 1763962108.7267609,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T05:28:28Z"
+  },
+  {
+    "timestamp": 1763962141.088394,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-113",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:29:01Z"
+  },
+  {
+    "timestamp": 1763962366.7714791,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T05:32:46Z"
+  },
+  {
+    "timestamp": 1763962380.292893,
+    "seed_id": "1994-8::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-112",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T05:33:00Z"
+  },
+  {
+    "timestamp": 1763962393.7034812,
+    "seed_id": "1994-8::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-8::1994_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T05:33:13Z"
+  }
+]

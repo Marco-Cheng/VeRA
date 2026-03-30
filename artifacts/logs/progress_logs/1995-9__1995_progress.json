@@ -1,0 +1,709 @@
+[
+  {
+    "timestamp": 1764092790.182726,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1995,
+      "question_preview": "Triangle $ABC$ is isosceles, with $AB=AC$ and altitude $AM=11.$ Suppose that there is a point $D$ on $\\overline{AM}$ wit",
+      "answer": "616",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-25T17:46:30Z"
+  },
+  {
+    "timestamp": 1764092790.18276,
+    "seed_id": "1995-9::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-25T17:46:30Z"
+  },
+  {
+    "timestamp": 1764092790.182775,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Triangle $ABC$ is isosceles, with $AB=AC$ and altitude $AM=11.$ Suppose that there is a point $D$ on $\\overline{AM}$ with $AD=10$ and $\\angle BDC=3\\angle BAC.$ Then the perimeter of $\\triangle ABC$ may be written in the form $a+\\sqrt{b},$ where $a$ and $b$ are integers.  Find $a+b.$ AIME 1995 Problem 9.png",
+      "answer": "616",
+      "example_id": "1995-9::1995"
+    },
+    "iso_time": "2025-11-25T17:46:30Z"
+  },
+  {
+    "timestamp": 1764092885.670167,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-9::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1077495467
+    },
+    "iso_time": "2025-11-25T17:48:05Z"
+  },
+  {
+    "timestamp": 1764092886.629018,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "am_len": 370,
+        "ad_len": 260,
+        "multiplier": 3,
+        "p": 1,
+        "q": 5,
+        "s": 1,
+        "num": 74,
+        "den": 110
+      }
+    },
+    "iso_time": "2025-11-25T17:48:06Z"
+  },
+  {
+    "timestamp": 1764092887.580006,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 322
+    },
+    "iso_time": "2025-11-25T17:48:07Z"
+  },
+  {
+    "timestamp": 1764092887.580192,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Triangle ABC is isosceles with AB = AC and altitude AM = 370. There is a point D on segment AM such that AD = 260. Suppo",
+      "correct_answer": "322",
+      "seed_value": 1077495467
+    },
+    "iso_time": "2025-11-25T17:48:07Z"
+  },
+  {
+    "timestamp": 1764092887.5802329,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "327",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:48:07Z"
+  },
+  {
+    "timestamp": 1764092910.1502342,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "317",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:48:30Z"
+  },
+  {
+    "timestamp": 1764092942.780859,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "316",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:49:02Z"
+  },
+  {
+    "timestamp": 1764092963.7750232,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "322",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T17:49:23Z"
+  },
+  {
+    "timestamp": 1764092981.0405602,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "322",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T17:49:41Z"
+  },
+  {
+    "timestamp": 1764093041.017628,
+    "seed_id": "1995-9::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-9::1995_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T17:50:41Z"
+  },
+  {
+    "timestamp": 1764093041.01767,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-9::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1209742588
+    },
+    "iso_time": "2025-11-25T17:50:41Z"
+  },
+  {
+    "timestamp": 1764093041.957603,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "am_len": 44,
+        "ad_len": 40,
+        "multiplier": 3,
+        "p": 1,
+        "q": 2,
+        "s": 2,
+        "num": 11,
+        "den": 2
+      }
+    },
+    "iso_time": "2025-11-25T17:50:41Z"
+  },
+  {
+    "timestamp": 1764093042.891309,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 93
+    },
+    "iso_time": "2025-11-25T17:50:42Z"
+  },
+  {
+    "timestamp": 1764093042.891495,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Triangle ABC is isosceles with AB = AC and altitude AM = 44. There is a point D on segment AM such that AD = 40. Suppose",
+      "correct_answer": "93",
+      "seed_value": 1209742588
+    },
+    "iso_time": "2025-11-25T17:50:42Z"
+  },
+  {
+    "timestamp": 1764093042.891559,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "89",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:50:42Z"
+  },
+  {
+    "timestamp": 1764093066.483032,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "93",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T17:51:06Z"
+  },
+  {
+    "timestamp": 1764093085.220922,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "99",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T17:51:25Z"
+  },
+  {
+    "timestamp": 1764093114.067938,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "93",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T17:51:54Z"
+  },
+  {
+    "timestamp": 1764093987.49996,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "101",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T18:06:27Z"
+  },
+  {
+    "timestamp": 1764094064.8843572,
+    "seed_id": "1995-9::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-9::1995_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T18:07:44Z"
+  },
+  {
+    "timestamp": 1764094064.884537,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-9::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 831457198
+    },
+    "iso_time": "2025-11-25T18:07:44Z"
+  },
+  {
+    "timestamp": 1764094065.741431,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "am_len": 44,
+        "ad_len": 40,
+        "multiplier": 3,
+        "p": 1,
+        "q": 2,
+        "s": 2,
+        "num": 11,
+        "den": 2
+      }
+    },
+    "iso_time": "2025-11-25T18:07:45Z"
+  },
+  {
+    "timestamp": 1764094066.486699,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 93
+    },
+    "iso_time": "2025-11-25T18:07:46Z"
+  },
+  {
+    "timestamp": 1764094066.486855,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Triangle ABC is isosceles with AB = AC and altitude AM = 44. There is a point D on segment AM such that AD = 40. Suppose",
+      "correct_answer": "93",
+      "seed_value": 831457198
+    },
+    "iso_time": "2025-11-25T18:07:46Z"
+  },
+  {
+    "timestamp": 1764094066.486901,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "93",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T18:07:46Z"
+  },
+  {
+    "timestamp": 1764094100.172802,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "97",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T18:08:20Z"
+  },
+  {
+    "timestamp": 1764094163.61393,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "100",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T18:09:23Z"
+  },
+  {
+    "timestamp": 1764094211.1205518,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "93",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T18:10:11Z"
+  },
+  {
+    "timestamp": 1764094246.806572,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "95",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T18:10:46Z"
+  },
+  {
+    "timestamp": 1764094264.640927,
+    "seed_id": "1995-9::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-9::1995_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T18:11:04Z"
+  },
+  {
+    "timestamp": 1764094264.641109,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-9::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 568281844
+    },
+    "iso_time": "2025-11-25T18:11:04Z"
+  },
+  {
+    "timestamp": 1764094265.428364,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "am_len": 22,
+        "ad_len": 20,
+        "multiplier": 3,
+        "p": 1,
+        "q": 2,
+        "s": 1,
+        "num": 11,
+        "den": 2
+      }
+    },
+    "iso_time": "2025-11-25T18:11:05Z"
+  },
+  {
+    "timestamp": 1764094266.170651,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 49
+    },
+    "iso_time": "2025-11-25T18:11:06Z"
+  },
+  {
+    "timestamp": 1764094266.17079,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Triangle ABC is isosceles with AB = AC and altitude AM = 22. There is a point D on segment AM such that AD = 20. Suppose",
+      "correct_answer": "49",
+      "seed_value": 568281844
+    },
+    "iso_time": "2025-11-25T18:11:06Z"
+  },
+  {
+    "timestamp": 1764094266.1708312,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T18:11:06Z"
+  },
+  {
+    "timestamp": 1764094445.002023,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T18:14:05Z"
+  },
+  {
+    "timestamp": 1764094460.364934,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "53",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T18:14:20Z"
+  },
+  {
+    "timestamp": 1764094482.052117,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "46",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T18:14:42Z"
+  },
+  {
+    "timestamp": 1764094496.379956,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "47",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T18:14:56Z"
+  },
+  {
+    "timestamp": 1764094523.276096,
+    "seed_id": "1995-9::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-9::1995_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T18:15:23Z"
+  },
+  {
+    "timestamp": 1764094523.276295,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-9::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1837687502
+    },
+    "iso_time": "2025-11-25T18:15:23Z"
+  },
+  {
+    "timestamp": 1764094524.037363,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "am_len": 22,
+        "ad_len": 20,
+        "multiplier": 3,
+        "p": 1,
+        "q": 2,
+        "s": 1,
+        "num": 11,
+        "den": 2
+      }
+    },
+    "iso_time": "2025-11-25T18:15:24Z"
+  },
+  {
+    "timestamp": 1764094524.78546,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 49
+    },
+    "iso_time": "2025-11-25T18:15:24Z"
+  },
+  {
+    "timestamp": 1764094524.785632,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Triangle ABC is isosceles with AB = AC and altitude AM = 22. There is a point D on segment AM such that AD = 20. Suppose",
+      "correct_answer": "49",
+      "seed_value": 1837687502
+    },
+    "iso_time": "2025-11-25T18:15:24Z"
+  },
+  {
+    "timestamp": 1764094524.785676,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T18:15:24Z"
+  },
+  {
+    "timestamp": 1764094541.775218,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "58",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T18:15:41Z"
+  },
+  {
+    "timestamp": 1764094610.762395,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "49",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T18:16:50Z"
+  },
+  {
+    "timestamp": 1764094631.584843,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "45",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T18:17:11Z"
+  },
+  {
+    "timestamp": 1764094647.128163,
+    "seed_id": "1995-9::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "54",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T18:17:27Z"
+  },
+  {
+    "timestamp": 1764094785.7810318,
+    "seed_id": "1995-9::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-9::1995_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-25T18:19:45Z"
+  }
+]

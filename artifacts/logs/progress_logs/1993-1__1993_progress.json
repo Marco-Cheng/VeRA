@@ -1,0 +1,744 @@
+[
+  {
+    "timestamp": 1763913931.872349,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1993,
+      "question_preview": "How many even integers between 4000 and 7000 have four different digits?",
+      "answer": "728",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-23T16:05:31Z"
+  },
+  {
+    "timestamp": 1763913931.872378,
+    "seed_id": "1993-1::1993",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-23T16:05:31Z"
+  },
+  {
+    "timestamp": 1763913931.872389,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "How many even integers between 4000 and 7000 have four different digits?",
+      "answer": "728",
+      "example_id": "1993-1::1993"
+    },
+    "iso_time": "2025-11-23T16:05:31Z"
+  },
+  {
+    "timestamp": 1763913997.670326,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-1::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 429071137
+    },
+    "iso_time": "2025-11-23T16:06:37Z"
+  },
+  {
+    "timestamp": 1763913998.938407,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "lower_bound": 3343,
+        "upper_bound": 8462,
+        "modulus": 6,
+        "residue": 3,
+        "allowed_last_digits": [
+          0,
+          4,
+          6,
+          8
+        ],
+        "forbidden_digits": [
+          3
+        ],
+        "allowed_last_digits_str": "0,4,6,8",
+        "forbidden_digits_str": "3"
+      }
+    },
+    "iso_time": "2025-11-23T16:06:38Z"
+  },
+  {
+    "timestamp": 1763914000.035713,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 100
+    },
+    "iso_time": "2025-11-23T16:06:40Z"
+  },
+  {
+    "timestamp": 1763914000.035885,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider all 4-digit integers strictly between 3343 and 8462. How many such integers have all digits ",
+      "correct_answer": "100",
+      "seed_value": 429071137
+    },
+    "iso_time": "2025-11-23T16:06:40Z"
+  },
+  {
+    "timestamp": 1763914000.035936,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T16:06:40Z"
+  },
+  {
+    "timestamp": 1763914090.44161,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T16:08:10Z"
+  },
+  {
+    "timestamp": 1763914206.2358558,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "98",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T16:10:06Z"
+  },
+  {
+    "timestamp": 1763914314.103771,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "109",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T16:11:54Z"
+  },
+  {
+    "timestamp": 1763914404.710647,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T16:13:24Z"
+  },
+  {
+    "timestamp": 1763914512.923785,
+    "seed_id": "1993-1::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-1::1993_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T16:15:12Z"
+  },
+  {
+    "timestamp": 1763914512.923855,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-1::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1383281028
+    },
+    "iso_time": "2025-11-23T16:15:12Z"
+  },
+  {
+    "timestamp": 1763914514.0823512,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "lower_bound": 5122,
+        "upper_bound": 9607,
+        "modulus": 5,
+        "residue": 4,
+        "allowed_last_digits": [
+          0,
+          2,
+          4,
+          8
+        ],
+        "forbidden_digits": [
+          5
+        ],
+        "allowed_last_digits_str": "0,2,4,8",
+        "forbidden_digits_str": "5"
+      }
+    },
+    "iso_time": "2025-11-23T16:15:14Z"
+  },
+  {
+    "timestamp": 1763914515.177887,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 110
+    },
+    "iso_time": "2025-11-23T16:15:15Z"
+  },
+  {
+    "timestamp": 1763914515.178091,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider all 4-digit integers strictly between 5122 and 9607. How many such integers have all digits ",
+      "correct_answer": "110",
+      "seed_value": 1383281028
+    },
+    "iso_time": "2025-11-23T16:15:15Z"
+  },
+  {
+    "timestamp": 1763914515.178147,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "114",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T16:15:15Z"
+  },
+  {
+    "timestamp": 1763915597.278825,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "110",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T16:33:17Z"
+  },
+  {
+    "timestamp": 1763915681.7334468,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "113",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T16:34:41Z"
+  },
+  {
+    "timestamp": 1763915865.789043,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "109",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T16:37:45Z"
+  },
+  {
+    "timestamp": 1763916906.6354449,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "110",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T16:55:06Z"
+  },
+  {
+    "timestamp": 1763917014.816283,
+    "seed_id": "1993-1::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-1::1993_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T16:56:54Z"
+  },
+  {
+    "timestamp": 1763917014.816482,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-1::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 349749288
+    },
+    "iso_time": "2025-11-23T16:56:54Z"
+  },
+  {
+    "timestamp": 1763917015.659539,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "lower_bound": 1719,
+        "upper_bound": 9163,
+        "modulus": 6,
+        "residue": 2,
+        "allowed_last_digits": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "forbidden_digits": [
+          6
+        ],
+        "allowed_last_digits_str": "2,4,6,8",
+        "forbidden_digits_str": "6"
+      }
+    },
+    "iso_time": "2025-11-23T16:56:55Z"
+  },
+  {
+    "timestamp": 1763917016.453192,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 140
+    },
+    "iso_time": "2025-11-23T16:56:56Z"
+  },
+  {
+    "timestamp": 1763917016.453336,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider all 4-digit integers strictly between 1719 and 9163. How many such integers have all digits ",
+      "correct_answer": "140",
+      "seed_value": 349749288
+    },
+    "iso_time": "2025-11-23T16:56:56Z"
+  },
+  {
+    "timestamp": 1763917016.453378,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "136",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T16:56:56Z"
+  },
+  {
+    "timestamp": 1763917159.609704,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "142",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T16:59:19Z"
+  },
+  {
+    "timestamp": 1763917295.208607,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "140",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:01:35Z"
+  },
+  {
+    "timestamp": 1763917410.4188328,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "137",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:03:30Z"
+  },
+  {
+    "timestamp": 1763918738.1632488,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "140",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:25:38Z"
+  },
+  {
+    "timestamp": 1763918899.2988732,
+    "seed_id": "1993-1::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-1::1993_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T17:28:19Z"
+  },
+  {
+    "timestamp": 1763918899.299092,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-1::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 27269273
+    },
+    "iso_time": "2025-11-23T17:28:19Z"
+  },
+  {
+    "timestamp": 1763918900.0942001,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "lower_bound": 2416,
+        "upper_bound": 8698,
+        "modulus": 5,
+        "residue": 1,
+        "allowed_last_digits": [
+          0,
+          2,
+          6
+        ],
+        "forbidden_digits": [
+          3
+        ],
+        "allowed_last_digits_str": "0,2,6",
+        "forbidden_digits_str": "3"
+      }
+    },
+    "iso_time": "2025-11-23T17:28:20Z"
+  },
+  {
+    "timestamp": 1763918900.845749,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 121
+    },
+    "iso_time": "2025-11-23T17:28:20Z"
+  },
+  {
+    "timestamp": 1763918900.8459258,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider all 4-digit integers strictly between 2416 and 8698. How many such integers have all digits ",
+      "correct_answer": "121",
+      "seed_value": 27269273
+    },
+    "iso_time": "2025-11-23T17:28:20Z"
+  },
+  {
+    "timestamp": 1763918900.845966,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "117",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:28:20Z"
+  },
+  {
+    "timestamp": 1763919017.507073,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "121",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:30:17Z"
+  },
+  {
+    "timestamp": 1763919108.027122,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:31:48Z"
+  },
+  {
+    "timestamp": 1763919222.816896,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "123",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:33:42Z"
+  },
+  {
+    "timestamp": 1763919390.064631,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "121",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:36:30Z"
+  },
+  {
+    "timestamp": 1763919514.787453,
+    "seed_id": "1993-1::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-1::1993_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-23T17:38:34Z"
+  },
+  {
+    "timestamp": 1763919514.787662,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-1::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1677171954
+    },
+    "iso_time": "2025-11-23T17:38:34Z"
+  },
+  {
+    "timestamp": 1763919515.643143,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "lower_bound": 3108,
+        "upper_bound": 8483,
+        "modulus": 5,
+        "residue": 3,
+        "allowed_last_digits": [
+          0,
+          2,
+          6,
+          8
+        ],
+        "forbidden_digits": [
+          3,
+          9
+        ],
+        "allowed_last_digits_str": "0,2,6,8",
+        "forbidden_digits_str": "3,9"
+      }
+    },
+    "iso_time": "2025-11-23T17:38:35Z"
+  },
+  {
+    "timestamp": 1763919516.396477,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 102
+    },
+    "iso_time": "2025-11-23T17:38:36Z"
+  },
+  {
+    "timestamp": 1763919516.396651,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider all 4-digit integers strictly between 3108 and 8483. How many such integers have all digits ",
+      "correct_answer": "102",
+      "seed_value": 1677171954
+    },
+    "iso_time": "2025-11-23T17:38:36Z"
+  },
+  {
+    "timestamp": 1763919516.3966951,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "102",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:38:36Z"
+  },
+  {
+    "timestamp": 1763919641.633709,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "100",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:40:41Z"
+  },
+  {
+    "timestamp": 1763919737.248984,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:42:17Z"
+  },
+  {
+    "timestamp": 1763919825.820989,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "102",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:43:45Z"
+  },
+  {
+    "timestamp": 1763919903.059669,
+    "seed_id": "1993-1::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "103",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:45:03Z"
+  },
+  {
+    "timestamp": 1763920012.8618062,
+    "seed_id": "1993-1::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-1::1993_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T17:46:52Z"
+  }
+]

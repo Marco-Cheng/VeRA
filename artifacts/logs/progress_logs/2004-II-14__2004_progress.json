@@ -1,0 +1,905 @@
+[
+  {
+    "timestamp": 1765096122.285553,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "Consider a string of $n$ $7$ 's, $7777\\cdots77,$ into which $+$ signs are inserted to produce an arithmetic expression. ",
+      "answer": "108",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-07T08:28:42Z"
+  },
+  {
+    "timestamp": 1765096122.285582,
+    "seed_id": "2004-II-14::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-07T08:28:42Z"
+  },
+  {
+    "timestamp": 1765096122.285596,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Consider a string of $n$ $7$ 's, $7777\\cdots77,$ into which $+$ signs are inserted to produce an arithmetic expression. For example, $7+77+777+7+7=875$ could be obtained from eight $7$ 's in this way. For how many values of $n$ is it possible to insert $+$ signs so that the resulting expression has value $7000$ ?",
+      "answer": "108",
+      "example_id": "2004-II-14::2004"
+    },
+    "iso_time": "2025-12-07T08:28:42Z"
+  },
+  {
+    "timestamp": 1765096240.991307,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-14::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1830820068
+    },
+    "iso_time": "2025-12-07T08:30:40Z"
+  },
+  {
+    "timestamp": 1765096242.136769,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 7,
+        "digit": 4,
+        "k": 4,
+        "target": 9604
+      }
+    },
+    "iso_time": "2025-12-07T08:30:42Z"
+  },
+  {
+    "timestamp": 1765096243.376935,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 394
+    },
+    "iso_time": "2025-12-07T08:30:43Z"
+  },
+  {
+    "timestamp": 1765096243.3771179,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 7, consider a string of n copies of the digit 4, written as a contiguous sequence with no spaces. You may insert",
+      "correct_answer": "394",
+      "seed_value": 1830820068
+    },
+    "iso_time": "2025-12-07T08:30:43Z"
+  },
+  {
+    "timestamp": 1765096243.3772092,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "394",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T08:30:43Z"
+  },
+  {
+    "timestamp": 1765096549.620425,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "398",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T08:35:49Z"
+  },
+  {
+    "timestamp": 1765096873.459869,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "394",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T08:41:13Z"
+  },
+  {
+    "timestamp": 1765097158.2337978,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "388",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T08:45:58Z"
+  },
+  {
+    "timestamp": 1765097622.765408,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "399",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T08:53:42Z"
+  },
+  {
+    "timestamp": 1765098345.960293,
+    "seed_id": "2004-II-14::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-14::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T09:05:45Z"
+  },
+  {
+    "timestamp": 1765098345.9603782,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-14::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1800617695
+    },
+    "iso_time": "2025-12-07T09:05:45Z"
+  },
+  {
+    "timestamp": 1765098355.968021,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-07T09:05:55Z"
+  },
+  {
+    "timestamp": 1765098357.120654,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-07T09:05:57Z"
+  },
+  {
+    "timestamp": 1765098357.120738,
+    "seed_id": "2004-II-14::2004",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.160361766815186
+    },
+    "iso_time": "2025-12-07T09:05:57Z"
+  },
+  {
+    "timestamp": 1765098357.120797,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-14::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1325995328
+    },
+    "iso_time": "2025-12-07T09:05:57Z"
+  },
+  {
+    "timestamp": 1765098367.126396,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-07T09:06:07Z"
+  },
+  {
+    "timestamp": 1765098368.143836,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-07T09:06:08Z"
+  },
+  {
+    "timestamp": 1765098368.1439219,
+    "seed_id": "2004-II-14::2004",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.023124933242798
+    },
+    "iso_time": "2025-12-07T09:06:08Z"
+  },
+  {
+    "timestamp": 1765098368.143969,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-14::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 328586343
+    },
+    "iso_time": "2025-12-07T09:06:08Z"
+  },
+  {
+    "timestamp": 1765098378.1494012,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-07T09:06:18Z"
+  },
+  {
+    "timestamp": 1765098379.31844,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-07T09:06:19Z"
+  },
+  {
+    "timestamp": 1765098379.31854,
+    "seed_id": "2004-II-14::2004",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.174570798873901
+    },
+    "iso_time": "2025-12-07T09:06:19Z"
+  },
+  {
+    "timestamp": 1765098379.31859,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-14::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 686691533
+    },
+    "iso_time": "2025-12-07T09:06:19Z"
+  },
+  {
+    "timestamp": 1765098389.3244328,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-07T09:06:29Z"
+  },
+  {
+    "timestamp": 1765098390.477839,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-07T09:06:30Z"
+  },
+  {
+    "timestamp": 1765098390.477921,
+    "seed_id": "2004-II-14::2004",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.159332036972046
+    },
+    "iso_time": "2025-12-07T09:06:30Z"
+  },
+  {
+    "timestamp": 1765098390.477968,
+    "seed_id": "2004-II-14::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-07T09:06:30Z"
+  },
+  {
+    "timestamp": 1765098390.4779809,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment. | Sample 4 failed to produce valid assignment.",
+      "question": "Consider a string of $n$ $7$ 's, $7777\\cdots77,$ into which $+$ signs are inserted to produce an arithmetic expression. For example, $7+77+777+7+7=875$ could be obtained from eight $7$ 's in this way. For how many values of $n$ is it possible to insert $+$ signs so that the resulting expression has value $7000$ ?",
+      "answer": "108",
+      "example_id": "2004-II-14::2004"
+    },
+    "iso_time": "2025-12-07T09:06:30Z"
+  },
+  {
+    "timestamp": 1765098595.4224079,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-14::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 209208374
+    },
+    "iso_time": "2025-12-07T09:09:55Z"
+  },
+  {
+    "timestamp": 1765098597.0751271,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 9,
+        "digit": 6,
+        "target": 5532,
+        "modulus": 3,
+        "residue": 1
+      }
+    },
+    "iso_time": "2025-12-07T09:09:57Z"
+  },
+  {
+    "timestamp": 1765098598.199829,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1
+    },
+    "iso_time": "2025-12-07T09:09:58Z"
+  },
+  {
+    "timestamp": 1765098598.1999738,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 9, consider a string of n copies of the digit 6. By inserting plus signs between some adjacent digits you split ",
+      "correct_answer": "1",
+      "seed_value": 209208374
+    },
+    "iso_time": "2025-12-07T09:09:58Z"
+  },
+  {
+    "timestamp": 1765098598.200021,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:09:58Z"
+  },
+  {
+    "timestamp": 1765098643.388972,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:10:43Z"
+  },
+  {
+    "timestamp": 1765098704.318058,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:11:44Z"
+  },
+  {
+    "timestamp": 1765098756.339214,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:12:36Z"
+  },
+  {
+    "timestamp": 1765098782.9642408,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:13:02Z"
+  },
+  {
+    "timestamp": 1765098822.3324318,
+    "seed_id": "2004-II-14::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-14::2004_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T09:13:42Z"
+  },
+  {
+    "timestamp": 1765098822.332602,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-14::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 735360422
+    },
+    "iso_time": "2025-12-07T09:13:42Z"
+  },
+  {
+    "timestamp": 1765098823.804424,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "digit": 8,
+        "target": 9872,
+        "modulus": 2,
+        "residue": 0
+      }
+    },
+    "iso_time": "2025-12-07T09:13:43Z"
+  },
+  {
+    "timestamp": 1765098824.927923,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1
+    },
+    "iso_time": "2025-12-07T09:13:44Z"
+  },
+  {
+    "timestamp": 1765098824.928075,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, consider a string of n copies of the digit 8. By inserting plus signs between some adjacent digits you split",
+      "correct_answer": "1",
+      "seed_value": 735360422
+    },
+    "iso_time": "2025-12-07T09:13:44Z"
+  },
+  {
+    "timestamp": 1765098824.928119,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:13:44Z"
+  },
+  {
+    "timestamp": 1765098875.36583,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:14:35Z"
+  },
+  {
+    "timestamp": 1765098930.2178528,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:15:30Z"
+  },
+  {
+    "timestamp": 1765098977.623036,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:16:17Z"
+  },
+  {
+    "timestamp": 1765099011.344428,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:16:51Z"
+  },
+  {
+    "timestamp": 1765099061.779319,
+    "seed_id": "2004-II-14::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-14::2004_prompt02-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T09:17:41Z"
+  },
+  {
+    "timestamp": 1765099061.779489,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-14::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1298321043
+    },
+    "iso_time": "2025-12-07T09:17:41Z"
+  },
+  {
+    "timestamp": 1765099063.207391,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "digit": 2,
+        "target": 2468,
+        "modulus": 2,
+        "residue": 0
+      }
+    },
+    "iso_time": "2025-12-07T09:17:43Z"
+  },
+  {
+    "timestamp": 1765099064.459279,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1
+    },
+    "iso_time": "2025-12-07T09:17:44Z"
+  },
+  {
+    "timestamp": 1765099064.459506,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, consider a string of n copies of the digit 2. By inserting plus signs between some adjacent digits you split",
+      "correct_answer": "1",
+      "seed_value": 1298321043
+    },
+    "iso_time": "2025-12-07T09:17:44Z"
+  },
+  {
+    "timestamp": 1765099064.4595578,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:17:44Z"
+  },
+  {
+    "timestamp": 1765099157.0288498,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:19:17Z"
+  },
+  {
+    "timestamp": 1765099177.0907378,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:19:37Z"
+  },
+  {
+    "timestamp": 1765099237.827662,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:20:37Z"
+  },
+  {
+    "timestamp": 1765099301.033983,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:21:41Z"
+  },
+  {
+    "timestamp": 1765099364.626432,
+    "seed_id": "2004-II-14::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-14::2004_prompt02-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T09:22:44Z"
+  },
+  {
+    "timestamp": 1765099364.626611,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-14::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 925854432
+    },
+    "iso_time": "2025-12-07T09:22:44Z"
+  },
+  {
+    "timestamp": 1765099366.06419,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 9,
+        "digit": 6,
+        "target": 4980,
+        "modulus": 2,
+        "residue": 0
+      }
+    },
+    "iso_time": "2025-12-07T09:22:46Z"
+  },
+  {
+    "timestamp": 1765099367.20976,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1
+    },
+    "iso_time": "2025-12-07T09:22:47Z"
+  },
+  {
+    "timestamp": 1765099367.209912,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 9, consider a string of n copies of the digit 6. By inserting plus signs between some adjacent digits you split ",
+      "correct_answer": "1",
+      "seed_value": 925854432
+    },
+    "iso_time": "2025-12-07T09:22:47Z"
+  },
+  {
+    "timestamp": 1765099367.209955,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:22:47Z"
+  },
+  {
+    "timestamp": 1765099520.2742589,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:25:20Z"
+  },
+  {
+    "timestamp": 1765099557.204347,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:25:57Z"
+  },
+  {
+    "timestamp": 1765099598.794513,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:26:38Z"
+  },
+  {
+    "timestamp": 1765099659.818901,
+    "seed_id": "2004-II-14::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:27:39Z"
+  },
+  {
+    "timestamp": 1765099737.1103868,
+    "seed_id": "2004-II-14::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-14::2004_prompt02-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T09:28:57Z"
+  }
+]

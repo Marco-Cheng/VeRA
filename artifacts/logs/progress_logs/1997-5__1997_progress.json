@@ -1,0 +1,734 @@
+[
+  {
+    "timestamp": 1764213066.7326348,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1997,
+      "question_preview": "The number $r$ can be expressed as a four-place decimal $0.abcd,$ where $a, b, c,$ and $d$ represent digits, any of whic",
+      "answer": "417",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-27T03:11:06Z"
+  },
+  {
+    "timestamp": 1764213066.732716,
+    "seed_id": "1997-5::1997",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-27T03:11:06Z"
+  },
+  {
+    "timestamp": 1764213066.732766,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The number $r$ can be expressed as a four-place decimal $0.abcd,$ where $a, b, c,$ and $d$ represent digits, any of which could be zero.  It is desired to approximate $r$ by a fraction whose numerator is 1 or 2 and whose denominator is an integer. The closest such fraction to $r$ is $\\frac 27.$ What is the number of possible values for $r$ ?",
+      "answer": "417",
+      "example_id": "1997-5::1997"
+    },
+    "iso_time": "2025-11-27T03:11:06Z"
+  },
+  {
+    "timestamp": 1764213154.618649,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-5::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 590967404
+    },
+    "iso_time": "2025-11-27T03:12:34Z"
+  },
+  {
+    "timestamp": 1764213155.411655,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "decimal_places": 5,
+        "allowed_numerators": "[1, 2, 8, 11]",
+        "den_min": 7,
+        "den_max": 40,
+        "numerator_target": 1,
+        "denominator_target": 26,
+        "allowed_numerators_list": [
+          1,
+          2,
+          8,
+          11
+        ]
+      }
+    },
+    "iso_time": "2025-11-27T03:12:35Z"
+  },
+  {
+    "timestamp": 1764213156.15469,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 149
+    },
+    "iso_time": "2025-11-27T03:12:36Z"
+  },
+  {
+    "timestamp": 1764213156.154859,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let r be a 5-place decimal of the form 0.x₁x₂…x_5, where each x_i is a digit 0–9. Consider the set F of rational numbers",
+      "correct_answer": "149",
+      "seed_value": 590967404
+    },
+    "iso_time": "2025-11-27T03:12:36Z"
+  },
+  {
+    "timestamp": 1764213156.15494,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "149",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T03:12:36Z"
+  },
+  {
+    "timestamp": 1764213239.808764,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "149",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T03:13:59Z"
+  },
+  {
+    "timestamp": 1764213346.4135108,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "153",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T03:15:46Z"
+  },
+  {
+    "timestamp": 1764213446.748698,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "152",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T03:17:26Z"
+  },
+  {
+    "timestamp": 1764213557.654748,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "143",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T03:19:17Z"
+  },
+  {
+    "timestamp": 1764213631.16288,
+    "seed_id": "1997-5::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-5::1997_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T03:20:31Z"
+  },
+  {
+    "timestamp": 1764213631.163053,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-5::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1236947060
+    },
+    "iso_time": "2025-11-27T03:20:31Z"
+  },
+  {
+    "timestamp": 1764213631.9375172,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "decimal_places": 5,
+        "allowed_numerators": "[2, 4, 5, 7, 10, 12]",
+        "den_min": 5,
+        "den_max": 26,
+        "numerator_target": 5,
+        "denominator_target": 23,
+        "allowed_numerators_list": [
+          2,
+          4,
+          5,
+          7,
+          10,
+          12
+        ]
+      }
+    },
+    "iso_time": "2025-11-27T03:20:31Z"
+  },
+  {
+    "timestamp": 1764213632.6787782,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 585
+    },
+    "iso_time": "2025-11-27T03:20:32Z"
+  },
+  {
+    "timestamp": 1764213632.678943,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let r be a 5-place decimal of the form 0.x₁x₂…x_5, where each x_i is a digit 0–9. Consider the set F of rational numbers",
+      "correct_answer": "585",
+      "seed_value": 1236947060
+    },
+    "iso_time": "2025-11-27T03:20:32Z"
+  },
+  {
+    "timestamp": 1764213632.679012,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "585",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T03:20:32Z"
+  },
+  {
+    "timestamp": 1764213706.373881,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "585",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T03:21:46Z"
+  },
+  {
+    "timestamp": 1764214054.280824,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "582",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T03:27:34Z"
+  },
+  {
+    "timestamp": 1764214188.6847339,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "577",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T03:29:48Z"
+  },
+  {
+    "timestamp": 1764214578.4785721,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "579",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T03:36:18Z"
+  },
+  {
+    "timestamp": 1764215303.457542,
+    "seed_id": "1997-5::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-5::1997_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T03:48:23Z"
+  },
+  {
+    "timestamp": 1764215303.457739,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-5::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1795258057
+    },
+    "iso_time": "2025-11-27T03:48:23Z"
+  },
+  {
+    "timestamp": 1764215304.273304,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "decimal_places": 3,
+        "allowed_numerators": "[2, 5, 7, 8, 12]",
+        "den_min": 3,
+        "den_max": 15,
+        "numerator_target": 5,
+        "denominator_target": 11,
+        "allowed_numerators_list": [
+          2,
+          5,
+          7,
+          8,
+          12
+        ]
+      }
+    },
+    "iso_time": "2025-11-27T03:48:24Z"
+  },
+  {
+    "timestamp": 1764215305.019982,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 25
+    },
+    "iso_time": "2025-11-27T03:48:25Z"
+  },
+  {
+    "timestamp": 1764215305.020146,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let r be a 3-place decimal of the form 0.x₁x₂…x_3, where each x_i is a digit 0–9. Consider the set F of rational numbers",
+      "correct_answer": "25",
+      "seed_value": 1795258057
+    },
+    "iso_time": "2025-11-27T03:48:25Z"
+  },
+  {
+    "timestamp": 1764215305.020202,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T03:48:25Z"
+  },
+  {
+    "timestamp": 1764215711.32179,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "25",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T03:55:11Z"
+  },
+  {
+    "timestamp": 1764216072.510614,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "25",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T04:01:12Z"
+  },
+  {
+    "timestamp": 1764216258.608743,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "32",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T04:04:18Z"
+  },
+  {
+    "timestamp": 1764216337.091325,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "31",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T04:05:37Z"
+  },
+  {
+    "timestamp": 1764216638.6551418,
+    "seed_id": "1997-5::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-5::1997_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T04:10:38Z"
+  },
+  {
+    "timestamp": 1764216638.6553369,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-5::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 297897207
+    },
+    "iso_time": "2025-11-27T04:10:38Z"
+  },
+  {
+    "timestamp": 1764216639.4639418,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "decimal_places": 6,
+        "allowed_numerators": "[2, 3, 4, 7]",
+        "den_min": 5,
+        "den_max": 18,
+        "numerator_target": 2,
+        "denominator_target": 5,
+        "allowed_numerators_list": [
+          2,
+          3,
+          4,
+          7
+        ]
+      }
+    },
+    "iso_time": "2025-11-27T04:10:39Z"
+  },
+  {
+    "timestamp": 1764216640.21359,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 11438
+    },
+    "iso_time": "2025-11-27T04:10:40Z"
+  },
+  {
+    "timestamp": 1764216640.2137542,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let r be a 6-place decimal of the form 0.x₁x₂…x_6, where each x_i is a digit 0–9. Consider the set F of rational numbers",
+      "correct_answer": "11438",
+      "seed_value": 297897207
+    },
+    "iso_time": "2025-11-27T04:10:40Z"
+  },
+  {
+    "timestamp": 1764216640.213828,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "11431",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T04:10:40Z"
+  },
+  {
+    "timestamp": 1764216877.144636,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "11441",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T04:14:37Z"
+  },
+  {
+    "timestamp": 1764217340.813962,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "11438",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T04:22:20Z"
+  },
+  {
+    "timestamp": 1764217400.451503,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "11442",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T04:23:20Z"
+  },
+  {
+    "timestamp": 1764217758.908522,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "11438",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T04:29:18Z"
+  },
+  {
+    "timestamp": 1764217843.079166,
+    "seed_id": "1997-5::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-5::1997_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T04:30:43Z"
+  },
+  {
+    "timestamp": 1764217843.079255,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-5::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1490967755
+    },
+    "iso_time": "2025-11-27T04:30:43Z"
+  },
+  {
+    "timestamp": 1764217843.880905,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "decimal_places": 6,
+        "allowed_numerators": "[2, 5, 6, 7, 10, 12]",
+        "den_min": 7,
+        "den_max": 30,
+        "numerator_target": 5,
+        "denominator_target": 22,
+        "allowed_numerators_list": [
+          2,
+          5,
+          6,
+          7,
+          10,
+          12
+        ]
+      }
+    },
+    "iso_time": "2025-11-27T04:30:43Z"
+  },
+  {
+    "timestamp": 1764217844.629364,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5556
+    },
+    "iso_time": "2025-11-27T04:30:44Z"
+  },
+  {
+    "timestamp": 1764217844.629523,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let r be a 6-place decimal of the form 0.x₁x₂…x_6, where each x_i is a digit 0–9. Consider the set F of rational numbers",
+      "correct_answer": "5556",
+      "seed_value": 1490967755
+    },
+    "iso_time": "2025-11-27T04:30:44Z"
+  },
+  {
+    "timestamp": 1764217844.6295931,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5556",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T04:30:44Z"
+  },
+  {
+    "timestamp": 1764218030.472835,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5554",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T04:33:50Z"
+  },
+  {
+    "timestamp": 1764218361.389664,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5563",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T04:39:21Z"
+  },
+  {
+    "timestamp": 1764218646.922155,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5556",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T04:44:06Z"
+  },
+  {
+    "timestamp": 1764218705.688876,
+    "seed_id": "1997-5::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5553",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T04:45:05Z"
+  },
+  {
+    "timestamp": 1764218801.238482,
+    "seed_id": "1997-5::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-5::1997_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T04:46:41Z"
+  }
+]

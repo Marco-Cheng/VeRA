@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1762927242.842964,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1986,
+      "question_preview": "What is the sum of the solutions to the equation $\\sqrt[4]{x} = \\frac{12}{7 - \\sqrt[4]{x}}$ ?",
+      "answer": "337",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-12T06:00:42Z"
+  },
+  {
+    "timestamp": 1762927242.843025,
+    "seed_id": "1986-1::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-12T06:00:42Z"
+  },
+  {
+    "timestamp": 1762927242.843041,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "What is the sum of the solutions to the equation $\\sqrt[4]{x} = \\frac{12}{7 - \\sqrt[4]{x}}$ ?",
+      "answer": "337",
+      "example_id": "1986-1::1986"
+    },
+    "iso_time": "2025-11-12T06:00:42Z"
+  },
+  {
+    "timestamp": 1762927441.3659241,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-1::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2043647992
+    },
+    "iso_time": "2025-11-12T06:04:01Z"
+  },
+  {
+    "timestamp": 1762927442.375357,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "A": 6,
+        "B": 272
+      }
+    },
+    "iso_time": "2025-11-12T06:04:02Z"
+  },
+  {
+    "timestamp": 1762927443.369644,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 272
+    },
+    "iso_time": "2025-11-12T06:04:03Z"
+  },
+  {
+    "timestamp": 1762927443.369822,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $n=4$ be a positive even integer. Consider the following system of equations in non-negative real variables $x$ and ",
+      "correct_answer": "272",
+      "seed_value": 2043647992
+    },
+    "iso_time": "2025-11-12T06:04:03Z"
+  },
+  {
+    "timestamp": 1762927443.369889,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "272",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T06:04:03Z"
+  },
+  {
+    "timestamp": 1762927558.820341,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "269",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:05:58Z"
+  },
+  {
+    "timestamp": 1762927712.741477,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "272",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T06:08:32Z"
+  },
+  {
+    "timestamp": 1762927840.559456,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "278",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:10:40Z"
+  },
+  {
+    "timestamp": 1762927980.599227,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "265",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:13:00Z"
+  },
+  {
+    "timestamp": 1762928136.3777258,
+    "seed_id": "1986-1::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-1::1986_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-12T06:15:36Z"
+  },
+  {
+    "timestamp": 1762928136.377771,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-1::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 349425233
+    },
+    "iso_time": "2025-11-12T06:15:36Z"
+  },
+  {
+    "timestamp": 1762928137.4406772,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "A": 4,
+        "B": 29
+      }
+    },
+    "iso_time": "2025-11-12T06:15:37Z"
+  },
+  {
+    "timestamp": 1762928138.492108,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 0
+    },
+    "iso_time": "2025-11-12T06:15:38Z"
+  },
+  {
+    "timestamp": 1762928138.492255,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $n=4$ be a positive even integer. Consider the following system of equations in non-negative real variables $x$ and ",
+      "correct_answer": "0",
+      "seed_value": 349425233
+    },
+    "iso_time": "2025-11-12T06:15:38Z"
+  },
+  {
+    "timestamp": 1762928138.4923022,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:15:38Z"
+  },
+  {
+    "timestamp": 1762928320.783128,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T06:18:40Z"
+  },
+  {
+    "timestamp": 1762928403.971786,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:20:03Z"
+  },
+  {
+    "timestamp": 1762928568.3562791,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T06:22:48Z"
+  },
+  {
+    "timestamp": 1762928689.650315,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:24:49Z"
+  },
+  {
+    "timestamp": 1762928866.9259331,
+    "seed_id": "1986-1::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-1::1986_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-12T06:27:46Z"
+  },
+  {
+    "timestamp": 1762928866.925983,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-1::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1917385338
+    },
+    "iso_time": "2025-11-12T06:27:46Z"
+  },
+  {
+    "timestamp": 1762928867.9305751,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "A": 8,
+        "B": 2402
+      }
+    },
+    "iso_time": "2025-11-12T06:27:47Z"
+  },
+  {
+    "timestamp": 1762928868.9333398,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2402
+    },
+    "iso_time": "2025-11-12T06:27:48Z"
+  },
+  {
+    "timestamp": 1762928868.933482,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $n=4$ be a positive even integer. Consider the following system of equations in non-negative real variables $x$ and ",
+      "correct_answer": "2402",
+      "seed_value": 1917385338
+    },
+    "iso_time": "2025-11-12T06:27:48Z"
+  },
+  {
+    "timestamp": 1762928868.933543,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2402",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T06:27:48Z"
+  },
+  {
+    "timestamp": 1762928975.572683,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2404",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:29:35Z"
+  },
+  {
+    "timestamp": 1762929141.306112,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2399",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:32:21Z"
+  },
+  {
+    "timestamp": 1762929318.8660429,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2407",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:35:18Z"
+  },
+  {
+    "timestamp": 1762929478.002103,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2402",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T06:37:58Z"
+  },
+  {
+    "timestamp": 1762929580.089537,
+    "seed_id": "1986-1::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-1::1986_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-12T06:39:40Z"
+  },
+  {
+    "timestamp": 1762929580.0895848,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-1::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1086468135
+    },
+    "iso_time": "2025-11-12T06:39:40Z"
+  },
+  {
+    "timestamp": 1762929581.094225,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "A": 10,
+        "B": 2482
+      }
+    },
+    "iso_time": "2025-11-12T06:39:41Z"
+  },
+  {
+    "timestamp": 1762929582.105133,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2482
+    },
+    "iso_time": "2025-11-12T06:39:42Z"
+  },
+  {
+    "timestamp": 1762929582.105296,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $n=4$ be a positive even integer. Consider the following system of equations in non-negative real variables $x$ and ",
+      "correct_answer": "2482",
+      "seed_value": 1086468135
+    },
+    "iso_time": "2025-11-12T06:39:42Z"
+  },
+  {
+    "timestamp": 1762929582.105366,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2489",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:39:42Z"
+  },
+  {
+    "timestamp": 1762929709.7265558,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2482",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T06:41:49Z"
+  },
+  {
+    "timestamp": 1762929824.571887,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2480",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:43:44Z"
+  },
+  {
+    "timestamp": 1762929975.784496,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2482",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T06:46:15Z"
+  },
+  {
+    "timestamp": 1762930091.170291,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2474",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:48:11Z"
+  },
+  {
+    "timestamp": 1762930268.0117602,
+    "seed_id": "1986-1::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-1::1986_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-12T06:51:08Z"
+  },
+  {
+    "timestamp": 1762930268.0118048,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-1::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 614538588
+    },
+    "iso_time": "2025-11-12T06:51:08Z"
+  },
+  {
+    "timestamp": 1762930269.083807,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "A": 8,
+        "B": 479
+      }
+    },
+    "iso_time": "2025-11-12T06:51:09Z"
+  },
+  {
+    "timestamp": 1762930270.1248481,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 0
+    },
+    "iso_time": "2025-11-12T06:51:10Z"
+  },
+  {
+    "timestamp": 1762930270.1250062,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $n=4$ be a positive even integer. Consider the following system of equations in non-negative real variables $x$ and ",
+      "correct_answer": "0",
+      "seed_value": 614538588
+    },
+    "iso_time": "2025-11-12T06:51:10Z"
+  },
+  {
+    "timestamp": 1762930270.125057,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:51:10Z"
+  },
+  {
+    "timestamp": 1762930427.858399,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:53:47Z"
+  },
+  {
+    "timestamp": 1762930615.557111,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T06:56:55Z"
+  },
+  {
+    "timestamp": 1762930730.351902,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T06:58:50Z"
+  },
+  {
+    "timestamp": 1762930929.429513,
+    "seed_id": "1986-1::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T07:02:09Z"
+  },
+  {
+    "timestamp": 1762931047.514316,
+    "seed_id": "1986-1::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-1::1986_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-12T07:04:07Z"
+  }
+]

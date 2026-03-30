@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764880887.005644,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "Let $N$ be the greatest integer multiple of 8, whose digits are all different. What is the remainder when $N$ is divided",
+      "answer": "120",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-04T20:41:27Z"
+  },
+  {
+    "timestamp": 1764880887.005738,
+    "seed_id": "2003-II-2::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-04T20:41:27Z"
+  },
+  {
+    "timestamp": 1764880887.00579,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $N$ be the greatest integer multiple of 8, whose digits are all different. What is the remainder when $N$ is divided by 1000?",
+      "answer": "120",
+      "example_id": "2003-II-2::2003"
+    },
+    "iso_time": "2025-12-04T20:41:27Z"
+  },
+  {
+    "timestamp": 1764880998.876011,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-2::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1854179005
+    },
+    "iso_time": "2025-12-04T20:43:18Z"
+  },
+  {
+    "timestamp": 1764881000.2344909,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 6,
+        "b": 0,
+        "k": 6
+      }
+    },
+    "iso_time": "2025-12-04T20:43:20Z"
+  },
+  {
+    "timestamp": 1764881001.409046,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 513024
+    },
+    "iso_time": "2025-12-04T20:43:21Z"
+  },
+  {
+    "timestamp": 1764881001.409214,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, let m = 2^6 * 5^0 and let k = max(6, 0). Among all 10-digit integers that use each of the digits 0 through 9",
+      "correct_answer": "513024",
+      "seed_value": 1854179005
+    },
+    "iso_time": "2025-12-04T20:43:21Z"
+  },
+  {
+    "timestamp": 1764881001.40926,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "513024",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T20:43:21Z"
+  },
+  {
+    "timestamp": 1764881199.2836869,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "513024",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T20:46:39Z"
+  },
+  {
+    "timestamp": 1764881461.542183,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "513021",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:51:01Z"
+  },
+  {
+    "timestamp": 1764881537.298937,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "513018",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:52:17Z"
+  },
+  {
+    "timestamp": 1764881608.55895,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "513031",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:53:28Z"
+  },
+  {
+    "timestamp": 1764881700.6672041,
+    "seed_id": "2003-II-2::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-2::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T20:55:00Z"
+  },
+  {
+    "timestamp": 1764881700.6673841,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-2::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 641172494
+    },
+    "iso_time": "2025-12-04T20:55:00Z"
+  },
+  {
+    "timestamp": 1764881702.014328,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 5,
+        "b": 1,
+        "k": 5
+      }
+    },
+    "iso_time": "2025-12-04T20:55:02Z"
+  },
+  {
+    "timestamp": 1764881703.043401,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 53120
+    },
+    "iso_time": "2025-12-04T20:55:03Z"
+  },
+  {
+    "timestamp": 1764881703.043547,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, let m = 2^5 * 5^1 and let k = max(5, 1). Among all 10-digit integers that use each of the digits 0 through 9",
+      "correct_answer": "53120",
+      "seed_value": 641172494
+    },
+    "iso_time": "2025-12-04T20:55:03Z"
+  },
+  {
+    "timestamp": 1764881703.043589,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "53129",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:55:03Z"
+  },
+  {
+    "timestamp": 1764881755.683904,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "53112",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:55:55Z"
+  },
+  {
+    "timestamp": 1764881905.810017,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "53113",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T20:58:25Z"
+  },
+  {
+    "timestamp": 1764881914.204772,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "53120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T20:58:34Z"
+  },
+  {
+    "timestamp": 1764882128.82114,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "53120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:02:08Z"
+  },
+  {
+    "timestamp": 1764882314.688479,
+    "seed_id": "2003-II-2::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-2::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T21:05:14Z"
+  },
+  {
+    "timestamp": 1764882314.688579,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-2::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1200826196
+    },
+    "iso_time": "2025-12-04T21:05:14Z"
+  },
+  {
+    "timestamp": 1764882316.0129962,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 6,
+        "b": 1,
+        "k": 6
+      }
+    },
+    "iso_time": "2025-12-04T21:05:16Z"
+  },
+  {
+    "timestamp": 1764882317.0613701,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 453120
+    },
+    "iso_time": "2025-12-04T21:05:17Z"
+  },
+  {
+    "timestamp": 1764882317.061534,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, let m = 2^6 * 5^1 and let k = max(6, 1). Among all 10-digit integers that use each of the digits 0 through 9",
+      "correct_answer": "453120",
+      "seed_value": 1200826196
+    },
+    "iso_time": "2025-12-04T21:05:17Z"
+  },
+  {
+    "timestamp": 1764882317.061585,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "453118",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:05:17Z"
+  },
+  {
+    "timestamp": 1764882368.3462741,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "453122",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:06:08Z"
+  },
+  {
+    "timestamp": 1764882388.944135,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "453115",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:06:28Z"
+  },
+  {
+    "timestamp": 1764882465.724612,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "453120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:07:45Z"
+  },
+  {
+    "timestamp": 1764882521.004236,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "453120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:08:41Z"
+  },
+  {
+    "timestamp": 1764882572.473356,
+    "seed_id": "2003-II-2::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-2::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T21:09:32Z"
+  },
+  {
+    "timestamp": 1764882572.4734578,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-2::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2020043144
+    },
+    "iso_time": "2025-12-04T21:09:32Z"
+  },
+  {
+    "timestamp": 1764882573.856467,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 6,
+        "b": 1,
+        "k": 6
+      }
+    },
+    "iso_time": "2025-12-04T21:09:33Z"
+  },
+  {
+    "timestamp": 1764882574.9156501,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 453120
+    },
+    "iso_time": "2025-12-04T21:09:34Z"
+  },
+  {
+    "timestamp": 1764882574.915819,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, let m = 2^6 * 5^1 and let k = max(6, 1). Among all 10-digit integers that use each of the digits 0 through 9",
+      "correct_answer": "453120",
+      "seed_value": 2020043144
+    },
+    "iso_time": "2025-12-04T21:09:34Z"
+  },
+  {
+    "timestamp": 1764882574.9158678,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "453120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:09:34Z"
+  },
+  {
+    "timestamp": 1764882623.9200552,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "453111",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:10:23Z"
+  },
+  {
+    "timestamp": 1764882648.3082628,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "453120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:10:48Z"
+  },
+  {
+    "timestamp": 1764882867.4469051,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "453125",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:14:27Z"
+  },
+  {
+    "timestamp": 1764882898.573429,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "453116",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:14:58Z"
+  },
+  {
+    "timestamp": 1764882969.9444978,
+    "seed_id": "2003-II-2::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-2::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T21:16:09Z"
+  },
+  {
+    "timestamp": 1764882969.944662,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-2::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 71815510
+    },
+    "iso_time": "2025-12-04T21:16:09Z"
+  },
+  {
+    "timestamp": 1764882971.284912,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 6,
+        "b": 1,
+        "k": 6
+      }
+    },
+    "iso_time": "2025-12-04T21:16:11Z"
+  },
+  {
+    "timestamp": 1764882972.384632,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 453120
+    },
+    "iso_time": "2025-12-04T21:16:12Z"
+  },
+  {
+    "timestamp": 1764882972.384779,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, let m = 2^6 * 5^1 and let k = max(6, 1). Among all 10-digit integers that use each of the digits 0 through 9",
+      "correct_answer": "453120",
+      "seed_value": 71815510
+    },
+    "iso_time": "2025-12-04T21:16:12Z"
+  },
+  {
+    "timestamp": 1764882972.384824,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "453116",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:16:12Z"
+  },
+  {
+    "timestamp": 1764883022.35299,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "453124",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:17:02Z"
+  },
+  {
+    "timestamp": 1764883045.859346,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "453120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:17:25Z"
+  },
+  {
+    "timestamp": 1764883264.862533,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "453129",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T21:21:04Z"
+  },
+  {
+    "timestamp": 1764883284.305084,
+    "seed_id": "2003-II-2::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "453120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T21:21:24Z"
+  },
+  {
+    "timestamp": 1764883411.686233,
+    "seed_id": "2003-II-2::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-2::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T21:23:31Z"
+  }
+]

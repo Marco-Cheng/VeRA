@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1764414276.746807,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "What is the smallest positive integer with six positive odd integer divisors and twelve positive even integer divisors?",
+      "answer": "180",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T11:04:36Z"
+  },
+  {
+    "timestamp": 1764414276.746859,
+    "seed_id": "2000-II-4::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T11:04:36Z"
+  },
+  {
+    "timestamp": 1764414276.7468832,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "What is the smallest positive integer with six positive odd integer divisors and twelve positive even integer divisors?",
+      "answer": "180",
+      "example_id": "2000-II-4::2000"
+    },
+    "iso_time": "2025-11-29T11:04:36Z"
+  },
+  {
+    "timestamp": 1764414365.445455,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-4::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1233219532
+    },
+    "iso_time": "2025-11-29T11:06:05Z"
+  },
+  {
+    "timestamp": 1764414366.650572,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x2": 540,
+        "x4": 450,
+        "x8": 360,
+        "y3": 504,
+        "y9": 378
+      }
+    },
+    "iso_time": "2025-11-29T11:06:06Z"
+  },
+  {
+    "timestamp": 1764414367.6627278,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 69854400
+    },
+    "iso_time": "2025-11-29T11:06:07Z"
+  },
+  {
+    "timestamp": 1764414367.662882,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the least positive integer n such that among its positive divisors, exactly 540 are divisible by 2, exactly 450 are",
+      "correct_answer": "69854400",
+      "seed_value": 1233219532
+    },
+    "iso_time": "2025-11-29T11:06:07Z"
+  },
+  {
+    "timestamp": 1764414367.662922,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "69854401",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:06:07Z"
+  },
+  {
+    "timestamp": 1764414458.144589,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "69854402",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:07:38Z"
+  },
+  {
+    "timestamp": 1764414486.172228,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "69854407",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:08:06Z"
+  },
+  {
+    "timestamp": 1764414508.509386,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "69854400",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:08:28Z"
+  },
+  {
+    "timestamp": 1764414536.968471,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "69854400",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:08:56Z"
+  },
+  {
+    "timestamp": 1764414596.7843451,
+    "seed_id": "2000-II-4::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-4::2000_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T11:09:56Z"
+  },
+  {
+    "timestamp": 1764414596.7845702,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-4::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2060990845
+    },
+    "iso_time": "2025-11-29T11:09:56Z"
+  },
+  {
+    "timestamp": 1764414598.03728,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x2": 900,
+        "x4": 720,
+        "x8": 540,
+        "y3": 900,
+        "y9": 720
+      }
+    },
+    "iso_time": "2025-11-29T11:09:58Z"
+  },
+  {
+    "timestamp": 1764414599.104928,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2619540000
+    },
+    "iso_time": "2025-11-29T11:09:59Z"
+  },
+  {
+    "timestamp": 1764414599.105104,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the least positive integer n such that among its positive divisors, exactly 900 are divisible by 2, exactly 720 are",
+      "correct_answer": "2619540000",
+      "seed_value": 2060990845
+    },
+    "iso_time": "2025-11-29T11:09:59Z"
+  },
+  {
+    "timestamp": 1764414599.105149,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2619540000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:09:59Z"
+  },
+  {
+    "timestamp": 1764414635.27092,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2619540008",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:10:35Z"
+  },
+  {
+    "timestamp": 1764414672.647398,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2619539997",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:11:12Z"
+  },
+  {
+    "timestamp": 1764414712.720911,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2619540007",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:11:52Z"
+  },
+  {
+    "timestamp": 1764414750.571867,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2619540000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:12:30Z"
+  },
+  {
+    "timestamp": 1764414785.497988,
+    "seed_id": "2000-II-4::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-4::2000_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T11:13:05Z"
+  },
+  {
+    "timestamp": 1764414785.49825,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-4::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 660822952
+    },
+    "iso_time": "2025-11-29T11:13:05Z"
+  },
+  {
+    "timestamp": 1764414786.609222,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x2": 108,
+        "x4": 72,
+        "x8": 36,
+        "y3": 96,
+        "y9": 48
+      }
+    },
+    "iso_time": "2025-11-29T11:13:06Z"
+  },
+  {
+    "timestamp": 1764414787.632253,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 138600
+    },
+    "iso_time": "2025-11-29T11:13:07Z"
+  },
+  {
+    "timestamp": 1764414787.6324182,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the least positive integer n such that among its positive divisors, exactly 108 are divisible by 2, exactly 72 are ",
+      "correct_answer": "138600",
+      "seed_value": 660822952
+    },
+    "iso_time": "2025-11-29T11:13:07Z"
+  },
+  {
+    "timestamp": 1764414787.632457,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "138600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:13:07Z"
+  },
+  {
+    "timestamp": 1764414824.2992,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "138602",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:13:44Z"
+  },
+  {
+    "timestamp": 1764414833.257592,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "138591",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:13:53Z"
+  },
+  {
+    "timestamp": 1764414868.936067,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "138594",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:14:28Z"
+  },
+  {
+    "timestamp": 1764414915.644654,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "138600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:15:15Z"
+  },
+  {
+    "timestamp": 1764414939.907725,
+    "seed_id": "2000-II-4::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-4::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T11:15:39Z"
+  },
+  {
+    "timestamp": 1764414939.9079528,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-4::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 46381599
+    },
+    "iso_time": "2025-11-29T11:15:39Z"
+  },
+  {
+    "timestamp": 1764414941.000746,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x2": 720,
+        "x4": 600,
+        "x8": 480,
+        "y3": 630,
+        "y9": 420
+      }
+    },
+    "iso_time": "2025-11-29T11:15:41Z"
+  },
+  {
+    "timestamp": 1764414942.031879,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 582120000
+    },
+    "iso_time": "2025-11-29T11:15:42Z"
+  },
+  {
+    "timestamp": 1764414942.032032,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the least positive integer n such that among its positive divisors, exactly 720 are divisible by 2, exactly 600 are",
+      "correct_answer": "582120000",
+      "seed_value": 46381599
+    },
+    "iso_time": "2025-11-29T11:15:42Z"
+  },
+  {
+    "timestamp": 1764414942.032081,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "582119991",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:15:42Z"
+  },
+  {
+    "timestamp": 1764414981.380745,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "582120000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:16:21Z"
+  },
+  {
+    "timestamp": 1764415019.070687,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "582120000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:16:59Z"
+  },
+  {
+    "timestamp": 1764415049.707693,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "582119992",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:17:29Z"
+  },
+  {
+    "timestamp": 1764415080.915751,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "582120007",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:18:00Z"
+  },
+  {
+    "timestamp": 1764415103.5592802,
+    "seed_id": "2000-II-4::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-4::2000_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T11:18:23Z"
+  },
+  {
+    "timestamp": 1764415103.559446,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-4::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1242378254
+    },
+    "iso_time": "2025-11-29T11:18:23Z"
+  },
+  {
+    "timestamp": 1764415104.831414,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x2": 216,
+        "x4": 162,
+        "x8": 108,
+        "y3": 180,
+        "y9": 90
+      }
+    },
+    "iso_time": "2025-11-29T11:18:24Z"
+  },
+  {
+    "timestamp": 1764415105.825292,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1940400
+    },
+    "iso_time": "2025-11-29T11:18:25Z"
+  },
+  {
+    "timestamp": 1764415105.825512,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the least positive integer n such that among its positive divisors, exactly 216 are divisible by 2, exactly 162 are",
+      "correct_answer": "1940400",
+      "seed_value": 1242378254
+    },
+    "iso_time": "2025-11-29T11:18:25Z"
+  },
+  {
+    "timestamp": 1764415105.8255591,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1940398",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:18:25Z"
+  },
+  {
+    "timestamp": 1764415137.0266209,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1940400",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:18:57Z"
+  },
+  {
+    "timestamp": 1764415162.597915,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1940405",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:19:22Z"
+  },
+  {
+    "timestamp": 1764415188.5350568,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1940402",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:19:48Z"
+  },
+  {
+    "timestamp": 1764415210.9679549,
+    "seed_id": "2000-II-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1940400",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:20:10Z"
+  },
+  {
+    "timestamp": 1764415251.4096398,
+    "seed_id": "2000-II-4::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-4::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T11:20:51Z"
+  }
+]

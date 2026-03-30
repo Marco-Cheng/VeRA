@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1761803383.4697442,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2024,
+      "question_preview": "Let $O(0,0),A(\\tfrac{1}{2},0),$ and $B(0,\\tfrac{\\sqrt{3}}{2})$ be points in the coordinate plane. Let $\\mathcal{F}$ be t",
+      "answer": "23",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-10-30T05:49:43Z"
+  },
+  {
+    "timestamp": 1761803383.4698591,
+    "seed_id": "2024-II-12::2024",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-10-30T05:49:43Z"
+  },
+  {
+    "timestamp": 1761803383.469941,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $O(0,0),A(\\tfrac{1}{2},0),$ and $B(0,\\tfrac{\\sqrt{3}}{2})$ be points in the coordinate plane. Let $\\mathcal{F}$ be the family of segments $\\overline{PQ}$ of unit length lying in the first quadrant with $P$ on the $x$ -axis and $Q$ on the $y$ -axis. There is a unique point $C$ on $\\overline{AB},$ distinct from $A$ and $B,$ that does not belong to any segment from $\\mathcal{F}$ other than $\\overline{AB}$ . Then $OC^2=\\tfrac{p}{q}$ , where $p$ and $q$ are relatively prime positive integers. Find $p+q$ .",
+      "answer": "23",
+      "example_id": "2024-II-12::2024"
+    },
+    "iso_time": "2025-10-30T05:49:43Z"
+  },
+  {
+    "timestamp": 1761803495.352669,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-12::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 518599529
+    },
+    "iso_time": "2025-10-30T05:51:35Z"
+  },
+  {
+    "timestamp": 1761803496.2259798,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u": 14,
+        "v": 29,
+        "t": 15,
+        "p_weight": 14,
+        "q_weight": 1
+      }
+    },
+    "iso_time": "2025-10-30T05:51:36Z"
+  },
+  {
+    "timestamp": 1761803497.138357,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1321588
+    },
+    "iso_time": "2025-10-30T05:51:37Z"
+  },
+  {
+    "timestamp": 1761803497.138496,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the coordinate plane, let O=(0,0), A=(sqrt(14)/sqrt(15), 0), and B=(0, sqrt(29)/sqrt(15)). For positive rational weig",
+      "correct_answer": "1321588",
+      "seed_value": 518599529
+    },
+    "iso_time": "2025-10-30T05:51:37Z"
+  },
+  {
+    "timestamp": 1761803497.1385322,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1321588",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T05:51:37Z"
+  },
+  {
+    "timestamp": 1761803572.794935,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1321588",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T05:52:52Z"
+  },
+  {
+    "timestamp": 1761803601.470269,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1321586",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T05:53:21Z"
+  },
+  {
+    "timestamp": 1761803649.289213,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1321593",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T05:54:09Z"
+  },
+  {
+    "timestamp": 1761803681.495713,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1321585",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T05:54:41Z"
+  },
+  {
+    "timestamp": 1761803735.13186,
+    "seed_id": "2024-II-12::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-12::2024_prompt01-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-10-30T05:55:35Z"
+  },
+  {
+    "timestamp": 1761803735.1320279,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-12::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 902760969
+    },
+    "iso_time": "2025-10-30T05:55:35Z"
+  },
+  {
+    "timestamp": 1761803736.0241878,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u": 23,
+        "v": 5,
+        "t": 9,
+        "p_weight": 2,
+        "q_weight": 7
+      }
+    },
+    "iso_time": "2025-10-30T05:55:36Z"
+  },
+  {
+    "timestamp": 1761803736.918732,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 113842
+    },
+    "iso_time": "2025-10-30T05:55:36Z"
+  },
+  {
+    "timestamp": 1761803736.918865,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the coordinate plane, let O=(0,0), A=(sqrt(23)/sqrt(9), 0), and B=(0, sqrt(5)/sqrt(9)). For positive rational weights",
+      "correct_answer": "113842",
+      "seed_value": 902760969
+    },
+    "iso_time": "2025-10-30T05:55:36Z"
+  },
+  {
+    "timestamp": 1761803736.918916,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "113851",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T05:55:36Z"
+  },
+  {
+    "timestamp": 1761803830.84818,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "113834",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T05:57:10Z"
+  },
+  {
+    "timestamp": 1761803865.8165781,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "113842",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T05:57:45Z"
+  },
+  {
+    "timestamp": 1761803894.944758,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "113842",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T05:58:14Z"
+  },
+  {
+    "timestamp": 1761803973.98113,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "113836",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T05:59:33Z"
+  },
+  {
+    "timestamp": 1761804067.770467,
+    "seed_id": "2024-II-12::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-12::2024_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T06:01:07Z"
+  },
+  {
+    "timestamp": 1761804067.770658,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-12::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 902632514
+    },
+    "iso_time": "2025-10-30T06:01:07Z"
+  },
+  {
+    "timestamp": 1761804068.672221,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u": 29,
+        "v": 28,
+        "t": 13,
+        "p_weight": 1,
+        "q_weight": 5
+      }
+    },
+    "iso_time": "2025-10-30T06:01:08Z"
+  },
+  {
+    "timestamp": 1761804069.642643,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 944482
+    },
+    "iso_time": "2025-10-30T06:01:09Z"
+  },
+  {
+    "timestamp": 1761804069.642795,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the coordinate plane, let O=(0,0), A=(sqrt(29)/sqrt(13), 0), and B=(0, sqrt(28)/sqrt(13)). For positive rational weig",
+      "correct_answer": "944482",
+      "seed_value": 902632514
+    },
+    "iso_time": "2025-10-30T06:01:09Z"
+  },
+  {
+    "timestamp": 1761804069.6428318,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "944482",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T06:01:09Z"
+  },
+  {
+    "timestamp": 1761804136.937268,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "944482",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T06:02:16Z"
+  },
+  {
+    "timestamp": 1761804189.447947,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "944478",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T06:03:09Z"
+  },
+  {
+    "timestamp": 1761804236.656205,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "944485",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T06:03:56Z"
+  },
+  {
+    "timestamp": 1761804282.733696,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "944475",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T06:04:42Z"
+  },
+  {
+    "timestamp": 1761804330.113496,
+    "seed_id": "2024-II-12::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-12::2024_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T06:05:30Z"
+  },
+  {
+    "timestamp": 1761804330.113568,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-12::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 643068993
+    },
+    "iso_time": "2025-10-30T06:05:30Z"
+  },
+  {
+    "timestamp": 1761804331.037639,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u": 25,
+        "v": 10,
+        "t": 15,
+        "p_weight": 1,
+        "q_weight": 20
+      }
+    },
+    "iso_time": "2025-10-30T06:05:31Z"
+  },
+  {
+    "timestamp": 1761804331.950051,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 376
+    },
+    "iso_time": "2025-10-30T06:05:31Z"
+  },
+  {
+    "timestamp": 1761804331.950219,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the coordinate plane, let O=(0,0), A=(sqrt(25)/sqrt(15), 0), and B=(0, sqrt(10)/sqrt(15)). For positive rational weig",
+      "correct_answer": "376",
+      "seed_value": 643068993
+    },
+    "iso_time": "2025-10-30T06:05:31Z"
+  },
+  {
+    "timestamp": 1761804331.9502568,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "381",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T06:05:31Z"
+  },
+  {
+    "timestamp": 1761804374.1361432,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "385",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T06:06:14Z"
+  },
+  {
+    "timestamp": 1761804415.4742851,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "379",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T06:06:55Z"
+  },
+  {
+    "timestamp": 1761804459.078228,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "376",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T06:07:39Z"
+  },
+  {
+    "timestamp": 1761804517.278987,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "376",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T06:08:37Z"
+  },
+  {
+    "timestamp": 1761804539.5630841,
+    "seed_id": "2024-II-12::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-12::2024_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T06:08:59Z"
+  },
+  {
+    "timestamp": 1761804539.563259,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-12::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1610047442
+    },
+    "iso_time": "2025-10-30T06:08:59Z"
+  },
+  {
+    "timestamp": 1761804540.4761758,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u": 18,
+        "v": 2,
+        "t": 18,
+        "p_weight": 17,
+        "q_weight": 9
+      }
+    },
+    "iso_time": "2025-10-30T06:09:00Z"
+  },
+  {
+    "timestamp": 1761804541.435037,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2759
+    },
+    "iso_time": "2025-10-30T06:09:01Z"
+  },
+  {
+    "timestamp": 1761804541.43518,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the coordinate plane, let O=(0,0), A=(sqrt(18)/sqrt(18), 0), and B=(0, sqrt(2)/sqrt(18)). For positive rational weigh",
+      "correct_answer": "2759",
+      "seed_value": 1610047442
+    },
+    "iso_time": "2025-10-30T06:09:01Z"
+  },
+  {
+    "timestamp": 1761804541.435217,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2767",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T06:09:01Z"
+  },
+  {
+    "timestamp": 1761804581.756512,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2766",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T06:09:41Z"
+  },
+  {
+    "timestamp": 1761804689.685802,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2759",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T06:11:29Z"
+  },
+  {
+    "timestamp": 1761804773.748127,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2760",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T06:12:53Z"
+  },
+  {
+    "timestamp": 1761804864.156712,
+    "seed_id": "2024-II-12::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2759",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T06:14:24Z"
+  },
+  {
+    "timestamp": 1761804888.747226,
+    "seed_id": "2024-II-12::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-12::2024_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T06:14:48Z"
+  }
+]

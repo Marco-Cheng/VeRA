@@ -1,0 +1,717 @@
+[
+  {
+    "timestamp": 1764384716.947905,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "The diagram shows a rectangle that has been dissected into nine non-overlapping squares. Given that the width and the he",
+      "answer": "260",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T02:51:56Z"
+  },
+  {
+    "timestamp": 1764384716.947986,
+    "seed_id": "2000-I-4::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T02:51:56Z"
+  },
+  {
+    "timestamp": 1764384716.9480221,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The diagram shows a rectangle that has been dissected into nine non-overlapping squares. Given that the width and the height of the rectangle are relatively prime positive integers, find the perimeter of the rectangle. [asy]defaultpen(linewidth(0.7)); draw((0,0)--(69,0)--(69,61)--(0,61)--(0,0));draw((36,0)--(36,36)--(0,36)); draw((36,33)--(69,33));draw((41,33)--(41,61));draw((25,36)--(25,61)); draw((34,36)--(34,45)--(25,45)); draw((36,36)--(36,38)--(34,38)); draw((36,38)--(41,38)); draw((34,45)--(41,45));[/asy]",
+      "answer": "260",
+      "example_id": "2000-I-4::2000"
+    },
+    "iso_time": "2025-11-29T02:51:56Z"
+  },
+  {
+    "timestamp": 1764384781.056801,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-4::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 721025379
+    },
+    "iso_time": "2025-11-29T02:53:01Z"
+  },
+  {
+    "timestamp": 1764384782.2237608,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "q_list": "3, 3, 4, 5, 1, 5",
+        "k": 6,
+        "q": [
+          3,
+          3,
+          4,
+          5,
+          1,
+          5
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T02:53:02Z"
+  },
+  {
+    "timestamp": 1764384783.3016908,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4076
+    },
+    "iso_time": "2025-11-29T02:53:03Z"
+  },
+  {
+    "timestamp": 1764384783.301839,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle is perfectly tiled by non-overlapping squares using the greedy Euclidean tiling: at step 1, along the longer",
+      "correct_answer": "4076",
+      "seed_value": 721025379
+    },
+    "iso_time": "2025-11-29T02:53:03Z"
+  },
+  {
+    "timestamp": 1764384783.3019059,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4078",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:53:03Z"
+  },
+  {
+    "timestamp": 1764384797.5975392,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4073",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:53:17Z"
+  },
+  {
+    "timestamp": 1764384817.677832,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4077",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:53:37Z"
+  },
+  {
+    "timestamp": 1764384830.818778,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4076",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:53:50Z"
+  },
+  {
+    "timestamp": 1764384840.9367769,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4076",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:54:00Z"
+  },
+  {
+    "timestamp": 1764384874.3371031,
+    "seed_id": "2000-I-4::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-4::2000_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:54:34Z"
+  },
+  {
+    "timestamp": 1764384874.3372748,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-4::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1241749067
+    },
+    "iso_time": "2025-11-29T02:54:34Z"
+  },
+  {
+    "timestamp": 1764384875.5763211,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "q_list": "3, 4, 4, 4",
+        "k": 4,
+        "q": [
+          3,
+          4,
+          4,
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T02:54:35Z"
+  },
+  {
+    "timestamp": 1764384876.663233,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 610
+    },
+    "iso_time": "2025-11-29T02:54:36Z"
+  },
+  {
+    "timestamp": 1764384876.6633852,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle is perfectly tiled by non-overlapping squares using the greedy Euclidean tiling: at step 1, along the longer",
+      "correct_answer": "610",
+      "seed_value": 1241749067
+    },
+    "iso_time": "2025-11-29T02:54:36Z"
+  },
+  {
+    "timestamp": 1764384876.663428,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "615",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:54:36Z"
+  },
+  {
+    "timestamp": 1764384884.5249941,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "607",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:54:44Z"
+  },
+  {
+    "timestamp": 1764384895.480382,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "610",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:54:55Z"
+  },
+  {
+    "timestamp": 1764384909.565658,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "610",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:55:09Z"
+  },
+  {
+    "timestamp": 1764384917.7963352,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "612",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:55:17Z"
+  },
+  {
+    "timestamp": 1764384926.624749,
+    "seed_id": "2000-I-4::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-4::2000_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:55:26Z"
+  },
+  {
+    "timestamp": 1764384926.625077,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-4::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 968527667
+    },
+    "iso_time": "2025-11-29T02:55:26Z"
+  },
+  {
+    "timestamp": 1764384927.778741,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "q_list": "4, 6, 3, 1, 5",
+        "k": 5,
+        "q": [
+          4,
+          6,
+          3,
+          1,
+          5
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T02:55:27Z"
+  },
+  {
+    "timestamp": 1764384928.7768168,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1486
+    },
+    "iso_time": "2025-11-29T02:55:28Z"
+  },
+  {
+    "timestamp": 1764384928.776969,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle is perfectly tiled by non-overlapping squares using the greedy Euclidean tiling: at step 1, along the longer",
+      "correct_answer": "1486",
+      "seed_value": 968527667
+    },
+    "iso_time": "2025-11-29T02:55:28Z"
+  },
+  {
+    "timestamp": 1764384928.777009,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1480",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:55:28Z"
+  },
+  {
+    "timestamp": 1764384942.288828,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1485",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:55:42Z"
+  },
+  {
+    "timestamp": 1764384951.9604428,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1486",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:55:51Z"
+  },
+  {
+    "timestamp": 1764384960.3553898,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1486",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:56:00Z"
+  },
+  {
+    "timestamp": 1764384969.9769652,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1493",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:56:09Z"
+  },
+  {
+    "timestamp": 1764384994.4510012,
+    "seed_id": "2000-I-4::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-4::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:56:34Z"
+  },
+  {
+    "timestamp": 1764384994.451173,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-4::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1969222705
+    },
+    "iso_time": "2025-11-29T02:56:34Z"
+  },
+  {
+    "timestamp": 1764384995.5424519,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "q_list": "4, 2, 5, 5, 3, 3",
+        "k": 6,
+        "q": [
+          4,
+          2,
+          5,
+          5,
+          3,
+          3
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T02:56:35Z"
+  },
+  {
+    "timestamp": 1764384996.5764039,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6580
+    },
+    "iso_time": "2025-11-29T02:56:36Z"
+  },
+  {
+    "timestamp": 1764384996.576576,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle is perfectly tiled by non-overlapping squares using the greedy Euclidean tiling: at step 1, along the longer",
+      "correct_answer": "6580",
+      "seed_value": 1969222705
+    },
+    "iso_time": "2025-11-29T02:56:36Z"
+  },
+  {
+    "timestamp": 1764384996.576616,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6579",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:56:36Z"
+  },
+  {
+    "timestamp": 1764385007.702601,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6580",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:56:47Z"
+  },
+  {
+    "timestamp": 1764385018.6273558,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6584",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:56:58Z"
+  },
+  {
+    "timestamp": 1764385028.347451,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6587",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:57:08Z"
+  },
+  {
+    "timestamp": 1764385045.245184,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6580",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:57:25Z"
+  },
+  {
+    "timestamp": 1764385055.586792,
+    "seed_id": "2000-I-4::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-4::2000_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T02:57:35Z"
+  },
+  {
+    "timestamp": 1764385055.586976,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-4::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1308392907
+    },
+    "iso_time": "2025-11-29T02:57:35Z"
+  },
+  {
+    "timestamp": 1764385056.870038,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "q_list": "2, 2, 2, 4, 2, 6, 6",
+        "k": 7,
+        "q": [
+          2,
+          2,
+          2,
+          4,
+          2,
+          6,
+          6
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T02:57:36Z"
+  },
+  {
+    "timestamp": 1764385057.964687,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 13258
+    },
+    "iso_time": "2025-11-29T02:57:37Z"
+  },
+  {
+    "timestamp": 1764385057.964861,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle is perfectly tiled by non-overlapping squares using the greedy Euclidean tiling: at step 1, along the longer",
+      "correct_answer": "13258",
+      "seed_value": 1308392907
+    },
+    "iso_time": "2025-11-29T02:57:37Z"
+  },
+  {
+    "timestamp": 1764385057.964913,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "13258",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:57:37Z"
+  },
+  {
+    "timestamp": 1764385076.365925,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "13255",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:57:56Z"
+  },
+  {
+    "timestamp": 1764385087.0203881,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "13253",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:58:07Z"
+  },
+  {
+    "timestamp": 1764385099.587114,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "13264",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T02:58:19Z"
+  },
+  {
+    "timestamp": 1764385117.5344179,
+    "seed_id": "2000-I-4::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13258",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T02:58:37Z"
+  },
+  {
+    "timestamp": 1764385128.597106,
+    "seed_id": "2000-I-4::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-4::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T02:58:48Z"
+  }
+]

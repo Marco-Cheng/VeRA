@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1762717822.090548,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1984,
+      "question_preview": "The equation $z^6+z^3+1=0$ has complex roots with argument $\\theta$ between $90^\\circ$ and $180^\\circ$ in the complex pl",
+      "answer": "160",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-09T19:50:22Z"
+  },
+  {
+    "timestamp": 1762717822.0905669,
+    "seed_id": "1984-8::1984",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-09T19:50:22Z"
+  },
+  {
+    "timestamp": 1762717822.0905778,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The equation $z^6+z^3+1=0$ has complex roots with argument $\\theta$ between $90^\\circ$ and $180^\\circ$ in the complex plane. Determine the degree measure of $\\theta$ .",
+      "answer": "160",
+      "example_id": "1984-8::1984"
+    },
+    "iso_time": "2025-11-09T19:50:22Z"
+  },
+  {
+    "timestamp": 1762717999.3550432,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-8::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2005681821
+    },
+    "iso_time": "2025-11-09T19:53:19Z"
+  },
+  {
+    "timestamp": 1762718000.175512,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 10,
+        "k": 1,
+        "polynomial_string": "z^4 - z^3 + z^2 - z + 1",
+        "answer": 144
+      }
+    },
+    "iso_time": "2025-11-09T19:53:20Z"
+  },
+  {
+    "timestamp": 1762718000.951295,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 144
+    },
+    "iso_time": "2025-11-09T19:53:20Z"
+  },
+  {
+    "timestamp": 1762718000.951424,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $P(z)$ be the polynomial given by $P(z) = z^4 - z^3 + z^2 - z + 1$. Find the sum, in degrees, of the arguments of al",
+      "correct_answer": "144",
+      "seed_value": 2005681821
+    },
+    "iso_time": "2025-11-09T19:53:20Z"
+  },
+  {
+    "timestamp": 1762718000.951465,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "138",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T19:53:20Z"
+  },
+  {
+    "timestamp": 1762718126.8952909,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "144",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T19:55:26Z"
+  },
+  {
+    "timestamp": 1762718201.4924328,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "153",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T19:56:41Z"
+  },
+  {
+    "timestamp": 1762718354.1778948,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "144",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T19:59:14Z"
+  },
+  {
+    "timestamp": 1762718454.736177,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "152",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:00:54Z"
+  },
+  {
+    "timestamp": 1762718578.693505,
+    "seed_id": "1984-8::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-8::1984_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T20:02:58Z"
+  },
+  {
+    "timestamp": 1762718578.693583,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-8::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1806674625
+    },
+    "iso_time": "2025-11-09T20:02:58Z"
+  },
+  {
+    "timestamp": 1762718579.453432,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 10,
+        "k": 1,
+        "polynomial_string": "z^4 - z^3 + z^2 - z + 1",
+        "answer": 144
+      }
+    },
+    "iso_time": "2025-11-09T20:02:59Z"
+  },
+  {
+    "timestamp": 1762718580.232696,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 144
+    },
+    "iso_time": "2025-11-09T20:03:00Z"
+  },
+  {
+    "timestamp": 1762718580.232825,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $P(z)$ be the polynomial given by $P(z) = z^4 - z^3 + z^2 - z + 1$. Find the sum, in degrees, of the arguments of al",
+      "correct_answer": "144",
+      "seed_value": 1806674625
+    },
+    "iso_time": "2025-11-09T20:03:00Z"
+  },
+  {
+    "timestamp": 1762718580.2328699,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "140",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:03:00Z"
+  },
+  {
+    "timestamp": 1762718734.9298089,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "144",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T20:05:34Z"
+  },
+  {
+    "timestamp": 1762718802.7475069,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "144",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T20:06:42Z"
+  },
+  {
+    "timestamp": 1762718893.4134028,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "146",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:08:13Z"
+  },
+  {
+    "timestamp": 1762719033.586317,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "148",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:10:33Z"
+  },
+  {
+    "timestamp": 1762719189.610435,
+    "seed_id": "1984-8::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-8::1984_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T20:13:09Z"
+  },
+  {
+    "timestamp": 1762719189.6105149,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-8::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 267344609
+    },
+    "iso_time": "2025-11-09T20:13:09Z"
+  },
+  {
+    "timestamp": 1762719190.649581,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 28,
+        "k": 2,
+        "polynomial_string": "z^24 - z^20 + z^16 - z^12 + z^8 - z^4 + 1",
+        "answer": 1080
+      }
+    },
+    "iso_time": "2025-11-09T20:13:10Z"
+  },
+  {
+    "timestamp": 1762719191.6292632,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1080
+    },
+    "iso_time": "2025-11-09T20:13:11Z"
+  },
+  {
+    "timestamp": 1762719191.629398,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $P(z)$ be the polynomial given by $P(z) = z^24 - z^20 + z^16 - z^12 + z^8 - z^4 + 1$. Find the sum, in degrees, of t",
+      "correct_answer": "1080",
+      "seed_value": 267344609
+    },
+    "iso_time": "2025-11-09T20:13:11Z"
+  },
+  {
+    "timestamp": 1762719191.6294432,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1076",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:13:11Z"
+  },
+  {
+    "timestamp": 1762719374.041226,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T20:16:14Z"
+  },
+  {
+    "timestamp": 1762719495.806057,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1077",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:18:15Z"
+  },
+  {
+    "timestamp": 1762719717.1764858,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1078",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:21:57Z"
+  },
+  {
+    "timestamp": 1762719913.675116,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T20:25:13Z"
+  },
+  {
+    "timestamp": 1762720059.757689,
+    "seed_id": "1984-8::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-8::1984_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T20:27:39Z"
+  },
+  {
+    "timestamp": 1762720059.757744,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-8::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 789259823
+    },
+    "iso_time": "2025-11-09T20:27:39Z"
+  },
+  {
+    "timestamp": 1762720060.559083,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 20,
+        "k": 2,
+        "polynomial_string": "z^16 - z^12 + z^8 - z^4 + 1",
+        "answer": 720
+      }
+    },
+    "iso_time": "2025-11-09T20:27:40Z"
+  },
+  {
+    "timestamp": 1762720061.3381472,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 720
+    },
+    "iso_time": "2025-11-09T20:27:41Z"
+  },
+  {
+    "timestamp": 1762720061.338285,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $P(z)$ be the polynomial given by $P(z) = z^16 - z^12 + z^8 - z^4 + 1$. Find the sum, in degrees, of the arguments o",
+      "correct_answer": "720",
+      "seed_value": 789259823
+    },
+    "iso_time": "2025-11-09T20:27:41Z"
+  },
+  {
+    "timestamp": 1762720061.338335,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "720",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T20:27:41Z"
+  },
+  {
+    "timestamp": 1762720199.434727,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "727",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:29:59Z"
+  },
+  {
+    "timestamp": 1762720416.11339,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "721",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:33:36Z"
+  },
+  {
+    "timestamp": 1762720585.306525,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "724",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:36:25Z"
+  },
+  {
+    "timestamp": 1762720757.440875,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "720",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T20:39:17Z"
+  },
+  {
+    "timestamp": 1762720886.2773051,
+    "seed_id": "1984-8::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-8::1984_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T20:41:26Z"
+  },
+  {
+    "timestamp": 1762720886.277351,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-8::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 902903895
+    },
+    "iso_time": "2025-11-09T20:41:26Z"
+  },
+  {
+    "timestamp": 1762720887.043274,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 12,
+        "k": 3,
+        "polynomial_string": "z^12 - z^6 + 1",
+        "answer": 540
+      }
+    },
+    "iso_time": "2025-11-09T20:41:27Z"
+  },
+  {
+    "timestamp": 1762720887.8286521,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 540
+    },
+    "iso_time": "2025-11-09T20:41:27Z"
+  },
+  {
+    "timestamp": 1762720887.828793,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $P(z)$ be the polynomial given by $P(z) = z^12 - z^6 + 1$. Find the sum, in degrees, of the arguments of all roots o",
+      "correct_answer": "540",
+      "seed_value": 902903895
+    },
+    "iso_time": "2025-11-09T20:41:27Z"
+  },
+  {
+    "timestamp": 1762720887.828833,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "533",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:41:27Z"
+  },
+  {
+    "timestamp": 1762721025.856408,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "540",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T20:43:45Z"
+  },
+  {
+    "timestamp": 1762721201.521661,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "531",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:46:41Z"
+  },
+  {
+    "timestamp": 1762721384.518021,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "536",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T20:49:44Z"
+  },
+  {
+    "timestamp": 1762721553.750228,
+    "seed_id": "1984-8::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "540",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T20:52:33Z"
+  },
+  {
+    "timestamp": 1762721705.792039,
+    "seed_id": "1984-8::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-8::1984_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T20:55:05Z"
+  }
+]

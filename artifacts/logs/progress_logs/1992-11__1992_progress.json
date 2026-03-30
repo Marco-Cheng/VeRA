@@ -1,0 +1,1415 @@
+[
+  {
+    "timestamp": 1763560805.972346,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1992,
+      "question_preview": "Lines $l_1^{}$ and $l_2^{}$ both pass through the origin and make first-quadrant angles of $\\frac{\\pi}{70}$ and $\\frac{\\",
+      "answer": "945",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-19T14:00:05Z"
+  },
+  {
+    "timestamp": 1763560805.972373,
+    "seed_id": "1992-11::1992",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-19T14:00:05Z"
+  },
+  {
+    "timestamp": 1763560805.972384,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Lines $l_1^{}$ and $l_2^{}$ both pass through the origin and make first-quadrant angles of $\\frac{\\pi}{70}$ and $\\frac{\\pi}{54}$ radians, respectively, with the positive x-axis. For any line $l^{}_{}$ , the transformation $R(l)^{}_{}$ produces another line as follows: $l^{}_{}$ is reflected in $l_1^{}$ , and the resulting line is reflected in $l_2^{}$ . Let $R^{(1)}(l)=R(l)^{}_{}$ and $R^{(n)}(l)^{}_{}=R\\left(R^{(n-1)}(l)\\right)$ . Given that $l^{}_{}$ is the line $y=\\frac{19}{92}x^{}_{}$ , find the smallest positive integer $m^{}_{}$ for which $R^{(m)}(l)=l^{}_{}$ .",
+      "answer": "945",
+      "example_id": "1992-11::1992"
+    },
+    "iso_time": "2025-11-19T14:00:05Z"
+  },
+  {
+    "timestamp": 1763561102.135788,
+    "seed_id": "1992-11::1992",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "payload": {},
+    "iso_time": "2025-11-19T14:05:02Z"
+  },
+  {
+    "timestamp": 1763561102.135966,
+    "seed_id": "1992-11::1992",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-19T14:05:02Z"
+  },
+  {
+    "timestamp": 1763561102.1360269,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Teacher call raised JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "question": "Lines $l_1^{}$ and $l_2^{}$ both pass through the origin and make first-quadrant angles of $\\frac{\\pi}{70}$ and $\\frac{\\pi}{54}$ radians, respectively, with the positive x-axis. For any line $l^{}_{}$ , the transformation $R(l)^{}_{}$ produces another line as follows: $l^{}_{}$ is reflected in $l_1^{}$ , and the resulting line is reflected in $l_2^{}$ . Let $R^{(1)}(l)=R(l)^{}_{}$ and $R^{(n)}(l)^{}_{}=R\\left(R^{(n-1)}(l)\\right)$ . Given that $l^{}_{}$ is the line $y=\\frac{19}{92}x^{}_{}$ , find the smallest positive integer $m^{}_{}$ for which $R^{(m)}(l)=l^{}_{}$ .",
+      "answer": "945",
+      "example_id": "1992-11::1992"
+    },
+    "iso_time": "2025-11-19T14:05:02Z"
+  },
+  {
+    "timestamp": 1763561323.325828,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-11::1992_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 571736356
+    },
+    "iso_time": "2025-11-19T14:08:43Z"
+  },
+  {
+    "timestamp": 1763561324.115414,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p1_eq": "y = 0",
+        "p2_eq": "(\\sqrt{6}+\\sqrt{2})z + (\\sqrt{6}-\\sqrt{2})x = 0",
+        "vx": 0,
+        "vy": 1,
+        "vz": 1,
+        "_d": 12,
+        "_axis_idx": 1,
+        "_rot_axis_idx": 0,
+        "_answer": 6
+      }
+    },
+    "iso_time": "2025-11-19T14:08:44Z"
+  },
+  {
+    "timestamp": 1763561324.85761,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12
+    },
+    "iso_time": "2025-11-19T14:08:44Z"
+  },
+  {
+    "timestamp": 1763561324.857766,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In three-dimensional space, a transformation $R(l)$ of a line $l$ passing through the origin is defined as a sequence of",
+      "correct_answer": "12",
+      "seed_value": 571736356
+    },
+    "iso_time": "2025-11-19T14:08:44Z"
+  },
+  {
+    "timestamp": 1763561324.857813,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T14:08:44Z"
+  },
+  {
+    "timestamp": 1763561595.069799,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T14:13:15Z"
+  },
+  {
+    "timestamp": 1763561795.132545,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T14:16:35Z"
+  },
+  {
+    "timestamp": 1763562038.817167,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T14:20:38Z"
+  },
+  {
+    "timestamp": 1763562240.1809149,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T14:24:00Z"
+  },
+  {
+    "timestamp": 1763562421.445627,
+    "seed_id": "1992-11::1992",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-19T14:27:01Z"
+  },
+  {
+    "timestamp": 1763562421.445795,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-11::1992_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 909678046
+    },
+    "iso_time": "2025-11-19T14:27:01Z"
+  },
+  {
+    "timestamp": 1763562422.6617138,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p1_eq": "x = 0",
+        "p2_eq": "\\sqrt{3}y + z = 0",
+        "vx": 5,
+        "vy": 4,
+        "vz": 3,
+        "_d": 6,
+        "_axis_idx": 0,
+        "_rot_axis_idx": 2,
+        "_answer": 6
+      }
+    },
+    "iso_time": "2025-11-19T14:27:02Z"
+  },
+  {
+    "timestamp": 1763562423.624941,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6
+    },
+    "iso_time": "2025-11-19T14:27:03Z"
+  },
+  {
+    "timestamp": 1763562423.625094,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In three-dimensional space, a transformation $R(l)$ of a line $l$ passing through the origin is defined as a sequence of",
+      "correct_answer": "6",
+      "seed_value": 909678046
+    },
+    "iso_time": "2025-11-19T14:27:03Z"
+  },
+  {
+    "timestamp": 1763562423.625139,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T14:27:03Z"
+  },
+  {
+    "timestamp": 1763562563.361867,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T14:29:23Z"
+  },
+  {
+    "timestamp": 1763562911.310248,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T14:35:11Z"
+  },
+  {
+    "timestamp": 1763563099.2179232,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T14:38:19Z"
+  },
+  {
+    "timestamp": 1763563277.0439522,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "14",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T14:41:17Z"
+  },
+  {
+    "timestamp": 1763563519.055,
+    "seed_id": "1992-11::1992",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-19T14:45:19Z"
+  },
+  {
+    "timestamp": 1763563519.055304,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-11::1992_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1645747043
+    },
+    "iso_time": "2025-11-19T14:45:19Z"
+  },
+  {
+    "timestamp": 1763563519.9656162,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p1_eq": "x = 0",
+        "p2_eq": "y + z = 0",
+        "vx": 2,
+        "vy": 5,
+        "vz": 5,
+        "_d": 4,
+        "_axis_idx": 0,
+        "_rot_axis_idx": 2,
+        "_answer": 4
+      }
+    },
+    "iso_time": "2025-11-19T14:45:19Z"
+  },
+  {
+    "timestamp": 1763563520.711124,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4
+    },
+    "iso_time": "2025-11-19T14:45:20Z"
+  },
+  {
+    "timestamp": 1763563520.711263,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In three-dimensional space, a transformation $R(l)$ of a line $l$ passing through the origin is defined as a sequence of",
+      "correct_answer": "4",
+      "seed_value": 1645747043
+    },
+    "iso_time": "2025-11-19T14:45:20Z"
+  },
+  {
+    "timestamp": 1763563520.7113118,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T14:45:20Z"
+  },
+  {
+    "timestamp": 1763563688.3717911,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T14:48:08Z"
+  },
+  {
+    "timestamp": 1763563853.691468,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T14:50:53Z"
+  },
+  {
+    "timestamp": 1763563972.6358101,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T14:52:52Z"
+  },
+  {
+    "timestamp": 1763564069.911055,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T14:54:29Z"
+  },
+  {
+    "timestamp": 1763564243.99877,
+    "seed_id": "1992-11::1992",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-19T14:57:23Z"
+  },
+  {
+    "timestamp": 1763564243.998942,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-11::1992_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 227375994
+    },
+    "iso_time": "2025-11-19T14:57:23Z"
+  },
+  {
+    "timestamp": 1763564245.174459,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p1_eq": "x = 0",
+        "p2_eq": "\\sqrt{3}y + z = 0",
+        "vx": 5,
+        "vy": 2,
+        "vz": 2,
+        "_d": 6,
+        "_axis_idx": 0,
+        "_rot_axis_idx": 2,
+        "_answer": 6
+      }
+    },
+    "iso_time": "2025-11-19T14:57:25Z"
+  },
+  {
+    "timestamp": 1763564246.0925329,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6
+    },
+    "iso_time": "2025-11-19T14:57:26Z"
+  },
+  {
+    "timestamp": 1763564246.092691,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In three-dimensional space, a transformation $R(l)$ of a line $l$ passing through the origin is defined as a sequence of",
+      "correct_answer": "6",
+      "seed_value": 227375994
+    },
+    "iso_time": "2025-11-19T14:57:26Z"
+  },
+  {
+    "timestamp": 1763564246.0927382,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "14",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T14:57:26Z"
+  },
+  {
+    "timestamp": 1763564446.7520058,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "11",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:00:46Z"
+  },
+  {
+    "timestamp": 1763564626.810915,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:03:46Z"
+  },
+  {
+    "timestamp": 1763564843.1383271,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T15:07:23Z"
+  },
+  {
+    "timestamp": 1763565038.634669,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T15:10:38Z"
+  },
+  {
+    "timestamp": 1763565211.5420558,
+    "seed_id": "1992-11::1992",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-19T15:13:31Z"
+  },
+  {
+    "timestamp": 1763565211.542399,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-11::1992_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 1784215766
+    },
+    "iso_time": "2025-11-19T15:13:31Z"
+  },
+  {
+    "timestamp": 1763565212.3212311,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p1_eq": "y = 0",
+        "p2_eq": "z + x = 0",
+        "vx": 1,
+        "vy": 4,
+        "vz": 5,
+        "_d": 4,
+        "_axis_idx": 1,
+        "_rot_axis_idx": 0,
+        "_answer": 4
+      }
+    },
+    "iso_time": "2025-11-19T15:13:32Z"
+  },
+  {
+    "timestamp": 1763565213.10132,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4
+    },
+    "iso_time": "2025-11-19T15:13:33Z"
+  },
+  {
+    "timestamp": 1763565213.1015098,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In three-dimensional space, a transformation $R(l)$ of a line $l$ passing through the origin is defined as a sequence of",
+      "correct_answer": "4",
+      "seed_value": 1784215766
+    },
+    "iso_time": "2025-11-19T15:13:33Z"
+  },
+  {
+    "timestamp": 1763565213.101564,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:13:33Z"
+  },
+  {
+    "timestamp": 1763565408.402058,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T15:16:48Z"
+  },
+  {
+    "timestamp": 1763565549.611889,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T15:19:09Z"
+  },
+  {
+    "timestamp": 1763565727.485742,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:22:07Z"
+  },
+  {
+    "timestamp": 1763565864.499278,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:24:24Z"
+  },
+  {
+    "timestamp": 1763565966.590535,
+    "seed_id": "1992-11::1992",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-19T15:26:06Z"
+  },
+  {
+    "timestamp": 1763565966.590812,
+    "seed_id": "1992-11::1992",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-19T15:26:06Z"
+  },
+  {
+    "timestamp": 1763565966.5909061,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=2).",
+      "question": "Lines $l_1^{}$ and $l_2^{}$ both pass through the origin and make first-quadrant angles of $\\frac{\\pi}{70}$ and $\\frac{\\pi}{54}$ radians, respectively, with the positive x-axis. For any line $l^{}_{}$ , the transformation $R(l)^{}_{}$ produces another line as follows: $l^{}_{}$ is reflected in $l_1^{}$ , and the resulting line is reflected in $l_2^{}$ . Let $R^{(1)}(l)=R(l)^{}_{}$ and $R^{(n)}(l)^{}_{}=R\\left(R^{(n-1)}(l)\\right)$ . Given that $l^{}_{}$ is the line $y=\\frac{19}{92}x^{}_{}$ , find the smallest positive integer $m^{}_{}$ for which $R^{(m)}(l)=l^{}_{}$ .",
+      "answer": "945",
+      "example_id": "1992-11::1992"
+    },
+    "iso_time": "2025-11-19T15:26:06Z"
+  },
+  {
+    "timestamp": 1763566166.5557911,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-11::1992_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 935759164
+    },
+    "iso_time": "2025-11-19T15:29:26Z"
+  },
+  {
+    "timestamp": 1763566167.7969038,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_1": 651,
+        "n_2": 1302,
+        "m_0": 93,
+        "m_1": 31
+      }
+    },
+    "iso_time": "2025-11-19T15:29:27Z"
+  },
+  {
+    "timestamp": 1763566168.781895,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 637
+    },
+    "iso_time": "2025-11-19T15:29:28Z"
+  },
+  {
+    "timestamp": 1763566168.782062,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Lines $l_1$ and $l_2$ pass through the origin and make first-quadrant angles of $\\pi/651$ and $\\pi/1302$ radians, respec",
+      "correct_answer": "637",
+      "seed_value": 935759164
+    },
+    "iso_time": "2025-11-19T15:29:28Z"
+  },
+  {
+    "timestamp": 1763566168.78211,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "632",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:29:28Z"
+  },
+  {
+    "timestamp": 1763566308.9484859,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "637",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T15:31:48Z"
+  },
+  {
+    "timestamp": 1763566392.9921548,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "640",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:33:12Z"
+  },
+  {
+    "timestamp": 1763566525.588172,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "641",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:35:25Z"
+  },
+  {
+    "timestamp": 1763566676.4610639,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "637",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T15:37:56Z"
+  },
+  {
+    "timestamp": 1763566777.462035,
+    "seed_id": "1992-11::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-11::1992_prompt03-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-19T15:39:37Z"
+  },
+  {
+    "timestamp": 1763566777.4622452,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-11::1992_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1477007883
+    },
+    "iso_time": "2025-11-19T15:39:37Z"
+  },
+  {
+    "timestamp": 1763566778.217226,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_1": 363,
+        "n_2": 33,
+        "m_0": 121,
+        "m_1": 11
+      }
+    },
+    "iso_time": "2025-11-19T15:39:38Z"
+  },
+  {
+    "timestamp": 1763566778.947676,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 183
+    },
+    "iso_time": "2025-11-19T15:39:38Z"
+  },
+  {
+    "timestamp": 1763566778.9478168,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Lines $l_1$ and $l_2$ pass through the origin and make first-quadrant angles of $\\pi/363$ and $\\pi/33$ radians, respecti",
+      "correct_answer": "183",
+      "seed_value": 1477007883
+    },
+    "iso_time": "2025-11-19T15:39:38Z"
+  },
+  {
+    "timestamp": 1763566778.947862,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "188",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:39:38Z"
+  },
+  {
+    "timestamp": 1763566966.365637,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "176",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:42:46Z"
+  },
+  {
+    "timestamp": 1763567148.098819,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "181",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:45:48Z"
+  },
+  {
+    "timestamp": 1763567295.2481909,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "183",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T15:48:15Z"
+  },
+  {
+    "timestamp": 1763567395.1314251,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "183",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T15:49:55Z"
+  },
+  {
+    "timestamp": 1763567501.278611,
+    "seed_id": "1992-11::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-11::1992_prompt03-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-19T15:51:41Z"
+  },
+  {
+    "timestamp": 1763567501.278841,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-11::1992_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 2005335539
+    },
+    "iso_time": "2025-11-19T15:51:41Z"
+  },
+  {
+    "timestamp": 1763567502.0433128,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_1": 64,
+        "n_2": 608,
+        "m_0": 76,
+        "m_1": 38
+      }
+    },
+    "iso_time": "2025-11-19T15:51:42Z"
+  },
+  {
+    "timestamp": 1763567502.776011,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 536
+    },
+    "iso_time": "2025-11-19T15:51:42Z"
+  },
+  {
+    "timestamp": 1763567502.7762141,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Lines $l_1$ and $l_2$ pass through the origin and make first-quadrant angles of $\\pi/64$ and $\\pi/608$ radians, respecti",
+      "correct_answer": "536",
+      "seed_value": 2005335539
+    },
+    "iso_time": "2025-11-19T15:51:42Z"
+  },
+  {
+    "timestamp": 1763567502.776269,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "536",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T15:51:42Z"
+  },
+  {
+    "timestamp": 1763567592.4151711,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "532",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:53:12Z"
+  },
+  {
+    "timestamp": 1763567771.965011,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "536",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T15:56:11Z"
+  },
+  {
+    "timestamp": 1763567890.84395,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "537",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T15:58:10Z"
+  },
+  {
+    "timestamp": 1763568079.8062458,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "538",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T16:01:19Z"
+  },
+  {
+    "timestamp": 1763568261.409037,
+    "seed_id": "1992-11::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-11::1992_prompt03-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-19T16:04:21Z"
+  },
+  {
+    "timestamp": 1763568261.409259,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-11::1992_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1992262863
+    },
+    "iso_time": "2025-11-19T16:04:21Z"
+  },
+  {
+    "timestamp": 1763568262.18997,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_1": 8,
+        "n_2": 668,
+        "m_0": 167,
+        "m_1": 334
+      }
+    },
+    "iso_time": "2025-11-19T16:04:22Z"
+  },
+  {
+    "timestamp": 1763568262.9358451,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 166
+    },
+    "iso_time": "2025-11-19T16:04:22Z"
+  },
+  {
+    "timestamp": 1763568262.935981,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Lines $l_1$ and $l_2$ pass through the origin and make first-quadrant angles of $\\pi/8$ and $\\pi/668$ radians, respectiv",
+      "correct_answer": "166",
+      "seed_value": 1992262863
+    },
+    "iso_time": "2025-11-19T16:04:22Z"
+  },
+  {
+    "timestamp": 1763568262.9360352,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "159",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T16:04:22Z"
+  },
+  {
+    "timestamp": 1763568443.8301692,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "166",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T16:07:23Z"
+  },
+  {
+    "timestamp": 1763568535.3042738,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "160",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T16:08:55Z"
+  },
+  {
+    "timestamp": 1763568674.243954,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "166",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T16:11:14Z"
+  },
+  {
+    "timestamp": 1763568752.474477,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "158",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T16:12:32Z"
+  },
+  {
+    "timestamp": 1763568934.156651,
+    "seed_id": "1992-11::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-11::1992_prompt03-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-19T16:15:34Z"
+  },
+  {
+    "timestamp": 1763568934.156874,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-11::1992_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 433060994
+    },
+    "iso_time": "2025-11-19T16:15:34Z"
+  },
+  {
+    "timestamp": 1763568934.883373,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_1": 378,
+        "n_2": 252,
+        "m_0": 42,
+        "m_1": 21
+      }
+    },
+    "iso_time": "2025-11-19T16:15:34Z"
+  },
+  {
+    "timestamp": 1763568935.622014,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 9
+    },
+    "iso_time": "2025-11-19T16:15:35Z"
+  },
+  {
+    "timestamp": 1763568935.6221561,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Lines $l_1$ and $l_2$ pass through the origin and make first-quadrant angles of $\\pi/378$ and $\\pi/252$ radians, respect",
+      "correct_answer": "9",
+      "seed_value": 433060994
+    },
+    "iso_time": "2025-11-19T16:15:35Z"
+  },
+  {
+    "timestamp": 1763568935.622208,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T16:15:35Z"
+  },
+  {
+    "timestamp": 1763569098.0742452,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T16:18:18Z"
+  },
+  {
+    "timestamp": 1763569228.5795321,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "9",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T16:20:28Z"
+  },
+  {
+    "timestamp": 1763569305.6434402,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "9",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-19T16:21:45Z"
+  },
+  {
+    "timestamp": 1763569379.062539,
+    "seed_id": "1992-11::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-19T16:22:59Z"
+  },
+  {
+    "timestamp": 1763569497.4513228,
+    "seed_id": "1992-11::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-11::1992_prompt03-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-19T16:24:57Z"
+  }
+]

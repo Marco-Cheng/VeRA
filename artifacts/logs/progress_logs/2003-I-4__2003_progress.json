@@ -1,0 +1,699 @@
+[
+  {
+    "timestamp": 1764785803.172804,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "Given that $\\log_{10} \\sin x + \\log_{10} \\cos x = -1$ and that $\\log_{10} (\\sin x + \\cos x) = \\frac{1}{2} (\\log_{10} n -",
+      "answer": "12",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-03T18:16:43Z"
+  },
+  {
+    "timestamp": 1764785803.172909,
+    "seed_id": "2003-I-4::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-03T18:16:43Z"
+  },
+  {
+    "timestamp": 1764785803.172964,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Given that $\\log_{10} \\sin x + \\log_{10} \\cos x = -1$ and that $\\log_{10} (\\sin x + \\cos x) = \\frac{1}{2} (\\log_{10} n - 1),$ find $n.$",
+      "answer": "12",
+      "example_id": "2003-I-4::2003"
+    },
+    "iso_time": "2025-12-03T18:16:43Z"
+  },
+  {
+    "timestamp": 1764786158.566253,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-4::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 411764963
+    },
+    "iso_time": "2025-12-03T18:22:38Z"
+  },
+  {
+    "timestamp": 1764786159.919809,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 5,
+        "t_sum": -0.4560406893672284,
+        "t_ratio": -0.1787469216608008,
+        "a_coeff": 3,
+        "c_coeff": 5,
+        "d_shift": 2
+      }
+    },
+    "iso_time": "2025-12-03T18:22:39Z"
+  },
+  {
+    "timestamp": 1764786161.054983,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 841
+    },
+    "iso_time": "2025-12-03T18:22:41Z"
+  },
+  {
+    "timestamp": 1764786161.055131,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let 5 > 1 be a real base. Assume x is an angle with sin x > 0 and cos x > 0 such that log_{ 5 }(sin x) + log_{ 5 }(cos x",
+      "correct_answer": "841",
+      "seed_value": 411764963
+    },
+    "iso_time": "2025-12-03T18:22:41Z"
+  },
+  {
+    "timestamp": 1764786161.055205,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "841",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:22:41Z"
+  },
+  {
+    "timestamp": 1764786191.297216,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "837",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:23:11Z"
+  },
+  {
+    "timestamp": 1764786208.167543,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "845",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:23:28Z"
+  },
+  {
+    "timestamp": 1764786299.7735622,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "841",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:24:59Z"
+  },
+  {
+    "timestamp": 1764786382.93076,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "833",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:26:22Z"
+  },
+  {
+    "timestamp": 1764786470.678505,
+    "seed_id": "2003-I-4::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-4::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T18:27:50Z"
+  },
+  {
+    "timestamp": 1764786470.678667,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-4::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1729800222
+    },
+    "iso_time": "2025-12-03T18:27:50Z"
+  },
+  {
+    "timestamp": 1764786471.9389062,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 5,
+        "t_sum": -0.4560406893672284,
+        "t_ratio": -0.1787469216608008,
+        "a_coeff": 8,
+        "c_coeff": 9,
+        "d_shift": 4
+      }
+    },
+    "iso_time": "2025-12-03T18:27:51Z"
+  },
+  {
+    "timestamp": 1764786473.145726,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 90000
+    },
+    "iso_time": "2025-12-03T18:27:53Z"
+  },
+  {
+    "timestamp": 1764786473.145907,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let 5 > 1 be a real base. Assume x is an angle with sin x > 0 and cos x > 0 such that log_{ 5 }(sin x) + log_{ 5 }(cos x",
+      "correct_answer": "90000",
+      "seed_value": 1729800222
+    },
+    "iso_time": "2025-12-03T18:27:53Z"
+  },
+  {
+    "timestamp": 1764786473.145979,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "89991",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:27:53Z"
+  },
+  {
+    "timestamp": 1764786571.548459,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "90001",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:29:31Z"
+  },
+  {
+    "timestamp": 1764786696.591769,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "90000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:31:36Z"
+  },
+  {
+    "timestamp": 1764786768.25531,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "89995",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:32:48Z"
+  },
+  {
+    "timestamp": 1764786864.000841,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "90000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:34:24Z"
+  },
+  {
+    "timestamp": 1764787139.968529,
+    "seed_id": "2003-I-4::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-4::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T18:38:59Z"
+  },
+  {
+    "timestamp": 1764787139.968729,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-4::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1948183734
+    },
+    "iso_time": "2025-12-03T18:38:59Z"
+  },
+  {
+    "timestamp": 1764787141.3213708,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "t_sum": -0.31875876262441283,
+        "t_ratio": -0.12493873660829993,
+        "a_coeff": 3,
+        "c_coeff": 1,
+        "d_shift": 2
+      }
+    },
+    "iso_time": "2025-12-03T18:39:01Z"
+  },
+  {
+    "timestamp": 1764787142.5570838,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 676
+    },
+    "iso_time": "2025-12-03T18:39:02Z"
+  },
+  {
+    "timestamp": 1764787142.5572832,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let 10 > 1 be a real base. Assume x is an angle with sin x > 0 and cos x > 0 such that log_{ 10 }(sin x) + log_{ 10 }(co",
+      "correct_answer": "676",
+      "seed_value": 1948183734
+    },
+    "iso_time": "2025-12-03T18:39:02Z"
+  },
+  {
+    "timestamp": 1764787142.557367,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "679",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:39:02Z"
+  },
+  {
+    "timestamp": 1764787185.1264918,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "676",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:39:45Z"
+  },
+  {
+    "timestamp": 1764787194.752169,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "676",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:39:54Z"
+  },
+  {
+    "timestamp": 1764787234.442167,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "667",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:40:34Z"
+  },
+  {
+    "timestamp": 1764787245.939391,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "673",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:40:45Z"
+  },
+  {
+    "timestamp": 1764787281.999848,
+    "seed_id": "2003-I-4::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-4::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T18:41:21Z"
+  },
+  {
+    "timestamp": 1764787282.000034,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-4::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 417916786
+    },
+    "iso_time": "2025-12-03T18:41:22Z"
+  },
+  {
+    "timestamp": 1764787283.3116522,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "t_sum": -0.31875876262441283,
+        "t_ratio": -0.12493873660829993,
+        "a_coeff": 3,
+        "c_coeff": 4,
+        "d_shift": 4
+      }
+    },
+    "iso_time": "2025-12-03T18:41:23Z"
+  },
+  {
+    "timestamp": 1764787284.463614,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 250000
+    },
+    "iso_time": "2025-12-03T18:41:24Z"
+  },
+  {
+    "timestamp": 1764787284.4637692,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let 10 > 1 be a real base. Assume x is an angle with sin x > 0 and cos x > 0 such that log_{ 10 }(sin x) + log_{ 10 }(co",
+      "correct_answer": "250000",
+      "seed_value": 417916786
+    },
+    "iso_time": "2025-12-03T18:41:24Z"
+  },
+  {
+    "timestamp": 1764787284.46383,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "250005",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:41:24Z"
+  },
+  {
+    "timestamp": 1764787322.622265,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "250000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:42:02Z"
+  },
+  {
+    "timestamp": 1764787358.719985,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "250000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:42:38Z"
+  },
+  {
+    "timestamp": 1764787369.1556501,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "249996",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:42:49Z"
+  },
+  {
+    "timestamp": 1764787388.1874938,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "249995",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:43:08Z"
+  },
+  {
+    "timestamp": 1764787411.0234811,
+    "seed_id": "2003-I-4::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-4::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T18:43:31Z"
+  },
+  {
+    "timestamp": 1764787411.023649,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-4::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1427546831
+    },
+    "iso_time": "2025-12-03T18:43:31Z"
+  },
+  {
+    "timestamp": 1764787412.1677299,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "t_sum": -0.31875876262441327,
+        "t_ratio": -0.12493873660829993,
+        "a_coeff": 2,
+        "c_coeff": 3,
+        "d_shift": 6
+      }
+    },
+    "iso_time": "2025-12-03T18:43:32Z"
+  },
+  {
+    "timestamp": 1764787413.315091,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12960000
+    },
+    "iso_time": "2025-12-03T18:43:33Z"
+  },
+  {
+    "timestamp": 1764787413.315267,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let 10 > 1 be a real base. Assume x is an angle with sin x > 0 and cos x > 0 such that log_{ 10 }(sin x) + log_{ 10 }(co",
+      "correct_answer": "12960000",
+      "seed_value": 1427546831
+    },
+    "iso_time": "2025-12-03T18:43:33Z"
+  },
+  {
+    "timestamp": 1764787413.31534,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12960000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:43:33Z"
+  },
+  {
+    "timestamp": 1764787423.310771,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12960000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T18:43:43Z"
+  },
+  {
+    "timestamp": 1764787454.9561899,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12960002",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:44:14Z"
+  },
+  {
+    "timestamp": 1764787472.775177,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12960008",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:44:32Z"
+  },
+  {
+    "timestamp": 1764787521.922359,
+    "seed_id": "2003-I-4::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12959992",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T18:45:21Z"
+  },
+  {
+    "timestamp": 1764787539.4473221,
+    "seed_id": "2003-I-4::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-4::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T18:45:39Z"
+  }
+]

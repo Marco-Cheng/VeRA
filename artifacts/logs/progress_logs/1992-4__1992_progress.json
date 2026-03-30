@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1763642436.579642,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1992,
+      "question_preview": "In Pascal's Triangle, each entry is the sum of the two entries above it. The first few rows of the triangle are shown be",
+      "answer": "62",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-20T12:40:36Z"
+  },
+  {
+    "timestamp": 1763642436.5796852,
+    "seed_id": "1992-4::1992",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-20T12:40:36Z"
+  },
+  {
+    "timestamp": 1763642436.579705,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In Pascal's Triangle, each entry is the sum of the two entries above it. The first few rows of the triangle are shown below. \\[\\begin{array}{c@{\\hspace{8em}} c@{\\hspace{6pt}}c@{\\hspace{6pt}}c@{\\hspace{6pt}}c@{\\hspace{4pt}}c@{\\hspace{2pt}} c@{\\hspace{2pt}}c@{\\hspace{2pt}}c@{\\hspace{2pt}}c@{\\hspace{3pt}}c@{\\hspace{6pt}} c@{\\hspace{6pt}}c@{\\hspace{6pt}}c} \\vspace{4pt} \\text{Row 0: } &    &    &     &     &    &    & 1 &     &     &    &    &    &  \\\\\\vspace{4pt} \\text{Row 1: } &    &    &     &     &    & 1 &    & 1  &     &    &    &    &  \\\\\\vspace{4pt} \\text{Row 2: } &    &    &     &     & 1 &    & 2 &     & 1  &    &    &    &  \\\\\\vspace{4pt} \\text{Row 3: } &    &    &     &  1 &    & 3 &    & 3  &     & 1 &    &    &  \\\\\\vspace{4pt} \\text{Row 4: } &    &    & 1  &     & 4 &    & 6 &     & 4  &    & 1 &    &  \\\\\\vspace{4pt} \\text{Row 5: } &    & 1 &     & 5  &    &10&    &10 &     & 5 &    & 1 &  \\\\\\vspace{4pt} \\text{Row 6: } & 1 &    & 6  &     &15&    &20&     &15 &    & 6 &    & 1 \\end{array}\\] In which row of Pascal's Triangle do three consecutive entries occur that are in the ratio $3: 4: 5$ ?",
+      "answer": "62",
+      "example_id": "1992-4::1992"
+    },
+    "iso_time": "2025-11-20T12:40:36Z"
+  },
+  {
+    "timestamp": 1763642600.09139,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-4::1992_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 927013675
+    },
+    "iso_time": "2025-11-20T12:43:20Z"
+  },
+  {
+    "timestamp": 1763642600.851691,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 30,
+        "b": 35,
+        "c": 65
+      }
+    },
+    "iso_time": "2025-11-20T12:43:20Z"
+  },
+  {
+    "timestamp": 1763642601.59273,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12
+    },
+    "iso_time": "2025-11-20T12:43:21Z"
+  },
+  {
+    "timestamp": 1763642601.59288,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In Pascal's triangle, let $C(n, k)$ denote the entry in row $n$ and position $k$ (with $k$ starting from 0). We are look",
+      "correct_answer": "12",
+      "seed_value": 927013675
+    },
+    "iso_time": "2025-11-20T12:43:21Z"
+  },
+  {
+    "timestamp": 1763642601.5929239,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T12:43:21Z"
+  },
+  {
+    "timestamp": 1763642689.062639,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T12:44:49Z"
+  },
+  {
+    "timestamp": 1763642816.566914,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T12:46:56Z"
+  },
+  {
+    "timestamp": 1763642934.841473,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T12:48:54Z"
+  },
+  {
+    "timestamp": 1763643010.206395,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "19",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T12:50:10Z"
+  },
+  {
+    "timestamp": 1763643205.012309,
+    "seed_id": "1992-4::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-4::1992_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-20T12:53:25Z"
+  },
+  {
+    "timestamp": 1763643205.0125198,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-4::1992_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1486480647
+    },
+    "iso_time": "2025-11-20T12:53:25Z"
+  },
+  {
+    "timestamp": 1763643205.790925,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 15,
+        "b": 21,
+        "c": 36
+      }
+    },
+    "iso_time": "2025-11-20T12:53:25Z"
+  },
+  {
+    "timestamp": 1763643206.537333,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 11
+    },
+    "iso_time": "2025-11-20T12:53:26Z"
+  },
+  {
+    "timestamp": 1763643206.5374668,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In Pascal's triangle, let $C(n, k)$ denote the entry in row $n$ and position $k$ (with $k$ starting from 0). We are look",
+      "correct_answer": "11",
+      "seed_value": 1486480647
+    },
+    "iso_time": "2025-11-20T12:53:26Z"
+  },
+  {
+    "timestamp": 1763643206.537507,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T12:53:26Z"
+  },
+  {
+    "timestamp": 1763643315.9737642,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T12:55:15Z"
+  },
+  {
+    "timestamp": 1763643406.529512,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "11",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T12:56:46Z"
+  },
+  {
+    "timestamp": 1763643489.989988,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T12:58:09Z"
+  },
+  {
+    "timestamp": 1763643632.294678,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "11",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T13:00:32Z"
+  },
+  {
+    "timestamp": 1763643727.6527061,
+    "seed_id": "1992-4::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-4::1992_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-20T13:02:07Z"
+  },
+  {
+    "timestamp": 1763643727.6529448,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-4::1992_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 154376122
+    },
+    "iso_time": "2025-11-20T13:02:07Z"
+  },
+  {
+    "timestamp": 1763643728.4242702,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 12,
+        "b": 16,
+        "c": 28
+      }
+    },
+    "iso_time": "2025-11-20T13:02:08Z"
+  },
+  {
+    "timestamp": 1763643729.1703591,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6
+    },
+    "iso_time": "2025-11-20T13:02:09Z"
+  },
+  {
+    "timestamp": 1763643729.170496,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In Pascal's triangle, let $C(n, k)$ denote the entry in row $n$ and position $k$ (with $k$ starting from 0). We are look",
+      "correct_answer": "6",
+      "seed_value": 154376122
+    },
+    "iso_time": "2025-11-20T13:02:09Z"
+  },
+  {
+    "timestamp": 1763643729.170541,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T13:02:09Z"
+  },
+  {
+    "timestamp": 1763643854.902602,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T13:04:14Z"
+  },
+  {
+    "timestamp": 1763643965.574927,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "15",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T13:06:05Z"
+  },
+  {
+    "timestamp": 1763644079.110102,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T13:07:59Z"
+  },
+  {
+    "timestamp": 1763644162.265185,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T13:09:22Z"
+  },
+  {
+    "timestamp": 1763644245.542303,
+    "seed_id": "1992-4::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-4::1992_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-20T13:10:45Z"
+  },
+  {
+    "timestamp": 1763644245.542516,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-4::1992_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1868786652
+    },
+    "iso_time": "2025-11-20T13:10:45Z"
+  },
+  {
+    "timestamp": 1763644246.356192,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 40,
+        "b": 15,
+        "c": 55
+      }
+    },
+    "iso_time": "2025-11-20T13:10:46Z"
+  },
+  {
+    "timestamp": 1763644247.100008,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10
+    },
+    "iso_time": "2025-11-20T13:10:47Z"
+  },
+  {
+    "timestamp": 1763644247.10015,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In Pascal's triangle, let $C(n, k)$ denote the entry in row $n$ and position $k$ (with $k$ starting from 0). We are look",
+      "correct_answer": "10",
+      "seed_value": 1868786652
+    },
+    "iso_time": "2025-11-20T13:10:47Z"
+  },
+  {
+    "timestamp": 1763644247.100189,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T13:10:47Z"
+  },
+  {
+    "timestamp": 1763644329.07741,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T13:12:09Z"
+  },
+  {
+    "timestamp": 1763644465.948428,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T13:14:25Z"
+  },
+  {
+    "timestamp": 1763644600.195067,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T13:16:40Z"
+  },
+  {
+    "timestamp": 1763644691.469323,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T13:18:11Z"
+  },
+  {
+    "timestamp": 1763644763.6715388,
+    "seed_id": "1992-4::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-4::1992_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-20T13:19:23Z"
+  },
+  {
+    "timestamp": 1763644763.671747,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1992-4::1992_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2138480946
+    },
+    "iso_time": "2025-11-20T13:19:23Z"
+  },
+  {
+    "timestamp": 1763644764.4530408,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 18,
+        "b": 14,
+        "c": 32
+      }
+    },
+    "iso_time": "2025-11-20T13:19:24Z"
+  },
+  {
+    "timestamp": 1763644765.285179,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 15
+    },
+    "iso_time": "2025-11-20T13:19:25Z"
+  },
+  {
+    "timestamp": 1763644765.285311,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In Pascal's triangle, let $C(n, k)$ denote the entry in row $n$ and position $k$ (with $k$ starting from 0). We are look",
+      "correct_answer": "15",
+      "seed_value": 2138480946
+    },
+    "iso_time": "2025-11-20T13:19:25Z"
+  },
+  {
+    "timestamp": 1763644765.2853508,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "23",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T13:19:25Z"
+  },
+  {
+    "timestamp": 1763644976.890196,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "22",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T13:22:56Z"
+  },
+  {
+    "timestamp": 1763645103.2362938,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T13:25:03Z"
+  },
+  {
+    "timestamp": 1763645172.7399302,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-20T13:26:12Z"
+  },
+  {
+    "timestamp": 1763645324.506502,
+    "seed_id": "1992-4::1992",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-20T13:28:44Z"
+  },
+  {
+    "timestamp": 1763645391.3834581,
+    "seed_id": "1992-4::1992",
+    "stage": "variant_success",
+    "message": "Accepted variant 1992-4::1992_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-20T13:29:51Z"
+  }
+]

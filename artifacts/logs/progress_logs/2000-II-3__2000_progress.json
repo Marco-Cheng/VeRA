@@ -1,0 +1,1428 @@
+[
+  {
+    "timestamp": 1764410896.027749,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "A deck of forty cards consists of four 1's, four 2's,..., and four 10's.  A matching pair (two cards with the same numbe",
+      "answer": "758",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T10:08:16Z"
+  },
+  {
+    "timestamp": 1764410896.027781,
+    "seed_id": "2000-II-3::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T10:08:16Z"
+  },
+  {
+    "timestamp": 1764410896.027794,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A deck of forty cards consists of four 1's, four 2's,..., and four 10's.  A matching pair (two cards with the same number) is removed from the deck.  Given that these cards are not returned to the deck, let $m/n$ be the probability that two randomly selected cards also form a pair, where $m$ and $n$ are relatively prime positive integers.  Find $m + n.$",
+      "answer": "758",
+      "example_id": "2000-II-3::2000"
+    },
+    "iso_time": "2025-11-29T10:08:16Z"
+  },
+  {
+    "timestamp": 1764410977.6633012,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-3::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1120487922
+    },
+    "iso_time": "2025-11-29T10:09:37Z"
+  },
+  {
+    "timestamp": 1764410978.9723651,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_ranks": 4,
+        "counts": [
+          9,
+          5,
+          7,
+          6
+        ],
+        "counts_str": "9,5,7,6",
+        "extra_removals": 5
+      }
+    },
+    "iso_time": "2025-11-29T10:09:38Z"
+  },
+  {
+    "timestamp": 1764410980.09123,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5755
+    },
+    "iso_time": "2025-11-29T10:09:40Z"
+  },
+  {
+    "timestamp": 1764410980.0914052,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A deck contains 4 distinct ranks with multiplicities listed in order as 9,5,7,6. First, a matching pair (two cards of th",
+      "correct_answer": "5755",
+      "seed_value": 1120487922
+    },
+    "iso_time": "2025-11-29T10:09:40Z"
+  },
+  {
+    "timestamp": 1764410980.091447,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5755",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:09:40Z"
+  },
+  {
+    "timestamp": 1764411029.273747,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5755",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:10:29Z"
+  },
+  {
+    "timestamp": 1764411077.645299,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5759",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:11:17Z"
+  },
+  {
+    "timestamp": 1764411116.418988,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5756",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:11:56Z"
+  },
+  {
+    "timestamp": 1764411162.9077709,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5752",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:12:42Z"
+  },
+  {
+    "timestamp": 1764411209.292651,
+    "seed_id": "2000-II-3::2000",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T10:13:29Z"
+  },
+  {
+    "timestamp": 1764411209.292825,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-3::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1421865554
+    },
+    "iso_time": "2025-11-29T10:13:29Z"
+  },
+  {
+    "timestamp": 1764411210.450377,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_ranks": 4,
+        "counts": [
+          5,
+          3,
+          6,
+          5
+        ],
+        "counts_str": "5,3,6,5",
+        "extra_removals": 5
+      }
+    },
+    "iso_time": "2025-11-29T10:13:30Z"
+  },
+  {
+    "timestamp": 1764411211.432055,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3829
+    },
+    "iso_time": "2025-11-29T10:13:31Z"
+  },
+  {
+    "timestamp": 1764411211.43223,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A deck contains 4 distinct ranks with multiplicities listed in order as 5,3,6,5. First, a matching pair (two cards of th",
+      "correct_answer": "3829",
+      "seed_value": 1421865554
+    },
+    "iso_time": "2025-11-29T10:13:31Z"
+  },
+  {
+    "timestamp": 1764411211.432286,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3837",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:13:31Z"
+  },
+  {
+    "timestamp": 1764411254.1228878,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3829",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:14:14Z"
+  },
+  {
+    "timestamp": 1764411334.8279302,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3829",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:15:34Z"
+  },
+  {
+    "timestamp": 1764411434.20663,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3823",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:17:14Z"
+  },
+  {
+    "timestamp": 1764411475.131757,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3835",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:17:55Z"
+  },
+  {
+    "timestamp": 1764411578.39753,
+    "seed_id": "2000-II-3::2000",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T10:19:38Z"
+  },
+  {
+    "timestamp": 1764411578.397782,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-3::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 139135034
+    },
+    "iso_time": "2025-11-29T10:19:38Z"
+  },
+  {
+    "timestamp": 1764411579.450967,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_ranks": 6,
+        "counts": [
+          6,
+          6,
+          9,
+          2,
+          8,
+          7
+        ],
+        "counts_str": "6,6,9,2,8,7",
+        "extra_removals": 23
+      }
+    },
+    "iso_time": "2025-11-29T10:19:39Z"
+  },
+  {
+    "timestamp": 1764411580.472714,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 46799
+    },
+    "iso_time": "2025-11-29T10:19:40Z"
+  },
+  {
+    "timestamp": 1764411580.472884,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A deck contains 6 distinct ranks with multiplicities listed in order as 6,6,9,2,8,7. First, a matching pair (two cards o",
+      "correct_answer": "46799",
+      "seed_value": 139135034
+    },
+    "iso_time": "2025-11-29T10:19:40Z"
+  },
+  {
+    "timestamp": 1764411580.472956,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "46790",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:19:40Z"
+  },
+  {
+    "timestamp": 1764411716.973194,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "46805",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:21:56Z"
+  },
+  {
+    "timestamp": 1764411777.380527,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "46792",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:22:57Z"
+  },
+  {
+    "timestamp": 1764411825.849089,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "46799",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:23:45Z"
+  },
+  {
+    "timestamp": 1764411880.922681,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "46799",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:24:40Z"
+  },
+  {
+    "timestamp": 1764411997.450156,
+    "seed_id": "2000-II-3::2000",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T10:26:37Z"
+  },
+  {
+    "timestamp": 1764411997.4504268,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-3::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1876140688
+    },
+    "iso_time": "2025-11-29T10:26:37Z"
+  },
+  {
+    "timestamp": 1764411998.5586529,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_ranks": 3,
+        "counts": [
+          2,
+          5,
+          5
+        ],
+        "counts_str": "2,5,5",
+        "extra_removals": 1
+      }
+    },
+    "iso_time": "2025-11-29T10:26:38Z"
+  },
+  {
+    "timestamp": 1764411999.6065469,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 281
+    },
+    "iso_time": "2025-11-29T10:26:39Z"
+  },
+  {
+    "timestamp": 1764411999.606709,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A deck contains 3 distinct ranks with multiplicities listed in order as 2,5,5. First, a matching pair (two cards of the ",
+      "correct_answer": "281",
+      "seed_value": 1876140688
+    },
+    "iso_time": "2025-11-29T10:26:39Z"
+  },
+  {
+    "timestamp": 1764411999.606755,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "279",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:26:39Z"
+  },
+  {
+    "timestamp": 1764412101.187327,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "281",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:28:21Z"
+  },
+  {
+    "timestamp": 1764412174.0705678,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "281",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:29:34Z"
+  },
+  {
+    "timestamp": 1764412204.1476421,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "276",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:30:04Z"
+  },
+  {
+    "timestamp": 1764412282.258142,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "285",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:31:22Z"
+  },
+  {
+    "timestamp": 1764412317.962611,
+    "seed_id": "2000-II-3::2000",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T10:31:57Z"
+  },
+  {
+    "timestamp": 1764412317.9627252,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-3::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1883831149
+    },
+    "iso_time": "2025-11-29T10:31:57Z"
+  },
+  {
+    "timestamp": 1764412319.080728,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_ranks": 3,
+        "counts": [
+          5,
+          9,
+          5
+        ],
+        "counts_str": "5,9,5",
+        "extra_removals": 8
+      }
+    },
+    "iso_time": "2025-11-29T10:31:59Z"
+  },
+  {
+    "timestamp": 1764412320.084152,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1504
+    },
+    "iso_time": "2025-11-29T10:32:00Z"
+  },
+  {
+    "timestamp": 1764412320.084309,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A deck contains 3 distinct ranks with multiplicities listed in order as 5,9,5. First, a matching pair (two cards of the ",
+      "correct_answer": "1504",
+      "seed_value": 1883831149
+    },
+    "iso_time": "2025-11-29T10:32:00Z"
+  },
+  {
+    "timestamp": 1764412320.084352,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1504",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:32:00Z"
+  },
+  {
+    "timestamp": 1764412345.8071418,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1504",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:32:25Z"
+  },
+  {
+    "timestamp": 1764412383.645426,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1496",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:33:03Z"
+  },
+  {
+    "timestamp": 1764412468.188991,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1503",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:34:28Z"
+  },
+  {
+    "timestamp": 1764412504.4735591,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1511",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:35:04Z"
+  },
+  {
+    "timestamp": 1764412538.10765,
+    "seed_id": "2000-II-3::2000",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T10:35:38Z"
+  },
+  {
+    "timestamp": 1764412538.107764,
+    "seed_id": "2000-II-3::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-29T10:35:38Z"
+  },
+  {
+    "timestamp": 1764412538.1078,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "A deck of forty cards consists of four 1's, four 2's,..., and four 10's.  A matching pair (two cards with the same number) is removed from the deck.  Given that these cards are not returned to the deck, let $m/n$ be the probability that two randomly selected cards also form a pair, where $m$ and $n$ are relatively prime positive integers.  Find $m + n.$",
+      "answer": "758",
+      "example_id": "2000-II-3::2000"
+    },
+    "iso_time": "2025-11-29T10:35:38Z"
+  },
+  {
+    "timestamp": 1764412608.989053,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-3::2000_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1219913262
+    },
+    "iso_time": "2025-11-29T10:36:48Z"
+  },
+  {
+    "timestamp": 1764412610.291075,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_labels": 6,
+        "counts": [
+          8,
+          4,
+          3,
+          8,
+          2,
+          8
+        ],
+        "p_pairs": 2,
+        "s_singles": 1
+      }
+    },
+    "iso_time": "2025-11-29T10:36:50Z"
+  },
+  {
+    "timestamp": 1764412611.334904,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 43
+    },
+    "iso_time": "2025-11-29T10:36:51Z"
+  },
+  {
+    "timestamp": 1764412611.3350642,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A multiset deck has 6 distinct labels. For label i = 1, 2, ..., 6, the deck contains a_i cards, where the fixed sequence",
+      "correct_answer": "43",
+      "seed_value": 1219913262
+    },
+    "iso_time": "2025-11-29T10:36:51Z"
+  },
+  {
+    "timestamp": 1764412611.3351119,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "46",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:36:51Z"
+  },
+  {
+    "timestamp": 1764412705.690939,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "43",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:38:25Z"
+  },
+  {
+    "timestamp": 1764412756.956872,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "41",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:39:16Z"
+  },
+  {
+    "timestamp": 1764412812.0333362,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "43",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:40:12Z"
+  },
+  {
+    "timestamp": 1764412872.672322,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "48",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:41:12Z"
+  },
+  {
+    "timestamp": 1764412954.4611268,
+    "seed_id": "2000-II-3::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-3::2000_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T10:42:34Z"
+  },
+  {
+    "timestamp": 1764412954.461235,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-3::2000_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 255836265
+    },
+    "iso_time": "2025-11-29T10:42:34Z"
+  },
+  {
+    "timestamp": 1764412955.6193779,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_labels": 6,
+        "counts": [
+          6,
+          7,
+          7,
+          4,
+          1,
+          6
+        ],
+        "p_pairs": 4,
+        "s_singles": 1
+      }
+    },
+    "iso_time": "2025-11-29T10:42:35Z"
+  },
+  {
+    "timestamp": 1764412956.6508448,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 541
+    },
+    "iso_time": "2025-11-29T10:42:36Z"
+  },
+  {
+    "timestamp": 1764412956.651001,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A multiset deck has 6 distinct labels. For label i = 1, 2, ..., 6, the deck contains a_i cards, where the fixed sequence",
+      "correct_answer": "541",
+      "seed_value": 255836265
+    },
+    "iso_time": "2025-11-29T10:42:36Z"
+  },
+  {
+    "timestamp": 1764412956.6510458,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "541",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:42:36Z"
+  },
+  {
+    "timestamp": 1764413030.569014,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "545",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:43:50Z"
+  },
+  {
+    "timestamp": 1764413083.216803,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "537",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:44:43Z"
+  },
+  {
+    "timestamp": 1764413128.258483,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "541",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:45:28Z"
+  },
+  {
+    "timestamp": 1764413160.3659708,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "539",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:46:00Z"
+  },
+  {
+    "timestamp": 1764413209.710094,
+    "seed_id": "2000-II-3::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-3::2000_prompt02-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T10:46:49Z"
+  },
+  {
+    "timestamp": 1764413209.7101882,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-3::2000_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 247451238
+    },
+    "iso_time": "2025-11-29T10:46:49Z"
+  },
+  {
+    "timestamp": 1764413210.809867,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_labels": 10,
+        "counts": [
+          7,
+          7,
+          3,
+          6,
+          2,
+          8,
+          4,
+          8,
+          1,
+          4
+        ],
+        "p_pairs": 4,
+        "s_singles": 1
+      }
+    },
+    "iso_time": "2025-11-29T10:46:50Z"
+  },
+  {
+    "timestamp": 1764413211.865953,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 24671
+    },
+    "iso_time": "2025-11-29T10:46:51Z"
+  },
+  {
+    "timestamp": 1764413211.866124,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A multiset deck has 10 distinct labels. For label i = 1, 2, ..., 10, the deck contains a_i cards, where the fixed sequen",
+      "correct_answer": "24671",
+      "seed_value": 247451238
+    },
+    "iso_time": "2025-11-29T10:46:51Z"
+  },
+  {
+    "timestamp": 1764413211.866167,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "24671",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:46:51Z"
+  },
+  {
+    "timestamp": 1764413263.124363,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "24671",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:47:43Z"
+  },
+  {
+    "timestamp": 1764413308.115863,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "24669",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:48:28Z"
+  },
+  {
+    "timestamp": 1764413361.254591,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "24662",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:49:21Z"
+  },
+  {
+    "timestamp": 1764413408.1151092,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "24663",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:50:08Z"
+  },
+  {
+    "timestamp": 1764413460.354743,
+    "seed_id": "2000-II-3::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-3::2000_prompt02-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T10:51:00Z"
+  },
+  {
+    "timestamp": 1764413460.354866,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-3::2000_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1295276710
+    },
+    "iso_time": "2025-11-29T10:51:00Z"
+  },
+  {
+    "timestamp": 1764413461.634078,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_labels": 8,
+        "counts": [
+          6,
+          7,
+          2,
+          1,
+          6,
+          5,
+          6,
+          8
+        ],
+        "p_pairs": 3,
+        "s_singles": 3
+      }
+    },
+    "iso_time": "2025-11-29T10:51:01Z"
+  },
+  {
+    "timestamp": 1764413462.679918,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1411
+    },
+    "iso_time": "2025-11-29T10:51:02Z"
+  },
+  {
+    "timestamp": 1764413462.6801012,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A multiset deck has 8 distinct labels. For label i = 1, 2, ..., 8, the deck contains a_i cards, where the fixed sequence",
+      "correct_answer": "1411",
+      "seed_value": 1295276710
+    },
+    "iso_time": "2025-11-29T10:51:02Z"
+  },
+  {
+    "timestamp": 1764413462.680143,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1417",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:51:02Z"
+  },
+  {
+    "timestamp": 1764413516.646261,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1411",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:51:56Z"
+  },
+  {
+    "timestamp": 1764413602.170209,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1418",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:53:22Z"
+  },
+  {
+    "timestamp": 1764413729.055323,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1411",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:55:29Z"
+  },
+  {
+    "timestamp": 1764413856.5508878,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1416",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T10:57:36Z"
+  },
+  {
+    "timestamp": 1764413912.534386,
+    "seed_id": "2000-II-3::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-3::2000_prompt02-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T10:58:32Z"
+  },
+  {
+    "timestamp": 1764413912.534477,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-3::2000_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 204608425
+    },
+    "iso_time": "2025-11-29T10:58:32Z"
+  },
+  {
+    "timestamp": 1764413913.8026922,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_labels": 10,
+        "counts": [
+          6,
+          5,
+          2,
+          1,
+          1,
+          7,
+          1,
+          5,
+          8,
+          4
+        ],
+        "p_pairs": 6,
+        "s_singles": 3
+      }
+    },
+    "iso_time": "2025-11-29T10:58:33Z"
+  },
+  {
+    "timestamp": 1764413914.805881,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4793
+    },
+    "iso_time": "2025-11-29T10:58:34Z"
+  },
+  {
+    "timestamp": 1764413914.8060422,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A multiset deck has 10 distinct labels. For label i = 1, 2, ..., 10, the deck contains a_i cards, where the fixed sequen",
+      "correct_answer": "4793",
+      "seed_value": 204608425
+    },
+    "iso_time": "2025-11-29T10:58:34Z"
+  },
+  {
+    "timestamp": 1764413914.806087,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4793",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T10:58:34Z"
+  },
+  {
+    "timestamp": 1764414043.466816,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4787",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:00:43Z"
+  },
+  {
+    "timestamp": 1764414136.77555,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4802",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:02:16Z"
+  },
+  {
+    "timestamp": 1764414190.959645,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4784",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:03:10Z"
+  },
+  {
+    "timestamp": 1764414237.858231,
+    "seed_id": "2000-II-3::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4793",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:03:57Z"
+  },
+  {
+    "timestamp": 1764414276.7363389,
+    "seed_id": "2000-II-3::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-3::2000_prompt02-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T11:04:36Z"
+  }
+]

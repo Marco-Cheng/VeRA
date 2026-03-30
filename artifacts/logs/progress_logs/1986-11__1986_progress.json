@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1762860213.481455,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1986,
+      "question_preview": "The polynomial $1-x+x^2-x^3+\\cdots+x^{16}-x^{17}$ may be written in the form $a_0+a_1y+a_2y^2+\\cdots +a_{16}y^{16}+a_{17",
+      "answer": "816",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-11T11:23:33Z"
+  },
+  {
+    "timestamp": 1762860213.481488,
+    "seed_id": "1986-11::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-11T11:23:33Z"
+  },
+  {
+    "timestamp": 1762860213.4815009,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The polynomial $1-x+x^2-x^3+\\cdots+x^{16}-x^{17}$ may be written in the form $a_0+a_1y+a_2y^2+\\cdots +a_{16}y^{16}+a_{17}y^{17}$ , where $y=x+1$ and the $a_i$ 's are constants. Find the value of $a_2$ .",
+      "answer": "816",
+      "example_id": "1986-11::1986"
+    },
+    "iso_time": "2025-11-11T11:23:33Z"
+  },
+  {
+    "timestamp": 1762860389.054466,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-11::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 774482155
+    },
+    "iso_time": "2025-11-11T11:26:29Z"
+  },
+  {
+    "timestamp": 1762860389.834962,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 29,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-11T11:26:29Z"
+  },
+  {
+    "timestamp": 1762860390.615722,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 27992250
+    },
+    "iso_time": "2025-11-11T11:26:30Z"
+  },
+  {
+    "timestamp": 1762860390.615851,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the polynomial $P(x) = (1-x+x^2-x^3+\\cdots+(-1)^29x^29)^d$. When $P(x)$ is written in the form $a_0+a_1y+a_2y^2+\\cdo",
+      "correct_answer": "27992250",
+      "seed_value": 774482155
+    },
+    "iso_time": "2025-11-11T11:26:30Z"
+  },
+  {
+    "timestamp": 1762860390.615895,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "27992256",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T11:26:30Z"
+  },
+  {
+    "timestamp": 1762860592.125578,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "27992250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T11:29:52Z"
+  },
+  {
+    "timestamp": 1762860793.0342798,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "27992250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T11:33:13Z"
+  },
+  {
+    "timestamp": 1762860917.507714,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "27992254",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T11:35:17Z"
+  },
+  {
+    "timestamp": 1762861117.8484218,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "27992255",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T11:38:37Z"
+  },
+  {
+    "timestamp": 1762861309.584119,
+    "seed_id": "1986-11::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-11::1986_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-11T11:41:49Z"
+  },
+  {
+    "timestamp": 1762861309.584176,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-11::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 449054928
+    },
+    "iso_time": "2025-11-11T11:41:49Z"
+  },
+  {
+    "timestamp": 1762861310.350872,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 19,
+        "d": 4
+      }
+    },
+    "iso_time": "2025-11-11T11:41:50Z"
+  },
+  {
+    "timestamp": 1762861311.131038,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 123120000
+    },
+    "iso_time": "2025-11-11T11:41:51Z"
+  },
+  {
+    "timestamp": 1762861311.131171,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the polynomial $P(x) = (1-x+x^2-x^3+\\cdots+(-1)^19x^19)^d$. When $P(x)$ is written in the form $a_0+a_1y+a_2y^2+\\cdo",
+      "correct_answer": "123120000",
+      "seed_value": 449054928
+    },
+    "iso_time": "2025-11-11T11:41:51Z"
+  },
+  {
+    "timestamp": 1762861311.1312141,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "123119998",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T11:41:51Z"
+  },
+  {
+    "timestamp": 1762861504.772064,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "123120000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T11:45:04Z"
+  },
+  {
+    "timestamp": 1762861632.405419,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "123120000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T11:47:12Z"
+  },
+  {
+    "timestamp": 1762861729.172374,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "123119996",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T11:48:49Z"
+  },
+  {
+    "timestamp": 1762861945.487773,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "123120004",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T11:52:25Z"
+  },
+  {
+    "timestamp": 1762862203.0904472,
+    "seed_id": "1986-11::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-11::1986_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-11T11:56:43Z"
+  },
+  {
+    "timestamp": 1762862203.090496,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-11::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1221547771
+    },
+    "iso_time": "2025-11-11T11:56:43Z"
+  },
+  {
+    "timestamp": 1762862203.8695061,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 13,
+        "d": 5
+      }
+    },
+    "iso_time": "2025-11-11T11:56:43Z"
+  },
+  {
+    "timestamp": 1762862204.657054,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 297147760
+    },
+    "iso_time": "2025-11-11T11:56:44Z"
+  },
+  {
+    "timestamp": 1762862204.657183,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the polynomial $P(x) = (1-x+x^2-x^3+\\cdots+(-1)^13x^13)^d$. When $P(x)$ is written in the form $a_0+a_1y+a_2y^2+\\cdo",
+      "correct_answer": "297147760",
+      "seed_value": 1221547771
+    },
+    "iso_time": "2025-11-11T11:56:44Z"
+  },
+  {
+    "timestamp": 1762862204.657229,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "297147760",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T11:56:44Z"
+  },
+  {
+    "timestamp": 1762862464.515877,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "297147751",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T12:01:04Z"
+  },
+  {
+    "timestamp": 1762862750.197793,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "297147764",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T12:05:50Z"
+  },
+  {
+    "timestamp": 1762863041.8625212,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "297147761",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T12:10:41Z"
+  },
+  {
+    "timestamp": 1762863259.371291,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "297147760",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T12:14:19Z"
+  },
+  {
+    "timestamp": 1762863378.013976,
+    "seed_id": "1986-11::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-11::1986_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-11T12:16:18Z"
+  },
+  {
+    "timestamp": 1762863378.014026,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-11::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1663308479
+    },
+    "iso_time": "2025-11-11T12:16:18Z"
+  },
+  {
+    "timestamp": 1762863378.785567,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 37,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-11T12:16:18Z"
+  },
+  {
+    "timestamp": 1762863379.558369,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 92884578
+    },
+    "iso_time": "2025-11-11T12:16:19Z"
+  },
+  {
+    "timestamp": 1762863379.558492,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the polynomial $P(x) = (1-x+x^2-x^3+\\cdots+(-1)^37x^37)^d$. When $P(x)$ is written in the form $a_0+a_1y+a_2y^2+\\cdo",
+      "correct_answer": "92884578",
+      "seed_value": 1663308479
+    },
+    "iso_time": "2025-11-11T12:16:19Z"
+  },
+  {
+    "timestamp": 1762863379.558536,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "92884575",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T12:16:19Z"
+  },
+  {
+    "timestamp": 1762863570.185874,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "92884578",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T12:19:30Z"
+  },
+  {
+    "timestamp": 1762863845.6438668,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "92884578",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T12:24:05Z"
+  },
+  {
+    "timestamp": 1762863988.721528,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "92884573",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T12:26:28Z"
+  },
+  {
+    "timestamp": 1762864170.388015,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "92884582",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T12:29:30Z"
+  },
+  {
+    "timestamp": 1762864427.336231,
+    "seed_id": "1986-11::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-11::1986_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-11T12:33:47Z"
+  },
+  {
+    "timestamp": 1762864427.336274,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-11::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 849426697
+    },
+    "iso_time": "2025-11-11T12:33:47Z"
+  },
+  {
+    "timestamp": 1762864428.113069,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 11,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-11T12:33:48Z"
+  },
+  {
+    "timestamp": 1762864428.9027462,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 251856
+    },
+    "iso_time": "2025-11-11T12:33:48Z"
+  },
+  {
+    "timestamp": 1762864428.9028769,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the polynomial $P(x) = (1-x+x^2-x^3+\\cdots+(-1)^11x^11)^d$. When $P(x)$ is written in the form $a_0+a_1y+a_2y^2+\\cdo",
+      "correct_answer": "251856",
+      "seed_value": 849426697
+    },
+    "iso_time": "2025-11-11T12:33:48Z"
+  },
+  {
+    "timestamp": 1762864428.902921,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "251849",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T12:33:48Z"
+  },
+  {
+    "timestamp": 1762864595.742733,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "251860",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T12:36:35Z"
+  },
+  {
+    "timestamp": 1762864802.409197,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "251856",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T12:40:02Z"
+  },
+  {
+    "timestamp": 1762864912.2470882,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "251856",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T12:41:52Z"
+  },
+  {
+    "timestamp": 1762865044.344639,
+    "seed_id": "1986-11::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "251862",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T12:44:04Z"
+  },
+  {
+    "timestamp": 1762865249.402078,
+    "seed_id": "1986-11::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-11::1986_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-11T12:47:29Z"
+  }
+]

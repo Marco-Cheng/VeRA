@@ -1,0 +1,704 @@
+[
+  {
+    "timestamp": 1765318800.182566,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2006,
+      "question_preview": "In quadrilateral $ABCD , \\angle B$ is a right angle, diagonal $\\overline{AC}$ is perpendicular to $\\overline{CD},  AB=18",
+      "answer": "84",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T22:20:00Z"
+  },
+  {
+    "timestamp": 1765318800.1825988,
+    "seed_id": "2006-I-1::2006",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T22:20:00Z"
+  },
+  {
+    "timestamp": 1765318800.182612,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In quadrilateral $ABCD , \\angle B$ is a right angle, diagonal $\\overline{AC}$ is perpendicular to $\\overline{CD},  AB=18, BC=21,$ and $CD=14.$ Find the perimeter of $ABCD.$",
+      "answer": "84",
+      "example_id": "2006-I-1::2006"
+    },
+    "iso_time": "2025-12-09T22:20:00Z"
+  },
+  {
+    "timestamp": 1765319023.686666,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-1::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1038828165
+    },
+    "iso_time": "2025-12-09T22:23:43Z"
+  },
+  {
+    "timestamp": 1765319024.988008,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 40,
+        "bc": 50,
+        "cd": 29,
+        "cos_b_num": 31,
+        "cos_b_den": 32,
+        "cos_alpha_num": -47,
+        "cos_alpha_den": 58
+      }
+    },
+    "iso_time": "2025-12-09T22:23:44Z"
+  },
+  {
+    "timestamp": 1765319026.2296839,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 138
+    },
+    "iso_time": "2025-12-09T22:23:46Z"
+  },
+  {
+    "timestamp": 1765319026.229894,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a quadrilateral ABCD, the side lengths are AB = 40, BC = 50, and CD = 29. The measure of angle ABC satisfies cos(∠ABC",
+      "correct_answer": "138",
+      "seed_value": 1038828165
+    },
+    "iso_time": "2025-12-09T22:23:46Z"
+  },
+  {
+    "timestamp": 1765319026.2299619,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "138",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:23:46Z"
+  },
+  {
+    "timestamp": 1765319039.2470841,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "140",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:23:59Z"
+  },
+  {
+    "timestamp": 1765319052.661534,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "133",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:24:12Z"
+  },
+  {
+    "timestamp": 1765319074.595071,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "139",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:24:34Z"
+  },
+  {
+    "timestamp": 1765319104.170617,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "138",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:25:04Z"
+  },
+  {
+    "timestamp": 1765319137.569112,
+    "seed_id": "2006-I-1::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-1::2006_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T22:25:37Z"
+  },
+  {
+    "timestamp": 1765319137.56923,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-1::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1515728140
+    },
+    "iso_time": "2025-12-09T22:25:37Z"
+  },
+  {
+    "timestamp": 1765319138.810478,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 48,
+        "bc": 54,
+        "cd": 58,
+        "cos_b_num": 9,
+        "cos_b_den": 16,
+        "cos_alpha_num": 11,
+        "cos_alpha_den": 58
+      }
+    },
+    "iso_time": "2025-12-09T22:25:38Z"
+  },
+  {
+    "timestamp": 1765319140.074402,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 242
+    },
+    "iso_time": "2025-12-09T22:25:40Z"
+  },
+  {
+    "timestamp": 1765319140.0745978,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a quadrilateral ABCD, the side lengths are AB = 48, BC = 54, and CD = 58. The measure of angle ABC satisfies cos(∠ABC",
+      "correct_answer": "242",
+      "seed_value": 1515728140
+    },
+    "iso_time": "2025-12-09T22:25:40Z"
+  },
+  {
+    "timestamp": 1765319140.074686,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "242",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:25:40Z"
+  },
+  {
+    "timestamp": 1765319152.4929779,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "242",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:25:52Z"
+  },
+  {
+    "timestamp": 1765319168.0051541,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:26:08Z"
+  },
+  {
+    "timestamp": 1765319205.7773561,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "241",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:26:45Z"
+  },
+  {
+    "timestamp": 1765319229.406465,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "238",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:27:09Z"
+  },
+  {
+    "timestamp": 1765319246.354505,
+    "seed_id": "2006-I-1::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-1::2006_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T22:27:26Z"
+  },
+  {
+    "timestamp": 1765319246.3546932,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-1::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 678968963
+    },
+    "iso_time": "2025-12-09T22:27:26Z"
+  },
+  {
+    "timestamp": 1765319247.8897831,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 12,
+        "bc": 48,
+        "cd": 27,
+        "cos_b_num": -2,
+        "cos_b_den": 9,
+        "cos_alpha_num": -26,
+        "cos_alpha_den": 27
+      }
+    },
+    "iso_time": "2025-12-09T22:27:27Z"
+  },
+  {
+    "timestamp": 1765319249.11201,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 114
+    },
+    "iso_time": "2025-12-09T22:27:29Z"
+  },
+  {
+    "timestamp": 1765319249.112231,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a quadrilateral ABCD, the side lengths are AB = 12, BC = 48, and CD = 27. The measure of angle ABC satisfies cos(∠ABC",
+      "correct_answer": "114",
+      "seed_value": 678968963
+    },
+    "iso_time": "2025-12-09T22:27:29Z"
+  },
+  {
+    "timestamp": 1765319249.112318,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "120",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:27:29Z"
+  },
+  {
+    "timestamp": 1765319262.1926699,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "114",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:27:42Z"
+  },
+  {
+    "timestamp": 1765319274.973407,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "114",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:27:54Z"
+  },
+  {
+    "timestamp": 1765319293.5029929,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "106",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:28:13Z"
+  },
+  {
+    "timestamp": 1765319306.818594,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "109",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:28:26Z"
+  },
+  {
+    "timestamp": 1765319319.782002,
+    "seed_id": "2006-I-1::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-1::2006_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T22:28:39Z"
+  },
+  {
+    "timestamp": 1765319319.782169,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-1::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1786214577
+    },
+    "iso_time": "2025-12-09T22:28:39Z"
+  },
+  {
+    "timestamp": 1765319321.048844,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 48,
+        "bc": 12,
+        "cd": 9,
+        "cos_b_num": -43,
+        "cos_b_den": 72,
+        "cos_alpha_num": 2,
+        "cos_alpha_den": 63
+      }
+    },
+    "iso_time": "2025-12-09T22:28:41Z"
+  },
+  {
+    "timestamp": 1765319322.003337,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 126
+    },
+    "iso_time": "2025-12-09T22:28:42Z"
+  },
+  {
+    "timestamp": 1765319322.003538,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a quadrilateral ABCD, the side lengths are AB = 48, BC = 12, and CD = 9. The measure of angle ABC satisfies cos(∠ABC)",
+      "correct_answer": "126",
+      "seed_value": 1786214577
+    },
+    "iso_time": "2025-12-09T22:28:42Z"
+  },
+  {
+    "timestamp": 1765319322.003606,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "126",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:28:42Z"
+  },
+  {
+    "timestamp": 1765319357.91409,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "128",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:29:17Z"
+  },
+  {
+    "timestamp": 1765319368.923557,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "126",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:29:28Z"
+  },
+  {
+    "timestamp": 1765319394.166226,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "118",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:29:54Z"
+  },
+  {
+    "timestamp": 1765319413.318944,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "125",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:30:13Z"
+  },
+  {
+    "timestamp": 1765319423.2575612,
+    "seed_id": "2006-I-1::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-1::2006_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T22:30:23Z"
+  },
+  {
+    "timestamp": 1765319423.25773,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-1::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 223652534
+    },
+    "iso_time": "2025-12-09T22:30:23Z"
+  },
+  {
+    "timestamp": 1765319424.57107,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 36,
+        "bc": 46,
+        "cd": 46,
+        "cos_b_num": 1,
+        "cos_b_den": 12,
+        "cos_alpha_num": 1,
+        "cos_alpha_den": 23
+      }
+    },
+    "iso_time": "2025-12-09T22:30:24Z"
+  },
+  {
+    "timestamp": 1765319425.698313,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 202
+    },
+    "iso_time": "2025-12-09T22:30:25Z"
+  },
+  {
+    "timestamp": 1765319425.698499,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a quadrilateral ABCD, the side lengths are AB = 36, BC = 46, and CD = 46. The measure of angle ABC satisfies cos(∠ABC",
+      "correct_answer": "202",
+      "seed_value": 223652534
+    },
+    "iso_time": "2025-12-09T22:30:25Z"
+  },
+  {
+    "timestamp": 1765319425.698566,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "200",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:30:25Z"
+  },
+  {
+    "timestamp": 1765319466.8670778,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "202",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:31:06Z"
+  },
+  {
+    "timestamp": 1765319478.438475,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "202",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:31:18Z"
+  },
+  {
+    "timestamp": 1765319488.580524,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "211",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:31:28Z"
+  },
+  {
+    "timestamp": 1765319511.7207942,
+    "seed_id": "2006-I-1::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "197",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:31:51Z"
+  },
+  {
+    "timestamp": 1765319567.779177,
+    "seed_id": "2006-I-1::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-1::2006_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T22:32:47Z"
+  }
+]

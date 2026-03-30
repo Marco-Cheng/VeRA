@@ -1,0 +1,704 @@
+[
+  {
+    "timestamp": 1764113019.837743,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1996,
+      "question_preview": "A wooden cube, whose edges are one centimeter long, rests on a horizontal surface. Illuminated by a point source of ligh",
+      "answer": "166",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-25T23:23:39Z"
+  },
+  {
+    "timestamp": 1764113019.837814,
+    "seed_id": "1996-4::1996",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-25T23:23:39Z"
+  },
+  {
+    "timestamp": 1764113019.837847,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A wooden cube, whose edges are one centimeter long, rests on a horizontal surface. Illuminated by a point source of light that is $x$ centimeters directly above an upper vertex, the cube casts a shadow on the horizontal surface. The area of a shadow, which does not include the area beneath the cube is 48 square centimeters. Find the greatest integer that does not exceed $1000x$ .",
+      "answer": "166",
+      "example_id": "1996-4::1996"
+    },
+    "iso_time": "2025-11-25T23:23:39Z"
+  },
+  {
+    "timestamp": 1764113129.785413,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-4::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1995659552
+    },
+    "iso_time": "2025-11-25T23:25:29Z"
+  },
+  {
+    "timestamp": 1764113130.52177,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_cm": 6,
+        "b_cm": 24,
+        "c_cm": 5,
+        "u_cm": 2,
+        "v_cm": 19,
+        "shadow_area": 147312,
+        "m_scale": 4584
+      }
+    },
+    "iso_time": "2025-11-25T23:25:30Z"
+  },
+  {
+    "timestamp": 1764113131.250696,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 739
+    },
+    "iso_time": "2025-11-25T23:25:31Z"
+  },
+  {
+    "timestamp": 1764113131.250866,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right rectangular solid with base 6 by 24 centimeters and height 5 centimeters rests on a horizontal surface. A point ",
+      "correct_answer": "739",
+      "seed_value": 1995659552
+    },
+    "iso_time": "2025-11-25T23:25:31Z"
+  },
+  {
+    "timestamp": 1764113131.250911,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "745",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:25:31Z"
+  },
+  {
+    "timestamp": 1764113161.365085,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "737",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:26:01Z"
+  },
+  {
+    "timestamp": 1764113185.422379,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "739",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:26:25Z"
+  },
+  {
+    "timestamp": 1764113202.775649,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "739",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:26:42Z"
+  },
+  {
+    "timestamp": 1764113222.0922081,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "743",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:27:02Z"
+  },
+  {
+    "timestamp": 1764113251.4612238,
+    "seed_id": "1996-4::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-4::1996_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:27:31Z"
+  },
+  {
+    "timestamp": 1764113251.461332,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-4::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1566112949
+    },
+    "iso_time": "2025-11-25T23:27:31Z"
+  },
+  {
+    "timestamp": 1764113252.254606,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_cm": 11,
+        "b_cm": 17,
+        "c_cm": 22,
+        "u_cm": 1,
+        "v_cm": 6,
+        "shadow_area": 47685,
+        "m_scale": 739
+      }
+    },
+    "iso_time": "2025-11-25T23:27:32Z"
+  },
+  {
+    "timestamp": 1764113253.018801,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1083
+    },
+    "iso_time": "2025-11-25T23:27:33Z"
+  },
+  {
+    "timestamp": 1764113253.01897,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right rectangular solid with base 11 by 17 centimeters and height 22 centimeters rests on a horizontal surface. A poin",
+      "correct_answer": "1083",
+      "seed_value": 1566112949
+    },
+    "iso_time": "2025-11-25T23:27:33Z"
+  },
+  {
+    "timestamp": 1764113253.0190132,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1083",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:27:33Z"
+  },
+  {
+    "timestamp": 1764113276.550549,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1086",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:27:56Z"
+  },
+  {
+    "timestamp": 1764113299.078979,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1083",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:28:19Z"
+  },
+  {
+    "timestamp": 1764113317.204468,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1077",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:28:37Z"
+  },
+  {
+    "timestamp": 1764113332.151834,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1075",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:28:52Z"
+  },
+  {
+    "timestamp": 1764113349.7759192,
+    "seed_id": "1996-4::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-4::1996_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:29:09Z"
+  },
+  {
+    "timestamp": 1764113349.7761111,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-4::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 552909559
+    },
+    "iso_time": "2025-11-25T23:29:09Z"
+  },
+  {
+    "timestamp": 1764113350.553161,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_cm": 23,
+        "b_cm": 15,
+        "c_cm": 25,
+        "u_cm": 3,
+        "v_cm": 1,
+        "shadow_area": 251160,
+        "m_scale": 4351
+      }
+    },
+    "iso_time": "2025-11-25T23:29:10Z"
+  },
+  {
+    "timestamp": 1764113351.3044338,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4183
+    },
+    "iso_time": "2025-11-25T23:29:11Z"
+  },
+  {
+    "timestamp": 1764113351.304598,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right rectangular solid with base 23 by 15 centimeters and height 25 centimeters rests on a horizontal surface. A poin",
+      "correct_answer": "4183",
+      "seed_value": 552909559
+    },
+    "iso_time": "2025-11-25T23:29:11Z"
+  },
+  {
+    "timestamp": 1764113351.304659,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4180",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:29:11Z"
+  },
+  {
+    "timestamp": 1764113376.090601,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4183",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:29:36Z"
+  },
+  {
+    "timestamp": 1764113395.8866649,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4178",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:29:55Z"
+  },
+  {
+    "timestamp": 1764113413.694011,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4183",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:30:13Z"
+  },
+  {
+    "timestamp": 1764113429.126107,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4188",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:30:29Z"
+  },
+  {
+    "timestamp": 1764113449.09544,
+    "seed_id": "1996-4::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-4::1996_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:30:49Z"
+  },
+  {
+    "timestamp": 1764113449.095526,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-4::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1461580943
+    },
+    "iso_time": "2025-11-25T23:30:49Z"
+  },
+  {
+    "timestamp": 1764113449.837677,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_cm": 9,
+        "b_cm": 21,
+        "c_cm": 3,
+        "u_cm": 2,
+        "v_cm": 15,
+        "shadow_area": 231336,
+        "m_scale": 1969
+      }
+    },
+    "iso_time": "2025-11-25T23:30:49Z"
+  },
+  {
+    "timestamp": 1764113450.585697,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 173
+    },
+    "iso_time": "2025-11-25T23:30:50Z"
+  },
+  {
+    "timestamp": 1764113450.585855,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right rectangular solid with base 9 by 21 centimeters and height 3 centimeters rests on a horizontal surface. A point ",
+      "correct_answer": "173",
+      "seed_value": 1461580943
+    },
+    "iso_time": "2025-11-25T23:30:50Z"
+  },
+  {
+    "timestamp": 1764113450.5858932,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "165",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:30:50Z"
+  },
+  {
+    "timestamp": 1764113473.671754,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "173",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:31:13Z"
+  },
+  {
+    "timestamp": 1764113496.6292212,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "176",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:31:36Z"
+  },
+  {
+    "timestamp": 1764113511.3285499,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "173",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:31:51Z"
+  },
+  {
+    "timestamp": 1764113527.333453,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "175",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:32:07Z"
+  },
+  {
+    "timestamp": 1764113545.308867,
+    "seed_id": "1996-4::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-4::1996_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:32:25Z"
+  },
+  {
+    "timestamp": 1764113545.309057,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1996-4::1996_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1826984
+    },
+    "iso_time": "2025-11-25T23:32:25Z"
+  },
+  {
+    "timestamp": 1764113546.1197,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a_cm": 16,
+        "b_cm": 10,
+        "c_cm": 14,
+        "u_cm": 9,
+        "v_cm": 6,
+        "shadow_area": 31200,
+        "m_scale": 862
+      }
+    },
+    "iso_time": "2025-11-25T23:32:26Z"
+  },
+  {
+    "timestamp": 1764113546.8704221,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 928
+    },
+    "iso_time": "2025-11-25T23:32:26Z"
+  },
+  {
+    "timestamp": 1764113546.870618,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right rectangular solid with base 16 by 10 centimeters and height 14 centimeters rests on a horizontal surface. A poin",
+      "correct_answer": "928",
+      "seed_value": 1826984
+    },
+    "iso_time": "2025-11-25T23:32:26Z"
+  },
+  {
+    "timestamp": 1764113546.870689,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "928",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:32:26Z"
+  },
+  {
+    "timestamp": 1764113701.67155,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "926",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:35:01Z"
+  },
+  {
+    "timestamp": 1764113727.678559,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "928",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T23:35:27Z"
+  },
+  {
+    "timestamp": 1764113744.176445,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "931",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:35:44Z"
+  },
+  {
+    "timestamp": 1764113758.613091,
+    "seed_id": "1996-4::1996",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "920",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T23:35:58Z"
+  },
+  {
+    "timestamp": 1764113785.949446,
+    "seed_id": "1996-4::1996",
+    "stage": "variant_success",
+    "message": "Accepted variant 1996-4::1996_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T23:36:25Z"
+  }
+]

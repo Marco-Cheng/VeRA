@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764421228.9654028,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "In trapezoid $ABCD$ , leg $\\overline{BC}$ is perpendicular to bases $\\overline{AB}$ and $\\overline{CD}$ , and diagonals ",
+      "answer": "110",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T13:00:28Z"
+  },
+  {
+    "timestamp": 1764421228.9654489,
+    "seed_id": "2000-II-8::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T13:00:28Z"
+  },
+  {
+    "timestamp": 1764421228.965472,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In trapezoid $ABCD$ , leg $\\overline{BC}$ is perpendicular to bases $\\overline{AB}$ and $\\overline{CD}$ , and diagonals $\\overline{AC}$ and $\\overline{BD}$ are perpendicular. Given that $AB=\\sqrt{11}$ and $AD=\\sqrt{1001}$ , find $BC^2$ .",
+      "answer": "110",
+      "example_id": "2000-II-8::2000"
+    },
+    "iso_time": "2025-11-29T13:00:28Z"
+  },
+  {
+    "timestamp": 1764421326.089097,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-8::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1082223035
+    },
+    "iso_time": "2025-11-29T13:02:06Z"
+  },
+  {
+    "timestamp": 1764421327.194149,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 109,
+        "ad_sq": 4796,
+        "cos_num": 1,
+        "cos_den": 513
+      }
+    },
+    "iso_time": "2025-11-29T13:02:07Z"
+  },
+  {
+    "timestamp": 1764421328.217622,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 872
+    },
+    "iso_time": "2025-11-29T13:02:08Z"
+  },
+  {
+    "timestamp": 1764421328.217819,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a right trapezoid ABCD in the plane with bases AB and CD parallel, and leg BC perpendicular to both bases. The ",
+      "correct_answer": "872",
+      "seed_value": 1082223035
+    },
+    "iso_time": "2025-11-29T13:02:08Z"
+  },
+  {
+    "timestamp": 1764421328.217866,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "872",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:02:08Z"
+  },
+  {
+    "timestamp": 1764421377.1216488,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "868",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:02:57Z"
+  },
+  {
+    "timestamp": 1764421404.219234,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "877",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:03:24Z"
+  },
+  {
+    "timestamp": 1764421437.637254,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "872",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:03:57Z"
+  },
+  {
+    "timestamp": 1764421497.717501,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "866",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:04:57Z"
+  },
+  {
+    "timestamp": 1764421544.9587882,
+    "seed_id": "2000-II-8::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-8::2000_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T13:05:44Z"
+  },
+  {
+    "timestamp": 1764421544.958872,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-8::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 77647426
+    },
+    "iso_time": "2025-11-29T13:05:44Z"
+  },
+  {
+    "timestamp": 1764421546.272547,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 165,
+        "ad_sq": 7920,
+        "cos_num": 5,
+        "cos_den": 793
+      }
+    },
+    "iso_time": "2025-11-29T13:05:46Z"
+  },
+  {
+    "timestamp": 1764421547.304986,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1980
+    },
+    "iso_time": "2025-11-29T13:05:47Z"
+  },
+  {
+    "timestamp": 1764421547.305154,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a right trapezoid ABCD in the plane with bases AB and CD parallel, and leg BC perpendicular to both bases. The ",
+      "correct_answer": "1980",
+      "seed_value": 77647426
+    },
+    "iso_time": "2025-11-29T13:05:47Z"
+  },
+  {
+    "timestamp": 1764421547.3051991,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1986",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:05:47Z"
+  },
+  {
+    "timestamp": 1764421587.5588439,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1980",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:06:27Z"
+  },
+  {
+    "timestamp": 1764421612.716108,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1980",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:06:52Z"
+  },
+  {
+    "timestamp": 1764421640.106226,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1984",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:07:20Z"
+  },
+  {
+    "timestamp": 1764421681.641313,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1972",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:08:01Z"
+  },
+  {
+    "timestamp": 1764421707.8730829,
+    "seed_id": "2000-II-8::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-8::2000_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T13:08:27Z"
+  },
+  {
+    "timestamp": 1764421707.873177,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-8::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 309106963
+    },
+    "iso_time": "2025-11-29T13:08:27Z"
+  },
+  {
+    "timestamp": 1764421709.0767019,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 62,
+        "ad_sq": 496,
+        "cos_num": 1,
+        "cos_den": 65
+      }
+    },
+    "iso_time": "2025-11-29T13:08:29Z"
+  },
+  {
+    "timestamp": 1764421710.09076,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 248
+    },
+    "iso_time": "2025-11-29T13:08:30Z"
+  },
+  {
+    "timestamp": 1764421710.0909162,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a right trapezoid ABCD in the plane with bases AB and CD parallel, and leg BC perpendicular to both bases. The ",
+      "correct_answer": "248",
+      "seed_value": 309106963
+    },
+    "iso_time": "2025-11-29T13:08:30Z"
+  },
+  {
+    "timestamp": 1764421710.090958,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "251",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:08:30Z"
+  },
+  {
+    "timestamp": 1764421796.239361,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "255",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:09:56Z"
+  },
+  {
+    "timestamp": 1764421835.059625,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "248",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:10:35Z"
+  },
+  {
+    "timestamp": 1764421875.902642,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "248",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:11:15Z"
+  },
+  {
+    "timestamp": 1764421914.6239948,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "244",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:11:54Z"
+  },
+  {
+    "timestamp": 1764421955.927176,
+    "seed_id": "2000-II-8::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-8::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T13:12:35Z"
+  },
+  {
+    "timestamp": 1764421955.92735,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-8::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1052072458
+    },
+    "iso_time": "2025-11-29T13:12:35Z"
+  },
+  {
+    "timestamp": 1764421957.04954,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 194,
+        "ad_sq": 14938,
+        "cos_num": 4,
+        "cos_den": 1316
+      }
+    },
+    "iso_time": "2025-11-29T13:12:37Z"
+  },
+  {
+    "timestamp": 1764421958.070337,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2522
+    },
+    "iso_time": "2025-11-29T13:12:38Z"
+  },
+  {
+    "timestamp": 1764421958.070496,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a right trapezoid ABCD in the plane with bases AB and CD parallel, and leg BC perpendicular to both bases. The ",
+      "correct_answer": "2522",
+      "seed_value": 1052072458
+    },
+    "iso_time": "2025-11-29T13:12:38Z"
+  },
+  {
+    "timestamp": 1764421958.070536,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2522",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:12:38Z"
+  },
+  {
+    "timestamp": 1764421981.0832808,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2527",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:13:01Z"
+  },
+  {
+    "timestamp": 1764422038.8015401,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2517",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:13:58Z"
+  },
+  {
+    "timestamp": 1764422142.5434408,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2522",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:15:42Z"
+  },
+  {
+    "timestamp": 1764422196.430051,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2515",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:16:36Z"
+  },
+  {
+    "timestamp": 1764422224.689547,
+    "seed_id": "2000-II-8::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-8::2000_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T13:17:04Z"
+  },
+  {
+    "timestamp": 1764422224.689734,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-8::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1039988468
+    },
+    "iso_time": "2025-11-29T13:17:04Z"
+  },
+  {
+    "timestamp": 1764422225.821718,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 157,
+        "ad_sq": 14601,
+        "cos_num": 2,
+        "cos_den": 1456
+      }
+    },
+    "iso_time": "2025-11-29T13:17:05Z"
+  },
+  {
+    "timestamp": 1764422226.836425,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1884
+    },
+    "iso_time": "2025-11-29T13:17:06Z"
+  },
+  {
+    "timestamp": 1764422226.836577,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a right trapezoid ABCD in the plane with bases AB and CD parallel, and leg BC perpendicular to both bases. The ",
+      "correct_answer": "1884",
+      "seed_value": 1039988468
+    },
+    "iso_time": "2025-11-29T13:17:06Z"
+  },
+  {
+    "timestamp": 1764422226.836622,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1879",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:17:06Z"
+  },
+  {
+    "timestamp": 1764422260.735841,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1878",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:17:40Z"
+  },
+  {
+    "timestamp": 1764422304.571039,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1884",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:18:24Z"
+  },
+  {
+    "timestamp": 1764422352.075382,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1889",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T13:19:12Z"
+  },
+  {
+    "timestamp": 1764422402.281996,
+    "seed_id": "2000-II-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1884",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T13:20:02Z"
+  },
+  {
+    "timestamp": 1764422438.13167,
+    "seed_id": "2000-II-8::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-8::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T13:20:38Z"
+  }
+]

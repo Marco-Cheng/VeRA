@@ -1,0 +1,716 @@
+[
+  {
+    "timestamp": 1764693279.881908,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2002,
+      "question_preview": "Harold, Tanya, and Ulysses paint a very long picket fence. Harold starts with the first picket and paints every $h$ th p",
+      "answer": "757",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-02T16:34:39Z"
+  },
+  {
+    "timestamp": 1764693279.88197,
+    "seed_id": "2002-I-9::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-02T16:34:39Z"
+  },
+  {
+    "timestamp": 1764693279.882011,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Harold, Tanya, and Ulysses paint a very long picket fence. Harold starts with the first picket and paints every $h$ th picket; Tanya starts with the second picket and paints every $t$ th picket; and Ulysses starts with the third picket and paints every $u$ th picket. Call the positive integer $100h+10t+u$ $\\textit{paintable}$ when the triple $(h,t,u)$ of positive integers results in every picket being painted exactly once. Find the sum of all the paintable integers.",
+      "answer": "757",
+      "example_id": "2002-I-9::2002"
+    },
+    "iso_time": "2025-12-02T16:34:39Z"
+  },
+  {
+    "timestamp": 1764693430.3544111,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-9::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1550307404
+    },
+    "iso_time": "2025-12-02T16:37:10Z"
+  },
+  {
+    "timestamp": 1764693431.727892,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "painters": 4,
+        "starts": [
+          1,
+          4,
+          2,
+          6
+        ],
+        "lcm_target": 8,
+        "base": 17
+      }
+    },
+    "iso_time": "2025-12-02T16:37:11Z"
+  },
+  {
+    "timestamp": 1764693432.933459,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 11126
+    },
+    "iso_time": "2025-12-02T16:37:12Z"
+  },
+  {
+    "timestamp": 1764693432.9336681,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 4 painters paint an infinitely long picket fence. Their starting pickets are given, in order, by the ",
+      "correct_answer": "11126",
+      "seed_value": 1550307404
+    },
+    "iso_time": "2025-12-02T16:37:12Z"
+  },
+  {
+    "timestamp": 1764693432.933748,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "11126",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T16:37:12Z"
+  },
+  {
+    "timestamp": 1764693500.245116,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "11127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T16:38:20Z"
+  },
+  {
+    "timestamp": 1764693705.86639,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "11124",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T16:41:45Z"
+  },
+  {
+    "timestamp": 1764693769.558333,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "11126",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T16:42:49Z"
+  },
+  {
+    "timestamp": 1764693812.423813,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "11131",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T16:43:32Z"
+  },
+  {
+    "timestamp": 1764693940.1587,
+    "seed_id": "2002-I-9::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-9::2002_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T16:45:40Z"
+  },
+  {
+    "timestamp": 1764693940.1588821,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-9::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1048464789
+    },
+    "iso_time": "2025-12-02T16:45:40Z"
+  },
+  {
+    "timestamp": 1764693941.551253,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "painters": 4,
+        "starts": [
+          2,
+          3,
+          5,
+          1
+        ],
+        "lcm_target": 8,
+        "base": 103
+      }
+    },
+    "iso_time": "2025-12-02T16:45:41Z"
+  },
+  {
+    "timestamp": 1764693942.729601,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2228722
+    },
+    "iso_time": "2025-12-02T16:45:42Z"
+  },
+  {
+    "timestamp": 1764693942.729789,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 4 painters paint an infinitely long picket fence. Their starting pickets are given, in order, by the ",
+      "correct_answer": "2228722",
+      "seed_value": 1048464789
+    },
+    "iso_time": "2025-12-02T16:45:42Z"
+  },
+  {
+    "timestamp": 1764693942.729862,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2228726",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T16:45:42Z"
+  },
+  {
+    "timestamp": 1764694510.016526,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2228728",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T16:55:10Z"
+  },
+  {
+    "timestamp": 1764695070.88951,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2228717",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T17:04:30Z"
+  },
+  {
+    "timestamp": 1764695148.520215,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2228722",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T17:05:48Z"
+  },
+  {
+    "timestamp": 1764695291.7350929,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2228722",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T17:08:11Z"
+  },
+  {
+    "timestamp": 1764695447.795496,
+    "seed_id": "2002-I-9::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-9::2002_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T17:10:47Z"
+  },
+  {
+    "timestamp": 1764695447.795688,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-9::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1151225342
+    },
+    "iso_time": "2025-12-02T17:10:47Z"
+  },
+  {
+    "timestamp": 1764695449.166662,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "painters": 4,
+        "starts": [
+          1,
+          4,
+          6,
+          2
+        ],
+        "lcm_target": 8,
+        "base": 21
+      }
+    },
+    "iso_time": "2025-12-02T17:10:49Z"
+  },
+  {
+    "timestamp": 1764695450.318409,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 20462
+    },
+    "iso_time": "2025-12-02T17:10:50Z"
+  },
+  {
+    "timestamp": 1764695450.318563,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 4 painters paint an infinitely long picket fence. Their starting pickets are given, in order, by the ",
+      "correct_answer": "20462",
+      "seed_value": 1151225342
+    },
+    "iso_time": "2025-12-02T17:10:50Z"
+  },
+  {
+    "timestamp": 1764695450.318627,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "20462",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T17:10:50Z"
+  },
+  {
+    "timestamp": 1764695542.000984,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "20453",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T17:12:22Z"
+  },
+  {
+    "timestamp": 1764695727.047081,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "20468",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T17:15:27Z"
+  },
+  {
+    "timestamp": 1764695867.919306,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "20458",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T17:17:47Z"
+  },
+  {
+    "timestamp": 1764696178.68712,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "20462",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T17:22:58Z"
+  },
+  {
+    "timestamp": 1764696233.9202392,
+    "seed_id": "2002-I-9::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-9::2002_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T17:23:53Z"
+  },
+  {
+    "timestamp": 1764696233.9203498,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-9::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 345389081
+    },
+    "iso_time": "2025-12-02T17:23:53Z"
+  },
+  {
+    "timestamp": 1764696235.032661,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "painters": 6,
+        "starts": [
+          2,
+          1,
+          3,
+          15,
+          7,
+          23
+        ],
+        "lcm_target": 32,
+        "base": 105
+      }
+    },
+    "iso_time": "2025-12-02T17:23:55Z"
+  },
+  {
+    "timestamp": 1764696236.2781482,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 26021274542
+    },
+    "iso_time": "2025-12-02T17:23:56Z"
+  },
+  {
+    "timestamp": 1764696236.278347,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 6 painters paint an infinitely long picket fence. Their starting pickets are given, in order, by the ",
+      "correct_answer": "26021274542",
+      "seed_value": 345389081
+    },
+    "iso_time": "2025-12-02T17:23:56Z"
+  },
+  {
+    "timestamp": 1764696236.278425,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "26021274542",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T17:23:56Z"
+  },
+  {
+    "timestamp": 1764696526.993462,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "26021274549",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T17:28:46Z"
+  },
+  {
+    "timestamp": 1764696666.303013,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "26021274538",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T17:31:06Z"
+  },
+  {
+    "timestamp": 1764696729.5867038,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "26021274542",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T17:32:09Z"
+  },
+  {
+    "timestamp": 1764696774.6986198,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "26021274533",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T17:32:54Z"
+  },
+  {
+    "timestamp": 1764696837.161818,
+    "seed_id": "2002-I-9::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-9::2002_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T17:33:57Z"
+  },
+  {
+    "timestamp": 1764696837.161929,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-9::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 192297769
+    },
+    "iso_time": "2025-12-02T17:33:57Z"
+  },
+  {
+    "timestamp": 1764696838.537904,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "painters": 4,
+        "starts": [
+          1,
+          4,
+          2,
+          6
+        ],
+        "lcm_target": 8,
+        "base": 67
+      }
+    },
+    "iso_time": "2025-12-02T17:33:58Z"
+  },
+  {
+    "timestamp": 1764696839.602973,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 620026
+    },
+    "iso_time": "2025-12-02T17:33:59Z"
+  },
+  {
+    "timestamp": 1764696839.603125,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 4 painters paint an infinitely long picket fence. Their starting pickets are given, in order, by the ",
+      "correct_answer": "620026",
+      "seed_value": 192297769
+    },
+    "iso_time": "2025-12-02T17:33:59Z"
+  },
+  {
+    "timestamp": 1764696839.603196,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "620030",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T17:33:59Z"
+  },
+  {
+    "timestamp": 1764696905.904278,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "620024",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T17:35:05Z"
+  },
+  {
+    "timestamp": 1764697162.806117,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "620026",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T17:39:22Z"
+  },
+  {
+    "timestamp": 1764697205.366281,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "620018",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T17:40:05Z"
+  },
+  {
+    "timestamp": 1764697407.2736351,
+    "seed_id": "2002-I-9::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "620026",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T17:43:27Z"
+  },
+  {
+    "timestamp": 1764697467.268121,
+    "seed_id": "2002-I-9::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-9::2002_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T17:44:27Z"
+  }
+]

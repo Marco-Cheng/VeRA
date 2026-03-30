@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764450462.072439,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "In triangle $ABC$ , angles $A$ and $B$ measure $60$ degrees and $45$ degrees, respectively. The bisector of angle $A$ in",
+      "answer": "291",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T21:07:42Z"
+  },
+  {
+    "timestamp": 1764450462.072466,
+    "seed_id": "2001-I-4::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T21:07:42Z"
+  },
+  {
+    "timestamp": 1764450462.072478,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In triangle $ABC$ , angles $A$ and $B$ measure $60$ degrees and $45$ degrees, respectively. The bisector of angle $A$ intersects $\\overline{BC}$ at $T$ , and $AT=24$ . The area of triangle $ABC$ can be written in the form $a+b\\sqrt{c}$ , where $a$ , $b$ , and $c$ are positive integers, and $c$ is not divisible by the square of any prime. Find $a+b+c$ .",
+      "answer": "291",
+      "example_id": "2001-I-4::2001"
+    },
+    "iso_time": "2025-11-29T21:07:42Z"
+  },
+  {
+    "timestamp": 1764450540.194161,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-4::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2060318834
+    },
+    "iso_time": "2025-11-29T21:09:00Z"
+  },
+  {
+    "timestamp": 1764450541.3001049,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "angle_a_deg": 30,
+        "angle_b_deg": 60,
+        "at_len": 25,
+        "as_len": 49
+      }
+    },
+    "iso_time": "2025-11-29T21:09:01Z"
+  },
+  {
+    "timestamp": 1764450542.3382149,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1653
+    },
+    "iso_time": "2025-11-29T21:09:02Z"
+  },
+  {
+    "timestamp": 1764450542.338384,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, angles at A and B measure 30 and 60 degrees, respectively. The bisector of angle A meets BC at T and me",
+      "correct_answer": "1653",
+      "seed_value": 2060318834
+    },
+    "iso_time": "2025-11-29T21:09:02Z"
+  },
+  {
+    "timestamp": 1764450542.338433,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1653",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:09:02Z"
+  },
+  {
+    "timestamp": 1764450602.244035,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1661",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:10:02Z"
+  },
+  {
+    "timestamp": 1764450717.44381,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1659",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:11:57Z"
+  },
+  {
+    "timestamp": 1764450845.041197,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1653",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:14:05Z"
+  },
+  {
+    "timestamp": 1764451031.7915351,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1648",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:17:11Z"
+  },
+  {
+    "timestamp": 1764451171.797049,
+    "seed_id": "2001-I-4::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-4::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T21:19:31Z"
+  },
+  {
+    "timestamp": 1764451171.79723,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-4::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 525952074
+    },
+    "iso_time": "2025-11-29T21:19:31Z"
+  },
+  {
+    "timestamp": 1764451172.969352,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "angle_a_deg": 30,
+        "angle_b_deg": 30,
+        "at_len": 52,
+        "as_len": 58
+      }
+    },
+    "iso_time": "2025-11-29T21:19:32Z"
+  },
+  {
+    "timestamp": 1764451174.049303,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 471
+    },
+    "iso_time": "2025-11-29T21:19:34Z"
+  },
+  {
+    "timestamp": 1764451174.049454,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, angles at A and B measure 30 and 30 degrees, respectively. The bisector of angle A meets BC at T and me",
+      "correct_answer": "471",
+      "seed_value": 525952074
+    },
+    "iso_time": "2025-11-29T21:19:34Z"
+  },
+  {
+    "timestamp": 1764451174.049503,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "471",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:19:34Z"
+  },
+  {
+    "timestamp": 1764451317.511445,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "471",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:21:57Z"
+  },
+  {
+    "timestamp": 1764451612.32245,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "470",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:26:52Z"
+  },
+  {
+    "timestamp": 1764451725.98403,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "463",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:28:45Z"
+  },
+  {
+    "timestamp": 1764451806.036545,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "467",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:30:06Z"
+  },
+  {
+    "timestamp": 1764451938.2933419,
+    "seed_id": "2001-I-4::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-4::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T21:32:18Z"
+  },
+  {
+    "timestamp": 1764451938.29346,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-4::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1569472712
+    },
+    "iso_time": "2025-11-29T21:32:18Z"
+  },
+  {
+    "timestamp": 1764451939.461299,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "angle_a_deg": 30,
+        "angle_b_deg": 60,
+        "at_len": 13,
+        "as_len": 49
+      }
+    },
+    "iso_time": "2025-11-29T21:32:19Z"
+  },
+  {
+    "timestamp": 1764451940.515382,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1290
+    },
+    "iso_time": "2025-11-29T21:32:20Z"
+  },
+  {
+    "timestamp": 1764451940.5155342,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, angles at A and B measure 30 and 60 degrees, respectively. The bisector of angle A meets BC at T and me",
+      "correct_answer": "1290",
+      "seed_value": 1569472712
+    },
+    "iso_time": "2025-11-29T21:32:20Z"
+  },
+  {
+    "timestamp": 1764451940.51558,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1290",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:32:20Z"
+  },
+  {
+    "timestamp": 1764451999.499181,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1282",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:33:19Z"
+  },
+  {
+    "timestamp": 1764452076.856724,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1285",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:34:36Z"
+  },
+  {
+    "timestamp": 1764452177.7832792,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1290",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:36:17Z"
+  },
+  {
+    "timestamp": 1764452259.4315991,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1284",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:37:39Z"
+  },
+  {
+    "timestamp": 1764452287.3426182,
+    "seed_id": "2001-I-4::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-4::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T21:38:07Z"
+  },
+  {
+    "timestamp": 1764452287.342744,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-4::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1825750404
+    },
+    "iso_time": "2025-11-29T21:38:07Z"
+  },
+  {
+    "timestamp": 1764452288.619311,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "angle_a_deg": 30,
+        "angle_b_deg": 30,
+        "at_len": 14,
+        "as_len": 28
+      }
+    },
+    "iso_time": "2025-11-29T21:38:08Z"
+  },
+  {
+    "timestamp": 1764452289.652083,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 297
+    },
+    "iso_time": "2025-11-29T21:38:09Z"
+  },
+  {
+    "timestamp": 1764452289.65226,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, angles at A and B measure 30 and 30 degrees, respectively. The bisector of angle A meets BC at T and me",
+      "correct_answer": "297",
+      "seed_value": 1825750404
+    },
+    "iso_time": "2025-11-29T21:38:09Z"
+  },
+  {
+    "timestamp": 1764452289.6523268,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "288",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:38:09Z"
+  },
+  {
+    "timestamp": 1764452456.209067,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "299",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:40:56Z"
+  },
+  {
+    "timestamp": 1764452640.793895,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "300",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:44:00Z"
+  },
+  {
+    "timestamp": 1764452850.806713,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "297",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:47:30Z"
+  },
+  {
+    "timestamp": 1764452998.836719,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "297",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:49:58Z"
+  },
+  {
+    "timestamp": 1764453116.371113,
+    "seed_id": "2001-I-4::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-4::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T21:51:56Z"
+  },
+  {
+    "timestamp": 1764453116.3712268,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-4::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1049870325
+    },
+    "iso_time": "2025-11-29T21:51:56Z"
+  },
+  {
+    "timestamp": 1764453117.518543,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "angle_a_deg": 30,
+        "angle_b_deg": 30,
+        "at_len": 25,
+        "as_len": 49
+      }
+    },
+    "iso_time": "2025-11-29T21:51:57Z"
+  },
+  {
+    "timestamp": 1764453118.63487,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 903
+    },
+    "iso_time": "2025-11-29T21:51:58Z"
+  },
+  {
+    "timestamp": 1764453118.635045,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, angles at A and B measure 30 and 30 degrees, respectively. The bisector of angle A meets BC at T and me",
+      "correct_answer": "903",
+      "seed_value": 1049870325
+    },
+    "iso_time": "2025-11-29T21:51:58Z"
+  },
+  {
+    "timestamp": 1764453118.635087,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "910",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:51:58Z"
+  },
+  {
+    "timestamp": 1764453270.758813,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "903",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:54:30Z"
+  },
+  {
+    "timestamp": 1764453293.2286642,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "909",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:54:53Z"
+  },
+  {
+    "timestamp": 1764453421.539209,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "903",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T21:57:01Z"
+  },
+  {
+    "timestamp": 1764453484.816271,
+    "seed_id": "2001-I-4::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "901",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T21:58:04Z"
+  },
+  {
+    "timestamp": 1764453638.0194938,
+    "seed_id": "2001-I-4::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-4::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T22:00:38Z"
+  }
+]

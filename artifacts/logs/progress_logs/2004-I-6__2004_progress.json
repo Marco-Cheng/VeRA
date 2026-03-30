@@ -1,0 +1,704 @@
+[
+  {
+    "timestamp": 1765029300.5897229,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "An integer is called snakelike if its decimal representation $a_1a_2a_3\\cdots a_k$ satisfies $a_i<a_{i+1}$ if $i$ is odd",
+      "answer": "882",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-06T13:55:00Z"
+  },
+  {
+    "timestamp": 1765029300.5897899,
+    "seed_id": "2004-I-6::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-06T13:55:00Z"
+  },
+  {
+    "timestamp": 1765029300.589822,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "An integer is called snakelike if its decimal representation $a_1a_2a_3\\cdots a_k$ satisfies $a_i<a_{i+1}$ if $i$ is odd and $a_i>a_{i+1}$ if $i$ is even. How many snakelike integers between 1000 and 9999 have four distinct digits?",
+      "answer": "882",
+      "example_id": "2004-I-6::2004"
+    },
+    "iso_time": "2025-12-06T13:55:00Z"
+  },
+  {
+    "timestamp": 1765029560.374763,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-6::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 217904170
+    },
+    "iso_time": "2025-12-06T13:59:20Z"
+  },
+  {
+    "timestamp": 1765029561.500798,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "length": 6,
+        "start_up": 0,
+        "allowed_digits": "0, 1, 2, 3, 4, 6, 7, 8, 9",
+        "gap": 1,
+        "modulus": 5,
+        "residue": 0
+      }
+    },
+    "iso_time": "2025-12-06T13:59:21Z"
+  },
+  {
+    "timestamp": 1765029562.652906,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 976
+    },
+    "iso_time": "2025-12-06T13:59:22Z"
+  },
+  {
+    "timestamp": 1765029562.653053,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, consider all 6-digit integers whose digits form a snakelike sequence with alternating inequalities governed ",
+      "correct_answer": "976",
+      "seed_value": 217904170
+    },
+    "iso_time": "2025-12-06T13:59:22Z"
+  },
+  {
+    "timestamp": 1765029562.6530979,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "973",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T13:59:22Z"
+  },
+  {
+    "timestamp": 1765029859.4401221,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "969",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T14:04:19Z"
+  },
+  {
+    "timestamp": 1765029922.965878,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "976",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T14:05:22Z"
+  },
+  {
+    "timestamp": 1765029988.1738088,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "976",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T14:06:28Z"
+  },
+  {
+    "timestamp": 1765030228.3180108,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "970",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T14:10:28Z"
+  },
+  {
+    "timestamp": 1765030468.842151,
+    "seed_id": "2004-I-6::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-6::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T14:14:28Z"
+  },
+  {
+    "timestamp": 1765030468.842348,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-6::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1448797477
+    },
+    "iso_time": "2025-12-06T14:14:28Z"
+  },
+  {
+    "timestamp": 1765030470.200992,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 8,
+        "length": 7,
+        "start_up": 1,
+        "allowed_digits": "0, 1, 2, 3, 4, 5, 7",
+        "gap": 1,
+        "modulus": 6,
+        "residue": 4
+      }
+    },
+    "iso_time": "2025-12-06T14:14:30Z"
+  },
+  {
+    "timestamp": 1765030471.3451688,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 211
+    },
+    "iso_time": "2025-12-06T14:14:31Z"
+  },
+  {
+    "timestamp": 1765030471.3453598,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 8, consider all 7-digit integers whose digits form a snakelike sequence with alternating inequalities governed b",
+      "correct_answer": "211",
+      "seed_value": 1448797477
+    },
+    "iso_time": "2025-12-06T14:14:31Z"
+  },
+  {
+    "timestamp": 1765030471.34541,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "202",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T14:14:31Z"
+  },
+  {
+    "timestamp": 1765030706.539971,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "203",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T14:18:26Z"
+  },
+  {
+    "timestamp": 1765030883.972265,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "212",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T14:21:23Z"
+  },
+  {
+    "timestamp": 1765031034.107796,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "211",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T14:23:54Z"
+  },
+  {
+    "timestamp": 1765031135.490298,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "211",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T14:25:35Z"
+  },
+  {
+    "timestamp": 1765031163.138766,
+    "seed_id": "2004-I-6::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-6::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T14:26:03Z"
+  },
+  {
+    "timestamp": 1765031163.138956,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-6::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 740342866
+    },
+    "iso_time": "2025-12-06T14:26:03Z"
+  },
+  {
+    "timestamp": 1765031164.484443,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "length": 7,
+        "start_up": 1,
+        "allowed_digits": "0, 1, 2, 3, 5, 6, 7, 8, 9",
+        "gap": 1,
+        "modulus": 3,
+        "residue": 1
+      }
+    },
+    "iso_time": "2025-12-06T14:26:04Z"
+  },
+  {
+    "timestamp": 1765031165.573175,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2443
+    },
+    "iso_time": "2025-12-06T14:26:05Z"
+  },
+  {
+    "timestamp": 1765031165.573332,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, consider all 7-digit integers whose digits form a snakelike sequence with alternating inequalities governed ",
+      "correct_answer": "2443",
+      "seed_value": 740342866
+    },
+    "iso_time": "2025-12-06T14:26:05Z"
+  },
+  {
+    "timestamp": 1765031165.573376,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2443",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T14:26:05Z"
+  },
+  {
+    "timestamp": 1765031225.738143,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2441",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T14:27:05Z"
+  },
+  {
+    "timestamp": 1765031398.838157,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2443",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T14:29:58Z"
+  },
+  {
+    "timestamp": 1765031467.956841,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2451",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T14:31:07Z"
+  },
+  {
+    "timestamp": 1765031747.710727,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2442",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T14:35:47Z"
+  },
+  {
+    "timestamp": 1765032067.718869,
+    "seed_id": "2004-I-6::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-6::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-06T14:41:07Z"
+  },
+  {
+    "timestamp": 1765032067.719053,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-6::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 37375116
+    },
+    "iso_time": "2025-12-06T14:41:07Z"
+  },
+  {
+    "timestamp": 1765032069.092758,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "length": 7,
+        "start_up": 1,
+        "allowed_digits": "0, 1, 2, 3, 4, 6, 7, 8, 9",
+        "gap": 1,
+        "modulus": 5,
+        "residue": 4
+      }
+    },
+    "iso_time": "2025-12-06T14:41:09Z"
+  },
+  {
+    "timestamp": 1765032070.3041222,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1599
+    },
+    "iso_time": "2025-12-06T14:41:10Z"
+  },
+  {
+    "timestamp": 1765032070.3043451,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, consider all 7-digit integers whose digits form a snakelike sequence with alternating inequalities governed ",
+      "correct_answer": "1599",
+      "seed_value": 37375116
+    },
+    "iso_time": "2025-12-06T14:41:10Z"
+  },
+  {
+    "timestamp": 1765032070.3044322,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1598",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T14:41:10Z"
+  },
+  {
+    "timestamp": 1765032395.2849689,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1599",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T14:46:35Z"
+  },
+  {
+    "timestamp": 1765032453.2809432,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1599",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T14:47:33Z"
+  },
+  {
+    "timestamp": 1765032793.562189,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1590",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T14:53:13Z"
+  },
+  {
+    "timestamp": 1765033162.593525,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1602",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T14:59:22Z"
+  },
+  {
+    "timestamp": 1765033335.845885,
+    "seed_id": "2004-I-6::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-6::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T15:02:15Z"
+  },
+  {
+    "timestamp": 1765033335.846057,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-6::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1524936029
+    },
+    "iso_time": "2025-12-06T15:02:15Z"
+  },
+  {
+    "timestamp": 1765033336.980602,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "length": 5,
+        "start_up": 1,
+        "allowed_digits": "0, 1, 2, 3, 4, 5, 6, 8, 9",
+        "gap": 1,
+        "modulus": 4,
+        "residue": 1
+      }
+    },
+    "iso_time": "2025-12-06T15:02:16Z"
+  },
+  {
+    "timestamp": 1765033338.22595,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 384
+    },
+    "iso_time": "2025-12-06T15:02:18Z"
+  },
+  {
+    "timestamp": 1765033338.226162,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, consider all 5-digit integers whose digits form a snakelike sequence with alternating inequalities governed ",
+      "correct_answer": "384",
+      "seed_value": 1524936029
+    },
+    "iso_time": "2025-12-06T15:02:18Z"
+  },
+  {
+    "timestamp": 1765033338.226215,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "377",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T15:02:18Z"
+  },
+  {
+    "timestamp": 1765033504.9343412,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "384",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T15:05:04Z"
+  },
+  {
+    "timestamp": 1765033899.892988,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "381",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T15:11:39Z"
+  },
+  {
+    "timestamp": 1765034125.435643,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "382",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T15:15:25Z"
+  },
+  {
+    "timestamp": 1765034578.817761,
+    "seed_id": "2004-I-6::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "384",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T15:22:58Z"
+  },
+  {
+    "timestamp": 1765034880.1253,
+    "seed_id": "2004-I-6::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-6::2004_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-06T15:28:00Z"
+  }
+]

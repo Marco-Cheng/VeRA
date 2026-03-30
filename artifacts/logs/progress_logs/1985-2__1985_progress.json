@@ -1,0 +1,822 @@
+[
+  {
+    "timestamp": 1762793515.898991,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1985,
+      "question_preview": "When a right triangle is rotated about one leg, the volume of the cone produced is $800\\pi \\;\\textrm{cm}^3$ . When the t",
+      "answer": "26",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-10T16:51:55Z"
+  },
+  {
+    "timestamp": 1762793515.899014,
+    "seed_id": "1985-2::1985",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-10T16:51:55Z"
+  },
+  {
+    "timestamp": 1762793515.8990269,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "When a right triangle is rotated about one leg, the volume of the cone produced is $800\\pi \\;\\textrm{cm}^3$ . When the triangle is rotated about the other leg, the volume of the cone produced is $1920\\pi \\;\\textrm{cm}^3$ . What is the length (in cm) of the hypotenuse of the triangle?",
+      "answer": "26",
+      "example_id": "1985-2::1985"
+    },
+    "iso_time": "2025-11-10T16:51:55Z"
+  },
+  {
+    "timestamp": 1762793740.520129,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-2::1985_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1628726293
+    },
+    "iso_time": "2025-11-10T16:55:40Z"
+  },
+  {
+    "timestamp": 1762793741.308324,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T16:55:41Z"
+  },
+  {
+    "timestamp": 1762793742.079168,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T16:55:42Z"
+  },
+  {
+    "timestamp": 1762793742.8478,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "V_leg": 2947800,
+        "V_hyp": 1387200,
+        "perimeter": 680
+      }
+    },
+    "iso_time": "2025-11-10T16:55:42Z"
+  },
+  {
+    "timestamp": 1762793743.61479,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": true,
+      "answer": 680
+    },
+    "iso_time": "2025-11-10T16:55:43Z"
+  },
+  {
+    "timestamp": 1762793743.614927,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right-angled triangle is revolved about one of its legs to form a cone with volume 2947800$\\pi$. The same triangle is ",
+      "correct_answer": "680",
+      "seed_value": 1628726293
+    },
+    "iso_time": "2025-11-10T16:55:43Z"
+  },
+  {
+    "timestamp": 1762793743.614971,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "687",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T16:55:43Z"
+  },
+  {
+    "timestamp": 1762793853.204397,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "680",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T16:57:33Z"
+  },
+  {
+    "timestamp": 1762793923.904089,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "672",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T16:58:43Z"
+  },
+  {
+    "timestamp": 1762794084.233014,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "680",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T17:01:24Z"
+  },
+  {
+    "timestamp": 1762794169.0577888,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "684",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:02:49Z"
+  },
+  {
+    "timestamp": 1762794346.59075,
+    "seed_id": "1985-2::1985",
+    "stage": "variant_success",
+    "message": "Accepted variant 1985-2::1985_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-10T17:05:46Z"
+  },
+  {
+    "timestamp": 1762794346.590802,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-2::1985_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1727623887
+    },
+    "iso_time": "2025-11-10T17:05:46Z"
+  },
+  {
+    "timestamp": 1762794347.363157,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "V_leg": 4218240,
+        "V_hyp": 1622400,
+        "perimeter": 780
+      }
+    },
+    "iso_time": "2025-11-10T17:05:47Z"
+  },
+  {
+    "timestamp": 1762794348.146316,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 780
+    },
+    "iso_time": "2025-11-10T17:05:48Z"
+  },
+  {
+    "timestamp": 1762794348.146467,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right-angled triangle is revolved about one of its legs to form a cone with volume 4218240$\\pi$. The same triangle is ",
+      "correct_answer": "780",
+      "seed_value": 1727623887
+    },
+    "iso_time": "2025-11-10T17:05:48Z"
+  },
+  {
+    "timestamp": 1762794348.146511,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "779",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:05:48Z"
+  },
+  {
+    "timestamp": 1762794470.966898,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "780",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T17:07:50Z"
+  },
+  {
+    "timestamp": 1762794547.607232,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "775",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:09:07Z"
+  },
+  {
+    "timestamp": 1762794713.882692,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "781",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:11:53Z"
+  },
+  {
+    "timestamp": 1762794814.3746161,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "780",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T17:13:34Z"
+  },
+  {
+    "timestamp": 1762794914.289629,
+    "seed_id": "1985-2::1985",
+    "stage": "variant_success",
+    "message": "Accepted variant 1985-2::1985_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-10T17:15:14Z"
+  },
+  {
+    "timestamp": 1762794914.289686,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-2::1985_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1519526575
+    },
+    "iso_time": "2025-11-10T17:15:14Z"
+  },
+  {
+    "timestamp": 1762794915.067264,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T17:15:15Z"
+  },
+  {
+    "timestamp": 1762794915.860251,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T17:15:15Z"
+  },
+  {
+    "timestamp": 1762794916.635586,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T17:15:16Z"
+  },
+  {
+    "timestamp": 1762794917.407304,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T17:15:17Z"
+  },
+  {
+    "timestamp": 1762794918.1768441,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T17:15:18Z"
+  },
+  {
+    "timestamp": 1762794918.945993,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T17:15:18Z"
+  },
+  {
+    "timestamp": 1762794919.714786,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "V_leg": 1757600,
+        "V_hyp": 1622400,
+        "perimeter": 780
+      }
+    },
+    "iso_time": "2025-11-10T17:15:19Z"
+  },
+  {
+    "timestamp": 1762794920.5030038,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": true,
+      "answer": 780
+    },
+    "iso_time": "2025-11-10T17:15:20Z"
+  },
+  {
+    "timestamp": 1762794920.503136,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right-angled triangle is revolved about one of its legs to form a cone with volume 1757600$\\pi$. The same triangle is ",
+      "correct_answer": "780",
+      "seed_value": 1519526575
+    },
+    "iso_time": "2025-11-10T17:15:20Z"
+  },
+  {
+    "timestamp": 1762794920.503178,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "772",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:15:20Z"
+  },
+  {
+    "timestamp": 1762795017.459478,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "778",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:16:57Z"
+  },
+  {
+    "timestamp": 1762795153.223846,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "780",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T17:19:13Z"
+  },
+  {
+    "timestamp": 1762795260.444799,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "780",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T17:21:00Z"
+  },
+  {
+    "timestamp": 1762795364.628635,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "773",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:22:44Z"
+  },
+  {
+    "timestamp": 1762795489.2531369,
+    "seed_id": "1985-2::1985",
+    "stage": "variant_success",
+    "message": "Accepted variant 1985-2::1985_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-10T17:24:49Z"
+  },
+  {
+    "timestamp": 1762795489.2531781,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-2::1985_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1310284964
+    },
+    "iso_time": "2025-11-10T17:24:49Z"
+  },
+  {
+    "timestamp": 1762795490.009501,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T17:24:50Z"
+  },
+  {
+    "timestamp": 1762795490.78446,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T17:24:50Z"
+  },
+  {
+    "timestamp": 1762795491.5534852,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "V_leg": 2000,
+        "V_hyp": 1200,
+        "perimeter": 60
+      }
+    },
+    "iso_time": "2025-11-10T17:24:51Z"
+  },
+  {
+    "timestamp": 1762795492.325415,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": true,
+      "answer": 60
+    },
+    "iso_time": "2025-11-10T17:24:52Z"
+  },
+  {
+    "timestamp": 1762795492.325551,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right-angled triangle is revolved about one of its legs to form a cone with volume 2000$\\pi$. The same triangle is rev",
+      "correct_answer": "60",
+      "seed_value": 1310284964
+    },
+    "iso_time": "2025-11-10T17:24:52Z"
+  },
+  {
+    "timestamp": 1762795492.3255942,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "68",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:24:52Z"
+  },
+  {
+    "timestamp": 1762795600.911561,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "60",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T17:26:40Z"
+  },
+  {
+    "timestamp": 1762795674.071332,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "62",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:27:54Z"
+  },
+  {
+    "timestamp": 1762795789.3282409,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "60",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T17:29:49Z"
+  },
+  {
+    "timestamp": 1762795854.880841,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "61",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:30:54Z"
+  },
+  {
+    "timestamp": 1762795971.940638,
+    "seed_id": "1985-2::1985",
+    "stage": "variant_success",
+    "message": "Accepted variant 1985-2::1985_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-10T17:32:51Z"
+  },
+  {
+    "timestamp": 1762795971.940704,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1985-2::1985_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 962527774
+    },
+    "iso_time": "2025-11-10T17:32:51Z"
+  },
+  {
+    "timestamp": 1762795972.687863,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-10T17:32:52Z"
+  },
+  {
+    "timestamp": 1762795973.4628952,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-10T17:32:53Z"
+  },
+  {
+    "timestamp": 1762795974.235626,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "V_leg": 16000,
+        "V_hyp": 9600,
+        "perimeter": 120
+      }
+    },
+    "iso_time": "2025-11-10T17:32:54Z"
+  },
+  {
+    "timestamp": 1762795975.0013728,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": true,
+      "answer": 120
+    },
+    "iso_time": "2025-11-10T17:32:55Z"
+  },
+  {
+    "timestamp": 1762795975.001506,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right-angled triangle is revolved about one of its legs to form a cone with volume 16000$\\pi$. The same triangle is re",
+      "correct_answer": "120",
+      "seed_value": 962527774
+    },
+    "iso_time": "2025-11-10T17:32:55Z"
+  },
+  {
+    "timestamp": 1762795975.001547,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "118",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:32:55Z"
+  },
+  {
+    "timestamp": 1762796070.680852,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:34:30Z"
+  },
+  {
+    "timestamp": 1762796145.683211,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T17:35:45Z"
+  },
+  {
+    "timestamp": 1762796230.5551722,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "120",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-10T17:37:10Z"
+  },
+  {
+    "timestamp": 1762796327.980584,
+    "seed_id": "1985-2::1985",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "128",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-10T17:38:47Z"
+  },
+  {
+    "timestamp": 1762796453.6103082,
+    "seed_id": "1985-2::1985",
+    "stage": "variant_success",
+    "message": "Accepted variant 1985-2::1985_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-10T17:40:53Z"
+  }
+]

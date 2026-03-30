@@ -1,0 +1,699 @@
+[
+  {
+    "timestamp": 1764574681.315252,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "There are $2n$ complex numbers that satisfy both $z^{28} - z^{8} - 1 = 0$ and $|z| = 1$ . These numbers have the form $z",
+      "answer": "840",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T07:38:01Z"
+  },
+  {
+    "timestamp": 1764574681.3152819,
+    "seed_id": "2001-II-14::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T07:38:01Z"
+  },
+  {
+    "timestamp": 1764574681.315296,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "There are $2n$ complex numbers that satisfy both $z^{28} - z^{8} - 1 = 0$ and $|z| = 1$ . These numbers have the form $z_{m} = \\cos\\theta_{m} + i\\sin\\theta_{m}$ , where $0\\leq\\theta_{1} < \\theta_{2} < \\ldots < \\theta_{2n} < 360$ and angles are measured in degrees. Find the value of $\\theta_{2} + \\theta_{4} + \\ldots + \\theta_{2n}$ .",
+      "answer": "840",
+      "example_id": "2001-II-14::2001"
+    },
+    "iso_time": "2025-12-01T07:38:01Z"
+  },
+  {
+    "timestamp": 1764574917.696676,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-14::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 372131493
+    },
+    "iso_time": "2025-12-01T07:41:57Z"
+  },
+  {
+    "timestamp": 1764574919.053174,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 49,
+        "b": 14,
+        "phi_deg": 0,
+        "total_count": 14,
+        "d": 2,
+        "r": 1
+      }
+    },
+    "iso_time": "2025-12-01T07:41:59Z"
+  },
+  {
+    "timestamp": 1764574920.203681,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1140
+    },
+    "iso_time": "2025-12-01T07:42:00Z"
+  },
+  {
+    "timestamp": 1764574920.203848,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider integers 49 > 14 > 0 and a fixed angle shift 0 (in degrees). Among the complex numbers z on ",
+      "correct_answer": "1140",
+      "seed_value": 372131493
+    },
+    "iso_time": "2025-12-01T07:42:00Z"
+  },
+  {
+    "timestamp": 1764574920.203922,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1140",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:42:00Z"
+  },
+  {
+    "timestamp": 1764575093.287581,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1139",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:44:53Z"
+  },
+  {
+    "timestamp": 1764575127.620337,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1140",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:45:27Z"
+  },
+  {
+    "timestamp": 1764575157.1785102,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1147",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:45:57Z"
+  },
+  {
+    "timestamp": 1764575235.055371,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1145",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:47:15Z"
+  },
+  {
+    "timestamp": 1764575285.241651,
+    "seed_id": "2001-II-14::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-14::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T07:48:05Z"
+  },
+  {
+    "timestamp": 1764575285.2418501,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-14::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 447955061
+    },
+    "iso_time": "2025-12-01T07:48:05Z"
+  },
+  {
+    "timestamp": 1764575286.4598222,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 76,
+        "b": 8,
+        "phi_deg": 0,
+        "total_count": 8,
+        "d": 2,
+        "r": 1
+      }
+    },
+    "iso_time": "2025-12-01T07:48:06Z"
+  },
+  {
+    "timestamp": 1764575287.683635,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 600
+    },
+    "iso_time": "2025-12-01T07:48:07Z"
+  },
+  {
+    "timestamp": 1764575287.6838489,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider integers 76 > 8 > 0 and a fixed angle shift 0 (in degrees). Among the complex numbers z on t",
+      "correct_answer": "600",
+      "seed_value": 447955061
+    },
+    "iso_time": "2025-12-01T07:48:07Z"
+  },
+  {
+    "timestamp": 1764575287.683924,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:48:07Z"
+  },
+  {
+    "timestamp": 1764575306.468856,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "604",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:48:26Z"
+  },
+  {
+    "timestamp": 1764575329.546755,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:48:49Z"
+  },
+  {
+    "timestamp": 1764575366.255502,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "609",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:49:26Z"
+  },
+  {
+    "timestamp": 1764575427.8186848,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "606",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:50:27Z"
+  },
+  {
+    "timestamp": 1764575458.004416,
+    "seed_id": "2001-II-14::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-14::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T07:50:58Z"
+  },
+  {
+    "timestamp": 1764575458.0045881,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-14::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1774453595
+    },
+    "iso_time": "2025-12-01T07:50:58Z"
+  },
+  {
+    "timestamp": 1764575459.407805,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 152,
+        "b": 16,
+        "phi_deg": 0,
+        "total_count": 16,
+        "d": 2,
+        "r": 2
+      }
+    },
+    "iso_time": "2025-12-01T07:50:59Z"
+  },
+  {
+    "timestamp": 1764575460.482817,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1560
+    },
+    "iso_time": "2025-12-01T07:51:00Z"
+  },
+  {
+    "timestamp": 1764575460.482953,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider integers 152 > 16 > 0 and a fixed angle shift 0 (in degrees). Among the complex numbers z on",
+      "correct_answer": "1560",
+      "seed_value": 1774453595
+    },
+    "iso_time": "2025-12-01T07:51:00Z"
+  },
+  {
+    "timestamp": 1764575460.483017,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1558",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:51:00Z"
+  },
+  {
+    "timestamp": 1764575599.708252,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1564",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:53:19Z"
+  },
+  {
+    "timestamp": 1764575630.6133802,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1560",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:53:50Z"
+  },
+  {
+    "timestamp": 1764575669.294667,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1557",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:54:29Z"
+  },
+  {
+    "timestamp": 1764575700.9401422,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1560",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:55:00Z"
+  },
+  {
+    "timestamp": 1764575743.893523,
+    "seed_id": "2001-II-14::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-14::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T07:55:43Z"
+  },
+  {
+    "timestamp": 1764575743.893721,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-14::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1741068303
+    },
+    "iso_time": "2025-12-01T07:55:43Z"
+  },
+  {
+    "timestamp": 1764575745.228715,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 169,
+        "b": 26,
+        "phi_deg": 0,
+        "total_count": 26,
+        "d": 2,
+        "r": 1
+      }
+    },
+    "iso_time": "2025-12-01T07:55:45Z"
+  },
+  {
+    "timestamp": 1764575746.3820832,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2220
+    },
+    "iso_time": "2025-12-01T07:55:46Z"
+  },
+  {
+    "timestamp": 1764575746.382236,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider integers 169 > 26 > 0 and a fixed angle shift 0 (in degrees). Among the complex numbers z on",
+      "correct_answer": "2220",
+      "seed_value": 1741068303
+    },
+    "iso_time": "2025-12-01T07:55:46Z"
+  },
+  {
+    "timestamp": 1764575746.382303,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2224",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:55:46Z"
+  },
+  {
+    "timestamp": 1764575827.058483,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2228",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:57:07Z"
+  },
+  {
+    "timestamp": 1764575900.935135,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2220",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:58:20Z"
+  },
+  {
+    "timestamp": 1764575949.752335,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2223",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:59:09Z"
+  },
+  {
+    "timestamp": 1764576018.191912,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2220",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T08:00:18Z"
+  },
+  {
+    "timestamp": 1764576072.912768,
+    "seed_id": "2001-II-14::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-14::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T08:01:12Z"
+  },
+  {
+    "timestamp": 1764576072.912978,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-14::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1094382464
+    },
+    "iso_time": "2025-12-01T08:01:12Z"
+  },
+  {
+    "timestamp": 1764576074.173127,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 76,
+        "b": 8,
+        "phi_deg": 0,
+        "total_count": 8,
+        "d": 2,
+        "r": 2
+      }
+    },
+    "iso_time": "2025-12-01T08:01:14Z"
+  },
+  {
+    "timestamp": 1764576075.293491,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 840
+    },
+    "iso_time": "2025-12-01T08:01:15Z"
+  },
+  {
+    "timestamp": 1764576075.2936661,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider integers 76 > 8 > 0 and a fixed angle shift 0 (in degrees). Among the complex numbers z on t",
+      "correct_answer": "840",
+      "seed_value": 1094382464
+    },
+    "iso_time": "2025-12-01T08:01:15Z"
+  },
+  {
+    "timestamp": 1764576075.2937322,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "838",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T08:01:15Z"
+  },
+  {
+    "timestamp": 1764576099.075893,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "840",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T08:01:39Z"
+  },
+  {
+    "timestamp": 1764576127.29423,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "849",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T08:02:07Z"
+  },
+  {
+    "timestamp": 1764576161.745773,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "840",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T08:02:41Z"
+  },
+  {
+    "timestamp": 1764576187.655954,
+    "seed_id": "2001-II-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "841",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T08:03:07Z"
+  },
+  {
+    "timestamp": 1764576215.583146,
+    "seed_id": "2001-II-14::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-14::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T08:03:35Z"
+  }
+]

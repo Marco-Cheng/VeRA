@@ -1,0 +1,747 @@
+[
+  {
+    "timestamp": 1764351095.119276,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1999,
+      "question_preview": "Let $\\mathcal{T}$ be the set of ordered triples $(x,y,z)$ of nonnegative real numbers that lie in the plane $x+y+z=1.$ L",
+      "answer": "25",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T17:31:35Z"
+  },
+  {
+    "timestamp": 1764351095.1193311,
+    "seed_id": "1999-8::1999",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T17:31:35Z"
+  },
+  {
+    "timestamp": 1764351095.119355,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $\\mathcal{T}$ be the set of ordered triples $(x,y,z)$ of nonnegative real numbers that lie in the plane $x+y+z=1.$ Let us say that $(x,y,z)$ supports $(a,b,c)$ when exactly two of the following are true: $x\\ge a, y\\ge b, z\\ge c.$ Let $\\mathcal{S}$ consist of those triples in $\\mathcal{T}$ that support $\\left(\\frac 12,\\frac 13,\\frac 16\\right).$ The area of $\\mathcal{S}$ divided by the area of $\\mathcal{T}$ is $m/n,$ where $m_{}$ and $n_{}$ are relatively prime positive integers, find $m+n.$",
+      "answer": "25",
+      "example_id": "1999-8::1999"
+    },
+    "iso_time": "2025-11-28T17:31:35Z"
+  },
+  {
+    "timestamp": 1764351158.628622,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-8::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1901892456
+    },
+    "iso_time": "2025-11-28T17:32:38Z"
+  },
+  {
+    "timestamp": 1764351159.814882,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "weights": [
+          1,
+          3,
+          3,
+          1
+        ],
+        "thresholds": [
+          "4/6",
+          "2/10",
+          "3/10",
+          "1/2"
+        ],
+        "r": 1
+      }
+    },
+    "iso_time": "2025-11-28T17:32:39Z"
+  },
+  {
+    "timestamp": 1764351160.86131,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3313
+    },
+    "iso_time": "2025-11-28T17:32:40Z"
+  },
+  {
+    "timestamp": 1764351160.861475,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n = 4, weights w = [1, 3, 3, 1], and thresholds t = ['4/6', '2/10', '3/10', '1/2']. Consider the (n−1)-dimensional s",
+      "correct_answer": "3313",
+      "seed_value": 1901892456
+    },
+    "iso_time": "2025-11-28T17:32:40Z"
+  },
+  {
+    "timestamp": 1764351160.861547,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3306",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:32:40Z"
+  },
+  {
+    "timestamp": 1764351200.080229,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3321",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:33:20Z"
+  },
+  {
+    "timestamp": 1764351251.675968,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3313",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:34:11Z"
+  },
+  {
+    "timestamp": 1764351282.9919538,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3322",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:34:42Z"
+  },
+  {
+    "timestamp": 1764351318.1387808,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3313",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:35:18Z"
+  },
+  {
+    "timestamp": 1764351344.139029,
+    "seed_id": "1999-8::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-8::1999_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:35:44Z"
+  },
+  {
+    "timestamp": 1764351344.139095,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-8::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 819193242
+    },
+    "iso_time": "2025-11-28T17:35:44Z"
+  },
+  {
+    "timestamp": 1764351345.2118442,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 5,
+        "weights": [
+          1,
+          1,
+          2,
+          1,
+          4
+        ],
+        "thresholds": [
+          "2/4",
+          "3/4",
+          "1/6",
+          "3/6",
+          "1/5"
+        ],
+        "r": 1
+      }
+    },
+    "iso_time": "2025-11-28T17:35:45Z"
+  },
+  {
+    "timestamp": 1764351346.25908,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1907929
+    },
+    "iso_time": "2025-11-28T17:35:46Z"
+  },
+  {
+    "timestamp": 1764351346.2592452,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n = 5, weights w = [1, 1, 2, 1, 4], and thresholds t = ['2/4', '3/4', '1/6', '3/6', '1/5']. Consider the (n−1)-dimen",
+      "correct_answer": "1907929",
+      "seed_value": 819193242
+    },
+    "iso_time": "2025-11-28T17:35:46Z"
+  },
+  {
+    "timestamp": 1764351346.2593222,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1907930",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:35:46Z"
+  },
+  {
+    "timestamp": 1764351400.408918,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1907929",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:36:40Z"
+  },
+  {
+    "timestamp": 1764351451.624637,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1907937",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:37:31Z"
+  },
+  {
+    "timestamp": 1764351496.4084868,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1907925",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:38:16Z"
+  },
+  {
+    "timestamp": 1764351557.028316,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1907929",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:39:17Z"
+  },
+  {
+    "timestamp": 1764351600.166615,
+    "seed_id": "1999-8::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-8::1999_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:40:00Z"
+  },
+  {
+    "timestamp": 1764351600.166731,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-8::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 608612191
+    },
+    "iso_time": "2025-11-28T17:40:00Z"
+  },
+  {
+    "timestamp": 1764351601.557759,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 5,
+        "weights": [
+          4,
+          1,
+          3,
+          4,
+          3
+        ],
+        "thresholds": [
+          "1/12",
+          "2/4",
+          "3/10",
+          "2/10",
+          "2/8"
+        ],
+        "r": 2
+      }
+    },
+    "iso_time": "2025-11-28T17:40:01Z"
+  },
+  {
+    "timestamp": 1764351602.688454,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1297
+    },
+    "iso_time": "2025-11-28T17:40:02Z"
+  },
+  {
+    "timestamp": 1764351602.688629,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n = 5, weights w = [4, 1, 3, 4, 3], and thresholds t = ['1/12', '2/4', '3/10', '2/10', '2/8']. Consider the (n−1)-di",
+      "correct_answer": "1297",
+      "seed_value": 608612191
+    },
+    "iso_time": "2025-11-28T17:40:02Z"
+  },
+  {
+    "timestamp": 1764351602.688693,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1297",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:40:02Z"
+  },
+  {
+    "timestamp": 1764351629.353535,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1297",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:40:29Z"
+  },
+  {
+    "timestamp": 1764351671.4500349,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1293",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:41:11Z"
+  },
+  {
+    "timestamp": 1764351702.932568,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1298",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:41:42Z"
+  },
+  {
+    "timestamp": 1764351737.268485,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1289",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:42:17Z"
+  },
+  {
+    "timestamp": 1764351774.105432,
+    "seed_id": "1999-8::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-8::1999_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:42:54Z"
+  },
+  {
+    "timestamp": 1764351774.105532,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-8::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 302561679
+    },
+    "iso_time": "2025-11-28T17:42:54Z"
+  },
+  {
+    "timestamp": 1764351775.306536,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 6,
+        "weights": [
+          4,
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "thresholds": [
+          "1/8",
+          "3/8",
+          "2/6",
+          "5/12",
+          "5/12",
+          "1/12"
+        ],
+        "r": 1
+      }
+    },
+    "iso_time": "2025-11-28T17:42:55Z"
+  },
+  {
+    "timestamp": 1764351776.3390772,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6575593
+    },
+    "iso_time": "2025-11-28T17:42:56Z"
+  },
+  {
+    "timestamp": 1764351776.339255,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n = 6, weights w = [4, 1, 1, 2, 1, 1], and thresholds t = ['1/8', '3/8', '2/6', '5/12', '5/12', '1/12']. Consider th",
+      "correct_answer": "6575593",
+      "seed_value": 302561679
+    },
+    "iso_time": "2025-11-28T17:42:56Z"
+  },
+  {
+    "timestamp": 1764351776.3393059,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6575587",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:42:56Z"
+  },
+  {
+    "timestamp": 1764351871.796671,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6575589",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:44:31Z"
+  },
+  {
+    "timestamp": 1764351941.916822,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6575597",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:45:41Z"
+  },
+  {
+    "timestamp": 1764352043.330672,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6575593",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:47:23Z"
+  },
+  {
+    "timestamp": 1764352108.337884,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6575593",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:48:28Z"
+  },
+  {
+    "timestamp": 1764352186.733155,
+    "seed_id": "1999-8::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-8::1999_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:49:46Z"
+  },
+  {
+    "timestamp": 1764352186.7332559,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-8::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 95288341
+    },
+    "iso_time": "2025-11-28T17:49:46Z"
+  },
+  {
+    "timestamp": 1764352187.8403661,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "weights": [
+          2,
+          4,
+          1,
+          4
+        ],
+        "thresholds": [
+          "5/12",
+          "1/6",
+          "1/2",
+          "1/5"
+        ],
+        "r": 1
+      }
+    },
+    "iso_time": "2025-11-28T17:49:47Z"
+  },
+  {
+    "timestamp": 1764352188.859989,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 881
+    },
+    "iso_time": "2025-11-28T17:49:48Z"
+  },
+  {
+    "timestamp": 1764352188.860142,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n = 4, weights w = [2, 4, 1, 4], and thresholds t = ['5/12', '1/6', '1/2', '1/5']. Consider the (n−1)-dimensional si",
+      "correct_answer": "881",
+      "seed_value": 95288341
+    },
+    "iso_time": "2025-11-28T17:49:48Z"
+  },
+  {
+    "timestamp": 1764352188.860208,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "883",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:49:48Z"
+  },
+  {
+    "timestamp": 1764352223.1389499,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "881",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:50:23Z"
+  },
+  {
+    "timestamp": 1764352252.234417,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "878",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:50:52Z"
+  },
+  {
+    "timestamp": 1764352284.105823,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "877",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:51:24Z"
+  },
+  {
+    "timestamp": 1764352322.9223108,
+    "seed_id": "1999-8::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "881",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:52:02Z"
+  },
+  {
+    "timestamp": 1764352356.6999838,
+    "seed_id": "1999-8::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-8::1999_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:52:36Z"
+  }
+]

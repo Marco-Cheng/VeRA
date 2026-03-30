@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764388884.258016,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "A container in the shape of a right circular cone is 12 inches tall and its base has a 5-inch radius. The liquid that is",
+      "answer": "52",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T04:01:24Z"
+  },
+  {
+    "timestamp": 1764388884.258108,
+    "seed_id": "2000-I-8::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T04:01:24Z"
+  },
+  {
+    "timestamp": 1764388884.2581902,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A container in the shape of a right circular cone is 12 inches tall and its base has a 5-inch radius. The liquid that is sealed inside is 9 inches deep when the cone is held with its point down and its base horizontal. When the liquid is held with its point up and its base horizontal, the height of the liquid is $m - n\\sqrt [3]{p},$ where $m,$ $n,$ and $p$ are positive integers and $p$ is not divisible by the cube of any prime number. Find $m + n + p$ .",
+      "answer": "52",
+      "example_id": "2000-I-8::2000"
+    },
+    "iso_time": "2025-11-29T04:01:24Z"
+  },
+  {
+    "timestamp": 1764388955.3830242,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-8::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1116845795
+    },
+    "iso_time": "2025-11-29T04:02:35Z"
+  },
+  {
+    "timestamp": 1764388956.497765,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "height": 16,
+        "big_radius": 11,
+        "small_radius": 3,
+        "down_depth": 5
+      }
+    },
+    "iso_time": "2025-11-29T04:02:36Z"
+  },
+  {
+    "timestamp": 1764388957.550072,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 758
+    },
+    "iso_time": "2025-11-29T04:02:37Z"
+  },
+  {
+    "timestamp": 1764388957.550236,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A sealed container is a right circular frustum of height 16, with lower base radius 11 and upper base radius 3 (11 > 3).",
+      "correct_answer": "758",
+      "seed_value": 1116845795
+    },
+    "iso_time": "2025-11-29T04:02:37Z"
+  },
+  {
+    "timestamp": 1764388957.550281,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "758",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T04:02:37Z"
+  },
+  {
+    "timestamp": 1764388996.479767,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "752",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:03:16Z"
+  },
+  {
+    "timestamp": 1764389027.916072,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "753",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:03:47Z"
+  },
+  {
+    "timestamp": 1764389071.134884,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "760",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:04:31Z"
+  },
+  {
+    "timestamp": 1764389114.344148,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "758",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T04:05:14Z"
+  },
+  {
+    "timestamp": 1764389157.044636,
+    "seed_id": "2000-I-8::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-8::2000_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T04:05:57Z"
+  },
+  {
+    "timestamp": 1764389157.044798,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-8::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 748670548
+    },
+    "iso_time": "2025-11-29T04:05:57Z"
+  },
+  {
+    "timestamp": 1764389158.340692,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "height": 18,
+        "big_radius": 14,
+        "small_radius": 11,
+        "down_depth": 9
+      }
+    },
+    "iso_time": "2025-11-29T04:05:58Z"
+  },
+  {
+    "timestamp": 1764389159.355711,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 617
+    },
+    "iso_time": "2025-11-29T04:05:59Z"
+  },
+  {
+    "timestamp": 1764389159.3558688,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A sealed container is a right circular frustum of height 18, with lower base radius 14 and upper base radius 11 (14 > 11",
+      "correct_answer": "617",
+      "seed_value": 748670548
+    },
+    "iso_time": "2025-11-29T04:05:59Z"
+  },
+  {
+    "timestamp": 1764389159.355917,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "615",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:05:59Z"
+  },
+  {
+    "timestamp": 1764389192.335395,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "617",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T04:06:32Z"
+  },
+  {
+    "timestamp": 1764389225.27723,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "617",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T04:07:05Z"
+  },
+  {
+    "timestamp": 1764389265.6963358,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "609",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:07:45Z"
+  },
+  {
+    "timestamp": 1764389308.78644,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "620",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:08:28Z"
+  },
+  {
+    "timestamp": 1764389349.24937,
+    "seed_id": "2000-I-8::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-8::2000_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T04:09:09Z"
+  },
+  {
+    "timestamp": 1764389349.2494879,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-8::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1056843112
+    },
+    "iso_time": "2025-11-29T04:09:09Z"
+  },
+  {
+    "timestamp": 1764389350.3469949,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "height": 24,
+        "big_radius": 11,
+        "small_radius": 4,
+        "down_depth": 15
+      }
+    },
+    "iso_time": "2025-11-29T04:09:10Z"
+  },
+  {
+    "timestamp": 1764389351.388907,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 905
+    },
+    "iso_time": "2025-11-29T04:09:11Z"
+  },
+  {
+    "timestamp": 1764389351.389063,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A sealed container is a right circular frustum of height 24, with lower base radius 11 and upper base radius 4 (11 > 4).",
+      "correct_answer": "905",
+      "seed_value": 1056843112
+    },
+    "iso_time": "2025-11-29T04:09:11Z"
+  },
+  {
+    "timestamp": 1764389351.3891041,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "905",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T04:09:11Z"
+  },
+  {
+    "timestamp": 1764389405.337467,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "907",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:10:05Z"
+  },
+  {
+    "timestamp": 1764389504.5498948,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "905",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T04:11:44Z"
+  },
+  {
+    "timestamp": 1764389597.700387,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "910",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:13:17Z"
+  },
+  {
+    "timestamp": 1764389665.874403,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "897",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:14:25Z"
+  },
+  {
+    "timestamp": 1764389747.972498,
+    "seed_id": "2000-I-8::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-8::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T04:15:47Z"
+  },
+  {
+    "timestamp": 1764389747.9726021,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-8::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1994407524
+    },
+    "iso_time": "2025-11-29T04:15:47Z"
+  },
+  {
+    "timestamp": 1764389749.13066,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "height": 10,
+        "big_radius": 19,
+        "small_radius": 2,
+        "down_depth": 4
+      }
+    },
+    "iso_time": "2025-11-29T04:15:49Z"
+  },
+  {
+    "timestamp": 1764389750.185345,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 892
+    },
+    "iso_time": "2025-11-29T04:15:50Z"
+  },
+  {
+    "timestamp": 1764389750.1854951,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A sealed container is a right circular frustum of height 10, with lower base radius 19 and upper base radius 2 (19 > 2).",
+      "correct_answer": "892",
+      "seed_value": 1994407524
+    },
+    "iso_time": "2025-11-29T04:15:50Z"
+  },
+  {
+    "timestamp": 1764389750.185535,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "892",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T04:15:50Z"
+  },
+  {
+    "timestamp": 1764389799.903094,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "900",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:16:39Z"
+  },
+  {
+    "timestamp": 1764389837.202497,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "899",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:17:17Z"
+  },
+  {
+    "timestamp": 1764389897.784786,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "892",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T04:18:17Z"
+  },
+  {
+    "timestamp": 1764390039.80387,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "889",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:20:39Z"
+  },
+  {
+    "timestamp": 1764390093.090931,
+    "seed_id": "2000-I-8::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-8::2000_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T04:21:33Z"
+  },
+  {
+    "timestamp": 1764390093.091038,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-8::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1130413636
+    },
+    "iso_time": "2025-11-29T04:21:33Z"
+  },
+  {
+    "timestamp": 1764390094.3626041,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "height": 28,
+        "big_radius": 14,
+        "small_radius": 5,
+        "down_depth": 18
+      }
+    },
+    "iso_time": "2025-11-29T04:21:34Z"
+  },
+  {
+    "timestamp": 1764390095.440777,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 914
+    },
+    "iso_time": "2025-11-29T04:21:35Z"
+  },
+  {
+    "timestamp": 1764390095.440937,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A sealed container is a right circular frustum of height 28, with lower base radius 14 and upper base radius 5 (14 > 5).",
+      "correct_answer": "914",
+      "seed_value": 1130413636
+    },
+    "iso_time": "2025-11-29T04:21:35Z"
+  },
+  {
+    "timestamp": 1764390095.440983,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "906",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:21:35Z"
+  },
+  {
+    "timestamp": 1764390176.5508008,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "907",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:22:56Z"
+  },
+  {
+    "timestamp": 1764390238.9911418,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "914",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T04:23:58Z"
+  },
+  {
+    "timestamp": 1764390285.473782,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "914",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T04:24:45Z"
+  },
+  {
+    "timestamp": 1764390344.172384,
+    "seed_id": "2000-I-8::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "921",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T04:25:44Z"
+  },
+  {
+    "timestamp": 1764390405.112055,
+    "seed_id": "2000-I-8::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-8::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T04:26:45Z"
+  }
+]

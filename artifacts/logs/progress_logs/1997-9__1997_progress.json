@@ -1,0 +1,846 @@
+[
+  {
+    "timestamp": 1764230457.198963,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1997,
+      "question_preview": "Given a nonnegative real number $x$ , let $\\langle x\\rangle$ denote the fractional part of $x$ ; that is, $\\langle x\\ran",
+      "answer": "233",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-27T08:00:57Z"
+  },
+  {
+    "timestamp": 1764230457.199064,
+    "seed_id": "1997-9::1997",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-27T08:00:57Z"
+  },
+  {
+    "timestamp": 1764230457.199125,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Given a nonnegative real number $x$ , let $\\langle x\\rangle$ denote the fractional part of $x$ ; that is, $\\langle x\\rangle=x-\\lfloor x\\rfloor$ , where $\\lfloor x\\rfloor$ denotes the greatest integer less than or equal to $x$ . Suppose that $a$ is positive, $\\langle a^{-1}\\rangle=\\langle a^2\\rangle$ , and $2<a^2<3$ . Find the value of $a^{12}-144a^{-1}$ .",
+      "answer": "233",
+      "example_id": "1997-9::1997"
+    },
+    "iso_time": "2025-11-27T08:00:57Z"
+  },
+  {
+    "timestamp": 1764230621.91224,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-9::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1476131180
+    },
+    "iso_time": "2025-11-27T08:03:41Z"
+  },
+  {
+    "timestamp": 1764230622.8806558,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "exp_r": 2,
+        "floor_m": 4,
+        "power_n": 17,
+        "coef_u": 87280,
+        "coef_v": 29953
+      }
+    },
+    "iso_time": "2025-11-27T08:03:42Z"
+  },
+  {
+    "timestamp": 1764230623.67589,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 140056
+    },
+    "iso_time": "2025-11-27T08:03:43Z"
+  },
+  {
+    "timestamp": 1764230623.676075,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let <x> denote the fractional part of x; that is, <x> = x - floor(x). In a math contest, a positive real number a satisf",
+      "correct_answer": "140056",
+      "seed_value": 1476131180
+    },
+    "iso_time": "2025-11-27T08:03:43Z"
+  },
+  {
+    "timestamp": 1764230623.67612,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "140051",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:03:43Z"
+  },
+  {
+    "timestamp": 1764230675.733921,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "140056",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:04:35Z"
+  },
+  {
+    "timestamp": 1764230700.223382,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "140061",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:05:00Z"
+  },
+  {
+    "timestamp": 1764230720.0160909,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "140054",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:05:20Z"
+  },
+  {
+    "timestamp": 1764230790.519691,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "140056",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:06:30Z"
+  },
+  {
+    "timestamp": 1764230816.1185129,
+    "seed_id": "1997-9::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-9::1997_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T08:06:56Z"
+  },
+  {
+    "timestamp": 1764230816.118724,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-9::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2040483238
+    },
+    "iso_time": "2025-11-27T08:06:56Z"
+  },
+  {
+    "timestamp": 1764230816.907752,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "exp_r": 2,
+        "floor_m": 3,
+        "power_n": 13,
+        "coef_u": 1000,
+        "coef_v": 417
+      }
+    },
+    "iso_time": "2025-11-27T08:06:56Z"
+  },
+  {
+    "timestamp": 1764230817.658442,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1548
+    },
+    "iso_time": "2025-11-27T08:06:57Z"
+  },
+  {
+    "timestamp": 1764230817.658624,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let <x> denote the fractional part of x; that is, <x> = x - floor(x). In a math contest, a positive real number a satisf",
+      "correct_answer": "1548",
+      "seed_value": 2040483238
+    },
+    "iso_time": "2025-11-27T08:06:57Z"
+  },
+  {
+    "timestamp": 1764230817.6586728,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1542",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:06:57Z"
+  },
+  {
+    "timestamp": 1764230856.9786491,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1546",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:07:36Z"
+  },
+  {
+    "timestamp": 1764230890.131935,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1550",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:08:10Z"
+  },
+  {
+    "timestamp": 1764230922.780653,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1548",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:08:42Z"
+  },
+  {
+    "timestamp": 1764230942.994478,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1548",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:09:02Z"
+  },
+  {
+    "timestamp": 1764230962.960503,
+    "seed_id": "1997-9::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-9::1997_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T08:09:22Z"
+  },
+  {
+    "timestamp": 1764230962.960633,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-9::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 2030720852
+    },
+    "iso_time": "2025-11-27T08:09:22Z"
+  },
+  {
+    "timestamp": 1764230963.912865,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "exp_r": 2,
+        "floor_m": 5,
+        "power_n": 17,
+        "coef_u": 456625,
+        "coef_v": 111876
+      }
+    },
+    "iso_time": "2025-11-27T08:09:23Z"
+  },
+  {
+    "timestamp": 1764230964.6848252,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 646905
+    },
+    "iso_time": "2025-11-27T08:09:24Z"
+  },
+  {
+    "timestamp": 1764230964.685015,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let <x> denote the fractional part of x; that is, <x> = x - floor(x). In a math contest, a positive real number a satisf",
+      "correct_answer": "646905",
+      "seed_value": 2030720852
+    },
+    "iso_time": "2025-11-27T08:09:24Z"
+  },
+  {
+    "timestamp": 1764230964.685067,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "646905",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:09:24Z"
+  },
+  {
+    "timestamp": 1764230990.17118,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "646905",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:09:50Z"
+  },
+  {
+    "timestamp": 1764231014.981197,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "646913",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:10:14Z"
+  },
+  {
+    "timestamp": 1764231054.8636422,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "646899",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:10:54Z"
+  },
+  {
+    "timestamp": 1764231077.666881,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "646906",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:11:17Z"
+  },
+  {
+    "timestamp": 1764231104.276077,
+    "seed_id": "1997-9::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-9::1997_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T08:11:44Z"
+  },
+  {
+    "timestamp": 1764231104.276277,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-9::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2127759716
+    },
+    "iso_time": "2025-11-27T08:11:44Z"
+  },
+  {
+    "timestamp": 1764231105.0675452,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "exp_r": 3,
+        "floor_m": 4,
+        "power_n": 19,
+        "coef_u": 4256,
+        "coef_v": 1281
+      }
+    },
+    "iso_time": "2025-11-27T08:11:45Z"
+  },
+  {
+    "timestamp": 1764231105.822494,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6164
+    },
+    "iso_time": "2025-11-27T08:11:45Z"
+  },
+  {
+    "timestamp": 1764231105.822678,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let <x> denote the fractional part of x; that is, <x> = x - floor(x). In a math contest, a positive real number a satisf",
+      "correct_answer": "6164",
+      "seed_value": 2127759716
+    },
+    "iso_time": "2025-11-27T08:11:45Z"
+  },
+  {
+    "timestamp": 1764231105.822721,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6164",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:11:45Z"
+  },
+  {
+    "timestamp": 1764231188.042177,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6164",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:13:08Z"
+  },
+  {
+    "timestamp": 1764231228.3924859,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6170",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:13:48Z"
+  },
+  {
+    "timestamp": 1764231320.839031,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6172",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:15:20Z"
+  },
+  {
+    "timestamp": 1764231413.11632,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6166",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:16:53Z"
+  },
+  {
+    "timestamp": 1764231705.468662,
+    "seed_id": "1997-9::1997",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-27T08:21:45Z"
+  },
+  {
+    "timestamp": 1764231705.4688141,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-9::1997_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2065622709
+    },
+    "iso_time": "2025-11-27T08:21:45Z"
+  },
+  {
+    "timestamp": 1764231706.421162,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "exp_r": 2,
+        "floor_m": 4,
+        "power_n": 16,
+        "coef_u": 29953,
+        "coef_v": 20244
+      }
+    },
+    "iso_time": "2025-11-27T08:21:46Z"
+  },
+  {
+    "timestamp": 1764231707.216539,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 87280
+    },
+    "iso_time": "2025-11-27T08:21:47Z"
+  },
+  {
+    "timestamp": 1764231707.216699,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let <x> denote the fractional part of x; that is, <x> = x - floor(x). In a math contest, a positive real number a satisf",
+      "correct_answer": "87280",
+      "seed_value": 2065622709
+    },
+    "iso_time": "2025-11-27T08:21:47Z"
+  },
+  {
+    "timestamp": 1764231707.216745,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "87280",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:21:47Z"
+  },
+  {
+    "timestamp": 1764231745.086206,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "87282",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:22:25Z"
+  },
+  {
+    "timestamp": 1764231775.7111738,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "87280",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:22:55Z"
+  },
+  {
+    "timestamp": 1764231794.151453,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "87274",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:23:14Z"
+  },
+  {
+    "timestamp": 1764231832.3020759,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "87276",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:23:52Z"
+  },
+  {
+    "timestamp": 1764231858.316633,
+    "seed_id": "1997-9::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-9::1997_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T08:24:18Z"
+  },
+  {
+    "timestamp": 1764231858.316687,
+    "seed_id": "1997-9::1997",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-27T08:24:18Z"
+  },
+  {
+    "timestamp": 1764231858.31672,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 4 (successes=3).",
+      "question": "Given a nonnegative real number $x$ , let $\\langle x\\rangle$ denote the fractional part of $x$ ; that is, $\\langle x\\rangle=x-\\lfloor x\\rfloor$ , where $\\lfloor x\\rfloor$ denotes the greatest integer less than or equal to $x$ . Suppose that $a$ is positive, $\\langle a^{-1}\\rangle=\\langle a^2\\rangle$ , and $2<a^2<3$ . Find the value of $a^{12}-144a^{-1}$ .",
+      "answer": "233",
+      "example_id": "1997-9::1997"
+    },
+    "iso_time": "2025-11-27T08:24:18Z"
+  },
+  {
+    "timestamp": 1764232233.550008,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1997-9::1997_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 2004227461
+    },
+    "iso_time": "2025-11-27T08:30:33Z"
+  },
+  {
+    "timestamp": 1764232234.644396,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "u": 4,
+        "m": 5
+      }
+    },
+    "iso_time": "2025-11-27T08:30:34Z"
+  },
+  {
+    "timestamp": 1764232235.460329,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1025
+    },
+    "iso_time": "2025-11-27T08:30:35Z"
+  },
+  {
+    "timestamp": 1764232235.4604979,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n=4, u=4, and m=5, with n>=2, u>=2, m>=3. For a positive real number a, let ⟨x⟩ denote the fractional part of x. Sup",
+      "correct_answer": "1025",
+      "seed_value": 2004227461
+    },
+    "iso_time": "2025-11-27T08:30:35Z"
+  },
+  {
+    "timestamp": 1764232235.4605591,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1025",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:30:35Z"
+  },
+  {
+    "timestamp": 1764232262.1215308,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1025",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:31:02Z"
+  },
+  {
+    "timestamp": 1764232276.291722,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1021",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:31:16Z"
+  },
+  {
+    "timestamp": 1764232304.922341,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1026",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:31:44Z"
+  },
+  {
+    "timestamp": 1764232319.279676,
+    "seed_id": "1997-9::1997",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1020",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:31:59Z"
+  },
+  {
+    "timestamp": 1764232351.4086301,
+    "seed_id": "1997-9::1997",
+    "stage": "variant_success",
+    "message": "Accepted variant 1997-9::1997_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T08:32:31Z"
+  }
+]

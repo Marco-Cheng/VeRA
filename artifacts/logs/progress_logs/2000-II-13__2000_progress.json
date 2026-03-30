@@ -1,0 +1,769 @@
+[
+  {
+    "timestamp": 1764401385.919657,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "The equation $2000x^6+100x^5+10x^3+x-2=0$ has exactly two real roots, one of which is $\\frac{m+\\sqrt{n}}r$ , where $m$ ,",
+      "answer": "200",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T07:29:45Z"
+  },
+  {
+    "timestamp": 1764401385.9197068,
+    "seed_id": "2000-II-13::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T07:29:45Z"
+  },
+  {
+    "timestamp": 1764401385.919729,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The equation $2000x^6+100x^5+10x^3+x-2=0$ has exactly two real roots, one of which is $\\frac{m+\\sqrt{n}}r$ , where $m$ , $n$ and $r$ are integers, $m$ and $r$ are relatively prime, and $r>0$ . Find $m+n+r$ .",
+      "answer": "200",
+      "example_id": "2000-II-13::2000"
+    },
+    "iso_time": "2025-11-29T07:29:45Z"
+  },
+  {
+    "timestamp": 1764401489.9406831,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-13::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 134342331
+    },
+    "iso_time": "2025-11-29T07:31:29Z"
+  },
+  {
+    "timestamp": 1764401490.97349,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c6": 2,
+        "c5": 42,
+        "c4": 360,
+        "c3": 1610,
+        "c2": 3706,
+        "c1": 3304,
+        "c0": -1224,
+        "a": 1,
+        "b": 7,
+        "c": 11,
+        "p": 2,
+        "A": -7,
+        "B": -78,
+        "r0": -7,
+        "k": 2,
+        "t1": 13,
+        "t2": -6,
+        "n": 57,
+        "m": -7,
+        "r": 2
+      }
+    },
+    "iso_time": "2025-11-29T07:31:30Z"
+  },
+  {
+    "timestamp": 1764401492.009912,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 52
+    },
+    "iso_time": "2025-11-29T07:31:32Z"
+  },
+  {
+    "timestamp": 1764401492.010269,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the degree-6 equation 2x^6 + 42x^5 + 360x^4 + 1610x^3 + 3706x^2 + 3304x + -1224 = 0. It is known that this equa",
+      "correct_answer": "52",
+      "seed_value": 134342331
+    },
+    "iso_time": "2025-11-29T07:31:32Z"
+  },
+  {
+    "timestamp": 1764401492.010331,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "52",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T07:31:32Z"
+  },
+  {
+    "timestamp": 1764401598.672649,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "54",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T07:33:18Z"
+  },
+  {
+    "timestamp": 1764401635.135782,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "50",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T07:33:55Z"
+  },
+  {
+    "timestamp": 1764401721.914047,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "56",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T07:35:21Z"
+  },
+  {
+    "timestamp": 1764401914.344158,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "52",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T07:38:34Z"
+  },
+  {
+    "timestamp": 1764402004.890906,
+    "seed_id": "2000-II-13::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-13::2000_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T07:40:04Z"
+  },
+  {
+    "timestamp": 1764402004.8910348,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-13::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 327457833
+    },
+    "iso_time": "2025-11-29T07:40:04Z"
+  },
+  {
+    "timestamp": 1764402006.195524,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c6": 32,
+        "c5": -336,
+        "c4": 1400,
+        "c3": -2940,
+        "c2": 2704,
+        "c1": 140,
+        "c0": -1800,
+        "a": 2,
+        "b": -7,
+        "c": 3,
+        "p": 4,
+        "A": -1,
+        "B": -56,
+        "r0": -6,
+        "k": 5,
+        "t1": 8,
+        "t2": -7,
+        "n": 89,
+        "m": 7,
+        "r": 4
+      }
+    },
+    "iso_time": "2025-11-29T07:40:06Z"
+  },
+  {
+    "timestamp": 1764402007.191336,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 100
+    },
+    "iso_time": "2025-11-29T07:40:07Z"
+  },
+  {
+    "timestamp": 1764402007.191495,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the degree-6 equation 32x^6 + -336x^5 + 1400x^4 + -2940x^3 + 2704x^2 + 140x + -1800 = 0. It is known that this ",
+      "correct_answer": "100",
+      "seed_value": 327457833
+    },
+    "iso_time": "2025-11-29T07:40:07Z"
+  },
+  {
+    "timestamp": 1764402007.19154,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "101",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T07:40:07Z"
+  },
+  {
+    "timestamp": 1764402122.508524,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "102",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T07:42:02Z"
+  },
+  {
+    "timestamp": 1764402284.541425,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "93",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T07:44:44Z"
+  },
+  {
+    "timestamp": 1764402529.748296,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T07:48:49Z"
+  },
+  {
+    "timestamp": 1764402664.539383,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T07:51:04Z"
+  },
+  {
+    "timestamp": 1764402730.9648561,
+    "seed_id": "2000-II-13::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-13::2000_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T07:52:10Z"
+  },
+  {
+    "timestamp": 1764402730.964948,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-13::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 2038402183
+    },
+    "iso_time": "2025-11-29T07:52:10Z"
+  },
+  {
+    "timestamp": 1764402732.063814,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c6": 1,
+        "c5": -33,
+        "c4": 430,
+        "c3": -2805,
+        "c2": 9157,
+        "c1": -11550,
+        "c0": -2376,
+        "a": 1,
+        "b": -11,
+        "c": 3,
+        "p": 1,
+        "A": 25,
+        "B": -150,
+        "r0": -33,
+        "k": 2,
+        "t1": 5,
+        "t2": -30,
+        "n": 129,
+        "m": 11,
+        "r": 2
+      }
+    },
+    "iso_time": "2025-11-29T07:52:12Z"
+  },
+  {
+    "timestamp": 1764402733.085063,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 142
+    },
+    "iso_time": "2025-11-29T07:52:13Z"
+  },
+  {
+    "timestamp": 1764402733.085215,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the degree-6 equation 1x^6 + -33x^5 + 430x^4 + -2805x^3 + 9157x^2 + -11550x + -2376 = 0. It is known that this ",
+      "correct_answer": "142",
+      "seed_value": 2038402183
+    },
+    "iso_time": "2025-11-29T07:52:13Z"
+  },
+  {
+    "timestamp": 1764402733.085273,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "133",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T07:52:13Z"
+  },
+  {
+    "timestamp": 1764402830.67434,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "142",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T07:53:50Z"
+  },
+  {
+    "timestamp": 1764402884.391755,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "142",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T07:54:44Z"
+  },
+  {
+    "timestamp": 1764402919.7128901,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "137",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T07:55:19Z"
+  },
+  {
+    "timestamp": 1764402966.198091,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "141",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T07:56:06Z"
+  },
+  {
+    "timestamp": 1764403018.280558,
+    "seed_id": "2000-II-13::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-13::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T07:56:58Z"
+  },
+  {
+    "timestamp": 1764403018.280662,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-13::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 101884218
+    },
+    "iso_time": "2025-11-29T07:56:58Z"
+  },
+  {
+    "timestamp": 1764403019.511181,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c6": 27,
+        "c5": 351,
+        "c4": 1818,
+        "c3": 4771,
+        "c2": 6285,
+        "c1": 3068,
+        "c0": -612,
+        "a": 3,
+        "b": 13,
+        "c": 9,
+        "p": 1,
+        "A": -2,
+        "B": -99,
+        "r0": -8,
+        "k": 2,
+        "t1": 11,
+        "t2": -9,
+        "n": 193,
+        "m": -13,
+        "r": 6
+      }
+    },
+    "iso_time": "2025-11-29T07:56:59Z"
+  },
+  {
+    "timestamp": 1764403020.602818,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 186
+    },
+    "iso_time": "2025-11-29T07:57:00Z"
+  },
+  {
+    "timestamp": 1764403020.602975,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the degree-6 equation 27x^6 + 351x^5 + 1818x^4 + 4771x^3 + 6285x^2 + 3068x + -612 = 0. It is known that this eq",
+      "correct_answer": "186",
+      "seed_value": 101884218
+    },
+    "iso_time": "2025-11-29T07:57:00Z"
+  },
+  {
+    "timestamp": 1764403020.603019,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "179",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T07:57:00Z"
+  },
+  {
+    "timestamp": 1764403120.1014988,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "186",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T07:58:40Z"
+  },
+  {
+    "timestamp": 1764403215.5597398,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "192",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T08:00:15Z"
+  },
+  {
+    "timestamp": 1764403282.2581189,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "190",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T08:01:22Z"
+  },
+  {
+    "timestamp": 1764403352.190439,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "186",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T08:02:32Z"
+  },
+  {
+    "timestamp": 1764403459.196286,
+    "seed_id": "2000-II-13::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-13::2000_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T08:04:19Z"
+  },
+  {
+    "timestamp": 1764403459.196408,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-13::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 607944538
+    },
+    "iso_time": "2025-11-29T08:04:19Z"
+  },
+  {
+    "timestamp": 1764403460.70343,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "c6": 4,
+        "c5": 132,
+        "c4": 1696,
+        "c3": 10692,
+        "c2": 32848,
+        "c1": 36564,
+        "c0": -12276,
+        "a": 1,
+        "b": 11,
+        "c": 15,
+        "p": 4,
+        "A": -2,
+        "B": -288,
+        "r0": -18,
+        "k": 3,
+        "t1": 18,
+        "t2": -16,
+        "n": 133,
+        "m": -11,
+        "r": 2
+      }
+    },
+    "iso_time": "2025-11-29T08:04:20Z"
+  },
+  {
+    "timestamp": 1764403461.846176,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 124
+    },
+    "iso_time": "2025-11-29T08:04:21Z"
+  },
+  {
+    "timestamp": 1764403461.8463418,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the degree-6 equation 4x^6 + 132x^5 + 1696x^4 + 10692x^3 + 32848x^2 + 36564x + -12276 = 0. It is known that thi",
+      "correct_answer": "124",
+      "seed_value": 607944538
+    },
+    "iso_time": "2025-11-29T08:04:21Z"
+  },
+  {
+    "timestamp": 1764403461.846385,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "133",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T08:04:21Z"
+  },
+  {
+    "timestamp": 1764403583.198897,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "124",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T08:06:23Z"
+  },
+  {
+    "timestamp": 1764403664.3098829,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "125",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T08:07:44Z"
+  },
+  {
+    "timestamp": 1764403719.0561259,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "124",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T08:08:39Z"
+  },
+  {
+    "timestamp": 1764403779.6365912,
+    "seed_id": "2000-II-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "115",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T08:09:39Z"
+  },
+  {
+    "timestamp": 1764403828.357177,
+    "seed_id": "2000-II-13::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-13::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T08:10:28Z"
+  }
+]

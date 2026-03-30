@@ -1,0 +1,1098 @@
+[
+  {
+    "timestamp": 1761864876.989737,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2024,
+      "question_preview": "Find the number of ways to place a digit in each cell of a 2x3 grid so that the sum of the two numbers formed by reading",
+      "answer": "45",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-10-30T22:54:36Z"
+  },
+  {
+    "timestamp": 1761864876.9897568,
+    "seed_id": "2024-II-3::2024",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-10-30T22:54:36Z"
+  },
+  {
+    "timestamp": 1761864876.9897668,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find the number of ways to place a digit in each cell of a 2x3 grid so that the sum of the two numbers formed by reading left to right is $999$ , and the sum of the three numbers formed by reading top to bottom is $99$ . The grid below is an example of such an arrangement because $8+991=999$ and $9+9+81=99$ . \\[\\begin{array}{|c|c|c|} \\hline 0 & 0 & 8 \\\\ \\hline 9 & 9 & 1 \\\\ \\hline \\end{array}\\]",
+      "answer": "45",
+      "example_id": "2024-II-3::2024"
+    },
+    "iso_time": "2025-10-30T22:54:36Z"
+  },
+  {
+    "timestamp": 1761865009.880691,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-3::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1492777118
+    },
+    "iso_time": "2025-10-30T22:56:49Z"
+  },
+  {
+    "timestamp": 1761865010.787164,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 5,
+        "row_target": 98880,
+        "col_target": 249
+      }
+    },
+    "iso_time": "2025-10-30T22:56:50Z"
+  },
+  {
+    "timestamp": 1761865011.6637309,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5678
+    },
+    "iso_time": "2025-10-30T22:56:51Z"
+  },
+  {
+    "timestamp": 1761865011.663844,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You must place a single decimal digit (0–9) into each cell of a 2x5 grid. Interpreting digits in each row as a base-10 n",
+      "correct_answer": "5678",
+      "seed_value": 1492777118
+    },
+    "iso_time": "2025-10-30T22:56:51Z"
+  },
+  {
+    "timestamp": 1761865011.6638951,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5673",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:56:51Z"
+  },
+  {
+    "timestamp": 1761865147.0390022,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5675",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T22:59:07Z"
+  },
+  {
+    "timestamp": 1761865713.3719418,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5678",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T23:08:33Z"
+  },
+  {
+    "timestamp": 1761865918.126944,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5677",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T23:11:58Z"
+  },
+  {
+    "timestamp": 1761866028.609267,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5678",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T23:13:48Z"
+  },
+  {
+    "timestamp": 1761866322.248277,
+    "seed_id": "2024-II-3::2024",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-10-30T23:18:42Z"
+  },
+  {
+    "timestamp": 1761866322.248503,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-3::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1320878644
+    },
+    "iso_time": "2025-10-30T23:18:42Z"
+  },
+  {
+    "timestamp": 1761866323.174376,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 6,
+        "row_target": 900842,
+        "col_target": 338
+      }
+    },
+    "iso_time": "2025-10-30T23:18:43Z"
+  },
+  {
+    "timestamp": 1761866324.067658,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 37846
+    },
+    "iso_time": "2025-10-30T23:18:44Z"
+  },
+  {
+    "timestamp": 1761866324.067782,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You must place a single decimal digit (0–9) into each cell of a 2x6 grid. Interpreting digits in each row as a base-10 n",
+      "correct_answer": "37846",
+      "seed_value": 1320878644
+    },
+    "iso_time": "2025-10-30T23:18:44Z"
+  },
+  {
+    "timestamp": 1761866324.067826,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "37847",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T23:18:44Z"
+  },
+  {
+    "timestamp": 1761867469.475927,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "37851",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T23:37:49Z"
+  },
+  {
+    "timestamp": 1761867698.755074,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "37846",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T23:41:38Z"
+  },
+  {
+    "timestamp": 1761868136.52129,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "37846",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T23:48:56Z"
+  },
+  {
+    "timestamp": 1761868732.3067892,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "37855",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T23:58:52Z"
+  },
+  {
+    "timestamp": 1761869679.377249,
+    "seed_id": "2024-II-3::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-3::2024_prompt01-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-10-31T00:14:39Z"
+  },
+  {
+    "timestamp": 1761869679.377432,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-3::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 2096067860
+    },
+    "iso_time": "2025-10-31T00:14:39Z"
+  },
+  {
+    "timestamp": 1761869680.3105621,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 4,
+        "row_target": 8090,
+        "col_target": 125
+      }
+    },
+    "iso_time": "2025-10-31T00:14:40Z"
+  },
+  {
+    "timestamp": 1761869681.196118,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 283
+    },
+    "iso_time": "2025-10-31T00:14:41Z"
+  },
+  {
+    "timestamp": 1761869681.196257,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You must place a single decimal digit (0–9) into each cell of a 2x4 grid. Interpreting digits in each row as a base-10 n",
+      "correct_answer": "283",
+      "seed_value": 2096067860
+    },
+    "iso_time": "2025-10-31T00:14:41Z"
+  },
+  {
+    "timestamp": 1761869681.1963031,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "289",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T00:14:41Z"
+  },
+  {
+    "timestamp": 1761869753.9092171,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "283",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T00:15:53Z"
+  },
+  {
+    "timestamp": 1761869835.9576662,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "287",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T00:17:15Z"
+  },
+  {
+    "timestamp": 1761869995.191086,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "283",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T00:19:55Z"
+  },
+  {
+    "timestamp": 1761870159.00322,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "286",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T00:22:39Z"
+  },
+  {
+    "timestamp": 1761870220.615338,
+    "seed_id": "2024-II-3::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-3::2024_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T00:23:40Z"
+  },
+  {
+    "timestamp": 1761870220.6154938,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-3::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 854816155
+    },
+    "iso_time": "2025-10-31T00:23:40Z"
+  },
+  {
+    "timestamp": 1761870221.521965,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 6,
+        "row_target": 947664,
+        "col_target": 396
+      }
+    },
+    "iso_time": "2025-10-31T00:23:41Z"
+  },
+  {
+    "timestamp": 1761870222.412189,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17116
+    },
+    "iso_time": "2025-10-31T00:23:42Z"
+  },
+  {
+    "timestamp": 1761870222.412318,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You must place a single decimal digit (0–9) into each cell of a 2x6 grid. Interpreting digits in each row as a base-10 n",
+      "correct_answer": "17116",
+      "seed_value": 854816155
+    },
+    "iso_time": "2025-10-31T00:23:42Z"
+  },
+  {
+    "timestamp": 1761870222.41236,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "17112",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T00:23:42Z"
+  },
+  {
+    "timestamp": 1761870488.9589021,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "17114",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T00:28:08Z"
+  },
+  {
+    "timestamp": 1761870866.8592389,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "17116",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T00:34:26Z"
+  },
+  {
+    "timestamp": 1761871162.865109,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "17116",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T00:39:22Z"
+  },
+  {
+    "timestamp": 1761871378.8839219,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17117",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T00:42:58Z"
+  },
+  {
+    "timestamp": 1761871577.75041,
+    "seed_id": "2024-II-3::2024",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-10-31T00:46:17Z"
+  },
+  {
+    "timestamp": 1761871577.750636,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-3::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 598804233
+    },
+    "iso_time": "2025-10-31T00:46:17Z"
+  },
+  {
+    "timestamp": 1761871578.6689222,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 6,
+        "row_target": 71876,
+        "col_target": 245
+      }
+    },
+    "iso_time": "2025-10-31T00:46:18Z"
+  },
+  {
+    "timestamp": 1761871579.567175,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4050
+    },
+    "iso_time": "2025-10-31T00:46:19Z"
+  },
+  {
+    "timestamp": 1761871579.5673048,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You must place a single decimal digit (0–9) into each cell of a 2x6 grid. Interpreting digits in each row as a base-10 n",
+      "correct_answer": "4050",
+      "seed_value": 598804233
+    },
+    "iso_time": "2025-10-31T00:46:19Z"
+  },
+  {
+    "timestamp": 1761871579.567349,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4050",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T00:46:19Z"
+  },
+  {
+    "timestamp": 1761871853.854584,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4057",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T00:50:53Z"
+  },
+  {
+    "timestamp": 1761872112.10994,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4050",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T00:55:12Z"
+  },
+  {
+    "timestamp": 1761872297.540822,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4052",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T00:58:17Z"
+  },
+  {
+    "timestamp": 1761872532.558617,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4056",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T01:02:12Z"
+  },
+  {
+    "timestamp": 1761872985.169576,
+    "seed_id": "2024-II-3::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-3::2024_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-10-31T01:09:45Z"
+  },
+  {
+    "timestamp": 1761872985.1697311,
+    "seed_id": "2024-II-3::2024",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-10-31T01:09:45Z"
+  },
+  {
+    "timestamp": 1761872985.169848,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 4 (successes=3).",
+      "question": "Find the number of ways to place a digit in each cell of a 2x3 grid so that the sum of the two numbers formed by reading left to right is $999$ , and the sum of the three numbers formed by reading top to bottom is $99$ . The grid below is an example of such an arrangement because $8+991=999$ and $9+9+81=99$ . \\[\\begin{array}{|c|c|c|} \\hline 0 & 0 & 8 \\\\ \\hline 9 & 9 & 1 \\\\ \\hline \\end{array}\\]",
+      "answer": "45",
+      "example_id": "2024-II-3::2024"
+    },
+    "iso_time": "2025-10-31T01:09:45Z"
+  },
+  {
+    "timestamp": 1761873109.240051,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-3::2024_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1193481518
+    },
+    "iso_time": "2025-10-31T01:11:49Z"
+  },
+  {
+    "timestamp": 1761873110.166673,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_cols": 3,
+        "row_target": 450,
+        "col_target": 117,
+        "carries_required": 1,
+        "top_sum": 11
+      }
+    },
+    "iso_time": "2025-10-31T01:11:50Z"
+  },
+  {
+    "timestamp": 1761873111.05324,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 15
+    },
+    "iso_time": "2025-10-31T01:11:51Z"
+  },
+  {
+    "timestamp": 1761873111.0533671,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You place a single base-10 digit (0–9) in each cell of a 2×3 grid. Reading each row left-to-right forms two integers who",
+      "correct_answer": "15",
+      "seed_value": 1193481518
+    },
+    "iso_time": "2025-10-31T01:11:51Z"
+  },
+  {
+    "timestamp": 1761873111.05341,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T01:11:51Z"
+  },
+  {
+    "timestamp": 1761873174.512516,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T01:12:54Z"
+  },
+  {
+    "timestamp": 1761873306.0956118,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "24",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T01:15:06Z"
+  },
+  {
+    "timestamp": 1761873391.57624,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T01:16:31Z"
+  },
+  {
+    "timestamp": 1761873571.509598,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T01:19:31Z"
+  },
+  {
+    "timestamp": 1761873639.9476109,
+    "seed_id": "2024-II-3::2024",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-10-31T01:20:39Z"
+  },
+  {
+    "timestamp": 1761873639.947836,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-3::2024_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1273483419
+    },
+    "iso_time": "2025-10-31T01:20:39Z"
+  },
+  {
+    "timestamp": 1761873640.83518,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_cols": 3,
+        "row_target": 454,
+        "col_target": 139,
+        "carries_required": 2,
+        "top_sum": 12
+      }
+    },
+    "iso_time": "2025-10-31T01:20:40Z"
+  },
+  {
+    "timestamp": 1761873641.737281,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3
+    },
+    "iso_time": "2025-10-31T01:20:41Z"
+  },
+  {
+    "timestamp": 1761873641.73741,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You place a single base-10 digit (0–9) in each cell of a 2×3 grid. Reading each row left-to-right forms two integers who",
+      "correct_answer": "3",
+      "seed_value": 1273483419
+    },
+    "iso_time": "2025-10-31T01:20:41Z"
+  },
+  {
+    "timestamp": 1761873641.737456,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T01:20:41Z"
+  },
+  {
+    "timestamp": 1761873692.681518,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T01:21:32Z"
+  },
+  {
+    "timestamp": 1761873745.623702,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T01:22:25Z"
+  },
+  {
+    "timestamp": 1761873777.635027,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T01:22:57Z"
+  },
+  {
+    "timestamp": 1761873808.702518,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T01:23:28Z"
+  },
+  {
+    "timestamp": 1761873853.607221,
+    "seed_id": "2024-II-3::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-3::2024_prompt02-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T01:24:13Z"
+  },
+  {
+    "timestamp": 1761873853.60738,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-3::2024_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1640869413
+    },
+    "iso_time": "2025-10-31T01:24:13Z"
+  },
+  {
+    "timestamp": 1761873854.4999738,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_cols": 3,
+        "row_target": 536,
+        "col_target": 113,
+        "carries_required": 1,
+        "top_sum": 10
+      }
+    },
+    "iso_time": "2025-10-31T01:24:14Z"
+  },
+  {
+    "timestamp": 1761873855.393258,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 21
+    },
+    "iso_time": "2025-10-31T01:24:15Z"
+  },
+  {
+    "timestamp": 1761873855.3933902,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "You place a single base-10 digit (0–9) in each cell of a 2×3 grid. Reading each row left-to-right forms two integers who",
+      "correct_answer": "21",
+      "seed_value": 1640869413
+    },
+    "iso_time": "2025-10-31T01:24:15Z"
+  },
+  {
+    "timestamp": 1761873855.393449,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T01:24:15Z"
+  },
+  {
+    "timestamp": 1761873938.875912,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "21",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T01:25:38Z"
+  },
+  {
+    "timestamp": 1761873992.308605,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "28",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T01:26:32Z"
+  },
+  {
+    "timestamp": 1761874060.0288918,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "21",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T01:27:40Z"
+  },
+  {
+    "timestamp": 1761874178.0638819,
+    "seed_id": "2024-II-3::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T01:29:38Z"
+  },
+  {
+    "timestamp": 1761874304.53404,
+    "seed_id": "2024-II-3::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-3::2024_prompt02-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-10-31T01:31:44Z"
+  }
+]

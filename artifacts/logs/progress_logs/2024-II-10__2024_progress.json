@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1761694394.91854,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2024,
+      "question_preview": "Let $\\triangle$ $ABC$ have incenter $I$ and circumcenter $O$ with $\\overline{IA} \\perp \\overline{OI}$ , circumradius $13",
+      "answer": "468",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-10-28T23:33:14Z"
+  },
+  {
+    "timestamp": 1761694394.91859,
+    "seed_id": "2024-II-10::2024",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-10-28T23:33:14Z"
+  },
+  {
+    "timestamp": 1761694394.9186041,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $\\triangle$ $ABC$ have incenter $I$ and circumcenter $O$ with $\\overline{IA} \\perp \\overline{OI}$ , circumradius $13$ , and inradius $6$ . Find $AB \\cdot AC$ .",
+      "answer": "468",
+      "example_id": "2024-II-10::2024"
+    },
+    "iso_time": "2025-10-28T23:33:14Z"
+  },
+  {
+    "timestamp": 1761694521.406158,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-10::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 674374691
+    },
+    "iso_time": "2025-10-28T23:35:21Z"
+  },
+  {
+    "timestamp": 1761694522.525443,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "circumradius": 11,
+        "inradius": 3,
+        "theta_deg": 45
+      }
+    },
+    "iso_time": "2025-10-28T23:35:22Z"
+  },
+  {
+    "timestamp": 1761694523.346812,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 354.41498903022176
+    },
+    "iso_time": "2025-10-28T23:35:23Z"
+  },
+  {
+    "timestamp": 1761694523.346943,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle ABC have incenter I and circumcenter O. The angle between segments IA and OI is 45 degrees. Its circumradiu",
+      "correct_answer": "354.41498903",
+      "seed_value": 674374691
+    },
+    "iso_time": "2025-10-28T23:35:23Z"
+  },
+  {
+    "timestamp": 1761694523.346986,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "342.511243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-28T23:35:23Z"
+  },
+  {
+    "timestamp": 1761694608.9790301,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "354.41498903",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-28T23:36:48Z"
+  },
+  {
+    "timestamp": 1761694727.022397,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "368.233978",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-28T23:38:47Z"
+  },
+  {
+    "timestamp": 1761694783.342046,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "386.279991",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-28T23:39:43Z"
+  },
+  {
+    "timestamp": 1761694833.7090628,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "354.41498903",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-28T23:40:33Z"
+  },
+  {
+    "timestamp": 1761694908.096954,
+    "seed_id": "2024-II-10::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-10::2024_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-28T23:41:48Z"
+  },
+  {
+    "timestamp": 1761694908.097143,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-10::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 439905071
+    },
+    "iso_time": "2025-10-28T23:41:48Z"
+  },
+  {
+    "timestamp": 1761694908.9306529,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "circumradius": 30,
+        "inradius": 12,
+        "theta_deg": 120
+      }
+    },
+    "iso_time": "2025-10-28T23:41:48Z"
+  },
+  {
+    "timestamp": 1761694909.721319,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1878.9204936944107
+    },
+    "iso_time": "2025-10-28T23:41:49Z"
+  },
+  {
+    "timestamp": 1761694909.721471,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle ABC have incenter I and circumcenter O. The angle between segments IA and OI is 120 degrees. Its circumradi",
+      "correct_answer": "1878.92049369",
+      "seed_value": 439905071
+    },
+    "iso_time": "2025-10-28T23:41:49Z"
+  },
+  {
+    "timestamp": 1761694909.721514,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1972.359300",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-28T23:41:49Z"
+  },
+  {
+    "timestamp": 1761694964.560228,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1878.92049369",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-28T23:42:44Z"
+  },
+  {
+    "timestamp": 1761695134.1724648,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1913.568516",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-28T23:45:34Z"
+  },
+  {
+    "timestamp": 1761695194.9969249,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1878.92049369",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-28T23:46:34Z"
+  },
+  {
+    "timestamp": 1761695249.0691872,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1696.268684",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-28T23:47:29Z"
+  },
+  {
+    "timestamp": 1761695353.7220328,
+    "seed_id": "2024-II-10::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-10::2024_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-28T23:49:13Z"
+  },
+  {
+    "timestamp": 1761695353.7222028,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-10::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1168900488
+    },
+    "iso_time": "2025-10-28T23:49:13Z"
+  },
+  {
+    "timestamp": 1761695354.5597172,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "circumradius": 16,
+        "inradius": 5,
+        "theta_deg": 75
+      }
+    },
+    "iso_time": "2025-10-28T23:49:14Z"
+  },
+  {
+    "timestamp": 1761695355.35329,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 558.2918245189646
+    },
+    "iso_time": "2025-10-28T23:49:15Z"
+  },
+  {
+    "timestamp": 1761695355.3534238,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle ABC have incenter I and circumcenter O. The angle between segments IA and OI is 75 degrees. Its circumradiu",
+      "correct_answer": "558.291824519",
+      "seed_value": 1168900488
+    },
+    "iso_time": "2025-10-28T23:49:15Z"
+  },
+  {
+    "timestamp": 1761695355.3534641,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "558.291824519",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-28T23:49:15Z"
+  },
+  {
+    "timestamp": 1761695461.5576892,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "533.451551",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-28T23:51:01Z"
+  },
+  {
+    "timestamp": 1761753056.304011,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "566.146879",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-29T15:50:56Z"
+  },
+  {
+    "timestamp": 1761758797.483912,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "571.857963",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-29T17:26:37Z"
+  },
+  {
+    "timestamp": 1761797256.1068742,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "558.291824519",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T04:07:36Z"
+  },
+  {
+    "timestamp": 1761797739.760016,
+    "seed_id": "2024-II-10::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-10::2024_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-10-30T04:15:39Z"
+  },
+  {
+    "timestamp": 1761797739.76026,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-10::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 385728914
+    },
+    "iso_time": "2025-10-30T04:15:39Z"
+  },
+  {
+    "timestamp": 1761797740.9434261,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "circumradius": 15,
+        "inradius": 5,
+        "theta_deg": 60
+      }
+    },
+    "iso_time": "2025-10-30T04:15:40Z"
+  },
+  {
+    "timestamp": 1761797741.7969449,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 600.0
+    },
+    "iso_time": "2025-10-30T04:15:41Z"
+  },
+  {
+    "timestamp": 1761797741.797087,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle ABC have incenter I and circumcenter O. The angle between segments IA and OI is 60 degrees. Its circumradiu",
+      "correct_answer": "600",
+      "seed_value": 385728914
+    },
+    "iso_time": "2025-10-30T04:15:41Z"
+  },
+  {
+    "timestamp": 1761797741.797141,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "601",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T04:15:41Z"
+  },
+  {
+    "timestamp": 1761797829.874729,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T04:17:09Z"
+  },
+  {
+    "timestamp": 1761797901.865848,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "606",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T04:18:21Z"
+  },
+  {
+    "timestamp": 1761797958.857547,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T04:19:18Z"
+  },
+  {
+    "timestamp": 1761798051.085727,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "597",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T04:20:51Z"
+  },
+  {
+    "timestamp": 1761798114.661272,
+    "seed_id": "2024-II-10::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-10::2024_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-30T04:21:54Z"
+  },
+  {
+    "timestamp": 1761798114.661483,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-10::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 544191394
+    },
+    "iso_time": "2025-10-30T04:21:54Z"
+  },
+  {
+    "timestamp": 1761798115.581609,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "circumradius": 38,
+        "inradius": 10,
+        "theta_deg": 75
+      }
+    },
+    "iso_time": "2025-10-30T04:21:55Z"
+  },
+  {
+    "timestamp": 1761798116.49191,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2755.941038021205
+    },
+    "iso_time": "2025-10-30T04:21:56Z"
+  },
+  {
+    "timestamp": 1761798116.492054,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let triangle ABC have incenter I and circumcenter O. The angle between segments IA and OI is 75 degrees. Its circumradiu",
+      "correct_answer": "2755.94103802",
+      "seed_value": 544191394
+    },
+    "iso_time": "2025-10-30T04:21:56Z"
+  },
+  {
+    "timestamp": 1761798116.4921029,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2755.94103802",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T04:21:56Z"
+  },
+  {
+    "timestamp": 1761798270.562956,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2527.446277",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T04:24:30Z"
+  },
+  {
+    "timestamp": 1761798488.2568471,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2870.226874",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T04:28:08Z"
+  },
+  {
+    "timestamp": 1761798762.247923,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2755.94103802",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-30T04:32:42Z"
+  },
+  {
+    "timestamp": 1761799058.0040178,
+    "seed_id": "2024-II-10::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2502.466105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-30T04:37:38Z"
+  },
+  {
+    "timestamp": 1761799315.726479,
+    "seed_id": "2024-II-10::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-10::2024_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-10-30T04:41:55Z"
+  }
+]

@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1763361687.3006332,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1991,
+      "question_preview": "A drawer contains a mixture of red socks and blue socks, at most 1991 in all. It so happens that, when two socks are sel",
+      "answer": "990",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-17T06:41:27Z"
+  },
+  {
+    "timestamp": 1763361687.300659,
+    "seed_id": "1991-13::1991",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-17T06:41:27Z"
+  },
+  {
+    "timestamp": 1763361687.300673,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A drawer contains a mixture of red socks and blue socks, at most 1991 in all. It so happens that, when two socks are selected randomly without replacement, there is a probability of exactly $\\frac{1}{2}$ that both are red or both are blue. What is the largest possible number of red socks in the drawer that is consistent with this data?",
+      "answer": "990",
+      "example_id": "1991-13::1991"
+    },
+    "iso_time": "2025-11-17T06:41:27Z"
+  },
+  {
+    "timestamp": 1763361885.6962078,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1991-13::1991_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1804673713
+    },
+    "iso_time": "2025-11-17T06:44:45Z"
+  },
+  {
+    "timestamp": 1763361886.4981692,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "limit": 19313,
+        "p": 3,
+        "q": 4,
+        "answer": 8365
+      }
+    },
+    "iso_time": "2025-11-17T06:44:46Z"
+  },
+  {
+    "timestamp": 1763361887.240971,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8365
+    },
+    "iso_time": "2025-11-17T06:44:47Z"
+  },
+  {
+    "timestamp": 1763361887.241106,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A drawer contains a mixture of red socks and blue socks, at most 19313 in all. It so happens that, when two socks are se",
+      "correct_answer": "8365",
+      "seed_value": 1804673713
+    },
+    "iso_time": "2025-11-17T06:44:47Z"
+  },
+  {
+    "timestamp": 1763361887.241152,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T06:44:47Z"
+  },
+  {
+    "timestamp": 1763361999.2593331,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8358",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T06:46:39Z"
+  },
+  {
+    "timestamp": 1763362253.1052768,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8372",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T06:50:53Z"
+  },
+  {
+    "timestamp": 1763362457.096538,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8364",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T06:54:17Z"
+  },
+  {
+    "timestamp": 1763362637.2487319,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T06:57:17Z"
+  },
+  {
+    "timestamp": 1763362831.500234,
+    "seed_id": "1991-13::1991",
+    "stage": "variant_success",
+    "message": "Accepted variant 1991-13::1991_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T07:00:31Z"
+  },
+  {
+    "timestamp": 1763362831.500441,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1991-13::1991_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 545528077
+    },
+    "iso_time": "2025-11-17T07:00:31Z"
+  },
+  {
+    "timestamp": 1763362832.253472,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "limit": 45214,
+        "p": 3,
+        "q": 4,
+        "answer": 8365
+      }
+    },
+    "iso_time": "2025-11-17T07:00:32Z"
+  },
+  {
+    "timestamp": 1763362832.995828,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8365
+    },
+    "iso_time": "2025-11-17T07:00:32Z"
+  },
+  {
+    "timestamp": 1763362832.995956,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A drawer contains a mixture of red socks and blue socks, at most 45214 in all. It so happens that, when two socks are se",
+      "correct_answer": "8365",
+      "seed_value": 545528077
+    },
+    "iso_time": "2025-11-17T07:00:32Z"
+  },
+  {
+    "timestamp": 1763362832.996002,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8362",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:00:32Z"
+  },
+  {
+    "timestamp": 1763363230.312667,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T07:07:10Z"
+  },
+  {
+    "timestamp": 1763363399.456106,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8368",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:09:59Z"
+  },
+  {
+    "timestamp": 1763363651.605886,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8374",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:14:11Z"
+  },
+  {
+    "timestamp": 1763363845.402101,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T07:17:25Z"
+  },
+  {
+    "timestamp": 1763364002.329563,
+    "seed_id": "1991-13::1991",
+    "stage": "variant_success",
+    "message": "Accepted variant 1991-13::1991_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T07:20:02Z"
+  },
+  {
+    "timestamp": 1763364002.3296819,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1991-13::1991_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1692297061
+    },
+    "iso_time": "2025-11-17T07:20:02Z"
+  },
+  {
+    "timestamp": 1763364003.271245,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "limit": 25178,
+        "p": 3,
+        "q": 4,
+        "answer": 8365
+      }
+    },
+    "iso_time": "2025-11-17T07:20:03Z"
+  },
+  {
+    "timestamp": 1763364004.009672,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8365
+    },
+    "iso_time": "2025-11-17T07:20:04Z"
+  },
+  {
+    "timestamp": 1763364004.009807,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A drawer contains a mixture of red socks and blue socks, at most 25178 in all. It so happens that, when two socks are se",
+      "correct_answer": "8365",
+      "seed_value": 1692297061
+    },
+    "iso_time": "2025-11-17T07:20:04Z"
+  },
+  {
+    "timestamp": 1763364004.0098538,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8358",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:20:04Z"
+  },
+  {
+    "timestamp": 1763364165.0114229,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8363",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:22:45Z"
+  },
+  {
+    "timestamp": 1763364337.3644009,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T07:25:37Z"
+  },
+  {
+    "timestamp": 1763364478.5881631,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8360",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:27:58Z"
+  },
+  {
+    "timestamp": 1763364672.5367749,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T07:31:12Z"
+  },
+  {
+    "timestamp": 1763364797.957663,
+    "seed_id": "1991-13::1991",
+    "stage": "variant_success",
+    "message": "Accepted variant 1991-13::1991_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T07:33:17Z"
+  },
+  {
+    "timestamp": 1763364797.957769,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1991-13::1991_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 82131265
+    },
+    "iso_time": "2025-11-17T07:33:17Z"
+  },
+  {
+    "timestamp": 1763364798.768502,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "limit": 29844,
+        "p": 3,
+        "q": 4,
+        "answer": 8365
+      }
+    },
+    "iso_time": "2025-11-17T07:33:18Z"
+  },
+  {
+    "timestamp": 1763364799.543097,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8365
+    },
+    "iso_time": "2025-11-17T07:33:19Z"
+  },
+  {
+    "timestamp": 1763364799.54322,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A drawer contains a mixture of red socks and blue socks, at most 29844 in all. It so happens that, when two socks are se",
+      "correct_answer": "8365",
+      "seed_value": 82131265
+    },
+    "iso_time": "2025-11-17T07:33:19Z"
+  },
+  {
+    "timestamp": 1763364799.543262,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T07:33:19Z"
+  },
+  {
+    "timestamp": 1763364907.256949,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8371",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:35:07Z"
+  },
+  {
+    "timestamp": 1763365134.1463318,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T07:38:54Z"
+  },
+  {
+    "timestamp": 1763365247.096354,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8363",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:40:47Z"
+  },
+  {
+    "timestamp": 1763365425.3743958,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8370",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:43:45Z"
+  },
+  {
+    "timestamp": 1763365615.766025,
+    "seed_id": "1991-13::1991",
+    "stage": "variant_success",
+    "message": "Accepted variant 1991-13::1991_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T07:46:55Z"
+  },
+  {
+    "timestamp": 1763365615.766145,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1991-13::1991_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1295273420
+    },
+    "iso_time": "2025-11-17T07:46:55Z"
+  },
+  {
+    "timestamp": 1763365616.7136269,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "limit": 46399,
+        "p": 3,
+        "q": 4,
+        "answer": 8365
+      }
+    },
+    "iso_time": "2025-11-17T07:46:56Z"
+  },
+  {
+    "timestamp": 1763365617.4546611,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8365
+    },
+    "iso_time": "2025-11-17T07:46:57Z"
+  },
+  {
+    "timestamp": 1763365617.454797,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A drawer contains a mixture of red socks and blue socks, at most 46399 in all. It so happens that, when two socks are se",
+      "correct_answer": "8365",
+      "seed_value": 1295273420
+    },
+    "iso_time": "2025-11-17T07:46:57Z"
+  },
+  {
+    "timestamp": 1763365617.454838,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8356",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:46:57Z"
+  },
+  {
+    "timestamp": 1763365784.598309,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8373",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:49:44Z"
+  },
+  {
+    "timestamp": 1763366033.02068,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T07:53:53Z"
+  },
+  {
+    "timestamp": 1763366183.184111,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8371",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-17T07:56:23Z"
+  },
+  {
+    "timestamp": 1763366376.680923,
+    "seed_id": "1991-13::1991",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8365",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-17T07:59:36Z"
+  },
+  {
+    "timestamp": 1763366488.292514,
+    "seed_id": "1991-13::1991",
+    "stage": "variant_success",
+    "message": "Accepted variant 1991-13::1991_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-17T08:01:28Z"
+  }
+]

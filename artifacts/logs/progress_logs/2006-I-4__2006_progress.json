@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1765323601.187746,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2006,
+      "question_preview": "Let $N$ be the number of consecutive 0's at the right end of the decimal representation of the product $1!2!3!4!\\cdots99",
+      "answer": "124",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T23:40:01Z"
+  },
+  {
+    "timestamp": 1765323601.1878111,
+    "seed_id": "2006-I-4::2006",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T23:40:01Z"
+  },
+  {
+    "timestamp": 1765323601.1878479,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $N$ be the number of consecutive 0's at the right end of the decimal representation of the product $1!2!3!4!\\cdots99!100!.$ Find the remainder when $N$ is divided by 1000.",
+      "answer": "124",
+      "example_id": "2006-I-4::2006"
+    },
+    "iso_time": "2025-12-09T23:40:01Z"
+  },
+  {
+    "timestamp": 1765323667.838397,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-4::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1287219796
+    },
+    "iso_time": "2025-12-09T23:41:07Z"
+  },
+  {
+    "timestamp": 1765323669.1727948,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 584,
+        "r": 6,
+        "s": 2,
+        "base": 77175,
+        "mod": 50000
+      }
+    },
+    "iso_time": "2025-12-09T23:41:09Z"
+  },
+  {
+    "timestamp": 1765323670.379699,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10975
+    },
+    "iso_time": "2025-12-09T23:41:10Z"
+  },
+  {
+    "timestamp": 1765323670.379881,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, define P as the product over k from 1 to 584 of (k!) raised to the power (6*k + 2). Let Z be the numb",
+      "correct_answer": "10975",
+      "seed_value": 1287219796
+    },
+    "iso_time": "2025-12-09T23:41:10Z"
+  },
+  {
+    "timestamp": 1765323670.3799329,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10972",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T23:41:10Z"
+  },
+  {
+    "timestamp": 1765323824.4662862,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10975",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T23:43:44Z"
+  },
+  {
+    "timestamp": 1765323964.9601731,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10975",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T23:46:04Z"
+  },
+  {
+    "timestamp": 1765324041.452306,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10969",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T23:47:21Z"
+  },
+  {
+    "timestamp": 1765324110.576027,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10984",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T23:48:30Z"
+  },
+  {
+    "timestamp": 1765324174.370602,
+    "seed_id": "2006-I-4::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-4::2006_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T23:49:34Z"
+  },
+  {
+    "timestamp": 1765324174.37079,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-4::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 275802131
+    },
+    "iso_time": "2025-12-09T23:49:34Z"
+  },
+  {
+    "timestamp": 1765324175.6232839,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1035,
+        "r": 3,
+        "s": 2,
+        "base": 4501875,
+        "mod": 99991
+      }
+    },
+    "iso_time": "2025-12-09T23:49:35Z"
+  },
+  {
+    "timestamp": 1765324176.8676438,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 86170
+    },
+    "iso_time": "2025-12-09T23:49:36Z"
+  },
+  {
+    "timestamp": 1765324176.867829,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, define P as the product over k from 1 to 1035 of (k!) raised to the power (3*k + 2). Let Z be the num",
+      "correct_answer": "86170",
+      "seed_value": 275802131
+    },
+    "iso_time": "2025-12-09T23:49:36Z"
+  },
+  {
+    "timestamp": 1765324176.867878,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "86161",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T23:49:36Z"
+  },
+  {
+    "timestamp": 1765324302.1681721,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "86168",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T23:51:42Z"
+  },
+  {
+    "timestamp": 1765324382.0451891,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "86170",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T23:53:02Z"
+  },
+  {
+    "timestamp": 1765324508.074465,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "86170",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T23:55:08Z"
+  },
+  {
+    "timestamp": 1765324584.281968,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "86162",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T23:56:24Z"
+  },
+  {
+    "timestamp": 1765324656.933045,
+    "seed_id": "2006-I-4::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-4::2006_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T23:57:36Z"
+  },
+  {
+    "timestamp": 1765324656.933216,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-4::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 2130132650
+    },
+    "iso_time": "2025-12-09T23:57:36Z"
+  },
+  {
+    "timestamp": 1765324658.138429,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1137,
+        "r": 5,
+        "s": 4,
+        "base": 28,
+        "mod": 30000
+      }
+    },
+    "iso_time": "2025-12-09T23:57:38Z"
+  },
+  {
+    "timestamp": 1765324659.2978802,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12254
+    },
+    "iso_time": "2025-12-09T23:57:39Z"
+  },
+  {
+    "timestamp": 1765324659.298027,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, define P as the product over k from 1 to 1137 of (k!) raised to the power (5*k + 4). Let Z be the num",
+      "correct_answer": "12254",
+      "seed_value": 2130132650
+    },
+    "iso_time": "2025-12-09T23:57:39Z"
+  },
+  {
+    "timestamp": 1765324659.29807,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12253",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T23:57:39Z"
+  },
+  {
+    "timestamp": 1765324848.251582,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12248",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:00:48Z"
+  },
+  {
+    "timestamp": 1765324907.252807,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12245",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:01:47Z"
+  },
+  {
+    "timestamp": 1765324952.2102468,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12254",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:02:32Z"
+  },
+  {
+    "timestamp": 1765325027.3045409,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12254",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:03:47Z"
+  },
+  {
+    "timestamp": 1765325198.472988,
+    "seed_id": "2006-I-4::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-4::2006_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-10T00:06:38Z"
+  },
+  {
+    "timestamp": 1765325198.473187,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-4::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1519291488
+    },
+    "iso_time": "2025-12-10T00:06:38Z"
+  },
+  {
+    "timestamp": 1765325199.833772,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1109,
+        "r": 5,
+        "s": 9,
+        "base": 1372,
+        "mod": 10000
+      }
+    },
+    "iso_time": "2025-12-10T00:06:39Z"
+  },
+  {
+    "timestamp": 1765325201.043757,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 577
+    },
+    "iso_time": "2025-12-10T00:06:41Z"
+  },
+  {
+    "timestamp": 1765325201.043935,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, define P as the product over k from 1 to 1109 of (k!) raised to the power (5*k + 9). Let Z be the num",
+      "correct_answer": "577",
+      "seed_value": 1519291488
+    },
+    "iso_time": "2025-12-10T00:06:41Z"
+  },
+  {
+    "timestamp": 1765325201.043987,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "586",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:06:41Z"
+  },
+  {
+    "timestamp": 1765325345.3175092,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "582",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:09:05Z"
+  },
+  {
+    "timestamp": 1765325467.450849,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "577",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:11:07Z"
+  },
+  {
+    "timestamp": 1765325600.9078798,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "574",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:13:20Z"
+  },
+  {
+    "timestamp": 1765325707.738925,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "577",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:15:07Z"
+  },
+  {
+    "timestamp": 1765325782.156419,
+    "seed_id": "2006-I-4::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-4::2006_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-10T00:16:22Z"
+  },
+  {
+    "timestamp": 1765325782.156627,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-4::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 332926086
+    },
+    "iso_time": "2025-12-10T00:16:22Z"
+  },
+  {
+    "timestamp": 1765325783.5328,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 2495,
+        "r": 4,
+        "s": 11,
+        "base": 34300,
+        "mod": 10000
+      }
+    },
+    "iso_time": "2025-12-10T00:16:23Z"
+  },
+  {
+    "timestamp": 1765325784.785908,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7128
+    },
+    "iso_time": "2025-12-10T00:16:24Z"
+  },
+  {
+    "timestamp": 1765325784.7861178,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, define P as the product over k from 1 to 2495 of (k!) raised to the power (4*k + 11). Let Z be the nu",
+      "correct_answer": "7128",
+      "seed_value": 332926086
+    },
+    "iso_time": "2025-12-10T00:16:24Z"
+  },
+  {
+    "timestamp": 1765325784.7861729,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7128",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:16:24Z"
+  },
+  {
+    "timestamp": 1765325942.515838,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7128",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:19:02Z"
+  },
+  {
+    "timestamp": 1765326136.770407,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7123",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:22:16Z"
+  },
+  {
+    "timestamp": 1765326269.415818,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7134",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:24:29Z"
+  },
+  {
+    "timestamp": 1765326433.857646,
+    "seed_id": "2006-I-4::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7129",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:27:13Z"
+  },
+  {
+    "timestamp": 1765326654.3076422,
+    "seed_id": "2006-I-4::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-4::2006_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-10T00:30:54Z"
+  }
+]

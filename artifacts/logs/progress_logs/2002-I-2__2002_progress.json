@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1764658002.299503,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2002,
+      "question_preview": "The diagram shows twenty congruent circles arranged in three rows and enclosed in a rectangle. The circles are tangent t",
+      "answer": "154",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-02T06:46:42Z"
+  },
+  {
+    "timestamp": 1764658002.299572,
+    "seed_id": "2002-I-2::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-02T06:46:42Z"
+  },
+  {
+    "timestamp": 1764658002.2996008,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The diagram shows twenty congruent circles arranged in three rows and enclosed in a rectangle. The circles are tangent to one another and to the sides of the rectangle as shown in the diagram. The ratio of the longer dimension of the rectangle to the shorter dimension can be written as $\\frac{1}{2}\\left(\\sqrt{p}-q\\right)$ , where $p$ and $q$ are positive integers. Find $p+q$ . [asy] size(250);real x=sqrt(3); int i; draw(origin--(14,0)--(14,2+2x)--(0,2+2x)--cycle); for(i=0; i<7; i=i+1) { draw(Circle((2*i+1,1), 1)^^Circle((2*i+1,1+2x), 1)); } for(i=0; i<6; i=i+1) { draw(Circle((2*i+2,1+x), 1)); } [/asy]",
+      "answer": "154",
+      "example_id": "2002-I-2::2002"
+    },
+    "iso_time": "2025-12-02T06:46:42Z"
+  },
+  {
+    "timestamp": 1764658124.328125,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-2::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 588693888
+    },
+    "iso_time": "2025-12-02T06:48:44Z"
+  },
+  {
+    "timestamp": 1764658125.701362,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 25,
+        "rows": 19
+      }
+    },
+    "iso_time": "2025-12-02T06:48:45Z"
+  },
+  {
+    "timestamp": 1764658126.878496,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 152142
+    },
+    "iso_time": "2025-12-02T06:48:46Z"
+  },
+  {
+    "timestamp": 1764658126.8786502,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle encloses congruent circles of radius 1 arranged in 19 horizontal rows. The bottom row contains 25 circles an",
+      "correct_answer": "152142",
+      "seed_value": 588693888
+    },
+    "iso_time": "2025-12-02T06:48:46Z"
+  },
+  {
+    "timestamp": 1764658126.878718,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "152142",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T06:48:46Z"
+  },
+  {
+    "timestamp": 1764658225.670159,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "152137",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:50:25Z"
+  },
+  {
+    "timestamp": 1764658442.8108742,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "152148",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T06:54:02Z"
+  },
+  {
+    "timestamp": 1764658849.7611039,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "152133",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:00:49Z"
+  },
+  {
+    "timestamp": 1764658889.145389,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "152142",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T07:01:29Z"
+  },
+  {
+    "timestamp": 1764658912.62884,
+    "seed_id": "2002-I-2::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-2::2002_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T07:01:52Z"
+  },
+  {
+    "timestamp": 1764658912.629017,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-2::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1478388039
+    },
+    "iso_time": "2025-12-02T07:01:52Z"
+  },
+  {
+    "timestamp": 1764658913.806458,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 38,
+        "rows": 11
+      }
+    },
+    "iso_time": "2025-12-02T07:01:53Z"
+  },
+  {
+    "timestamp": 1764658914.989523,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 27131
+    },
+    "iso_time": "2025-12-02T07:01:54Z"
+  },
+  {
+    "timestamp": 1764658914.98972,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle encloses congruent circles of radius 1 arranged in 11 horizontal rows. The bottom row contains 38 circles an",
+      "correct_answer": "27131",
+      "seed_value": 1478388039
+    },
+    "iso_time": "2025-12-02T07:01:54Z"
+  },
+  {
+    "timestamp": 1764658914.989795,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "27131",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T07:01:54Z"
+  },
+  {
+    "timestamp": 1764659026.6588411,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "27136",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:03:46Z"
+  },
+  {
+    "timestamp": 1764659073.7786949,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "27131",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T07:04:33Z"
+  },
+  {
+    "timestamp": 1764659177.231414,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "27127",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:06:17Z"
+  },
+  {
+    "timestamp": 1764659212.1499488,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "27132",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:06:52Z"
+  },
+  {
+    "timestamp": 1764659296.784576,
+    "seed_id": "2002-I-2::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-2::2002_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T07:08:16Z"
+  },
+  {
+    "timestamp": 1764659296.784686,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-2::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 243522960
+    },
+    "iso_time": "2025-12-02T07:08:16Z"
+  },
+  {
+    "timestamp": 1764659298.216247,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 15,
+        "rows": 3
+      }
+    },
+    "iso_time": "2025-12-02T07:08:18Z"
+  },
+  {
+    "timestamp": 1764659299.294202,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 692
+    },
+    "iso_time": "2025-12-02T07:08:19Z"
+  },
+  {
+    "timestamp": 1764659299.294347,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle encloses congruent circles of radius 1 arranged in 3 horizontal rows. The bottom row contains 15 circles and",
+      "correct_answer": "692",
+      "seed_value": 243522960
+    },
+    "iso_time": "2025-12-02T07:08:19Z"
+  },
+  {
+    "timestamp": 1764659299.294419,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "689",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:08:19Z"
+  },
+  {
+    "timestamp": 1764659337.284746,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "692",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T07:08:57Z"
+  },
+  {
+    "timestamp": 1764659477.742825,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "692",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T07:11:17Z"
+  },
+  {
+    "timestamp": 1764659640.096475,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "690",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:14:00Z"
+  },
+  {
+    "timestamp": 1764659755.390892,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "688",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:15:55Z"
+  },
+  {
+    "timestamp": 1764659854.6145458,
+    "seed_id": "2002-I-2::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-2::2002_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T07:17:34Z"
+  },
+  {
+    "timestamp": 1764659854.614727,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-2::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 447222463
+    },
+    "iso_time": "2025-12-02T07:17:34Z"
+  },
+  {
+    "timestamp": 1764659855.914743,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 41,
+        "rows": 19
+      }
+    },
+    "iso_time": "2025-12-02T07:17:35Z"
+  },
+  {
+    "timestamp": 1764659857.0190551,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 408766
+    },
+    "iso_time": "2025-12-02T07:17:37Z"
+  },
+  {
+    "timestamp": 1764659857.01919,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle encloses congruent circles of radius 1 arranged in 19 horizontal rows. The bottom row contains 41 circles an",
+      "correct_answer": "408766",
+      "seed_value": 447222463
+    },
+    "iso_time": "2025-12-02T07:17:37Z"
+  },
+  {
+    "timestamp": 1764659857.019246,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "408768",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:17:37Z"
+  },
+  {
+    "timestamp": 1764659889.433971,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "408759",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:18:09Z"
+  },
+  {
+    "timestamp": 1764660172.119874,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "408766",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T07:22:52Z"
+  },
+  {
+    "timestamp": 1764660208.51342,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "408766",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T07:23:28Z"
+  },
+  {
+    "timestamp": 1764660350.8538182,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "408772",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:25:50Z"
+  },
+  {
+    "timestamp": 1764660378.846169,
+    "seed_id": "2002-I-2::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-2::2002_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T07:26:18Z"
+  },
+  {
+    "timestamp": 1764660378.8463318,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-I-2::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1346902537
+    },
+    "iso_time": "2025-12-02T07:26:18Z"
+  },
+  {
+    "timestamp": 1764660379.9678211,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 30,
+        "rows": 15
+      }
+    },
+    "iso_time": "2025-12-02T07:26:19Z"
+  },
+  {
+    "timestamp": 1764660381.078281,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 33163
+    },
+    "iso_time": "2025-12-02T07:26:21Z"
+  },
+  {
+    "timestamp": 1764660381.078488,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A rectangle encloses congruent circles of radius 1 arranged in 15 horizontal rows. The bottom row contains 30 circles an",
+      "correct_answer": "33163",
+      "seed_value": 1346902537
+    },
+    "iso_time": "2025-12-02T07:26:21Z"
+  },
+  {
+    "timestamp": 1764660381.078549,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "33163",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T07:26:21Z"
+  },
+  {
+    "timestamp": 1764660570.56355,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "33163",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T07:29:30Z"
+  },
+  {
+    "timestamp": 1764660603.782509,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "33165",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:30:03Z"
+  },
+  {
+    "timestamp": 1764660894.2793658,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "33162",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:34:54Z"
+  },
+  {
+    "timestamp": 1764660930.639117,
+    "seed_id": "2002-I-2::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "33169",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T07:35:30Z"
+  },
+  {
+    "timestamp": 1764660996.490121,
+    "seed_id": "2002-I-2::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-I-2::2002_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T07:36:36Z"
+  }
+]

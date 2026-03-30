@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1765312138.216079,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2006,
+      "question_preview": "For each even positive integer $x,$ let $g(x)$ denote the greatest power of 2 that divides $x.$ For example, $g(20)=4$ a",
+      "answer": "899",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T20:28:58Z"
+  },
+  {
+    "timestamp": 1765312138.216181,
+    "seed_id": "2006-I-13::2006",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T20:28:58Z"
+  },
+  {
+    "timestamp": 1765312138.216235,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "For each even positive integer $x,$ let $g(x)$ denote the greatest power of 2 that divides $x.$ For example, $g(20)=4$ and $g(16)=16.$ For each positive integer $n,$ let $S_n=\\sum_{k=1}^{2^{n-1}}g(2k).$ Find the greatest integer $n$ less than 1000 such that $S_n$ is a perfect square.",
+      "answer": "899",
+      "example_id": "2006-I-13::2006"
+    },
+    "iso_time": "2025-12-09T20:28:58Z"
+  },
+  {
+    "timestamp": 1765312278.080745,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-13::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 545490820
+    },
+    "iso_time": "2025-12-09T20:31:18Z"
+  },
+  {
+    "timestamp": 1765312279.2542741,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "prime_p": 2,
+        "k_power": 3,
+        "bound_n": 1020
+      }
+    },
+    "iso_time": "2025-12-09T20:31:19Z"
+  },
+  {
+    "timestamp": 1765312280.416416,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 863
+    },
+    "iso_time": "2025-12-09T20:31:20Z"
+  },
+  {
+    "timestamp": 1765312280.4166,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let prime p = 2. For each positive integer x that is divisible by p, define g_p(x) to be the greatest power of p dividin",
+      "correct_answer": "863",
+      "seed_value": 545490820
+    },
+    "iso_time": "2025-12-09T20:31:20Z"
+  },
+  {
+    "timestamp": 1765312280.41665,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "854",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:31:20Z"
+  },
+  {
+    "timestamp": 1765312345.112813,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "872",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:32:25Z"
+  },
+  {
+    "timestamp": 1765312431.676349,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "860",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:33:51Z"
+  },
+  {
+    "timestamp": 1765312544.417077,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "863",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T20:35:44Z"
+  },
+  {
+    "timestamp": 1765312644.951175,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "863",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T20:37:24Z"
+  },
+  {
+    "timestamp": 1765312680.917193,
+    "seed_id": "2006-I-13::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-13::2006_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T20:38:00Z"
+  },
+  {
+    "timestamp": 1765312680.917323,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-13::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1180612631
+    },
+    "iso_time": "2025-12-09T20:38:00Z"
+  },
+  {
+    "timestamp": 1765312682.2279592,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "prime_p": 5,
+        "k_power": 3,
+        "bound_n": 1481
+      }
+    },
+    "iso_time": "2025-12-09T20:38:02Z"
+  },
+  {
+    "timestamp": 1765312683.374938,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1228
+    },
+    "iso_time": "2025-12-09T20:38:03Z"
+  },
+  {
+    "timestamp": 1765312683.375117,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let prime p = 5. For each positive integer x that is divisible by p, define g_p(x) to be the greatest power of p dividin",
+      "correct_answer": "1228",
+      "seed_value": 1180612631
+    },
+    "iso_time": "2025-12-09T20:38:03Z"
+  },
+  {
+    "timestamp": 1765312683.375169,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1228",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T20:38:03Z"
+  },
+  {
+    "timestamp": 1765312735.717788,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1222",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:38:55Z"
+  },
+  {
+    "timestamp": 1765312857.2676558,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1228",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T20:40:57Z"
+  },
+  {
+    "timestamp": 1765312925.110558,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1226",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:42:05Z"
+  },
+  {
+    "timestamp": 1765312973.1856508,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1227",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:42:53Z"
+  },
+  {
+    "timestamp": 1765313023.7699368,
+    "seed_id": "2006-I-13::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-13::2006_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T20:43:43Z"
+  },
+  {
+    "timestamp": 1765313023.770135,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-13::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1399136059
+    },
+    "iso_time": "2025-12-09T20:43:43Z"
+  },
+  {
+    "timestamp": 1765313025.160243,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "prime_p": 2,
+        "k_power": 3,
+        "bound_n": 1889
+      }
+    },
+    "iso_time": "2025-12-09T20:43:45Z"
+  },
+  {
+    "timestamp": 1765313026.273567,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1330
+    },
+    "iso_time": "2025-12-09T20:43:46Z"
+  },
+  {
+    "timestamp": 1765313026.273731,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let prime p = 2. For each positive integer x that is divisible by p, define g_p(x) to be the greatest power of p dividin",
+      "correct_answer": "1330",
+      "seed_value": 1399136059
+    },
+    "iso_time": "2025-12-09T20:43:46Z"
+  },
+  {
+    "timestamp": 1765313026.273775,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1327",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:43:46Z"
+  },
+  {
+    "timestamp": 1765313150.963039,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1330",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T20:45:50Z"
+  },
+  {
+    "timestamp": 1765313304.348995,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1326",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:48:24Z"
+  },
+  {
+    "timestamp": 1765313422.657108,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1323",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:50:22Z"
+  },
+  {
+    "timestamp": 1765313540.586663,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1330",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T20:52:20Z"
+  },
+  {
+    "timestamp": 1765313646.367566,
+    "seed_id": "2006-I-13::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-13::2006_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T20:54:06Z"
+  },
+  {
+    "timestamp": 1765313646.367757,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-13::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 204521749
+    },
+    "iso_time": "2025-12-09T20:54:06Z"
+  },
+  {
+    "timestamp": 1765313647.684811,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "prime_p": 2,
+        "k_power": 3,
+        "bound_n": 1104
+      }
+    },
+    "iso_time": "2025-12-09T20:54:07Z"
+  },
+  {
+    "timestamp": 1765313648.825397,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1023
+    },
+    "iso_time": "2025-12-09T20:54:08Z"
+  },
+  {
+    "timestamp": 1765313648.825572,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let prime p = 2. For each positive integer x that is divisible by p, define g_p(x) to be the greatest power of p dividin",
+      "correct_answer": "1023",
+      "seed_value": 204521749
+    },
+    "iso_time": "2025-12-09T20:54:08Z"
+  },
+  {
+    "timestamp": 1765313648.825623,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1014",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:54:08Z"
+  },
+  {
+    "timestamp": 1765313682.925361,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1015",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:54:42Z"
+  },
+  {
+    "timestamp": 1765313769.249439,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1023",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T20:56:09Z"
+  },
+  {
+    "timestamp": 1765313834.375921,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1031",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:57:14Z"
+  },
+  {
+    "timestamp": 1765313900.732202,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1023",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T20:58:20Z"
+  },
+  {
+    "timestamp": 1765313960.246359,
+    "seed_id": "2006-I-13::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-13::2006_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T20:59:20Z"
+  },
+  {
+    "timestamp": 1765313960.246563,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-13::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1504037342
+    },
+    "iso_time": "2025-12-09T20:59:20Z"
+  },
+  {
+    "timestamp": 1765313961.570797,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "prime_p": 2,
+        "k_power": 3,
+        "bound_n": 1003
+      }
+    },
+    "iso_time": "2025-12-09T20:59:21Z"
+  },
+  {
+    "timestamp": 1765313962.6297011,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 863
+    },
+    "iso_time": "2025-12-09T20:59:22Z"
+  },
+  {
+    "timestamp": 1765313962.629885,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let prime p = 2. For each positive integer x that is divisible by p, define g_p(x) to be the greatest power of p dividin",
+      "correct_answer": "863",
+      "seed_value": 1504037342
+    },
+    "iso_time": "2025-12-09T20:59:22Z"
+  },
+  {
+    "timestamp": 1765313962.629932,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "866",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T20:59:22Z"
+  },
+  {
+    "timestamp": 1765314004.055974,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "863",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T21:00:04Z"
+  },
+  {
+    "timestamp": 1765314074.8132749,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "860",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T21:01:14Z"
+  },
+  {
+    "timestamp": 1765314115.803448,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "856",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T21:01:55Z"
+  },
+  {
+    "timestamp": 1765314151.818445,
+    "seed_id": "2006-I-13::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "863",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T21:02:31Z"
+  },
+  {
+    "timestamp": 1765314199.538614,
+    "seed_id": "2006-I-13::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-13::2006_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T21:03:19Z"
+  }
+]

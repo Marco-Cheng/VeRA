@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764614090.147269,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "A certain function $f$ has the properties that $f(3x) = 3f(x)$ for all positive real values of $x$ , and that $f(x) = 1 ",
+      "answer": "429",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T18:34:50Z"
+  },
+  {
+    "timestamp": 1764614090.147316,
+    "seed_id": "2001-II-8::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T18:34:50Z"
+  },
+  {
+    "timestamp": 1764614090.1473432,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A certain function $f$ has the properties that $f(3x) = 3f(x)$ for all positive real values of $x$ , and that $f(x) = 1 - |x - 2|$ for $1\\leq x \\leq 3$ . Find the smallest $x$ for which $f(x) = f(2001)$ .",
+      "answer": "429",
+      "example_id": "2001-II-8::2001"
+    },
+    "iso_time": "2025-12-01T18:34:50Z"
+  },
+  {
+    "timestamp": 1764614489.924723,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-8::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 623132872
+    },
+    "iso_time": "2025-12-01T18:41:29Z"
+  },
+  {
+    "timestamp": 1764614491.2618601,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "scale_a": 5,
+        "base_l": 76,
+        "target_n": 61250,
+        "count_r": 8
+      }
+    },
+    "iso_time": "2025-12-01T18:41:31Z"
+  },
+  {
+    "timestamp": 1764614492.3258939,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8892000
+    },
+    "iso_time": "2025-12-01T18:41:32Z"
+  },
+  {
+    "timestamp": 1764614492.326043,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the function f defined for x > 0 with the properties f(5x) = 5 f(x) for all x > 0, and for x in the base interv",
+      "correct_answer": "8892000",
+      "seed_value": 623132872
+    },
+    "iso_time": "2025-12-01T18:41:32Z"
+  },
+  {
+    "timestamp": 1764614492.326106,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8891993",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:41:32Z"
+  },
+  {
+    "timestamp": 1764614540.4990149,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8891991",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:42:20Z"
+  },
+  {
+    "timestamp": 1764614592.519302,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8892006",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:43:12Z"
+  },
+  {
+    "timestamp": 1764614684.99404,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8892000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:44:44Z"
+  },
+  {
+    "timestamp": 1764614747.125493,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8892000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:45:47Z"
+  },
+  {
+    "timestamp": 1764614819.114753,
+    "seed_id": "2001-II-8::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-8::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-01T18:46:59Z"
+  },
+  {
+    "timestamp": 1764614819.114926,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-8::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1080026509
+    },
+    "iso_time": "2025-12-01T18:46:59Z"
+  },
+  {
+    "timestamp": 1764614820.300095,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "scale_a": 6,
+        "base_l": 24,
+        "target_n": 53747712,
+        "count_r": 8
+      }
+    },
+    "iso_time": "2025-12-01T18:47:00Z"
+  },
+  {
+    "timestamp": 1764614821.435943,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12180575232
+    },
+    "iso_time": "2025-12-01T18:47:01Z"
+  },
+  {
+    "timestamp": 1764614821.436105,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the function f defined for x > 0 with the properties f(6x) = 6 f(x) for all x > 0, and for x in the base interv",
+      "correct_answer": "12180575232",
+      "seed_value": 1080026509
+    },
+    "iso_time": "2025-12-01T18:47:01Z"
+  },
+  {
+    "timestamp": 1764614821.43617,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12180575232",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:47:01Z"
+  },
+  {
+    "timestamp": 1764614879.092602,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12180575232",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T18:47:59Z"
+  },
+  {
+    "timestamp": 1764614978.151838,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12180575229",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:49:38Z"
+  },
+  {
+    "timestamp": 1764615047.629092,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12180575239",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:50:47Z"
+  },
+  {
+    "timestamp": 1764615104.208354,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12180575236",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:51:44Z"
+  },
+  {
+    "timestamp": 1764615595.311441,
+    "seed_id": "2001-II-8::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-8::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T18:59:55Z"
+  },
+  {
+    "timestamp": 1764615595.311612,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-8::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 2069171656
+    },
+    "iso_time": "2025-12-01T18:59:55Z"
+  },
+  {
+    "timestamp": 1764615596.5950642,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "scale_a": 4,
+        "base_l": 32,
+        "target_n": 7872,
+        "count_r": 4
+      }
+    },
+    "iso_time": "2025-12-01T18:59:56Z"
+  },
+  {
+    "timestamp": 1764615597.8199239,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12800
+    },
+    "iso_time": "2025-12-01T18:59:57Z"
+  },
+  {
+    "timestamp": 1764615597.820101,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the function f defined for x > 0 with the properties f(4x) = 4 f(x) for all x > 0, and for x in the base interv",
+      "correct_answer": "12800",
+      "seed_value": 2069171656
+    },
+    "iso_time": "2025-12-01T18:59:57Z"
+  },
+  {
+    "timestamp": 1764615597.8201668,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12801",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T18:59:57Z"
+  },
+  {
+    "timestamp": 1764615636.26418,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:00:36Z"
+  },
+  {
+    "timestamp": 1764615674.047424,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12799",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:01:14Z"
+  },
+  {
+    "timestamp": 1764615720.444386,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12803",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:02:00Z"
+  },
+  {
+    "timestamp": 1764615785.4055302,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:03:05Z"
+  },
+  {
+    "timestamp": 1764615830.076221,
+    "seed_id": "2001-II-8::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-8::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T19:03:50Z"
+  },
+  {
+    "timestamp": 1764615830.076323,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-8::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1592885125
+    },
+    "iso_time": "2025-12-01T19:03:50Z"
+  },
+  {
+    "timestamp": 1764615831.435889,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "scale_a": 3,
+        "base_l": 10,
+        "target_n": 2673,
+        "count_r": 4
+      }
+    },
+    "iso_time": "2025-12-01T19:03:51Z"
+  },
+  {
+    "timestamp": 1764615832.532545,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4320
+    },
+    "iso_time": "2025-12-01T19:03:52Z"
+  },
+  {
+    "timestamp": 1764615832.532695,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the function f defined for x > 0 with the properties f(3x) = 3 f(x) for all x > 0, and for x in the base interv",
+      "correct_answer": "4320",
+      "seed_value": 1592885125
+    },
+    "iso_time": "2025-12-01T19:03:52Z"
+  },
+  {
+    "timestamp": 1764615832.532757,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4320",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:03:52Z"
+  },
+  {
+    "timestamp": 1764615888.976705,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4325",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:04:48Z"
+  },
+  {
+    "timestamp": 1764615927.712575,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4321",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:05:27Z"
+  },
+  {
+    "timestamp": 1764615981.978299,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4320",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:06:21Z"
+  },
+  {
+    "timestamp": 1764616064.621073,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4311",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:07:44Z"
+  },
+  {
+    "timestamp": 1764616123.798325,
+    "seed_id": "2001-II-8::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-8::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T19:08:43Z"
+  },
+  {
+    "timestamp": 1764616123.798431,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-8::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 749955069
+    },
+    "iso_time": "2025-12-01T19:08:43Z"
+  },
+  {
+    "timestamp": 1764616125.207946,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "scale_a": 3,
+        "base_l": 34,
+        "target_n": 8748,
+        "count_r": 4
+      }
+    },
+    "iso_time": "2025-12-01T19:08:45Z"
+  },
+  {
+    "timestamp": 1764616126.299791,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 14688
+    },
+    "iso_time": "2025-12-01T19:08:46Z"
+  },
+  {
+    "timestamp": 1764616126.299973,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the function f defined for x > 0 with the properties f(3x) = 3 f(x) for all x > 0, and for x in the base interv",
+      "correct_answer": "14688",
+      "seed_value": 749955069
+    },
+    "iso_time": "2025-12-01T19:08:46Z"
+  },
+  {
+    "timestamp": 1764616126.30004,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "14688",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:08:46Z"
+  },
+  {
+    "timestamp": 1764616175.813492,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "14692",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:09:35Z"
+  },
+  {
+    "timestamp": 1764616233.7718751,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "14682",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:10:33Z"
+  },
+  {
+    "timestamp": 1764616275.043355,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14688",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T19:11:15Z"
+  },
+  {
+    "timestamp": 1764616320.913265,
+    "seed_id": "2001-II-8::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "14697",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T19:12:00Z"
+  },
+  {
+    "timestamp": 1764616410.410694,
+    "seed_id": "2001-II-8::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-8::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T19:13:30Z"
+  }
+]

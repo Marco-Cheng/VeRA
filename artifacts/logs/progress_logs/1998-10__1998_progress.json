@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764232351.418732,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1998,
+      "question_preview": "Eight spheres of radius 100 are placed on a flat surface so that each sphere is tangent to two others and their centers ",
+      "answer": "152",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-27T08:32:31Z"
+  },
+  {
+    "timestamp": 1764232351.4188192,
+    "seed_id": "1998-10::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-27T08:32:31Z"
+  },
+  {
+    "timestamp": 1764232351.4188669,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Eight spheres of radius 100 are placed on a flat surface so that each sphere is tangent to two others and their centers are the vertices of a regular octagon .  A ninth sphere is placed on the flat surface so that it is tangent to each of the other eight spheres.  The radius of this last sphere is $a +b\\sqrt {c},$ where $a, b,$ and $c$ are positive integers , and $c$ is not divisible by the square of any prime .  Find $a + b + c$ .",
+      "answer": "152",
+      "example_id": "1998-10::1998"
+    },
+    "iso_time": "2025-11-27T08:32:31Z"
+  },
+  {
+    "timestamp": 1764232505.28273,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-10::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 630309647
+    },
+    "iso_time": "2025-11-27T08:35:05Z"
+  },
+  {
+    "timestamp": 1764232506.09525,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "inner_count": 10,
+        "inner_radius": 162,
+        "outer_count": 5
+      }
+    },
+    "iso_time": "2025-11-27T08:35:06Z"
+  },
+  {
+    "timestamp": 1764232506.842904,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 329
+    },
+    "iso_time": "2025-11-27T08:35:06Z"
+  },
+  {
+    "timestamp": 1764232506.843055,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a horizontal plane, two concentric regular rings of tangent spheres are arranged as follows: the inner ring has 10 co",
+      "correct_answer": "329",
+      "seed_value": 630309647
+    },
+    "iso_time": "2025-11-27T08:35:06Z"
+  },
+  {
+    "timestamp": 1764232506.8430998,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "329",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:35:06Z"
+  },
+  {
+    "timestamp": 1764232531.286413,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "320",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:35:31Z"
+  },
+  {
+    "timestamp": 1764232673.733065,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "327",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:37:53Z"
+  },
+  {
+    "timestamp": 1764232696.4578738,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "338",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:38:16Z"
+  },
+  {
+    "timestamp": 1764232725.404042,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "329",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:38:45Z"
+  },
+  {
+    "timestamp": 1764232741.8323781,
+    "seed_id": "1998-10::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-10::1998_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T08:39:01Z"
+  },
+  {
+    "timestamp": 1764232741.8325708,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-10::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1118568734
+    },
+    "iso_time": "2025-11-27T08:39:01Z"
+  },
+  {
+    "timestamp": 1764232742.620568,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "inner_count": 10,
+        "inner_radius": 324,
+        "outer_count": 12
+      }
+    },
+    "iso_time": "2025-11-27T08:39:02Z"
+  },
+  {
+    "timestamp": 1764232743.365205,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 653
+    },
+    "iso_time": "2025-11-27T08:39:03Z"
+  },
+  {
+    "timestamp": 1764232743.3653781,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a horizontal plane, two concentric regular rings of tangent spheres are arranged as follows: the inner ring has 10 co",
+      "correct_answer": "653",
+      "seed_value": 1118568734
+    },
+    "iso_time": "2025-11-27T08:39:03Z"
+  },
+  {
+    "timestamp": 1764232743.3654249,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "653",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:39:03Z"
+  },
+  {
+    "timestamp": 1764232765.784034,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "654",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:39:25Z"
+  },
+  {
+    "timestamp": 1764232806.0419111,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "653",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:40:06Z"
+  },
+  {
+    "timestamp": 1764232850.060402,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "649",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:40:50Z"
+  },
+  {
+    "timestamp": 1764232875.043743,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "644",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:41:15Z"
+  },
+  {
+    "timestamp": 1764232978.638664,
+    "seed_id": "1998-10::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-10::1998_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T08:42:58Z"
+  },
+  {
+    "timestamp": 1764232978.638836,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-10::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 9343983
+    },
+    "iso_time": "2025-11-27T08:42:58Z"
+  },
+  {
+    "timestamp": 1764232979.472758,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "inner_count": 10,
+        "inner_radius": 86,
+        "outer_count": 12
+      }
+    },
+    "iso_time": "2025-11-27T08:42:59Z"
+  },
+  {
+    "timestamp": 1764232980.219556,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 177
+    },
+    "iso_time": "2025-11-27T08:43:00Z"
+  },
+  {
+    "timestamp": 1764232980.219703,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a horizontal plane, two concentric regular rings of tangent spheres are arranged as follows: the inner ring has 10 co",
+      "correct_answer": "177",
+      "seed_value": 9343983
+    },
+    "iso_time": "2025-11-27T08:43:00Z"
+  },
+  {
+    "timestamp": 1764232980.219743,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "185",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:43:00Z"
+  },
+  {
+    "timestamp": 1764233017.067692,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "177",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:43:37Z"
+  },
+  {
+    "timestamp": 1764233084.447103,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "177",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:44:44Z"
+  },
+  {
+    "timestamp": 1764233108.888532,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "184",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:45:08Z"
+  },
+  {
+    "timestamp": 1764233152.600076,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "169",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:45:52Z"
+  },
+  {
+    "timestamp": 1764233246.043529,
+    "seed_id": "1998-10::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-10::1998_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T08:47:26Z"
+  },
+  {
+    "timestamp": 1764233246.043722,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-10::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1766038676
+    },
+    "iso_time": "2025-11-27T08:47:26Z"
+  },
+  {
+    "timestamp": 1764233246.80397,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "inner_count": 10,
+        "inner_radius": 280,
+        "outer_count": 12
+      }
+    },
+    "iso_time": "2025-11-27T08:47:26Z"
+  },
+  {
+    "timestamp": 1764233247.550257,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 565
+    },
+    "iso_time": "2025-11-27T08:47:27Z"
+  },
+  {
+    "timestamp": 1764233247.5504131,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a horizontal plane, two concentric regular rings of tangent spheres are arranged as follows: the inner ring has 10 co",
+      "correct_answer": "565",
+      "seed_value": 1766038676
+    },
+    "iso_time": "2025-11-27T08:47:27Z"
+  },
+  {
+    "timestamp": 1764233247.550453,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "565",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:47:27Z"
+  },
+  {
+    "timestamp": 1764233393.787301,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "572",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:49:53Z"
+  },
+  {
+    "timestamp": 1764233420.114378,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "565",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:50:20Z"
+  },
+  {
+    "timestamp": 1764233474.534404,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "568",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:51:14Z"
+  },
+  {
+    "timestamp": 1764233505.510377,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "570",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:51:45Z"
+  },
+  {
+    "timestamp": 1764233534.320928,
+    "seed_id": "1998-10::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-10::1998_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T08:52:14Z"
+  },
+  {
+    "timestamp": 1764233534.321147,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-10::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 700798026
+    },
+    "iso_time": "2025-11-27T08:52:14Z"
+  },
+  {
+    "timestamp": 1764233535.080885,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "inner_count": 5,
+        "inner_radius": 270,
+        "outer_count": 8
+      }
+    },
+    "iso_time": "2025-11-27T08:52:15Z"
+  },
+  {
+    "timestamp": 1764233535.824925,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 167
+    },
+    "iso_time": "2025-11-27T08:52:15Z"
+  },
+  {
+    "timestamp": 1764233535.8250859,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a horizontal plane, two concentric regular rings of tangent spheres are arranged as follows: the inner ring has 5 con",
+      "correct_answer": "167",
+      "seed_value": 700798026
+    },
+    "iso_time": "2025-11-27T08:52:15Z"
+  },
+  {
+    "timestamp": 1764233535.825129,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "160",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:52:15Z"
+  },
+  {
+    "timestamp": 1764233569.9219031,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "172",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:52:49Z"
+  },
+  {
+    "timestamp": 1764233614.974721,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "167",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:53:34Z"
+  },
+  {
+    "timestamp": 1764233751.517735,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "167",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:55:51Z"
+  },
+  {
+    "timestamp": 1764233828.57116,
+    "seed_id": "1998-10::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "162",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T08:57:08Z"
+  },
+  {
+    "timestamp": 1764233850.748802,
+    "seed_id": "1998-10::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-10::1998_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T08:57:30Z"
+  }
+]

@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1762712706.801752,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1984,
+      "question_preview": "The function f is defined on the set of integers and satisfies $f(n)= \\begin{cases}  n-3 & \\mbox{if }n\\ge 1000 \\\\  f(f(n",
+      "answer": "997",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-09T18:25:06Z"
+  },
+  {
+    "timestamp": 1762712706.80177,
+    "seed_id": "1984-7::1984",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-09T18:25:06Z"
+  },
+  {
+    "timestamp": 1762712706.801781,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The function f is defined on the set of integers and satisfies $f(n)= \\begin{cases}  n-3 & \\mbox{if }n\\ge 1000 \\\\  f(f(n+5)) & \\mbox{if }n<1000 \\end{cases}$ Find $f(84)$ .",
+      "answer": "997",
+      "example_id": "1984-7::1984"
+    },
+    "iso_time": "2025-11-09T18:25:06Z"
+  },
+  {
+    "timestamp": 1762712905.866837,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-7::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2020665908
+    },
+    "iso_time": "2025-11-09T18:28:25Z"
+  },
+  {
+    "timestamp": 1762712906.681346,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 18,
+        "b": 10,
+        "N": 500,
+        "n0": 111
+      }
+    },
+    "iso_time": "2025-11-09T18:28:26Z"
+  },
+  {
+    "timestamp": 1762712907.42947,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 493
+    },
+    "iso_time": "2025-11-09T18:28:27Z"
+  },
+  {
+    "timestamp": 1762712907.4296079,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The function `f` is defined on the set of integers and satisfies $f(n)= \\begin{cases}  n-10 & \\mbox{if }n\\ge 500 \\\\  f(f",
+      "correct_answer": "493",
+      "seed_value": 2020665908
+    },
+    "iso_time": "2025-11-09T18:28:27Z"
+  },
+  {
+    "timestamp": 1762712907.4296472,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "493",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T18:28:27Z"
+  },
+  {
+    "timestamp": 1762713069.093118,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "501",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T18:31:09Z"
+  },
+  {
+    "timestamp": 1762713319.197407,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "493",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T18:35:19Z"
+  },
+  {
+    "timestamp": 1762713470.734671,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "492",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T18:37:50Z"
+  },
+  {
+    "timestamp": 1762713649.460392,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "498",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T18:40:49Z"
+  },
+  {
+    "timestamp": 1762713845.250768,
+    "seed_id": "1984-7::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-7::1984_prompt01-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-09T18:44:05Z"
+  },
+  {
+    "timestamp": 1762713845.2508109,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-7::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1090134325
+    },
+    "iso_time": "2025-11-09T18:44:05Z"
+  },
+  {
+    "timestamp": 1762713846.064928,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 16,
+        "b": 4,
+        "N": 600,
+        "n0": 79
+      }
+    },
+    "iso_time": "2025-11-09T18:44:06Z"
+  },
+  {
+    "timestamp": 1762713846.849961,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 603
+    },
+    "iso_time": "2025-11-09T18:44:06Z"
+  },
+  {
+    "timestamp": 1762713846.850116,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The function `f` is defined on the set of integers and satisfies $f(n)= \\begin{cases}  n-4 & \\mbox{if }n\\ge 600 \\\\  f(f(",
+      "correct_answer": "603",
+      "seed_value": 1090134325
+    },
+    "iso_time": "2025-11-09T18:44:06Z"
+  },
+  {
+    "timestamp": 1762713846.8501608,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "603",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T18:44:06Z"
+  },
+  {
+    "timestamp": 1762714035.932653,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "603",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T18:47:15Z"
+  },
+  {
+    "timestamp": 1762714178.763113,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "602",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T18:49:38Z"
+  },
+  {
+    "timestamp": 1762714411.927704,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "611",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T18:53:31Z"
+  },
+  {
+    "timestamp": 1762714610.481094,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "595",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T18:56:50Z"
+  },
+  {
+    "timestamp": 1762714863.547143,
+    "seed_id": "1984-7::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-7::1984_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T19:01:03Z"
+  },
+  {
+    "timestamp": 1762714863.547188,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-7::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 913545322
+    },
+    "iso_time": "2025-11-09T19:01:03Z"
+  },
+  {
+    "timestamp": 1762714864.356493,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 10,
+        "b": 4,
+        "N": 600,
+        "n0": 79
+      }
+    },
+    "iso_time": "2025-11-09T19:01:04Z"
+  },
+  {
+    "timestamp": 1762714865.1361,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 597
+    },
+    "iso_time": "2025-11-09T19:01:05Z"
+  },
+  {
+    "timestamp": 1762714865.136252,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The function `f` is defined on the set of integers and satisfies $f(n)= \\begin{cases}  n-4 & \\mbox{if }n\\ge 600 \\\\  f(f(",
+      "correct_answer": "597",
+      "seed_value": 913545322
+    },
+    "iso_time": "2025-11-09T19:01:05Z"
+  },
+  {
+    "timestamp": 1762714865.1363049,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "591",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T19:01:05Z"
+  },
+  {
+    "timestamp": 1762715062.4104168,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "602",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T19:04:22Z"
+  },
+  {
+    "timestamp": 1762715223.180825,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "597",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T19:07:03Z"
+  },
+  {
+    "timestamp": 1762715373.648698,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "597",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T19:09:33Z"
+  },
+  {
+    "timestamp": 1762715558.1917682,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "593",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T19:12:38Z"
+  },
+  {
+    "timestamp": 1762715757.9801002,
+    "seed_id": "1984-7::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-7::1984_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T19:15:57Z"
+  },
+  {
+    "timestamp": 1762715757.980145,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-7::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 575019981
+    },
+    "iso_time": "2025-11-09T19:15:57Z"
+  },
+  {
+    "timestamp": 1762715758.837934,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 35,
+        "b": 25,
+        "N": 700,
+        "n0": 465
+      }
+    },
+    "iso_time": "2025-11-09T19:15:58Z"
+  },
+  {
+    "timestamp": 1762715759.6207821,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 680
+    },
+    "iso_time": "2025-11-09T19:15:59Z"
+  },
+  {
+    "timestamp": 1762715759.620918,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The function `f` is defined on the set of integers and satisfies $f(n)= \\begin{cases}  n-25 & \\mbox{if }n\\ge 700 \\\\  f(f",
+      "correct_answer": "680",
+      "seed_value": 575019981
+    },
+    "iso_time": "2025-11-09T19:15:59Z"
+  },
+  {
+    "timestamp": 1762715759.62096,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "676",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T19:15:59Z"
+  },
+  {
+    "timestamp": 1762715949.333318,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "685",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T19:19:09Z"
+  },
+  {
+    "timestamp": 1762716191.1005921,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "680",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T19:23:11Z"
+  },
+  {
+    "timestamp": 1762716458.904741,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "680",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T19:27:38Z"
+  },
+  {
+    "timestamp": 1762716633.172332,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "683",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T19:30:33Z"
+  },
+  {
+    "timestamp": 1762716831.950353,
+    "seed_id": "1984-7::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-7::1984_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T19:33:51Z"
+  },
+  {
+    "timestamp": 1762716831.950399,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1984-7::1984_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1398515418
+    },
+    "iso_time": "2025-11-09T19:33:51Z"
+  },
+  {
+    "timestamp": 1762716832.763338,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 18,
+        "b": 10,
+        "N": 600,
+        "n0": 282
+      }
+    },
+    "iso_time": "2025-11-09T19:33:52Z"
+  },
+  {
+    "timestamp": 1762716833.549698,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 592
+    },
+    "iso_time": "2025-11-09T19:33:53Z"
+  },
+  {
+    "timestamp": 1762716833.549834,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The function `f` is defined on the set of integers and satisfies $f(n)= \\begin{cases}  n-10 & \\mbox{if }n\\ge 600 \\\\  f(f",
+      "correct_answer": "592",
+      "seed_value": 1398515418
+    },
+    "iso_time": "2025-11-09T19:33:53Z"
+  },
+  {
+    "timestamp": 1762716833.549879,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "589",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T19:33:53Z"
+  },
+  {
+    "timestamp": 1762717062.167104,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "592",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T19:37:42Z"
+  },
+  {
+    "timestamp": 1762717218.773622,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "592",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-09T19:40:18Z"
+  },
+  {
+    "timestamp": 1762717392.421537,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "587",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T19:43:12Z"
+  },
+  {
+    "timestamp": 1762717623.6752708,
+    "seed_id": "1984-7::1984",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "588",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-09T19:47:03Z"
+  },
+  {
+    "timestamp": 1762717822.086389,
+    "seed_id": "1984-7::1984",
+    "stage": "variant_success",
+    "message": "Accepted variant 1984-7::1984_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-09T19:50:22Z"
+  }
+]

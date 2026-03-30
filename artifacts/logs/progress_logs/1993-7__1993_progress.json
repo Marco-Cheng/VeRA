@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1763927831.209023,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1993,
+      "question_preview": "Three numbers, $a_1, a_2, a_3$ , are drawn randomly and without replacement from the set $\\{1, 2, 3,\\ldots, 1000\\}$ . Th",
+      "answer": "5",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-23T19:57:11Z"
+  },
+  {
+    "timestamp": 1763927831.209065,
+    "seed_id": "1993-7::1993",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-23T19:57:11Z"
+  },
+  {
+    "timestamp": 1763927831.2090821,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Three numbers, $a_1, a_2, a_3$ , are drawn randomly and without replacement from the set $\\{1, 2, 3,\\ldots, 1000\\}$ . Three other numbers, $b_1, b_2, b_3$ , are then drawn randomly and without replacement from the remaining set of $997$ numbers. Let $p$ be the probability that, after suitable rotation, a brick of dimensions $a_1 \\times a_2 \\times a_3$ can be enclosed in a box of dimension $b_1 \\times b_2 \\times b_3$ , with the sides of the brick parallel to the sides of the box. If $p$ is written as a fraction in lowest terms, what is the sum of the numerator and denominator?",
+      "answer": "5",
+      "example_id": "1993-7::1993"
+    },
+    "iso_time": "2025-11-23T19:57:11Z"
+  },
+  {
+    "timestamp": 1763928545.196892,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-7::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 446546667
+    },
+    "iso_time": "2025-11-23T20:09:05Z"
+  },
+  {
+    "timestamp": 1763928545.977538,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 162,
+        "d": 7,
+        "k": 3
+      }
+    },
+    "iso_time": "2025-11-23T20:09:05Z"
+  },
+  {
+    "timestamp": 1763928546.752352,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 289
+    },
+    "iso_time": "2025-11-23T20:09:06Z"
+  },
+  {
+    "timestamp": 1763928546.752506,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "From the set {1, 2, ..., {n}}, we draw 7 numbers for brick 1, then 7 numbers for brick 2 from the remaining numbers, and",
+      "correct_answer": "289",
+      "seed_value": 446546667
+    },
+    "iso_time": "2025-11-23T20:09:06Z"
+  },
+  {
+    "timestamp": 1763928546.7525508,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "289",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T20:09:06Z"
+  },
+  {
+    "timestamp": 1763928604.8111758,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "296",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:10:04Z"
+  },
+  {
+    "timestamp": 1763928654.150835,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "284",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:10:54Z"
+  },
+  {
+    "timestamp": 1763928710.502861,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "289",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T20:11:50Z"
+  },
+  {
+    "timestamp": 1763928774.333836,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "281",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:12:54Z"
+  },
+  {
+    "timestamp": 1763928827.717389,
+    "seed_id": "1993-7::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-7::1993_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T20:13:47Z"
+  },
+  {
+    "timestamp": 1763928827.7176142,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-7::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1517152665
+    },
+    "iso_time": "2025-11-23T20:13:47Z"
+  },
+  {
+    "timestamp": 1763928828.488566,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 135,
+        "d": 4,
+        "k": 3
+      }
+    },
+    "iso_time": "2025-11-23T20:13:48Z"
+  },
+  {
+    "timestamp": 1763928829.245752,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 76
+    },
+    "iso_time": "2025-11-23T20:13:49Z"
+  },
+  {
+    "timestamp": 1763928829.245919,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "From the set {1, 2, ..., {n}}, we draw 4 numbers for brick 1, then 4 numbers for brick 2 from the remaining numbers, and",
+      "correct_answer": "76",
+      "seed_value": 1517152665
+    },
+    "iso_time": "2025-11-23T20:13:49Z"
+  },
+  {
+    "timestamp": 1763928829.2459688,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "76",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T20:13:49Z"
+  },
+  {
+    "timestamp": 1763928870.101623,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "78",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:14:30Z"
+  },
+  {
+    "timestamp": 1763928942.999552,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "75",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:15:42Z"
+  },
+  {
+    "timestamp": 1763928992.556502,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "84",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:16:32Z"
+  },
+  {
+    "timestamp": 1763929044.297601,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "76",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T20:17:24Z"
+  },
+  {
+    "timestamp": 1763929100.928925,
+    "seed_id": "1993-7::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-7::1993_prompt01-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-23T20:18:20Z"
+  },
+  {
+    "timestamp": 1763929100.92912,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-7::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 419233740
+    },
+    "iso_time": "2025-11-23T20:18:20Z"
+  },
+  {
+    "timestamp": 1763929101.692835,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 187,
+        "d": 8,
+        "k": 4
+      }
+    },
+    "iso_time": "2025-11-23T20:18:21Z"
+  },
+  {
+    "timestamp": 1763929102.449431,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 66826
+    },
+    "iso_time": "2025-11-23T20:18:22Z"
+  },
+  {
+    "timestamp": 1763929102.449597,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "From the set {1, 2, ..., {n}}, we draw 8 numbers for brick 1, then 8 numbers for brick 2 from the remaining numbers, and",
+      "correct_answer": "66826",
+      "seed_value": 419233740
+    },
+    "iso_time": "2025-11-23T20:18:22Z"
+  },
+  {
+    "timestamp": 1763929102.4496498,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "66825",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:18:22Z"
+  },
+  {
+    "timestamp": 1763929166.783406,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "66832",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:19:26Z"
+  },
+  {
+    "timestamp": 1763929222.171585,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "66828",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:20:22Z"
+  },
+  {
+    "timestamp": 1763929286.350173,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "66826",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T20:21:26Z"
+  },
+  {
+    "timestamp": 1763929317.302293,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "66826",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T20:21:57Z"
+  },
+  {
+    "timestamp": 1763929355.222485,
+    "seed_id": "1993-7::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-7::1993_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T20:22:35Z"
+  },
+  {
+    "timestamp": 1763929355.222601,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-7::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 650648348
+    },
+    "iso_time": "2025-11-23T20:22:35Z"
+  },
+  {
+    "timestamp": 1763929356.017843,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 157,
+        "d": 10,
+        "k": 3
+      }
+    },
+    "iso_time": "2025-11-23T20:22:36Z"
+  },
+  {
+    "timestamp": 1763929356.7684438,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 727
+    },
+    "iso_time": "2025-11-23T20:22:36Z"
+  },
+  {
+    "timestamp": 1763929356.7686222,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "From the set {1, 2, ..., {n}}, we draw 10 numbers for brick 1, then 10 numbers for brick 2 from the remaining numbers, a",
+      "correct_answer": "727",
+      "seed_value": 650648348
+    },
+    "iso_time": "2025-11-23T20:22:36Z"
+  },
+  {
+    "timestamp": 1763929356.7686641,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "727",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T20:22:36Z"
+  },
+  {
+    "timestamp": 1763929401.373167,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "723",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:23:21Z"
+  },
+  {
+    "timestamp": 1763929442.642677,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "725",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:24:02Z"
+  },
+  {
+    "timestamp": 1763929479.253409,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "718",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:24:39Z"
+  },
+  {
+    "timestamp": 1763929781.0872672,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "727",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T20:29:41Z"
+  },
+  {
+    "timestamp": 1763929825.315424,
+    "seed_id": "1993-7::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-7::1993_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-23T20:30:25Z"
+  },
+  {
+    "timestamp": 1763929825.315625,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-7::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 510998945
+    },
+    "iso_time": "2025-11-23T20:30:25Z"
+  },
+  {
+    "timestamp": 1763929826.098189,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 192,
+        "d": 4,
+        "k": 3
+      }
+    },
+    "iso_time": "2025-11-23T20:30:26Z"
+  },
+  {
+    "timestamp": 1763929826.8426409,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 76
+    },
+    "iso_time": "2025-11-23T20:30:26Z"
+  },
+  {
+    "timestamp": 1763929826.842795,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "From the set {1, 2, ..., {n}}, we draw 4 numbers for brick 1, then 4 numbers for brick 2 from the remaining numbers, and",
+      "correct_answer": "76",
+      "seed_value": 510998945
+    },
+    "iso_time": "2025-11-23T20:30:26Z"
+  },
+  {
+    "timestamp": 1763929826.842835,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "81",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:30:26Z"
+  },
+  {
+    "timestamp": 1763929888.3936262,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "78",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:31:28Z"
+  },
+  {
+    "timestamp": 1763929937.90606,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "76",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T20:32:17Z"
+  },
+  {
+    "timestamp": 1763930001.8530948,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "76",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T20:33:21Z"
+  },
+  {
+    "timestamp": 1763930036.536195,
+    "seed_id": "1993-7::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "75",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T20:33:56Z"
+  },
+  {
+    "timestamp": 1763930081.5262861,
+    "seed_id": "1993-7::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-7::1993_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T20:34:41Z"
+  }
+]

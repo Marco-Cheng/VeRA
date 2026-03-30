@@ -1,0 +1,2822 @@
+[
+  {
+    "timestamp": 1764434515.5093288,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "The numbers 1, 2, 3, 4, 5, 6, 7, and 8 are randomly written on the faces of a regular octahedron so that each face conta",
+      "answer": "85",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T16:41:55Z"
+  },
+  {
+    "timestamp": 1764434515.509377,
+    "seed_id": "2001-I-15::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T16:41:55Z"
+  },
+  {
+    "timestamp": 1764434515.509401,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The numbers 1, 2, 3, 4, 5, 6, 7, and 8 are randomly written on the faces of a regular octahedron so that each face contains a different number.  The probability that no two consecutive numbers, where 8 and 1 are considered to be consecutive, are written on faces that share an edge is $m/n,$ where $m$ and $n$ are relatively prime positive integers.  Find $m + n.$",
+      "answer": "85",
+      "example_id": "2001-I-15::2001"
+    },
+    "iso_time": "2025-11-29T16:41:55Z"
+  },
+  {
+    "timestamp": 1764434589.230201,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 668892752
+    },
+    "iso_time": "2025-11-29T16:43:09Z"
+  },
+  {
+    "timestamp": 1764434590.385061,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "n_vertices": 8
+      }
+    },
+    "iso_time": "2025-11-29T16:43:10Z"
+  },
+  {
+    "timestamp": 1764434591.4768698,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16
+    },
+    "iso_time": "2025-11-29T16:43:11Z"
+  },
+  {
+    "timestamp": 1764434591.4770188,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The numbers 1 through 8 are written uniformly at random on the vertices of the 3-dimensional hypercube Q_3. Two labels a",
+      "correct_answer": "16",
+      "seed_value": 668892752
+    },
+    "iso_time": "2025-11-29T16:43:11Z"
+  },
+  {
+    "timestamp": 1764434591.477071,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:43:11Z"
+  },
+  {
+    "timestamp": 1764434787.585932,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:46:27Z"
+  },
+  {
+    "timestamp": 1764434882.4081202,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:48:02Z"
+  },
+  {
+    "timestamp": 1764434946.196782,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "15",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:49:06Z"
+  },
+  {
+    "timestamp": 1764435009.895272,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:50:09Z"
+  },
+  {
+    "timestamp": 1764435161.241699,
+    "seed_id": "2001-I-15::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-15::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T16:52:41Z"
+  },
+  {
+    "timestamp": 1764435161.241809,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 162368919
+    },
+    "iso_time": "2025-11-29T16:52:41Z"
+  },
+  {
+    "timestamp": 1764435162.4572659,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 4,
+        "n_vertices": 16
+      }
+    },
+    "iso_time": "2025-11-29T16:52:42Z"
+  },
+  {
+    "timestamp": 1764435163.56085,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 184486
+    },
+    "iso_time": "2025-11-29T16:52:43Z"
+  },
+  {
+    "timestamp": 1764435163.561033,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The numbers 1 through 16 are written uniformly at random on the vertices of the 4-dimensional hypercube Q_4. Two labels ",
+      "correct_answer": "184486",
+      "seed_value": 162368919
+    },
+    "iso_time": "2025-11-29T16:52:43Z"
+  },
+  {
+    "timestamp": 1764435163.5610812,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "184489",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:52:43Z"
+  },
+  {
+    "timestamp": 1764435313.63199,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "184478",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:55:13Z"
+  },
+  {
+    "timestamp": 1764435356.8064032,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "184486",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:55:56Z"
+  },
+  {
+    "timestamp": 1764435429.425925,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "184486",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:57:09Z"
+  },
+  {
+    "timestamp": 1764435481.860863,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "184484",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:58:01Z"
+  },
+  {
+    "timestamp": 1764435525.263246,
+    "seed_id": "2001-I-15::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T16:58:45Z"
+  },
+  {
+    "timestamp": 1764435525.263412,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1171124053
+    },
+    "iso_time": "2025-11-29T16:58:45Z"
+  },
+  {
+    "timestamp": 1764435526.332711,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "n_vertices": 8
+      }
+    },
+    "iso_time": "2025-11-29T16:58:46Z"
+  },
+  {
+    "timestamp": 1764435527.379117,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16
+    },
+    "iso_time": "2025-11-29T16:58:47Z"
+  },
+  {
+    "timestamp": 1764435527.379273,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The numbers 1 through 8 are written uniformly at random on the vertices of the 3-dimensional hypercube Q_3. Two labels a",
+      "correct_answer": "16",
+      "seed_value": 1171124053
+    },
+    "iso_time": "2025-11-29T16:58:47Z"
+  },
+  {
+    "timestamp": 1764435527.379318,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:58:47Z"
+  },
+  {
+    "timestamp": 1764435603.5550652,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "25",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:00:03Z"
+  },
+  {
+    "timestamp": 1764435718.8576052,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "13",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:01:58Z"
+  },
+  {
+    "timestamp": 1764435797.505248,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T17:03:17Z"
+  },
+  {
+    "timestamp": 1764435904.4043672,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:05:04Z"
+  },
+  {
+    "timestamp": 1764436002.152886,
+    "seed_id": "2001-I-15::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-15::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T17:06:42Z"
+  },
+  {
+    "timestamp": 1764436002.152989,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 424183907
+    },
+    "iso_time": "2025-11-29T17:06:42Z"
+  },
+  {
+    "timestamp": 1764436003.445327,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 3,
+        "n_vertices": 8
+      }
+    },
+    "iso_time": "2025-11-29T17:06:43Z"
+  },
+  {
+    "timestamp": 1764436004.499733,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16
+    },
+    "iso_time": "2025-11-29T17:06:44Z"
+  },
+  {
+    "timestamp": 1764436004.4998982,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The numbers 1 through 8 are written uniformly at random on the vertices of the 3-dimensional hypercube Q_3. Two labels a",
+      "correct_answer": "16",
+      "seed_value": 424183907
+    },
+    "iso_time": "2025-11-29T17:06:44Z"
+  },
+  {
+    "timestamp": 1764436004.4999459,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "15",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:06:44Z"
+  },
+  {
+    "timestamp": 1764436075.470995,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T17:07:55Z"
+  },
+  {
+    "timestamp": 1764436134.25808,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:08:54Z"
+  },
+  {
+    "timestamp": 1764436208.179446,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T17:10:08Z"
+  },
+  {
+    "timestamp": 1764436311.914442,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:11:51Z"
+  },
+  {
+    "timestamp": 1764436432.7932959,
+    "seed_id": "2001-I-15::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-15::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T17:13:52Z"
+  },
+  {
+    "timestamp": 1764436432.7933922,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2145136727
+    },
+    "iso_time": "2025-11-29T17:13:52Z"
+  },
+  {
+    "timestamp": 1764436434.09551,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "dimension": 4,
+        "n_vertices": 16
+      }
+    },
+    "iso_time": "2025-11-29T17:13:54Z"
+  },
+  {
+    "timestamp": 1764436435.134568,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 184486
+    },
+    "iso_time": "2025-11-29T17:13:55Z"
+  },
+  {
+    "timestamp": 1764436435.134818,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "The numbers 1 through 16 are written uniformly at random on the vertices of the 4-dimensional hypercube Q_4. Two labels ",
+      "correct_answer": "184486",
+      "seed_value": 2145136727
+    },
+    "iso_time": "2025-11-29T17:13:55Z"
+  },
+  {
+    "timestamp": 1764436435.1348748,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "184477",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:13:55Z"
+  },
+  {
+    "timestamp": 1764436505.570465,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "184486",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T17:15:05Z"
+  },
+  {
+    "timestamp": 1764436551.833206,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "184486",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T17:15:51Z"
+  },
+  {
+    "timestamp": 1764436595.3561192,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "184493",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:16:35Z"
+  },
+  {
+    "timestamp": 1764436623.313858,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "184488",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:17:03Z"
+  },
+  {
+    "timestamp": 1764436730.150765,
+    "seed_id": "2001-I-15::2001",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-29T17:18:50Z"
+  },
+  {
+    "timestamp": 1764436730.1508842,
+    "seed_id": "2001-I-15::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-29T17:18:50Z"
+  },
+  {
+    "timestamp": 1764436730.150929,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 2 (successes=3). | Judge rejected variant 5 (successes=3).",
+      "question": "The numbers 1, 2, 3, 4, 5, 6, 7, and 8 are randomly written on the faces of a regular octahedron so that each face contains a different number.  The probability that no two consecutive numbers, where 8 and 1 are considered to be consecutive, are written on faces that share an edge is $m/n,$ where $m$ and $n$ are relatively prime positive integers.  Find $m + n.$",
+      "answer": "85",
+      "example_id": "2001-I-15::2001"
+    },
+    "iso_time": "2025-11-29T17:18:50Z"
+  },
+  {
+    "timestamp": 1764436810.299281,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1769389112
+    },
+    "iso_time": "2025-11-29T17:20:10Z"
+  },
+  {
+    "timestamp": 1764436811.501267,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:11Z"
+  },
+  {
+    "timestamp": 1764436812.616521,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:12Z"
+  },
+  {
+    "timestamp": 1764436813.7142599,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:13Z"
+  },
+  {
+    "timestamp": 1764436814.813369,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:14Z"
+  },
+  {
+    "timestamp": 1764436815.8266501,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:15Z"
+  },
+  {
+    "timestamp": 1764436816.8807502,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:16Z"
+  },
+  {
+    "timestamp": 1764436817.947854,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:17Z"
+  },
+  {
+    "timestamp": 1764436818.998463,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:18Z"
+  },
+  {
+    "timestamp": 1764436820.031429,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:20Z"
+  },
+  {
+    "timestamp": 1764436821.066258,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:21Z"
+  },
+  {
+    "timestamp": 1764436821.066357,
+    "seed_id": "2001-I-15::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.76708197593689
+    },
+    "iso_time": "2025-11-29T17:20:21Z"
+  },
+  {
+    "timestamp": 1764436821.066435,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 226653984
+    },
+    "iso_time": "2025-11-29T17:20:21Z"
+  },
+  {
+    "timestamp": 1764436822.1230469,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:22Z"
+  },
+  {
+    "timestamp": 1764436823.160202,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:23Z"
+  },
+  {
+    "timestamp": 1764436824.1900108,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:24Z"
+  },
+  {
+    "timestamp": 1764436825.2314901,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:25Z"
+  },
+  {
+    "timestamp": 1764436826.287102,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:26Z"
+  },
+  {
+    "timestamp": 1764436827.3162,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:27Z"
+  },
+  {
+    "timestamp": 1764436828.353931,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:28Z"
+  },
+  {
+    "timestamp": 1764436829.40929,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:29Z"
+  },
+  {
+    "timestamp": 1764436830.476974,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:30Z"
+  },
+  {
+    "timestamp": 1764436831.495599,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:31Z"
+  },
+  {
+    "timestamp": 1764436831.4957042,
+    "seed_id": "2001-I-15::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.429268836975098
+    },
+    "iso_time": "2025-11-29T17:20:31Z"
+  },
+  {
+    "timestamp": 1764436831.495761,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 390615027
+    },
+    "iso_time": "2025-11-29T17:20:31Z"
+  },
+  {
+    "timestamp": 1764436832.531987,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:32Z"
+  },
+  {
+    "timestamp": 1764436833.598467,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:33Z"
+  },
+  {
+    "timestamp": 1764436834.6193368,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:34Z"
+  },
+  {
+    "timestamp": 1764436835.652686,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:35Z"
+  },
+  {
+    "timestamp": 1764436836.688923,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:36Z"
+  },
+  {
+    "timestamp": 1764436837.736505,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:37Z"
+  },
+  {
+    "timestamp": 1764436838.7664,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:38Z"
+  },
+  {
+    "timestamp": 1764436839.795726,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:39Z"
+  },
+  {
+    "timestamp": 1764436840.829924,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:40Z"
+  },
+  {
+    "timestamp": 1764436841.8809128,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:41Z"
+  },
+  {
+    "timestamp": 1764436841.8810382,
+    "seed_id": "2001-I-15::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.38527798652649
+    },
+    "iso_time": "2025-11-29T17:20:41Z"
+  },
+  {
+    "timestamp": 1764436841.8810902,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 331433588
+    },
+    "iso_time": "2025-11-29T17:20:41Z"
+  },
+  {
+    "timestamp": 1764436842.914617,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:42Z"
+  },
+  {
+    "timestamp": 1764436843.954117,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:43Z"
+  },
+  {
+    "timestamp": 1764436845.0205061,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:45Z"
+  },
+  {
+    "timestamp": 1764436846.060954,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:46Z"
+  },
+  {
+    "timestamp": 1764436847.091774,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:47Z"
+  },
+  {
+    "timestamp": 1764436848.157471,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:48Z"
+  },
+  {
+    "timestamp": 1764436849.192682,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:49Z"
+  },
+  {
+    "timestamp": 1764436850.261708,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:50Z"
+  },
+  {
+    "timestamp": 1764436851.3322198,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:51Z"
+  },
+  {
+    "timestamp": 1764436852.366069,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:52Z"
+  },
+  {
+    "timestamp": 1764436852.366171,
+    "seed_id": "2001-I-15::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.48508095741272
+    },
+    "iso_time": "2025-11-29T17:20:52Z"
+  },
+  {
+    "timestamp": 1764436852.366219,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 1990293754
+    },
+    "iso_time": "2025-11-29T17:20:52Z"
+  },
+  {
+    "timestamp": 1764436853.401664,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:53Z"
+  },
+  {
+    "timestamp": 1764436854.432323,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:54Z"
+  },
+  {
+    "timestamp": 1764436855.467872,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:55Z"
+  },
+  {
+    "timestamp": 1764436856.503405,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:56Z"
+  },
+  {
+    "timestamp": 1764436857.550975,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:57Z"
+  },
+  {
+    "timestamp": 1764436858.610144,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:20:58Z"
+  },
+  {
+    "timestamp": 1764436859.6411772,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:20:59Z"
+  },
+  {
+    "timestamp": 1764436860.7026649,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:21:00Z"
+  },
+  {
+    "timestamp": 1764436861.760582,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n": 8,
+        "steps": [
+          1
+        ],
+        "steps_str": "1"
+      }
+    },
+    "iso_time": "2025-11-29T17:21:01Z"
+  },
+  {
+    "timestamp": 1764436862.8071198,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:21:02Z"
+  },
+  {
+    "timestamp": 1764436862.807234,
+    "seed_id": "2001-I-15::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.441015005111694
+    },
+    "iso_time": "2025-11-29T17:21:02Z"
+  },
+  {
+    "timestamp": 1764436862.807263,
+    "seed_id": "2001-I-15::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-29T17:21:02Z"
+  },
+  {
+    "timestamp": 1764436862.807279,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "The numbers 1, 2, 3, 4, 5, 6, 7, and 8 are randomly written on the faces of a regular octahedron so that each face contains a different number.  The probability that no two consecutive numbers, where 8 and 1 are considered to be consecutive, are written on faces that share an edge is $m/n,$ where $m$ and $n$ are relatively prime positive integers.  Find $m + n.$",
+      "answer": "85",
+      "example_id": "2001-I-15::2001"
+    },
+    "iso_time": "2025-11-29T17:21:02Z"
+  },
+  {
+    "timestamp": 1764436945.7031329,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1568279820
+    },
+    "iso_time": "2025-11-29T17:22:25Z"
+  },
+  {
+    "timestamp": 1764436947.196223,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:27Z"
+  },
+  {
+    "timestamp": 1764436948.307959,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:28Z"
+  },
+  {
+    "timestamp": 1764436949.558305,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:29Z"
+  },
+  {
+    "timestamp": 1764436950.592044,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:30Z"
+  },
+  {
+    "timestamp": 1764436951.857613,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:31Z"
+  },
+  {
+    "timestamp": 1764436952.896704,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:32Z"
+  },
+  {
+    "timestamp": 1764436954.178933,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:34Z"
+  },
+  {
+    "timestamp": 1764436955.2450938,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:35Z"
+  },
+  {
+    "timestamp": 1764436956.54438,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:36Z"
+  },
+  {
+    "timestamp": 1764436957.593196,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:37Z"
+  },
+  {
+    "timestamp": 1764436957.5933099,
+    "seed_id": "2001-I-15::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 11.890180826187134
+    },
+    "iso_time": "2025-11-29T17:22:37Z"
+  },
+  {
+    "timestamp": 1764436957.593365,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1619994125
+    },
+    "iso_time": "2025-11-29T17:22:37Z"
+  },
+  {
+    "timestamp": 1764436958.862837,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:38Z"
+  },
+  {
+    "timestamp": 1764436959.9541519,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:39Z"
+  },
+  {
+    "timestamp": 1764436961.232703,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:41Z"
+  },
+  {
+    "timestamp": 1764436962.276114,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:42Z"
+  },
+  {
+    "timestamp": 1764436963.588886,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:43Z"
+  },
+  {
+    "timestamp": 1764436964.621372,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:44Z"
+  },
+  {
+    "timestamp": 1764436965.905717,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:45Z"
+  },
+  {
+    "timestamp": 1764436966.969666,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:46Z"
+  },
+  {
+    "timestamp": 1764436968.2365088,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:48Z"
+  },
+  {
+    "timestamp": 1764436969.293161,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:49Z"
+  },
+  {
+    "timestamp": 1764436969.2932868,
+    "seed_id": "2001-I-15::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.69992184638977
+    },
+    "iso_time": "2025-11-29T17:22:49Z"
+  },
+  {
+    "timestamp": 1764436969.2933419,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 2095500217
+    },
+    "iso_time": "2025-11-29T17:22:49Z"
+  },
+  {
+    "timestamp": 1764436970.6502242,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:50Z"
+  },
+  {
+    "timestamp": 1764436971.683004,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:51Z"
+  },
+  {
+    "timestamp": 1764436972.973218,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:52Z"
+  },
+  {
+    "timestamp": 1764436974.0382771,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:54Z"
+  },
+  {
+    "timestamp": 1764436975.296532,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:55Z"
+  },
+  {
+    "timestamp": 1764436976.327939,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:56Z"
+  },
+  {
+    "timestamp": 1764436977.649916,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:57Z"
+  },
+  {
+    "timestamp": 1764436978.6846342,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:22:58Z"
+  },
+  {
+    "timestamp": 1764436979.9694898,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:22:59Z"
+  },
+  {
+    "timestamp": 1764436981.016335,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:23:01Z"
+  },
+  {
+    "timestamp": 1764436981.016458,
+    "seed_id": "2001-I-15::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.723115921020508
+    },
+    "iso_time": "2025-11-29T17:23:01Z"
+  },
+  {
+    "timestamp": 1764436981.016532,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 330359036
+    },
+    "iso_time": "2025-11-29T17:23:01Z"
+  },
+  {
+    "timestamp": 1764436982.327187,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:23:02Z"
+  },
+  {
+    "timestamp": 1764436983.381998,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:23:03Z"
+  },
+  {
+    "timestamp": 1764436984.6695921,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:23:04Z"
+  },
+  {
+    "timestamp": 1764436985.7103832,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:23:05Z"
+  },
+  {
+    "timestamp": 1764436987.012775,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:23:07Z"
+  },
+  {
+    "timestamp": 1764436988.0561972,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:23:08Z"
+  },
+  {
+    "timestamp": 1764436989.361965,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:23:09Z"
+  },
+  {
+    "timestamp": 1764436990.398682,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:23:10Z"
+  },
+  {
+    "timestamp": 1764436991.686988,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:23:11Z"
+  },
+  {
+    "timestamp": 1764436992.7416,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:23:12Z"
+  },
+  {
+    "timestamp": 1764436992.74172,
+    "seed_id": "2001-I-15::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.725188970565796
+    },
+    "iso_time": "2025-11-29T17:23:12Z"
+  },
+  {
+    "timestamp": 1764436992.741774,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 1231638277
+    },
+    "iso_time": "2025-11-29T17:23:12Z"
+  },
+  {
+    "timestamp": 1764436994.054813,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:23:14Z"
+  },
+  {
+    "timestamp": 1764436995.085176,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:23:15Z"
+  },
+  {
+    "timestamp": 1764436996.364992,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:23:16Z"
+  },
+  {
+    "timestamp": 1764436997.401249,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:23:17Z"
+  },
+  {
+    "timestamp": 1764436998.7214239,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:23:18Z"
+  },
+  {
+    "timestamp": 1764436999.775717,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:23:19Z"
+  },
+  {
+    "timestamp": 1764437001.075083,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:23:21Z"
+  },
+  {
+    "timestamp": 1764437002.142766,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:23:22Z"
+  },
+  {
+    "timestamp": 1764437003.410939,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "alpha": 8,
+        "edge_forb_diffs_str": "1, 3",
+        "opp_forb_diffs_str": "4",
+        "edge_forb_diffs": [
+          1,
+          3
+        ],
+        "opp_forb_diffs": [
+          4
+        ]
+      }
+    },
+    "iso_time": "2025-11-29T17:23:23Z"
+  },
+  {
+    "timestamp": 1764437004.4164789,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-29T17:23:24Z"
+  },
+  {
+    "timestamp": 1764437004.416606,
+    "seed_id": "2001-I-15::2001",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.674831867218018
+    },
+    "iso_time": "2025-11-29T17:23:24Z"
+  },
+  {
+    "timestamp": 1764437004.4166431,
+    "seed_id": "2001-I-15::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-29T17:23:24Z"
+  },
+  {
+    "timestamp": 1764437004.4166589,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "The numbers 1, 2, 3, 4, 5, 6, 7, and 8 are randomly written on the faces of a regular octahedron so that each face contains a different number.  The probability that no two consecutive numbers, where 8 and 1 are considered to be consecutive, are written on faces that share an edge is $m/n,$ where $m$ and $n$ are relatively prime positive integers.  Find $m + n.$",
+      "answer": "85",
+      "example_id": "2001-I-15::2001"
+    },
+    "iso_time": "2025-11-29T17:23:24Z"
+  },
+  {
+    "timestamp": 1764437099.768429,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 739217202
+    },
+    "iso_time": "2025-11-29T17:24:59Z"
+  },
+  {
+    "timestamp": 1764437101.01289,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "solid_name": "octahedron",
+        "n_faces": 8,
+        "t_window": 1
+      }
+    },
+    "iso_time": "2025-11-29T17:25:01Z"
+  },
+  {
+    "timestamp": 1764437102.125793,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 85
+    },
+    "iso_time": "2025-11-29T17:25:02Z"
+  },
+  {
+    "timestamp": 1764437102.125951,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On the faces of a regular octahedron, the numbers 1 through 8 are randomly written, one distinct number per face. Two nu",
+      "correct_answer": "85",
+      "seed_value": 739217202
+    },
+    "iso_time": "2025-11-29T17:25:02Z"
+  },
+  {
+    "timestamp": 1764437102.1259992,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "92",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:25:02Z"
+  },
+  {
+    "timestamp": 1764437208.2270331,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "85",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T17:26:48Z"
+  },
+  {
+    "timestamp": 1764437319.5353322,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "80",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:28:39Z"
+  },
+  {
+    "timestamp": 1764437462.97985,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "87",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:31:02Z"
+  },
+  {
+    "timestamp": 1764437606.461334,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "85",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T17:33:26Z"
+  },
+  {
+    "timestamp": 1764437762.1506681,
+    "seed_id": "2001-I-15::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-15::2001_prompt04-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T17:36:02Z"
+  },
+  {
+    "timestamp": 1764437762.150741,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-15::2001_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 1622529594
+    },
+    "iso_time": "2025-11-29T17:36:02Z"
+  },
+  {
+    "timestamp": 1764437763.465782,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "solid_name": "octahedron",
+        "n_faces": 8,
+        "t_window": 1
+      }
+    },
+    "iso_time": "2025-11-29T17:36:03Z"
+  },
+  {
+    "timestamp": 1764437764.489762,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 85
+    },
+    "iso_time": "2025-11-29T17:36:04Z"
+  },
+  {
+    "timestamp": 1764437764.489952,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On the faces of a regular octahedron, the numbers 1 through 8 are randomly written, one distinct number per face. Two nu",
+      "correct_answer": "85",
+      "seed_value": 1622529594
+    },
+    "iso_time": "2025-11-29T17:36:04Z"
+  },
+  {
+    "timestamp": 1764437764.4900448,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "80",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:36:04Z"
+  },
+  {
+    "timestamp": 1764437932.6082392,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "85",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T17:38:52Z"
+  },
+  {
+    "timestamp": 1764438004.120259,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "84",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:40:04Z"
+  },
+  {
+    "timestamp": 1764438103.566112,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "85",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T17:41:43Z"
+  },
+  {
+    "timestamp": 1764438196.1882381,
+    "seed_id": "2001-I-15::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "90",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T17:43:16Z"
+  },
+  {
+    "timestamp": 1764438320.014426,
+    "seed_id": "2001-I-15::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-15::2001_prompt04-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T17:45:20Z"
+  }
+]

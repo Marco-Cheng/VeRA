@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764823605.354749,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "The members of a distinguished committee were choosing a president, and each member gave one vote to one of the $27$ can",
+      "answer": "134",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-04T04:46:45Z"
+  },
+  {
+    "timestamp": 1764823605.35478,
+    "seed_id": "2003-II-12::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-04T04:46:45Z"
+  },
+  {
+    "timestamp": 1764823605.354795,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The members of a distinguished committee were choosing a president, and each member gave one vote to one of the $27$ candidates. For each candidate, the exact percentage of votes the candidate got was smaller by at least $1$ than the number of votes for that candidate. What is the smallest possible number of members of the committee?",
+      "answer": "134",
+      "example_id": "2003-II-12::2003"
+    },
+    "iso_time": "2025-12-04T04:46:45Z"
+  },
+  {
+    "timestamp": 1764823678.968597,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-12::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 922448124
+    },
+    "iso_time": "2025-12-04T04:47:58Z"
+  },
+  {
+    "timestamp": 1764823680.279389,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_candidates": 32,
+        "base_gap": 3,
+        "gap_step": 4
+      }
+    },
+    "iso_time": "2025-12-04T04:48:00Z"
+  },
+  {
+    "timestamp": 1764823681.511849,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2196
+    },
+    "iso_time": "2025-12-04T04:48:01Z"
+  },
+  {
+    "timestamp": 1764823681.51203,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In an election with 32 candidates, each committee member casts one vote for a single candidate. The candidates are label",
+      "correct_answer": "2196",
+      "seed_value": 922448124
+    },
+    "iso_time": "2025-12-04T04:48:01Z"
+  },
+  {
+    "timestamp": 1764823681.5121012,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2196",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:48:01Z"
+  },
+  {
+    "timestamp": 1764823722.540322,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2196",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T04:48:42Z"
+  },
+  {
+    "timestamp": 1764823864.469096,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2190",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:51:04Z"
+  },
+  {
+    "timestamp": 1764823944.956925,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2194",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:52:24Z"
+  },
+  {
+    "timestamp": 1764823992.372412,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2200",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:53:12Z"
+  },
+  {
+    "timestamp": 1764824196.5072372,
+    "seed_id": "2003-II-12::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-12::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T04:56:36Z"
+  },
+  {
+    "timestamp": 1764824196.507432,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-12::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 320213035
+    },
+    "iso_time": "2025-12-04T04:56:36Z"
+  },
+  {
+    "timestamp": 1764824197.8656058,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_candidates": 38,
+        "base_gap": 1,
+        "gap_step": 1
+      }
+    },
+    "iso_time": "2025-12-04T04:56:37Z"
+  },
+  {
+    "timestamp": 1764824198.989769,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 858
+    },
+    "iso_time": "2025-12-04T04:56:38Z"
+  },
+  {
+    "timestamp": 1764824198.9899158,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In an election with 38 candidates, each committee member casts one vote for a single candidate. The candidates are label",
+      "correct_answer": "858",
+      "seed_value": 320213035
+    },
+    "iso_time": "2025-12-04T04:56:38Z"
+  },
+  {
+    "timestamp": 1764824198.989973,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "851",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T04:56:38Z"
+  },
+  {
+    "timestamp": 1764824432.53701,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "858",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T05:00:32Z"
+  },
+  {
+    "timestamp": 1764824533.0301409,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "864",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T05:02:13Z"
+  },
+  {
+    "timestamp": 1764824662.984768,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "852",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T05:04:22Z"
+  },
+  {
+    "timestamp": 1764824717.2022731,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "858",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T05:05:17Z"
+  },
+  {
+    "timestamp": 1764824818.252249,
+    "seed_id": "2003-II-12::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-12::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T05:06:58Z"
+  },
+  {
+    "timestamp": 1764824818.252383,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-12::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1343718890
+    },
+    "iso_time": "2025-12-04T05:06:58Z"
+  },
+  {
+    "timestamp": 1764824819.582719,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_candidates": 17,
+        "base_gap": 2,
+        "gap_step": 4
+      }
+    },
+    "iso_time": "2025-12-04T05:06:59Z"
+  },
+  {
+    "timestamp": 1764824820.604901,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 686
+    },
+    "iso_time": "2025-12-04T05:07:00Z"
+  },
+  {
+    "timestamp": 1764824820.605043,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In an election with 17 candidates, each committee member casts one vote for a single candidate. The candidates are label",
+      "correct_answer": "686",
+      "seed_value": 1343718890
+    },
+    "iso_time": "2025-12-04T05:07:00Z"
+  },
+  {
+    "timestamp": 1764824820.6051042,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "688",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T05:07:00Z"
+  },
+  {
+    "timestamp": 1764824957.902604,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "686",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T05:09:17Z"
+  },
+  {
+    "timestamp": 1764825020.262419,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "677",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T05:10:20Z"
+  },
+  {
+    "timestamp": 1764825049.076849,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "691",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T05:10:49Z"
+  },
+  {
+    "timestamp": 1764825122.503857,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "686",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T05:12:02Z"
+  },
+  {
+    "timestamp": 1764825205.5065548,
+    "seed_id": "2003-II-12::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-12::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T05:13:25Z"
+  },
+  {
+    "timestamp": 1764825205.506739,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-12::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 245445452
+    },
+    "iso_time": "2025-12-04T05:13:25Z"
+  },
+  {
+    "timestamp": 1764825206.8628259,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_candidates": 19,
+        "base_gap": 4,
+        "gap_step": 1
+      }
+    },
+    "iso_time": "2025-12-04T05:13:26Z"
+  },
+  {
+    "timestamp": 1764825208.04646,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 353
+    },
+    "iso_time": "2025-12-04T05:13:28Z"
+  },
+  {
+    "timestamp": 1764825208.0466099,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In an election with 19 candidates, each committee member casts one vote for a single candidate. The candidates are label",
+      "correct_answer": "353",
+      "seed_value": 245445452
+    },
+    "iso_time": "2025-12-04T05:13:28Z"
+  },
+  {
+    "timestamp": 1764825208.046676,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "344",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T05:13:28Z"
+  },
+  {
+    "timestamp": 1764825265.512605,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "353",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T05:14:25Z"
+  },
+  {
+    "timestamp": 1764825325.1873732,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "353",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T05:15:25Z"
+  },
+  {
+    "timestamp": 1764825382.391579,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "348",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T05:16:22Z"
+  },
+  {
+    "timestamp": 1764825424.654879,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "362",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T05:17:04Z"
+  },
+  {
+    "timestamp": 1764825516.5710661,
+    "seed_id": "2003-II-12::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-12::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T05:18:36Z"
+  },
+  {
+    "timestamp": 1764825516.571241,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-12::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 260747434
+    },
+    "iso_time": "2025-12-04T05:18:36Z"
+  },
+  {
+    "timestamp": 1764825517.817256,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_candidates": 36,
+        "base_gap": 1,
+        "gap_step": 4
+      }
+    },
+    "iso_time": "2025-12-04T05:18:37Z"
+  },
+  {
+    "timestamp": 1764825518.963604,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2674
+    },
+    "iso_time": "2025-12-04T05:18:38Z"
+  },
+  {
+    "timestamp": 1764825518.9637702,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In an election with 36 candidates, each committee member casts one vote for a single candidate. The candidates are label",
+      "correct_answer": "2674",
+      "seed_value": 260747434
+    },
+    "iso_time": "2025-12-04T05:18:38Z"
+  },
+  {
+    "timestamp": 1764825518.9638379,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2674",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T05:18:38Z"
+  },
+  {
+    "timestamp": 1764825683.9052842,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2666",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T05:21:23Z"
+  },
+  {
+    "timestamp": 1764825777.3557692,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2680",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T05:22:57Z"
+  },
+  {
+    "timestamp": 1764825831.582718,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2673",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-04T05:23:51Z"
+  },
+  {
+    "timestamp": 1764825879.7092538,
+    "seed_id": "2003-II-12::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2674",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-04T05:24:39Z"
+  },
+  {
+    "timestamp": 1764826058.5753531,
+    "seed_id": "2003-II-12::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-12::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-04T05:27:38Z"
+  }
+]

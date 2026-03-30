@@ -1,0 +1,2176 @@
+[
+  {
+    "timestamp": 1765034880.135527,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "Let $C$ be the coefficient of $x^2$ in the expansion of the product $(1 - x)(1 + 2x)(1 - 3x)\\cdots(1 + 14x)(1 - 15x).$ F",
+      "answer": "588",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-06T15:28:00Z"
+  },
+  {
+    "timestamp": 1765034880.1356091,
+    "seed_id": "2004-I-7::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-06T15:28:00Z"
+  },
+  {
+    "timestamp": 1765034880.135653,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $C$ be the coefficient of $x^2$ in the expansion of the product $(1 - x)(1 + 2x)(1 - 3x)\\cdots(1 + 14x)(1 - 15x).$ Find $|C|.$",
+      "answer": "588",
+      "example_id": "2004-I-7::2004"
+    },
+    "iso_time": "2025-12-06T15:28:00Z"
+  },
+  {
+    "timestamp": 1765035079.703487,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1186814741
+    },
+    "iso_time": "2025-12-06T15:31:19Z"
+  },
+  {
+    "timestamp": 1765035081.069236,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 27,
+        "p": 2,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-06T15:31:21Z"
+  },
+  {
+    "timestamp": 1765035082.2723358,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 900927940185
+    },
+    "iso_time": "2025-12-06T15:31:22Z"
+  },
+  {
+    "timestamp": 1765035082.272507,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let P(x) = product_{k=1}^{27} (1 + (-1)^k * k^2 * x). Denote by C the coefficient of x^4 in the expansion of P(x). Find ",
+      "correct_answer": "900927940185",
+      "seed_value": 1186814741
+    },
+    "iso_time": "2025-12-06T15:31:22Z"
+  },
+  {
+    "timestamp": 1765035082.272553,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "900927940184",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T15:31:22Z"
+  },
+  {
+    "timestamp": 1765035241.5294771,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "900927940185",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T15:34:01Z"
+  },
+  {
+    "timestamp": 1765035498.001369,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "900927940179",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T15:38:18Z"
+  },
+  {
+    "timestamp": 1765035936.372282,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "900927940193",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T15:45:36Z"
+  },
+  {
+    "timestamp": 1765036195.192241,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "900927940185",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T15:49:55Z"
+  },
+  {
+    "timestamp": 1765036264.625706,
+    "seed_id": "2004-I-7::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-7::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T15:51:04Z"
+  },
+  {
+    "timestamp": 1765036264.625916,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1811019036
+    },
+    "iso_time": "2025-12-06T15:51:04Z"
+  },
+  {
+    "timestamp": 1765036265.9689941,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 19,
+        "p": 2,
+        "m": 5
+      }
+    },
+    "iso_time": "2025-12-06T15:51:05Z"
+  },
+  {
+    "timestamp": 1765036267.070893,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -3447800702340
+    },
+    "iso_time": "2025-12-06T15:51:07Z"
+  },
+  {
+    "timestamp": 1765036267.0710368,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let P(x) = product_{k=1}^{19} (1 + (-1)^k * k^2 * x). Denote by C the coefficient of x^5 in the expansion of P(x). Find ",
+      "correct_answer": "-3447800702340",
+      "seed_value": 1811019036
+    },
+    "iso_time": "2025-12-06T15:51:07Z"
+  },
+  {
+    "timestamp": 1765036267.071085,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T15:51:07Z"
+  },
+  {
+    "timestamp": 1765036438.067976,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-3447800702337",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T15:53:58Z"
+  },
+  {
+    "timestamp": 1765037299.6293602,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-3447800702340",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T16:08:19Z"
+  },
+  {
+    "timestamp": 1765037489.4948401,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-3447800702332",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T16:11:29Z"
+  },
+  {
+    "timestamp": 1765037771.970757,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-3447800702340",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T16:16:11Z"
+  },
+  {
+    "timestamp": 1765037982.812265,
+    "seed_id": "2004-I-7::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-7::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T16:19:42Z"
+  },
+  {
+    "timestamp": 1765037982.81246,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1500976928
+    },
+    "iso_time": "2025-12-06T16:19:42Z"
+  },
+  {
+    "timestamp": 1765037984.150934,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 21,
+        "p": 1,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-06T16:19:44Z"
+  },
+  {
+    "timestamp": 1765037985.279179,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1059696
+    },
+    "iso_time": "2025-12-06T16:19:45Z"
+  },
+  {
+    "timestamp": 1765037985.2793322,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let P(x) = product_{k=1}^{21} (1 + (-1)^k * k^1 * x). Denote by C the coefficient of x^4 in the expansion of P(x). Find ",
+      "correct_answer": "1059696",
+      "seed_value": 1500976928
+    },
+    "iso_time": "2025-12-06T16:19:45Z"
+  },
+  {
+    "timestamp": 1765037985.279379,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1059695",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T16:19:45Z"
+  },
+  {
+    "timestamp": 1765038099.752662,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1059696",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T16:21:39Z"
+  },
+  {
+    "timestamp": 1765038192.8348448,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1059696",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T16:23:12Z"
+  },
+  {
+    "timestamp": 1765038274.6473029,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1059702",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T16:24:34Z"
+  },
+  {
+    "timestamp": 1765038305.240748,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1059697",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T16:25:05Z"
+  },
+  {
+    "timestamp": 1765038435.0181818,
+    "seed_id": "2004-I-7::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-7::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T16:27:15Z"
+  },
+  {
+    "timestamp": 1765038435.018362,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1279260600
+    },
+    "iso_time": "2025-12-06T16:27:15Z"
+  },
+  {
+    "timestamp": 1765038436.189304,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 20,
+        "p": 4,
+        "m": 6
+      }
+    },
+    "iso_time": "2025-12-06T16:27:16Z"
+  },
+  {
+    "timestamp": 1765038437.33687,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -833466883879241067450693787406
+    },
+    "iso_time": "2025-12-06T16:27:17Z"
+  },
+  {
+    "timestamp": 1765038437.337019,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let P(x) = product_{k=1}^{20} (1 + (-1)^k * k^4 * x). Denote by C the coefficient of x^6 in the expansion of P(x). Find ",
+      "correct_answer": "-833466883879241067450693787406",
+      "seed_value": 1279260600
+    },
+    "iso_time": "2025-12-06T16:27:17Z"
+  },
+  {
+    "timestamp": 1765038437.337069,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-833466883879241067450693787406",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T16:27:17Z"
+  },
+  {
+    "timestamp": 1765038665.4129899,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T16:31:05Z"
+  },
+  {
+    "timestamp": 1765038742.725875,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-833466883879241067450693787406",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T16:32:22Z"
+  },
+  {
+    "timestamp": 1765038944.556028,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-833466883879241079913317400570",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T16:35:44Z"
+  },
+  {
+    "timestamp": 1765039740.647701,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-833466883879241079913317400568",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T16:49:00Z"
+  },
+  {
+    "timestamp": 1765040454.668406,
+    "seed_id": "2004-I-7::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-12-06T17:00:54Z"
+  },
+  {
+    "timestamp": 1765040454.668685,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1658101648
+    },
+    "iso_time": "2025-12-06T17:00:54Z"
+  },
+  {
+    "timestamp": 1765040456.039592,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 12,
+        "p": 3,
+        "m": 4
+      }
+    },
+    "iso_time": "2025-12-06T17:00:56Z"
+  },
+  {
+    "timestamp": 1765040457.099555,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1901718983643
+    },
+    "iso_time": "2025-12-06T17:00:57Z"
+  },
+  {
+    "timestamp": 1765040457.099722,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let P(x) = product_{k=1}^{12} (1 + (-1)^k * k^3 * x). Denote by C the coefficient of x^4 in the expansion of P(x). Find ",
+      "correct_answer": "1901718983643",
+      "seed_value": 1658101648
+    },
+    "iso_time": "2025-12-06T17:00:57Z"
+  },
+  {
+    "timestamp": 1765040457.0997708,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1901718983641",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:00:57Z"
+  },
+  {
+    "timestamp": 1765040641.598579,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1901718983635",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:04:01Z"
+  },
+  {
+    "timestamp": 1765041032.4243681,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1901718983643",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:10:32Z"
+  },
+  {
+    "timestamp": 1765041296.69781,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1901718983644",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:14:56Z"
+  },
+  {
+    "timestamp": 1765041662.357847,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1901718983643",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:21:02Z"
+  },
+  {
+    "timestamp": 1765041816.015857,
+    "seed_id": "2004-I-7::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-7::2004_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T17:23:36Z"
+  },
+  {
+    "timestamp": 1765041816.0159879,
+    "seed_id": "2004-I-7::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-06T17:23:36Z"
+  },
+  {
+    "timestamp": 1765041816.016085,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 4 (successes=2).",
+      "question": "Let $C$ be the coefficient of $x^2$ in the expansion of the product $(1 - x)(1 + 2x)(1 - 3x)\\cdots(1 + 14x)(1 - 15x).$ Find $|C|.$",
+      "answer": "588",
+      "example_id": "2004-I-7::2004"
+    },
+    "iso_time": "2025-12-06T17:23:36Z"
+  },
+  {
+    "timestamp": 1765041863.332279,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 919357828
+    },
+    "iso_time": "2025-12-06T17:24:23Z"
+  },
+  {
+    "timestamp": 1765041864.6926222,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 5,
+        "r": 2,
+        "t": 2
+      }
+    },
+    "iso_time": "2025-12-06T17:24:24Z"
+  },
+  {
+    "timestamp": 1765041865.9276001,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 371008
+    },
+    "iso_time": "2025-12-06T17:24:25Z"
+  },
+  {
+    "timestamp": 1765041865.9277859,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the polynomial P(x) = product_{i=1}^5 (1 - r^i x)(1 + r^i x). Let C be the coefficient of x^(22) in P(x). Compu",
+      "correct_answer": "371008",
+      "seed_value": 919357828
+    },
+    "iso_time": "2025-12-06T17:24:25Z"
+  },
+  {
+    "timestamp": 1765041865.92784,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "371002",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:24:25Z"
+  },
+  {
+    "timestamp": 1765041891.996997,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "371008",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:24:51Z"
+  },
+  {
+    "timestamp": 1765041919.51121,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "371008",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:25:19Z"
+  },
+  {
+    "timestamp": 1765041940.839993,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "371014",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:25:40Z"
+  },
+  {
+    "timestamp": 1765041948.6235452,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "371003",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:25:48Z"
+  },
+  {
+    "timestamp": 1765041960.704898,
+    "seed_id": "2004-I-7::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-06T17:26:00Z"
+  },
+  {
+    "timestamp": 1765041960.7051678,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1443794973
+    },
+    "iso_time": "2025-12-06T17:26:00Z"
+  },
+  {
+    "timestamp": 1765041962.071639,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 6,
+        "r": 2,
+        "t": 2
+      }
+    },
+    "iso_time": "2025-12-06T17:26:02Z"
+  },
+  {
+    "timestamp": 1765041963.280277,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5957952
+    },
+    "iso_time": "2025-12-06T17:26:03Z"
+  },
+  {
+    "timestamp": 1765041963.280458,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the polynomial P(x) = product_{i=1}^6 (1 - r^i x)(1 + r^i x). Let C be the coefficient of x^(22) in P(x). Compu",
+      "correct_answer": "5957952",
+      "seed_value": 1443794973
+    },
+    "iso_time": "2025-12-06T17:26:03Z"
+  },
+  {
+    "timestamp": 1765041963.28051,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5957948",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:26:03Z"
+  },
+  {
+    "timestamp": 1765042000.212909,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5957952",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:26:40Z"
+  },
+  {
+    "timestamp": 1765042047.071111,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5957956",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:27:27Z"
+  },
+  {
+    "timestamp": 1765042054.300797,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5957946",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:27:34Z"
+  },
+  {
+    "timestamp": 1765042061.6712298,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5957952",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:27:41Z"
+  },
+  {
+    "timestamp": 1765042094.6450062,
+    "seed_id": "2004-I-7::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-06T17:28:14Z"
+  },
+  {
+    "timestamp": 1765042094.64528,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 197543754
+    },
+    "iso_time": "2025-12-06T17:28:14Z"
+  },
+  {
+    "timestamp": 1765042095.905447,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4,
+        "r": 2,
+        "t": 2
+      }
+    },
+    "iso_time": "2025-12-06T17:28:15Z"
+  },
+  {
+    "timestamp": 1765042096.972194,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 22848
+    },
+    "iso_time": "2025-12-06T17:28:16Z"
+  },
+  {
+    "timestamp": 1765042096.972321,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the polynomial P(x) = product_{i=1}^4 (1 - r^i x)(1 + r^i x). Let C be the coefficient of x^(22) in P(x). Compu",
+      "correct_answer": "22848",
+      "seed_value": 197543754
+    },
+    "iso_time": "2025-12-06T17:28:16Z"
+  },
+  {
+    "timestamp": 1765042096.972369,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "22848",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:28:16Z"
+  },
+  {
+    "timestamp": 1765042119.634262,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "22853",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:28:39Z"
+  },
+  {
+    "timestamp": 1765042159.871719,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "22855",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:29:19Z"
+  },
+  {
+    "timestamp": 1765042184.652543,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "22848",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:29:44Z"
+  },
+  {
+    "timestamp": 1765042208.2746618,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "22857",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:30:08Z"
+  },
+  {
+    "timestamp": 1765042231.041492,
+    "seed_id": "2004-I-7::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-06T17:30:31Z"
+  },
+  {
+    "timestamp": 1765042231.04178,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1362034965
+    },
+    "iso_time": "2025-12-06T17:30:31Z"
+  },
+  {
+    "timestamp": 1765042232.338277,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 6,
+        "r": 2,
+        "t": 2
+      }
+    },
+    "iso_time": "2025-12-06T17:30:32Z"
+  },
+  {
+    "timestamp": 1765042233.592651,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5957952
+    },
+    "iso_time": "2025-12-06T17:30:33Z"
+  },
+  {
+    "timestamp": 1765042233.592833,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the polynomial P(x) = product_{i=1}^6 (1 - r^i x)(1 + r^i x). Let C be the coefficient of x^(22) in P(x). Compu",
+      "correct_answer": "5957952",
+      "seed_value": 1362034965
+    },
+    "iso_time": "2025-12-06T17:30:33Z"
+  },
+  {
+    "timestamp": 1765042233.59289,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5957952",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:30:33Z"
+  },
+  {
+    "timestamp": 1765042257.797703,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5957955",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:30:57Z"
+  },
+  {
+    "timestamp": 1765042288.178352,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5957954",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:31:28Z"
+  },
+  {
+    "timestamp": 1765042312.65101,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5957952",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:31:52Z"
+  },
+  {
+    "timestamp": 1765042337.754702,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5957949",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:32:17Z"
+  },
+  {
+    "timestamp": 1765042366.308759,
+    "seed_id": "2004-I-7::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-06T17:32:46Z"
+  },
+  {
+    "timestamp": 1765042366.30906,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 782443894
+    },
+    "iso_time": "2025-12-06T17:32:46Z"
+  },
+  {
+    "timestamp": 1765042367.577636,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 5,
+        "r": 2,
+        "t": 3
+      }
+    },
+    "iso_time": "2025-12-06T17:32:47Z"
+  },
+  {
+    "timestamp": 1765042368.735575,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 23744512
+    },
+    "iso_time": "2025-12-06T17:32:48Z"
+  },
+  {
+    "timestamp": 1765042368.735714,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the polynomial P(x) = product_{i=1}^5 (1 - r^i x)(1 + r^i x). Let C be the coefficient of x^(23) in P(x). Compu",
+      "correct_answer": "23744512",
+      "seed_value": 782443894
+    },
+    "iso_time": "2025-12-06T17:32:48Z"
+  },
+  {
+    "timestamp": 1765042368.735757,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "23744512",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:32:48Z"
+  },
+  {
+    "timestamp": 1765042387.333927,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "23744513",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:33:07Z"
+  },
+  {
+    "timestamp": 1765042423.02058,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "23744503",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:33:43Z"
+  },
+  {
+    "timestamp": 1765042429.15769,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "23744504",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:33:49Z"
+  },
+  {
+    "timestamp": 1765042446.6479201,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "23744512",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:34:06Z"
+  },
+  {
+    "timestamp": 1765042472.244305,
+    "seed_id": "2004-I-7::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-06T17:34:32Z"
+  },
+  {
+    "timestamp": 1765042472.244446,
+    "seed_id": "2004-I-7::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-06T17:34:32Z"
+  },
+  {
+    "timestamp": 1765042472.244514,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Let $C$ be the coefficient of $x^2$ in the expansion of the product $(1 - x)(1 + 2x)(1 - 3x)\\cdots(1 + 14x)(1 - 15x).$ Find $|C|.$",
+      "answer": "588",
+      "example_id": "2004-I-7::2004"
+    },
+    "iso_time": "2025-12-06T17:34:32Z"
+  },
+  {
+    "timestamp": 1765042727.831758,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1196914576
+    },
+    "iso_time": "2025-12-06T17:38:47Z"
+  },
+  {
+    "timestamp": 1765042729.172864,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_factors": 10,
+        "linear_a": 2,
+        "linear_b": 1,
+        "power_d": 1,
+        "degree_t": 3
+      }
+    },
+    "iso_time": "2025-12-06T17:38:49Z"
+  },
+  {
+    "timestamp": 1765042730.3933282,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6920
+    },
+    "iso_time": "2025-12-06T17:38:50Z"
+  },
+  {
+    "timestamp": 1765042730.393572,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial P(x) = ∏_{k=1}^{ {num_factors} } (1 + (-1)^k (2k + 1)^{ {power_d} } x). Let C",
+      "correct_answer": "6920",
+      "seed_value": 1196914576
+    },
+    "iso_time": "2025-12-06T17:38:50Z"
+  },
+  {
+    "timestamp": 1765042730.3936682,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6916",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:38:50Z"
+  },
+  {
+    "timestamp": 1765042877.4954398,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6920",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:41:17Z"
+  },
+  {
+    "timestamp": 1765042910.817086,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6915",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:41:50Z"
+  },
+  {
+    "timestamp": 1765042927.6732879,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6925",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:42:07Z"
+  },
+  {
+    "timestamp": 1765042964.267661,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6920",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:42:44Z"
+  },
+  {
+    "timestamp": 1765042969.493952,
+    "seed_id": "2004-I-7::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-06T17:42:49Z"
+  },
+  {
+    "timestamp": 1765042969.4942589,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 2136632842
+    },
+    "iso_time": "2025-12-06T17:42:49Z"
+  },
+  {
+    "timestamp": 1765042970.631274,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_factors": 16,
+        "linear_a": 3,
+        "linear_b": 3,
+        "power_d": 2,
+        "degree_t": 3
+      }
+    },
+    "iso_time": "2025-12-06T17:42:50Z"
+  },
+  {
+    "timestamp": 1765042971.735368,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 14263538184
+    },
+    "iso_time": "2025-12-06T17:42:51Z"
+  },
+  {
+    "timestamp": 1765042971.735519,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial P(x) = ∏_{k=1}^{ {num_factors} } (1 + (-1)^k (3k + 3)^{ {power_d} } x). Let C",
+      "correct_answer": "14263538184",
+      "seed_value": 2136632842
+    },
+    "iso_time": "2025-12-06T17:42:51Z"
+  },
+  {
+    "timestamp": 1765042971.735591,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "14263538188",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:42:51Z"
+  },
+  {
+    "timestamp": 1765042991.20276,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "14263538185",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:43:11Z"
+  },
+  {
+    "timestamp": 1765043013.2420769,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "14263538184",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:43:33Z"
+  },
+  {
+    "timestamp": 1765043031.3264692,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14263538191",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:43:51Z"
+  },
+  {
+    "timestamp": 1765043071.479399,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "14263538184",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:44:31Z"
+  },
+  {
+    "timestamp": 1765043086.7424798,
+    "seed_id": "2004-I-7::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-06T17:44:46Z"
+  },
+  {
+    "timestamp": 1765043086.7427578,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1168607931
+    },
+    "iso_time": "2025-12-06T17:44:46Z"
+  },
+  {
+    "timestamp": 1765043088.013246,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_factors": 18,
+        "linear_a": 3,
+        "linear_b": 3,
+        "power_d": 1,
+        "degree_t": 3
+      }
+    },
+    "iso_time": "2025-12-06T17:44:48Z"
+  },
+  {
+    "timestamp": 1765043089.23598,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 263412
+    },
+    "iso_time": "2025-12-06T17:44:49Z"
+  },
+  {
+    "timestamp": 1765043089.236131,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial P(x) = ∏_{k=1}^{ {num_factors} } (1 + (-1)^k (3k + 3)^{ {power_d} } x). Let C",
+      "correct_answer": "263412",
+      "seed_value": 1168607931
+    },
+    "iso_time": "2025-12-06T17:44:49Z"
+  },
+  {
+    "timestamp": 1765043089.2361972,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "263421",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:44:49Z"
+  },
+  {
+    "timestamp": 1765043110.226157,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "263406",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:45:10Z"
+  },
+  {
+    "timestamp": 1765043116.133178,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "263404",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:45:16Z"
+  },
+  {
+    "timestamp": 1765043133.9515781,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "263412",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:45:33Z"
+  },
+  {
+    "timestamp": 1765043153.360368,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "263412",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:45:53Z"
+  },
+  {
+    "timestamp": 1765043175.933407,
+    "seed_id": "2004-I-7::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-06T17:46:15Z"
+  },
+  {
+    "timestamp": 1765043175.933663,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1486885598
+    },
+    "iso_time": "2025-12-06T17:46:15Z"
+  },
+  {
+    "timestamp": 1765043177.2098439,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_factors": 15,
+        "linear_a": 1,
+        "linear_b": 2,
+        "power_d": 2,
+        "degree_t": 6
+      }
+    },
+    "iso_time": "2025-12-06T17:46:17Z"
+  },
+  {
+    "timestamp": 1765043178.30997,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 177576905645092
+    },
+    "iso_time": "2025-12-06T17:46:18Z"
+  },
+  {
+    "timestamp": 1765043178.310143,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial P(x) = ∏_{k=1}^{ {num_factors} } (1 + (-1)^k (1k + 2)^{ {power_d} } x). Let C",
+      "correct_answer": "177576905645092",
+      "seed_value": 1486885598
+    },
+    "iso_time": "2025-12-06T17:46:18Z"
+  },
+  {
+    "timestamp": 1765043178.310215,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "177576905645083",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:46:18Z"
+  },
+  {
+    "timestamp": 1765043241.0442162,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "177576905645092",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:47:21Z"
+  },
+  {
+    "timestamp": 1765043246.363565,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "177576905645093",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:47:26Z"
+  },
+  {
+    "timestamp": 1765043276.1884422,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "177576905645101",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:47:56Z"
+  },
+  {
+    "timestamp": 1765043295.618948,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "177576905645092",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:48:15Z"
+  },
+  {
+    "timestamp": 1765043313.976157,
+    "seed_id": "2004-I-7::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-06T17:48:33Z"
+  },
+  {
+    "timestamp": 1765043313.976442,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 653391017
+    },
+    "iso_time": "2025-12-06T17:48:33Z"
+  },
+  {
+    "timestamp": 1765043315.28844,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_factors": 15,
+        "linear_a": 3,
+        "linear_b": 0,
+        "power_d": 3,
+        "degree_t": 4
+      }
+    },
+    "iso_time": "2025-12-06T17:48:35Z"
+  },
+  {
+    "timestamp": 1765043316.521986,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 26566918709104729782
+    },
+    "iso_time": "2025-12-06T17:48:36Z"
+  },
+  {
+    "timestamp": 1765043316.522186,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider the polynomial P(x) = ∏_{k=1}^{ {num_factors} } (1 + (-1)^k (3k + 0)^{ {power_d} } x). Let C",
+      "correct_answer": "26566918709104729782",
+      "seed_value": 653391017
+    },
+    "iso_time": "2025-12-06T17:48:36Z"
+  },
+  {
+    "timestamp": 1765043316.522243,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "26566918709104730111",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:48:36Z"
+  },
+  {
+    "timestamp": 1765043350.7325592,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "26566918709104730116",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:49:10Z"
+  },
+  {
+    "timestamp": 1765043371.521121,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "26566918709104729782",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:49:31Z"
+  },
+  {
+    "timestamp": 1765043394.458791,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "26566918709104730120",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:49:54Z"
+  },
+  {
+    "timestamp": 1765043400.294583,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "26566918709104729782",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:50:00Z"
+  },
+  {
+    "timestamp": 1765043434.771918,
+    "seed_id": "2004-I-7::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-06T17:50:34Z"
+  },
+  {
+    "timestamp": 1765043434.772157,
+    "seed_id": "2004-I-7::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-06T17:50:34Z"
+  },
+  {
+    "timestamp": 1765043434.772289,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Let $C$ be the coefficient of $x^2$ in the expansion of the product $(1 - x)(1 + 2x)(1 - 3x)\\cdots(1 + 14x)(1 - 15x).$ Find $|C|.$",
+      "answer": "588",
+      "example_id": "2004-I-7::2004"
+    },
+    "iso_time": "2025-12-06T17:50:34Z"
+  },
+  {
+    "timestamp": 1765043625.5807,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-7::2004_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 166668816
+    },
+    "iso_time": "2025-12-06T17:53:45Z"
+  },
+  {
+    "timestamp": 1765043626.9092228,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "alpha": 24,
+        "gamma": 3,
+        "delta": 0,
+        "p": 5,
+        "q": 3
+      }
+    },
+    "iso_time": "2025-12-06T17:53:46Z"
+  },
+  {
+    "timestamp": 1765043628.0060349,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3586440
+    },
+    "iso_time": "2025-12-06T17:53:48Z"
+  },
+  {
+    "timestamp": 1765043628.006219,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 24 linear factors are multiplied to form P(x) = product over i = 1 to 24 of (1 + (-1)^(i + 0) * (5 * ",
+      "correct_answer": "3586440",
+      "seed_value": 166668816
+    },
+    "iso_time": "2025-12-06T17:53:48Z"
+  },
+  {
+    "timestamp": 1765043628.006266,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3586445",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:53:48Z"
+  },
+  {
+    "timestamp": 1765043759.41518,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3586440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:55:59Z"
+  },
+  {
+    "timestamp": 1765043784.96448,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3586440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T17:56:24Z"
+  },
+  {
+    "timestamp": 1765043861.566721,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3586449",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:57:41Z"
+  },
+  {
+    "timestamp": 1765043885.803457,
+    "seed_id": "2004-I-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3586448",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T17:58:05Z"
+  },
+  {
+    "timestamp": 1765043912.7151308,
+    "seed_id": "2004-I-7::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-7::2004_prompt04-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T17:58:32Z"
+  }
+]

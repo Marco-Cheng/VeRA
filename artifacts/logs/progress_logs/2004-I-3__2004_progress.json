@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1764990930.69216,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "A convex polyhedron $P$ has 26 vertices, 60 edges, and 36 faces, 24 of which are triangular, and 12 of which are quadril",
+      "answer": "241",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-06T03:15:30Z"
+  },
+  {
+    "timestamp": 1764990930.692202,
+    "seed_id": "2004-I-3::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-06T03:15:30Z"
+  },
+  {
+    "timestamp": 1764990930.6922162,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A convex polyhedron $P$ has 26 vertices, 60 edges, and 36 faces, 24 of which are triangular, and 12 of which are quadrilaterals. A space diagonal is a line segment connecting two non-adjacent vertices that do not belong to the same face. How many space diagonals does $P$ have?",
+      "answer": "241",
+      "example_id": "2004-I-3::2004"
+    },
+    "iso_time": "2025-12-06T03:15:30Z"
+  },
+  {
+    "timestamp": 1764991306.4679492,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-3::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1473506493
+    },
+    "iso_time": "2025-12-06T03:21:46Z"
+  },
+  {
+    "timestamp": 1764991307.8247318,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "allowed_sizes": "[3, 4, 5]",
+        "edge_specs": "3-3: 18, 3-4: 2, 3-5: 1, 4-4: 70, 4-5: 2, 5-5: 56"
+      }
+    },
+    "iso_time": "2025-12-06T03:21:47Z"
+  },
+  {
+    "timestamp": 1764991308.997144,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2745
+    },
+    "iso_time": "2025-12-06T03:21:48Z"
+  },
+  {
+    "timestamp": 1764991308.99732,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a convex polyhedron P whose faces are all m-gons with m in [3, 4, 5]. For each unordered pair of face sizes a <",
+      "correct_answer": "2745",
+      "seed_value": 1473506493
+    },
+    "iso_time": "2025-12-06T03:21:48Z"
+  },
+  {
+    "timestamp": 1764991308.997368,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2753",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:21:48Z"
+  },
+  {
+    "timestamp": 1764991327.772223,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2745",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T03:22:07Z"
+  },
+  {
+    "timestamp": 1764991381.4292219,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2745",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T03:23:01Z"
+  },
+  {
+    "timestamp": 1764991400.579375,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2748",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:23:20Z"
+  },
+  {
+    "timestamp": 1764991440.6199071,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2744",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:24:00Z"
+  },
+  {
+    "timestamp": 1764991504.311357,
+    "seed_id": "2004-I-3::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-3::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T03:25:04Z"
+  },
+  {
+    "timestamp": 1764991504.311538,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-3::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 54485799
+    },
+    "iso_time": "2025-12-06T03:25:04Z"
+  },
+  {
+    "timestamp": 1764991505.682422,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "allowed_sizes": "[3, 4, 5, 6]",
+        "edge_specs": "3-3: 60, 3-4: 2, 3-5: 1, 3-6: 0, 4-4: 67, 4-5: 2, 4-6: 2, 5-5: 26, 5-6: 0, 6-6: 74"
+      }
+    },
+    "iso_time": "2025-12-06T03:25:05Z"
+  },
+  {
+    "timestamp": 1764991506.8551848,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7042
+    },
+    "iso_time": "2025-12-06T03:25:06Z"
+  },
+  {
+    "timestamp": 1764991506.8553421,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a convex polyhedron P whose faces are all m-gons with m in [3, 4, 5, 6]. For each unordered pair of face sizes ",
+      "correct_answer": "7042",
+      "seed_value": 54485799
+    },
+    "iso_time": "2025-12-06T03:25:06Z"
+  },
+  {
+    "timestamp": 1764991506.855392,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7048",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:25:06Z"
+  },
+  {
+    "timestamp": 1764991590.778996,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7036",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:26:30Z"
+  },
+  {
+    "timestamp": 1764991613.775497,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7042",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T03:26:53Z"
+  },
+  {
+    "timestamp": 1764991655.556971,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7042",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T03:27:35Z"
+  },
+  {
+    "timestamp": 1764991690.471348,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7049",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:28:10Z"
+  },
+  {
+    "timestamp": 1764991708.599935,
+    "seed_id": "2004-I-3::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-3::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T03:28:28Z"
+  },
+  {
+    "timestamp": 1764991708.600109,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-3::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1825841586
+    },
+    "iso_time": "2025-12-06T03:28:28Z"
+  },
+  {
+    "timestamp": 1764991709.835934,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "allowed_sizes": "[3, 4, 5, 6]",
+        "edge_specs": "3-3: 17, 3-4: 6, 3-5: 0, 3-6: 2, 4-4: 56, 4-5: 2, 4-6: 0, 5-5: 64, 5-6: 0, 6-6: 62"
+      }
+    },
+    "iso_time": "2025-12-06T03:28:29Z"
+  },
+  {
+    "timestamp": 1764991710.9214358,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6552
+    },
+    "iso_time": "2025-12-06T03:28:30Z"
+  },
+  {
+    "timestamp": 1764991710.921582,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a convex polyhedron P whose faces are all m-gons with m in [3, 4, 5, 6]. For each unordered pair of face sizes ",
+      "correct_answer": "6552",
+      "seed_value": 1825841586
+    },
+    "iso_time": "2025-12-06T03:28:30Z"
+  },
+  {
+    "timestamp": 1764991710.9216309,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6549",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:28:30Z"
+  },
+  {
+    "timestamp": 1764991762.56477,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6550",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:29:22Z"
+  },
+  {
+    "timestamp": 1764991811.5787652,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6553",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:30:11Z"
+  },
+  {
+    "timestamp": 1764991845.232779,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6552",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T03:30:45Z"
+  },
+  {
+    "timestamp": 1764991916.26371,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6552",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T03:31:56Z"
+  },
+  {
+    "timestamp": 1764991973.6909351,
+    "seed_id": "2004-I-3::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-3::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T03:32:53Z"
+  },
+  {
+    "timestamp": 1764991973.691117,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-3::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 589830107
+    },
+    "iso_time": "2025-12-06T03:32:53Z"
+  },
+  {
+    "timestamp": 1764991974.979087,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "allowed_sizes": "[3, 4, 5, 6]",
+        "edge_specs": "3-3: 62, 3-4: 2, 3-5: 4, 3-6: 2, 4-4: 58, 4-5: 4, 4-6: 2, 5-5: 31, 5-6: 0, 6-6: 52"
+      }
+    },
+    "iso_time": "2025-12-06T03:32:54Z"
+  },
+  {
+    "timestamp": 1764991976.2367291,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5705
+    },
+    "iso_time": "2025-12-06T03:32:56Z"
+  },
+  {
+    "timestamp": 1764991976.236912,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a convex polyhedron P whose faces are all m-gons with m in [3, 4, 5, 6]. For each unordered pair of face sizes ",
+      "correct_answer": "5705",
+      "seed_value": 589830107
+    },
+    "iso_time": "2025-12-06T03:32:56Z"
+  },
+  {
+    "timestamp": 1764991976.236958,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5705",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T03:32:56Z"
+  },
+  {
+    "timestamp": 1764991989.009789,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5708",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:33:09Z"
+  },
+  {
+    "timestamp": 1764992010.711315,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5705",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T03:33:30Z"
+  },
+  {
+    "timestamp": 1764992043.596179,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5697",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:34:03Z"
+  },
+  {
+    "timestamp": 1764992070.070205,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5707",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:34:30Z"
+  },
+  {
+    "timestamp": 1764992198.535916,
+    "seed_id": "2004-I-3::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-3::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T03:36:38Z"
+  },
+  {
+    "timestamp": 1764992198.536021,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-3::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 859299813
+    },
+    "iso_time": "2025-12-06T03:36:38Z"
+  },
+  {
+    "timestamp": 1764992199.9249642,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "allowed_sizes": "[3, 4, 5, 6]",
+        "edge_specs": "3-3: 54, 3-4: 2, 3-5: 1, 3-6: 0, 4-4: 37, 4-5: 0, 4-6: 0, 5-5: 22, 5-6: 0, 6-6: 60"
+      }
+    },
+    "iso_time": "2025-12-06T03:36:39Z"
+  },
+  {
+    "timestamp": 1764992201.027405,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3839
+    },
+    "iso_time": "2025-12-06T03:36:41Z"
+  },
+  {
+    "timestamp": 1764992201.0275671,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a convex polyhedron P whose faces are all m-gons with m in [3, 4, 5, 6]. For each unordered pair of face sizes ",
+      "correct_answer": "3839",
+      "seed_value": 859299813
+    },
+    "iso_time": "2025-12-06T03:36:41Z"
+  },
+  {
+    "timestamp": 1764992201.0276108,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3839",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T03:36:41Z"
+  },
+  {
+    "timestamp": 1764992252.4417868,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3839",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T03:37:32Z"
+  },
+  {
+    "timestamp": 1764992298.626383,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3836",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:38:18Z"
+  },
+  {
+    "timestamp": 1764992466.804957,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3840",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:41:06Z"
+  },
+  {
+    "timestamp": 1764992484.252383,
+    "seed_id": "2004-I-3::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3843",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T03:41:24Z"
+  },
+  {
+    "timestamp": 1764992592.373989,
+    "seed_id": "2004-I-3::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-3::2004_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T03:43:12Z"
+  }
+]

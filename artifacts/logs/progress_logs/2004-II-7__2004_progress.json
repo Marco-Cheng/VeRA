@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1765131470.339417,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "$ABCD$ is a rectangular sheet of paper that has been folded so that corner $B$ is matched with point $B'$ on edge $AD.$ ",
+      "answer": "293",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-07T18:17:50Z"
+  },
+  {
+    "timestamp": 1765131470.3395011,
+    "seed_id": "2004-II-7::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-07T18:17:50Z"
+  },
+  {
+    "timestamp": 1765131470.339547,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "$ABCD$ is a rectangular sheet of paper that has been folded so that corner $B$ is matched with point $B'$ on edge $AD.$ The crease is $EF,$ where $E$ is on $AB$ and $F$ is on $CD.$ The dimensions $AE=8, BE=17,$ and $CF=3$ are given. The perimeter of rectangle $ABCD$ is $m/n,$ where $m$ and $n$ are relatively prime positive integers. Find $m+n.$ [asy] size(200); defaultpen(linewidth(0.7)+fontsize(10)); pair A=origin, B=(25,0), C=(25,70/3), D=(0,70/3), E=(8,0), F=(22,70/3), Bp=reflect(E,F)*B, Cp=reflect(E,F)*C; draw(F--D--A--E); draw(E--B--C--F, linetype(\"4 4\")); filldraw(E--F--Cp--Bp--cycle, white, black); pair point=( 12.5, 35/3 ); label(\"$A$\", A, dir(point--A)); label(\"$B$\", B, dir(point--B)); label(\"$C$\", C, dir(point--C)); label(\"$D$\", D, dir(point--D)); label(\"$E$\", E, dir(point--E)); label(\"$F$\", F, dir(point--F)); label(\"$B^\\prime$\", Bp, dir(point--Bp)); label(\"$C^\\prime$\", Cp, dir(point--Cp));[/asy]",
+      "answer": "293",
+      "example_id": "2004-II-7::2004"
+    },
+    "iso_time": "2025-12-07T18:17:50Z"
+  },
+  {
+    "timestamp": 1765131686.2986019,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-7::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1740650656
+    },
+    "iso_time": "2025-12-07T18:21:26Z"
+  },
+  {
+    "timestamp": 1765131687.6716712,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ae": 32,
+        "abp": 60,
+        "df": 91
+      }
+    },
+    "iso_time": "2025-12-07T18:21:27Z"
+  },
+  {
+    "timestamp": 1765131688.868938,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1193
+    },
+    "iso_time": "2025-12-07T18:21:28Z"
+  },
+  {
+    "timestamp": 1765131688.869102,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Rectangle ABCD lies in the plane with AB horizontal and AD vertical. The sheet is folded so that corner B is mapped to a",
+      "correct_answer": "1193",
+      "seed_value": 1740650656
+    },
+    "iso_time": "2025-12-07T18:21:28Z"
+  },
+  {
+    "timestamp": 1765131688.8691552,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1193",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T18:21:28Z"
+  },
+  {
+    "timestamp": 1765131723.6676219,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1187",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:22:03Z"
+  },
+  {
+    "timestamp": 1765131805.9735858,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1194",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:23:25Z"
+  },
+  {
+    "timestamp": 1765131823.298343,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1193",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T18:23:43Z"
+  },
+  {
+    "timestamp": 1765131840.40121,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1201",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:24:00Z"
+  },
+  {
+    "timestamp": 1765131872.741578,
+    "seed_id": "2004-II-7::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-7::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T18:24:32Z"
+  },
+  {
+    "timestamp": 1765131872.741759,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-7::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2095995158
+    },
+    "iso_time": "2025-12-07T18:24:32Z"
+  },
+  {
+    "timestamp": 1765131874.025557,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ae": 96,
+        "abp": 110,
+        "df": 238
+      }
+    },
+    "iso_time": "2025-12-07T18:24:34Z"
+  },
+  {
+    "timestamp": 1765131875.129906,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5549
+    },
+    "iso_time": "2025-12-07T18:24:35Z"
+  },
+  {
+    "timestamp": 1765131875.130047,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Rectangle ABCD lies in the plane with AB horizontal and AD vertical. The sheet is folded so that corner B is mapped to a",
+      "correct_answer": "5549",
+      "seed_value": 2095995158
+    },
+    "iso_time": "2025-12-07T18:24:35Z"
+  },
+  {
+    "timestamp": 1765131875.130087,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5540",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:24:35Z"
+  },
+  {
+    "timestamp": 1765131894.261986,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5543",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:24:54Z"
+  },
+  {
+    "timestamp": 1765131982.3869572,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5551",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:26:22Z"
+  },
+  {
+    "timestamp": 1765132006.554969,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5549",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T18:26:46Z"
+  },
+  {
+    "timestamp": 1765132070.4324741,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5549",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T18:27:50Z"
+  },
+  {
+    "timestamp": 1765132137.5276039,
+    "seed_id": "2004-II-7::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-7::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T18:28:57Z"
+  },
+  {
+    "timestamp": 1765132137.527769,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-7::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1496086744
+    },
+    "iso_time": "2025-12-07T18:28:57Z"
+  },
+  {
+    "timestamp": 1765132138.746187,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ae": 28,
+        "abp": 195,
+        "df": 215
+      }
+    },
+    "iso_time": "2025-12-07T18:28:58Z"
+  },
+  {
+    "timestamp": 1765132139.970311,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 11473
+    },
+    "iso_time": "2025-12-07T18:28:59Z"
+  },
+  {
+    "timestamp": 1765132139.970492,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Rectangle ABCD lies in the plane with AB horizontal and AD vertical. The sheet is folded so that corner B is mapped to a",
+      "correct_answer": "11473",
+      "seed_value": 1496086744
+    },
+    "iso_time": "2025-12-07T18:28:59Z"
+  },
+  {
+    "timestamp": 1765132139.970554,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "11473",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T18:28:59Z"
+  },
+  {
+    "timestamp": 1765132174.126289,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "11477",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:29:34Z"
+  },
+  {
+    "timestamp": 1765132240.769737,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "11478",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:30:40Z"
+  },
+  {
+    "timestamp": 1765132298.433442,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "11473",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T18:31:38Z"
+  },
+  {
+    "timestamp": 1765132344.522021,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "11475",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:32:24Z"
+  },
+  {
+    "timestamp": 1765132395.304652,
+    "seed_id": "2004-II-7::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-7::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T18:33:15Z"
+  },
+  {
+    "timestamp": 1765132395.304836,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-7::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1602883213
+    },
+    "iso_time": "2025-12-07T18:33:15Z"
+  },
+  {
+    "timestamp": 1765132396.5316749,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ae": 24,
+        "abp": 45,
+        "df": 53
+      }
+    },
+    "iso_time": "2025-12-07T18:33:16Z"
+  },
+  {
+    "timestamp": 1765132397.643213,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 743
+    },
+    "iso_time": "2025-12-07T18:33:17Z"
+  },
+  {
+    "timestamp": 1765132397.643357,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Rectangle ABCD lies in the plane with AB horizontal and AD vertical. The sheet is folded so that corner B is mapped to a",
+      "correct_answer": "743",
+      "seed_value": 1602883213
+    },
+    "iso_time": "2025-12-07T18:33:17Z"
+  },
+  {
+    "timestamp": 1765132397.643399,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "736",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:33:17Z"
+  },
+  {
+    "timestamp": 1765132434.123277,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "743",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T18:33:54Z"
+  },
+  {
+    "timestamp": 1765132467.0983381,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "745",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:34:27Z"
+  },
+  {
+    "timestamp": 1765132516.481709,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "742",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:35:16Z"
+  },
+  {
+    "timestamp": 1765132576.6548312,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "743",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T18:36:16Z"
+  },
+  {
+    "timestamp": 1765132618.6405041,
+    "seed_id": "2004-II-7::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-7::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T18:36:58Z"
+  },
+  {
+    "timestamp": 1765132618.640686,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-7::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 868934821
+    },
+    "iso_time": "2025-12-07T18:36:58Z"
+  },
+  {
+    "timestamp": 1765132619.991966,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ae": 36,
+        "abp": 77,
+        "df": 89
+      }
+    },
+    "iso_time": "2025-12-07T18:36:59Z"
+  },
+  {
+    "timestamp": 1765132621.136159,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2867
+    },
+    "iso_time": "2025-12-07T18:37:01Z"
+  },
+  {
+    "timestamp": 1765132621.136296,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Rectangle ABCD lies in the plane with AB horizontal and AD vertical. The sheet is folded so that corner B is mapped to a",
+      "correct_answer": "2867",
+      "seed_value": 868934821
+    },
+    "iso_time": "2025-12-07T18:37:01Z"
+  },
+  {
+    "timestamp": 1765132621.136349,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2871",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:37:01Z"
+  },
+  {
+    "timestamp": 1765132669.732348,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2864",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:37:49Z"
+  },
+  {
+    "timestamp": 1765132701.504148,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2874",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T18:38:21Z"
+  },
+  {
+    "timestamp": 1765132740.7001479,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2867",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T18:39:00Z"
+  },
+  {
+    "timestamp": 1765132781.558048,
+    "seed_id": "2004-II-7::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2867",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T18:39:41Z"
+  },
+  {
+    "timestamp": 1765132821.148266,
+    "seed_id": "2004-II-7::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-7::2004_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T18:40:21Z"
+  }
+]

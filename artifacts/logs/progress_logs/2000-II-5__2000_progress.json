@@ -1,0 +1,733 @@
+[
+  {
+    "timestamp": 1764415251.4189398,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "Given eight distinguishable rings, let $n$ be the number of possible five-ring arrangements on the four fingers (not the",
+      "answer": "376",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T11:20:51Z"
+  },
+  {
+    "timestamp": 1764415251.418997,
+    "seed_id": "2000-II-5::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T11:20:51Z"
+  },
+  {
+    "timestamp": 1764415251.419025,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Given eight distinguishable rings, let $n$ be the number of possible five-ring arrangements on the four fingers (not the thumb) of one hand. The order of rings on each finger is significant, but it is not required that each finger have a ring. Find the leftmost three nonzero digits of $n$ .",
+      "answer": "376",
+      "example_id": "2000-II-5::2000"
+    },
+    "iso_time": "2025-11-29T11:20:51Z"
+  },
+  {
+    "timestamp": 1764415353.714224,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-5::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1311743294
+    },
+    "iso_time": "2025-11-29T11:22:33Z"
+  },
+  {
+    "timestamp": 1764415354.853424,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_rings": 17,
+        "special_rings": 3,
+        "wear_count": 9,
+        "fingers": 4,
+        "capacities": [
+          6,
+          4,
+          6,
+          5
+        ],
+        "used_fingers": 4,
+        "min_specials": 2
+      }
+    },
+    "iso_time": "2025-11-29T11:22:34Z"
+  },
+  {
+    "timestamp": 1764415355.903407,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 167208481440
+    },
+    "iso_time": "2025-11-29T11:22:35Z"
+  },
+  {
+    "timestamp": 1764415355.903578,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A jeweler has 17 distinguishable rings, of which 3 are designated special. You will wear exactly 9 rings on 4 fingers (e",
+      "correct_answer": "167208481440",
+      "seed_value": 1311743294
+    },
+    "iso_time": "2025-11-29T11:22:35Z"
+  },
+  {
+    "timestamp": 1764415355.903622,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "167208481449",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:22:35Z"
+  },
+  {
+    "timestamp": 1764415599.1632562,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "167208481440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:26:39Z"
+  },
+  {
+    "timestamp": 1764415759.007723,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "167208481431",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:29:19Z"
+  },
+  {
+    "timestamp": 1764415898.532985,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "167208481434",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:31:38Z"
+  },
+  {
+    "timestamp": 1764416123.349503,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "167208481440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:35:23Z"
+  },
+  {
+    "timestamp": 1764416236.926337,
+    "seed_id": "2000-II-5::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-5::2000_prompt01-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T11:37:16Z"
+  },
+  {
+    "timestamp": 1764416236.926446,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-5::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1756611762
+    },
+    "iso_time": "2025-11-29T11:37:16Z"
+  },
+  {
+    "timestamp": 1764416238.074941,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_rings": 15,
+        "special_rings": 6,
+        "wear_count": 9,
+        "fingers": 5,
+        "capacities": [
+          3,
+          6,
+          3,
+          6,
+          4
+        ],
+        "used_fingers": 3,
+        "min_specials": 2
+      }
+    },
+    "iso_time": "2025-11-29T11:37:18Z"
+  },
+  {
+    "timestamp": 1764416239.110285,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 30645216000
+    },
+    "iso_time": "2025-11-29T11:37:19Z"
+  },
+  {
+    "timestamp": 1764416239.110454,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A jeweler has 15 distinguishable rings, of which 6 are designated special. You will wear exactly 9 rings on 5 fingers (e",
+      "correct_answer": "30645216000",
+      "seed_value": 1756611762
+    },
+    "iso_time": "2025-11-29T11:37:19Z"
+  },
+  {
+    "timestamp": 1764416239.110498,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "30645216008",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:37:19Z"
+  },
+  {
+    "timestamp": 1764416357.859175,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "30645215995",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:39:17Z"
+  },
+  {
+    "timestamp": 1764416463.0315342,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "30645216000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:41:03Z"
+  },
+  {
+    "timestamp": 1764416543.690191,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "30645216000",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:42:23Z"
+  },
+  {
+    "timestamp": 1764416645.297097,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "30645216002",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:44:05Z"
+  },
+  {
+    "timestamp": 1764416740.4276621,
+    "seed_id": "2000-II-5::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-5::2000_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T11:45:40Z"
+  },
+  {
+    "timestamp": 1764416740.427774,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-5::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1847030066
+    },
+    "iso_time": "2025-11-29T11:45:40Z"
+  },
+  {
+    "timestamp": 1764416741.733644,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_rings": 18,
+        "special_rings": 6,
+        "wear_count": 8,
+        "fingers": 5,
+        "capacities": [
+          2,
+          3,
+          2,
+          4,
+          2
+        ],
+        "used_fingers": 3,
+        "min_specials": 2
+      }
+    },
+    "iso_time": "2025-11-29T11:45:41Z"
+  },
+  {
+    "timestamp": 1764416742.74466,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6911308800
+    },
+    "iso_time": "2025-11-29T11:45:42Z"
+  },
+  {
+    "timestamp": 1764416742.744843,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A jeweler has 18 distinguishable rings, of which 6 are designated special. You will wear exactly 8 rings on 5 fingers (e",
+      "correct_answer": "6911308800",
+      "seed_value": 1847030066
+    },
+    "iso_time": "2025-11-29T11:45:42Z"
+  },
+  {
+    "timestamp": 1764416742.7448902,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6911308797",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:45:42Z"
+  },
+  {
+    "timestamp": 1764416802.858319,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6911308791",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:46:42Z"
+  },
+  {
+    "timestamp": 1764416883.844896,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6911308800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:48:03Z"
+  },
+  {
+    "timestamp": 1764416938.984576,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6911308800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:48:58Z"
+  },
+  {
+    "timestamp": 1764416987.902875,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6911308793",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:49:47Z"
+  },
+  {
+    "timestamp": 1764417059.920149,
+    "seed_id": "2000-II-5::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-5::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T11:50:59Z"
+  },
+  {
+    "timestamp": 1764417059.920207,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-5::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 2000514573
+    },
+    "iso_time": "2025-11-29T11:50:59Z"
+  },
+  {
+    "timestamp": 1764417060.977373,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_rings": 18,
+        "special_rings": 4,
+        "wear_count": 9,
+        "fingers": 6,
+        "capacities": [
+          3,
+          4,
+          2,
+          2,
+          3,
+          4
+        ],
+        "used_fingers": 4,
+        "min_specials": 3
+      }
+    },
+    "iso_time": "2025-11-29T11:51:00Z"
+  },
+  {
+    "timestamp": 1764417062.012836,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 428073085440
+    },
+    "iso_time": "2025-11-29T11:51:02Z"
+  },
+  {
+    "timestamp": 1764417062.013031,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A jeweler has 18 distinguishable rings, of which 4 are designated special. You will wear exactly 9 rings on 6 fingers (e",
+      "correct_answer": "428073085440",
+      "seed_value": 2000514573
+    },
+    "iso_time": "2025-11-29T11:51:02Z"
+  },
+  {
+    "timestamp": 1764417062.013081,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "428073085441",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:51:02Z"
+  },
+  {
+    "timestamp": 1764417222.6197388,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "428073085446",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:53:42Z"
+  },
+  {
+    "timestamp": 1764417345.004216,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "428073085439",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T11:55:45Z"
+  },
+  {
+    "timestamp": 1764417458.566483,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "428073085440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:57:38Z"
+  },
+  {
+    "timestamp": 1764417586.769751,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "428073085440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T11:59:46Z"
+  },
+  {
+    "timestamp": 1764417741.5677829,
+    "seed_id": "2000-II-5::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-5::2000_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T12:02:21Z"
+  },
+  {
+    "timestamp": 1764417741.56786,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-II-5::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1887786369
+    },
+    "iso_time": "2025-11-29T12:02:21Z"
+  },
+  {
+    "timestamp": 1764417742.632395,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "total_rings": 15,
+        "special_rings": 4,
+        "wear_count": 6,
+        "fingers": 4,
+        "capacities": [
+          5,
+          6,
+          6,
+          4
+        ],
+        "used_fingers": 4,
+        "min_specials": 3
+      }
+    },
+    "iso_time": "2025-11-29T12:02:22Z"
+  },
+  {
+    "timestamp": 1764417743.670039,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2756160
+    },
+    "iso_time": "2025-11-29T12:02:23Z"
+  },
+  {
+    "timestamp": 1764417743.670208,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A jeweler has 15 distinguishable rings, of which 4 are designated special. You will wear exactly 6 rings on 4 fingers (e",
+      "correct_answer": "2756160",
+      "seed_value": 1887786369
+    },
+    "iso_time": "2025-11-29T12:02:23Z"
+  },
+  {
+    "timestamp": 1764417743.6702561,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2756160",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T12:02:23Z"
+  },
+  {
+    "timestamp": 1764417810.209611,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2756155",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T12:03:30Z"
+  },
+  {
+    "timestamp": 1764417864.4794922,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2756160",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T12:04:24Z"
+  },
+  {
+    "timestamp": 1764417961.095357,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2756161",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T12:06:01Z"
+  },
+  {
+    "timestamp": 1764418034.057442,
+    "seed_id": "2000-II-5::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2756167",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T12:07:14Z"
+  },
+  {
+    "timestamp": 1764418096.765845,
+    "seed_id": "2000-II-5::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-II-5::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T12:08:16Z"
+  }
+]

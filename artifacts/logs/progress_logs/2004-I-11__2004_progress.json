@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764943227.053198,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "A solid in the shape of a right circular cone is 4 inches tall and its base has a 3-inch radius. The entire surface of t",
+      "answer": "512",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-05T14:00:27Z"
+  },
+  {
+    "timestamp": 1764943227.0532448,
+    "seed_id": "2004-I-11::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-05T14:00:27Z"
+  },
+  {
+    "timestamp": 1764943227.0532658,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A solid in the shape of a right circular cone is 4 inches tall and its base has a 3-inch radius. The entire surface of the cone, including its base, is painted. A plane parallel to the base of the cone divides the cone into two solids, a smaller cone-shaped solid $C$ and a frustum-shaped solid $F,$ in such a way that the ratio between the areas of the painted surfaces of $C$ and $F$ and the ratio between the volumes of $C$ and $F$ are both equal to $k.$ Given that $k=m/n,$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$",
+      "answer": "512",
+      "example_id": "2004-I-11::2004"
+    },
+    "iso_time": "2025-12-05T14:00:27Z"
+  },
+  {
+    "timestamp": 1764943857.146911,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-11::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 914276578
+    },
+    "iso_time": "2025-12-05T14:10:57Z"
+  },
+  {
+    "timestamp": 1764943858.4998028,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_radius": 3,
+        "height": 4,
+        "lateral_weight": 3,
+        "base_weight": 1
+      }
+    },
+    "iso_time": "2025-12-05T14:10:58Z"
+  },
+  {
+    "timestamp": 1764943859.728682,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 216
+    },
+    "iso_time": "2025-12-05T14:10:59Z"
+  },
+  {
+    "timestamp": 1764943859.728863,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right circular cone has base radius 3 and height 4. Its entire exterior surface is painted. When measuring painted are",
+      "correct_answer": "216",
+      "seed_value": 914276578
+    },
+    "iso_time": "2025-12-05T14:10:59Z"
+  },
+  {
+    "timestamp": 1764943859.728937,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "220",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:10:59Z"
+  },
+  {
+    "timestamp": 1764943907.709905,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "216",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T14:11:47Z"
+  },
+  {
+    "timestamp": 1764943984.760721,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "216",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T14:13:04Z"
+  },
+  {
+    "timestamp": 1764944043.7264771,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "212",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:14:03Z"
+  },
+  {
+    "timestamp": 1764944058.30564,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "221",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:14:18Z"
+  },
+  {
+    "timestamp": 1764944128.631528,
+    "seed_id": "2004-I-11::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-11::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T14:15:28Z"
+  },
+  {
+    "timestamp": 1764944128.6316538,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-11::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 65654849
+    },
+    "iso_time": "2025-12-05T14:15:28Z"
+  },
+  {
+    "timestamp": 1764944129.955393,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_radius": 3,
+        "height": 4,
+        "lateral_weight": 4,
+        "base_weight": 2
+      }
+    },
+    "iso_time": "2025-12-05T14:15:29Z"
+  },
+  {
+    "timestamp": 1764944131.098384,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2197
+    },
+    "iso_time": "2025-12-05T14:15:31Z"
+  },
+  {
+    "timestamp": 1764944131.09859,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right circular cone has base radius 3 and height 4. Its entire exterior surface is painted. When measuring painted are",
+      "correct_answer": "2197",
+      "seed_value": 65654849
+    },
+    "iso_time": "2025-12-05T14:15:31Z"
+  },
+  {
+    "timestamp": 1764944131.098666,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2191",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:15:31Z"
+  },
+  {
+    "timestamp": 1764944701.86014,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2197",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T14:25:01Z"
+  },
+  {
+    "timestamp": 1764944883.5678039,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2199",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:28:03Z"
+  },
+  {
+    "timestamp": 1764944979.718265,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2202",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:29:39Z"
+  },
+  {
+    "timestamp": 1764945048.3594198,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2197",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T14:30:48Z"
+  },
+  {
+    "timestamp": 1764945107.208396,
+    "seed_id": "2004-I-11::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-11::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T14:31:47Z"
+  },
+  {
+    "timestamp": 1764945107.2085671,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-11::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1513280724
+    },
+    "iso_time": "2025-12-05T14:31:47Z"
+  },
+  {
+    "timestamp": 1764945108.555788,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_radius": 16,
+        "height": 63,
+        "lateral_weight": 4,
+        "base_weight": 5
+      }
+    },
+    "iso_time": "2025-12-05T14:31:48Z"
+  },
+  {
+    "timestamp": 1764945109.680724,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4913
+    },
+    "iso_time": "2025-12-05T14:31:49Z"
+  },
+  {
+    "timestamp": 1764945109.680873,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right circular cone has base radius 16 and height 63. Its entire exterior surface is painted. When measuring painted a",
+      "correct_answer": "4913",
+      "seed_value": 1513280724
+    },
+    "iso_time": "2025-12-05T14:31:49Z"
+  },
+  {
+    "timestamp": 1764945109.680932,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4915",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:31:49Z"
+  },
+  {
+    "timestamp": 1764945193.784248,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4912",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:33:13Z"
+  },
+  {
+    "timestamp": 1764945220.648084,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4910",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:33:40Z"
+  },
+  {
+    "timestamp": 1764945309.167716,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4913",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T14:35:09Z"
+  },
+  {
+    "timestamp": 1764945366.0843441,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4913",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T14:36:06Z"
+  },
+  {
+    "timestamp": 1764945386.199084,
+    "seed_id": "2004-I-11::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-11::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T14:36:26Z"
+  },
+  {
+    "timestamp": 1764945386.199268,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-11::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1047056833
+    },
+    "iso_time": "2025-12-05T14:36:26Z"
+  },
+  {
+    "timestamp": 1764945387.64272,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_radius": 3,
+        "height": 4,
+        "lateral_weight": 4,
+        "base_weight": 5
+      }
+    },
+    "iso_time": "2025-12-05T14:36:27Z"
+  },
+  {
+    "timestamp": 1764945388.837093,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 343
+    },
+    "iso_time": "2025-12-05T14:36:28Z"
+  },
+  {
+    "timestamp": 1764945388.837225,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right circular cone has base radius 3 and height 4. Its entire exterior surface is painted. When measuring painted are",
+      "correct_answer": "343",
+      "seed_value": 1047056833
+    },
+    "iso_time": "2025-12-05T14:36:28Z"
+  },
+  {
+    "timestamp": 1764945388.837282,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "343",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T14:36:28Z"
+  },
+  {
+    "timestamp": 1764945447.999964,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "343",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T14:37:27Z"
+  },
+  {
+    "timestamp": 1764945522.54197,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "342",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:38:42Z"
+  },
+  {
+    "timestamp": 1764945580.398769,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "351",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:39:40Z"
+  },
+  {
+    "timestamp": 1764945655.766752,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "344",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:40:55Z"
+  },
+  {
+    "timestamp": 1764945735.8035252,
+    "seed_id": "2004-I-11::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-11::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T14:42:15Z"
+  },
+  {
+    "timestamp": 1764945735.803673,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-11::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 350396460
+    },
+    "iso_time": "2025-12-05T14:42:15Z"
+  },
+  {
+    "timestamp": 1764945737.141068,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base_radius": 39,
+        "height": 52,
+        "lateral_weight": 2,
+        "base_weight": 1
+      }
+    },
+    "iso_time": "2025-12-05T14:42:17Z"
+  },
+  {
+    "timestamp": 1764945738.230224,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2197
+    },
+    "iso_time": "2025-12-05T14:42:18Z"
+  },
+  {
+    "timestamp": 1764945738.2303731,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A right circular cone has base radius 39 and height 52. Its entire exterior surface is painted. When measuring painted a",
+      "correct_answer": "2197",
+      "seed_value": 350396460
+    },
+    "iso_time": "2025-12-05T14:42:18Z"
+  },
+  {
+    "timestamp": 1764945738.2304482,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2191",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:42:18Z"
+  },
+  {
+    "timestamp": 1764945812.848084,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2202",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:43:32Z"
+  },
+  {
+    "timestamp": 1764945900.605442,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2197",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T14:45:00Z"
+  },
+  {
+    "timestamp": 1764945964.177005,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2197",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T14:46:04Z"
+  },
+  {
+    "timestamp": 1764946067.549789,
+    "seed_id": "2004-I-11::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2199",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T14:47:47Z"
+  },
+  {
+    "timestamp": 1764946168.077749,
+    "seed_id": "2004-I-11::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-11::2004_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T14:49:28Z"
+  }
+]

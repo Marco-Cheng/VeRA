@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764361726.264073,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2000,
+      "question_preview": "In the middle of a vast prairie, a firetruck is stationed at the intersection of two perpendicular straight highways. Th",
+      "answer": "731",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T20:28:46Z"
+  },
+  {
+    "timestamp": 1764361726.26412,
+    "seed_id": "2000-I-13::2000",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T20:28:46Z"
+  },
+  {
+    "timestamp": 1764361726.264144,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In the middle of a vast prairie, a firetruck is stationed at the intersection of two perpendicular straight highways. The truck travels at $50$ miles per hour along the highways and at $14$ miles per hour across the prairie. Consider the set of points that can be reached by the firetruck within six minutes. The area of this region is $\\frac{m}{n}$ square miles, where $m$ and $n$ are relatively prime positive integers. Find $m + n$ .",
+      "answer": "731",
+      "example_id": "2000-I-13::2000"
+    },
+    "iso_time": "2025-11-28T20:28:46Z"
+  },
+  {
+    "timestamp": 1764361878.5241868,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-13::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1951070430
+    },
+    "iso_time": "2025-11-28T20:31:18Z"
+  },
+  {
+    "timestamp": 1764361879.801307,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_highways": 4,
+        "highway_speed": 56,
+        "offroad_speed": 40,
+        "time_minutes": 29
+      }
+    },
+    "iso_time": "2025-11-28T20:31:19Z"
+  },
+  {
+    "timestamp": 1764361880.92781,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1480.161027440891
+    },
+    "iso_time": "2025-11-28T20:31:20Z"
+  },
+  {
+    "timestamp": 1764361880.927972,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a vast plain, 4 infinite straight highways radiate from a single central hub, equally spaced in angle. A firetruck st",
+      "correct_answer": "1480.16102744",
+      "seed_value": 1951070430
+    },
+    "iso_time": "2025-11-28T20:31:20Z"
+  },
+  {
+    "timestamp": 1764361880.928014,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1364.124987",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T20:31:20Z"
+  },
+  {
+    "timestamp": 1764361944.162626,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1619.132795",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T20:32:24Z"
+  },
+  {
+    "timestamp": 1764362043.5902941,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1480.16102744",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T20:34:03Z"
+  },
+  {
+    "timestamp": 1764362288.304204,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1480.16102744",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T20:38:08Z"
+  },
+  {
+    "timestamp": 1764362391.992325,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1548.850867",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T20:39:51Z"
+  },
+  {
+    "timestamp": 1764362556.738531,
+    "seed_id": "2000-I-13::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-13::2000_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T20:42:36Z"
+  },
+  {
+    "timestamp": 1764362556.7387462,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-13::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 381949029
+    },
+    "iso_time": "2025-11-28T20:42:36Z"
+  },
+  {
+    "timestamp": 1764362557.9863522,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_highways": 4,
+        "highway_speed": 53,
+        "offroad_speed": 38,
+        "time_minutes": 24
+      }
+    },
+    "iso_time": "2025-11-28T20:42:37Z"
+  },
+  {
+    "timestamp": 1764362559.003904,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 911.5216434255938
+    },
+    "iso_time": "2025-11-28T20:42:39Z"
+  },
+  {
+    "timestamp": 1764362559.004062,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a vast plain, 4 infinite straight highways radiate from a single central hub, equally spaced in angle. A firetruck st",
+      "correct_answer": "911.521643426",
+      "seed_value": 381949029
+    },
+    "iso_time": "2025-11-28T20:42:39Z"
+  },
+  {
+    "timestamp": 1764362559.0041049,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "862.072280",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T20:42:39Z"
+  },
+  {
+    "timestamp": 1764362615.279797,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "865.482717",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T20:43:35Z"
+  },
+  {
+    "timestamp": 1764362683.882304,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "837.921525",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T20:44:43Z"
+  },
+  {
+    "timestamp": 1764362756.6173692,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "911.521643426",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T20:45:56Z"
+  },
+  {
+    "timestamp": 1764363009.921843,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "911.521643426",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T20:50:09Z"
+  },
+  {
+    "timestamp": 1764363140.349886,
+    "seed_id": "2000-I-13::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-13::2000_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T20:52:20Z"
+  },
+  {
+    "timestamp": 1764363140.34999,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-13::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1485715168
+    },
+    "iso_time": "2025-11-28T20:52:20Z"
+  },
+  {
+    "timestamp": 1764363141.6088881,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_highways": 4,
+        "highway_speed": 37,
+        "offroad_speed": 30,
+        "time_minutes": 25
+      }
+    },
+    "iso_time": "2025-11-28T20:52:21Z"
+  },
+  {
+    "timestamp": 1764363142.6997461,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 551.2613486275087
+    },
+    "iso_time": "2025-11-28T20:52:22Z"
+  },
+  {
+    "timestamp": 1764363142.699914,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a vast plain, 4 infinite straight highways radiate from a single central hub, equally spaced in angle. A firetruck st",
+      "correct_answer": "551.261348628",
+      "seed_value": 1485715168
+    },
+    "iso_time": "2025-11-28T20:52:22Z"
+  },
+  {
+    "timestamp": 1764363142.699958,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "559.257515",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T20:52:22Z"
+  },
+  {
+    "timestamp": 1764363383.372701,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "528.264641",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T20:56:23Z"
+  },
+  {
+    "timestamp": 1764363481.049788,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "571.880236",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T20:58:01Z"
+  },
+  {
+    "timestamp": 1764363586.841989,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "551.261348628",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T20:59:46Z"
+  },
+  {
+    "timestamp": 1764363783.867719,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "551.261348628",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T21:03:03Z"
+  },
+  {
+    "timestamp": 1764363887.680904,
+    "seed_id": "2000-I-13::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-13::2000_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T21:04:47Z"
+  },
+  {
+    "timestamp": 1764363887.681361,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-13::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1614090315
+    },
+    "iso_time": "2025-11-28T21:04:47Z"
+  },
+  {
+    "timestamp": 1764363889.060283,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_highways": 5,
+        "highway_speed": 37,
+        "offroad_speed": 30,
+        "time_minutes": 17
+      }
+    },
+    "iso_time": "2025-11-28T21:04:49Z"
+  },
+  {
+    "timestamp": 1764363890.095478,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 261.8840422012343
+    },
+    "iso_time": "2025-11-28T21:04:50Z"
+  },
+  {
+    "timestamp": 1764363890.0956511,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a vast plain, 5 infinite straight highways radiate from a single central hub, equally spaced in angle. A firetruck st",
+      "correct_answer": "261.884042201",
+      "seed_value": 1614090315
+    },
+    "iso_time": "2025-11-28T21:04:50Z"
+  },
+  {
+    "timestamp": 1764363890.095694,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "261.884042201",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T21:04:50Z"
+  },
+  {
+    "timestamp": 1764364010.7757661,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "277.288667",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T21:06:50Z"
+  },
+  {
+    "timestamp": 1764364108.062457,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "256.126189",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T21:08:28Z"
+  },
+  {
+    "timestamp": 1764364188.6643689,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "243.550193",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T21:09:48Z"
+  },
+  {
+    "timestamp": 1764364257.924788,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "261.884042201",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T21:10:57Z"
+  },
+  {
+    "timestamp": 1764364363.8551302,
+    "seed_id": "2000-I-13::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-13::2000_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-28T21:12:43Z"
+  },
+  {
+    "timestamp": 1764364363.855254,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2000-I-13::2000_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1270255800
+    },
+    "iso_time": "2025-11-28T21:12:43Z"
+  },
+  {
+    "timestamp": 1764364365.018893,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_highways": 3,
+        "highway_speed": 46,
+        "offroad_speed": 31,
+        "time_minutes": 27
+      }
+    },
+    "iso_time": "2025-11-28T21:12:45Z"
+  },
+  {
+    "timestamp": 1764364366.033217,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 766.0683603121826
+    },
+    "iso_time": "2025-11-28T21:12:46Z"
+  },
+  {
+    "timestamp": 1764364366.033375,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a vast plain, 3 infinite straight highways radiate from a single central hub, equally spaced in angle. A firetruck st",
+      "correct_answer": "766.068360312",
+      "seed_value": 1270255800
+    },
+    "iso_time": "2025-11-28T21:12:46Z"
+  },
+  {
+    "timestamp": 1764364366.0334148,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "766.068360312",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T21:12:46Z"
+  },
+  {
+    "timestamp": 1764364471.228798,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "775.121870",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T21:14:31Z"
+  },
+  {
+    "timestamp": 1764364535.51851,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "834.997212",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T21:15:35Z"
+  },
+  {
+    "timestamp": 1764364632.741333,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "718.408925",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T21:17:12Z"
+  },
+  {
+    "timestamp": 1764364725.7568488,
+    "seed_id": "2000-I-13::2000",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "766.068360312",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T21:18:45Z"
+  },
+  {
+    "timestamp": 1764364954.283558,
+    "seed_id": "2000-I-13::2000",
+    "stage": "variant_success",
+    "message": "Accepted variant 2000-I-13::2000_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T21:22:34Z"
+  }
+]

@@ -1,0 +1,6446 @@
+[
+  {
+    "timestamp": 1762891384.154134,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1986,
+      "question_preview": "In a sequence of coin tosses, one can keep a record of instances in which a tail is immediately followed by a head, a he",
+      "answer": "560",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-11T20:03:04Z"
+  },
+  {
+    "timestamp": 1762891384.154173,
+    "seed_id": "1986-13::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-11T20:03:04Z"
+  },
+  {
+    "timestamp": 1762891384.154189,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In a sequence of coin tosses, one can keep a record of instances in which a tail is immediately followed by a head, a head is immediately followed by a head, and etc. We denote these by TH, HH, and etc. For example, in the sequence TTTHHTHTTTHHTTH of 15 coin tosses we observe that there are two HH, three HT, four TH, and five TT subsequences. How many different sequences of 15 coin tosses will contain exactly two HH, three HT, four TH, and five TT subsequences?",
+      "answer": "560",
+      "example_id": "1986-13::1986"
+    },
+    "iso_time": "2025-11-11T20:03:04Z"
+  },
+  {
+    "timestamp": 1762891605.7986078,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 244897995
+    },
+    "iso_time": "2025-11-11T20:06:45Z"
+  },
+  {
+    "timestamp": 1762891606.538944,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 17,
+        "k": 4,
+        "C_matrix_data": [
+          [
+            3,
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            3,
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ]
+        ],
+        "C_matrix": "3 & 1 & 2 & 1 \\\\ 1 & 0 & 1 & 0 \\\\ 3 & 0 & 2 & 0 \\\\ 1 & 1 & 0 & 0"
+      }
+    },
+    "iso_time": "2025-11-11T20:06:46Z"
+  },
+  {
+    "timestamp": 1762891607.289854,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10080
+    },
+    "iso_time": "2025-11-11T20:06:47Z"
+  },
+  {
+    "timestamp": 1762891607.289994,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a line of 17 students, each student is from one of 4 different schools. For any two schools (not necessarily distinct",
+      "correct_answer": "10080",
+      "seed_value": 244897995
+    },
+    "iso_time": "2025-11-11T20:06:47Z"
+  },
+  {
+    "timestamp": 1762891607.2900329,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T20:06:47Z"
+  },
+  {
+    "timestamp": 1762891880.562262,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10072",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T20:11:20Z"
+  },
+  {
+    "timestamp": 1762892136.306317,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10084",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T20:15:36Z"
+  },
+  {
+    "timestamp": 1762892428.171734,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10080",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T20:20:28Z"
+  },
+  {
+    "timestamp": 1762892666.808883,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10089",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T20:24:26Z"
+  },
+  {
+    "timestamp": 1762892968.274029,
+    "seed_id": "1986-13::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-13::1986_prompt01-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-11T20:29:28Z"
+  },
+  {
+    "timestamp": 1762892968.2740748,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1413119736
+    },
+    "iso_time": "2025-11-11T20:29:28Z"
+  },
+  {
+    "timestamp": 1762892969.050294,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 13,
+        "k": 4,
+        "C_matrix_data": [
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            2
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "C_matrix": "0 & 1 & 1 & 0 \\\\ 1 & 2 & 0 & 2 \\\\ 1 & 0 & 1 & 1 \\\\ 0 & 1 & 1 & 0"
+      }
+    },
+    "iso_time": "2025-11-11T20:29:29Z"
+  },
+  {
+    "timestamp": 1762892969.826113,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 288
+    },
+    "iso_time": "2025-11-11T20:29:29Z"
+  },
+  {
+    "timestamp": 1762892969.826259,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a line of 13 students, each student is from one of 4 different schools. For any two schools (not necessarily distinct",
+      "correct_answer": "288",
+      "seed_value": 1413119736
+    },
+    "iso_time": "2025-11-11T20:29:29Z"
+  },
+  {
+    "timestamp": 1762892969.826303,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "288",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T20:29:29Z"
+  },
+  {
+    "timestamp": 1762893266.7661078,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "297",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T20:34:26Z"
+  },
+  {
+    "timestamp": 1762893554.3622642,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "288",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T20:39:14Z"
+  },
+  {
+    "timestamp": 1762893801.1957152,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "279",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T20:43:21Z"
+  },
+  {
+    "timestamp": 1762893995.918986,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "284",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T20:46:35Z"
+  },
+  {
+    "timestamp": 1762894284.6045508,
+    "seed_id": "1986-13::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-13::1986_prompt01-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-11T20:51:24Z"
+  },
+  {
+    "timestamp": 1762894284.604596,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 305933960
+    },
+    "iso_time": "2025-11-11T20:51:24Z"
+  },
+  {
+    "timestamp": 1762894285.404997,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 12,
+        "k": 3,
+        "C_matrix_data": [
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            2
+          ]
+        ],
+        "C_matrix": "2 & 1 & 2 \\\\ 2 & 1 & 0 \\\\ 1 & 0 & 2"
+      }
+    },
+    "iso_time": "2025-11-11T20:51:25Z"
+  },
+  {
+    "timestamp": 1762894286.19458,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 108
+    },
+    "iso_time": "2025-11-11T20:51:26Z"
+  },
+  {
+    "timestamp": 1762894286.194738,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a line of 12 students, each student is from one of 3 different schools. For any two schools (not necessarily distinct",
+      "correct_answer": "108",
+      "seed_value": 305933960
+    },
+    "iso_time": "2025-11-11T20:51:26Z"
+  },
+  {
+    "timestamp": 1762894286.194782,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "108",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T20:51:26Z"
+  },
+  {
+    "timestamp": 1762894565.303364,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "99",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T20:56:05Z"
+  },
+  {
+    "timestamp": 1762894851.374143,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "111",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T21:00:51Z"
+  },
+  {
+    "timestamp": 1762895190.854749,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "108",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T21:06:30Z"
+  },
+  {
+    "timestamp": 1762895479.896142,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "116",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T21:11:19Z"
+  },
+  {
+    "timestamp": 1762895985.7550972,
+    "seed_id": "1986-13::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-13::1986_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-11T21:19:45Z"
+  },
+  {
+    "timestamp": 1762895985.755142,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 121018907
+    },
+    "iso_time": "2025-11-11T21:19:45Z"
+  },
+  {
+    "timestamp": 1762895986.62202,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 12,
+        "k": 4,
+        "C_matrix_data": [
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "C_matrix": "1 & 0 & 1 & 1 \\\\ 0 & 0 & 2 & 0 \\\\ 1 & 3 & 1 & 0 \\\\ 0 & 0 & 1 & 0"
+      }
+    },
+    "iso_time": "2025-11-11T21:19:46Z"
+  },
+  {
+    "timestamp": 1762895987.446754,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 64
+    },
+    "iso_time": "2025-11-11T21:19:47Z"
+  },
+  {
+    "timestamp": 1762895987.4469209,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a line of 12 students, each student is from one of 4 different schools. For any two schools (not necessarily distinct",
+      "correct_answer": "64",
+      "seed_value": 121018907
+    },
+    "iso_time": "2025-11-11T21:19:47Z"
+  },
+  {
+    "timestamp": 1762895987.4469671,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "56",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T21:19:47Z"
+  },
+  {
+    "timestamp": 1762896273.231176,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "61",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T21:24:33Z"
+  },
+  {
+    "timestamp": 1762896549.856838,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "64",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T21:29:09Z"
+  },
+  {
+    "timestamp": 1762896830.6272051,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "60",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T21:33:50Z"
+  },
+  {
+    "timestamp": 1762897168.707653,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "64",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T21:39:28Z"
+  },
+  {
+    "timestamp": 1762897454.1402829,
+    "seed_id": "1986-13::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-13::1986_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-11T21:44:14Z"
+  },
+  {
+    "timestamp": 1762897454.140327,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 230272430
+    },
+    "iso_time": "2025-11-11T21:44:14Z"
+  },
+  {
+    "timestamp": 1762897454.9468539,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 12,
+        "k": 4,
+        "C_matrix_data": [
+          [
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            0,
+            0
+          ]
+        ],
+        "C_matrix": "1 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 1 & 1 & 1 \\\\ 2 & 1 & 0 & 0"
+      }
+    },
+    "iso_time": "2025-11-11T21:44:14Z"
+  },
+  {
+    "timestamp": 1762897455.727092,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 96
+    },
+    "iso_time": "2025-11-11T21:44:15Z"
+  },
+  {
+    "timestamp": 1762897455.7272792,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a line of 12 students, each student is from one of 4 different schools. For any two schools (not necessarily distinct",
+      "correct_answer": "96",
+      "seed_value": 230272430
+    },
+    "iso_time": "2025-11-11T21:44:15Z"
+  },
+  {
+    "timestamp": 1762897455.7273269,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "96",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T21:44:15Z"
+  },
+  {
+    "timestamp": 1762897755.5912,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "96",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T21:49:15Z"
+  },
+  {
+    "timestamp": 1762897988.120008,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "101",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T21:53:08Z"
+  },
+  {
+    "timestamp": 1762898288.666395,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "99",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T21:58:08Z"
+  },
+  {
+    "timestamp": 1762898603.267492,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "102",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T22:03:23Z"
+  },
+  {
+    "timestamp": 1762898873.375998,
+    "seed_id": "1986-13::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T22:07:53Z"
+  },
+  {
+    "timestamp": 1762898873.3760698,
+    "seed_id": "1986-13::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T22:07:53Z"
+  },
+  {
+    "timestamp": 1762898873.3760908,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 5 (successes=3).",
+      "question": "In a sequence of coin tosses, one can keep a record of instances in which a tail is immediately followed by a head, a head is immediately followed by a head, and etc. We denote these by TH, HH, and etc. For example, in the sequence TTTHHTHTTTHHTTH of 15 coin tosses we observe that there are two HH, three HT, four TH, and five TT subsequences. How many different sequences of 15 coin tosses will contain exactly two HH, three HT, four TH, and five TT subsequences?",
+      "answer": "560",
+      "example_id": "1986-13::1986"
+    },
+    "iso_time": "2025-11-11T22:07:53Z"
+  },
+  {
+    "timestamp": 1762899130.918207,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 984487939
+    },
+    "iso_time": "2025-11-11T22:12:10Z"
+  },
+  {
+    "timestamp": 1762899131.6989498,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:11Z"
+  },
+  {
+    "timestamp": 1762899132.474412,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:12Z"
+  },
+  {
+    "timestamp": 1762899133.245471,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:13Z"
+  },
+  {
+    "timestamp": 1762899134.01386,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:14Z"
+  },
+  {
+    "timestamp": 1762899134.781557,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:14Z"
+  },
+  {
+    "timestamp": 1762899135.5502348,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:15Z"
+  },
+  {
+    "timestamp": 1762899136.317821,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:16Z"
+  },
+  {
+    "timestamp": 1762899137.093749,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:17Z"
+  },
+  {
+    "timestamp": 1762899137.8630998,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:17Z"
+  },
+  {
+    "timestamp": 1762899138.632278,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:18Z"
+  },
+  {
+    "timestamp": 1762899139.4011462,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:19Z"
+  },
+  {
+    "timestamp": 1762899140.172251,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:20Z"
+  },
+  {
+    "timestamp": 1762899140.941136,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:20Z"
+  },
+  {
+    "timestamp": 1762899141.70545,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:21Z"
+  },
+  {
+    "timestamp": 1762899141.705539,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.78733515739441
+    },
+    "iso_time": "2025-11-11T22:12:21Z"
+  },
+  {
+    "timestamp": 1762899141.705621,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1439424331
+    },
+    "iso_time": "2025-11-11T22:12:21Z"
+  },
+  {
+    "timestamp": 1762899142.480185,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:22Z"
+  },
+  {
+    "timestamp": 1762899143.244033,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:23Z"
+  },
+  {
+    "timestamp": 1762899144.0172632,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:24Z"
+  },
+  {
+    "timestamp": 1762899144.782048,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:24Z"
+  },
+  {
+    "timestamp": 1762899145.5712261,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:25Z"
+  },
+  {
+    "timestamp": 1762899146.368097,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:26Z"
+  },
+  {
+    "timestamp": 1762899147.185749,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:27Z"
+  },
+  {
+    "timestamp": 1762899147.965317,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:27Z"
+  },
+  {
+    "timestamp": 1762899148.7803159,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:28Z"
+  },
+  {
+    "timestamp": 1762899149.5669298,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:29Z"
+  },
+  {
+    "timestamp": 1762899150.349616,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:30Z"
+  },
+  {
+    "timestamp": 1762899151.1122189,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:31Z"
+  },
+  {
+    "timestamp": 1762899151.906272,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:31Z"
+  },
+  {
+    "timestamp": 1762899152.6849751,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:32Z"
+  },
+  {
+    "timestamp": 1762899152.685046,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.979427099227905
+    },
+    "iso_time": "2025-11-11T22:12:32Z"
+  },
+  {
+    "timestamp": 1762899152.685098,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 607235953
+    },
+    "iso_time": "2025-11-11T22:12:32Z"
+  },
+  {
+    "timestamp": 1762899153.524231,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:33Z"
+  },
+  {
+    "timestamp": 1762899154.383245,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:34Z"
+  },
+  {
+    "timestamp": 1762899155.2492049,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:35Z"
+  },
+  {
+    "timestamp": 1762899156.074187,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:36Z"
+  },
+  {
+    "timestamp": 1762899156.893203,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:36Z"
+  },
+  {
+    "timestamp": 1762899157.701338,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:37Z"
+  },
+  {
+    "timestamp": 1762899158.5077062,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:38Z"
+  },
+  {
+    "timestamp": 1762899159.304229,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:39Z"
+  },
+  {
+    "timestamp": 1762899160.098975,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:40Z"
+  },
+  {
+    "timestamp": 1762899160.877207,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:40Z"
+  },
+  {
+    "timestamp": 1762899161.6691709,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:41Z"
+  },
+  {
+    "timestamp": 1762899162.4889128,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:42Z"
+  },
+  {
+    "timestamp": 1762899163.2749178,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:43Z"
+  },
+  {
+    "timestamp": 1762899164.058163,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:44Z"
+  },
+  {
+    "timestamp": 1762899164.058233,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.373135089874268
+    },
+    "iso_time": "2025-11-11T22:12:44Z"
+  },
+  {
+    "timestamp": 1762899164.0582788,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1526994430
+    },
+    "iso_time": "2025-11-11T22:12:44Z"
+  },
+  {
+    "timestamp": 1762899164.840607,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:44Z"
+  },
+  {
+    "timestamp": 1762899165.638595,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:45Z"
+  },
+  {
+    "timestamp": 1762899166.4414499,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:46Z"
+  },
+  {
+    "timestamp": 1762899167.254559,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:47Z"
+  },
+  {
+    "timestamp": 1762899168.0563142,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:48Z"
+  },
+  {
+    "timestamp": 1762899168.857335,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:48Z"
+  },
+  {
+    "timestamp": 1762899169.6643798,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:49Z"
+  },
+  {
+    "timestamp": 1762899170.472079,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:50Z"
+  },
+  {
+    "timestamp": 1762899171.26842,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:51Z"
+  },
+  {
+    "timestamp": 1762899172.081383,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:52Z"
+  },
+  {
+    "timestamp": 1762899172.913066,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:52Z"
+  },
+  {
+    "timestamp": 1762899173.748503,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:53Z"
+  },
+  {
+    "timestamp": 1762899174.554731,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:54Z"
+  },
+  {
+    "timestamp": 1762899175.355714,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:55Z"
+  },
+  {
+    "timestamp": 1762899175.355805,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.297526121139526
+    },
+    "iso_time": "2025-11-11T22:12:55Z"
+  },
+  {
+    "timestamp": 1762899175.355854,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 633744969
+    },
+    "iso_time": "2025-11-11T22:12:55Z"
+  },
+  {
+    "timestamp": 1762899176.161391,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:56Z"
+  },
+  {
+    "timestamp": 1762899176.9641201,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:56Z"
+  },
+  {
+    "timestamp": 1762899177.783804,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:57Z"
+  },
+  {
+    "timestamp": 1762899178.586586,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:12:58Z"
+  },
+  {
+    "timestamp": 1762899179.392722,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:12:59Z"
+  },
+  {
+    "timestamp": 1762899180.1976461,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:13:00Z"
+  },
+  {
+    "timestamp": 1762899180.993633,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:13:00Z"
+  },
+  {
+    "timestamp": 1762899181.798195,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:13:01Z"
+  },
+  {
+    "timestamp": 1762899182.6053739,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:13:02Z"
+  },
+  {
+    "timestamp": 1762899183.415822,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:13:03Z"
+  },
+  {
+    "timestamp": 1762899184.214101,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:13:04Z"
+  },
+  {
+    "timestamp": 1762899185.018813,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:13:05Z"
+  },
+  {
+    "timestamp": 1762899185.824954,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:13:05Z"
+  },
+  {
+    "timestamp": 1762899186.6358788,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:13:06Z"
+  },
+  {
+    "timestamp": 1762899186.6359942,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.28014087677002
+    },
+    "iso_time": "2025-11-11T22:13:06Z"
+  },
+  {
+    "timestamp": 1762899186.636029,
+    "seed_id": "1986-13::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T22:13:06Z"
+  },
+  {
+    "timestamp": 1762899186.6360471,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "In a sequence of coin tosses, one can keep a record of instances in which a tail is immediately followed by a head, a head is immediately followed by a head, and etc. We denote these by TH, HH, and etc. For example, in the sequence TTTHHTHTTTHHTTH of 15 coin tosses we observe that there are two HH, three HT, four TH, and five TT subsequences. How many different sequences of 15 coin tosses will contain exactly two HH, three HT, four TH, and five TT subsequences?",
+      "answer": "560",
+      "example_id": "1986-13::1986"
+    },
+    "iso_time": "2025-11-11T22:13:06Z"
+  },
+  {
+    "timestamp": 1762899362.347782,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1380469878
+    },
+    "iso_time": "2025-11-11T22:16:02Z"
+  },
+  {
+    "timestamp": 1762899363.127868,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:03Z"
+  },
+  {
+    "timestamp": 1762899363.904222,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:03Z"
+  },
+  {
+    "timestamp": 1762899364.687617,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:04Z"
+  },
+  {
+    "timestamp": 1762899365.459688,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:05Z"
+  },
+  {
+    "timestamp": 1762899366.227802,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:06Z"
+  },
+  {
+    "timestamp": 1762899366.999359,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:06Z"
+  },
+  {
+    "timestamp": 1762899367.7591732,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:07Z"
+  },
+  {
+    "timestamp": 1762899368.542741,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:08Z"
+  },
+  {
+    "timestamp": 1762899369.3002582,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:09Z"
+  },
+  {
+    "timestamp": 1762899370.0635571,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:10Z"
+  },
+  {
+    "timestamp": 1762899370.831636,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:10Z"
+  },
+  {
+    "timestamp": 1762899371.6206038,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:11Z"
+  },
+  {
+    "timestamp": 1762899372.384904,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:12Z"
+  },
+  {
+    "timestamp": 1762899373.1398778,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:13Z"
+  },
+  {
+    "timestamp": 1762899373.13997,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.792190074920654
+    },
+    "iso_time": "2025-11-11T22:16:13Z"
+  },
+  {
+    "timestamp": 1762899373.140029,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 883715017
+    },
+    "iso_time": "2025-11-11T22:16:13Z"
+  },
+  {
+    "timestamp": 1762899373.9092119,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:13Z"
+  },
+  {
+    "timestamp": 1762899374.674964,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:14Z"
+  },
+  {
+    "timestamp": 1762899375.444314,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:15Z"
+  },
+  {
+    "timestamp": 1762899376.206451,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:16Z"
+  },
+  {
+    "timestamp": 1762899376.971793,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:16Z"
+  },
+  {
+    "timestamp": 1762899377.74808,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:17Z"
+  },
+  {
+    "timestamp": 1762899378.521844,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:18Z"
+  },
+  {
+    "timestamp": 1762899379.3054662,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:19Z"
+  },
+  {
+    "timestamp": 1762899380.091732,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:20Z"
+  },
+  {
+    "timestamp": 1762899380.871317,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:20Z"
+  },
+  {
+    "timestamp": 1762899381.659275,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:21Z"
+  },
+  {
+    "timestamp": 1762899382.4380171,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:22Z"
+  },
+  {
+    "timestamp": 1762899383.2212212,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:23Z"
+  },
+  {
+    "timestamp": 1762899384.026287,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:24Z"
+  },
+  {
+    "timestamp": 1762899384.026378,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.886348962783813
+    },
+    "iso_time": "2025-11-11T22:16:24Z"
+  },
+  {
+    "timestamp": 1762899384.026444,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 395444133
+    },
+    "iso_time": "2025-11-11T22:16:24Z"
+  },
+  {
+    "timestamp": 1762899384.819833,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:24Z"
+  },
+  {
+    "timestamp": 1762899385.6045902,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:25Z"
+  },
+  {
+    "timestamp": 1762899386.388565,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:26Z"
+  },
+  {
+    "timestamp": 1762899387.210258,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:27Z"
+  },
+  {
+    "timestamp": 1762899387.99058,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:27Z"
+  },
+  {
+    "timestamp": 1762899388.8087091,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:28Z"
+  },
+  {
+    "timestamp": 1762899389.594531,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:29Z"
+  },
+  {
+    "timestamp": 1762899390.380094,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:30Z"
+  },
+  {
+    "timestamp": 1762899391.1488771,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:31Z"
+  },
+  {
+    "timestamp": 1762899391.932208,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:31Z"
+  },
+  {
+    "timestamp": 1762899392.716844,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:32Z"
+  },
+  {
+    "timestamp": 1762899393.566839,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:33Z"
+  },
+  {
+    "timestamp": 1762899394.3490791,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:34Z"
+  },
+  {
+    "timestamp": 1762899395.131299,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:35Z"
+  },
+  {
+    "timestamp": 1762899395.131387,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.104943990707397
+    },
+    "iso_time": "2025-11-11T22:16:35Z"
+  },
+  {
+    "timestamp": 1762899395.131449,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 86865683
+    },
+    "iso_time": "2025-11-11T22:16:35Z"
+  },
+  {
+    "timestamp": 1762899395.915327,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:35Z"
+  },
+  {
+    "timestamp": 1762899396.7003121,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:36Z"
+  },
+  {
+    "timestamp": 1762899397.484611,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:37Z"
+  },
+  {
+    "timestamp": 1762899398.270136,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:38Z"
+  },
+  {
+    "timestamp": 1762899399.059731,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:39Z"
+  },
+  {
+    "timestamp": 1762899399.836973,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:39Z"
+  },
+  {
+    "timestamp": 1762899400.6196392,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:40Z"
+  },
+  {
+    "timestamp": 1762899401.408662,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:41Z"
+  },
+  {
+    "timestamp": 1762899402.193333,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:42Z"
+  },
+  {
+    "timestamp": 1762899402.975084,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:42Z"
+  },
+  {
+    "timestamp": 1762899403.765405,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:43Z"
+  },
+  {
+    "timestamp": 1762899404.54689,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:44Z"
+  },
+  {
+    "timestamp": 1762899405.328486,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:45Z"
+  },
+  {
+    "timestamp": 1762899406.111549,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:46Z"
+  },
+  {
+    "timestamp": 1762899406.111645,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.980195760726929
+    },
+    "iso_time": "2025-11-11T22:16:46Z"
+  },
+  {
+    "timestamp": 1762899406.111715,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 39041920
+    },
+    "iso_time": "2025-11-11T22:16:46Z"
+  },
+  {
+    "timestamp": 1762899406.9004328,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:46Z"
+  },
+  {
+    "timestamp": 1762899407.683261,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:47Z"
+  },
+  {
+    "timestamp": 1762899408.482861,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:48Z"
+  },
+  {
+    "timestamp": 1762899409.265496,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:49Z"
+  },
+  {
+    "timestamp": 1762899410.0500128,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:50Z"
+  },
+  {
+    "timestamp": 1762899410.83131,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:50Z"
+  },
+  {
+    "timestamp": 1762899411.612092,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:51Z"
+  },
+  {
+    "timestamp": 1762899412.3899279,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:52Z"
+  },
+  {
+    "timestamp": 1762899413.1726239,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:53Z"
+  },
+  {
+    "timestamp": 1762899413.963052,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:53Z"
+  },
+  {
+    "timestamp": 1762899414.753154,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:54Z"
+  },
+  {
+    "timestamp": 1762899415.5352771,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:55Z"
+  },
+  {
+    "timestamp": 1762899416.318319,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:16:56Z"
+  },
+  {
+    "timestamp": 1762899417.141849,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:16:57Z"
+  },
+  {
+    "timestamp": 1762899417.141953,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.03023910522461
+    },
+    "iso_time": "2025-11-11T22:16:57Z"
+  },
+  {
+    "timestamp": 1762899417.14199,
+    "seed_id": "1986-13::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T22:16:57Z"
+  },
+  {
+    "timestamp": 1762899417.142003,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "In a sequence of coin tosses, one can keep a record of instances in which a tail is immediately followed by a head, a head is immediately followed by a head, and etc. We denote these by TH, HH, and etc. For example, in the sequence TTTHHTHTTTHHTTH of 15 coin tosses we observe that there are two HH, three HT, four TH, and five TT subsequences. How many different sequences of 15 coin tosses will contain exactly two HH, three HT, four TH, and five TT subsequences?",
+      "answer": "560",
+      "example_id": "1986-13::1986"
+    },
+    "iso_time": "2025-11-11T22:16:57Z"
+  },
+  {
+    "timestamp": 1762899736.423719,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 1722045141
+    },
+    "iso_time": "2025-11-11T22:22:16Z"
+  },
+  {
+    "timestamp": 1762899746.429922,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:22:26Z"
+  },
+  {
+    "timestamp": 1762899747.223875,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:22:27Z"
+  },
+  {
+    "timestamp": 1762899747.2239559,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.80023980140686
+    },
+    "iso_time": "2025-11-11T22:22:27Z"
+  },
+  {
+    "timestamp": 1762899747.2240052,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 299244271
+    },
+    "iso_time": "2025-11-11T22:22:27Z"
+  },
+  {
+    "timestamp": 1762899757.2285252,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:22:37Z"
+  },
+  {
+    "timestamp": 1762899757.9971719,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:22:37Z"
+  },
+  {
+    "timestamp": 1762899757.9972491,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.77324390411377
+    },
+    "iso_time": "2025-11-11T22:22:37Z"
+  },
+  {
+    "timestamp": 1762899757.997296,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 3,
+      "seed_value": 569773169
+    },
+    "iso_time": "2025-11-11T22:22:37Z"
+  },
+  {
+    "timestamp": 1762899768.001804,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:22:48Z"
+  },
+  {
+    "timestamp": 1762899768.786315,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:22:48Z"
+  },
+  {
+    "timestamp": 1762899768.786399,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.789102792739868
+    },
+    "iso_time": "2025-11-11T22:22:48Z"
+  },
+  {
+    "timestamp": 1762899768.786452,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 4,
+      "seed_value": 295303324
+    },
+    "iso_time": "2025-11-11T22:22:48Z"
+  },
+  {
+    "timestamp": 1762899778.7911549,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:22:58Z"
+  },
+  {
+    "timestamp": 1762899779.57082,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:22:59Z"
+  },
+  {
+    "timestamp": 1762899779.5708952,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.784443140029907
+    },
+    "iso_time": "2025-11-11T22:22:59Z"
+  },
+  {
+    "timestamp": 1762899779.570977,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 5,
+      "seed_value": 1163171064
+    },
+    "iso_time": "2025-11-11T22:22:59Z"
+  },
+  {
+    "timestamp": 1762899789.5754728,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T22:23:09Z"
+  },
+  {
+    "timestamp": 1762899790.3439739,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:23:10Z"
+  },
+  {
+    "timestamp": 1762899790.3440819,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.77310585975647
+    },
+    "iso_time": "2025-11-11T22:23:10Z"
+  },
+  {
+    "timestamp": 1762899790.3441339,
+    "seed_id": "1986-13::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 5).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T22:23:10Z"
+  },
+  {
+    "timestamp": 1762899790.3441489,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 5,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "In a sequence of coin tosses, one can keep a record of instances in which a tail is immediately followed by a head, a head is immediately followed by a head, and etc. We denote these by TH, HH, and etc. For example, in the sequence TTTHHTHTTTHHTTH of 15 coin tosses we observe that there are two HH, three HT, four TH, and five TT subsequences. How many different sequences of 15 coin tosses will contain exactly two HH, three HT, four TH, and five TT subsequences?",
+      "answer": "560",
+      "example_id": "1986-13::1986"
+    },
+    "iso_time": "2025-11-11T22:23:10Z"
+  },
+  {
+    "timestamp": 1762900035.0248,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 1,
+      "seed_value": 475687590
+    },
+    "iso_time": "2025-11-11T22:27:15Z"
+  },
+  {
+    "timestamp": 1762900035.7786372,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N_AA": 4,
+        "N_BB": 3,
+        "N_CC": 1,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:15Z"
+  },
+  {
+    "timestamp": 1762900036.52589,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:16Z"
+  },
+  {
+    "timestamp": 1762900037.289592,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 3,
+        "N_CC": 5,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:17Z"
+  },
+  {
+    "timestamp": 1762900038.059545,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:18Z"
+  },
+  {
+    "timestamp": 1762900038.8281002,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "N_AA": 5,
+        "N_BB": 4,
+        "N_CC": 3,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:18Z"
+  },
+  {
+    "timestamp": 1762900039.5955641,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:19Z"
+  },
+  {
+    "timestamp": 1762900040.3655171,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "N_AA": 3,
+        "N_BB": 1,
+        "N_CC": 4,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:20Z"
+  },
+  {
+    "timestamp": 1762900041.145816,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:21Z"
+  },
+  {
+    "timestamp": 1762900041.908298,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 5,
+        "N_CC": 1,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:21Z"
+  },
+  {
+    "timestamp": 1762900042.673683,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:22Z"
+  },
+  {
+    "timestamp": 1762900043.439592,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 5,
+        "N_CC": 2,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:23Z"
+  },
+  {
+    "timestamp": 1762900044.208274,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:24Z"
+  },
+  {
+    "timestamp": 1762900044.976196,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "N_AA": 2,
+        "N_BB": 3,
+        "N_CC": 2,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:24Z"
+  },
+  {
+    "timestamp": 1762900045.740774,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:25Z"
+  },
+  {
+    "timestamp": 1762900045.740845,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.716047048568726
+    },
+    "iso_time": "2025-11-11T22:27:25Z"
+  },
+  {
+    "timestamp": 1762900045.740903,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 2,
+      "seed_value": 945453819
+    },
+    "iso_time": "2025-11-11T22:27:25Z"
+  },
+  {
+    "timestamp": 1762900046.5057228,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N_AA": 3,
+        "N_BB": 5,
+        "N_CC": 2,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:26Z"
+  },
+  {
+    "timestamp": 1762900047.320904,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:27Z"
+  },
+  {
+    "timestamp": 1762900048.0741792,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 4,
+        "N_CC": 1,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:28Z"
+  },
+  {
+    "timestamp": 1762900048.83646,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:28Z"
+  },
+  {
+    "timestamp": 1762900049.600615,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "N_AA": 4,
+        "N_BB": 4,
+        "N_CC": 2,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:29Z"
+  },
+  {
+    "timestamp": 1762900050.369282,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:30Z"
+  },
+  {
+    "timestamp": 1762900051.140356,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 5,
+        "N_CC": 5,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:31Z"
+  },
+  {
+    "timestamp": 1762900051.915822,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:31Z"
+  },
+  {
+    "timestamp": 1762900052.6920671,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 1,
+        "N_CC": 1,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:32Z"
+  },
+  {
+    "timestamp": 1762900053.47047,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:33Z"
+  },
+  {
+    "timestamp": 1762900054.242461,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "N_AA": 2,
+        "N_BB": 1,
+        "N_CC": 4,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:34Z"
+  },
+  {
+    "timestamp": 1762900055.011796,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:35Z"
+  },
+  {
+    "timestamp": 1762900055.784309,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "N_AA": 5,
+        "N_BB": 3,
+        "N_CC": 2,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:35Z"
+  },
+  {
+    "timestamp": 1762900056.562886,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:36Z"
+  },
+  {
+    "timestamp": 1762900056.562988,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.822085857391357
+    },
+    "iso_time": "2025-11-11T22:27:36Z"
+  },
+  {
+    "timestamp": 1762900056.5630631,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 3,
+      "seed_value": 642862004
+    },
+    "iso_time": "2025-11-11T22:27:36Z"
+  },
+  {
+    "timestamp": 1762900057.3367481,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N_AA": 5,
+        "N_BB": 3,
+        "N_CC": 4,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:37Z"
+  },
+  {
+    "timestamp": 1762900058.11103,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:38Z"
+  },
+  {
+    "timestamp": 1762900058.884298,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "N_AA": 3,
+        "N_BB": 4,
+        "N_CC": 3,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:38Z"
+  },
+  {
+    "timestamp": 1762900059.654599,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:39Z"
+  },
+  {
+    "timestamp": 1762900060.4255319,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 5,
+        "N_CC": 5,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:40Z"
+  },
+  {
+    "timestamp": 1762900061.199502,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:41Z"
+  },
+  {
+    "timestamp": 1762900061.966917,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "N_AA": 2,
+        "N_BB": 1,
+        "N_CC": 3,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:41Z"
+  },
+  {
+    "timestamp": 1762900062.738838,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:42Z"
+  },
+  {
+    "timestamp": 1762900063.513122,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "N_AA": 4,
+        "N_BB": 3,
+        "N_CC": 4,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:43Z"
+  },
+  {
+    "timestamp": 1762900064.284755,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:44Z"
+  },
+  {
+    "timestamp": 1762900065.053827,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 5,
+        "N_CC": 3,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:45Z"
+  },
+  {
+    "timestamp": 1762900065.8259048,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:45Z"
+  },
+  {
+    "timestamp": 1762900066.60148,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 5,
+        "N_CC": 1,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:46Z"
+  },
+  {
+    "timestamp": 1762900067.374579,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:47Z"
+  },
+  {
+    "timestamp": 1762900067.374649,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.81158709526062
+    },
+    "iso_time": "2025-11-11T22:27:47Z"
+  },
+  {
+    "timestamp": 1762900067.3747041,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 4,
+      "seed_value": 752248422
+    },
+    "iso_time": "2025-11-11T22:27:47Z"
+  },
+  {
+    "timestamp": 1762900068.138117,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 5,
+        "N_CC": 3,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:48Z"
+  },
+  {
+    "timestamp": 1762900068.907466,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:48Z"
+  },
+  {
+    "timestamp": 1762900069.670227,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "N_AA": 3,
+        "N_BB": 1,
+        "N_CC": 3,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:49Z"
+  },
+  {
+    "timestamp": 1762900070.4375691,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:50Z"
+  },
+  {
+    "timestamp": 1762900071.214619,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "N_AA": 4,
+        "N_BB": 4,
+        "N_CC": 2,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:51Z"
+  },
+  {
+    "timestamp": 1762900071.9833732,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:51Z"
+  },
+  {
+    "timestamp": 1762900072.754132,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "N_AA": 3,
+        "N_BB": 3,
+        "N_CC": 1,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:52Z"
+  },
+  {
+    "timestamp": 1762900073.5259688,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:53Z"
+  },
+  {
+    "timestamp": 1762900074.29552,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 1,
+        "N_CC": 3,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:54Z"
+  },
+  {
+    "timestamp": 1762900075.065718,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:55Z"
+  },
+  {
+    "timestamp": 1762900075.8354821,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "N_AA": 5,
+        "N_BB": 4,
+        "N_CC": 4,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:55Z"
+  },
+  {
+    "timestamp": 1762900076.609621,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:56Z"
+  },
+  {
+    "timestamp": 1762900077.418769,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "N_AA": 3,
+        "N_BB": 4,
+        "N_CC": 4,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:57Z"
+  },
+  {
+    "timestamp": 1762900078.182922,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:58Z"
+  },
+  {
+    "timestamp": 1762900078.182997,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.80829381942749
+    },
+    "iso_time": "2025-11-11T22:27:58Z"
+  },
+  {
+    "timestamp": 1762900078.183049,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 5,
+      "seed_value": 931737847
+    },
+    "iso_time": "2025-11-11T22:27:58Z"
+  },
+  {
+    "timestamp": 1762900078.950995,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N_AA": 5,
+        "N_BB": 2,
+        "N_CC": 4,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:27:58Z"
+  },
+  {
+    "timestamp": 1762900079.718633,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:27:59Z"
+  },
+  {
+    "timestamp": 1762900080.4847748,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "N_AA": 2,
+        "N_BB": 5,
+        "N_CC": 2,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:28:00Z"
+  },
+  {
+    "timestamp": 1762900081.255525,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:28:01Z"
+  },
+  {
+    "timestamp": 1762900082.015476,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "N_AA": 3,
+        "N_BB": 4,
+        "N_CC": 1,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:28:02Z"
+  },
+  {
+    "timestamp": 1762900082.7906141,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:28:02Z"
+  },
+  {
+    "timestamp": 1762900083.560249,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 3,
+        "N_CC": 3,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:28:03Z"
+  },
+  {
+    "timestamp": 1762900084.323925,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:28:04Z"
+  },
+  {
+    "timestamp": 1762900085.091059,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "N_AA": 1,
+        "N_BB": 5,
+        "N_CC": 4,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:28:05Z"
+  },
+  {
+    "timestamp": 1762900085.8574662,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:28:05Z"
+  },
+  {
+    "timestamp": 1762900086.632349,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "N_AA": 5,
+        "N_BB": 2,
+        "N_CC": 1,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:28:06Z"
+  },
+  {
+    "timestamp": 1762900087.3939478,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:28:07Z"
+  },
+  {
+    "timestamp": 1762900088.15837,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "N_AA": 3,
+        "N_BB": 2,
+        "N_CC": 5,
+        "N_AB": 1,
+        "N_BA": 1,
+        "N_AC": 1,
+        "N_CA": 1,
+        "N_BC": 0,
+        "N_CB": 0
+      }
+    },
+    "iso_time": "2025-11-11T22:28:08Z"
+  },
+  {
+    "timestamp": 1762900088.9253829,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:28:08Z"
+  },
+  {
+    "timestamp": 1762900088.925441,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.74239206314087
+    },
+    "iso_time": "2025-11-11T22:28:08Z"
+  },
+  {
+    "timestamp": 1762900088.92548,
+    "seed_id": "1986-13::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 6).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T22:28:08Z"
+  },
+  {
+    "timestamp": 1762900088.925492,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 6,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "In a sequence of coin tosses, one can keep a record of instances in which a tail is immediately followed by a head, a head is immediately followed by a head, and etc. We denote these by TH, HH, and etc. For example, in the sequence TTTHHTHTTTHHTTH of 15 coin tosses we observe that there are two HH, three HT, four TH, and five TT subsequences. How many different sequences of 15 coin tosses will contain exactly two HH, three HT, four TH, and five TT subsequences?",
+      "answer": "560",
+      "example_id": "1986-13::1986"
+    },
+    "iso_time": "2025-11-11T22:28:08Z"
+  },
+  {
+    "timestamp": 1762900281.302624,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 1,
+      "seed_value": 1785798178
+    },
+    "iso_time": "2025-11-11T22:31:21Z"
+  },
+  {
+    "timestamp": 1762900282.0887659,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 2,
+        "n_ac": 1,
+        "n_ba": 3,
+        "n_bb": 1,
+        "n_bc": 0,
+        "n_ca": 0,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 9
+      }
+    },
+    "iso_time": "2025-11-11T22:31:22Z"
+  },
+  {
+    "timestamp": 1762900282.8824,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:22Z"
+  },
+  {
+    "timestamp": 1762900283.6715488,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 0,
+        "n_ac": 0,
+        "n_ba": 0,
+        "n_bb": 0,
+        "n_bc": 3,
+        "n_ca": 1,
+        "n_cb": 2,
+        "n_cc": 0,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:31:23Z"
+  },
+  {
+    "timestamp": 1762900284.459126,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:24Z"
+  },
+  {
+    "timestamp": 1762900285.24337,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 1,
+        "n_ac": 2,
+        "n_ba": 2,
+        "n_bb": 0,
+        "n_bc": 0,
+        "n_ca": 1,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 8
+      }
+    },
+    "iso_time": "2025-11-11T22:31:25Z"
+  },
+  {
+    "timestamp": 1762900286.027242,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:26Z"
+  },
+  {
+    "timestamp": 1762900286.8086631,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 2,
+        "n_ac": 1,
+        "n_ba": 3,
+        "n_bb": 3,
+        "n_bc": 1,
+        "n_ca": 0,
+        "n_cb": 2,
+        "n_cc": 1,
+        "num_transitions": 13
+      }
+    },
+    "iso_time": "2025-11-11T22:31:26Z"
+  },
+  {
+    "timestamp": 1762900287.643755,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:27Z"
+  },
+  {
+    "timestamp": 1762900288.4320672,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 2,
+        "n_ac": 0,
+        "n_ba": 1,
+        "n_bb": 1,
+        "n_bc": 1,
+        "n_ca": 1,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 7
+      }
+    },
+    "iso_time": "2025-11-11T22:31:28Z"
+  },
+  {
+    "timestamp": 1762900289.216434,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:29Z"
+  },
+  {
+    "timestamp": 1762900289.997789,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 2,
+        "n_ac": 2,
+        "n_ba": 1,
+        "n_bb": 1,
+        "n_bc": 1,
+        "n_ca": 3,
+        "n_cb": 0,
+        "n_cc": 1,
+        "num_transitions": 11
+      }
+    },
+    "iso_time": "2025-11-11T22:31:29Z"
+  },
+  {
+    "timestamp": 1762900290.7710552,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:30Z"
+  },
+  {
+    "timestamp": 1762900291.553578,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "n_aa": 2,
+        "n_ab": 2,
+        "n_ac": 1,
+        "n_ba": 3,
+        "n_bb": 0,
+        "n_bc": 0,
+        "n_ca": 0,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 9
+      }
+    },
+    "iso_time": "2025-11-11T22:31:31Z"
+  },
+  {
+    "timestamp": 1762900292.345845,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:32Z"
+  },
+  {
+    "timestamp": 1762900292.345941,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 11.04331922531128
+    },
+    "iso_time": "2025-11-11T22:31:32Z"
+  },
+  {
+    "timestamp": 1762900292.346009,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 2,
+      "seed_value": 1265447923
+    },
+    "iso_time": "2025-11-11T22:31:32Z"
+  },
+  {
+    "timestamp": 1762900293.186215,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 3,
+        "n_ac": 1,
+        "n_ba": 4,
+        "n_bb": 1,
+        "n_bc": 0,
+        "n_ca": 0,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 10
+      }
+    },
+    "iso_time": "2025-11-11T22:31:33Z"
+  },
+  {
+    "timestamp": 1762900293.970596,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:33Z"
+  },
+  {
+    "timestamp": 1762900294.755379,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 1,
+        "n_ac": 2,
+        "n_ba": 2,
+        "n_bb": 1,
+        "n_bc": 0,
+        "n_ca": 1,
+        "n_cb": 1,
+        "n_cc": 1,
+        "num_transitions": 10
+      }
+    },
+    "iso_time": "2025-11-11T22:31:34Z"
+  },
+  {
+    "timestamp": 1762900295.5374908,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:35Z"
+  },
+  {
+    "timestamp": 1762900296.323759,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 1,
+        "n_ac": 2,
+        "n_ba": 0,
+        "n_bb": 0,
+        "n_bc": 2,
+        "n_ca": 3,
+        "n_cb": 1,
+        "n_cc": 2,
+        "num_transitions": 11
+      }
+    },
+    "iso_time": "2025-11-11T22:31:36Z"
+  },
+  {
+    "timestamp": 1762900297.108981,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:37Z"
+  },
+  {
+    "timestamp": 1762900297.8986108,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 1,
+        "n_ac": 1,
+        "n_ba": 0,
+        "n_bb": 0,
+        "n_bc": 1,
+        "n_ca": 2,
+        "n_cb": 0,
+        "n_cc": 0,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:31:37Z"
+  },
+  {
+    "timestamp": 1762900298.678899,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:38Z"
+  },
+  {
+    "timestamp": 1762900299.464227,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 1,
+        "n_ac": 1,
+        "n_ba": 2,
+        "n_bb": 2,
+        "n_bc": 1,
+        "n_ca": 0,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 8
+      }
+    },
+    "iso_time": "2025-11-11T22:31:39Z"
+  },
+  {
+    "timestamp": 1762900300.248705,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:40Z"
+  },
+  {
+    "timestamp": 1762900301.0317261,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "n_aa": 2,
+        "n_ab": 2,
+        "n_ac": 1,
+        "n_ba": 1,
+        "n_bb": 1,
+        "n_bc": 1,
+        "n_ca": 1,
+        "n_cb": 0,
+        "n_cc": 0,
+        "num_transitions": 9
+      }
+    },
+    "iso_time": "2025-11-11T22:31:41Z"
+  },
+  {
+    "timestamp": 1762900301.8284311,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:41Z"
+  },
+  {
+    "timestamp": 1762900302.627465,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 0,
+        "n_ac": 0,
+        "n_ba": 1,
+        "n_bb": 2,
+        "n_bc": 2,
+        "n_ca": 0,
+        "n_cb": 3,
+        "n_cc": 0,
+        "num_transitions": 8
+      }
+    },
+    "iso_time": "2025-11-11T22:31:42Z"
+  },
+  {
+    "timestamp": 1762900303.409652,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:43Z"
+  },
+  {
+    "timestamp": 1762900303.4097311,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.063722848892212
+    },
+    "iso_time": "2025-11-11T22:31:43Z"
+  },
+  {
+    "timestamp": 1762900303.409782,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 3,
+      "seed_value": 94529878
+    },
+    "iso_time": "2025-11-11T22:31:43Z"
+  },
+  {
+    "timestamp": 1762900304.1925719,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 0,
+        "n_ac": 2,
+        "n_ba": 1,
+        "n_bb": 0,
+        "n_bc": 0,
+        "n_ca": 1,
+        "n_cb": 1,
+        "n_cc": 1,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:31:44Z"
+  },
+  {
+    "timestamp": 1762900304.976305,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:44Z"
+  },
+  {
+    "timestamp": 1762900305.759634,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 2,
+        "n_ac": 0,
+        "n_ba": 1,
+        "n_bb": 2,
+        "n_bc": 2,
+        "n_ca": 1,
+        "n_cb": 1,
+        "n_cc": 1,
+        "num_transitions": 11
+      }
+    },
+    "iso_time": "2025-11-11T22:31:45Z"
+  },
+  {
+    "timestamp": 1762900306.539078,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:46Z"
+  },
+  {
+    "timestamp": 1762900307.321441,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 1,
+        "n_ac": 0,
+        "n_ba": 0,
+        "n_bb": 1,
+        "n_bc": 2,
+        "n_ca": 1,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:31:47Z"
+  },
+  {
+    "timestamp": 1762900308.112824,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:48Z"
+  },
+  {
+    "timestamp": 1762900308.8968792,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 1,
+        "n_ac": 1,
+        "n_ba": 2,
+        "n_bb": 1,
+        "n_bc": 0,
+        "n_ca": 1,
+        "n_cb": 1,
+        "n_cc": 1,
+        "num_transitions": 8
+      }
+    },
+    "iso_time": "2025-11-11T22:31:48Z"
+  },
+  {
+    "timestamp": 1762900309.678029,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:49Z"
+  },
+  {
+    "timestamp": 1762900310.459929,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 1,
+        "n_ac": 1,
+        "n_ba": 1,
+        "n_bb": 1,
+        "n_bc": 0,
+        "n_ca": 0,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:31:50Z"
+  },
+  {
+    "timestamp": 1762900311.246159,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:51Z"
+  },
+  {
+    "timestamp": 1762900312.027584,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 1,
+        "n_ac": 0,
+        "n_ba": 0,
+        "n_bb": 1,
+        "n_bc": 2,
+        "n_ca": 1,
+        "n_cb": 1,
+        "n_cc": 1,
+        "num_transitions": 7
+      }
+    },
+    "iso_time": "2025-11-11T22:31:52Z"
+  },
+  {
+    "timestamp": 1762900312.817852,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:52Z"
+  },
+  {
+    "timestamp": 1762900313.5978281,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 1,
+        "n_ac": 1,
+        "n_ba": 2,
+        "n_bb": 0,
+        "n_bc": 0,
+        "n_ca": 0,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:31:53Z"
+  },
+  {
+    "timestamp": 1762900314.379575,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:54Z"
+  },
+  {
+    "timestamp": 1762900314.379664,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.969882011413574
+    },
+    "iso_time": "2025-11-11T22:31:54Z"
+  },
+  {
+    "timestamp": 1762900314.3797178,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 4,
+      "seed_value": 1844573139
+    },
+    "iso_time": "2025-11-11T22:31:54Z"
+  },
+  {
+    "timestamp": 1762900315.1544828,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 1,
+        "n_ac": 2,
+        "n_ba": 2,
+        "n_bb": 0,
+        "n_bc": 1,
+        "n_ca": 1,
+        "n_cb": 2,
+        "n_cc": 1,
+        "num_transitions": 11
+      }
+    },
+    "iso_time": "2025-11-11T22:31:55Z"
+  },
+  {
+    "timestamp": 1762900315.942836,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:55Z"
+  },
+  {
+    "timestamp": 1762900316.728116,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 1,
+        "n_ac": 1,
+        "n_ba": 2,
+        "n_bb": 0,
+        "n_bc": 0,
+        "n_ca": 0,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:31:56Z"
+  },
+  {
+    "timestamp": 1762900317.55751,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:57Z"
+  },
+  {
+    "timestamp": 1762900318.340863,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 2,
+        "n_ac": 0,
+        "n_ba": 1,
+        "n_bb": 1,
+        "n_bc": 0,
+        "n_ca": 1,
+        "n_cb": 0,
+        "n_cc": 0,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:31:58Z"
+  },
+  {
+    "timestamp": 1762900319.1272252,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:31:59Z"
+  },
+  {
+    "timestamp": 1762900319.910967,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 0,
+        "n_ac": 2,
+        "n_ba": 1,
+        "n_bb": 0,
+        "n_bc": 0,
+        "n_ca": 1,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:31:59Z"
+  },
+  {
+    "timestamp": 1762900320.6882648,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:32:00Z"
+  },
+  {
+    "timestamp": 1762900321.466582,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 0,
+        "n_ac": 2,
+        "n_ba": 1,
+        "n_bb": 0,
+        "n_bc": 1,
+        "n_ca": 1,
+        "n_cb": 2,
+        "n_cc": 2,
+        "num_transitions": 10
+      }
+    },
+    "iso_time": "2025-11-11T22:32:01Z"
+  },
+  {
+    "timestamp": 1762900322.251667,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:32:02Z"
+  },
+  {
+    "timestamp": 1762900323.040155,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 2,
+        "n_ac": 0,
+        "n_ba": 1,
+        "n_bb": 2,
+        "n_bc": 2,
+        "n_ca": 1,
+        "n_cb": 1,
+        "n_cc": 1,
+        "num_transitions": 10
+      }
+    },
+    "iso_time": "2025-11-11T22:32:03Z"
+  },
+  {
+    "timestamp": 1762900323.8262599,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:32:03Z"
+  },
+  {
+    "timestamp": 1762900324.60501,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 1,
+        "n_ac": 2,
+        "n_ba": 2,
+        "n_bb": 1,
+        "n_bc": 0,
+        "n_ca": 1,
+        "n_cb": 1,
+        "n_cc": 0,
+        "num_transitions": 9
+      }
+    },
+    "iso_time": "2025-11-11T22:32:04Z"
+  },
+  {
+    "timestamp": 1762900325.3992362,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:32:05Z"
+  },
+  {
+    "timestamp": 1762900325.399331,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.019613981246948
+    },
+    "iso_time": "2025-11-11T22:32:05Z"
+  },
+  {
+    "timestamp": 1762900325.399392,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 5,
+      "seed_value": 496202594
+    },
+    "iso_time": "2025-11-11T22:32:05Z"
+  },
+  {
+    "timestamp": 1762900326.178624,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 0,
+        "n_ac": 2,
+        "n_ba": 1,
+        "n_bb": 2,
+        "n_bc": 2,
+        "n_ca": 1,
+        "n_cb": 3,
+        "n_cc": 0,
+        "num_transitions": 12
+      }
+    },
+    "iso_time": "2025-11-11T22:32:06Z"
+  },
+  {
+    "timestamp": 1762900326.960601,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:32:06Z"
+  },
+  {
+    "timestamp": 1762900327.747633,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 3,
+        "n_ac": 0,
+        "n_ba": 2,
+        "n_bb": 0,
+        "n_bc": 1,
+        "n_ca": 0,
+        "n_cb": 0,
+        "n_cc": 0,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:32:07Z"
+  },
+  {
+    "timestamp": 1762900328.525017,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:32:08Z"
+  },
+  {
+    "timestamp": 1762900329.3047638,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 2,
+        "n_ac": 2,
+        "n_ba": 1,
+        "n_bb": 0,
+        "n_bc": 1,
+        "n_ca": 3,
+        "n_cb": 0,
+        "n_cc": 1,
+        "num_transitions": 11
+      }
+    },
+    "iso_time": "2025-11-11T22:32:09Z"
+  },
+  {
+    "timestamp": 1762900330.084537,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:32:10Z"
+  },
+  {
+    "timestamp": 1762900330.868138,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "n_aa": 2,
+        "n_ab": 0,
+        "n_ac": 2,
+        "n_ba": 0,
+        "n_bb": 0,
+        "n_bc": 1,
+        "n_ca": 3,
+        "n_cb": 0,
+        "n_cc": 2,
+        "num_transitions": 10
+      }
+    },
+    "iso_time": "2025-11-11T22:32:10Z"
+  },
+  {
+    "timestamp": 1762900331.6439528,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:32:11Z"
+  },
+  {
+    "timestamp": 1762900332.4372742,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 1,
+        "n_ac": 0,
+        "n_ba": 2,
+        "n_bb": 0,
+        "n_bc": 1,
+        "n_ca": 0,
+        "n_cb": 2,
+        "n_cc": 0,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:32:12Z"
+  },
+  {
+    "timestamp": 1762900333.1936262,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:32:13Z"
+  },
+  {
+    "timestamp": 1762900333.949697,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "n_aa": 0,
+        "n_ab": 2,
+        "n_ac": 2,
+        "n_ba": 1,
+        "n_bb": 0,
+        "n_bc": 1,
+        "n_ca": 3,
+        "n_cb": 0,
+        "n_cc": 1,
+        "num_transitions": 10
+      }
+    },
+    "iso_time": "2025-11-11T22:32:13Z"
+  },
+  {
+    "timestamp": 1762900334.71746,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:32:14Z"
+  },
+  {
+    "timestamp": 1762900335.48334,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "n_aa": 1,
+        "n_ab": 2,
+        "n_ac": 0,
+        "n_ba": 1,
+        "n_bb": 0,
+        "n_bc": 1,
+        "n_ca": 1,
+        "n_cb": 0,
+        "n_cc": 0,
+        "num_transitions": 6
+      }
+    },
+    "iso_time": "2025-11-11T22:32:15Z"
+  },
+  {
+    "timestamp": 1762900336.249949,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T22:32:16Z"
+  },
+  {
+    "timestamp": 1762900336.25001,
+    "seed_id": "1986-13::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.850618124008179
+    },
+    "iso_time": "2025-11-11T22:32:16Z"
+  },
+  {
+    "timestamp": 1762900336.250039,
+    "seed_id": "1986-13::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 7).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T22:32:16Z"
+  },
+  {
+    "timestamp": 1762900336.2500522,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 7,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "In a sequence of coin tosses, one can keep a record of instances in which a tail is immediately followed by a head, a head is immediately followed by a head, and etc. We denote these by TH, HH, and etc. For example, in the sequence TTTHHTHTTTHHTTH of 15 coin tosses we observe that there are two HH, three HT, four TH, and five TT subsequences. How many different sequences of 15 coin tosses will contain exactly two HH, three HT, four TH, and five TT subsequences?",
+      "answer": "560",
+      "example_id": "1986-13::1986"
+    },
+    "iso_time": "2025-11-11T22:32:16Z"
+  },
+  {
+    "timestamp": 1762900649.909107,
+    "seed_id": "1986-13::1986",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "payload": {},
+    "iso_time": "2025-11-11T22:37:29Z"
+  },
+  {
+    "timestamp": 1762900649.909145,
+    "seed_id": "1986-13::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 8).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T22:37:29Z"
+  },
+  {
+    "timestamp": 1762900649.909163,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 8,
+      "feedback": "Teacher call raised JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "question": "In a sequence of coin tosses, one can keep a record of instances in which a tail is immediately followed by a head, a head is immediately followed by a head, and etc. We denote these by TH, HH, and etc. For example, in the sequence TTTHHTHTTTHHTTH of 15 coin tosses we observe that there are two HH, three HT, four TH, and five TT subsequences. How many different sequences of 15 coin tosses will contain exactly two HH, three HT, four TH, and five TT subsequences?",
+      "answer": "560",
+      "example_id": "1986-13::1986"
+    },
+    "iso_time": "2025-11-11T22:37:29Z"
+  },
+  {
+    "timestamp": 1762900914.855581,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt08",
+      "prompt_attempt": 8,
+      "sample_index": 1,
+      "seed_value": 2033879523
+    },
+    "iso_time": "2025-11-11T22:41:54Z"
+  },
+  {
+    "timestamp": 1762900915.6976352,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 4,
+        "q": 1,
+        "shuffled_symbols": [
+          "Number Theory",
+          "Combinatorics",
+          "Geometry",
+          "Algebra"
+        ],
+        "shuffled_counts": [
+          [
+            4,
+            0,
+            1,
+            4
+          ],
+          [
+            4,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            4,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            4
+          ]
+        ]
+      }
+    },
+    "iso_time": "2025-11-11T22:41:55Z"
+  },
+  {
+    "timestamp": 1762900916.512581,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 21437500
+    },
+    "iso_time": "2025-11-11T22:41:56Z"
+  },
+  {
+    "timestamp": 1762900916.512727,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, questions are of {num_q_types} types: {q_types_str}. A contestant, Alice, attempted a sequence of que",
+      "correct_answer": "21437500",
+      "seed_value": 2033879523
+    },
+    "iso_time": "2025-11-11T22:41:56Z"
+  },
+  {
+    "timestamp": 1762900916.512773,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "21437500",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T22:41:56Z"
+  },
+  {
+    "timestamp": 1762901204.271204,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "21437500",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T22:46:44Z"
+  },
+  {
+    "timestamp": 1762901505.966145,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "21437495",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T22:51:45Z"
+  },
+  {
+    "timestamp": 1762901772.4267058,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "21437505",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T22:56:12Z"
+  },
+  {
+    "timestamp": 1762902059.5549738,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "21437502",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T23:00:59Z"
+  },
+  {
+    "timestamp": 1762902336.139105,
+    "seed_id": "1986-13::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T23:05:36Z"
+  },
+  {
+    "timestamp": 1762902336.139193,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt08",
+      "prompt_attempt": 8,
+      "sample_index": 2,
+      "seed_value": 829177238
+    },
+    "iso_time": "2025-11-11T23:05:36Z"
+  },
+  {
+    "timestamp": 1762902337.2214348,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 2,
+        "q": 1,
+        "shuffled_symbols": [
+          "Geometry",
+          "Number Theory",
+          "Combinatorics",
+          "Algebra"
+        ],
+        "shuffled_counts": [
+          [
+            1,
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            4
+          ]
+        ]
+      }
+    },
+    "iso_time": "2025-11-11T23:05:37Z"
+  },
+  {
+    "timestamp": 1762902338.26232,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2430
+    },
+    "iso_time": "2025-11-11T23:05:38Z"
+  },
+  {
+    "timestamp": 1762902338.2624729,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, questions are of {num_q_types} types: {q_types_str}. A contestant, Alice, attempted a sequence of que",
+      "correct_answer": "2430",
+      "seed_value": 829177238
+    },
+    "iso_time": "2025-11-11T23:05:38Z"
+  },
+  {
+    "timestamp": 1762902338.2625332,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2430",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T23:05:38Z"
+  },
+  {
+    "timestamp": 1762902653.638658,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2430",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T23:10:53Z"
+  },
+  {
+    "timestamp": 1762902968.659219,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2428",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T23:16:08Z"
+  },
+  {
+    "timestamp": 1762903286.693228,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2434",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T23:21:26Z"
+  },
+  {
+    "timestamp": 1762903569.414361,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2422",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T23:26:09Z"
+  },
+  {
+    "timestamp": 1762903835.010813,
+    "seed_id": "1986-13::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T23:30:35Z"
+  },
+  {
+    "timestamp": 1762903835.010933,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt08",
+      "prompt_attempt": 8,
+      "sample_index": 3,
+      "seed_value": 818136608
+    },
+    "iso_time": "2025-11-11T23:30:35Z"
+  },
+  {
+    "timestamp": 1762903836.103606,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 2,
+        "q": 1,
+        "shuffled_symbols": [
+          "Combinatorics",
+          "Algebra",
+          "Number Theory",
+          "Geometry"
+        ],
+        "shuffled_counts": [
+          [
+            5,
+            0,
+            2,
+            0
+          ],
+          [
+            2,
+            5,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            2,
+            2
+          ],
+          [
+            0,
+            2,
+            0,
+            5
+          ]
+        ]
+      }
+    },
+    "iso_time": "2025-11-11T23:30:36Z"
+  },
+  {
+    "timestamp": 1762903837.172703,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 142884
+    },
+    "iso_time": "2025-11-11T23:30:37Z"
+  },
+  {
+    "timestamp": 1762903837.172875,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, questions are of {num_q_types} types: {q_types_str}. A contestant, Alice, attempted a sequence of que",
+      "correct_answer": "142884",
+      "seed_value": 818136608
+    },
+    "iso_time": "2025-11-11T23:30:37Z"
+  },
+  {
+    "timestamp": 1762903837.1729238,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "142884",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T23:30:37Z"
+  },
+  {
+    "timestamp": 1762904145.9055731,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "142883",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T23:35:45Z"
+  },
+  {
+    "timestamp": 1762904354.594814,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "142885",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T23:39:14Z"
+  },
+  {
+    "timestamp": 1762904615.065263,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "142884",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T23:43:35Z"
+  },
+  {
+    "timestamp": 1762904899.5076501,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "142892",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T23:48:19Z"
+  },
+  {
+    "timestamp": 1762905186.035617,
+    "seed_id": "1986-13::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T23:53:06Z"
+  },
+  {
+    "timestamp": 1762905186.0356932,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt08",
+      "prompt_attempt": 8,
+      "sample_index": 4,
+      "seed_value": 247244503
+    },
+    "iso_time": "2025-11-11T23:53:06Z"
+  },
+  {
+    "timestamp": 1762905187.247033,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 3,
+        "q": 1,
+        "shuffled_symbols": [
+          "Combinatorics",
+          "Number Theory",
+          "Geometry",
+          "Algebra"
+        ],
+        "shuffled_counts": [
+          [
+            4,
+            0,
+            0,
+            3
+          ],
+          [
+            3,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            3,
+            5,
+            0
+          ],
+          [
+            0,
+            1,
+            3,
+            5
+          ]
+        ]
+      }
+    },
+    "iso_time": "2025-11-11T23:53:07Z"
+  },
+  {
+    "timestamp": 1762905188.395684,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2634240
+    },
+    "iso_time": "2025-11-11T23:53:08Z"
+  },
+  {
+    "timestamp": 1762905188.395913,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, questions are of {num_q_types} types: {q_types_str}. A contestant, Alice, attempted a sequence of que",
+      "correct_answer": "2634240",
+      "seed_value": 247244503
+    },
+    "iso_time": "2025-11-11T23:53:08Z"
+  },
+  {
+    "timestamp": 1762905188.3959758,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2634245",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T23:53:08Z"
+  },
+  {
+    "timestamp": 1762905481.214209,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2634240",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T23:58:01Z"
+  },
+  {
+    "timestamp": 1762905746.816204,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2634247",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T00:02:26Z"
+  },
+  {
+    "timestamp": 1762906039.729471,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2634240",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T00:07:19Z"
+  },
+  {
+    "timestamp": 1762906355.969586,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2634241",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T00:12:35Z"
+  },
+  {
+    "timestamp": 1762906660.020291,
+    "seed_id": "1986-13::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-12T00:17:40Z"
+  },
+  {
+    "timestamp": 1762906660.020402,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-13::1986_prompt08",
+      "prompt_attempt": 8,
+      "sample_index": 5,
+      "seed_value": 1871943268
+    },
+    "iso_time": "2025-11-12T00:17:40Z"
+  },
+  {
+    "timestamp": 1762906661.187746,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "p": 4,
+        "q": 1,
+        "shuffled_symbols": [
+          "Algebra",
+          "Combinatorics",
+          "Number Theory",
+          "Geometry"
+        ],
+        "shuffled_counts": [
+          [
+            1,
+            4,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            4,
+            0
+          ],
+          [
+            1,
+            0,
+            3,
+            4
+          ],
+          [
+            4,
+            0,
+            0,
+            4
+          ]
+        ]
+      }
+    },
+    "iso_time": "2025-11-12T00:17:41Z"
+  },
+  {
+    "timestamp": 1762906662.31122,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 765625
+    },
+    "iso_time": "2025-11-12T00:17:42Z"
+  },
+  {
+    "timestamp": 1762906662.3113868,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, questions are of {num_q_types} types: {q_types_str}. A contestant, Alice, attempted a sequence of que",
+      "correct_answer": "765625",
+      "seed_value": 1871943268
+    },
+    "iso_time": "2025-11-12T00:17:42Z"
+  },
+  {
+    "timestamp": 1762906662.3114471,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "765625",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T00:17:42Z"
+  },
+  {
+    "timestamp": 1762906958.314492,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "765628",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T00:22:38Z"
+  },
+  {
+    "timestamp": 1762907199.978249,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "765620",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T00:26:39Z"
+  },
+  {
+    "timestamp": 1762907560.757238,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "765625",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-12T00:32:40Z"
+  },
+  {
+    "timestamp": 1762907787.580286,
+    "seed_id": "1986-13::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "765621",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-12T00:36:27Z"
+  },
+  {
+    "timestamp": 1762908033.4114208,
+    "seed_id": "1986-13::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-13::1986_prompt08-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-12T00:40:33Z"
+  }
+]

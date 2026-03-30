@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1763920012.8697898,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1993,
+      "question_preview": "During a recent campaign for office, a candidate made a tour of a country which we assume lies in a plane. On the first ",
+      "answer": "580",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-23T17:46:52Z"
+  },
+  {
+    "timestamp": 1763920012.86991,
+    "seed_id": "1993-2::1993",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-23T17:46:52Z"
+  },
+  {
+    "timestamp": 1763920012.869985,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "During a recent campaign for office, a candidate made a tour of a country which we assume lies in a plane. On the first day of the tour he went east, on the second day he went north, on the third day west, on the fourth day south, on the fifth day east, etc. If the candidate went $\\frac{n^{2}}{2}$ miles on the $n^{\\mbox{th}}_{}$ day of this tour, how many miles was he from his starting point at the end of the $40^{\\mbox{th}}_{}$ day?",
+      "answer": "580",
+      "example_id": "1993-2::1993"
+    },
+    "iso_time": "2025-11-23T17:46:52Z"
+  },
+  {
+    "timestamp": 1763920097.756554,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-2::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 21959144
+    },
+    "iso_time": "2025-11-23T17:48:17Z"
+  },
+  {
+    "timestamp": 1763920098.5140412,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "days": 198,
+        "a": 1,
+        "b": 23,
+        "c": 35
+      }
+    },
+    "iso_time": "2025-11-23T17:48:18Z"
+  },
+  {
+    "timestamp": 1763920099.2621372,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7728990192
+    },
+    "iso_time": "2025-11-23T17:48:19Z"
+  },
+  {
+    "timestamp": 1763920099.262295,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A candidate begins a campaign tour at the origin in the plane. On day n (1 ≤ n ≤ 198), he travels (1·n^2 + 23·n + 35) mi",
+      "correct_answer": "7728990192",
+      "seed_value": 21959144
+    },
+    "iso_time": "2025-11-23T17:48:19Z"
+  },
+  {
+    "timestamp": 1763920099.262351,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7728990195",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:48:19Z"
+  },
+  {
+    "timestamp": 1763920141.303357,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7728990193",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:49:01Z"
+  },
+  {
+    "timestamp": 1763920184.282858,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7728990192",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:49:44Z"
+  },
+  {
+    "timestamp": 1763920210.805641,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7728990190",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:50:10Z"
+  },
+  {
+    "timestamp": 1763920269.53304,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7728990192",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:51:09Z"
+  },
+  {
+    "timestamp": 1763920308.3629498,
+    "seed_id": "1993-2::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-2::1993_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T17:51:48Z"
+  },
+  {
+    "timestamp": 1763920308.3631308,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-2::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 126945658
+    },
+    "iso_time": "2025-11-23T17:51:48Z"
+  },
+  {
+    "timestamp": 1763920309.156003,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "days": 229,
+        "a": 1,
+        "b": 24,
+        "c": 0
+      }
+    },
+    "iso_time": "2025-11-23T17:51:49Z"
+  },
+  {
+    "timestamp": 1763920309.9104378,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 13527547108
+    },
+    "iso_time": "2025-11-23T17:51:49Z"
+  },
+  {
+    "timestamp": 1763920309.910604,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A candidate begins a campaign tour at the origin in the plane. On day n (1 ≤ n ≤ 229), he travels (1·n^2 + 24·n + 0) mil",
+      "correct_answer": "13527547108",
+      "seed_value": 126945658
+    },
+    "iso_time": "2025-11-23T17:51:49Z"
+  },
+  {
+    "timestamp": 1763920309.9106612,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "13527547102",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:51:49Z"
+  },
+  {
+    "timestamp": 1763920355.748823,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "13527547108",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:52:35Z"
+  },
+  {
+    "timestamp": 1763920392.0482078,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "13527547112",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:53:12Z"
+  },
+  {
+    "timestamp": 1763920481.8088572,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "13527547107",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:54:41Z"
+  },
+  {
+    "timestamp": 1763920526.999219,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13527547108",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:55:26Z"
+  },
+  {
+    "timestamp": 1763920563.21598,
+    "seed_id": "1993-2::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-2::1993_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T17:56:03Z"
+  },
+  {
+    "timestamp": 1763920563.216164,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-2::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 216683407
+    },
+    "iso_time": "2025-11-23T17:56:03Z"
+  },
+  {
+    "timestamp": 1763920563.979724,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "days": 240,
+        "a": 3,
+        "b": 7,
+        "c": 39
+      }
+    },
+    "iso_time": "2025-11-23T17:56:03Z"
+  },
+  {
+    "timestamp": 1763920564.73223,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 122786380800
+    },
+    "iso_time": "2025-11-23T17:56:04Z"
+  },
+  {
+    "timestamp": 1763920564.732386,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A candidate begins a campaign tour at the origin in the plane. On day n (1 ≤ n ≤ 240), he travels (3·n^2 + 7·n + 39) mil",
+      "correct_answer": "122786380800",
+      "seed_value": 216683407
+    },
+    "iso_time": "2025-11-23T17:56:04Z"
+  },
+  {
+    "timestamp": 1763920564.7324421,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "122786380791",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:56:04Z"
+  },
+  {
+    "timestamp": 1763920656.1439831,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "122786380796",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:57:36Z"
+  },
+  {
+    "timestamp": 1763920703.965894,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "122786380800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:58:23Z"
+  },
+  {
+    "timestamp": 1763920741.956665,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "122786380800",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T17:59:01Z"
+  },
+  {
+    "timestamp": 1763920785.376113,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "122786380798",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T17:59:45Z"
+  },
+  {
+    "timestamp": 1763920840.12305,
+    "seed_id": "1993-2::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-2::1993_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T18:00:40Z"
+  },
+  {
+    "timestamp": 1763920840.123163,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-2::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1127768134
+    },
+    "iso_time": "2025-11-23T18:00:40Z"
+  },
+  {
+    "timestamp": 1763920841.0362968,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "days": 219,
+        "a": 1,
+        "b": 17,
+        "c": 7
+      }
+    },
+    "iso_time": "2025-11-23T18:00:41Z"
+  },
+  {
+    "timestamp": 1763920841.979991,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10787989072
+    },
+    "iso_time": "2025-11-23T18:00:41Z"
+  },
+  {
+    "timestamp": 1763920841.980155,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A candidate begins a campaign tour at the origin in the plane. On day n (1 ≤ n ≤ 219), he travels (1·n^2 + 17·n + 7) mil",
+      "correct_answer": "10787989072",
+      "seed_value": 1127768134
+    },
+    "iso_time": "2025-11-23T18:00:41Z"
+  },
+  {
+    "timestamp": 1763920841.9802072,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10787989075",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:00:41Z"
+  },
+  {
+    "timestamp": 1763920920.814668,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10787989072",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:02:00Z"
+  },
+  {
+    "timestamp": 1763920962.2218728,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10787989071",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:02:42Z"
+  },
+  {
+    "timestamp": 1763921015.876256,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10787989064",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:03:35Z"
+  },
+  {
+    "timestamp": 1763921071.891555,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10787989072",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:04:31Z"
+  },
+  {
+    "timestamp": 1763921117.4282181,
+    "seed_id": "1993-2::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-2::1993_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T18:05:17Z"
+  },
+  {
+    "timestamp": 1763921117.428419,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-2::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 366362706
+    },
+    "iso_time": "2025-11-23T18:05:17Z"
+  },
+  {
+    "timestamp": 1763921118.219502,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "days": 173,
+        "a": 2,
+        "b": 9,
+        "c": 35
+      }
+    },
+    "iso_time": "2025-11-23T18:05:18Z"
+  },
+  {
+    "timestamp": 1763921118.969941,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 15272091388
+    },
+    "iso_time": "2025-11-23T18:05:18Z"
+  },
+  {
+    "timestamp": 1763921118.9700968,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A candidate begins a campaign tour at the origin in the plane. On day n (1 ≤ n ≤ 173), he travels (2·n^2 + 9·n + 35) mil",
+      "correct_answer": "15272091388",
+      "seed_value": 366362706
+    },
+    "iso_time": "2025-11-23T18:05:18Z"
+  },
+  {
+    "timestamp": 1763921118.970148,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "15272091388",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:05:18Z"
+  },
+  {
+    "timestamp": 1763921151.992882,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "15272091388",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:05:51Z"
+  },
+  {
+    "timestamp": 1763921187.5019379,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "15272091395",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:06:27Z"
+  },
+  {
+    "timestamp": 1763921231.886852,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "15272091391",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:07:11Z"
+  },
+  {
+    "timestamp": 1763921284.066785,
+    "seed_id": "1993-2::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "15272091381",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:08:04Z"
+  },
+  {
+    "timestamp": 1763921378.4813702,
+    "seed_id": "1993-2::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-2::1993_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T18:09:38Z"
+  }
+]

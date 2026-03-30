@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1765317541.9073799,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2006,
+      "question_preview": "Given that a sequence satisfies $x_0=0$ and $|x_k|=|x_{k-1}+3|$ for all integers $k\\ge 1,$ find the minimum possible val",
+      "answer": "27",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-09T21:59:01Z"
+  },
+  {
+    "timestamp": 1765317541.9074938,
+    "seed_id": "2006-I-15::2006",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-09T21:59:01Z"
+  },
+  {
+    "timestamp": 1765317541.907527,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Given that a sequence satisfies $x_0=0$ and $|x_k|=|x_{k-1}+3|$ for all integers $k\\ge 1,$ find the minimum possible value of $|x_1+x_2+\\cdots+x_{2006}|.$",
+      "answer": "27",
+      "example_id": "2006-I-15::2006"
+    },
+    "iso_time": "2025-12-09T21:59:01Z"
+  },
+  {
+    "timestamp": 1765317776.591313,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-15::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 329586223
+    },
+    "iso_time": "2025-12-09T22:02:56Z"
+  },
+  {
+    "timestamp": 1765317777.898531,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 24,
+        "n": 3607
+      }
+    },
+    "iso_time": "2025-12-09T22:02:57Z"
+  },
+  {
+    "timestamp": 1765317779.021806,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 96
+    },
+    "iso_time": "2025-12-09T22:02:59Z"
+  },
+  {
+    "timestamp": 1765317779.0219488,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider all real sequences (x_k) satisfying x_0 = 0 and, for each k ≥ 1, |x_k| = |x_{k-1} + 24|. Among all such sequenc",
+      "correct_answer": "96",
+      "seed_value": 329586223
+    },
+    "iso_time": "2025-12-09T22:02:59Z"
+  },
+  {
+    "timestamp": 1765317779.022031,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "95",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:02:59Z"
+  },
+  {
+    "timestamp": 1765317830.482487,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "100",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:03:50Z"
+  },
+  {
+    "timestamp": 1765317859.832772,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "96",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:04:19Z"
+  },
+  {
+    "timestamp": 1765317885.112567,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "96",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:04:45Z"
+  },
+  {
+    "timestamp": 1765317930.290694,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "103",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:05:30Z"
+  },
+  {
+    "timestamp": 1765317958.452616,
+    "seed_id": "2006-I-15::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-15::2006_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T22:05:58Z"
+  },
+  {
+    "timestamp": 1765317958.452733,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-15::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1507453682
+    },
+    "iso_time": "2025-12-09T22:05:58Z"
+  },
+  {
+    "timestamp": 1765317959.7480571,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 18,
+        "n": 1746
+      }
+    },
+    "iso_time": "2025-12-09T22:05:59Z"
+  },
+  {
+    "timestamp": 1765317960.861811,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 594
+    },
+    "iso_time": "2025-12-09T22:06:00Z"
+  },
+  {
+    "timestamp": 1765317960.861965,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider all real sequences (x_k) satisfying x_0 = 0 and, for each k ≥ 1, |x_k| = |x_{k-1} + 18|. Among all such sequenc",
+      "correct_answer": "594",
+      "seed_value": 1507453682
+    },
+    "iso_time": "2025-12-09T22:06:00Z"
+  },
+  {
+    "timestamp": 1765317960.8620439,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "594",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:06:00Z"
+  },
+  {
+    "timestamp": 1765318002.586406,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "597",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:06:42Z"
+  },
+  {
+    "timestamp": 1765318068.732207,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "594",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:07:48Z"
+  },
+  {
+    "timestamp": 1765318083.684719,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "593",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:08:03Z"
+  },
+  {
+    "timestamp": 1765318145.017765,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "599",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:09:05Z"
+  },
+  {
+    "timestamp": 1765318172.714994,
+    "seed_id": "2006-I-15::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-15::2006_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T22:09:32Z"
+  },
+  {
+    "timestamp": 1765318172.715103,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-15::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 49894479
+    },
+    "iso_time": "2025-12-09T22:09:32Z"
+  },
+  {
+    "timestamp": 1765318174.019572,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 43,
+        "n": 569
+      }
+    },
+    "iso_time": "2025-12-09T22:09:34Z"
+  },
+  {
+    "timestamp": 1765318175.104197,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 129
+    },
+    "iso_time": "2025-12-09T22:09:35Z"
+  },
+  {
+    "timestamp": 1765318175.1043358,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider all real sequences (x_k) satisfying x_0 = 0 and, for each k ≥ 1, |x_k| = |x_{k-1} + 43|. Among all such sequenc",
+      "correct_answer": "129",
+      "seed_value": 49894479
+    },
+    "iso_time": "2025-12-09T22:09:35Z"
+  },
+  {
+    "timestamp": 1765318175.104388,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "134",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:09:35Z"
+  },
+  {
+    "timestamp": 1765318200.829932,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "129",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:10:00Z"
+  },
+  {
+    "timestamp": 1765318226.8578272,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "135",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:10:26Z"
+  },
+  {
+    "timestamp": 1765318279.270849,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "138",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:11:19Z"
+  },
+  {
+    "timestamp": 1765318358.576715,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "129",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:12:38Z"
+  },
+  {
+    "timestamp": 1765318418.866527,
+    "seed_id": "2006-I-15::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-15::2006_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T22:13:38Z"
+  },
+  {
+    "timestamp": 1765318418.866721,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-15::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 846479947
+    },
+    "iso_time": "2025-12-09T22:13:38Z"
+  },
+  {
+    "timestamp": 1765318420.212302,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 15,
+        "n": 459
+      }
+    },
+    "iso_time": "2025-12-09T22:13:40Z"
+  },
+  {
+    "timestamp": 1765318421.334381,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 180
+    },
+    "iso_time": "2025-12-09T22:13:41Z"
+  },
+  {
+    "timestamp": 1765318421.334521,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider all real sequences (x_k) satisfying x_0 = 0 and, for each k ≥ 1, |x_k| = |x_{k-1} + 15|. Among all such sequenc",
+      "correct_answer": "180",
+      "seed_value": 846479947
+    },
+    "iso_time": "2025-12-09T22:13:41Z"
+  },
+  {
+    "timestamp": 1765318421.334603,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:13:41Z"
+  },
+  {
+    "timestamp": 1765318476.0526059,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "189",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:14:36Z"
+  },
+  {
+    "timestamp": 1765318505.9577038,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "178",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:15:05Z"
+  },
+  {
+    "timestamp": 1765318529.9446988,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:15:29Z"
+  },
+  {
+    "timestamp": 1765318559.948888,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "184",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:15:59Z"
+  },
+  {
+    "timestamp": 1765318583.499388,
+    "seed_id": "2006-I-15::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-15::2006_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T22:16:23Z"
+  },
+  {
+    "timestamp": 1765318583.499512,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-15::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1349927108
+    },
+    "iso_time": "2025-12-09T22:16:23Z"
+  },
+  {
+    "timestamp": 1765318584.752615,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 7,
+        "n": 1891
+      }
+    },
+    "iso_time": "2025-12-09T22:16:24Z"
+  },
+  {
+    "timestamp": 1765318585.942782,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 154
+    },
+    "iso_time": "2025-12-09T22:16:25Z"
+  },
+  {
+    "timestamp": 1765318585.9429739,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider all real sequences (x_k) satisfying x_0 = 0 and, for each k ≥ 1, |x_k| = |x_{k-1} + 7|. Among all such sequence",
+      "correct_answer": "154",
+      "seed_value": 1349927108
+    },
+    "iso_time": "2025-12-09T22:16:25Z"
+  },
+  {
+    "timestamp": 1765318585.943032,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "162",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:16:25Z"
+  },
+  {
+    "timestamp": 1765318629.770425,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "153",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:17:09Z"
+  },
+  {
+    "timestamp": 1765318647.804182,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "154",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:17:27Z"
+  },
+  {
+    "timestamp": 1765318707.098659,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "152",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-09T22:18:27Z"
+  },
+  {
+    "timestamp": 1765318731.979687,
+    "seed_id": "2006-I-15::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "154",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-09T22:18:51Z"
+  },
+  {
+    "timestamp": 1765318800.042274,
+    "seed_id": "2006-I-15::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-15::2006_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-09T22:20:00Z"
+  }
+]

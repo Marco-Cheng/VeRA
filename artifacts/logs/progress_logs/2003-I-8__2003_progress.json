@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764801912.6871622,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "In an increasing sequence of four positive integers, the first three terms form an arithmetic progression, the last thre",
+      "answer": "129",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-03T22:45:12Z"
+  },
+  {
+    "timestamp": 1764801912.687258,
+    "seed_id": "2003-I-8::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-03T22:45:12Z"
+  },
+  {
+    "timestamp": 1764801912.687317,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In an increasing sequence of four positive integers, the first three terms form an arithmetic progression, the last three terms form a geometric progression, and the first and fourth terms differ by $30.$ Find the sum of the four terms.",
+      "answer": "129",
+      "example_id": "2003-I-8::2003"
+    },
+    "iso_time": "2025-12-03T22:45:12Z"
+  },
+  {
+    "timestamp": 1764802003.277343,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-8::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1122288258
+    },
+    "iso_time": "2025-12-03T22:46:43Z"
+  },
+  {
+    "timestamp": 1764802004.667746,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "delta": 686,
+        "q_num": 529,
+        "q_den": 528
+      }
+    },
+    "iso_time": "2025-12-03T22:46:44Z"
+  },
+  {
+    "timestamp": 1764802005.871916,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 14798
+    },
+    "iso_time": "2025-12-03T22:46:45Z"
+  },
+  {
+    "timestamp": 1764802005.872106,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In an increasing sequence of four positive integers a<b<c<d, the first three terms form an arithmetic progression, the l",
+      "correct_answer": "14798",
+      "seed_value": 1122288258
+    },
+    "iso_time": "2025-12-03T22:46:45Z"
+  },
+  {
+    "timestamp": 1764802005.872183,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "14798",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:46:45Z"
+  },
+  {
+    "timestamp": 1764802023.680832,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "14800",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:47:03Z"
+  },
+  {
+    "timestamp": 1764802041.618263,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "14795",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:47:21Z"
+  },
+  {
+    "timestamp": 1764802060.517266,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14806",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:47:40Z"
+  },
+  {
+    "timestamp": 1764802077.747509,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "14798",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:47:57Z"
+  },
+  {
+    "timestamp": 1764802104.57665,
+    "seed_id": "2003-I-8::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-8::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T22:48:24Z"
+  },
+  {
+    "timestamp": 1764802104.576834,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-8::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 182869577
+    },
+    "iso_time": "2025-12-03T22:48:24Z"
+  },
+  {
+    "timestamp": 1764802105.851985,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "delta": 320,
+        "q_num": 352,
+        "q_den": 351
+      }
+    },
+    "iso_time": "2025-12-03T22:48:25Z"
+  },
+  {
+    "timestamp": 1764802106.94943,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5624
+    },
+    "iso_time": "2025-12-03T22:48:26Z"
+  },
+  {
+    "timestamp": 1764802106.949585,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In an increasing sequence of four positive integers a<b<c<d, the first three terms form an arithmetic progression, the l",
+      "correct_answer": "5624",
+      "seed_value": 182869577
+    },
+    "iso_time": "2025-12-03T22:48:26Z"
+  },
+  {
+    "timestamp": 1764802106.949652,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5624",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:48:26Z"
+  },
+  {
+    "timestamp": 1764802123.3849401,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5624",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:48:43Z"
+  },
+  {
+    "timestamp": 1764802134.8257542,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5627",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:48:54Z"
+  },
+  {
+    "timestamp": 1764802175.032196,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5619",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:49:35Z"
+  },
+  {
+    "timestamp": 1764802196.737259,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5622",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:49:56Z"
+  },
+  {
+    "timestamp": 1764802232.438251,
+    "seed_id": "2003-I-8::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-8::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T22:50:32Z"
+  },
+  {
+    "timestamp": 1764802232.4384158,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-8::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1727633718
+    },
+    "iso_time": "2025-12-03T22:50:32Z"
+  },
+  {
+    "timestamp": 1764802233.8016791,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "delta": 273,
+        "q_num": 37,
+        "q_den": 36
+      }
+    },
+    "iso_time": "2025-12-03T22:50:33Z"
+  },
+  {
+    "timestamp": 1764802234.882633,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1533
+    },
+    "iso_time": "2025-12-03T22:50:34Z"
+  },
+  {
+    "timestamp": 1764802234.882782,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In an increasing sequence of four positive integers a<b<c<d, the first three terms form an arithmetic progression, the l",
+      "correct_answer": "1533",
+      "seed_value": 1727633718
+    },
+    "iso_time": "2025-12-03T22:50:34Z"
+  },
+  {
+    "timestamp": 1764802234.882842,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1533",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:50:34Z"
+  },
+  {
+    "timestamp": 1764802246.991019,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1527",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:50:46Z"
+  },
+  {
+    "timestamp": 1764802261.148754,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1536",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:51:01Z"
+  },
+  {
+    "timestamp": 1764802300.470743,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1537",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:51:40Z"
+  },
+  {
+    "timestamp": 1764802329.7863848,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1533",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:52:09Z"
+  },
+  {
+    "timestamp": 1764802343.275976,
+    "seed_id": "2003-I-8::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-8::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T22:52:23Z"
+  },
+  {
+    "timestamp": 1764802343.276144,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-8::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1852524058
+    },
+    "iso_time": "2025-12-03T22:52:23Z"
+  },
+  {
+    "timestamp": 1764802344.530347,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "delta": 473,
+        "q_num": 407,
+        "q_den": 406
+      }
+    },
+    "iso_time": "2025-12-03T22:52:24Z"
+  },
+  {
+    "timestamp": 1764802345.662634,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 8943
+    },
+    "iso_time": "2025-12-03T22:52:25Z"
+  },
+  {
+    "timestamp": 1764802345.6627882,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In an increasing sequence of four positive integers a<b<c<d, the first three terms form an arithmetic progression, the l",
+      "correct_answer": "8943",
+      "seed_value": 1852524058
+    },
+    "iso_time": "2025-12-03T22:52:25Z"
+  },
+  {
+    "timestamp": 1764802345.6628501,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8947",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:52:25Z"
+  },
+  {
+    "timestamp": 1764802362.402279,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "8951",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:52:42Z"
+  },
+  {
+    "timestamp": 1764802378.469266,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8943",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:52:58Z"
+  },
+  {
+    "timestamp": 1764802391.56766,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8948",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:53:11Z"
+  },
+  {
+    "timestamp": 1764802418.336044,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8943",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:53:38Z"
+  },
+  {
+    "timestamp": 1764802434.356569,
+    "seed_id": "2003-I-8::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-8::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T22:53:54Z"
+  },
+  {
+    "timestamp": 1764802434.3567429,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-I-8::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 501141894
+    },
+    "iso_time": "2025-12-03T22:53:54Z"
+  },
+  {
+    "timestamp": 1764802435.675274,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "delta": 388,
+        "q_num": 2081,
+        "q_den": 2080
+      }
+    },
+    "iso_time": "2025-12-03T22:53:55Z"
+  },
+  {
+    "timestamp": 1764802436.9048278,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16644
+    },
+    "iso_time": "2025-12-03T22:53:56Z"
+  },
+  {
+    "timestamp": 1764802436.905022,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In an increasing sequence of four positive integers a<b<c<d, the first three terms form an arithmetic progression, the l",
+      "correct_answer": "16644",
+      "seed_value": 501141894
+    },
+    "iso_time": "2025-12-03T22:53:56Z"
+  },
+  {
+    "timestamp": 1764802436.9050891,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16643",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:53:56Z"
+  },
+  {
+    "timestamp": 1764802495.546307,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "16653",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:54:55Z"
+  },
+  {
+    "timestamp": 1764802545.213423,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16644",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:55:45Z"
+  },
+  {
+    "timestamp": 1764802582.075807,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16644",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-03T22:56:22Z"
+  },
+  {
+    "timestamp": 1764802595.4880059,
+    "seed_id": "2003-I-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "16640",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-03T22:56:35Z"
+  },
+  {
+    "timestamp": 1764802615.2152472,
+    "seed_id": "2003-I-8::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-I-8::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-03T22:56:55Z"
+  }
+]

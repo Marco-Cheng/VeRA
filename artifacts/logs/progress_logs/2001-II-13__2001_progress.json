@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764573745.258123,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "In quadrilateral $ABCD$ , $\\angle{BAD}\\cong\\angle{ADC}$ and $\\angle{ABD}\\cong\\angle{BCD}$ , $AB = 8$ , $BD = 10$ , and $",
+      "answer": "69",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-01T07:22:25Z"
+  },
+  {
+    "timestamp": 1764573745.2581902,
+    "seed_id": "2001-II-13::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-01T07:22:25Z"
+  },
+  {
+    "timestamp": 1764573745.258225,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In quadrilateral $ABCD$ , $\\angle{BAD}\\cong\\angle{ADC}$ and $\\angle{ABD}\\cong\\angle{BCD}$ , $AB = 8$ , $BD = 10$ , and $BC = 6$ . The length $CD$ may be written in the form $\\frac {m}{n}$ , where $m$ and $n$ are relatively prime positive integers. Find $m + n$ .",
+      "answer": "69",
+      "example_id": "2001-II-13::2001"
+    },
+    "iso_time": "2025-12-01T07:22:25Z"
+  },
+  {
+    "timestamp": 1764573865.6898181,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-13::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 398724824
+    },
+    "iso_time": "2025-12-01T07:24:25Z"
+  },
+  {
+    "timestamp": 1764573866.918447,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 1300,
+        "bc": 637,
+        "bd": 784
+      }
+    },
+    "iso_time": "2025-12-01T07:24:26Z"
+  },
+  {
+    "timestamp": 1764573868.043408,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1622
+    },
+    "iso_time": "2025-12-01T07:24:28Z"
+  },
+  {
+    "timestamp": 1764573868.043539,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the internal bisector of angle B meets AC at point D. Given AB = 1300, BC = 637, and BD = 784, and know",
+      "correct_answer": "1622",
+      "seed_value": 398724824
+    },
+    "iso_time": "2025-12-01T07:24:28Z"
+  },
+  {
+    "timestamp": 1764573868.043582,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1613",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:24:28Z"
+  },
+  {
+    "timestamp": 1764573973.617075,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1622",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:26:13Z"
+  },
+  {
+    "timestamp": 1764574005.357428,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1622",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:26:45Z"
+  },
+  {
+    "timestamp": 1764574064.259994,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1619",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:27:44Z"
+  },
+  {
+    "timestamp": 1764574107.142775,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1623",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:28:27Z"
+  },
+  {
+    "timestamp": 1764574181.346223,
+    "seed_id": "2001-II-13::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-13::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T07:29:41Z"
+  },
+  {
+    "timestamp": 1764574181.3463948,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-13::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 255362267
+    },
+    "iso_time": "2025-12-01T07:29:41Z"
+  },
+  {
+    "timestamp": 1764574182.728501,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 100,
+        "bc": 49,
+        "bd": 56
+      }
+    },
+    "iso_time": "2025-12-01T07:29:42Z"
+  },
+  {
+    "timestamp": 1764574183.82851,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 152
+    },
+    "iso_time": "2025-12-01T07:29:43Z"
+  },
+  {
+    "timestamp": 1764574183.8286579,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the internal bisector of angle B meets AC at point D. Given AB = 100, BC = 49, and BD = 56, and knowing",
+      "correct_answer": "152",
+      "seed_value": 255362267
+    },
+    "iso_time": "2025-12-01T07:29:43Z"
+  },
+  {
+    "timestamp": 1764574183.828702,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "152",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:29:43Z"
+  },
+  {
+    "timestamp": 1764574205.354972,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "152",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:30:05Z"
+  },
+  {
+    "timestamp": 1764574226.4594638,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "150",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:30:26Z"
+  },
+  {
+    "timestamp": 1764574247.1334841,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "158",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:30:47Z"
+  },
+  {
+    "timestamp": 1764574267.483604,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "153",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:31:07Z"
+  },
+  {
+    "timestamp": 1764574286.7658298,
+    "seed_id": "2001-II-13::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-13::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T07:31:26Z"
+  },
+  {
+    "timestamp": 1764574286.766027,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-13::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1505718895
+    },
+    "iso_time": "2025-12-01T07:31:26Z"
+  },
+  {
+    "timestamp": 1764574288.098422,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 500,
+        "bc": 320,
+        "bd": 384
+      }
+    },
+    "iso_time": "2025-12-01T07:31:28Z"
+  },
+  {
+    "timestamp": 1764574289.210378,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 453
+    },
+    "iso_time": "2025-12-01T07:31:29Z"
+  },
+  {
+    "timestamp": 1764574289.2105222,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the internal bisector of angle B meets AC at point D. Given AB = 500, BC = 320, and BD = 384, and knowi",
+      "correct_answer": "453",
+      "seed_value": 1505718895
+    },
+    "iso_time": "2025-12-01T07:31:29Z"
+  },
+  {
+    "timestamp": 1764574289.2105632,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "445",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:31:29Z"
+  },
+  {
+    "timestamp": 1764574316.24795,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "453",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:31:56Z"
+  },
+  {
+    "timestamp": 1764574346.365988,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "450",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:32:26Z"
+  },
+  {
+    "timestamp": 1764574359.036031,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "457",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:32:39Z"
+  },
+  {
+    "timestamp": 1764574377.177682,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "453",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:32:57Z"
+  },
+  {
+    "timestamp": 1764574399.4757419,
+    "seed_id": "2001-II-13::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-13::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T07:33:19Z"
+  },
+  {
+    "timestamp": 1764574399.475877,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-13::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 304028129
+    },
+    "iso_time": "2025-12-01T07:33:19Z"
+  },
+  {
+    "timestamp": 1764574400.688951,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 100,
+        "bc": 36,
+        "bd": 48
+      }
+    },
+    "iso_time": "2025-12-01T07:33:20Z"
+  },
+  {
+    "timestamp": 1764574401.6621451,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 113
+    },
+    "iso_time": "2025-12-01T07:33:21Z"
+  },
+  {
+    "timestamp": 1764574401.6622772,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the internal bisector of angle B meets AC at point D. Given AB = 100, BC = 36, and BD = 48, and knowing",
+      "correct_answer": "113",
+      "seed_value": 304028129
+    },
+    "iso_time": "2025-12-01T07:33:21Z"
+  },
+  {
+    "timestamp": 1764574401.6623201,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "119",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:33:21Z"
+  },
+  {
+    "timestamp": 1764574436.192296,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "121",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:33:56Z"
+  },
+  {
+    "timestamp": 1764574452.107327,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "115",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:34:12Z"
+  },
+  {
+    "timestamp": 1764574479.776513,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "113",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:34:39Z"
+  },
+  {
+    "timestamp": 1764574524.394732,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "113",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:35:24Z"
+  },
+  {
+    "timestamp": 1764574553.2196548,
+    "seed_id": "2001-II-13::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-13::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T07:35:53Z"
+  },
+  {
+    "timestamp": 1764574553.219766,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-II-13::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2011191747
+    },
+    "iso_time": "2025-12-01T07:35:53Z"
+  },
+  {
+    "timestamp": 1764574554.537489,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ab": 100,
+        "bc": 36,
+        "bd": 48
+      }
+    },
+    "iso_time": "2025-12-01T07:35:54Z"
+  },
+  {
+    "timestamp": 1764574555.5192661,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 113
+    },
+    "iso_time": "2025-12-01T07:35:55Z"
+  },
+  {
+    "timestamp": 1764574555.5194209,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, the internal bisector of angle B meets AC at point D. Given AB = 100, BC = 36, and BD = 48, and knowing",
+      "correct_answer": "113",
+      "seed_value": 2011191747
+    },
+    "iso_time": "2025-12-01T07:35:55Z"
+  },
+  {
+    "timestamp": 1764574555.519468,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "113",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:35:55Z"
+  },
+  {
+    "timestamp": 1764574574.6023219,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "121",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:36:14Z"
+  },
+  {
+    "timestamp": 1764574597.02657,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:36:37Z"
+  },
+  {
+    "timestamp": 1764574615.718574,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "113",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-01T07:36:55Z"
+  },
+  {
+    "timestamp": 1764574654.095086,
+    "seed_id": "2001-II-13::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "122",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-01T07:37:34Z"
+  },
+  {
+    "timestamp": 1764574681.199339,
+    "seed_id": "2001-II-13::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-II-13::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-01T07:38:01Z"
+  }
+]

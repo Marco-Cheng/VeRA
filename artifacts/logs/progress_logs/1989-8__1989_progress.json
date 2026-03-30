@@ -1,0 +1,719 @@
+[
+  {
+    "timestamp": 1763257665.564669,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1989,
+      "question_preview": "Assume that $x_1,x_2,\\ldots,x_7$ are real numbers such that \\begin{align*} x_1 + 4x_2 + 9x_3 + 16x_4 + 25x_5 + 36x_6 + 4",
+      "answer": "334",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-16T01:47:45Z"
+  },
+  {
+    "timestamp": 1763257665.564712,
+    "seed_id": "1989-8::1989",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-16T01:47:45Z"
+  },
+  {
+    "timestamp": 1763257665.564734,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Assume that $x_1,x_2,\\ldots,x_7$ are real numbers such that \\begin{align*} x_1 + 4x_2 + 9x_3 + 16x_4 + 25x_5 + 36x_6 + 49x_7 &= 1, \\\\ 4x_1 + 9x_2 + 16x_3 + 25x_4 + 36x_5 + 49x_6 + 64x_7 &= 12, \\\\ 9x_1 + 16x_2 + 25x_3 + 36x_4 + 49x_5 + 64x_6 + 81x_7 &= 123. \\end{align*} Find the value of $16x_1+25x_2+36x_3+49x_4+64x_5+81x_6+100x_7$ .",
+      "answer": "334",
+      "example_id": "1989-8::1989"
+    },
+    "iso_time": "2025-11-16T01:47:45Z"
+  },
+  {
+    "timestamp": 1763257838.4049249,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-8::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1037245480
+    },
+    "iso_time": "2025-11-16T01:50:38Z"
+  },
+  {
+    "timestamp": 1763257839.159223,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k_1": 0,
+        "v_1": 1,
+        "k_2": -3,
+        "v_2": -17,
+        "k_3": 4,
+        "w_3": -46,
+        "k_4": 1,
+        "w_4": -4,
+        "k_5": -2,
+        "answer": -19
+      }
+    },
+    "iso_time": "2025-11-16T01:50:39Z"
+  },
+  {
+    "timestamp": 1763257839.904308,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -19
+    },
+    "iso_time": "2025-11-16T01:50:39Z"
+  },
+  {
+    "timestamp": 1763257839.904455,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A physicist is studying a system of $n$ interacting particles, where $n$ is an integer greater than or equal to 4. The s",
+      "correct_answer": "-19",
+      "seed_value": 1037245480
+    },
+    "iso_time": "2025-11-16T01:50:39Z"
+  },
+  {
+    "timestamp": 1763257839.9045,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T01:50:39Z"
+  },
+  {
+    "timestamp": 1763257935.2072692,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-19",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T01:52:15Z"
+  },
+  {
+    "timestamp": 1763258009.822148,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T01:53:29Z"
+  },
+  {
+    "timestamp": 1763258128.505675,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-13",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T01:55:28Z"
+  },
+  {
+    "timestamp": 1763258259.815041,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-19",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T01:57:39Z"
+  },
+  {
+    "timestamp": 1763258362.128903,
+    "seed_id": "1989-8::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-8::1989_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T01:59:22Z"
+  },
+  {
+    "timestamp": 1763258362.129092,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-8::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1376806918
+    },
+    "iso_time": "2025-11-16T01:59:22Z"
+  },
+  {
+    "timestamp": 1763258362.883344,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k_1": -3,
+        "v_1": 9,
+        "k_2": 2,
+        "v_2": 14,
+        "k_3": 3,
+        "w_3": -13,
+        "k_4": 0,
+        "w_4": 5,
+        "k_5": -2,
+        "answer": -14
+      }
+    },
+    "iso_time": "2025-11-16T01:59:22Z"
+  },
+  {
+    "timestamp": 1763258363.620762,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -14
+    },
+    "iso_time": "2025-11-16T01:59:23Z"
+  },
+  {
+    "timestamp": 1763258363.620907,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A physicist is studying a system of $n$ interacting particles, where $n$ is an integer greater than or equal to 4. The s",
+      "correct_answer": "-14",
+      "seed_value": 1376806918
+    },
+    "iso_time": "2025-11-16T01:59:23Z"
+  },
+  {
+    "timestamp": 1763258363.620953,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T01:59:23Z"
+  },
+  {
+    "timestamp": 1763258496.780999,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-14",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T02:01:36Z"
+  },
+  {
+    "timestamp": 1763258576.813986,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-7",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T02:02:56Z"
+  },
+  {
+    "timestamp": 1763258712.081805,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-14",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T02:05:12Z"
+  },
+  {
+    "timestamp": 1763258810.114222,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T02:06:50Z"
+  },
+  {
+    "timestamp": 1763258928.916642,
+    "seed_id": "1989-8::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-8::1989_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T02:08:48Z"
+  },
+  {
+    "timestamp": 1763258928.916754,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-8::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1649160445
+    },
+    "iso_time": "2025-11-16T02:08:48Z"
+  },
+  {
+    "timestamp": 1763258930.189364,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k_1": 2,
+        "v_1": 22,
+        "k_2": 0,
+        "v_2": 0,
+        "k_3": -2,
+        "w_3": -23,
+        "k_4": -3,
+        "w_4": -36,
+        "k_5": 4,
+        "answer": 92
+      }
+    },
+    "iso_time": "2025-11-16T02:08:50Z"
+  },
+  {
+    "timestamp": 1763258931.1354518,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 92
+    },
+    "iso_time": "2025-11-16T02:08:51Z"
+  },
+  {
+    "timestamp": 1763258931.1356401,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A physicist is studying a system of $n$ interacting particles, where $n$ is an integer greater than or equal to 4. The s",
+      "correct_answer": "92",
+      "seed_value": 1649160445
+    },
+    "iso_time": "2025-11-16T02:08:51Z"
+  },
+  {
+    "timestamp": 1763258931.135703,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "93",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T02:08:51Z"
+  },
+  {
+    "timestamp": 1763259056.07729,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "98",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T02:10:56Z"
+  },
+  {
+    "timestamp": 1763259177.9847171,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "92",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T02:12:57Z"
+  },
+  {
+    "timestamp": 1763259245.9411788,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "92",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T02:14:05Z"
+  },
+  {
+    "timestamp": 1763259341.459939,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "86",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T02:15:41Z"
+  },
+  {
+    "timestamp": 1763259480.446698,
+    "seed_id": "1989-8::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-8::1989_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T02:18:00Z"
+  },
+  {
+    "timestamp": 1763259480.446869,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-8::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 119752291
+    },
+    "iso_time": "2025-11-16T02:18:00Z"
+  },
+  {
+    "timestamp": 1763259481.2364538,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k_1": 2,
+        "v_1": 8,
+        "k_2": -2,
+        "v_2": 40,
+        "k_3": 3,
+        "w_3": 17,
+        "k_4": 0,
+        "w_4": -4,
+        "k_5": 4,
+        "answer": 112
+      }
+    },
+    "iso_time": "2025-11-16T02:18:01Z"
+  },
+  {
+    "timestamp": 1763259481.975416,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 112
+    },
+    "iso_time": "2025-11-16T02:18:01Z"
+  },
+  {
+    "timestamp": 1763259481.975553,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A physicist is studying a system of $n$ interacting particles, where $n$ is an integer greater than or equal to 4. The s",
+      "correct_answer": "112",
+      "seed_value": 119752291
+    },
+    "iso_time": "2025-11-16T02:18:01Z"
+  },
+  {
+    "timestamp": 1763259481.975606,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "112",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T02:18:01Z"
+  },
+  {
+    "timestamp": 1763259550.873993,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "112",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T02:19:10Z"
+  },
+  {
+    "timestamp": 1763259619.715199,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "114",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T02:20:19Z"
+  },
+  {
+    "timestamp": 1763259734.20735,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T02:22:14Z"
+  },
+  {
+    "timestamp": 1763259847.9007602,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "119",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T02:24:07Z"
+  },
+  {
+    "timestamp": 1763259994.5136042,
+    "seed_id": "1989-8::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-8::1989_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T02:26:34Z"
+  },
+  {
+    "timestamp": 1763259994.5138052,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-8::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1974719557
+    },
+    "iso_time": "2025-11-16T02:26:34Z"
+  },
+  {
+    "timestamp": 1763259995.2733738,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k_1": -2,
+        "v_1": -51,
+        "k_2": 4,
+        "v_2": -33,
+        "k_3": -3,
+        "w_3": 35,
+        "k_4": 3,
+        "w_4": -1,
+        "k_5": 1,
+        "answer": -15
+      }
+    },
+    "iso_time": "2025-11-16T02:26:35Z"
+  },
+  {
+    "timestamp": 1763259996.013397,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -15
+    },
+    "iso_time": "2025-11-16T02:26:36Z"
+  },
+  {
+    "timestamp": 1763259996.0135639,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A physicist is studying a system of $n$ interacting particles, where $n$ is an integer greater than or equal to 4. The s",
+      "correct_answer": "-15",
+      "seed_value": 1974719557
+    },
+    "iso_time": "2025-11-16T02:26:36Z"
+  },
+  {
+    "timestamp": 1763259996.013613,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-14",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T02:26:36Z"
+  },
+  {
+    "timestamp": 1763260115.096273,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "-15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T02:28:35Z"
+  },
+  {
+    "timestamp": 1763260204.279783,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-11",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T02:30:04Z"
+  },
+  {
+    "timestamp": 1763260340.33483,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-16T02:32:20Z"
+  },
+  {
+    "timestamp": 1763260447.1212559,
+    "seed_id": "1989-8::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-16T02:34:07Z"
+  },
+  {
+    "timestamp": 1763260546.8638039,
+    "seed_id": "1989-8::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-8::1989_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-16T02:35:46Z"
+  }
+]

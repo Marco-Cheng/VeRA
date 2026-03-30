@@ -1,0 +1,916 @@
+[
+  {
+    "timestamp": 1765125125.8852842,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "In order to complete a large job, 1000 workers were hired, just enough to complete the job on schedule. All the workers ",
+      "answer": "766",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-07T16:32:05Z"
+  },
+  {
+    "timestamp": 1765125125.885343,
+    "seed_id": "2004-II-5::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-07T16:32:05Z"
+  },
+  {
+    "timestamp": 1765125125.885374,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "In order to complete a large job, 1000 workers were hired, just enough to complete the job on schedule. All the workers stayed on the job while the first quarter of the work was done, so the first quarter of the work was completed on schedule. Then 100 workers were laid off, so the second quarter of the work was completed behind schedule. Then an additional 100 workers were laid off, so the third quarter of the work was completed still further behind schedule. Given that all workers work at the same rate, what is the minimum number of additional workers, beyond the 800 workers still on the job at the end of the third quarter, that must be hired after three-quarters of the work has been completed so that the entire project can be completed on schedule or before?",
+      "answer": "766",
+      "example_id": "2004-II-5::2004"
+    },
+    "iso_time": "2025-12-07T16:32:05Z"
+  },
+  {
+    "timestamp": 1765125449.600592,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-5::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1911446447
+    },
+    "iso_time": "2025-12-07T16:37:29Z"
+  },
+  {
+    "timestamp": 1765125450.91417,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n0": 1019,
+        "m": 7,
+        "time_parts_str": "1:5:1:1:3:3:5",
+        "eff_str": "2/3, 2/3, 2/3, 8/9, 3/4, 5/6, 9/8",
+        "layoffs_str": "115, 165, 115, 113, 122",
+        "m_minus_2": 5,
+        "m_minus_1": 6,
+        "time_parts": [
+          1,
+          5,
+          1,
+          1,
+          3,
+          3,
+          5
+        ],
+        "eff_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            9,
+            8
+          ]
+        ],
+        "layoffs": [
+          115,
+          165,
+          115,
+          113,
+          122
+        ]
+      }
+    },
+    "iso_time": "2025-12-07T16:37:30Z"
+  },
+  {
+    "timestamp": 1765125452.023788,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1833
+    },
+    "iso_time": "2025-12-07T16:37:32Z"
+  },
+  {
+    "timestamp": 1765125452.023934,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A large project is scheduled to finish on time with 1019 workers under ideal conditions. The timeline is partitioned int",
+      "correct_answer": "1833",
+      "seed_value": 1911446447
+    },
+    "iso_time": "2025-12-07T16:37:32Z"
+  },
+  {
+    "timestamp": 1765125452.023979,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1840",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:37:32Z"
+  },
+  {
+    "timestamp": 1765125589.797306,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1824",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:39:49Z"
+  },
+  {
+    "timestamp": 1765125689.542079,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1833",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:41:29Z"
+  },
+  {
+    "timestamp": 1765125751.251494,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1833",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:42:31Z"
+  },
+  {
+    "timestamp": 1765125848.743788,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1827",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:44:08Z"
+  },
+  {
+    "timestamp": 1765125960.681395,
+    "seed_id": "2004-II-5::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-5::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T16:46:00Z"
+  },
+  {
+    "timestamp": 1765125960.68158,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-5::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1628456511
+    },
+    "iso_time": "2025-12-07T16:46:00Z"
+  },
+  {
+    "timestamp": 1765125962.005472,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n0": 1463,
+        "m": 5,
+        "time_parts_str": "1:5:2:3:5",
+        "eff_str": "4/5, 2/3, 3/4, 7/8, 10/9",
+        "layoffs_str": "323, 280, 314",
+        "m_minus_2": 3,
+        "m_minus_1": 4,
+        "time_parts": [
+          1,
+          5,
+          2,
+          3,
+          5
+        ],
+        "eff_pairs": [
+          [
+            4,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            10,
+            9
+          ]
+        ],
+        "layoffs": [
+          323,
+          280,
+          314
+        ]
+      }
+    },
+    "iso_time": "2025-12-07T16:46:02Z"
+  },
+  {
+    "timestamp": 1765125963.106176,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2283
+    },
+    "iso_time": "2025-12-07T16:46:03Z"
+  },
+  {
+    "timestamp": 1765125963.1063418,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A large project is scheduled to finish on time with 1463 workers under ideal conditions. The timeline is partitioned int",
+      "correct_answer": "2283",
+      "seed_value": 1628456511
+    },
+    "iso_time": "2025-12-07T16:46:03Z"
+  },
+  {
+    "timestamp": 1765125963.106397,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2291",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:46:03Z"
+  },
+  {
+    "timestamp": 1765126028.171314,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2287",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:47:08Z"
+  },
+  {
+    "timestamp": 1765126060.661437,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2283",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:47:40Z"
+  },
+  {
+    "timestamp": 1765126128.4269319,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2283",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:48:48Z"
+  },
+  {
+    "timestamp": 1765126198.674817,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2274",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:49:58Z"
+  },
+  {
+    "timestamp": 1765126231.444874,
+    "seed_id": "2004-II-5::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-5::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T16:50:31Z"
+  },
+  {
+    "timestamp": 1765126231.445048,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-5::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 447848799
+    },
+    "iso_time": "2025-12-07T16:50:31Z"
+  },
+  {
+    "timestamp": 1765126232.727882,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n0": 1395,
+        "m": 6,
+        "time_parts_str": "2:3:2:1:1:4",
+        "eff_str": "5/6, 3/4, 2/3, 7/8, 3/4, 6/5",
+        "layoffs_str": "259, 240, 199, 273",
+        "m_minus_2": 4,
+        "m_minus_1": 5,
+        "time_parts": [
+          2,
+          3,
+          2,
+          1,
+          1,
+          4
+        ],
+        "eff_pairs": [
+          [
+            5,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "layoffs": [
+          259,
+          240,
+          199,
+          273
+        ]
+      }
+    },
+    "iso_time": "2025-12-07T16:50:32Z"
+  },
+  {
+    "timestamp": 1765126233.8282392,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1896
+    },
+    "iso_time": "2025-12-07T16:50:33Z"
+  },
+  {
+    "timestamp": 1765126233.828396,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A large project is scheduled to finish on time with 1395 workers under ideal conditions. The timeline is partitioned int",
+      "correct_answer": "1896",
+      "seed_value": 447848799
+    },
+    "iso_time": "2025-12-07T16:50:33Z"
+  },
+  {
+    "timestamp": 1765126233.8284428,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1888",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:50:33Z"
+  },
+  {
+    "timestamp": 1765126406.96998,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1896",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:53:26Z"
+  },
+  {
+    "timestamp": 1765126492.3796291,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1896",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T16:54:52Z"
+  },
+  {
+    "timestamp": 1765126518.8170612,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1898",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:55:18Z"
+  },
+  {
+    "timestamp": 1765126631.5249019,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1889",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:57:11Z"
+  },
+  {
+    "timestamp": 1765126728.7195861,
+    "seed_id": "2004-II-5::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-5::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T16:58:48Z"
+  },
+  {
+    "timestamp": 1765126728.719761,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-5::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 552549848
+    },
+    "iso_time": "2025-12-07T16:58:48Z"
+  },
+  {
+    "timestamp": 1765126730.062654,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n0": 904,
+        "m": 7,
+        "time_parts_str": "5:1:4:2:1:1:5",
+        "eff_str": "2/3, 3/4, 8/9, 8/9, 7/8, 7/8, 10/9",
+        "layoffs_str": "112, 143, 106, 121, 113",
+        "m_minus_2": 5,
+        "m_minus_1": 6,
+        "time_parts": [
+          5,
+          1,
+          4,
+          2,
+          1,
+          1,
+          5
+        ],
+        "eff_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            10,
+            9
+          ]
+        ],
+        "layoffs": [
+          112,
+          143,
+          106,
+          121,
+          113
+        ]
+      }
+    },
+    "iso_time": "2025-12-07T16:58:50Z"
+  },
+  {
+    "timestamp": 1765126731.1933382,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1430
+    },
+    "iso_time": "2025-12-07T16:58:51Z"
+  },
+  {
+    "timestamp": 1765126731.193494,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A large project is scheduled to finish on time with 904 workers under ideal conditions. The timeline is partitioned into",
+      "correct_answer": "1430",
+      "seed_value": 552549848
+    },
+    "iso_time": "2025-12-07T16:58:51Z"
+  },
+  {
+    "timestamp": 1765126731.193544,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1432",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T16:58:51Z"
+  },
+  {
+    "timestamp": 1765126803.948971,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1430",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T17:00:03Z"
+  },
+  {
+    "timestamp": 1765126857.34228,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1430",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T17:00:57Z"
+  },
+  {
+    "timestamp": 1765126907.573929,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1434",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T17:01:47Z"
+  },
+  {
+    "timestamp": 1765126941.5705311,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1426",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T17:02:21Z"
+  },
+  {
+    "timestamp": 1765127079.8139021,
+    "seed_id": "2004-II-5::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-5::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T17:04:39Z"
+  },
+  {
+    "timestamp": 1765127079.814018,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-5::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1516262033
+    },
+    "iso_time": "2025-12-07T17:04:39Z"
+  },
+  {
+    "timestamp": 1765127081.16866,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n0": 1243,
+        "m": 7,
+        "time_parts_str": "2:1:1:1:2:3:5",
+        "eff_str": "4/5, 3/4, 7/8, 3/4, 3/4, 2/3, 5/4",
+        "layoffs_str": "181, 151, 161, 180, 144",
+        "m_minus_2": 5,
+        "m_minus_1": 6,
+        "time_parts": [
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          5
+        ],
+        "eff_pairs": [
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            4
+          ]
+        ],
+        "layoffs": [
+          181,
+          151,
+          161,
+          180,
+          144
+        ]
+      }
+    },
+    "iso_time": "2025-12-07T17:04:41Z"
+  },
+  {
+    "timestamp": 1765127082.194114,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1621
+    },
+    "iso_time": "2025-12-07T17:04:42Z"
+  },
+  {
+    "timestamp": 1765127082.194299,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A large project is scheduled to finish on time with 1243 workers under ideal conditions. The timeline is partitioned int",
+      "correct_answer": "1621",
+      "seed_value": 1516262033
+    },
+    "iso_time": "2025-12-07T17:04:42Z"
+  },
+  {
+    "timestamp": 1765127082.194342,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1622",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T17:04:42Z"
+  },
+  {
+    "timestamp": 1765127133.5272782,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1621",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T17:05:33Z"
+  },
+  {
+    "timestamp": 1765127238.1678588,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1613",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T17:07:18Z"
+  },
+  {
+    "timestamp": 1765127261.263656,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1624",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T17:07:41Z"
+  },
+  {
+    "timestamp": 1765127370.22475,
+    "seed_id": "2004-II-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1621",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T17:09:30Z"
+  },
+  {
+    "timestamp": 1765127406.988893,
+    "seed_id": "2004-II-5::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-5::2004_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T17:10:06Z"
+  }
+]

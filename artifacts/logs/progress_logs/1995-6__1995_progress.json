@@ -1,0 +1,705 @@
+[
+  {
+    "timestamp": 1764065327.372227,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1995,
+      "question_preview": "Let $n=2^{31}3^{19}.$ How many positive integer divisors of $n^2$ are less than $n_{}$ but do not divide $n_{}$ ?",
+      "answer": "589",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-25T10:08:47Z"
+  },
+  {
+    "timestamp": 1764065327.372332,
+    "seed_id": "1995-6::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-25T10:08:47Z"
+  },
+  {
+    "timestamp": 1764065327.372405,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $n=2^{31}3^{19}.$ How many positive integer divisors of $n^2$ are less than $n_{}$ but do not divide $n_{}$ ?",
+      "answer": "589",
+      "example_id": "1995-6::1995"
+    },
+    "iso_time": "2025-11-25T10:08:47Z"
+  },
+  {
+    "timestamp": 1764065427.1970549,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-6::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1248636545
+    },
+    "iso_time": "2025-11-25T10:10:27Z"
+  },
+  {
+    "timestamp": 1764065427.983019,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "exponents": [
+          8,
+          3,
+          4
+        ],
+        "r": 6,
+        "s": 2
+      }
+    },
+    "iso_time": "2025-11-25T10:10:27Z"
+  },
+  {
+    "timestamp": 1764065428.787285,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10566
+    },
+    "iso_time": "2025-11-25T10:10:28Z"
+  },
+  {
+    "timestamp": 1764065428.787456,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n be a positive integer whose prime factorization uses distinct primes with exponent vector [8, 3, 4]. For an even i",
+      "correct_answer": "10566",
+      "seed_value": 1248636545
+    },
+    "iso_time": "2025-11-25T10:10:28Z"
+  },
+  {
+    "timestamp": 1764065428.78752,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10570",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T10:10:28Z"
+  },
+  {
+    "timestamp": 1764066285.172436,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10566",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T10:24:45Z"
+  },
+  {
+    "timestamp": 1764066300.996286,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10569",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T10:25:00Z"
+  },
+  {
+    "timestamp": 1764066325.673335,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10566",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T10:25:25Z"
+  },
+  {
+    "timestamp": 1764066970.613369,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10572",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T10:36:10Z"
+  },
+  {
+    "timestamp": 1764066987.1014981,
+    "seed_id": "1995-6::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-6::1995_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T10:36:27Z"
+  },
+  {
+    "timestamp": 1764066987.1016781,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-6::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2026799250
+    },
+    "iso_time": "2025-11-25T10:36:27Z"
+  },
+  {
+    "timestamp": 1764066987.912714,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "exponents": [
+          2,
+          10,
+          6
+        ],
+        "r": 8,
+        "s": 2
+      }
+    },
+    "iso_time": "2025-11-25T10:36:27Z"
+  },
+  {
+    "timestamp": 1764066988.710591,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 32371
+    },
+    "iso_time": "2025-11-25T10:36:28Z"
+  },
+  {
+    "timestamp": 1764066988.710756,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n be a positive integer whose prime factorization uses distinct primes with exponent vector [2, 10, 6]. For an even ",
+      "correct_answer": "32371",
+      "seed_value": 2026799250
+    },
+    "iso_time": "2025-11-25T10:36:28Z"
+  },
+  {
+    "timestamp": 1764066988.710817,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "32374",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T10:36:28Z"
+  },
+  {
+    "timestamp": 1764067065.091645,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "32371",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T10:37:45Z"
+  },
+  {
+    "timestamp": 1764067098.161429,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "32379",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T10:38:18Z"
+  },
+  {
+    "timestamp": 1764067120.628509,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "32372",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T10:38:40Z"
+  },
+  {
+    "timestamp": 1764067175.926007,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "32371",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T10:39:35Z"
+  },
+  {
+    "timestamp": 1764067995.2257972,
+    "seed_id": "1995-6::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-6::1995_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T10:53:15Z"
+  },
+  {
+    "timestamp": 1764067995.226003,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-6::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 953444296
+    },
+    "iso_time": "2025-11-25T10:53:15Z"
+  },
+  {
+    "timestamp": 1764067995.987902,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "exponents": [
+          11,
+          10,
+          9,
+          12
+        ],
+        "r": 12,
+        "s": 6
+      }
+    },
+    "iso_time": "2025-11-25T10:53:15Z"
+  },
+  {
+    "timestamp": 1764067996.7362812,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 110765628
+    },
+    "iso_time": "2025-11-25T10:53:16Z"
+  },
+  {
+    "timestamp": 1764067996.736455,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n be a positive integer whose prime factorization uses distinct primes with exponent vector [11, 10, 9, 12]. For an ",
+      "correct_answer": "110765628",
+      "seed_value": 953444296
+    },
+    "iso_time": "2025-11-25T10:53:16Z"
+  },
+  {
+    "timestamp": 1764067996.736515,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "110765628",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T10:53:16Z"
+  },
+  {
+    "timestamp": 1764068020.536536,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "110765621",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T10:53:40Z"
+  },
+  {
+    "timestamp": 1764068044.788722,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "110765629",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T10:54:04Z"
+  },
+  {
+    "timestamp": 1764068124.9336152,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "110765624",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T10:55:24Z"
+  },
+  {
+    "timestamp": 1764068150.002487,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "110765628",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T10:55:50Z"
+  },
+  {
+    "timestamp": 1764068599.858322,
+    "seed_id": "1995-6::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-6::1995_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T11:03:19Z"
+  },
+  {
+    "timestamp": 1764068599.858495,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-6::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1522184676
+    },
+    "iso_time": "2025-11-25T11:03:19Z"
+  },
+  {
+    "timestamp": 1764068600.6481652,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "exponents": [
+          12,
+          14,
+          7
+        ],
+        "r": 12,
+        "s": 2
+      }
+    },
+    "iso_time": "2025-11-25T11:03:20Z"
+  },
+  {
+    "timestamp": 1764068601.3959801,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1030587
+    },
+    "iso_time": "2025-11-25T11:03:21Z"
+  },
+  {
+    "timestamp": 1764068601.3961642,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n be a positive integer whose prime factorization uses distinct primes with exponent vector [12, 14, 7]. For an even",
+      "correct_answer": "1030587",
+      "seed_value": 1522184676
+    },
+    "iso_time": "2025-11-25T11:03:21Z"
+  },
+  {
+    "timestamp": 1764068601.396221,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1030582",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T11:03:21Z"
+  },
+  {
+    "timestamp": 1764068617.79925,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1030587",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T11:03:37Z"
+  },
+  {
+    "timestamp": 1764069071.19428,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1030578",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T11:11:11Z"
+  },
+  {
+    "timestamp": 1764069092.3944771,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1030594",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T11:11:32Z"
+  },
+  {
+    "timestamp": 1764069128.616728,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1030587",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T11:12:08Z"
+  },
+  {
+    "timestamp": 1764069144.639477,
+    "seed_id": "1995-6::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-6::1995_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T11:12:24Z"
+  },
+  {
+    "timestamp": 1764069144.639678,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-6::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 558675147
+    },
+    "iso_time": "2025-11-25T11:12:24Z"
+  },
+  {
+    "timestamp": 1764069145.4129128,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "exponents": [
+          11,
+          4,
+          13
+        ],
+        "r": 10,
+        "s": 1
+      }
+    },
+    "iso_time": "2025-11-25T11:12:25Z"
+  },
+  {
+    "timestamp": 1764069146.1607308,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 297250
+    },
+    "iso_time": "2025-11-25T11:12:26Z"
+  },
+  {
+    "timestamp": 1764069146.160906,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let n be a positive integer whose prime factorization uses distinct primes with exponent vector [11, 4, 13]. For an even",
+      "correct_answer": "297250",
+      "seed_value": 558675147
+    },
+    "iso_time": "2025-11-25T11:12:26Z"
+  },
+  {
+    "timestamp": 1764069146.160985,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "297250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T11:12:26Z"
+  },
+  {
+    "timestamp": 1764069159.4540942,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "297255",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T11:12:39Z"
+  },
+  {
+    "timestamp": 1764069183.116729,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "297259",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T11:13:03Z"
+  },
+  {
+    "timestamp": 1764069204.929377,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "297250",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T11:13:24Z"
+  },
+  {
+    "timestamp": 1764070176.592447,
+    "seed_id": "1995-6::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "297254",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T11:29:36Z"
+  },
+  {
+    "timestamp": 1764070992.506489,
+    "seed_id": "1995-6::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-6::1995_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T11:43:12Z"
+  }
+]

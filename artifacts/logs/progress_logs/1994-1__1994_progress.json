@@ -1,0 +1,976 @@
+[
+  {
+    "timestamp": 1763948207.7857878,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1994,
+      "question_preview": "The increasing sequence $3, 15, 24, 48, \\ldots\\,$ consists of those positive multiples of 3 that are one less than a per",
+      "answer": "63",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-24T01:36:47Z"
+  },
+  {
+    "timestamp": 1763948207.785881,
+    "seed_id": "1994-1::1994",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-24T01:36:47Z"
+  },
+  {
+    "timestamp": 1763948207.785941,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The increasing sequence $3, 15, 24, 48, \\ldots\\,$ consists of those positive multiples of 3 that are one less than a perfect square.  What is the remainder when the 1994th term of the sequence is divided by 1000?",
+      "answer": "63",
+      "example_id": "1994-1::1994"
+    },
+    "iso_time": "2025-11-24T01:36:47Z"
+  },
+  {
+    "timestamp": 1763948468.1917288,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-1::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2094208842
+    },
+    "iso_time": "2025-11-24T01:41:08Z"
+  },
+  {
+    "timestamp": 1763948469.0030148,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 460,
+        "b": 4,
+        "q": 11,
+        "n": 2739,
+        "modulus": 125000
+      }
+    },
+    "iso_time": "2025-11-24T01:41:09Z"
+  },
+  {
+    "timestamp": 1763948469.751512,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 29640
+    },
+    "iso_time": "2025-11-24T01:41:09Z"
+  },
+  {
+    "timestamp": 1763948469.7516658,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the increasing sequence of positive integers consisting of those multiples of 460 that are exactly 4 less than ",
+      "correct_answer": "29640",
+      "seed_value": 2094208842
+    },
+    "iso_time": "2025-11-24T01:41:09Z"
+  },
+  {
+    "timestamp": 1763948469.751723,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "29640",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T01:41:09Z"
+  },
+  {
+    "timestamp": 1763948562.418062,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "29640",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T01:42:42Z"
+  },
+  {
+    "timestamp": 1763948641.631416,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "29646",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:44:01Z"
+  },
+  {
+    "timestamp": 1763948739.415839,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "29641",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:45:39Z"
+  },
+  {
+    "timestamp": 1763948832.356862,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "29633",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:47:12Z"
+  },
+  {
+    "timestamp": 1763948954.8335202,
+    "seed_id": "1994-1::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-1::1994_prompt01-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-24T01:49:14Z"
+  },
+  {
+    "timestamp": 1763948954.8337438,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-1::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 724469705
+    },
+    "iso_time": "2025-11-24T01:49:14Z"
+  },
+  {
+    "timestamp": 1763948955.599743,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 2668,
+        "b": 4,
+        "q": 11,
+        "n": 2562,
+        "modulus": 125000
+      }
+    },
+    "iso_time": "2025-11-24T01:49:15Z"
+  },
+  {
+    "timestamp": 1763948956.350052,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 59020
+    },
+    "iso_time": "2025-11-24T01:49:16Z"
+  },
+  {
+    "timestamp": 1763948956.350202,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the increasing sequence of positive integers consisting of those multiples of 2668 that are exactly 4 less than",
+      "correct_answer": "59020",
+      "seed_value": 724469705
+    },
+    "iso_time": "2025-11-24T01:49:16Z"
+  },
+  {
+    "timestamp": 1763948956.3502662,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "59020",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T01:49:16Z"
+  },
+  {
+    "timestamp": 1763949045.5452778,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "59016",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T01:50:45Z"
+  },
+  {
+    "timestamp": 1763950125.166486,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "59020",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T02:08:45Z"
+  },
+  {
+    "timestamp": 1763950226.675976,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "59024",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:10:26Z"
+  },
+  {
+    "timestamp": 1763950334.36989,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "59023",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:12:14Z"
+  },
+  {
+    "timestamp": 1763950422.9466681,
+    "seed_id": "1994-1::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-1::1994_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T02:13:42Z"
+  },
+  {
+    "timestamp": 1763950422.94685,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-1::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1889926576
+    },
+    "iso_time": "2025-11-24T02:13:42Z"
+  },
+  {
+    "timestamp": 1763950423.72788,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 372,
+        "b": 4,
+        "q": 43,
+        "n": 1972,
+        "modulus": 1000
+      }
+    },
+    "iso_time": "2025-11-24T02:13:43Z"
+  },
+  {
+    "timestamp": 1763950424.475582,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 180
+    },
+    "iso_time": "2025-11-24T02:13:44Z"
+  },
+  {
+    "timestamp": 1763950424.475723,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the increasing sequence of positive integers consisting of those multiples of 372 that are exactly 4 less than ",
+      "correct_answer": "180",
+      "seed_value": 1889926576
+    },
+    "iso_time": "2025-11-24T02:13:44Z"
+  },
+  {
+    "timestamp": 1763950424.4757829,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "178",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:13:44Z"
+  },
+  {
+    "timestamp": 1763950543.88291,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T02:15:43Z"
+  },
+  {
+    "timestamp": 1763950655.730123,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "173",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:17:35Z"
+  },
+  {
+    "timestamp": 1763950762.243732,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "180",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T02:19:22Z"
+  },
+  {
+    "timestamp": 1763950879.4681659,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "174",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:21:19Z"
+  },
+  {
+    "timestamp": 1763950982.095558,
+    "seed_id": "1994-1::1994",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-24T02:23:02Z"
+  },
+  {
+    "timestamp": 1763950982.0958211,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-1::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1150778277
+    },
+    "iso_time": "2025-11-24T02:23:02Z"
+  },
+  {
+    "timestamp": 1763950982.8941839,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 696,
+        "b": 1,
+        "q": 13,
+        "n": 8005,
+        "modulus": 4000
+      }
+    },
+    "iso_time": "2025-11-24T02:23:02Z"
+  },
+  {
+    "timestamp": 1763950983.646653,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2680
+    },
+    "iso_time": "2025-11-24T02:23:03Z"
+  },
+  {
+    "timestamp": 1763950983.646793,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the increasing sequence of positive integers consisting of those multiples of 696 that are exactly 1 less than ",
+      "correct_answer": "2680",
+      "seed_value": 1150778277
+    },
+    "iso_time": "2025-11-24T02:23:03Z"
+  },
+  {
+    "timestamp": 1763950983.646858,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2685",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:23:03Z"
+  },
+  {
+    "timestamp": 1763951117.8802052,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2680",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T02:25:17Z"
+  },
+  {
+    "timestamp": 1763951251.57735,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2679",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:27:31Z"
+  },
+  {
+    "timestamp": 1763951401.281983,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2683",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:30:01Z"
+  },
+  {
+    "timestamp": 1763951596.3547149,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2680",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T02:33:16Z"
+  },
+  {
+    "timestamp": 1763951751.1896892,
+    "seed_id": "1994-1::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-1::1994_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-24T02:35:51Z"
+  },
+  {
+    "timestamp": 1763951751.189923,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-1::1994_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1354911552
+    },
+    "iso_time": "2025-11-24T02:35:51Z"
+  },
+  {
+    "timestamp": 1763951751.9832199,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 1736,
+        "b": 4,
+        "q": 19,
+        "n": 1722,
+        "modulus": 25000
+      }
+    },
+    "iso_time": "2025-11-24T02:35:51Z"
+  },
+  {
+    "timestamp": 1763951752.7308302,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 21096
+    },
+    "iso_time": "2025-11-24T02:35:52Z"
+  },
+  {
+    "timestamp": 1763951752.730979,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the increasing sequence of positive integers consisting of those multiples of 1736 that are exactly 4 less than",
+      "correct_answer": "21096",
+      "seed_value": 1354911552
+    },
+    "iso_time": "2025-11-24T02:35:52Z"
+  },
+  {
+    "timestamp": 1763951752.731036,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "21096",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T02:35:52Z"
+  },
+  {
+    "timestamp": 1763951870.792629,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "21095",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:37:50Z"
+  },
+  {
+    "timestamp": 1763951967.252098,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "21096",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T02:39:27Z"
+  },
+  {
+    "timestamp": 1763952073.064041,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "21104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:41:13Z"
+  },
+  {
+    "timestamp": 1763952163.481647,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "21105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:42:43Z"
+  },
+  {
+    "timestamp": 1763952313.9864829,
+    "seed_id": "1994-1::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-1::1994_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T02:45:13Z"
+  },
+  {
+    "timestamp": 1763952313.986624,
+    "seed_id": "1994-1::1994",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-24T02:45:13Z"
+  },
+  {
+    "timestamp": 1763952313.986729,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 3 (successes=3).",
+      "question": "The increasing sequence $3, 15, 24, 48, \\ldots\\,$ consists of those positive multiples of 3 that are one less than a perfect square.  What is the remainder when the 1994th term of the sequence is divided by 1000?",
+      "answer": "63",
+      "example_id": "1994-1::1994"
+    },
+    "iso_time": "2025-11-24T02:45:13Z"
+  },
+  {
+    "timestamp": 1763952422.094357,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-1::1994_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 319493837
+    },
+    "iso_time": "2025-11-24T02:47:02Z"
+  },
+  {
+    "timestamp": 1763952422.882009,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "prime_power": 121,
+        "offset": 81,
+        "term_index": 14674,
+        "modulus": 354068
+      }
+    },
+    "iso_time": "2025-11-24T02:47:02Z"
+  },
+  {
+    "timestamp": 1763952423.628609,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 22231
+    },
+    "iso_time": "2025-11-24T02:47:03Z"
+  },
+  {
+    "timestamp": 1763952423.628782,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the increasing sequence consisting of all positive integers that are multiples of 121 and exactly 81 less than ",
+      "correct_answer": "22231",
+      "seed_value": 319493837
+    },
+    "iso_time": "2025-11-24T02:47:03Z"
+  },
+  {
+    "timestamp": 1763952423.6288261,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "22231",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T02:47:03Z"
+  },
+  {
+    "timestamp": 1763952484.132843,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "22233",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:48:04Z"
+  },
+  {
+    "timestamp": 1763952543.42313,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "22228",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:49:03Z"
+  },
+  {
+    "timestamp": 1763952625.28,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "22223",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:50:25Z"
+  },
+  {
+    "timestamp": 1763952688.133224,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "22231",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T02:51:28Z"
+  },
+  {
+    "timestamp": 1763952840.686153,
+    "seed_id": "1994-1::1994",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-24T02:54:00Z"
+  },
+  {
+    "timestamp": 1763952840.6864378,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1994-1::1994_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1603115
+    },
+    "iso_time": "2025-11-24T02:54:00Z"
+  },
+  {
+    "timestamp": 1763952841.4511518,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "prime_power": 6889,
+        "offset": 4595,
+        "term_index": 185031,
+        "modulus": 631439
+      }
+    },
+    "iso_time": "2025-11-24T02:54:01Z"
+  },
+  {
+    "timestamp": 1763952842.196918,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 261558
+    },
+    "iso_time": "2025-11-24T02:54:02Z"
+  },
+  {
+    "timestamp": 1763952842.197067,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the increasing sequence consisting of all positive integers that are multiples of 6889 and exactly 4595 less th",
+      "correct_answer": "261558",
+      "seed_value": 1603115
+    },
+    "iso_time": "2025-11-24T02:54:02Z"
+  },
+  {
+    "timestamp": 1763952842.19711,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "261558",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T02:54:02Z"
+  },
+  {
+    "timestamp": 1763952930.867646,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "261558",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-24T02:55:30Z"
+  },
+  {
+    "timestamp": 1763953009.6030989,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "261553",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:56:49Z"
+  },
+  {
+    "timestamp": 1763953079.73223,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "261559",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T02:57:59Z"
+  },
+  {
+    "timestamp": 1763953259.3583832,
+    "seed_id": "1994-1::1994",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "261565",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-24T03:00:59Z"
+  },
+  {
+    "timestamp": 1763954084.53092,
+    "seed_id": "1994-1::1994",
+    "stage": "variant_success",
+    "message": "Accepted variant 1994-1::1994_prompt02-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-24T03:14:44Z"
+  }
+]

@@ -1,0 +1,5288 @@
+[
+  {
+    "timestamp": 1762620242.29105,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1983,
+      "question_preview": "Find the minimum value of $\\frac{9x^2\\sin^2 x + 4}{x\\sin x}$ for $0 < x < \\pi$ .",
+      "answer": "12",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-08T16:44:02Z"
+  },
+  {
+    "timestamp": 1762620242.2910771,
+    "seed_id": "1983-9::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-08T16:44:02Z"
+  },
+  {
+    "timestamp": 1762620242.29109,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find the minimum value of $\\frac{9x^2\\sin^2 x + 4}{x\\sin x}$ for $0 < x < \\pi$ .",
+      "answer": "12",
+      "example_id": "1983-9::1983"
+    },
+    "iso_time": "2025-11-08T16:44:02Z"
+  },
+  {
+    "timestamp": 1762620406.73007,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1726362797
+    },
+    "iso_time": "2025-11-08T16:46:46Z"
+  },
+  {
+    "timestamp": 1762620407.6926248,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 63,
+        "B": -17,
+        "C": 72
+      }
+    },
+    "iso_time": "2025-11-08T16:46:47Z"
+  },
+  {
+    "timestamp": 1762620408.47377,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 118
+    },
+    "iso_time": "2025-11-08T16:46:48Z"
+  },
+  {
+    "timestamp": 1762620408.4739041,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the function $f(x)$ be defined as $f(x) = \\frac{{{A}}\\sin^2 x + {{C}}x^2 + {{B}}x\\sin x}{x\\sin x}$. Find the greates",
+      "correct_answer": "118",
+      "seed_value": 1726362797
+    },
+    "iso_time": "2025-11-08T16:46:48Z"
+  },
+  {
+    "timestamp": 1762620408.4739451,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "118",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T16:46:48Z"
+  },
+  {
+    "timestamp": 1762620520.6453671,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "113",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T16:48:40Z"
+  },
+  {
+    "timestamp": 1762620676.6590028,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "112",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T16:51:16Z"
+  },
+  {
+    "timestamp": 1762620796.364983,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "118",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T16:53:16Z"
+  },
+  {
+    "timestamp": 1762620894.385468,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "111",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T16:54:54Z"
+  },
+  {
+    "timestamp": 1762621014.809123,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-08T16:56:54Z"
+  },
+  {
+    "timestamp": 1762621014.809191,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1237961583
+    },
+    "iso_time": "2025-11-08T16:56:54Z"
+  },
+  {
+    "timestamp": 1762621015.590793,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 91,
+        "B": 13,
+        "C": 126
+      }
+    },
+    "iso_time": "2025-11-08T16:56:55Z"
+  },
+  {
+    "timestamp": 1762621016.376318,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 230
+    },
+    "iso_time": "2025-11-08T16:56:56Z"
+  },
+  {
+    "timestamp": 1762621016.3764632,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the function $f(x)$ be defined as $f(x) = \\frac{{{A}}\\sin^2 x + {{C}}x^2 + {{B}}x\\sin x}{x\\sin x}$. Find the greates",
+      "correct_answer": "230",
+      "seed_value": 1237961583
+    },
+    "iso_time": "2025-11-08T16:56:56Z"
+  },
+  {
+    "timestamp": 1762621016.376508,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "230",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T16:56:56Z"
+  },
+  {
+    "timestamp": 1762621115.988263,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "230",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T16:58:35Z"
+  },
+  {
+    "timestamp": 1762621229.255908,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "222",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:00:29Z"
+  },
+  {
+    "timestamp": 1762621326.2874088,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "229",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:02:06Z"
+  },
+  {
+    "timestamp": 1762621409.00315,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "227",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:03:29Z"
+  },
+  {
+    "timestamp": 1762621510.6079948,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-08T17:05:10Z"
+  },
+  {
+    "timestamp": 1762621510.6080709,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 161802565
+    },
+    "iso_time": "2025-11-08T17:05:10Z"
+  },
+  {
+    "timestamp": 1762621511.373704,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 60,
+        "B": 42,
+        "C": 102
+      }
+    },
+    "iso_time": "2025-11-08T17:05:11Z"
+  },
+  {
+    "timestamp": 1762621512.156661,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 204
+    },
+    "iso_time": "2025-11-08T17:05:12Z"
+  },
+  {
+    "timestamp": 1762621512.1567948,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the function $f(x)$ be defined as $f(x) = \\frac{{{A}}\\sin^2 x + {{C}}x^2 + {{B}}x\\sin x}{x\\sin x}$. Find the greates",
+      "correct_answer": "204",
+      "seed_value": 161802565
+    },
+    "iso_time": "2025-11-08T17:05:12Z"
+  },
+  {
+    "timestamp": 1762621512.156846,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "204",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T17:05:12Z"
+  },
+  {
+    "timestamp": 1762621650.6182241,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "200",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:07:30Z"
+  },
+  {
+    "timestamp": 1762621763.485682,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "211",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:09:23Z"
+  },
+  {
+    "timestamp": 1762621890.29198,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "205",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:11:30Z"
+  },
+  {
+    "timestamp": 1762622019.564266,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "204",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T17:13:39Z"
+  },
+  {
+    "timestamp": 1762622166.894002,
+    "seed_id": "1983-9::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-9::1983_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-08T17:16:06Z"
+  },
+  {
+    "timestamp": 1762622166.89407,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1670222562
+    },
+    "iso_time": "2025-11-08T17:16:06Z"
+  },
+  {
+    "timestamp": 1762622167.867409,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 108,
+        "B": 40,
+        "C": 3
+      }
+    },
+    "iso_time": "2025-11-08T17:16:07Z"
+  },
+  {
+    "timestamp": 1762622168.644931,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 76
+    },
+    "iso_time": "2025-11-08T17:16:08Z"
+  },
+  {
+    "timestamp": 1762622168.645068,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the function $f(x)$ be defined as $f(x) = \\frac{{{A}}\\sin^2 x + {{C}}x^2 + {{B}}x\\sin x}{x\\sin x}$. Find the greates",
+      "correct_answer": "76",
+      "seed_value": 1670222562
+    },
+    "iso_time": "2025-11-08T17:16:08Z"
+  },
+  {
+    "timestamp": 1762622168.645109,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "76",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T17:16:08Z"
+  },
+  {
+    "timestamp": 1762622307.423421,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "76",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T17:18:27Z"
+  },
+  {
+    "timestamp": 1762622408.1868951,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "75",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:20:08Z"
+  },
+  {
+    "timestamp": 1762622504.12564,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "67",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:21:44Z"
+  },
+  {
+    "timestamp": 1762622601.504989,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "79",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:23:21Z"
+  },
+  {
+    "timestamp": 1762622702.548546,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-08T17:25:02Z"
+  },
+  {
+    "timestamp": 1762622702.548613,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1061573546
+    },
+    "iso_time": "2025-11-08T17:25:02Z"
+  },
+  {
+    "timestamp": 1762622703.490081,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 54,
+        "B": 39,
+        "C": 24
+      }
+    },
+    "iso_time": "2025-11-08T17:25:03Z"
+  },
+  {
+    "timestamp": 1762622704.270599,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 111
+    },
+    "iso_time": "2025-11-08T17:25:04Z"
+  },
+  {
+    "timestamp": 1762622704.270745,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the function $f(x)$ be defined as $f(x) = \\frac{{{A}}\\sin^2 x + {{C}}x^2 + {{B}}x\\sin x}{x\\sin x}$. Find the greates",
+      "correct_answer": "111",
+      "seed_value": 1061573546
+    },
+    "iso_time": "2025-11-08T17:25:04Z"
+  },
+  {
+    "timestamp": 1762622704.270798,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "111",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T17:25:04Z"
+  },
+  {
+    "timestamp": 1762622809.232773,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "108",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:26:49Z"
+  },
+  {
+    "timestamp": 1762622915.239855,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "111",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T17:28:35Z"
+  },
+  {
+    "timestamp": 1762623016.367593,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "105",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:30:16Z"
+  },
+  {
+    "timestamp": 1762623111.1470132,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "102",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:31:51Z"
+  },
+  {
+    "timestamp": 1762623241.6859572,
+    "seed_id": "1983-9::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-9::1983_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-08T17:34:01Z"
+  },
+  {
+    "timestamp": 1762623241.685981,
+    "seed_id": "1983-9::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-08T17:34:01Z"
+  },
+  {
+    "timestamp": 1762623241.685997,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 4 (successes=3).",
+      "question": "Find the minimum value of $\\frac{9x^2\\sin^2 x + 4}{x\\sin x}$ for $0 < x < \\pi$ .",
+      "answer": "12",
+      "example_id": "1983-9::1983"
+    },
+    "iso_time": "2025-11-08T17:34:01Z"
+  },
+  {
+    "timestamp": 1762623366.233648,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 195609060
+    },
+    "iso_time": "2025-11-08T17:36:06Z"
+  },
+  {
+    "timestamp": 1762623366.9997618,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:06Z"
+  },
+  {
+    "timestamp": 1762623367.7711868,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:07Z"
+  },
+  {
+    "timestamp": 1762623368.5437791,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:08Z"
+  },
+  {
+    "timestamp": 1762623369.3163,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:09Z"
+  },
+  {
+    "timestamp": 1762623370.089121,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:10Z"
+  },
+  {
+    "timestamp": 1762623370.8583932,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:10Z"
+  },
+  {
+    "timestamp": 1762623371.63116,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:11Z"
+  },
+  {
+    "timestamp": 1762623372.409394,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:12Z"
+  },
+  {
+    "timestamp": 1762623373.183381,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:13Z"
+  },
+  {
+    "timestamp": 1762623373.955096,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:13Z"
+  },
+  {
+    "timestamp": 1762623374.726403,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:14Z"
+  },
+  {
+    "timestamp": 1762623375.49868,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:15Z"
+  },
+  {
+    "timestamp": 1762623376.2928388,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:16Z"
+  },
+  {
+    "timestamp": 1762623377.061249,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:17Z"
+  },
+  {
+    "timestamp": 1762623377.061329,
+    "seed_id": "1983-9::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.827683925628662
+    },
+    "iso_time": "2025-11-08T17:36:17Z"
+  },
+  {
+    "timestamp": 1762623377.0613801,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 1057696805
+    },
+    "iso_time": "2025-11-08T17:36:17Z"
+  },
+  {
+    "timestamp": 1762623377.83274,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:17Z"
+  },
+  {
+    "timestamp": 1762623378.607439,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:18Z"
+  },
+  {
+    "timestamp": 1762623379.381687,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:19Z"
+  },
+  {
+    "timestamp": 1762623380.199608,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:20Z"
+  },
+  {
+    "timestamp": 1762623380.971584,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:20Z"
+  },
+  {
+    "timestamp": 1762623381.745607,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:21Z"
+  },
+  {
+    "timestamp": 1762623382.5197031,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:22Z"
+  },
+  {
+    "timestamp": 1762623383.291091,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:23Z"
+  },
+  {
+    "timestamp": 1762623384.061615,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:24Z"
+  },
+  {
+    "timestamp": 1762623384.834574,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:24Z"
+  },
+  {
+    "timestamp": 1762623385.602728,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:25Z"
+  },
+  {
+    "timestamp": 1762623386.392637,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:26Z"
+  },
+  {
+    "timestamp": 1762623387.193526,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:27Z"
+  },
+  {
+    "timestamp": 1762623387.960036,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:27Z"
+  },
+  {
+    "timestamp": 1762623387.9601228,
+    "seed_id": "1983-9::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.898743152618408
+    },
+    "iso_time": "2025-11-08T17:36:27Z"
+  },
+  {
+    "timestamp": 1762623387.9601731,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1236458188
+    },
+    "iso_time": "2025-11-08T17:36:27Z"
+  },
+  {
+    "timestamp": 1762623388.7329762,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:28Z"
+  },
+  {
+    "timestamp": 1762623389.504707,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:29Z"
+  },
+  {
+    "timestamp": 1762623390.2742589,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:30Z"
+  },
+  {
+    "timestamp": 1762623391.0445702,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:31Z"
+  },
+  {
+    "timestamp": 1762623391.826846,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:31Z"
+  },
+  {
+    "timestamp": 1762623392.585927,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:32Z"
+  },
+  {
+    "timestamp": 1762623393.341085,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:33Z"
+  },
+  {
+    "timestamp": 1762623394.111509,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:34Z"
+  },
+  {
+    "timestamp": 1762623394.88638,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:34Z"
+  },
+  {
+    "timestamp": 1762623395.656368,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:35Z"
+  },
+  {
+    "timestamp": 1762623396.425859,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:36Z"
+  },
+  {
+    "timestamp": 1762623397.196147,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:37Z"
+  },
+  {
+    "timestamp": 1762623397.963385,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:37Z"
+  },
+  {
+    "timestamp": 1762623398.73439,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:38Z"
+  },
+  {
+    "timestamp": 1762623398.734464,
+    "seed_id": "1983-9::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.7742919921875
+    },
+    "iso_time": "2025-11-08T17:36:38Z"
+  },
+  {
+    "timestamp": 1762623398.7345102,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 596672617
+    },
+    "iso_time": "2025-11-08T17:36:38Z"
+  },
+  {
+    "timestamp": 1762623399.5065181,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:39Z"
+  },
+  {
+    "timestamp": 1762623400.3409212,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:40Z"
+  },
+  {
+    "timestamp": 1762623401.113591,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:41Z"
+  },
+  {
+    "timestamp": 1762623401.884755,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:41Z"
+  },
+  {
+    "timestamp": 1762623402.662938,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:42Z"
+  },
+  {
+    "timestamp": 1762623403.448546,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:43Z"
+  },
+  {
+    "timestamp": 1762623404.2191749,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:44Z"
+  },
+  {
+    "timestamp": 1762623404.991376,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:44Z"
+  },
+  {
+    "timestamp": 1762623405.763019,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:45Z"
+  },
+  {
+    "timestamp": 1762623406.535276,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:46Z"
+  },
+  {
+    "timestamp": 1762623407.307459,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:47Z"
+  },
+  {
+    "timestamp": 1762623408.0865111,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:48Z"
+  },
+  {
+    "timestamp": 1762623408.8597639,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:48Z"
+  },
+  {
+    "timestamp": 1762623409.674318,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:49Z"
+  },
+  {
+    "timestamp": 1762623409.674389,
+    "seed_id": "1983-9::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.939879894256592
+    },
+    "iso_time": "2025-11-08T17:36:49Z"
+  },
+  {
+    "timestamp": 1762623409.6744509,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 252047825
+    },
+    "iso_time": "2025-11-08T17:36:49Z"
+  },
+  {
+    "timestamp": 1762623410.440383,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:50Z"
+  },
+  {
+    "timestamp": 1762623411.209075,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:51Z"
+  },
+  {
+    "timestamp": 1762623411.980789,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:51Z"
+  },
+  {
+    "timestamp": 1762623412.75573,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:52Z"
+  },
+  {
+    "timestamp": 1762623413.523037,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:53Z"
+  },
+  {
+    "timestamp": 1762623414.288131,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:54Z"
+  },
+  {
+    "timestamp": 1762623415.062386,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:55Z"
+  },
+  {
+    "timestamp": 1762623415.848521,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:55Z"
+  },
+  {
+    "timestamp": 1762623416.621883,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:56Z"
+  },
+  {
+    "timestamp": 1762623417.406815,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:57Z"
+  },
+  {
+    "timestamp": 1762623418.181325,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:58Z"
+  },
+  {
+    "timestamp": 1762623418.9514618,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:36:58Z"
+  },
+  {
+    "timestamp": 1762623419.7230232,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-08T17:36:59Z"
+  },
+  {
+    "timestamp": 1762623420.4962502,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T17:37:00Z"
+  },
+  {
+    "timestamp": 1762623420.4963279,
+    "seed_id": "1983-9::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.82187795639038
+    },
+    "iso_time": "2025-11-08T17:37:00Z"
+  },
+  {
+    "timestamp": 1762623420.4963598,
+    "seed_id": "1983-9::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-08T17:37:00Z"
+  },
+  {
+    "timestamp": 1762623420.4964569,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "Find the minimum value of $\\frac{9x^2\\sin^2 x + 4}{x\\sin x}$ for $0 < x < \\pi$ .",
+      "answer": "12",
+      "example_id": "1983-9::1983"
+    },
+    "iso_time": "2025-11-08T17:37:00Z"
+  },
+  {
+    "timestamp": 1762623560.187993,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 692439359
+    },
+    "iso_time": "2025-11-08T17:39:20Z"
+  },
+  {
+    "timestamp": 1762623560.952725,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "P": 20,
+        "p": 9,
+        "q": 5975
+      }
+    },
+    "iso_time": "2025-11-08T17:39:20Z"
+  },
+  {
+    "timestamp": 1762623561.742455,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 464.0
+    },
+    "iso_time": "2025-11-08T17:39:21Z"
+  },
+  {
+    "timestamp": 1762623561.74259,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let a rectangle have perimeter 20. If its area is $S$, find the minimum value of the expression $\\frac{{{p}}S^2 + {{q}}}",
+      "correct_answer": "464",
+      "seed_value": 692439359
+    },
+    "iso_time": "2025-11-08T17:39:21Z"
+  },
+  {
+    "timestamp": 1762623561.7426329,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "457",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:39:21Z"
+  },
+  {
+    "timestamp": 1762623664.4998488,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "461",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:41:04Z"
+  },
+  {
+    "timestamp": 1762623774.051595,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "464",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T17:42:54Z"
+  },
+  {
+    "timestamp": 1762623896.932147,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "464",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T17:44:56Z"
+  },
+  {
+    "timestamp": 1762624025.7837539,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "455",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:47:05Z"
+  },
+  {
+    "timestamp": 1762624130.216057,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 0
+    },
+    "iso_time": "2025-11-08T17:48:50Z"
+  },
+  {
+    "timestamp": 1762624130.2161229,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1797755612
+    },
+    "iso_time": "2025-11-08T17:48:50Z"
+  },
+  {
+    "timestamp": 1762624131.2094998,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "P": 16,
+        "p": 10,
+        "q": 2608
+      }
+    },
+    "iso_time": "2025-11-08T17:48:51Z"
+  },
+  {
+    "timestamp": 1762624132.061142,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 323.0
+    },
+    "iso_time": "2025-11-08T17:48:52Z"
+  },
+  {
+    "timestamp": 1762624132.0612779,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let a rectangle have perimeter 16. If its area is $S$, find the minimum value of the expression $\\frac{{{p}}S^2 + {{q}}}",
+      "correct_answer": "323",
+      "seed_value": 1797755612
+    },
+    "iso_time": "2025-11-08T17:48:52Z"
+  },
+  {
+    "timestamp": 1762624132.061329,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "322",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:48:52Z"
+  },
+  {
+    "timestamp": 1762624257.0715892,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "323",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T17:50:57Z"
+  },
+  {
+    "timestamp": 1762624372.121939,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "328",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:52:52Z"
+  },
+  {
+    "timestamp": 1762624502.8508549,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "323",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T17:55:02Z"
+  },
+  {
+    "timestamp": 1762624593.462965,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "317",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:56:33Z"
+  },
+  {
+    "timestamp": 1762624684.677618,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-08T17:58:04Z"
+  },
+  {
+    "timestamp": 1762624684.6776829,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 966863487
+    },
+    "iso_time": "2025-11-08T17:58:04Z"
+  },
+  {
+    "timestamp": 1762624685.575639,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "P": 16,
+        "p": 20,
+        "q": 2420
+      }
+    },
+    "iso_time": "2025-11-08T17:58:05Z"
+  },
+  {
+    "timestamp": 1762624686.358853,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 440.0
+    },
+    "iso_time": "2025-11-08T17:58:06Z"
+  },
+  {
+    "timestamp": 1762624686.359,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let a rectangle have perimeter 16. If its area is $S$, find the minimum value of the expression $\\frac{{{p}}S^2 + {{q}}}",
+      "correct_answer": "440",
+      "seed_value": 966863487
+    },
+    "iso_time": "2025-11-08T17:58:06Z"
+  },
+  {
+    "timestamp": 1762624686.359044,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "434",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:58:06Z"
+  },
+  {
+    "timestamp": 1762624799.1975281,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "438",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T17:59:59Z"
+  },
+  {
+    "timestamp": 1762624914.8857129,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T18:01:54Z"
+  },
+  {
+    "timestamp": 1762625017.54991,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T18:03:37Z"
+  },
+  {
+    "timestamp": 1762625135.684664,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "439",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:05:35Z"
+  },
+  {
+    "timestamp": 1762625266.554519,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-08T18:07:46Z"
+  },
+  {
+    "timestamp": 1762625266.554624,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1665149088
+    },
+    "iso_time": "2025-11-08T18:07:46Z"
+  },
+  {
+    "timestamp": 1762625267.316285,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "P": 8,
+        "p": 45,
+        "q": 20
+      }
+    },
+    "iso_time": "2025-11-08T18:07:47Z"
+  },
+  {
+    "timestamp": 1762625268.091543,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 60.0
+    },
+    "iso_time": "2025-11-08T18:07:48Z"
+  },
+  {
+    "timestamp": 1762625268.09167,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let a rectangle have perimeter 8. If its area is $S$, find the minimum value of the expression $\\frac{{{p}}S^2 + {{q}}}{",
+      "correct_answer": "60",
+      "seed_value": 1665149088
+    },
+    "iso_time": "2025-11-08T18:07:48Z"
+  },
+  {
+    "timestamp": 1762625268.0917141,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "61",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:07:48Z"
+  },
+  {
+    "timestamp": 1762625368.4094982,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "55",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:09:28Z"
+  },
+  {
+    "timestamp": 1762625495.123192,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "60",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T18:11:35Z"
+  },
+  {
+    "timestamp": 1762625605.2003222,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "60",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T18:13:25Z"
+  },
+  {
+    "timestamp": 1762625738.823634,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "54",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:15:38Z"
+  },
+  {
+    "timestamp": 1762625866.177011,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 1
+    },
+    "iso_time": "2025-11-08T18:17:46Z"
+  },
+  {
+    "timestamp": 1762625866.1771,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 906721105
+    },
+    "iso_time": "2025-11-08T18:17:46Z"
+  },
+  {
+    "timestamp": 1762625867.138216,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "P": 24,
+        "p": 5,
+        "q": 7056
+      }
+    },
+    "iso_time": "2025-11-08T18:17:47Z"
+  },
+  {
+    "timestamp": 1762625867.917141,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 376.0
+    },
+    "iso_time": "2025-11-08T18:17:47Z"
+  },
+  {
+    "timestamp": 1762625867.9172978,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let a rectangle have perimeter 24. If its area is $S$, find the minimum value of the expression $\\frac{{{p}}S^2 + {{q}}}",
+      "correct_answer": "376",
+      "seed_value": 906721105
+    },
+    "iso_time": "2025-11-08T18:17:47Z"
+  },
+  {
+    "timestamp": 1762625867.917343,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "376",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T18:17:47Z"
+  },
+  {
+    "timestamp": 1762626008.987543,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "381",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:20:08Z"
+  },
+  {
+    "timestamp": 1762626161.2850711,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "383",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:22:41Z"
+  },
+  {
+    "timestamp": 1762626279.262762,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "377",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:24:39Z"
+  },
+  {
+    "timestamp": 1762626373.301596,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "376",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T18:26:13Z"
+  },
+  {
+    "timestamp": 1762626509.898356,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 1
+    },
+    "iso_time": "2025-11-08T18:28:29Z"
+  },
+  {
+    "timestamp": 1762626509.898426,
+    "seed_id": "1983-9::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-08T18:28:29Z"
+  },
+  {
+    "timestamp": 1762626509.898443,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Judge rejected variant 1 (successes=0). | Judge rejected variant 2 (successes=2). | Judge rejected variant 3 (successes=2).",
+      "question": "Find the minimum value of $\\frac{9x^2\\sin^2 x + 4}{x\\sin x}$ for $0 < x < \\pi$ .",
+      "answer": "12",
+      "example_id": "1983-9::1983"
+    },
+    "iso_time": "2025-11-08T18:28:29Z"
+  },
+  {
+    "timestamp": 1762626676.8793962,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 1236675959
+    },
+    "iso_time": "2025-11-08T18:31:16Z"
+  },
+  {
+    "timestamp": 1762626677.657355,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 8,
+        "b": 2,
+        "k": 2
+      }
+    },
+    "iso_time": "2025-11-08T18:31:17Z"
+  },
+  {
+    "timestamp": 1762626678.440178,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6
+    },
+    "iso_time": "2025-11-08T18:31:18Z"
+  },
+  {
+    "timestamp": 1762626678.440305,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $f(x) = \\frac{{{a}}(x^{{{k}}} \\sin x)^3 + {{b}}}{x^{{{k}}} \\sin x}$. Find the minimum value of $f(x)$ for $x$ in the",
+      "correct_answer": "6",
+      "seed_value": 1236675959
+    },
+    "iso_time": "2025-11-08T18:31:18Z"
+  },
+  {
+    "timestamp": 1762626678.440351,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:31:18Z"
+  },
+  {
+    "timestamp": 1762626879.821423,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:34:39Z"
+  },
+  {
+    "timestamp": 1762627027.638747,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T18:37:07Z"
+  },
+  {
+    "timestamp": 1762627153.362236,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:39:13Z"
+  },
+  {
+    "timestamp": 1762627342.505103,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T18:42:22Z"
+  },
+  {
+    "timestamp": 1762627504.6697972,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-08T18:45:04Z"
+  },
+  {
+    "timestamp": 1762627504.6698802,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 840016142
+    },
+    "iso_time": "2025-11-08T18:45:04Z"
+  },
+  {
+    "timestamp": 1762627505.6887329,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 20,
+        "b": 5,
+        "k": 2
+      }
+    },
+    "iso_time": "2025-11-08T18:45:05Z"
+  },
+  {
+    "timestamp": 1762627506.475292,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 15
+    },
+    "iso_time": "2025-11-08T18:45:06Z"
+  },
+  {
+    "timestamp": 1762627506.4754188,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $f(x) = \\frac{{{a}}(x^{{{k}}} \\sin x)^3 + {{b}}}{x^{{{k}}} \\sin x}$. Find the minimum value of $f(x)$ for $x$ in the",
+      "correct_answer": "15",
+      "seed_value": 840016142
+    },
+    "iso_time": "2025-11-08T18:45:06Z"
+  },
+  {
+    "timestamp": 1762627506.475469,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T18:45:06Z"
+  },
+  {
+    "timestamp": 1762627663.385687,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "11",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:47:43Z"
+  },
+  {
+    "timestamp": 1762627814.583829,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:50:14Z"
+  },
+  {
+    "timestamp": 1762627959.3771331,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "23",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:52:39Z"
+  },
+  {
+    "timestamp": 1762628128.0079622,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "15",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T18:55:28Z"
+  },
+  {
+    "timestamp": 1762628263.422574,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 1
+    },
+    "iso_time": "2025-11-08T18:57:43Z"
+  },
+  {
+    "timestamp": 1762628263.4226408,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 3,
+      "seed_value": 1861970286
+    },
+    "iso_time": "2025-11-08T18:57:43Z"
+  },
+  {
+    "timestamp": 1762628264.3812501,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 7,
+        "b": 14,
+        "k": 2
+      }
+    },
+    "iso_time": "2025-11-08T18:57:44Z"
+  },
+  {
+    "timestamp": 1762628265.158648,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 21
+    },
+    "iso_time": "2025-11-08T18:57:45Z"
+  },
+  {
+    "timestamp": 1762628265.158782,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $f(x) = \\frac{{{a}}(x^{{{k}}} \\sin x)^3 + {{b}}}{x^{{{k}}} \\sin x}$. Find the minimum value of $f(x)$ for $x$ in the",
+      "correct_answer": "21",
+      "seed_value": 1861970286
+    },
+    "iso_time": "2025-11-08T18:57:45Z"
+  },
+  {
+    "timestamp": 1762628265.158824,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "15",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T18:57:45Z"
+  },
+  {
+    "timestamp": 1762628427.425447,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "21",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T19:00:27Z"
+  },
+  {
+    "timestamp": 1762628643.136738,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "23",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:04:03Z"
+  },
+  {
+    "timestamp": 1762628824.943624,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "21",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T19:07:04Z"
+  },
+  {
+    "timestamp": 1762628947.8791401,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:09:07Z"
+  },
+  {
+    "timestamp": 1762629095.578977,
+    "seed_id": "1983-9::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-9::1983_prompt04-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-08T19:11:35Z"
+  },
+  {
+    "timestamp": 1762629095.5790222,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 4,
+      "seed_value": 1668036965
+    },
+    "iso_time": "2025-11-08T19:11:35Z"
+  },
+  {
+    "timestamp": 1762629096.524252,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 28,
+        "b": 7,
+        "k": 2
+      }
+    },
+    "iso_time": "2025-11-08T19:11:36Z"
+  },
+  {
+    "timestamp": 1762629097.309213,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 21
+    },
+    "iso_time": "2025-11-08T19:11:37Z"
+  },
+  {
+    "timestamp": 1762629097.309336,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $f(x) = \\frac{{{a}}(x^{{{k}}} \\sin x)^3 + {{b}}}{x^{{{k}}} \\sin x}$. Find the minimum value of $f(x)$ for $x$ in the",
+      "correct_answer": "21",
+      "seed_value": 1668036965
+    },
+    "iso_time": "2025-11-08T19:11:37Z"
+  },
+  {
+    "timestamp": 1762629097.309382,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "21",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T19:11:37Z"
+  },
+  {
+    "timestamp": 1762629293.1726809,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "21",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T19:14:53Z"
+  },
+  {
+    "timestamp": 1762629442.304786,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:17:22Z"
+  },
+  {
+    "timestamp": 1762629582.435959,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "13",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:19:42Z"
+  },
+  {
+    "timestamp": 1762629729.788621,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "29",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:22:09Z"
+  },
+  {
+    "timestamp": 1762629879.7160552,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-08T19:24:39Z"
+  },
+  {
+    "timestamp": 1762629879.716141,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 5,
+      "seed_value": 452875642
+    },
+    "iso_time": "2025-11-08T19:24:39Z"
+  },
+  {
+    "timestamp": 1762629880.678606,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 28,
+        "b": 7,
+        "k": 2
+      }
+    },
+    "iso_time": "2025-11-08T19:24:40Z"
+  },
+  {
+    "timestamp": 1762629881.4633238,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 21
+    },
+    "iso_time": "2025-11-08T19:24:41Z"
+  },
+  {
+    "timestamp": 1762629881.463458,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $f(x) = \\frac{{{a}}(x^{{{k}}} \\sin x)^3 + {{b}}}{x^{{{k}}} \\sin x}$. Find the minimum value of $f(x)$ for $x$ in the",
+      "correct_answer": "21",
+      "seed_value": 452875642
+    },
+    "iso_time": "2025-11-08T19:24:41Z"
+  },
+  {
+    "timestamp": 1762629881.463501,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "29",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:24:41Z"
+  },
+  {
+    "timestamp": 1762630051.8994,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "21",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T19:27:31Z"
+  },
+  {
+    "timestamp": 1762630203.887037,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "19",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:30:03Z"
+  },
+  {
+    "timestamp": 1762630401.752596,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "30",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:33:21Z"
+  },
+  {
+    "timestamp": 1762630558.5025349,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "21",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T19:35:58Z"
+  },
+  {
+    "timestamp": 1762630758.674023,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-08T19:39:18Z"
+  },
+  {
+    "timestamp": 1762630758.6740758,
+    "seed_id": "1983-9::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 5).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-08T19:39:18Z"
+  },
+  {
+    "timestamp": 1762630758.6740968,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 5,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=1). | Judge rejected variant 4 (successes=2).",
+      "question": "Find the minimum value of $\\frac{9x^2\\sin^2 x + 4}{x\\sin x}$ for $0 < x < \\pi$ .",
+      "answer": "12",
+      "example_id": "1983-9::1983"
+    },
+    "iso_time": "2025-11-08T19:39:18Z"
+  },
+  {
+    "timestamp": 1762630920.403362,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 1,
+      "seed_value": 2033988676
+    },
+    "iso_time": "2025-11-08T19:42:00Z"
+  },
+  {
+    "timestamp": 1762630921.17486,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 8,
+        "B": 98
+      }
+    },
+    "iso_time": "2025-11-08T19:42:01Z"
+  },
+  {
+    "timestamp": 1762630921.947089,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 56
+    },
+    "iso_time": "2025-11-08T19:42:01Z"
+  },
+  {
+    "timestamp": 1762630921.947205,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the minimum value of the expression\n$$\\frac{{{A}} + {{B}}\\sin^4 x}{\\sin^2 x}$$\nfor a real number $x$ in the interva",
+      "correct_answer": "56",
+      "seed_value": 2033988676
+    },
+    "iso_time": "2025-11-08T19:42:01Z"
+  },
+  {
+    "timestamp": 1762630921.9472482,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "58",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:42:01Z"
+  },
+  {
+    "timestamp": 1762631031.907261,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "54",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:43:51Z"
+  },
+  {
+    "timestamp": 1762631193.3971741,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "56",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T19:46:33Z"
+  },
+  {
+    "timestamp": 1762631305.519792,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "60",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:48:25Z"
+  },
+  {
+    "timestamp": 1762631395.364043,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "56",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T19:49:55Z"
+  },
+  {
+    "timestamp": 1762631513.574347,
+    "seed_id": "1983-9::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-9::1983_prompt05-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-08T19:51:53Z"
+  },
+  {
+    "timestamp": 1762631513.57439,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 2,
+      "seed_value": 1278353418
+    },
+    "iso_time": "2025-11-08T19:51:53Z"
+  },
+  {
+    "timestamp": 1762631514.5461152,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 64,
+        "B": 100
+      }
+    },
+    "iso_time": "2025-11-08T19:51:54Z"
+  },
+  {
+    "timestamp": 1762631515.3799438,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 160
+    },
+    "iso_time": "2025-11-08T19:51:55Z"
+  },
+  {
+    "timestamp": 1762631515.3800662,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the minimum value of the expression\n$$\\frac{{{A}} + {{B}}\\sin^4 x}{\\sin^2 x}$$\nfor a real number $x$ in the interva",
+      "correct_answer": "160",
+      "seed_value": 1278353418
+    },
+    "iso_time": "2025-11-08T19:51:55Z"
+  },
+  {
+    "timestamp": 1762631515.3801112,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "160",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T19:51:55Z"
+  },
+  {
+    "timestamp": 1762631662.9295669,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "165",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:54:22Z"
+  },
+  {
+    "timestamp": 1762631785.1373088,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "160",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T19:56:25Z"
+  },
+  {
+    "timestamp": 1762631886.153124,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "154",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:58:06Z"
+  },
+  {
+    "timestamp": 1762631977.3705668,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "157",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T19:59:37Z"
+  },
+  {
+    "timestamp": 1762632072.056563,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-08T20:01:12Z"
+  },
+  {
+    "timestamp": 1762632072.056635,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 3,
+      "seed_value": 857925144
+    },
+    "iso_time": "2025-11-08T20:01:12Z"
+  },
+  {
+    "timestamp": 1762632072.8237078,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 45,
+        "B": 500
+      }
+    },
+    "iso_time": "2025-11-08T20:01:12Z"
+  },
+  {
+    "timestamp": 1762632073.60776,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 300
+    },
+    "iso_time": "2025-11-08T20:01:13Z"
+  },
+  {
+    "timestamp": 1762632073.607907,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the minimum value of the expression\n$$\\frac{{{A}} + {{B}}\\sin^4 x}{\\sin^2 x}$$\nfor a real number $x$ in the interva",
+      "correct_answer": "300",
+      "seed_value": 857925144
+    },
+    "iso_time": "2025-11-08T20:01:13Z"
+  },
+  {
+    "timestamp": 1762632073.607967,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "300",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T20:01:13Z"
+  },
+  {
+    "timestamp": 1762632199.473551,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "296",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:03:19Z"
+  },
+  {
+    "timestamp": 1762632319.2879329,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "292",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:05:19Z"
+  },
+  {
+    "timestamp": 1762632446.182446,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "297",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:07:26Z"
+  },
+  {
+    "timestamp": 1762632555.324474,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "300",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T20:09:15Z"
+  },
+  {
+    "timestamp": 1762632705.654216,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-08T20:11:45Z"
+  },
+  {
+    "timestamp": 1762632705.654284,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 4,
+      "seed_value": 1083873452
+    },
+    "iso_time": "2025-11-08T20:11:45Z"
+  },
+  {
+    "timestamp": 1762632706.4207711,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 20,
+        "B": 17
+      }
+    },
+    "iso_time": "2025-11-08T20:11:46Z"
+  },
+  {
+    "timestamp": 1762632707.1971562,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 37
+    },
+    "iso_time": "2025-11-08T20:11:47Z"
+  },
+  {
+    "timestamp": 1762632707.197286,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the minimum value of the expression\n$$\\frac{{{A}} + {{B}}\\sin^4 x}{\\sin^2 x}$$\nfor a real number $x$ in the interva",
+      "correct_answer": "37",
+      "seed_value": 1083873452
+    },
+    "iso_time": "2025-11-08T20:11:47Z"
+  },
+  {
+    "timestamp": 1762632707.197331,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "37",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T20:11:47Z"
+  },
+  {
+    "timestamp": 1762632814.565873,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "37",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T20:13:34Z"
+  },
+  {
+    "timestamp": 1762632960.6295419,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "40",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:16:00Z"
+  },
+  {
+    "timestamp": 1762633103.762597,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "34",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:18:23Z"
+  },
+  {
+    "timestamp": 1762633232.243723,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "36",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:20:32Z"
+  },
+  {
+    "timestamp": 1762633349.609886,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-08T20:22:29Z"
+  },
+  {
+    "timestamp": 1762633349.6100109,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt05",
+      "prompt_attempt": 5,
+      "sample_index": 5,
+      "seed_value": 1473789595
+    },
+    "iso_time": "2025-11-08T20:22:29Z"
+  },
+  {
+    "timestamp": 1762633350.56593,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 17,
+        "B": 9
+      }
+    },
+    "iso_time": "2025-11-08T20:22:30Z"
+  },
+  {
+    "timestamp": 1762633351.328307,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 26
+    },
+    "iso_time": "2025-11-08T20:22:31Z"
+  },
+  {
+    "timestamp": 1762633351.328429,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Find the minimum value of the expression\n$$\\frac{{{A}} + {{B}}\\sin^4 x}{\\sin^2 x}$$\nfor a real number $x$ in the interva",
+      "correct_answer": "26",
+      "seed_value": 1473789595
+    },
+    "iso_time": "2025-11-08T20:22:31Z"
+  },
+  {
+    "timestamp": 1762633351.328476,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "26",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T20:22:31Z"
+  },
+  {
+    "timestamp": 1762633496.9943502,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:24:56Z"
+  },
+  {
+    "timestamp": 1762633611.129272,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "33",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:26:51Z"
+  },
+  {
+    "timestamp": 1762633717.695023,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "26",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T20:28:37Z"
+  },
+  {
+    "timestamp": 1762633896.124757,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "28",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:31:36Z"
+  },
+  {
+    "timestamp": 1762634026.4631062,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 1
+    },
+    "iso_time": "2025-11-08T20:33:46Z"
+  },
+  {
+    "timestamp": 1762634026.463171,
+    "seed_id": "1983-9::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 6).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-08T20:33:46Z"
+  },
+  {
+    "timestamp": 1762634026.463191,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 6,
+      "feedback": "Judge rejected variant 2 (successes=2). | Judge rejected variant 3 (successes=2). | Judge rejected variant 4 (successes=3).",
+      "question": "Find the minimum value of $\\frac{9x^2\\sin^2 x + 4}{x\\sin x}$ for $0 < x < \\pi$ .",
+      "answer": "12",
+      "example_id": "1983-9::1983"
+    },
+    "iso_time": "2025-11-08T20:33:46Z"
+  },
+  {
+    "timestamp": 1762634212.6722949,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 1,
+      "seed_value": 1884350601
+    },
+    "iso_time": "2025-11-08T20:36:52Z"
+  },
+  {
+    "timestamp": 1762634213.438441,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 9,
+        "B": 324,
+        "c": 3,
+        "d": 4
+      }
+    },
+    "iso_time": "2025-11-08T20:36:53Z"
+  },
+  {
+    "timestamp": 1762634214.221492,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:36:54Z"
+  },
+  {
+    "timestamp": 1762634214.999722,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "A": 16,
+        "B": 27225,
+        "c": 9,
+        "d": 40
+      }
+    },
+    "iso_time": "2025-11-08T20:36:54Z"
+  },
+  {
+    "timestamp": 1762634215.7881322,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:36:55Z"
+  },
+  {
+    "timestamp": 1762634216.564534,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "A": 16,
+        "B": 22201,
+        "c": 35,
+        "d": 12
+      }
+    },
+    "iso_time": "2025-11-08T20:36:56Z"
+  },
+  {
+    "timestamp": 1762634217.342159,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:36:57Z"
+  },
+  {
+    "timestamp": 1762634218.1169229,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "A": 9,
+        "B": 576,
+        "c": 24,
+        "d": 32
+      }
+    },
+    "iso_time": "2025-11-08T20:36:58Z"
+  },
+  {
+    "timestamp": 1762634218.8962429,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:36:58Z"
+  },
+  {
+    "timestamp": 1762634219.676359,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "A": 9,
+        "B": 16,
+        "c": 4,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-08T20:36:59Z"
+  },
+  {
+    "timestamp": 1762634220.467422,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:00Z"
+  },
+  {
+    "timestamp": 1762634221.240237,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "A": 9,
+        "B": 4,
+        "c": 4,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-08T20:37:01Z"
+  },
+  {
+    "timestamp": 1762634222.017195,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:02Z"
+  },
+  {
+    "timestamp": 1762634222.794836,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "A": 4,
+        "B": 1849,
+        "c": 27,
+        "d": 36
+      }
+    },
+    "iso_time": "2025-11-08T20:37:02Z"
+  },
+  {
+    "timestamp": 1762634223.5711381,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:03Z"
+  },
+  {
+    "timestamp": 1762634223.5712159,
+    "seed_id": "1983-9::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.898923873901367
+    },
+    "iso_time": "2025-11-08T20:37:03Z"
+  },
+  {
+    "timestamp": 1762634223.571296,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 2,
+      "seed_value": 1371175409
+    },
+    "iso_time": "2025-11-08T20:37:03Z"
+  },
+  {
+    "timestamp": 1762634224.3534348,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 1,
+        "B": 2025,
+        "c": 9,
+        "d": 40
+      }
+    },
+    "iso_time": "2025-11-08T20:37:04Z"
+  },
+  {
+    "timestamp": 1762634225.131038,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:05Z"
+  },
+  {
+    "timestamp": 1762634225.9127638,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "A": 4,
+        "B": 1,
+        "c": 60,
+        "d": 11
+      }
+    },
+    "iso_time": "2025-11-08T20:37:05Z"
+  },
+  {
+    "timestamp": 1762634226.673972,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:06Z"
+  },
+  {
+    "timestamp": 1762634227.432131,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "A": 16,
+        "B": 26244,
+        "c": 32,
+        "d": 24
+      }
+    },
+    "iso_time": "2025-11-08T20:37:07Z"
+  },
+  {
+    "timestamp": 1762634228.2025468,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:08Z"
+  },
+  {
+    "timestamp": 1762634228.979687,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "A": 9,
+        "B": 25,
+        "c": 4,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-08T20:37:08Z"
+  },
+  {
+    "timestamp": 1762634229.7471519,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:09Z"
+  },
+  {
+    "timestamp": 1762634230.522793,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "A": 4,
+        "B": 9,
+        "c": 7,
+        "d": 24
+      }
+    },
+    "iso_time": "2025-11-08T20:37:10Z"
+  },
+  {
+    "timestamp": 1762634231.281845,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:11Z"
+  },
+  {
+    "timestamp": 1762634232.09786,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "A": 4,
+        "B": 81,
+        "c": 12,
+        "d": 5
+      }
+    },
+    "iso_time": "2025-11-08T20:37:12Z"
+  },
+  {
+    "timestamp": 1762634232.868227,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:12Z"
+  },
+  {
+    "timestamp": 1762634233.647826,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "A": 4,
+        "B": 529,
+        "c": 6,
+        "d": 8
+      }
+    },
+    "iso_time": "2025-11-08T20:37:13Z"
+  },
+  {
+    "timestamp": 1762634234.4534678,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:14Z"
+  },
+  {
+    "timestamp": 1762634234.453543,
+    "seed_id": "1983-9::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.882247924804688
+    },
+    "iso_time": "2025-11-08T20:37:14Z"
+  },
+  {
+    "timestamp": 1762634234.4535959,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 3,
+      "seed_value": 1856957938
+    },
+    "iso_time": "2025-11-08T20:37:14Z"
+  },
+  {
+    "timestamp": 1762634235.224777,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 16,
+        "B": 841,
+        "c": 27,
+        "d": 36
+      }
+    },
+    "iso_time": "2025-11-08T20:37:15Z"
+  },
+  {
+    "timestamp": 1762634235.992073,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:15Z"
+  },
+  {
+    "timestamp": 1762634236.767735,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "A": 9,
+        "B": 64,
+        "c": 3,
+        "d": 4
+      }
+    },
+    "iso_time": "2025-11-08T20:37:16Z"
+  },
+  {
+    "timestamp": 1762634237.5370219,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:17Z"
+  },
+  {
+    "timestamp": 1762634238.302956,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "A": 16,
+        "B": 144,
+        "c": 5,
+        "d": 12
+      }
+    },
+    "iso_time": "2025-11-08T20:37:18Z"
+  },
+  {
+    "timestamp": 1762634239.080549,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:19Z"
+  },
+  {
+    "timestamp": 1762634239.8578649,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "A": 4,
+        "B": 121,
+        "c": 4,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-08T20:37:19Z"
+  },
+  {
+    "timestamp": 1762634240.634007,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:20Z"
+  },
+  {
+    "timestamp": 1762634241.4061859,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "A": 1,
+        "B": 36,
+        "c": 15,
+        "d": 8
+      }
+    },
+    "iso_time": "2025-11-08T20:37:21Z"
+  },
+  {
+    "timestamp": 1762634242.18045,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:22Z"
+  },
+  {
+    "timestamp": 1762634242.946222,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "A": 9,
+        "B": 6400,
+        "c": 10,
+        "d": 24
+      }
+    },
+    "iso_time": "2025-11-08T20:37:22Z"
+  },
+  {
+    "timestamp": 1762634243.7191339,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:23Z"
+  },
+  {
+    "timestamp": 1762634244.496277,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "A": 1,
+        "B": 1,
+        "c": 27,
+        "d": 36
+      }
+    },
+    "iso_time": "2025-11-08T20:37:24Z"
+  },
+  {
+    "timestamp": 1762634245.270605,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:25Z"
+  },
+  {
+    "timestamp": 1762634245.270679,
+    "seed_id": "1983-9::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.817084074020386
+    },
+    "iso_time": "2025-11-08T20:37:25Z"
+  },
+  {
+    "timestamp": 1762634245.27074,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 4,
+      "seed_value": 1017093592
+    },
+    "iso_time": "2025-11-08T20:37:25Z"
+  },
+  {
+    "timestamp": 1762634246.038015,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 4,
+        "B": 25,
+        "c": 7,
+        "d": 24
+      }
+    },
+    "iso_time": "2025-11-08T20:37:26Z"
+  },
+  {
+    "timestamp": 1762634246.8153112,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:26Z"
+  },
+  {
+    "timestamp": 1762634247.5892339,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "A": 1,
+        "B": 81,
+        "c": 4,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-08T20:37:27Z"
+  },
+  {
+    "timestamp": 1762634248.360679,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:28Z"
+  },
+  {
+    "timestamp": 1762634249.136693,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "A": 1,
+        "B": 4,
+        "c": 6,
+        "d": 8
+      }
+    },
+    "iso_time": "2025-11-08T20:37:29Z"
+  },
+  {
+    "timestamp": 1762634249.907858,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:29Z"
+  },
+  {
+    "timestamp": 1762634250.669282,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "A": 1,
+        "B": 289,
+        "c": 5,
+        "d": 12
+      }
+    },
+    "iso_time": "2025-11-08T20:37:30Z"
+  },
+  {
+    "timestamp": 1762634251.442585,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:31Z"
+  },
+  {
+    "timestamp": 1762634252.213671,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "A": 1,
+        "B": 2025,
+        "c": 40,
+        "d": 9
+      }
+    },
+    "iso_time": "2025-11-08T20:37:32Z"
+  },
+  {
+    "timestamp": 1762634253.006289,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:33Z"
+  },
+  {
+    "timestamp": 1762634253.836257,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "A": 16,
+        "B": 49,
+        "c": 16,
+        "d": 12
+      }
+    },
+    "iso_time": "2025-11-08T20:37:33Z"
+  },
+  {
+    "timestamp": 1762634254.60456,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:34Z"
+  },
+  {
+    "timestamp": 1762634255.37453,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "A": 16,
+        "B": 1024,
+        "c": 10,
+        "d": 24
+      }
+    },
+    "iso_time": "2025-11-08T20:37:35Z"
+  },
+  {
+    "timestamp": 1762634256.1577542,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:36Z"
+  },
+  {
+    "timestamp": 1762634256.1578398,
+    "seed_id": "1983-9::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.887101173400879
+    },
+    "iso_time": "2025-11-08T20:37:36Z"
+  },
+  {
+    "timestamp": 1762634256.1579142,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt06",
+      "prompt_attempt": 6,
+      "sample_index": 5,
+      "seed_value": 1066743214
+    },
+    "iso_time": "2025-11-08T20:37:36Z"
+  },
+  {
+    "timestamp": 1762634256.924105,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 1,
+        "B": 4,
+        "c": 9,
+        "d": 40
+      }
+    },
+    "iso_time": "2025-11-08T20:37:36Z"
+  },
+  {
+    "timestamp": 1762634257.697973,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:37Z"
+  },
+  {
+    "timestamp": 1762634258.464949,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "A": 16,
+        "B": 1681,
+        "c": 6,
+        "d": 8
+      }
+    },
+    "iso_time": "2025-11-08T20:37:38Z"
+  },
+  {
+    "timestamp": 1762634259.241898,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:39Z"
+  },
+  {
+    "timestamp": 1762634260.005898,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "A": 9,
+        "B": 8281,
+        "c": 20,
+        "d": 21
+      }
+    },
+    "iso_time": "2025-11-08T20:37:40Z"
+  },
+  {
+    "timestamp": 1762634260.769512,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:40Z"
+  },
+  {
+    "timestamp": 1762634261.536436,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "A": 9,
+        "B": 6400,
+        "c": 24,
+        "d": 7
+      }
+    },
+    "iso_time": "2025-11-08T20:37:41Z"
+  },
+  {
+    "timestamp": 1762634262.305849,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:42Z"
+  },
+  {
+    "timestamp": 1762634263.073687,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "A": 16,
+        "B": 2209,
+        "c": 16,
+        "d": 30
+      }
+    },
+    "iso_time": "2025-11-08T20:37:43Z"
+  },
+  {
+    "timestamp": 1762634263.85413,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:43Z"
+  },
+  {
+    "timestamp": 1762634264.629355,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "A": 9,
+        "B": 625,
+        "c": 12,
+        "d": 16
+      }
+    },
+    "iso_time": "2025-11-08T20:37:44Z"
+  },
+  {
+    "timestamp": 1762634265.398674,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:45Z"
+  },
+  {
+    "timestamp": 1762634266.1672351,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "A": 1,
+        "B": 225,
+        "c": 5,
+        "d": 12
+      }
+    },
+    "iso_time": "2025-11-08T20:37:46Z"
+  },
+  {
+    "timestamp": 1762634266.9416761,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-08T20:37:46Z"
+  },
+  {
+    "timestamp": 1762634266.941748,
+    "seed_id": "1983-9::1983",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.783835887908936
+    },
+    "iso_time": "2025-11-08T20:37:46Z"
+  },
+  {
+    "timestamp": 1762634266.941795,
+    "seed_id": "1983-9::1983",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 7).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-08T20:37:46Z"
+  },
+  {
+    "timestamp": 1762634266.941813,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 7,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "Find the minimum value of $\\frac{9x^2\\sin^2 x + 4}{x\\sin x}$ for $0 < x < \\pi$ .",
+      "answer": "12",
+      "example_id": "1983-9::1983"
+    },
+    "iso_time": "2025-11-08T20:37:46Z"
+  },
+  {
+    "timestamp": 1762634462.983298,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 1,
+      "seed_value": 974807803
+    },
+    "iso_time": "2025-11-08T20:41:02Z"
+  },
+  {
+    "timestamp": 1762634463.75685,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 24,
+        "B": -1,
+        "C": 29,
+        "D": 1,
+        "E": 1
+      }
+    },
+    "iso_time": "2025-11-08T20:41:03Z"
+  },
+  {
+    "timestamp": 1762634464.543065,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 26
+    },
+    "iso_time": "2025-11-08T20:41:04Z"
+  },
+  {
+    "timestamp": 1762634464.543214,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the function $f(x)$ be defined for $x \\in [0, \\pi/2)$ as\n$$ f(x) = \\frac{{A}(\\sec x + \\tan x)^2 + -1(\\sec x + \\tan x",
+      "correct_answer": "26",
+      "seed_value": 974807803
+    },
+    "iso_time": "2025-11-08T20:41:04Z"
+  },
+  {
+    "timestamp": 1762634464.543263,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "35",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:41:04Z"
+  },
+  {
+    "timestamp": 1762634639.81349,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "34",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:43:59Z"
+  },
+  {
+    "timestamp": 1762634829.3276732,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "26",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T20:47:09Z"
+  },
+  {
+    "timestamp": 1762634997.255136,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "26",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T20:49:57Z"
+  },
+  {
+    "timestamp": 1762635143.7991009,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:52:23Z"
+  },
+  {
+    "timestamp": 1762635294.323358,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-08T20:54:54Z"
+  },
+  {
+    "timestamp": 1762635294.323425,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 2,
+      "seed_value": 1096721971
+    },
+    "iso_time": "2025-11-08T20:54:54Z"
+  },
+  {
+    "timestamp": 1762635295.2890391,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 5,
+        "B": -4,
+        "C": 68,
+        "D": 1,
+        "E": 3
+      }
+    },
+    "iso_time": "2025-11-08T20:54:55Z"
+  },
+  {
+    "timestamp": 1762635296.088632,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16
+    },
+    "iso_time": "2025-11-08T20:54:56Z"
+  },
+  {
+    "timestamp": 1762635296.088796,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the function $f(x)$ be defined for $x \\in [0, \\pi/2)$ as\n$$ f(x) = \\frac{{A}(\\sec x + \\tan x)^2 + -4(\\sec x + \\tan x",
+      "correct_answer": "16",
+      "seed_value": 1096721971
+    },
+    "iso_time": "2025-11-08T20:54:56Z"
+  },
+  {
+    "timestamp": 1762635296.088852,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T20:54:56Z"
+  },
+  {
+    "timestamp": 1762635480.807175,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T20:58:00Z"
+  },
+  {
+    "timestamp": 1762635662.4127,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "15",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T21:01:02Z"
+  },
+  {
+    "timestamp": 1762635830.288509,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T21:03:50Z"
+  },
+  {
+    "timestamp": 1762635986.580734,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "19",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T21:06:26Z"
+  },
+  {
+    "timestamp": 1762636154.712395,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-08T21:09:14Z"
+  },
+  {
+    "timestamp": 1762636154.712466,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 3,
+      "seed_value": 2080202624
+    },
+    "iso_time": "2025-11-08T21:09:14Z"
+  },
+  {
+    "timestamp": 1762636155.5018508,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 32,
+        "B": 3,
+        "C": 113,
+        "D": 1,
+        "E": 3
+      }
+    },
+    "iso_time": "2025-11-08T21:09:15Z"
+  },
+  {
+    "timestamp": 1762636156.289702,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 37
+    },
+    "iso_time": "2025-11-08T21:09:16Z"
+  },
+  {
+    "timestamp": 1762636156.289849,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the function $f(x)$ be defined for $x \\in [0, \\pi/2)$ as\n$$ f(x) = \\frac{{A}(\\sec x + \\tan x)^2 + 3(\\sec x + \\tan x)",
+      "correct_answer": "37",
+      "seed_value": 2080202624
+    },
+    "iso_time": "2025-11-08T21:09:16Z"
+  },
+  {
+    "timestamp": 1762636156.289898,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "28",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T21:09:16Z"
+  },
+  {
+    "timestamp": 1762636343.164713,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "37",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T21:12:23Z"
+  },
+  {
+    "timestamp": 1762636510.287858,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "30",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T21:15:10Z"
+  },
+  {
+    "timestamp": 1762636747.592462,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "37",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T21:19:07Z"
+  },
+  {
+    "timestamp": 1762636985.924272,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "29",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T21:23:05Z"
+  },
+  {
+    "timestamp": 1762637172.6916301,
+    "seed_id": "1983-9::1983",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-08T21:26:12Z"
+  },
+  {
+    "timestamp": 1762637172.6916962,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1983-9::1983_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 4,
+      "seed_value": 1815626754
+    },
+    "iso_time": "2025-11-08T21:26:12Z"
+  },
+  {
+    "timestamp": 1762637173.674415,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "A": 8,
+        "B": -2,
+        "C": 8,
+        "D": 1,
+        "E": 1
+      }
+    },
+    "iso_time": "2025-11-08T21:26:13Z"
+  },
+  {
+    "timestamp": 1762637174.466559,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7
+    },
+    "iso_time": "2025-11-08T21:26:14Z"
+  },
+  {
+    "timestamp": 1762637174.4666839,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let the function $f(x)$ be defined for $x \\in [0, \\pi/2)$ as\n$$ f(x) = \\frac{{A}(\\sec x + \\tan x)^2 + -2(\\sec x + \\tan x",
+      "correct_answer": "7",
+      "seed_value": 1815626754
+    },
+    "iso_time": "2025-11-08T21:26:14Z"
+  },
+  {
+    "timestamp": 1762637174.466731,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T21:26:14Z"
+  },
+  {
+    "timestamp": 1762637375.993908,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "16",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T21:29:35Z"
+  },
+  {
+    "timestamp": 1762637566.149029,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T21:32:46Z"
+  },
+  {
+    "timestamp": 1762637734.983996,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "15",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-08T21:35:34Z"
+  },
+  {
+    "timestamp": 1762637913.137881,
+    "seed_id": "1983-9::1983",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-08T21:38:33Z"
+  },
+  {
+    "timestamp": 1762638099.665292,
+    "seed_id": "1983-9::1983",
+    "stage": "variant_success",
+    "message": "Accepted variant 1983-9::1983_prompt07-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-08T21:41:39Z"
+  }
+]

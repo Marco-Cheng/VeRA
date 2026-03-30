@@ -1,0 +1,699 @@
+[
+  {
+    "timestamp": 1764233850.820949,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1998,
+      "question_preview": "Three of the edges of a cube are $\\overline{AB}, \\overline{BC},$ and $\\overline{CD},$ and $\\overline{AD}$ is an interior",
+      "answer": "525",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-27T08:57:30Z"
+  },
+  {
+    "timestamp": 1764233850.820988,
+    "seed_id": "1998-11::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-27T08:57:30Z"
+  },
+  {
+    "timestamp": 1764233850.821006,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Three of the edges of a cube are $\\overline{AB}, \\overline{BC},$ and $\\overline{CD},$ and $\\overline{AD}$ is an interior diagonal .  Points $P, Q,$ and $R$ are on $\\overline{AB}, \\overline{BC},$ and $\\overline{CD},$ respectively, so that $AP = 5, PB = 15, BQ = 15,$ and $CR = 10.$ What is the area of the polygon that is the intersection of plane $PQR$ and the cube?",
+      "answer": "525",
+      "example_id": "1998-11::1998"
+    },
+    "iso_time": "2025-11-27T08:57:30Z"
+  },
+  {
+    "timestamp": 1764233954.039853,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-11::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1133590845
+    },
+    "iso_time": "2025-11-27T08:59:14Z"
+  },
+  {
+    "timestamp": 1764233954.8229382,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x_len": 45,
+        "y_len": 75,
+        "z_len": 45,
+        "ap_len": 40,
+        "bq_len": 10,
+        "cr_len": 20
+      }
+    },
+    "iso_time": "2025-11-27T08:59:14Z"
+  },
+  {
+    "timestamp": 1764233955.54956,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4043.082645346555
+    },
+    "iso_time": "2025-11-27T08:59:15Z"
+  },
+  {
+    "timestamp": 1764233955.5497391,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a rectangular box with side lengths 45, 75, and 45. Label the vertices so that A = (0, 0, 0), B = (45, 0, 0), C",
+      "correct_answer": "4043.08264535",
+      "seed_value": 1133590845
+    },
+    "iso_time": "2025-11-27T08:59:15Z"
+  },
+  {
+    "timestamp": 1764233955.549788,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4043.08264535",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T08:59:15Z"
+  },
+  {
+    "timestamp": 1764234344.567432,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4043.08264535",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T09:05:44Z"
+  },
+  {
+    "timestamp": 1764234475.373536,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4147.447990",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:07:55Z"
+  },
+  {
+    "timestamp": 1764234561.618325,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4221.302396",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:09:21Z"
+  },
+  {
+    "timestamp": 1764234657.4842932,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3809.407764",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:10:57Z"
+  },
+  {
+    "timestamp": 1764234736.751915,
+    "seed_id": "1998-11::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-11::1998_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T09:12:16Z"
+  },
+  {
+    "timestamp": 1764234736.7521138,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-11::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1822553848
+    },
+    "iso_time": "2025-11-27T09:12:16Z"
+  },
+  {
+    "timestamp": 1764234737.528787,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x_len": 35,
+        "y_len": 55,
+        "z_len": 25,
+        "ap_len": 30,
+        "bq_len": 5,
+        "cr_len": 20
+      }
+    },
+    "iso_time": "2025-11-27T09:12:17Z"
+  },
+  {
+    "timestamp": 1764234738.272743,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1906.4767283198084
+    },
+    "iso_time": "2025-11-27T09:12:18Z"
+  },
+  {
+    "timestamp": 1764234738.272897,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a rectangular box with side lengths 35, 55, and 25. Label the vertices so that A = (0, 0, 0), B = (35, 0, 0), C",
+      "correct_answer": "1906.47672832",
+      "seed_value": 1822553848
+    },
+    "iso_time": "2025-11-27T09:12:18Z"
+  },
+  {
+    "timestamp": 1764234738.272937,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1991.912582",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:12:18Z"
+  },
+  {
+    "timestamp": 1764234788.4340749,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1906.47672832",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T09:13:08Z"
+  },
+  {
+    "timestamp": 1764234823.078039,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1851.452087",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:13:43Z"
+  },
+  {
+    "timestamp": 1764234882.947683,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1716.161332",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:14:42Z"
+  },
+  {
+    "timestamp": 1764234960.875573,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1906.47672832",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T09:16:00Z"
+  },
+  {
+    "timestamp": 1764234998.6567192,
+    "seed_id": "1998-11::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-11::1998_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T09:16:38Z"
+  },
+  {
+    "timestamp": 1764234998.6569312,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-11::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1620533490
+    },
+    "iso_time": "2025-11-27T09:16:38Z"
+  },
+  {
+    "timestamp": 1764234999.433592,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x_len": 60,
+        "y_len": 20,
+        "z_len": 65,
+        "ap_len": 10,
+        "bq_len": 15,
+        "cr_len": 15
+      }
+    },
+    "iso_time": "2025-11-27T09:16:39Z"
+  },
+  {
+    "timestamp": 1764235000.1808488,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2702.7397698848886
+    },
+    "iso_time": "2025-11-27T09:16:40Z"
+  },
+  {
+    "timestamp": 1764235000.181011,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a rectangular box with side lengths 60, 20, and 65. Label the vertices so that A = (0, 0, 0), B = (60, 0, 0), C",
+      "correct_answer": "2702.73976988",
+      "seed_value": 1620533490
+    },
+    "iso_time": "2025-11-27T09:16:40Z"
+  },
+  {
+    "timestamp": 1764235000.1810508,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2489.027027",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:16:40Z"
+  },
+  {
+    "timestamp": 1764235123.09122,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2702.73976988",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T09:18:43Z"
+  },
+  {
+    "timestamp": 1764235184.929764,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2702.73976988",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T09:19:44Z"
+  },
+  {
+    "timestamp": 1764235255.7921731,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2528.815125",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:20:55Z"
+  },
+  {
+    "timestamp": 1764235578.596591,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2752.658446",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:26:18Z"
+  },
+  {
+    "timestamp": 1764235978.333023,
+    "seed_id": "1998-11::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-11::1998_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T09:32:58Z"
+  },
+  {
+    "timestamp": 1764235978.333172,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-11::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 159497993
+    },
+    "iso_time": "2025-11-27T09:32:58Z"
+  },
+  {
+    "timestamp": 1764235979.119066,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x_len": 25,
+        "y_len": 70,
+        "z_len": 45,
+        "ap_len": 20,
+        "bq_len": 10,
+        "cr_len": 40
+      }
+    },
+    "iso_time": "2025-11-27T09:32:59Z"
+  },
+  {
+    "timestamp": 1764235979.87759,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2285.8902696951145
+    },
+    "iso_time": "2025-11-27T09:32:59Z"
+  },
+  {
+    "timestamp": 1764235979.877752,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a rectangular box with side lengths 25, 70, and 45. Label the vertices so that A = (0, 0, 0), B = (25, 0, 0), C",
+      "correct_answer": "2285.8902697",
+      "seed_value": 159497993
+    },
+    "iso_time": "2025-11-27T09:32:59Z"
+  },
+  {
+    "timestamp": 1764235979.877795,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2285.8902697",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T09:32:59Z"
+  },
+  {
+    "timestamp": 1764236188.3602712,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2424.218540",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:36:28Z"
+  },
+  {
+    "timestamp": 1764236407.503036,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2346.075468",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:40:07Z"
+  },
+  {
+    "timestamp": 1764236722.3705778,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2477.944180",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:45:22Z"
+  },
+  {
+    "timestamp": 1764236811.463074,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2285.8902697",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T09:46:51Z"
+  },
+  {
+    "timestamp": 1764237053.45505,
+    "seed_id": "1998-11::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-11::1998_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T09:50:53Z"
+  },
+  {
+    "timestamp": 1764237053.455255,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-11::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 957512687
+    },
+    "iso_time": "2025-11-27T09:50:53Z"
+  },
+  {
+    "timestamp": 1764237054.271429,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "x_len": 55,
+        "y_len": 40,
+        "z_len": 75,
+        "ap_len": 10,
+        "bq_len": 20,
+        "cr_len": 70
+      }
+    },
+    "iso_time": "2025-11-27T09:50:54Z"
+  },
+  {
+    "timestamp": 1764237055.0084639,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4568.3244354684975
+    },
+    "iso_time": "2025-11-27T09:50:55Z"
+  },
+  {
+    "timestamp": 1764237055.00864,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a rectangular box with side lengths 55, 40, and 75. Label the vertices so that A = (0, 0, 0), B = (55, 0, 0), C",
+      "correct_answer": "4568.32443547",
+      "seed_value": 957512687
+    },
+    "iso_time": "2025-11-27T09:50:55Z"
+  },
+  {
+    "timestamp": 1764237055.008685,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4568.32443547",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T09:50:55Z"
+  },
+  {
+    "timestamp": 1764237141.292595,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4568.32443547",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-27T09:52:21Z"
+  },
+  {
+    "timestamp": 1764237211.847967,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4912.262163",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T09:53:31Z"
+  },
+  {
+    "timestamp": 1764237726.5922828,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4661.868589",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T10:02:06Z"
+  },
+  {
+    "timestamp": 1764237813.817088,
+    "seed_id": "1998-11::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4455.871275",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-27T10:03:33Z"
+  },
+  {
+    "timestamp": 1764237946.3680131,
+    "seed_id": "1998-11::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-11::1998_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-27T10:05:46Z"
+  }
+]

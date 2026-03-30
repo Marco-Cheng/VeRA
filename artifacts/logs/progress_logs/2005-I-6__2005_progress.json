@@ -1,0 +1,2345 @@
+[
+  {
+    "timestamp": 1765189454.8854651,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "Let $P$ be the product of the nonreal roots of $x^4-4x^3+6x^2-4x=2005.$ Find $\\lfloor P\\rfloor.$",
+      "answer": "45",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-08T10:24:14Z"
+  },
+  {
+    "timestamp": 1765189454.8855438,
+    "seed_id": "2005-I-6::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-08T10:24:14Z"
+  },
+  {
+    "timestamp": 1765189454.88559,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $P$ be the product of the nonreal roots of $x^4-4x^3+6x^2-4x=2005.$ Find $\\lfloor P\\rfloor.$",
+      "answer": "45",
+      "example_id": "2005-I-6::2005"
+    },
+    "iso_time": "2025-12-08T10:24:14Z"
+  },
+  {
+    "timestamp": 1765189911.5356429,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 744980818
+    },
+    "iso_time": "2025-12-08T10:31:51Z"
+  },
+  {
+    "timestamp": 1765189912.8989172,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 2,
+        "m": 7,
+        "n": 10637
+      }
+    },
+    "iso_time": "2025-12-08T10:31:52Z"
+  },
+  {
+    "timestamp": 1765189914.0116858,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 24009
+    },
+    "iso_time": "2025-12-08T10:31:54Z"
+  },
+  {
+    "timestamp": 1765189914.0118248,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation (x - 2)^{2{m}} - 1 = 10637. Let P be the product of the nonreal roots of this equation. Compute fl",
+      "correct_answer": "24009",
+      "seed_value": 744980818
+    },
+    "iso_time": "2025-12-08T10:31:54Z"
+  },
+  {
+    "timestamp": 1765189914.0118852,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "24009",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T10:31:54Z"
+  },
+  {
+    "timestamp": 1765190270.240628,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "24009",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T10:37:50Z"
+  },
+  {
+    "timestamp": 1765190570.61938,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "24004",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T10:42:50Z"
+  },
+  {
+    "timestamp": 1765191061.158498,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "24018",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T10:51:01Z"
+  },
+  {
+    "timestamp": 1765191688.286141,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "24013",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T11:01:28Z"
+  },
+  {
+    "timestamp": 1765192248.247115,
+    "seed_id": "2005-I-6::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T11:10:48Z"
+  },
+  {
+    "timestamp": 1765192248.247394,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 561657721
+    },
+    "iso_time": "2025-12-08T11:10:48Z"
+  },
+  {
+    "timestamp": 1765192249.618742,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 8,
+        "m": 6,
+        "n": 14176
+      }
+    },
+    "iso_time": "2025-12-08T11:10:49Z"
+  },
+  {
+    "timestamp": 1765192250.842101,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1163151820
+    },
+    "iso_time": "2025-12-08T11:10:50Z"
+  },
+  {
+    "timestamp": 1765192250.842273,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation (x - 8)^{2{m}} - 1 = 14176. Let P be the product of the nonreal roots of this equation. Compute fl",
+      "correct_answer": "1163151820",
+      "seed_value": 561657721
+    },
+    "iso_time": "2025-12-08T11:10:50Z"
+  },
+  {
+    "timestamp": 1765192250.842335,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1163151821",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T11:10:50Z"
+  },
+  {
+    "timestamp": 1765192712.220704,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1163151811",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T11:18:32Z"
+  },
+  {
+    "timestamp": 1765193352.8217669,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1163151820",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T11:29:12Z"
+  },
+  {
+    "timestamp": 1765194785.375183,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1163151820",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T11:53:05Z"
+  },
+  {
+    "timestamp": 1765195278.3279848,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1163151828",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T12:01:18Z"
+  },
+  {
+    "timestamp": 1765195693.398314,
+    "seed_id": "2005-I-6::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-6::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-08T12:08:13Z"
+  },
+  {
+    "timestamp": 1765195693.398495,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 68910888
+    },
+    "iso_time": "2025-12-08T12:08:13Z"
+  },
+  {
+    "timestamp": 1765195694.748503,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 9,
+        "m": 6,
+        "n": 9816
+      }
+    },
+    "iso_time": "2025-12-08T12:08:14Z"
+  },
+  {
+    "timestamp": 1765195695.827188,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3698044079
+    },
+    "iso_time": "2025-12-08T12:08:15Z"
+  },
+  {
+    "timestamp": 1765195695.827342,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation (x - 9)^{2{m}} - 1 = 9816. Let P be the product of the nonreal roots of this equation. Compute flo",
+      "correct_answer": "3698044079",
+      "seed_value": 68910888
+    },
+    "iso_time": "2025-12-08T12:08:15Z"
+  },
+  {
+    "timestamp": 1765195695.8273869,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3698044082",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T12:08:15Z"
+  },
+  {
+    "timestamp": 1765196342.4438138,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3698044085",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T12:19:02Z"
+  },
+  {
+    "timestamp": 1765196944.792991,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3698044078",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T12:29:04Z"
+  },
+  {
+    "timestamp": 1765197255.658699,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3698044079",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T12:34:15Z"
+  },
+  {
+    "timestamp": 1765198033.307155,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3698044079",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T12:47:13Z"
+  },
+  {
+    "timestamp": 1765198673.191583,
+    "seed_id": "2005-I-6::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T12:57:53Z"
+  },
+  {
+    "timestamp": 1765198673.1917372,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1254472310
+    },
+    "iso_time": "2025-12-08T12:57:53Z"
+  },
+  {
+    "timestamp": 1765198674.564333,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 5,
+        "m": 6,
+        "n": 17758
+      }
+    },
+    "iso_time": "2025-12-08T12:57:54Z"
+  },
+  {
+    "timestamp": 1765198675.643156,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 12272309
+    },
+    "iso_time": "2025-12-08T12:57:55Z"
+  },
+  {
+    "timestamp": 1765198675.643283,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation (x - 5)^{2{m}} - 1 = 17758. Let P be the product of the nonreal roots of this equation. Compute fl",
+      "correct_answer": "12272309",
+      "seed_value": 1254472310
+    },
+    "iso_time": "2025-12-08T12:57:55Z"
+  },
+  {
+    "timestamp": 1765198675.643326,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "12272308",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T12:57:55Z"
+  },
+  {
+    "timestamp": 1765199100.6076522,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "12272309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T13:05:00Z"
+  },
+  {
+    "timestamp": 1765199458.036088,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12272318",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T13:10:58Z"
+  },
+  {
+    "timestamp": 1765199849.8979762,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12272309",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T13:17:29Z"
+  },
+  {
+    "timestamp": 1765200403.894492,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12272312",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T13:26:43Z"
+  },
+  {
+    "timestamp": 1765200903.661644,
+    "seed_id": "2005-I-6::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-6::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-08T13:35:03Z"
+  },
+  {
+    "timestamp": 1765200903.6617541,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 36025664
+    },
+    "iso_time": "2025-12-08T13:35:03Z"
+  },
+  {
+    "timestamp": 1765200905.0928488,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 4,
+        "m": 5,
+        "n": 3115
+      }
+    },
+    "iso_time": "2025-12-08T13:35:05Z"
+  },
+  {
+    "timestamp": 1765200906.1952581,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 95016
+    },
+    "iso_time": "2025-12-08T13:35:06Z"
+  },
+  {
+    "timestamp": 1765200906.195429,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation (x - 4)^{2{m}} - 1 = 3115. Let P be the product of the nonreal roots of this equation. Compute flo",
+      "correct_answer": "95016",
+      "seed_value": 36025664
+    },
+    "iso_time": "2025-12-08T13:35:06Z"
+  },
+  {
+    "timestamp": 1765200906.1954849,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "95013",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T13:35:06Z"
+  },
+  {
+    "timestamp": 1765201280.385325,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "95016",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T13:41:20Z"
+  },
+  {
+    "timestamp": 1765201909.5785742,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "95015",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T13:51:49Z"
+  },
+  {
+    "timestamp": 1765202075.9793,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "95016",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T13:54:35Z"
+  },
+  {
+    "timestamp": 1765202583.536268,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "95018",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T14:03:03Z"
+  },
+  {
+    "timestamp": 1765203111.220416,
+    "seed_id": "2005-I-6::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-6::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-08T14:11:51Z"
+  },
+  {
+    "timestamp": 1765203111.220572,
+    "seed_id": "2005-I-6::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-08T14:11:51Z"
+  },
+  {
+    "timestamp": 1765203111.2206771,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Let $P$ be the product of the nonreal roots of $x^4-4x^3+6x^2-4x=2005.$ Find $\\lfloor P\\rfloor.$",
+      "answer": "45",
+      "example_id": "2005-I-6::2005"
+    },
+    "iso_time": "2025-12-08T14:11:51Z"
+  },
+  {
+    "timestamp": 1765203363.8750222,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 555361510
+    },
+    "iso_time": "2025-12-08T14:16:03Z"
+  },
+  {
+    "timestamp": 1765203365.19394,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:05Z"
+  },
+  {
+    "timestamp": 1765203366.420206,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:06Z"
+  },
+  {
+    "timestamp": 1765203367.7042181,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:07Z"
+  },
+  {
+    "timestamp": 1765203368.884081,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:08Z"
+  },
+  {
+    "timestamp": 1765203370.073156,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:10Z"
+  },
+  {
+    "timestamp": 1765203371.3145568,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:11Z"
+  },
+  {
+    "timestamp": 1765203372.445788,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:12Z"
+  },
+  {
+    "timestamp": 1765203373.699179,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:13Z"
+  },
+  {
+    "timestamp": 1765203374.856263,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:14Z"
+  },
+  {
+    "timestamp": 1765203376.070942,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:16Z"
+  },
+  {
+    "timestamp": 1765203376.0710678,
+    "seed_id": "2005-I-6::2005",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 12.196055889129639
+    },
+    "iso_time": "2025-12-08T14:16:16Z"
+  },
+  {
+    "timestamp": 1765203376.0711522,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 268295309
+    },
+    "iso_time": "2025-12-08T14:16:16Z"
+  },
+  {
+    "timestamp": 1765203377.3277209,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:17Z"
+  },
+  {
+    "timestamp": 1765203378.5618,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:18Z"
+  },
+  {
+    "timestamp": 1765203379.7614489,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:19Z"
+  },
+  {
+    "timestamp": 1765203380.9561,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:20Z"
+  },
+  {
+    "timestamp": 1765203382.1712902,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:22Z"
+  },
+  {
+    "timestamp": 1765203383.376584,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:23Z"
+  },
+  {
+    "timestamp": 1765203384.6112452,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:24Z"
+  },
+  {
+    "timestamp": 1765203385.80427,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:25Z"
+  },
+  {
+    "timestamp": 1765203386.9515252,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:26Z"
+  },
+  {
+    "timestamp": 1765203388.080159,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:28Z"
+  },
+  {
+    "timestamp": 1765203388.0802639,
+    "seed_id": "2005-I-6::2005",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 12.009110927581787
+    },
+    "iso_time": "2025-12-08T14:16:28Z"
+  },
+  {
+    "timestamp": 1765203388.080322,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1985563937
+    },
+    "iso_time": "2025-12-08T14:16:28Z"
+  },
+  {
+    "timestamp": 1765203389.12255,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:29Z"
+  },
+  {
+    "timestamp": 1765203390.152731,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:30Z"
+  },
+  {
+    "timestamp": 1765203391.2867332,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:31Z"
+  },
+  {
+    "timestamp": 1765203392.4207091,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:32Z"
+  },
+  {
+    "timestamp": 1765203393.5595179,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:33Z"
+  },
+  {
+    "timestamp": 1765203394.7885,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:34Z"
+  },
+  {
+    "timestamp": 1765203395.894773,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:35Z"
+  },
+  {
+    "timestamp": 1765203396.958325,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:36Z"
+  },
+  {
+    "timestamp": 1765203397.939977,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:37Z"
+  },
+  {
+    "timestamp": 1765203399.132023,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:39Z"
+  },
+  {
+    "timestamp": 1765203399.1321468,
+    "seed_id": "2005-I-6::2005",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.051824808120728
+    },
+    "iso_time": "2025-12-08T14:16:39Z"
+  },
+  {
+    "timestamp": 1765203399.132191,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1622694004
+    },
+    "iso_time": "2025-12-08T14:16:39Z"
+  },
+  {
+    "timestamp": 1765203400.21072,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:40Z"
+  },
+  {
+    "timestamp": 1765203401.404808,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:41Z"
+  },
+  {
+    "timestamp": 1765203402.581058,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:42Z"
+  },
+  {
+    "timestamp": 1765203403.813138,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:43Z"
+  },
+  {
+    "timestamp": 1765203404.959702,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:44Z"
+  },
+  {
+    "timestamp": 1765203406.088565,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:46Z"
+  },
+  {
+    "timestamp": 1765203407.276352,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:47Z"
+  },
+  {
+    "timestamp": 1765203408.393357,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:48Z"
+  },
+  {
+    "timestamp": 1765203409.5173628,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:49Z"
+  },
+  {
+    "timestamp": 1765203410.609736,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:50Z"
+  },
+  {
+    "timestamp": 1765203410.609851,
+    "seed_id": "2005-I-6::2005",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.4776611328125
+    },
+    "iso_time": "2025-12-08T14:16:50Z"
+  },
+  {
+    "timestamp": 1765203410.609905,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 804811040
+    },
+    "iso_time": "2025-12-08T14:16:50Z"
+  },
+  {
+    "timestamp": 1765203411.74428,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:51Z"
+  },
+  {
+    "timestamp": 1765203412.958296,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:52Z"
+  },
+  {
+    "timestamp": 1765203414.189394,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:54Z"
+  },
+  {
+    "timestamp": 1765203415.337404,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:55Z"
+  },
+  {
+    "timestamp": 1765203416.510294,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:56Z"
+  },
+  {
+    "timestamp": 1765203417.6431308,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:57Z"
+  },
+  {
+    "timestamp": 1765203418.742622,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:16:58Z"
+  },
+  {
+    "timestamp": 1765203419.984137,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:16:59Z"
+  },
+  {
+    "timestamp": 1765203421.18543,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-08T14:17:01Z"
+  },
+  {
+    "timestamp": 1765203422.4101171,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-08T14:17:02Z"
+  },
+  {
+    "timestamp": 1765203422.410253,
+    "seed_id": "2005-I-6::2005",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.800346851348877
+    },
+    "iso_time": "2025-12-08T14:17:02Z"
+  },
+  {
+    "timestamp": 1765203422.4103,
+    "seed_id": "2005-I-6::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-08T14:17:02Z"
+  },
+  {
+    "timestamp": 1765203422.410316,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "Let $P$ be the product of the nonreal roots of $x^4-4x^3+6x^2-4x=2005.$ Find $\\lfloor P\\rfloor.$",
+      "answer": "45",
+      "example_id": "2005-I-6::2005"
+    },
+    "iso_time": "2025-12-08T14:17:02Z"
+  },
+  {
+    "timestamp": 1765203991.69049,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1143448268
+    },
+    "iso_time": "2025-12-08T14:26:31Z"
+  },
+  {
+    "timestamp": 1765203992.861974,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 6,
+        "a": 16,
+        "t": 7722534
+      }
+    },
+    "iso_time": "2025-12-08T14:26:32Z"
+  },
+  {
+    "timestamp": 1765203993.99548,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 391053
+    },
+    "iso_time": "2025-12-08T14:26:33Z"
+  },
+  {
+    "timestamp": 1765203993.99562,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation (x - 16)^{ 6 } - 16^{ 6 } = 7722534, where 6 is an even integer at least 6 and 16, 7722534 are pos",
+      "correct_answer": "391053",
+      "seed_value": 1143448268
+    },
+    "iso_time": "2025-12-08T14:26:33Z"
+  },
+  {
+    "timestamp": 1765203993.995679,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "391053",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T14:26:33Z"
+  },
+  {
+    "timestamp": 1765204239.084689,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "391050",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T14:30:39Z"
+  },
+  {
+    "timestamp": 1765204550.614239,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "391059",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T14:35:50Z"
+  },
+  {
+    "timestamp": 1765204613.7687922,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "391051",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T14:36:53Z"
+  },
+  {
+    "timestamp": 1765204981.456088,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "391053",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T14:43:01Z"
+  },
+  {
+    "timestamp": 1765205425.611587,
+    "seed_id": "2005-I-6::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T14:50:25Z"
+  },
+  {
+    "timestamp": 1765205425.611865,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1086370418
+    },
+    "iso_time": "2025-12-08T14:50:25Z"
+  },
+  {
+    "timestamp": 1765205426.9676712,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 6,
+        "a": 15,
+        "t": 6778392
+      }
+    },
+    "iso_time": "2025-12-08T14:50:26Z"
+  },
+  {
+    "timestamp": 1765205428.102047,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 261873
+    },
+    "iso_time": "2025-12-08T14:50:28Z"
+  },
+  {
+    "timestamp": 1765205428.102201,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation (x - 15)^{ 6 } - 15^{ 6 } = 6778392, where 6 is an even integer at least 6 and 15, 6778392 are pos",
+      "correct_answer": "261873",
+      "seed_value": 1086370418
+    },
+    "iso_time": "2025-12-08T14:50:28Z"
+  },
+  {
+    "timestamp": 1765205428.1022458,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "261873",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T14:50:28Z"
+  },
+  {
+    "timestamp": 1765205766.08069,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "261878",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T14:56:06Z"
+  },
+  {
+    "timestamp": 1765206094.54197,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "261866",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T15:01:34Z"
+  },
+  {
+    "timestamp": 1765206516.941649,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "261873",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T15:08:36Z"
+  },
+  {
+    "timestamp": 1765206839.392755,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "261870",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T15:13:59Z"
+  },
+  {
+    "timestamp": 1765207192.8756611,
+    "seed_id": "2005-I-6::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T15:19:52Z"
+  },
+  {
+    "timestamp": 1765207192.8759282,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1346845470
+    },
+    "iso_time": "2025-12-08T15:19:52Z"
+  },
+  {
+    "timestamp": 1765207194.230937,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 10,
+        "a": 9,
+        "t": 5376742
+      }
+    },
+    "iso_time": "2025-12-08T15:19:54Z"
+  },
+  {
+    "timestamp": 1765207195.380683,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 310459571787
+    },
+    "iso_time": "2025-12-08T15:19:55Z"
+  },
+  {
+    "timestamp": 1765207195.38082,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation (x - 9)^{ 10 } - 9^{ 10 } = 5376742, where 10 is an even integer at least 6 and 9, 5376742 are pos",
+      "correct_answer": "310459571787",
+      "seed_value": 1346845470
+    },
+    "iso_time": "2025-12-08T15:19:55Z"
+  },
+  {
+    "timestamp": 1765207195.380867,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "310459571796",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T15:19:55Z"
+  },
+  {
+    "timestamp": 1765208401.955144,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "310459571787",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T15:40:01Z"
+  },
+  {
+    "timestamp": 1765209265.6016471,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "310459571783",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T15:54:25Z"
+  },
+  {
+    "timestamp": 1765210121.971155,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "310459571791",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T16:08:41Z"
+  },
+  {
+    "timestamp": 1765210833.359009,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "310459571787",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T16:20:33Z"
+  },
+  {
+    "timestamp": 1765212637.0546749,
+    "seed_id": "2005-I-6::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T16:50:37Z"
+  },
+  {
+    "timestamp": 1765212637.054961,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 1413112117
+    },
+    "iso_time": "2025-12-08T16:50:37Z"
+  },
+  {
+    "timestamp": 1765212638.518208,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 10,
+        "a": 6,
+        "t": 68894
+      }
+    },
+    "iso_time": "2025-12-08T16:50:38Z"
+  },
+  {
+    "timestamp": 1765212639.667781,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 24585929272
+    },
+    "iso_time": "2025-12-08T16:50:39Z"
+  },
+  {
+    "timestamp": 1765212639.6679108,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation (x - 6)^{ 10 } - 6^{ 10 } = 68894, where 10 is an even integer at least 6 and 6, 68894 are positiv",
+      "correct_answer": "24585929272",
+      "seed_value": 1413112117
+    },
+    "iso_time": "2025-12-08T16:50:39Z"
+  },
+  {
+    "timestamp": 1765212639.667954,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "24585929280",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T16:50:39Z"
+  },
+  {
+    "timestamp": 1765213336.958401,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "24585929272",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T17:02:16Z"
+  },
+  {
+    "timestamp": 1765214074.505394,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "24585929276",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T17:14:34Z"
+  },
+  {
+    "timestamp": 1765215066.992438,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "24585929272",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T17:31:06Z"
+  },
+  {
+    "timestamp": 1765215828.732577,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "24585929281",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T17:43:48Z"
+  },
+  {
+    "timestamp": 1765216336.524894,
+    "seed_id": "2005-I-6::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T17:52:16Z"
+  },
+  {
+    "timestamp": 1765216336.525205,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 402466978
+    },
+    "iso_time": "2025-12-08T17:52:16Z"
+  },
+  {
+    "timestamp": 1765216337.908832,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 10,
+        "a": 4,
+        "t": 156995
+      }
+    },
+    "iso_time": "2025-12-08T17:52:17Z"
+  },
+  {
+    "timestamp": 1765216338.8828979,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 11917103
+    },
+    "iso_time": "2025-12-08T17:52:18Z"
+  },
+  {
+    "timestamp": 1765216338.8830678,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation (x - 4)^{ 10 } - 4^{ 10 } = 156995, where 10 is an even integer at least 6 and 4, 156995 are posit",
+      "correct_answer": "11917103",
+      "seed_value": 402466978
+    },
+    "iso_time": "2025-12-08T17:52:18Z"
+  },
+  {
+    "timestamp": 1765216338.883115,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "11917109",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T17:52:18Z"
+  },
+  {
+    "timestamp": 1765216874.2979689,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "11917112",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T18:01:14Z"
+  },
+  {
+    "timestamp": 1765217362.669014,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "11917103",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T18:09:22Z"
+  },
+  {
+    "timestamp": 1765218362.872305,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "11917094",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T18:26:02Z"
+  },
+  {
+    "timestamp": 1765218840.451688,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "11917103",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T18:34:00Z"
+  },
+  {
+    "timestamp": 1765219449.865542,
+    "seed_id": "2005-I-6::2005",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-08T18:44:09Z"
+  },
+  {
+    "timestamp": 1765219449.865742,
+    "seed_id": "2005-I-6::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-08T18:44:09Z"
+  },
+  {
+    "timestamp": 1765219449.865839,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Let $P$ be the product of the nonreal roots of $x^4-4x^3+6x^2-4x=2005.$ Find $\\lfloor P\\rfloor.$",
+      "answer": "45",
+      "example_id": "2005-I-6::2005"
+    },
+    "iso_time": "2025-12-08T18:44:09Z"
+  },
+  {
+    "timestamp": 1765219729.542986,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 1676661439
+    },
+    "iso_time": "2025-12-08T18:48:49Z"
+  },
+  {
+    "timestamp": 1765219730.887391,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 8,
+        "t": 74889
+      }
+    },
+    "iso_time": "2025-12-08T18:48:50Z"
+  },
+  {
+    "timestamp": 1765219731.9500449,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4818
+    },
+    "iso_time": "2025-12-08T18:48:51Z"
+  },
+  {
+    "timestamp": 1765219731.950177,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation x^{ 8 } - 8 x^{ 8-1 } + C(8,2) x^{ 8-2 } - C(8,3) x^{ 8-3 } + ... + (-1)^{ 8-1 } C(8,8-1) x = 7488",
+      "correct_answer": "4818",
+      "seed_value": 1676661439
+    },
+    "iso_time": "2025-12-08T18:48:51Z"
+  },
+  {
+    "timestamp": 1765219731.950228,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4816",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T18:48:51Z"
+  },
+  {
+    "timestamp": 1765219860.7327769,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4818",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T18:51:00Z"
+  },
+  {
+    "timestamp": 1765220187.6148832,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4819",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T18:56:27Z"
+  },
+  {
+    "timestamp": 1765220546.313937,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4818",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T19:02:26Z"
+  },
+  {
+    "timestamp": 1765220766.114317,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4815",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T19:06:06Z"
+  },
+  {
+    "timestamp": 1765221256.4632058,
+    "seed_id": "2005-I-6::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-6::2005_prompt04-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T19:14:16Z"
+  },
+  {
+    "timestamp": 1765221256.4633842,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-6::2005_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 1336668098
+    },
+    "iso_time": "2025-12-08T19:14:16Z"
+  },
+  {
+    "timestamp": 1765221257.84379,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "m": 6,
+        "t": 3837455
+      }
+    },
+    "iso_time": "2025-12-08T19:14:17Z"
+  },
+  {
+    "timestamp": 1765221259.074027,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 24668
+    },
+    "iso_time": "2025-12-08T19:14:19Z"
+  },
+  {
+    "timestamp": 1765221259.074197,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the equation x^{ 6 } - 6 x^{ 6-1 } + C(6,2) x^{ 6-2 } - C(6,3) x^{ 6-3 } + ... + (-1)^{ 6-1 } C(6,6-1) x = 3837",
+      "correct_answer": "24668",
+      "seed_value": 1336668098
+    },
+    "iso_time": "2025-12-08T19:14:19Z"
+  },
+  {
+    "timestamp": 1765221259.0742452,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "24668",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T19:14:19Z"
+  },
+  {
+    "timestamp": 1765221459.664219,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "24676",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T19:17:39Z"
+  },
+  {
+    "timestamp": 1765221659.515082,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "24675",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T19:20:59Z"
+  },
+  {
+    "timestamp": 1765221792.808701,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "24668",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T19:23:12Z"
+  },
+  {
+    "timestamp": 1765222039.001013,
+    "seed_id": "2005-I-6::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "24659",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T19:27:19Z"
+  },
+  {
+    "timestamp": 1765222256.512956,
+    "seed_id": "2005-I-6::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-6::2005_prompt04-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T19:30:56Z"
+  }
+]

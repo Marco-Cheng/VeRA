@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1763921378.4902642,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1993,
+      "question_preview": "How many ordered four-tuples of integers $(a,b,c,d)\\,$ with $0 < a < b < c < d < 500\\,$ satisfy $a + d = b + c\\,$ and $b",
+      "answer": "870",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-23T18:09:38Z"
+  },
+  {
+    "timestamp": 1763921378.4903538,
+    "seed_id": "1993-4::1993",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-23T18:09:38Z"
+  },
+  {
+    "timestamp": 1763921378.490409,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "How many ordered four-tuples of integers $(a,b,c,d)\\,$ with $0 < a < b < c < d < 500\\,$ satisfy $a + d = b + c\\,$ and $bc - ad = 93\\,$ ?",
+      "answer": "870",
+      "example_id": "1993-4::1993"
+    },
+    "iso_time": "2025-11-23T18:09:38Z"
+  },
+  {
+    "timestamp": 1763921458.1355321,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-4::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1037184314
+    },
+    "iso_time": "2025-11-23T18:10:58Z"
+  },
+  {
+    "timestamp": 1763921458.87669,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1177,
+        "k": 300,
+        "ell": 1500
+      }
+    },
+    "iso_time": "2025-11-23T18:10:58Z"
+  },
+  {
+    "timestamp": 1763921459.620258,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5
+    },
+    "iso_time": "2025-11-23T18:10:59Z"
+  },
+  {
+    "timestamp": 1763921459.6203809,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider ordered integer quadruples (a, b, c, d) with 0 < a < b < c < d < 1177 that satisfy the symme",
+      "correct_answer": "5",
+      "seed_value": 1037184314
+    },
+    "iso_time": "2025-11-23T18:10:59Z"
+  },
+  {
+    "timestamp": 1763921459.6204228,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "11",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:10:59Z"
+  },
+  {
+    "timestamp": 1763921492.65695,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:11:32Z"
+  },
+  {
+    "timestamp": 1763921533.479954,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:12:13Z"
+  },
+  {
+    "timestamp": 1763921566.818779,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "12",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:12:46Z"
+  },
+  {
+    "timestamp": 1763921616.3599029,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:13:36Z"
+  },
+  {
+    "timestamp": 1763921656.508498,
+    "seed_id": "1993-4::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-4::1993_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T18:14:16Z"
+  },
+  {
+    "timestamp": 1763921656.508718,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-4::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 144588429
+    },
+    "iso_time": "2025-11-23T18:14:16Z"
+  },
+  {
+    "timestamp": 1763921657.2960918,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1442,
+        "k": 900,
+        "ell": 6300
+      }
+    },
+    "iso_time": "2025-11-23T18:14:17Z"
+  },
+  {
+    "timestamp": 1763921658.045747,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6
+    },
+    "iso_time": "2025-11-23T18:14:18Z"
+  },
+  {
+    "timestamp": 1763921658.045877,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider ordered integer quadruples (a, b, c, d) with 0 < a < b < c < d < 1442 that satisfy the symme",
+      "correct_answer": "6",
+      "seed_value": 144588429
+    },
+    "iso_time": "2025-11-23T18:14:18Z"
+  },
+  {
+    "timestamp": 1763921658.0459158,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:14:18Z"
+  },
+  {
+    "timestamp": 1763922175.2339158,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:22:55Z"
+  },
+  {
+    "timestamp": 1763922224.77285,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:23:44Z"
+  },
+  {
+    "timestamp": 1763922267.123988,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:24:27Z"
+  },
+  {
+    "timestamp": 1763922314.744321,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "11",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:25:14Z"
+  },
+  {
+    "timestamp": 1763922367.446913,
+    "seed_id": "1993-4::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-4::1993_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T18:26:07Z"
+  },
+  {
+    "timestamp": 1763922367.4471161,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-4::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1991120003
+    },
+    "iso_time": "2025-11-23T18:26:07Z"
+  },
+  {
+    "timestamp": 1763922368.208739,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 947,
+        "k": 300,
+        "ell": 900
+      }
+    },
+    "iso_time": "2025-11-23T18:26:08Z"
+  },
+  {
+    "timestamp": 1763922368.951177,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5
+    },
+    "iso_time": "2025-11-23T18:26:08Z"
+  },
+  {
+    "timestamp": 1763922368.951319,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider ordered integer quadruples (a, b, c, d) with 0 < a < b < c < d < 947 that satisfy the symmet",
+      "correct_answer": "5",
+      "seed_value": 1991120003
+    },
+    "iso_time": "2025-11-23T18:26:08Z"
+  },
+  {
+    "timestamp": 1763922368.951364,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:26:08Z"
+  },
+  {
+    "timestamp": 1763922407.583796,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "14",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:26:47Z"
+  },
+  {
+    "timestamp": 1763922455.513338,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:27:35Z"
+  },
+  {
+    "timestamp": 1763922481.9966998,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:28:01Z"
+  },
+  {
+    "timestamp": 1763922508.85979,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:28:28Z"
+  },
+  {
+    "timestamp": 1763922539.584895,
+    "seed_id": "1993-4::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-4::1993_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T18:28:59Z"
+  },
+  {
+    "timestamp": 1763922539.585066,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-4::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 662425927
+    },
+    "iso_time": "2025-11-23T18:28:59Z"
+  },
+  {
+    "timestamp": 1763922540.350063,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1970,
+        "k": 2156,
+        "ell": 6468
+      }
+    },
+    "iso_time": "2025-11-23T18:29:00Z"
+  },
+  {
+    "timestamp": 1763922541.100993,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5
+    },
+    "iso_time": "2025-11-23T18:29:01Z"
+  },
+  {
+    "timestamp": 1763922541.10114,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider ordered integer quadruples (a, b, c, d) with 0 < a < b < c < d < 1970 that satisfy the symme",
+      "correct_answer": "5",
+      "seed_value": 662425927
+    },
+    "iso_time": "2025-11-23T18:29:01Z"
+  },
+  {
+    "timestamp": 1763922541.1011782,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:29:01Z"
+  },
+  {
+    "timestamp": 1763922598.285675,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:29:58Z"
+  },
+  {
+    "timestamp": 1763922649.692645,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:30:49Z"
+  },
+  {
+    "timestamp": 1763922698.530046,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:31:38Z"
+  },
+  {
+    "timestamp": 1763922745.0949051,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:32:25Z"
+  },
+  {
+    "timestamp": 1763922794.0435991,
+    "seed_id": "1993-4::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-4::1993_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T18:33:14Z"
+  },
+  {
+    "timestamp": 1763922794.0437918,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-4::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 396240226
+    },
+    "iso_time": "2025-11-23T18:33:14Z"
+  },
+  {
+    "timestamp": 1763922794.825856,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1952,
+        "k": 2541,
+        "ell": 5082
+      }
+    },
+    "iso_time": "2025-11-23T18:33:14Z"
+  },
+  {
+    "timestamp": 1763922795.5778298,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5
+    },
+    "iso_time": "2025-11-23T18:33:15Z"
+  },
+  {
+    "timestamp": 1763922795.578004,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, consider ordered integer quadruples (a, b, c, d) with 0 < a < b < c < d < 1952 that satisfy the symme",
+      "correct_answer": "5",
+      "seed_value": 396240226
+    },
+    "iso_time": "2025-11-23T18:33:15Z"
+  },
+  {
+    "timestamp": 1763922795.578052,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:33:15Z"
+  },
+  {
+    "timestamp": 1763922827.524928,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:33:47Z"
+  },
+  {
+    "timestamp": 1763922870.6221771,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "12",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:34:30Z"
+  },
+  {
+    "timestamp": 1763922914.26355,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T18:35:14Z"
+  },
+  {
+    "timestamp": 1763923535.317646,
+    "seed_id": "1993-4::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T18:45:35Z"
+  },
+  {
+    "timestamp": 1763923560.850869,
+    "seed_id": "1993-4::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-4::1993_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T18:46:00Z"
+  }
+]

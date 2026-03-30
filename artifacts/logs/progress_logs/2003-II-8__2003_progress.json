@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1764901805.504807,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2003,
+      "question_preview": "Find the eighth term of the sequence $1440,$ $1716,$ $1848,\\ldots,$ whose terms are formed by multiplying the correspond",
+      "answer": "348",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-05T02:30:05Z"
+  },
+  {
+    "timestamp": 1764901805.504836,
+    "seed_id": "2003-II-8::2003",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-05T02:30:05Z"
+  },
+  {
+    "timestamp": 1764901805.504847,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Find the eighth term of the sequence $1440,$ $1716,$ $1848,\\ldots,$ whose terms are formed by multiplying the corresponding terms of two arithmetic sequences.",
+      "answer": "348",
+      "example_id": "2003-II-8::2003"
+    },
+    "iso_time": "2025-12-05T02:30:05Z"
+  },
+  {
+    "timestamp": 1764902029.43186,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-8::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1220825631
+    },
+    "iso_time": "2025-12-05T02:33:49Z"
+  },
+  {
+    "timestamp": 1764902030.776264,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "t1": 448,
+        "t2": 2312,
+        "t3": 5040,
+        "t4": 8740,
+        "k": 12
+      }
+    },
+    "iso_time": "2025-12-05T02:33:50Z"
+  },
+  {
+    "timestamp": 1764902031.79519,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 86292
+    },
+    "iso_time": "2025-12-05T02:33:51Z"
+  },
+  {
+    "timestamp": 1764902031.7953448,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a sequence whose first four terms are 448, 2312, 5040, and 8740. Each term of the sequence is formed by multipl",
+      "correct_answer": "86292",
+      "seed_value": 1220825631
+    },
+    "iso_time": "2025-12-05T02:33:51Z"
+  },
+  {
+    "timestamp": 1764902031.795409,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "86292",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:33:51Z"
+  },
+  {
+    "timestamp": 1764902045.388536,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "86296",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:34:05Z"
+  },
+  {
+    "timestamp": 1764902145.999851,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "86284",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:35:45Z"
+  },
+  {
+    "timestamp": 1764902215.837434,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "86292",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:36:55Z"
+  },
+  {
+    "timestamp": 1764902292.63764,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "86299",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:38:12Z"
+  },
+  {
+    "timestamp": 1764902338.9356108,
+    "seed_id": "2003-II-8::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-8::2003_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T02:38:58Z"
+  },
+  {
+    "timestamp": 1764902338.9358,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-8::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 263632319
+    },
+    "iso_time": "2025-12-05T02:38:58Z"
+  },
+  {
+    "timestamp": 1764902340.288641,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "t1": 200,
+        "t2": 715,
+        "t3": 1632,
+        "t4": 3059,
+        "k": 8
+      }
+    },
+    "iso_time": "2025-12-05T02:39:00Z"
+  },
+  {
+    "timestamp": 1764902341.334293,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16027
+    },
+    "iso_time": "2025-12-05T02:39:01Z"
+  },
+  {
+    "timestamp": 1764902341.334434,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a sequence whose first four terms are 200, 715, 1632, and 3059. Each term of the sequence is formed by multiply",
+      "correct_answer": "16027",
+      "seed_value": 263632319
+    },
+    "iso_time": "2025-12-05T02:39:01Z"
+  },
+  {
+    "timestamp": 1764902341.334501,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16033",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:39:01Z"
+  },
+  {
+    "timestamp": 1764902361.94669,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "16027",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:39:21Z"
+  },
+  {
+    "timestamp": 1764902431.678238,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16018",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:40:31Z"
+  },
+  {
+    "timestamp": 1764902527.600449,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16027",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:42:07Z"
+  },
+  {
+    "timestamp": 1764902560.343315,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "16036",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:42:40Z"
+  },
+  {
+    "timestamp": 1764902578.100706,
+    "seed_id": "2003-II-8::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-8::2003_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T02:42:58Z"
+  },
+  {
+    "timestamp": 1764902578.1008892,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-8::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1198238687
+    },
+    "iso_time": "2025-12-05T02:42:58Z"
+  },
+  {
+    "timestamp": 1764902579.396651,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "t1": 238,
+        "t2": 920,
+        "t3": 2262,
+        "t4": 4480,
+        "k": 11
+      }
+    },
+    "iso_time": "2025-12-05T02:42:59Z"
+  },
+  {
+    "timestamp": 1764902580.539213,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 62678
+    },
+    "iso_time": "2025-12-05T02:43:00Z"
+  },
+  {
+    "timestamp": 1764902580.539358,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a sequence whose first four terms are 238, 920, 2262, and 4480. Each term of the sequence is formed by multiply",
+      "correct_answer": "62678",
+      "seed_value": 1198238687
+    },
+    "iso_time": "2025-12-05T02:43:00Z"
+  },
+  {
+    "timestamp": 1764902580.53942,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "62678",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:43:00Z"
+  },
+  {
+    "timestamp": 1764902590.815302,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "62680",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:43:10Z"
+  },
+  {
+    "timestamp": 1764902605.605273,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "62673",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:43:25Z"
+  },
+  {
+    "timestamp": 1764902661.698674,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "62678",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:44:21Z"
+  },
+  {
+    "timestamp": 1764902673.7749429,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "62687",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:44:33Z"
+  },
+  {
+    "timestamp": 1764902692.382984,
+    "seed_id": "2003-II-8::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-8::2003_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T02:44:52Z"
+  },
+  {
+    "timestamp": 1764902692.3831658,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-8::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1168290209
+    },
+    "iso_time": "2025-12-05T02:44:52Z"
+  },
+  {
+    "timestamp": 1764902693.724333,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "t1": 325,
+        "t2": 1232,
+        "t3": 2805,
+        "t4": 5152,
+        "k": 8
+      }
+    },
+    "iso_time": "2025-12-05T02:44:53Z"
+  },
+  {
+    "timestamp": 1764902694.9437509,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 24440
+    },
+    "iso_time": "2025-12-05T02:44:54Z"
+  },
+  {
+    "timestamp": 1764902694.9439301,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a sequence whose first four terms are 325, 1232, 2805, and 5152. Each term of the sequence is formed by multipl",
+      "correct_answer": "24440",
+      "seed_value": 1168290209
+    },
+    "iso_time": "2025-12-05T02:44:54Z"
+  },
+  {
+    "timestamp": 1764902694.944001,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "24440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:44:54Z"
+  },
+  {
+    "timestamp": 1764902722.612523,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "24435",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:45:22Z"
+  },
+  {
+    "timestamp": 1764902794.086575,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "24446",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:46:34Z"
+  },
+  {
+    "timestamp": 1764902819.576689,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "24434",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:46:59Z"
+  },
+  {
+    "timestamp": 1764902865.098123,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "24440",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:47:45Z"
+  },
+  {
+    "timestamp": 1764902957.092774,
+    "seed_id": "2003-II-8::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-8::2003_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T02:49:17Z"
+  },
+  {
+    "timestamp": 1764902957.092994,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2003-II-8::2003_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1933367914
+    },
+    "iso_time": "2025-12-05T02:49:17Z"
+  },
+  {
+    "timestamp": 1764902958.4447029,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "t1": 312,
+        "t2": 1045,
+        "t3": 2400,
+        "t4": 4557,
+        "k": 9
+      }
+    },
+    "iso_time": "2025-12-05T02:49:18Z"
+  },
+  {
+    "timestamp": 1764902959.554757,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 33672
+    },
+    "iso_time": "2025-12-05T02:49:19Z"
+  },
+  {
+    "timestamp": 1764902959.5548968,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider a sequence whose first four terms are 312, 1045, 2400, and 4557. Each term of the sequence is formed by multipl",
+      "correct_answer": "33672",
+      "seed_value": 1933367914
+    },
+    "iso_time": "2025-12-05T02:49:19Z"
+  },
+  {
+    "timestamp": 1764902959.554955,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "33672",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:49:19Z"
+  },
+  {
+    "timestamp": 1764903000.623486,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "33678",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:50:00Z"
+  },
+  {
+    "timestamp": 1764903053.428006,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "33666",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:50:53Z"
+  },
+  {
+    "timestamp": 1764903116.708243,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "33672",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T02:51:56Z"
+  },
+  {
+    "timestamp": 1764903138.7664142,
+    "seed_id": "2003-II-8::2003",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "33675",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T02:52:18Z"
+  },
+  {
+    "timestamp": 1764903174.149568,
+    "seed_id": "2003-II-8::2003",
+    "stage": "variant_success",
+    "message": "Accepted variant 2003-II-8::2003_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T02:52:54Z"
+  }
+]

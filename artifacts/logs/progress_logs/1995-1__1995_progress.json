@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1764030228.10566,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1995,
+      "question_preview": "Square $S_{1}$ is $1\\times 1.$ For $i\\ge 1,$ the lengths of the sides of square $S_{i+1}$ are half the lengths of the si",
+      "answer": "255",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-25T00:23:48Z"
+  },
+  {
+    "timestamp": 1764030228.105715,
+    "seed_id": "1995-1::1995",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-25T00:23:48Z"
+  },
+  {
+    "timestamp": 1764030228.105744,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Square $S_{1}$ is $1\\times 1.$ For $i\\ge 1,$ the lengths of the sides of square $S_{i+1}$ are half the lengths of the sides of square $S_{i},$ two adjacent sides of square $S_{i}$ are perpendicular bisectors of two adjacent sides of square $S_{i+1},$ and the other two sides of square $S_{i+1},$ are the perpendicular bisectors of two adjacent sides of square $S_{i+2}.$ The total area enclosed by at least one of $S_{1}, S_{2}, S_{3}, S_{4}, S_{5}$ can be written in the form $m/n,$ where $m$ and $n$ are relatively prime positive integers.  Find $m-n.$ AIME 1995 Problem 1.png",
+      "answer": "255",
+      "example_id": "1995-1::1995"
+    },
+    "iso_time": "2025-11-25T00:23:48Z"
+  },
+  {
+    "timestamp": 1764030322.771137,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-1::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 164694800
+    },
+    "iso_time": "2025-11-25T00:25:22Z"
+  },
+  {
+    "timestamp": 1764030323.5650601,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "initial_side_num": 2,
+        "initial_side_den": 1,
+        "scale_num": 5,
+        "scale_den": 7,
+        "num_squares": 7
+      }
+    },
+    "iso_time": "2025-11-25T00:25:23Z"
+  },
+  {
+    "timestamp": 1764030324.313815,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 222
+    },
+    "iso_time": "2025-11-25T00:25:24Z"
+  },
+  {
+    "timestamp": 1764030324.3139808,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, square S1 is axis-aligned and centered at the origin with side length 2/1. For i ≥ 1, the side length of S",
+      "correct_answer": "222",
+      "seed_value": 164694800
+    },
+    "iso_time": "2025-11-25T00:25:24Z"
+  },
+  {
+    "timestamp": 1764030324.314035,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "226",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T00:25:24Z"
+  },
+  {
+    "timestamp": 1764030425.705982,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "222",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T00:27:05Z"
+  },
+  {
+    "timestamp": 1764030492.665907,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "219",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T00:28:12Z"
+  },
+  {
+    "timestamp": 1764030621.621355,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "231",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T00:30:21Z"
+  },
+  {
+    "timestamp": 1764030684.579653,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "222",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T00:31:24Z"
+  },
+  {
+    "timestamp": 1764030809.2534862,
+    "seed_id": "1995-1::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-1::1995_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T00:33:29Z"
+  },
+  {
+    "timestamp": 1764030809.253612,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-1::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2075832404
+    },
+    "iso_time": "2025-11-25T00:33:29Z"
+  },
+  {
+    "timestamp": 1764030810.0468962,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "initial_side_num": 1,
+        "initial_side_den": 1,
+        "scale_num": 7,
+        "scale_den": 11,
+        "num_squares": 9
+      }
+    },
+    "iso_time": "2025-11-25T00:33:30Z"
+  },
+  {
+    "timestamp": 1764030810.771874,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 147
+    },
+    "iso_time": "2025-11-25T00:33:30Z"
+  },
+  {
+    "timestamp": 1764030810.772065,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, square S1 is axis-aligned and centered at the origin with side length 1/1. For i ≥ 1, the side length of S",
+      "correct_answer": "147",
+      "seed_value": 2075832404
+    },
+    "iso_time": "2025-11-25T00:33:30Z"
+  },
+  {
+    "timestamp": 1764030810.772114,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "144",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T00:33:30Z"
+  },
+  {
+    "timestamp": 1764030883.149326,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "147",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T00:34:43Z"
+  },
+  {
+    "timestamp": 1764030982.018385,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "140",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T00:36:22Z"
+  },
+  {
+    "timestamp": 1764031081.3211882,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "155",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T00:38:01Z"
+  },
+  {
+    "timestamp": 1764031150.3341131,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "147",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T00:39:10Z"
+  },
+  {
+    "timestamp": 1764031294.557111,
+    "seed_id": "1995-1::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-1::1995_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T00:41:34Z"
+  },
+  {
+    "timestamp": 1764031294.557328,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-1::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 527541192
+    },
+    "iso_time": "2025-11-25T00:41:34Z"
+  },
+  {
+    "timestamp": 1764031295.349777,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "initial_side_num": 1,
+        "initial_side_den": 2,
+        "scale_num": 7,
+        "scale_den": 11,
+        "num_squares": 7
+      }
+    },
+    "iso_time": "2025-11-25T00:41:35Z"
+  },
+  {
+    "timestamp": 1764031296.122672,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": -1305
+    },
+    "iso_time": "2025-11-25T00:41:36Z"
+  },
+  {
+    "timestamp": 1764031296.122842,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, square S1 is axis-aligned and centered at the origin with side length 1/2. For i ≥ 1, the side length of S",
+      "correct_answer": "-1305",
+      "seed_value": 527541192
+    },
+    "iso_time": "2025-11-25T00:41:36Z"
+  },
+  {
+    "timestamp": 1764031296.122899,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "-1297",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T00:41:36Z"
+  },
+  {
+    "timestamp": 1764031444.817281,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T00:44:04Z"
+  },
+  {
+    "timestamp": 1764031462.940508,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "-1305",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T00:44:22Z"
+  },
+  {
+    "timestamp": 1764031516.219811,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "-1299",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T00:45:16Z"
+  },
+  {
+    "timestamp": 1764032411.8853602,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "-1305",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T01:00:11Z"
+  },
+  {
+    "timestamp": 1764032480.1558452,
+    "seed_id": "1995-1::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-1::1995_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T01:01:20Z"
+  },
+  {
+    "timestamp": 1764032480.1560562,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-1::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 956054216
+    },
+    "iso_time": "2025-11-25T01:01:20Z"
+  },
+  {
+    "timestamp": 1764032480.955107,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "initial_side_num": 1,
+        "initial_side_den": 1,
+        "scale_num": 2,
+        "scale_den": 3,
+        "num_squares": 7
+      }
+    },
+    "iso_time": "2025-11-25T01:01:20Z"
+  },
+  {
+    "timestamp": 1764032481.7036412,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1
+    },
+    "iso_time": "2025-11-25T01:01:21Z"
+  },
+  {
+    "timestamp": 1764032481.703806,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, square S1 is axis-aligned and centered at the origin with side length 1/1. For i ≥ 1, the side length of S",
+      "correct_answer": "1",
+      "seed_value": 956054216
+    },
+    "iso_time": "2025-11-25T01:01:21Z"
+  },
+  {
+    "timestamp": 1764032481.703852,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T01:01:21Z"
+  },
+  {
+    "timestamp": 1764032550.096464,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:02:30Z"
+  },
+  {
+    "timestamp": 1764032628.028099,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:03:48Z"
+  },
+  {
+    "timestamp": 1764032687.273813,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T01:04:47Z"
+  },
+  {
+    "timestamp": 1764032761.5523891,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:06:01Z"
+  },
+  {
+    "timestamp": 1764032837.223783,
+    "seed_id": "1995-1::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-1::1995_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T01:07:17Z"
+  },
+  {
+    "timestamp": 1764032837.2239711,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1995-1::1995_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 15537844
+    },
+    "iso_time": "2025-11-25T01:07:17Z"
+  },
+  {
+    "timestamp": 1764032837.987205,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "initial_side_num": 2,
+        "initial_side_den": 1,
+        "scale_num": 8,
+        "scale_den": 9,
+        "num_squares": 6
+      }
+    },
+    "iso_time": "2025-11-25T01:07:17Z"
+  },
+  {
+    "timestamp": 1764032838.736203,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 145
+    },
+    "iso_time": "2025-11-25T01:07:18Z"
+  },
+  {
+    "timestamp": 1764032838.736379,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the plane, square S1 is axis-aligned and centered at the origin with side length 2/1. For i ≥ 1, the side length of S",
+      "correct_answer": "145",
+      "seed_value": 15537844
+    },
+    "iso_time": "2025-11-25T01:07:18Z"
+  },
+  {
+    "timestamp": 1764032838.736428,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "145",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T01:07:18Z"
+  },
+  {
+    "timestamp": 1764033880.891914,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "138",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:24:40Z"
+  },
+  {
+    "timestamp": 1764033940.746551,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "136",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:25:40Z"
+  },
+  {
+    "timestamp": 1764035027.388484,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "143",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-25T01:43:47Z"
+  },
+  {
+    "timestamp": 1764035104.847782,
+    "seed_id": "1995-1::1995",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "145",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-25T01:45:04Z"
+  },
+  {
+    "timestamp": 1764035184.2229,
+    "seed_id": "1995-1::1995",
+    "stage": "variant_success",
+    "message": "Accepted variant 1995-1::1995_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-25T01:46:24Z"
+  }
+]

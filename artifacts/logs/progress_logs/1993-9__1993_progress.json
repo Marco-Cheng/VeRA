@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1763932461.096072,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1993,
+      "question_preview": "Two thousand points are given on a circle. Label one of the points 1. From this point, count 2 points in the clockwise d",
+      "answer": "118",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-23T21:14:21Z"
+  },
+  {
+    "timestamp": 1763932461.096142,
+    "seed_id": "1993-9::1993",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-23T21:14:21Z"
+  },
+  {
+    "timestamp": 1763932461.096173,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Two thousand points are given on a circle. Label one of the points 1. From this point, count 2 points in the clockwise direction and label this point 2. From the point labeled 2, count 3 points in the clockwise direction and label this point 3. (See figure.) Continue this process until the labels $1,2,3\\dots,1993\\,$ are all used. Some of the points on the circle will have more than one label and some points will not have a label. What is the smallest integer that labels the same point as 1993? AIME 1993 Problem 9.png",
+      "answer": "118",
+      "example_id": "1993-9::1993"
+    },
+    "iso_time": "2025-11-23T21:14:21Z"
+  },
+  {
+    "timestamp": 1763932535.875565,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-9::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 492798274
+    },
+    "iso_time": "2025-11-23T21:15:35Z"
+  },
+  {
+    "timestamp": 1763932536.6697679,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_points": 23288,
+        "max_label": 24898,
+        "step_a": 10,
+        "step_b": 19442
+      }
+    },
+    "iso_time": "2025-11-23T21:15:36Z"
+  },
+  {
+    "timestamp": 1763932537.4188108,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1610
+    },
+    "iso_time": "2025-11-23T21:15:37Z"
+  },
+  {
+    "timestamp": 1763932537.418966,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a circle with 23288 marked points, you label points with the integers 1 through 24898 by the following rule: place th",
+      "correct_answer": "1610",
+      "seed_value": 492798274
+    },
+    "iso_time": "2025-11-23T21:15:37Z"
+  },
+  {
+    "timestamp": 1763932537.419011,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1610",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T21:15:37Z"
+  },
+  {
+    "timestamp": 1763932617.793559,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1616",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:16:57Z"
+  },
+  {
+    "timestamp": 1763932647.146101,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1606",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:17:27Z"
+  },
+  {
+    "timestamp": 1763932720.334198,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1610",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T21:18:40Z"
+  },
+  {
+    "timestamp": 1763932798.422266,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1604",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:19:58Z"
+  },
+  {
+    "timestamp": 1763932876.525082,
+    "seed_id": "1993-9::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-9::1993_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T21:21:16Z"
+  },
+  {
+    "timestamp": 1763932876.525287,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-9::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 709634129
+    },
+    "iso_time": "2025-11-23T21:21:16Z"
+  },
+  {
+    "timestamp": 1763932877.2906282,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_points": 49288,
+        "max_label": 49111,
+        "step_a": 22,
+        "step_b": 46974
+      }
+    },
+    "iso_time": "2025-11-23T21:21:17Z"
+  },
+  {
+    "timestamp": 1763932878.042273,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 5984
+    },
+    "iso_time": "2025-11-23T21:21:18Z"
+  },
+  {
+    "timestamp": 1763932878.0424168,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a circle with 49288 marked points, you label points with the integers 1 through 49111 by the following rule: place th",
+      "correct_answer": "5984",
+      "seed_value": 709634129
+    },
+    "iso_time": "2025-11-23T21:21:18Z"
+  },
+  {
+    "timestamp": 1763932878.042461,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5989",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:21:18Z"
+  },
+  {
+    "timestamp": 1763932948.5114439,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5990",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:22:28Z"
+  },
+  {
+    "timestamp": 1763933022.240183,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "5977",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:23:42Z"
+  },
+  {
+    "timestamp": 1763933098.842277,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5984",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T21:24:58Z"
+  },
+  {
+    "timestamp": 1763933174.594591,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "5984",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T21:26:14Z"
+  },
+  {
+    "timestamp": 1763933235.9308171,
+    "seed_id": "1993-9::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-9::1993_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T21:27:15Z"
+  },
+  {
+    "timestamp": 1763933235.930929,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-9::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 285649448
+    },
+    "iso_time": "2025-11-23T21:27:15Z"
+  },
+  {
+    "timestamp": 1763933236.9786072,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_points": 44084,
+        "max_label": 45451,
+        "step_a": 2,
+        "step_b": 20940
+      }
+    },
+    "iso_time": "2025-11-23T21:27:16Z"
+  },
+  {
+    "timestamp": 1763933237.9346392,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1367
+    },
+    "iso_time": "2025-11-23T21:27:17Z"
+  },
+  {
+    "timestamp": 1763933237.934848,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a circle with 44084 marked points, you label points with the integers 1 through 45451 by the following rule: place th",
+      "correct_answer": "1367",
+      "seed_value": 285649448
+    },
+    "iso_time": "2025-11-23T21:27:17Z"
+  },
+  {
+    "timestamp": 1763933237.934928,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1358",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:27:17Z"
+  },
+  {
+    "timestamp": 1763933292.374005,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1366",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:28:12Z"
+  },
+  {
+    "timestamp": 1763933342.571629,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1367",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T21:29:02Z"
+  },
+  {
+    "timestamp": 1763933409.419424,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1364",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:30:09Z"
+  },
+  {
+    "timestamp": 1763933473.334028,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1367",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T21:31:13Z"
+  },
+  {
+    "timestamp": 1763933531.27778,
+    "seed_id": "1993-9::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-9::1993_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T21:32:11Z"
+  },
+  {
+    "timestamp": 1763933531.277888,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-9::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 575645508
+    },
+    "iso_time": "2025-11-23T21:32:11Z"
+  },
+  {
+    "timestamp": 1763933532.246241,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_points": 73352,
+        "max_label": 73663,
+        "step_a": 6,
+        "step_b": 1270
+      }
+    },
+    "iso_time": "2025-11-23T21:32:12Z"
+  },
+  {
+    "timestamp": 1763933533.2342231,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 311
+    },
+    "iso_time": "2025-11-23T21:32:13Z"
+  },
+  {
+    "timestamp": 1763933533.234423,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a circle with 73352 marked points, you label points with the integers 1 through 73663 by the following rule: place th",
+      "correct_answer": "311",
+      "seed_value": 575645508
+    },
+    "iso_time": "2025-11-23T21:32:13Z"
+  },
+  {
+    "timestamp": 1763933533.234486,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "311",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T21:32:13Z"
+  },
+  {
+    "timestamp": 1763933579.867072,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "305",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:32:59Z"
+  },
+  {
+    "timestamp": 1763933798.1743019,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "319",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:36:38Z"
+  },
+  {
+    "timestamp": 1763933818.031927,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "307",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:36:58Z"
+  },
+  {
+    "timestamp": 1763933874.81626,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "311",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T21:37:54Z"
+  },
+  {
+    "timestamp": 1763933930.237013,
+    "seed_id": "1993-9::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-9::1993_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T21:38:50Z"
+  },
+  {
+    "timestamp": 1763933930.237194,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1993-9::1993_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1354943638
+    },
+    "iso_time": "2025-11-23T21:38:50Z"
+  },
+  {
+    "timestamp": 1763933930.999377,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_points": 7844,
+        "max_label": 8361,
+        "step_a": 24,
+        "step_b": 6584
+      }
+    },
+    "iso_time": "2025-11-23T21:38:50Z"
+  },
+  {
+    "timestamp": 1763933931.746922,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 517
+    },
+    "iso_time": "2025-11-23T21:38:51Z"
+  },
+  {
+    "timestamp": 1763933931.7470698,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a circle with 7844 marked points, you label points with the integers 1 through 8361 by the following rule: place the ",
+      "correct_answer": "517",
+      "seed_value": 1354943638
+    },
+    "iso_time": "2025-11-23T21:38:51Z"
+  },
+  {
+    "timestamp": 1763933931.747128,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "517",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T21:38:51Z"
+  },
+  {
+    "timestamp": 1763934008.976338,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "515",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:40:08Z"
+  },
+  {
+    "timestamp": 1763934055.1426299,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "526",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:40:55Z"
+  },
+  {
+    "timestamp": 1763934096.304019,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "525",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-23T21:41:36Z"
+  },
+  {
+    "timestamp": 1763934142.7056441,
+    "seed_id": "1993-9::1993",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "517",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-23T21:42:22Z"
+  },
+  {
+    "timestamp": 1763934181.626317,
+    "seed_id": "1993-9::1993",
+    "stage": "variant_success",
+    "message": "Accepted variant 1993-9::1993_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-23T21:43:01Z"
+  }
+]

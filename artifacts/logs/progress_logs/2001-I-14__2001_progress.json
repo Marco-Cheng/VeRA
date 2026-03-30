@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764432552.374687,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "A mail carrier delivers mail to the nineteen houses on the east side of Elm Street.  The carrier notices that no two adj",
+      "answer": "351",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T16:09:12Z"
+  },
+  {
+    "timestamp": 1764432552.37472,
+    "seed_id": "2001-I-14::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T16:09:12Z"
+  },
+  {
+    "timestamp": 1764432552.374735,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A mail carrier delivers mail to the nineteen houses on the east side of Elm Street.  The carrier notices that no two adjacent houses ever get mail on the same day, but that there are never more than two houses in a row that get no mail on the same day.  How many different patterns of mail delivery are possible?",
+      "answer": "351",
+      "example_id": "2001-I-14::2001"
+    },
+    "iso_time": "2025-11-29T16:09:12Z"
+  },
+  {
+    "timestamp": 1764432696.983795,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-14::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 123557520
+    },
+    "iso_time": "2025-11-29T16:11:36Z"
+  },
+  {
+    "timestamp": 1764432698.083837,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_houses": 41,
+        "max_no_mail_run": 6,
+        "deliver_count": 10
+      }
+    },
+    "iso_time": "2025-11-29T16:11:38Z"
+  },
+  {
+    "timestamp": 1764432699.080231,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 13913801
+    },
+    "iso_time": "2025-11-29T16:11:39Z"
+  },
+  {
+    "timestamp": 1764432699.080383,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a circular street with 41 labeled houses, the mail carrier plans a delivery pattern for a single day under these rule",
+      "correct_answer": "13913801",
+      "seed_value": 123557520
+    },
+    "iso_time": "2025-11-29T16:11:39Z"
+  },
+  {
+    "timestamp": 1764432699.080427,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "13913809",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:11:39Z"
+  },
+  {
+    "timestamp": 1764432754.4234262,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "13913802",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:12:34Z"
+  },
+  {
+    "timestamp": 1764432813.701728,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "13913801",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:13:33Z"
+  },
+  {
+    "timestamp": 1764432878.636096,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "13913801",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:14:38Z"
+  },
+  {
+    "timestamp": 1764432937.4845288,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13913794",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:15:37Z"
+  },
+  {
+    "timestamp": 1764432999.4679658,
+    "seed_id": "2001-I-14::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-14::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T16:16:39Z"
+  },
+  {
+    "timestamp": 1764432999.468107,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-14::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 965606701
+    },
+    "iso_time": "2025-11-29T16:16:39Z"
+  },
+  {
+    "timestamp": 1764433000.678967,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_houses": 29,
+        "max_no_mail_run": 6,
+        "deliver_count": 9
+      }
+    },
+    "iso_time": "2025-11-29T16:16:40Z"
+  },
+  {
+    "timestamp": 1764433001.8240352,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 206219
+    },
+    "iso_time": "2025-11-29T16:16:41Z"
+  },
+  {
+    "timestamp": 1764433001.82421,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a circular street with 29 labeled houses, the mail carrier plans a delivery pattern for a single day under these rule",
+      "correct_answer": "206219",
+      "seed_value": 965606701
+    },
+    "iso_time": "2025-11-29T16:16:41Z"
+  },
+  {
+    "timestamp": 1764433001.82426,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "206225",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:16:41Z"
+  },
+  {
+    "timestamp": 1764433054.1605399,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "206219",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:17:34Z"
+  },
+  {
+    "timestamp": 1764433093.696724,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "206216",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:18:13Z"
+  },
+  {
+    "timestamp": 1764433165.672512,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "206215",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:19:25Z"
+  },
+  {
+    "timestamp": 1764433215.8602722,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "206219",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:20:15Z"
+  },
+  {
+    "timestamp": 1764433263.364604,
+    "seed_id": "2001-I-14::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-14::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T16:21:03Z"
+  },
+  {
+    "timestamp": 1764433263.36479,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-14::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 600616098
+    },
+    "iso_time": "2025-11-29T16:21:03Z"
+  },
+  {
+    "timestamp": 1764433264.5034518,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_houses": 47,
+        "max_no_mail_run": 3,
+        "deliver_count": 21
+      }
+    },
+    "iso_time": "2025-11-29T16:21:04Z"
+  },
+  {
+    "timestamp": 1764433265.6072829,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 108053
+    },
+    "iso_time": "2025-11-29T16:21:05Z"
+  },
+  {
+    "timestamp": 1764433265.607445,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a circular street with 47 labeled houses, the mail carrier plans a delivery pattern for a single day under these rule",
+      "correct_answer": "108053",
+      "seed_value": 600616098
+    },
+    "iso_time": "2025-11-29T16:21:05Z"
+  },
+  {
+    "timestamp": 1764433265.60749,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "108062",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:21:05Z"
+  },
+  {
+    "timestamp": 1764433307.457705,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "108051",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:21:47Z"
+  },
+  {
+    "timestamp": 1764433363.827008,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "108053",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:22:43Z"
+  },
+  {
+    "timestamp": 1764433416.6464078,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "108060",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:23:36Z"
+  },
+  {
+    "timestamp": 1764433458.188992,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "108053",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:24:18Z"
+  },
+  {
+    "timestamp": 1764433975.834207,
+    "seed_id": "2001-I-14::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-14::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T16:32:55Z"
+  },
+  {
+    "timestamp": 1764433975.834334,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-14::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1067401772
+    },
+    "iso_time": "2025-11-29T16:32:55Z"
+  },
+  {
+    "timestamp": 1764433977.124537,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_houses": 22,
+        "max_no_mail_run": 2,
+        "deliver_count": 10
+      }
+    },
+    "iso_time": "2025-11-29T16:32:57Z"
+  },
+  {
+    "timestamp": 1764433978.252347,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 99
+    },
+    "iso_time": "2025-11-29T16:32:58Z"
+  },
+  {
+    "timestamp": 1764433978.252558,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a circular street with 22 labeled houses, the mail carrier plans a delivery pattern for a single day under these rule",
+      "correct_answer": "99",
+      "seed_value": 1067401772
+    },
+    "iso_time": "2025-11-29T16:32:58Z"
+  },
+  {
+    "timestamp": 1764433978.2526112,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "95",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:32:58Z"
+  },
+  {
+    "timestamp": 1764434033.677675,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "100",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:33:53Z"
+  },
+  {
+    "timestamp": 1764434084.013962,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "107",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:34:44Z"
+  },
+  {
+    "timestamp": 1764434148.958703,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "99",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:35:48Z"
+  },
+  {
+    "timestamp": 1764434215.665808,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "99",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:36:55Z"
+  },
+  {
+    "timestamp": 1764434258.591739,
+    "seed_id": "2001-I-14::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-14::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T16:37:38Z"
+  },
+  {
+    "timestamp": 1764434258.5918322,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-14::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 90704851
+    },
+    "iso_time": "2025-11-29T16:37:38Z"
+  },
+  {
+    "timestamp": 1764434259.9639318,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_houses": 41,
+        "max_no_mail_run": 2,
+        "deliver_count": 19
+      }
+    },
+    "iso_time": "2025-11-29T16:37:39Z"
+  },
+  {
+    "timestamp": 1764434261.0448508,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2091
+    },
+    "iso_time": "2025-11-29T16:37:41Z"
+  },
+  {
+    "timestamp": 1764434261.045006,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "On a circular street with 41 labeled houses, the mail carrier plans a delivery pattern for a single day under these rule",
+      "correct_answer": "2091",
+      "seed_value": 90704851
+    },
+    "iso_time": "2025-11-29T16:37:41Z"
+  },
+  {
+    "timestamp": 1764434261.0450509,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2098",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:37:41Z"
+  },
+  {
+    "timestamp": 1764434313.8103318,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2091",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:38:33Z"
+  },
+  {
+    "timestamp": 1764434364.0604942,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2086",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:39:24Z"
+  },
+  {
+    "timestamp": 1764434423.139912,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2100",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T16:40:23Z"
+  },
+  {
+    "timestamp": 1764434484.577031,
+    "seed_id": "2001-I-14::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2091",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T16:41:24Z"
+  },
+  {
+    "timestamp": 1764434515.501776,
+    "seed_id": "2001-I-14::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-14::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T16:41:55Z"
+  }
+]

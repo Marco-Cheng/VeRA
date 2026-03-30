@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764352356.7064588,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1999,
+      "question_preview": "A function $f$ is defined on the complex numbers by $f(z)=(a+bi)z,$ where $a_{}$ and $b_{}$ are positive numbers.  This ",
+      "answer": "259",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T17:52:36Z"
+  },
+  {
+    "timestamp": 1764352356.7065332,
+    "seed_id": "1999-9::1999",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T17:52:36Z"
+  },
+  {
+    "timestamp": 1764352356.706569,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A function $f$ is defined on the complex numbers by $f(z)=(a+bi)z,$ where $a_{}$ and $b_{}$ are positive numbers.  This function has the property that the image of each point in the complex plane is equidistant from that point and the origin.  Given that $|a+bi|=8$ and that $b^2=m/n,$ where $m_{}$ and $n_{}$ are relatively prime positive integers.  Find $m+n.$",
+      "answer": "259",
+      "example_id": "1999-9::1999"
+    },
+    "iso_time": "2025-11-28T17:52:36Z"
+  },
+  {
+    "timestamp": 1764352475.1945658,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-9::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1424075759
+    },
+    "iso_time": "2025-11-28T17:54:35Z"
+  },
+  {
+    "timestamp": 1764352476.453544,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "modulus": 6,
+        "p": 8,
+        "q": 9
+      }
+    },
+    "iso_time": "2025-11-28T17:54:36Z"
+  },
+  {
+    "timestamp": 1764352477.520517,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 6059
+    },
+    "iso_time": "2025-11-28T17:54:37Z"
+  },
+  {
+    "timestamp": 1764352477.5206609,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let f be a complex linear map f(z) = (a+bi)z with real a > 0 and b > 0. There exists a fixed rational constant k = 8/9 >",
+      "correct_answer": "6059",
+      "seed_value": 1424075759
+    },
+    "iso_time": "2025-11-28T17:54:37Z"
+  },
+  {
+    "timestamp": 1764352477.520702,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "6059",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:54:37Z"
+  },
+  {
+    "timestamp": 1764352490.693147,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "6063",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:54:50Z"
+  },
+  {
+    "timestamp": 1764352509.229939,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "6054",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:55:09Z"
+  },
+  {
+    "timestamp": 1764352524.238539,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "6059",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:55:24Z"
+  },
+  {
+    "timestamp": 1764352538.9833899,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "6068",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:55:38Z"
+  },
+  {
+    "timestamp": 1764352561.206109,
+    "seed_id": "1999-9::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-9::1999_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:56:01Z"
+  },
+  {
+    "timestamp": 1764352561.206224,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-9::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1655905846
+    },
+    "iso_time": "2025-11-28T17:56:01Z"
+  },
+  {
+    "timestamp": 1764352562.378183,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "modulus": 8,
+        "p": 9,
+        "q": 10
+      }
+    },
+    "iso_time": "2025-11-28T17:56:02Z"
+  },
+  {
+    "timestamp": 1764352563.438834,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 54259
+    },
+    "iso_time": "2025-11-28T17:56:03Z"
+  },
+  {
+    "timestamp": 1764352563.439008,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let f be a complex linear map f(z) = (a+bi)z with real a > 0 and b > 0. There exists a fixed rational constant k = 9/10 ",
+      "correct_answer": "54259",
+      "seed_value": 1655905846
+    },
+    "iso_time": "2025-11-28T17:56:03Z"
+  },
+  {
+    "timestamp": 1764352563.439053,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "54255",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:56:03Z"
+  },
+  {
+    "timestamp": 1764352577.185601,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "54258",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:56:17Z"
+  },
+  {
+    "timestamp": 1764352598.683968,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "54259",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:56:38Z"
+  },
+  {
+    "timestamp": 1764352614.854193,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "54259",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:56:54Z"
+  },
+  {
+    "timestamp": 1764352626.533099,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "54257",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:57:06Z"
+  },
+  {
+    "timestamp": 1764352643.594773,
+    "seed_id": "1999-9::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-9::1999_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T17:57:23Z"
+  },
+  {
+    "timestamp": 1764352643.594943,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-9::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1595007590
+    },
+    "iso_time": "2025-11-28T17:57:23Z"
+  },
+  {
+    "timestamp": 1764352644.876619,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "modulus": 9,
+        "p": 12,
+        "q": 13
+      }
+    },
+    "iso_time": "2025-11-28T17:57:24Z"
+  },
+  {
+    "timestamp": 1764352645.982293,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1138593
+    },
+    "iso_time": "2025-11-28T17:57:25Z"
+  },
+  {
+    "timestamp": 1764352645.982441,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let f be a complex linear map f(z) = (a+bi)z with real a > 0 and b > 0. There exists a fixed rational constant k = 12/13",
+      "correct_answer": "1138593",
+      "seed_value": 1595007590
+    },
+    "iso_time": "2025-11-28T17:57:25Z"
+  },
+  {
+    "timestamp": 1764352645.982483,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1138594",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:57:25Z"
+  },
+  {
+    "timestamp": 1764352675.7423518,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1138601",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:57:55Z"
+  },
+  {
+    "timestamp": 1764352743.8875608,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1138593",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T17:59:03Z"
+  },
+  {
+    "timestamp": 1764352760.640521,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1138597",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T17:59:20Z"
+  },
+  {
+    "timestamp": 1764352803.803968,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1138593",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:00:03Z"
+  },
+  {
+    "timestamp": 1764352824.587048,
+    "seed_id": "1999-9::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-9::1999_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T18:00:24Z"
+  },
+  {
+    "timestamp": 1764352824.5871391,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-9::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1284542738
+    },
+    "iso_time": "2025-11-28T18:00:24Z"
+  },
+  {
+    "timestamp": 1764352825.7358232,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "modulus": 6,
+        "p": 10,
+        "q": 11
+      }
+    },
+    "iso_time": "2025-11-28T18:00:25Z"
+  },
+  {
+    "timestamp": 1764352826.7932942,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1397739
+    },
+    "iso_time": "2025-11-28T18:00:26Z"
+  },
+  {
+    "timestamp": 1764352826.793447,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let f be a complex linear map f(z) = (a+bi)z with real a > 0 and b > 0. There exists a fixed rational constant k = 10/11",
+      "correct_answer": "1397739",
+      "seed_value": 1284542738
+    },
+    "iso_time": "2025-11-28T18:00:26Z"
+  },
+  {
+    "timestamp": 1764352826.793495,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1397739",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:00:26Z"
+  },
+  {
+    "timestamp": 1764352851.697512,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1397741",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:00:51Z"
+  },
+  {
+    "timestamp": 1764352870.970825,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1397739",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:01:10Z"
+  },
+  {
+    "timestamp": 1764352886.9461539,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1397744",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:01:26Z"
+  },
+  {
+    "timestamp": 1764352910.289662,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1397732",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:01:50Z"
+  },
+  {
+    "timestamp": 1764352932.611003,
+    "seed_id": "1999-9::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-9::1999_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T18:02:12Z"
+  },
+  {
+    "timestamp": 1764352932.611105,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-9::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1283355590
+    },
+    "iso_time": "2025-11-28T18:02:12Z"
+  },
+  {
+    "timestamp": 1764352933.8931,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "modulus": 7,
+        "p": 12,
+        "q": 13
+      }
+    },
+    "iso_time": "2025-11-28T18:02:13Z"
+  },
+  {
+    "timestamp": 1764352934.93536,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 942241
+    },
+    "iso_time": "2025-11-28T18:02:14Z"
+  },
+  {
+    "timestamp": 1764352934.93552,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let f be a complex linear map f(z) = (a+bi)z with real a > 0 and b > 0. There exists a fixed rational constant k = 12/13",
+      "correct_answer": "942241",
+      "seed_value": 1283355590
+    },
+    "iso_time": "2025-11-28T18:02:14Z"
+  },
+  {
+    "timestamp": 1764352934.9355671,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "942241",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:02:14Z"
+  },
+  {
+    "timestamp": 1764352951.354256,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "942233",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:02:31Z"
+  },
+  {
+    "timestamp": 1764352973.9848619,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "942237",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:02:53Z"
+  },
+  {
+    "timestamp": 1764352994.66907,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "942240",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T18:03:14Z"
+  },
+  {
+    "timestamp": 1764353028.050215,
+    "seed_id": "1999-9::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "942241",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T18:03:48Z"
+  },
+  {
+    "timestamp": 1764353049.875663,
+    "seed_id": "1999-9::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-9::1999_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T18:04:09Z"
+  }
+]

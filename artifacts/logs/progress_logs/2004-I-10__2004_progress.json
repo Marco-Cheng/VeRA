@@ -1,0 +1,2718 @@
+[
+  {
+    "timestamp": 1764906259.482079,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "A circle of radius 1 is randomly placed in a 15-by-36 rectangle $ABCD$ so that the circle lies completely within the rec",
+      "answer": "817",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-05T03:44:19Z"
+  },
+  {
+    "timestamp": 1764906259.482133,
+    "seed_id": "2004-I-10::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-05T03:44:19Z"
+  },
+  {
+    "timestamp": 1764906259.482155,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A circle of radius 1 is randomly placed in a 15-by-36 rectangle $ABCD$ so that the circle lies completely within the rectangle. Given that the probability that the circle will not touch diagonal $AC$ is $m/n,$ where $m$ and $n$ are relatively prime positive integers, find $m + n.$",
+      "answer": "817",
+      "example_id": "2004-I-10::2004"
+    },
+    "iso_time": "2025-12-05T03:44:19Z"
+  },
+  {
+    "timestamp": 1764906756.432746,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1450467280
+    },
+    "iso_time": "2025-12-05T03:52:36Z"
+  },
+  {
+    "timestamp": 1764906757.7665339,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 42,
+        "height": 40,
+        "radius": 5
+      }
+    },
+    "iso_time": "2025-12-05T03:52:37Z"
+  },
+  {
+    "timestamp": 1764906758.863787,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T03:52:38Z"
+  },
+  {
+    "timestamp": 1764906759.980155,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "width": 189,
+        "height": 48,
+        "radius": 11
+      }
+    },
+    "iso_time": "2025-12-05T03:52:39Z"
+  },
+  {
+    "timestamp": 1764906761.230763,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T03:52:41Z"
+  },
+  {
+    "timestamp": 1764906762.33374,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "width": 45,
+        "height": 24,
+        "radius": 2
+      }
+    },
+    "iso_time": "2025-12-05T03:52:42Z"
+  },
+  {
+    "timestamp": 1764906763.3945432,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": true,
+      "answer": 237113
+    },
+    "iso_time": "2025-12-05T03:52:43Z"
+  },
+  {
+    "timestamp": 1764906763.3946722,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let ABCD be an axis-aligned rectangle with side lengths 45 and 24, where the diagonal length sqrt(width^2 + height^2) is",
+      "correct_answer": "237113",
+      "seed_value": 1450467280
+    },
+    "iso_time": "2025-12-05T03:52:43Z"
+  },
+  {
+    "timestamp": 1764906763.394736,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "237108",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T03:52:43Z"
+  },
+  {
+    "timestamp": 1764906883.1013272,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "237113",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T03:54:43Z"
+  },
+  {
+    "timestamp": 1764907343.680328,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "237106",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T04:02:23Z"
+  },
+  {
+    "timestamp": 1764907510.652054,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "237110",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T04:05:10Z"
+  },
+  {
+    "timestamp": 1764907695.635641,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "237113",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T04:08:15Z"
+  },
+  {
+    "timestamp": 1764908241.769558,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T04:17:21Z"
+  },
+  {
+    "timestamp": 1764908241.769835,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 2096922284
+    },
+    "iso_time": "2025-12-05T04:17:21Z"
+  },
+  {
+    "timestamp": 1764908243.1235058,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 135,
+        "height": 84,
+        "radius": 18
+      }
+    },
+    "iso_time": "2025-12-05T04:17:23Z"
+  },
+  {
+    "timestamp": 1764908244.3659232,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:17:24Z"
+  },
+  {
+    "timestamp": 1764908245.4708622,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "width": 42,
+        "height": 40,
+        "radius": 1
+      }
+    },
+    "iso_time": "2025-12-05T04:17:25Z"
+  },
+  {
+    "timestamp": 1764908246.716867,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": true,
+      "answer": 15849989
+    },
+    "iso_time": "2025-12-05T04:17:26Z"
+  },
+  {
+    "timestamp": 1764908246.717033,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let ABCD be an axis-aligned rectangle with side lengths 42 and 40, where the diagonal length sqrt(width^2 + height^2) is",
+      "correct_answer": "15849989",
+      "seed_value": 2096922284
+    },
+    "iso_time": "2025-12-05T04:17:26Z"
+  },
+  {
+    "timestamp": 1764908246.7171001,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "15849989",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T04:17:26Z"
+  },
+  {
+    "timestamp": 1764908331.710144,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "15849997",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T04:18:51Z"
+  },
+  {
+    "timestamp": 1764908379.4591758,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "15849989",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T04:19:39Z"
+  },
+  {
+    "timestamp": 1764908532.8524039,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "15849998",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T04:22:12Z"
+  },
+  {
+    "timestamp": 1764908666.278529,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "15849980",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T04:24:26Z"
+  },
+  {
+    "timestamp": 1764908741.901532,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T04:25:41Z"
+  },
+  {
+    "timestamp": 1764908741.901819,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 331820135
+    },
+    "iso_time": "2025-12-05T04:25:41Z"
+  },
+  {
+    "timestamp": 1764908743.108681,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 168,
+        "height": 99,
+        "radius": 20
+      }
+    },
+    "iso_time": "2025-12-05T04:25:43Z"
+  },
+  {
+    "timestamp": 1764908744.2202199,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:25:44Z"
+  },
+  {
+    "timestamp": 1764908745.4548008,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "width": 126,
+        "height": 32,
+        "radius": 7
+      }
+    },
+    "iso_time": "2025-12-05T04:25:45Z"
+  },
+  {
+    "timestamp": 1764908746.6115892,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:25:46Z"
+  },
+  {
+    "timestamp": 1764908747.761259,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "width": 35,
+        "height": 12,
+        "radius": 3
+      }
+    },
+    "iso_time": "2025-12-05T04:25:47Z"
+  },
+  {
+    "timestamp": 1764908748.954548,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:25:48Z"
+  },
+  {
+    "timestamp": 1764908750.032866,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "width": 60,
+        "height": 11,
+        "radius": 2
+      }
+    },
+    "iso_time": "2025-12-05T04:25:50Z"
+  },
+  {
+    "timestamp": 1764908751.279268,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:25:51Z"
+  },
+  {
+    "timestamp": 1764908752.512843,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "width": 24,
+        "height": 7,
+        "radius": 2
+      }
+    },
+    "iso_time": "2025-12-05T04:25:52Z"
+  },
+  {
+    "timestamp": 1764908753.578781,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:25:53Z"
+  },
+  {
+    "timestamp": 1764908753.5788748,
+    "seed_id": "2004-I-10::2004",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.677065134048462
+    },
+    "iso_time": "2025-12-05T04:25:53Z"
+  },
+  {
+    "timestamp": 1764908753.578954,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1097126557
+    },
+    "iso_time": "2025-12-05T04:25:53Z"
+  },
+  {
+    "timestamp": 1764908754.690921,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 70,
+        "height": 24,
+        "radius": 3
+      }
+    },
+    "iso_time": "2025-12-05T04:25:54Z"
+  },
+  {
+    "timestamp": 1764908755.847361,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:25:55Z"
+  },
+  {
+    "timestamp": 1764908756.959466,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "width": 105,
+        "height": 36,
+        "radius": 2
+      }
+    },
+    "iso_time": "2025-12-05T04:25:56Z"
+  },
+  {
+    "timestamp": 1764908758.04299,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": true,
+      "answer": 9315013
+    },
+    "iso_time": "2025-12-05T04:25:58Z"
+  },
+  {
+    "timestamp": 1764908758.043126,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let ABCD be an axis-aligned rectangle with side lengths 105 and 36, where the diagonal length sqrt(width^2 + height^2) i",
+      "correct_answer": "9315013",
+      "seed_value": 1097126557
+    },
+    "iso_time": "2025-12-05T04:25:58Z"
+  },
+  {
+    "timestamp": 1764908758.043199,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "9315013",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T04:25:58Z"
+  },
+  {
+    "timestamp": 1764908832.193556,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "9315022",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T04:27:12Z"
+  },
+  {
+    "timestamp": 1764909398.626556,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "9315013",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T04:36:38Z"
+  },
+  {
+    "timestamp": 1764909765.2584808,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "9315016",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T04:42:45Z"
+  },
+  {
+    "timestamp": 1764910049.311081,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "9315008",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T04:47:29Z"
+  },
+  {
+    "timestamp": 1764910541.244857,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T04:55:41Z"
+  },
+  {
+    "timestamp": 1764910541.245173,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1540092297
+    },
+    "iso_time": "2025-12-05T04:55:41Z"
+  },
+  {
+    "timestamp": 1764910542.619757,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 45,
+        "height": 28,
+        "radius": 7
+      }
+    },
+    "iso_time": "2025-12-05T04:55:42Z"
+  },
+  {
+    "timestamp": 1764910543.692634,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:55:43Z"
+  },
+  {
+    "timestamp": 1764910544.915466,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "width": 120,
+        "height": 27,
+        "radius": 8
+      }
+    },
+    "iso_time": "2025-12-05T04:55:44Z"
+  },
+  {
+    "timestamp": 1764910546.0138931,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:55:46Z"
+  },
+  {
+    "timestamp": 1764910547.218802,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "width": 105,
+        "height": 36,
+        "radius": 11
+      }
+    },
+    "iso_time": "2025-12-05T04:55:47Z"
+  },
+  {
+    "timestamp": 1764910548.321453,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:55:48Z"
+  },
+  {
+    "timestamp": 1764910549.4183738,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "width": 15,
+        "height": 8,
+        "radius": 1
+      }
+    },
+    "iso_time": "2025-12-05T04:55:49Z"
+  },
+  {
+    "timestamp": 1764910550.6734002,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:55:50Z"
+  },
+  {
+    "timestamp": 1764910551.968211,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "width": 120,
+        "height": 27,
+        "radius": 7
+      }
+    },
+    "iso_time": "2025-12-05T04:55:51Z"
+  },
+  {
+    "timestamp": 1764910553.139046,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-05T04:55:53Z"
+  },
+  {
+    "timestamp": 1764910553.139141,
+    "seed_id": "2004-I-10::2004",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.893975257873535
+    },
+    "iso_time": "2025-12-05T04:55:53Z"
+  },
+  {
+    "timestamp": 1764910553.139223,
+    "seed_id": "2004-I-10::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-05T04:55:53Z"
+  },
+  {
+    "timestamp": 1764910553.1392388,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Sample 3 failed to produce valid assignment.",
+      "question": "A circle of radius 1 is randomly placed in a 15-by-36 rectangle $ABCD$ so that the circle lies completely within the rectangle. Given that the probability that the circle will not touch diagonal $AC$ is $m/n,$ where $m$ and $n$ are relatively prime positive integers, find $m + n.$",
+      "answer": "817",
+      "example_id": "2004-I-10::2004"
+    },
+    "iso_time": "2025-12-05T04:55:53Z"
+  },
+  {
+    "timestamp": 1764910927.500253,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 2037925581
+    },
+    "iso_time": "2025-12-05T05:02:07Z"
+  },
+  {
+    "timestamp": 1764910928.6133592,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 14,
+        "height": 7,
+        "radius": 1
+      }
+    },
+    "iso_time": "2025-12-05T05:02:08Z"
+  },
+  {
+    "timestamp": 1764910929.7257411,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 34597
+    },
+    "iso_time": "2025-12-05T05:02:09Z"
+  },
+  {
+    "timestamp": 1764910929.7258902,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A circle of radius 1 is placed uniformly at random inside a 14-by-7 rectangle so that the circle lies completely within ",
+      "correct_answer": "34597",
+      "seed_value": 2037925581
+    },
+    "iso_time": "2025-12-05T05:02:09Z"
+  },
+  {
+    "timestamp": 1764910929.725954,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "34603",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T05:02:09Z"
+  },
+  {
+    "timestamp": 1764911354.209056,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "34595",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T05:09:14Z"
+  },
+  {
+    "timestamp": 1764911673.807967,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "34597",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T05:14:33Z"
+  },
+  {
+    "timestamp": 1764912226.5165792,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "34597",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T05:23:46Z"
+  },
+  {
+    "timestamp": 1764912490.755921,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "34588",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T05:28:10Z"
+  },
+  {
+    "timestamp": 1764912754.739684,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T05:32:34Z"
+  },
+  {
+    "timestamp": 1764912754.739938,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 306757137
+    },
+    "iso_time": "2025-12-05T05:32:34Z"
+  },
+  {
+    "timestamp": 1764912756.077906,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 428,
+        "height": 37,
+        "radius": 4
+      }
+    },
+    "iso_time": "2025-12-05T05:32:36Z"
+  },
+  {
+    "timestamp": 1764912757.14693,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7659577172
+    },
+    "iso_time": "2025-12-05T05:32:37Z"
+  },
+  {
+    "timestamp": 1764912757.147077,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A circle of radius 4 is placed uniformly at random inside a 428-by-37 rectangle so that the circle lies completely withi",
+      "correct_answer": "7659577172",
+      "seed_value": 306757137
+    },
+    "iso_time": "2025-12-05T05:32:37Z"
+  },
+  {
+    "timestamp": 1764912757.147139,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7659577170",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T05:32:37Z"
+  },
+  {
+    "timestamp": 1764913216.670419,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7659577172",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T05:40:16Z"
+  },
+  {
+    "timestamp": 1764913374.178049,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7659577176",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T05:42:54Z"
+  },
+  {
+    "timestamp": 1764913531.756812,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7659577165",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T05:45:31Z"
+  },
+  {
+    "timestamp": 1764914136.108332,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7659577172",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T05:55:36Z"
+  },
+  {
+    "timestamp": 1764914946.1292439,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T06:09:06Z"
+  },
+  {
+    "timestamp": 1764914946.129698,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 1332281730
+    },
+    "iso_time": "2025-12-05T06:09:06Z"
+  },
+  {
+    "timestamp": 1764914947.515131,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 23,
+        "height": 22,
+        "radius": 1
+      }
+    },
+    "iso_time": "2025-12-05T06:09:07Z"
+  },
+  {
+    "timestamp": 1764914948.727712,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4434389
+    },
+    "iso_time": "2025-12-05T06:09:08Z"
+  },
+  {
+    "timestamp": 1764914948.7278972,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A circle of radius 1 is placed uniformly at random inside a 23-by-22 rectangle so that the circle lies completely within",
+      "correct_answer": "4434389",
+      "seed_value": 1332281730
+    },
+    "iso_time": "2025-12-05T06:09:08Z"
+  },
+  {
+    "timestamp": 1764914948.727974,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4434389",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T06:09:08Z"
+  },
+  {
+    "timestamp": 1764915667.5318248,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4434389",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T06:21:07Z"
+  },
+  {
+    "timestamp": 1764916031.68366,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4434382",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T06:27:11Z"
+  },
+  {
+    "timestamp": 1764916124.8865018,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4434396",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T06:28:44Z"
+  },
+  {
+    "timestamp": 1764916737.124971,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4434388",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T06:38:57Z"
+  },
+  {
+    "timestamp": 1764917052.199158,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T06:44:12Z"
+  },
+  {
+    "timestamp": 1764917052.199629,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 1838778981
+    },
+    "iso_time": "2025-12-05T06:44:12Z"
+  },
+  {
+    "timestamp": 1764917053.5569081,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 197,
+        "height": 56,
+        "radius": 4
+      }
+    },
+    "iso_time": "2025-12-05T06:44:13Z"
+  },
+  {
+    "timestamp": 1764917054.68172,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 34376273
+    },
+    "iso_time": "2025-12-05T06:44:14Z"
+  },
+  {
+    "timestamp": 1764917054.6818602,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A circle of radius 4 is placed uniformly at random inside a 197-by-56 rectangle so that the circle lies completely withi",
+      "correct_answer": "34376273",
+      "seed_value": 1838778981
+    },
+    "iso_time": "2025-12-05T06:44:14Z"
+  },
+  {
+    "timestamp": 1764917054.681925,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "34376273",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T06:44:14Z"
+  },
+  {
+    "timestamp": 1764917366.975542,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "34376279",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T06:49:26Z"
+  },
+  {
+    "timestamp": 1764917794.886956,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "34376278",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T06:56:34Z"
+  },
+  {
+    "timestamp": 1764917882.641463,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "34376273",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T06:58:02Z"
+  },
+  {
+    "timestamp": 1764918810.082734,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "34376264",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T07:13:30Z"
+  },
+  {
+    "timestamp": 1764919291.247336,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T07:21:31Z"
+  },
+  {
+    "timestamp": 1764919291.247644,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 1475741899
+    },
+    "iso_time": "2025-12-05T07:21:31Z"
+  },
+  {
+    "timestamp": 1764919292.702719,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 348,
+        "height": 250,
+        "radius": 21
+      }
+    },
+    "iso_time": "2025-12-05T07:21:32Z"
+  },
+  {
+    "timestamp": 1764919293.902573,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16401991577
+    },
+    "iso_time": "2025-12-05T07:21:33Z"
+  },
+  {
+    "timestamp": 1764919293.9027479,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A circle of radius 21 is placed uniformly at random inside a 348-by-250 rectangle so that the circle lies completely wit",
+      "correct_answer": "16401991577",
+      "seed_value": 1475741899
+    },
+    "iso_time": "2025-12-05T07:21:33Z"
+  },
+  {
+    "timestamp": 1764919293.902816,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16401991568",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T07:21:33Z"
+  },
+  {
+    "timestamp": 1764919512.038563,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "16401991577",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T07:25:12Z"
+  },
+  {
+    "timestamp": 1764920103.333557,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16401991585",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T07:35:03Z"
+  },
+  {
+    "timestamp": 1764920803.119614,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16401991579",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T07:46:43Z"
+  },
+  {
+    "timestamp": 1764921003.3757608,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "16401991577",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T07:50:03Z"
+  },
+  {
+    "timestamp": 1764921341.408129,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T07:55:41Z"
+  },
+  {
+    "timestamp": 1764921341.408382,
+    "seed_id": "2004-I-10::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-05T07:55:41Z"
+  },
+  {
+    "timestamp": 1764921341.408503,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "A circle of radius 1 is randomly placed in a 15-by-36 rectangle $ABCD$ so that the circle lies completely within the rectangle. Given that the probability that the circle will not touch diagonal $AC$ is $m/n,$ where $m$ and $n$ are relatively prime positive integers, find $m + n.$",
+      "answer": "817",
+      "example_id": "2004-I-10::2004"
+    },
+    "iso_time": "2025-12-05T07:55:41Z"
+  },
+  {
+    "timestamp": 1764921809.0170372,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 916137435
+    },
+    "iso_time": "2025-12-05T08:03:29Z"
+  },
+  {
+    "timestamp": 1764921810.391968,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 92,
+        "height": 174,
+        "radius": 7
+      }
+    },
+    "iso_time": "2025-12-05T08:03:30Z"
+  },
+  {
+    "timestamp": 1764921811.445706,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 31550689
+    },
+    "iso_time": "2025-12-05T08:03:31Z"
+  },
+  {
+    "timestamp": 1764921811.4458601,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a rectangular board ABCD of dimensions 92 by 174, a circle of radius 7 is randomly placed so that the entire circle l",
+      "correct_answer": "31550689",
+      "seed_value": 916137435
+    },
+    "iso_time": "2025-12-05T08:03:31Z"
+  },
+  {
+    "timestamp": 1764921811.4459252,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "31550695",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T08:03:31Z"
+  },
+  {
+    "timestamp": 1764922428.713123,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "31550685",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T08:13:48Z"
+  },
+  {
+    "timestamp": 1764923479.248349,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "31550689",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T08:31:19Z"
+  },
+  {
+    "timestamp": 1764923657.526277,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "31550688",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T08:34:17Z"
+  },
+  {
+    "timestamp": 1764923978.764354,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "31550689",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T08:39:38Z"
+  },
+  {
+    "timestamp": 1764924467.089638,
+    "seed_id": "2004-I-10::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-10::2004_prompt03-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-05T08:47:47Z"
+  },
+  {
+    "timestamp": 1764924467.08973,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1855187332
+    },
+    "iso_time": "2025-12-05T08:47:47Z"
+  },
+  {
+    "timestamp": 1764924468.44352,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 49,
+        "height": 32,
+        "radius": 2
+      }
+    },
+    "iso_time": "2025-12-05T08:47:48Z"
+  },
+  {
+    "timestamp": 1764924469.460553,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 332929
+    },
+    "iso_time": "2025-12-05T08:47:49Z"
+  },
+  {
+    "timestamp": 1764924469.460701,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a rectangular board ABCD of dimensions 49 by 32, a circle of radius 2 is randomly placed so that the entire circle li",
+      "correct_answer": "332929",
+      "seed_value": 1855187332
+    },
+    "iso_time": "2025-12-05T08:47:49Z"
+  },
+  {
+    "timestamp": 1764924469.460756,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "332929",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T08:47:49Z"
+  },
+  {
+    "timestamp": 1764925066.646192,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "332921",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T08:57:46Z"
+  },
+  {
+    "timestamp": 1764925797.280088,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "332929",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T09:09:57Z"
+  },
+  {
+    "timestamp": 1764926519.728843,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "332922",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T09:21:59Z"
+  },
+  {
+    "timestamp": 1764927240.02558,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "332930",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T09:34:00Z"
+  },
+  {
+    "timestamp": 1764927490.060719,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T09:38:10Z"
+  },
+  {
+    "timestamp": 1764927490.060967,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 377624765
+    },
+    "iso_time": "2025-12-05T09:38:10Z"
+  },
+  {
+    "timestamp": 1764927491.443125,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 81,
+        "height": 678,
+        "radius": 9
+      }
+    },
+    "iso_time": "2025-12-05T09:38:11Z"
+  },
+  {
+    "timestamp": 1764927492.5650718,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1739761
+    },
+    "iso_time": "2025-12-05T09:38:12Z"
+  },
+  {
+    "timestamp": 1764927492.5652218,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a rectangular board ABCD of dimensions 81 by 678, a circle of radius 9 is randomly placed so that the entire circle l",
+      "correct_answer": "1739761",
+      "seed_value": 377624765
+    },
+    "iso_time": "2025-12-05T09:38:12Z"
+  },
+  {
+    "timestamp": 1764927492.565283,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1739761",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T09:38:12Z"
+  },
+  {
+    "timestamp": 1764928410.8419032,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1739761",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T09:53:30Z"
+  },
+  {
+    "timestamp": 1764928566.2483761,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1739767",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T09:56:06Z"
+  },
+  {
+    "timestamp": 1764929002.1019452,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1739755",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T10:03:22Z"
+  },
+  {
+    "timestamp": 1764929985.819515,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1739758",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T10:19:45Z"
+  },
+  {
+    "timestamp": 1764930416.957563,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T10:26:56Z"
+  },
+  {
+    "timestamp": 1764930416.9578629,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 59625550
+    },
+    "iso_time": "2025-12-05T10:26:56Z"
+  },
+  {
+    "timestamp": 1764930418.313789,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 68,
+        "height": 229,
+        "radius": 4
+      }
+    },
+    "iso_time": "2025-12-05T10:26:58Z"
+  },
+  {
+    "timestamp": 1764930419.550546,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 19046792
+    },
+    "iso_time": "2025-12-05T10:26:59Z"
+  },
+  {
+    "timestamp": 1764930419.550716,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a rectangular board ABCD of dimensions 68 by 229, a circle of radius 4 is randomly placed so that the entire circle l",
+      "correct_answer": "19046792",
+      "seed_value": 59625550
+    },
+    "iso_time": "2025-12-05T10:26:59Z"
+  },
+  {
+    "timestamp": 1764930419.550789,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "19046801",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T10:26:59Z"
+  },
+  {
+    "timestamp": 1764930534.413845,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "19046797",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T10:28:54Z"
+  },
+  {
+    "timestamp": 1764931098.984308,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "19046783",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T10:38:18Z"
+  },
+  {
+    "timestamp": 1764931476.443976,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "19046792",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T10:44:36Z"
+  },
+  {
+    "timestamp": 1764931876.112575,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "19046792",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T10:51:16Z"
+  },
+  {
+    "timestamp": 1764932708.712031,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T11:05:08Z"
+  },
+  {
+    "timestamp": 1764932708.712214,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 104423321
+    },
+    "iso_time": "2025-12-05T11:05:08Z"
+  },
+  {
+    "timestamp": 1764932710.071311,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "width": 374,
+        "height": 328,
+        "radius": 31
+      }
+    },
+    "iso_time": "2025-12-05T11:05:10Z"
+  },
+  {
+    "timestamp": 1764932711.092538,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1234889881
+    },
+    "iso_time": "2025-12-05T11:05:11Z"
+  },
+  {
+    "timestamp": 1764932711.09269,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a rectangular board ABCD of dimensions 374 by 328, a circle of radius 31 is randomly placed so that the entire circle",
+      "correct_answer": "1234889881",
+      "seed_value": 104423321
+    },
+    "iso_time": "2025-12-05T11:05:11Z"
+  },
+  {
+    "timestamp": 1764932711.092756,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1234889881",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T11:05:11Z"
+  },
+  {
+    "timestamp": 1764933169.382468,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1234889881",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T11:12:49Z"
+  },
+  {
+    "timestamp": 1764933613.9066591,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1234889873",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T11:20:13Z"
+  },
+  {
+    "timestamp": 1764933698.7363389,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1234889879",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T11:21:38Z"
+  },
+  {
+    "timestamp": 1764934113.928619,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1234889885",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T11:28:33Z"
+  },
+  {
+    "timestamp": 1764934533.056567,
+    "seed_id": "2004-I-10::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-10::2004_prompt03-5",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-05T11:35:33Z"
+  },
+  {
+    "timestamp": 1764934533.056712,
+    "seed_id": "2004-I-10::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-05T11:35:33Z"
+  },
+  {
+    "timestamp": 1764934533.056826,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3). | Judge rejected variant 4 (successes=3).",
+      "question": "A circle of radius 1 is randomly placed in a 15-by-36 rectangle $ABCD$ so that the circle lies completely within the rectangle. Given that the probability that the circle will not touch diagonal $AC$ is $m/n,$ where $m$ and $n$ are relatively prime positive integers, find $m + n.$",
+      "answer": "817",
+      "example_id": "2004-I-10::2004"
+    },
+    "iso_time": "2025-12-05T11:35:33Z"
+  },
+  {
+    "timestamp": 1764935300.60776,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 1,
+      "seed_value": 361285501
+    },
+    "iso_time": "2025-12-05T11:48:20Z"
+  },
+  {
+    "timestamp": 1764935301.986878,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 100,
+        "b": 105,
+        "r": 12
+      }
+    },
+    "iso_time": "2025-12-05T11:48:21Z"
+  },
+  {
+    "timestamp": 1764935303.107552,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 42632
+    },
+    "iso_time": "2025-12-05T11:48:23Z"
+  },
+  {
+    "timestamp": 1764935303.107691,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a geometry challenge, consider a rectangle with side lengths 100 and 105. A point is chosen uniformly at random withi",
+      "correct_answer": "42632",
+      "seed_value": 361285501
+    },
+    "iso_time": "2025-12-05T11:48:23Z"
+  },
+  {
+    "timestamp": 1764935303.10775,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "42634",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T11:48:23Z"
+  },
+  {
+    "timestamp": 1764935541.655707,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "42623",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T11:52:21Z"
+  },
+  {
+    "timestamp": 1764936035.0009768,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "42638",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T12:00:35Z"
+  },
+  {
+    "timestamp": 1764936861.682558,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "42632",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T12:14:21Z"
+  },
+  {
+    "timestamp": 1764937012.285105,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "42632",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T12:16:52Z"
+  },
+  {
+    "timestamp": 1764937369.023385,
+    "seed_id": "2004-I-10::2004",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-12-05T12:22:49Z"
+  },
+  {
+    "timestamp": 1764937369.0236459,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 2,
+      "seed_value": 857784160
+    },
+    "iso_time": "2025-12-05T12:22:49Z"
+  },
+  {
+    "timestamp": 1764937370.3623838,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 88,
+        "b": 480,
+        "r": 4
+      }
+    },
+    "iso_time": "2025-12-05T12:22:50Z"
+  },
+  {
+    "timestamp": 1764937371.514464,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1585081
+    },
+    "iso_time": "2025-12-05T12:22:51Z"
+  },
+  {
+    "timestamp": 1764937371.514632,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a geometry challenge, consider a rectangle with side lengths 88 and 480. A point is chosen uniformly at random within",
+      "correct_answer": "1585081",
+      "seed_value": 857784160
+    },
+    "iso_time": "2025-12-05T12:22:51Z"
+  },
+  {
+    "timestamp": 1764937371.5147011,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1585081",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T12:22:51Z"
+  },
+  {
+    "timestamp": 1764937670.583979,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1585085",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T12:27:50Z"
+  },
+  {
+    "timestamp": 1764937961.9223769,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1585086",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T12:32:41Z"
+  },
+  {
+    "timestamp": 1764938071.0789309,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1585081",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T12:34:31Z"
+  },
+  {
+    "timestamp": 1764938593.536005,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1585088",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T12:43:13Z"
+  },
+  {
+    "timestamp": 1764939067.7496252,
+    "seed_id": "2004-I-10::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-10::2004_prompt04-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-05T12:51:07Z"
+  },
+  {
+    "timestamp": 1764939067.749825,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 3,
+      "seed_value": 142367879
+    },
+    "iso_time": "2025-12-05T12:51:07Z"
+  },
+  {
+    "timestamp": 1764939069.1300402,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 224,
+        "b": 360,
+        "r": 3
+      }
+    },
+    "iso_time": "2025-12-05T12:51:09Z"
+  },
+  {
+    "timestamp": 1764939070.267645,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10936249
+    },
+    "iso_time": "2025-12-05T12:51:10Z"
+  },
+  {
+    "timestamp": 1764939070.2677948,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a geometry challenge, consider a rectangle with side lengths 224 and 360. A point is chosen uniformly at random withi",
+      "correct_answer": "10936249",
+      "seed_value": 142367879
+    },
+    "iso_time": "2025-12-05T12:51:10Z"
+  },
+  {
+    "timestamp": 1764939070.2678552,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10936247",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T12:51:10Z"
+  },
+  {
+    "timestamp": 1764939223.241856,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10936240",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T12:53:43Z"
+  },
+  {
+    "timestamp": 1764939830.947575,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10936249",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T13:03:50Z"
+  },
+  {
+    "timestamp": 1764939951.450112,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10936251",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T13:05:51Z"
+  },
+  {
+    "timestamp": 1764940522.712099,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10936249",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T13:15:22Z"
+  },
+  {
+    "timestamp": 1764941113.060825,
+    "seed_id": "2004-I-10::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-10::2004_prompt04-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-05T13:25:13Z"
+  },
+  {
+    "timestamp": 1764941113.061006,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-10::2004_prompt04",
+      "prompt_attempt": 4,
+      "sample_index": 4,
+      "seed_value": 988833676
+    },
+    "iso_time": "2025-12-05T13:25:13Z"
+  },
+  {
+    "timestamp": 1764941114.5260758,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 60,
+        "b": 63,
+        "r": 5
+      }
+    },
+    "iso_time": "2025-12-05T13:25:14Z"
+  },
+  {
+    "timestamp": 1764941115.717966,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 49729
+    },
+    "iso_time": "2025-12-05T13:25:15Z"
+  },
+  {
+    "timestamp": 1764941115.718164,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a geometry challenge, consider a rectangle with side lengths 60 and 63. A point is chosen uniformly at random within ",
+      "correct_answer": "49729",
+      "seed_value": 988833676
+    },
+    "iso_time": "2025-12-05T13:25:15Z"
+  },
+  {
+    "timestamp": 1764941115.71824,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "49729",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T13:25:15Z"
+  },
+  {
+    "timestamp": 1764941511.833733,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "49732",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T13:31:51Z"
+  },
+  {
+    "timestamp": 1764941739.460586,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "49736",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T13:35:39Z"
+  },
+  {
+    "timestamp": 1764942168.7332091,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "49734",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-05T13:42:48Z"
+  },
+  {
+    "timestamp": 1764942818.029789,
+    "seed_id": "2004-I-10::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "49729",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-05T13:53:38Z"
+  },
+  {
+    "timestamp": 1764943227.033566,
+    "seed_id": "2004-I-10::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-10::2004_prompt04-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-05T14:00:27Z"
+  }
+]

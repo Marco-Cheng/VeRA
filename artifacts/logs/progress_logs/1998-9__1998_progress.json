@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1764318117.362993,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1998,
+      "question_preview": "Two mathematicians take a morning coffee break each day.  They arrive at the cafeteria independently, at random times be",
+      "answer": "87",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T08:21:57Z"
+  },
+  {
+    "timestamp": 1764318117.3630452,
+    "seed_id": "1998-9::1998",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T08:21:57Z"
+  },
+  {
+    "timestamp": 1764318117.36307,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Two mathematicians take a morning coffee break each day.  They arrive at the cafeteria independently, at random times between 9 a.m. and 10 a.m., and stay for exactly $m$ minutes.  The probability that either one arrives while the other is in the cafeteria is $40 \\%,$ and $m = a - b\\sqrt {c},$ where $a, b,$ and $c$ are positive integers , and $c$ is not divisible by the square of any prime .  Find $a + b + c.$",
+      "answer": "87",
+      "example_id": "1998-9::1998"
+    },
+    "iso_time": "2025-11-28T08:21:57Z"
+  },
+  {
+    "timestamp": 1764318211.96057,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-9::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 50450286
+    },
+    "iso_time": "2025-11-28T08:23:31Z"
+  },
+  {
+    "timestamp": 1764318213.059743,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "window_a_minutes": 70,
+        "window_b_minutes": 107,
+        "known_stay_b": 10,
+        "probability_percent": 75
+      }
+    },
+    "iso_time": "2025-11-28T08:23:33Z"
+  },
+  {
+    "timestamp": 1764318214.0893,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 253
+    },
+    "iso_time": "2025-11-28T08:23:34Z"
+  },
+  {
+    "timestamp": 1764318214.089449,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two mathematicians take a coffee break each day. One arrives uniformly at random between 0 and 70 minutes past 9:00, and",
+      "correct_answer": "253",
+      "seed_value": 50450286
+    },
+    "iso_time": "2025-11-28T08:23:34Z"
+  },
+  {
+    "timestamp": 1764318214.0894861,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "255",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:23:34Z"
+  },
+  {
+    "timestamp": 1764318255.1729941,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "260",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:24:15Z"
+  },
+  {
+    "timestamp": 1764318284.923295,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "253",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:24:44Z"
+  },
+  {
+    "timestamp": 1764318310.0499158,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "253",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:25:10Z"
+  },
+  {
+    "timestamp": 1764318338.819266,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "250",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:25:38Z"
+  },
+  {
+    "timestamp": 1764318375.0819032,
+    "seed_id": "1998-9::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-9::1998_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T08:26:15Z"
+  },
+  {
+    "timestamp": 1764318375.082005,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-9::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1403221522
+    },
+    "iso_time": "2025-11-28T08:26:15Z"
+  },
+  {
+    "timestamp": 1764318376.506786,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "window_a_minutes": 63,
+        "window_b_minutes": 55,
+        "known_stay_b": 8,
+        "probability_percent": 20
+      }
+    },
+    "iso_time": "2025-11-28T08:26:16Z"
+  },
+  {
+    "timestamp": 1764318377.595923,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2575
+    },
+    "iso_time": "2025-11-28T08:26:17Z"
+  },
+  {
+    "timestamp": 1764318377.596069,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two mathematicians take a coffee break each day. One arrives uniformly at random between 0 and 63 minutes past 9:00, and",
+      "correct_answer": "2575",
+      "seed_value": 1403221522
+    },
+    "iso_time": "2025-11-28T08:26:17Z"
+  },
+  {
+    "timestamp": 1764318377.596113,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2575",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:26:17Z"
+  },
+  {
+    "timestamp": 1764318411.43677,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2584",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:26:51Z"
+  },
+  {
+    "timestamp": 1764318440.414003,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2575",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:27:20Z"
+  },
+  {
+    "timestamp": 1764318507.184887,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2577",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:28:27Z"
+  },
+  {
+    "timestamp": 1764318575.609566,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2579",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:29:35Z"
+  },
+  {
+    "timestamp": 1764318597.8506482,
+    "seed_id": "1998-9::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-9::1998_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T08:29:57Z"
+  },
+  {
+    "timestamp": 1764318597.8507679,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-9::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1718832711
+    },
+    "iso_time": "2025-11-28T08:29:57Z"
+  },
+  {
+    "timestamp": 1764318598.9927292,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "window_a_minutes": 86,
+        "window_b_minutes": 50,
+        "known_stay_b": 86,
+        "probability_percent": 81
+      }
+    },
+    "iso_time": "2025-11-28T08:29:58Z"
+  },
+  {
+    "timestamp": 1764318600.008498,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1685
+    },
+    "iso_time": "2025-11-28T08:30:00Z"
+  },
+  {
+    "timestamp": 1764318600.0086641,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two mathematicians take a coffee break each day. One arrives uniformly at random between 0 and 86 minutes past 9:00, and",
+      "correct_answer": "1685",
+      "seed_value": 1718832711
+    },
+    "iso_time": "2025-11-28T08:30:00Z"
+  },
+  {
+    "timestamp": 1764318600.0087092,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1678",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:30:00Z"
+  },
+  {
+    "timestamp": 1764318732.3559601,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1685",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:32:12Z"
+  },
+  {
+    "timestamp": 1764318749.563505,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1688",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:32:29Z"
+  },
+  {
+    "timestamp": 1764318769.509005,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1687",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:32:49Z"
+  },
+  {
+    "timestamp": 1764318811.44986,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1685",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:33:31Z"
+  },
+  {
+    "timestamp": 1764318839.162376,
+    "seed_id": "1998-9::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-9::1998_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T08:33:59Z"
+  },
+  {
+    "timestamp": 1764318839.162495,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-9::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 500419955
+    },
+    "iso_time": "2025-11-28T08:33:59Z"
+  },
+  {
+    "timestamp": 1764318841.159917,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "window_a_minutes": 110,
+        "window_b_minutes": 103,
+        "known_stay_b": 25,
+        "probability_percent": 65
+      }
+    },
+    "iso_time": "2025-11-28T08:34:01Z"
+  },
+  {
+    "timestamp": 1764318842.5973141,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 810
+    },
+    "iso_time": "2025-11-28T08:34:02Z"
+  },
+  {
+    "timestamp": 1764318842.597474,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two mathematicians take a coffee break each day. One arrives uniformly at random between 0 and 110 minutes past 9:00, an",
+      "correct_answer": "810",
+      "seed_value": 500419955
+    },
+    "iso_time": "2025-11-28T08:34:02Z"
+  },
+  {
+    "timestamp": 1764318842.597515,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "803",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:34:02Z"
+  },
+  {
+    "timestamp": 1764318910.359105,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "804",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:35:10Z"
+  },
+  {
+    "timestamp": 1764318945.66116,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "810",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:35:45Z"
+  },
+  {
+    "timestamp": 1764318989.15721,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "802",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:36:29Z"
+  },
+  {
+    "timestamp": 1764319025.839783,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "810",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:37:05Z"
+  },
+  {
+    "timestamp": 1764319048.599392,
+    "seed_id": "1998-9::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-9::1998_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T08:37:28Z"
+  },
+  {
+    "timestamp": 1764319048.599485,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1998-9::1998_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1879124474
+    },
+    "iso_time": "2025-11-28T08:37:28Z"
+  },
+  {
+    "timestamp": 1764319050.498514,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "window_a_minutes": 80,
+        "window_b_minutes": 100,
+        "known_stay_b": 27,
+        "probability_percent": 56
+      }
+    },
+    "iso_time": "2025-11-28T08:37:30Z"
+  },
+  {
+    "timestamp": 1764319051.8930829,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4332
+    },
+    "iso_time": "2025-11-28T08:37:31Z"
+  },
+  {
+    "timestamp": 1764319051.893232,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Two mathematicians take a coffee break each day. One arrives uniformly at random between 0 and 80 minutes past 9:00, and",
+      "correct_answer": "4332",
+      "seed_value": 1879124474
+    },
+    "iso_time": "2025-11-28T08:37:31Z"
+  },
+  {
+    "timestamp": 1764319051.893276,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4328",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:37:31Z"
+  },
+  {
+    "timestamp": 1764319086.6241632,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4326",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:38:06Z"
+  },
+  {
+    "timestamp": 1764319159.8144739,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4332",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:39:19Z"
+  },
+  {
+    "timestamp": 1764319197.2691689,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4332",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:39:57Z"
+  },
+  {
+    "timestamp": 1764319240.9728189,
+    "seed_id": "1998-9::1998",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4330",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:40:40Z"
+  },
+  {
+    "timestamp": 1764319266.6062279,
+    "seed_id": "1998-9::1998",
+    "stage": "variant_success",
+    "message": "Accepted variant 1998-9::1998_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T08:41:06Z"
+  }
+]

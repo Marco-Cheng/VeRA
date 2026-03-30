@@ -1,0 +1,704 @@
+[
+  {
+    "timestamp": 1765185896.9489112,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "Robert has 4 indistinguishable gold coins and 4 indistinguishable silver coins. Each coin has an engraving of one face o",
+      "answer": "630",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-08T09:24:56Z"
+  },
+  {
+    "timestamp": 1765185896.9489422,
+    "seed_id": "2005-I-5::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-08T09:24:56Z"
+  },
+  {
+    "timestamp": 1765185896.948956,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Robert has 4 indistinguishable gold coins and 4 indistinguishable silver coins. Each coin has an engraving of one face on one side, but not on the other. He wants to stack the eight coins on a table into a single stack so that no two adjacent coins are face to face. Find the number of possible distinguishable arrangements of the 8 coins.",
+      "answer": "630",
+      "example_id": "2005-I-5::2005"
+    },
+    "iso_time": "2025-12-08T09:24:56Z"
+  },
+  {
+    "timestamp": 1765186231.021794,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-5::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 351909679
+    },
+    "iso_time": "2025-12-08T09:30:31Z"
+  },
+  {
+    "timestamp": 1765186232.14499,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "gold_count": 7,
+        "silver_count": 6,
+        "bronze_count": 6,
+        "up_gold": 1,
+        "up_silver": 1,
+        "up_bronze": 5,
+        "top_type": "gold"
+      }
+    },
+    "iso_time": "2025-12-08T09:30:32Z"
+  },
+  {
+    "timestamp": 1765186233.3438258,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 16632
+    },
+    "iso_time": "2025-12-08T09:30:33Z"
+  },
+  {
+    "timestamp": 1765186233.34402,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A coin-stacking puzzle generalizes the classic two-metal scenario as follows. There are 7 indistinguishable gold coins, ",
+      "correct_answer": "16632",
+      "seed_value": 351909679
+    },
+    "iso_time": "2025-12-08T09:30:33Z"
+  },
+  {
+    "timestamp": 1765186233.344074,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "16632",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T09:30:33Z"
+  },
+  {
+    "timestamp": 1765186394.035341,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "16627",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T09:33:14Z"
+  },
+  {
+    "timestamp": 1765186520.495119,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "16637",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T09:35:20Z"
+  },
+  {
+    "timestamp": 1765186711.178825,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "16632",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T09:38:31Z"
+  },
+  {
+    "timestamp": 1765186737.889195,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "16624",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T09:38:57Z"
+  },
+  {
+    "timestamp": 1765186772.093215,
+    "seed_id": "2005-I-5::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-5::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T09:39:32Z"
+  },
+  {
+    "timestamp": 1765186772.0934122,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-5::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 464433435
+    },
+    "iso_time": "2025-12-08T09:39:32Z"
+  },
+  {
+    "timestamp": 1765186773.456589,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "gold_count": 7,
+        "silver_count": 7,
+        "bronze_count": 7,
+        "up_gold": 3,
+        "up_silver": 2,
+        "up_bronze": 4,
+        "top_type": "gold"
+      }
+    },
+    "iso_time": "2025-12-08T09:39:33Z"
+  },
+  {
+    "timestamp": 1765186774.6370199,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7761600
+    },
+    "iso_time": "2025-12-08T09:39:34Z"
+  },
+  {
+    "timestamp": 1765186774.637186,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A coin-stacking puzzle generalizes the classic two-metal scenario as follows. There are 7 indistinguishable gold coins, ",
+      "correct_answer": "7761600",
+      "seed_value": 464433435
+    },
+    "iso_time": "2025-12-08T09:39:34Z"
+  },
+  {
+    "timestamp": 1765186774.6372328,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7761600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T09:39:34Z"
+  },
+  {
+    "timestamp": 1765186827.420749,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7761604",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T09:40:27Z"
+  },
+  {
+    "timestamp": 1765186877.5647209,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7761600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T09:41:17Z"
+  },
+  {
+    "timestamp": 1765186955.2848158,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7761601",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T09:42:35Z"
+  },
+  {
+    "timestamp": 1765187122.234147,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7761591",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T09:45:22Z"
+  },
+  {
+    "timestamp": 1765187341.7414699,
+    "seed_id": "2005-I-5::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-5::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T09:49:01Z"
+  },
+  {
+    "timestamp": 1765187341.741651,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-5::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 405512488
+    },
+    "iso_time": "2025-12-08T09:49:01Z"
+  },
+  {
+    "timestamp": 1765187343.0209699,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "gold_count": 7,
+        "silver_count": 5,
+        "bronze_count": 8,
+        "up_gold": 5,
+        "up_silver": 3,
+        "up_bronze": 5,
+        "top_type": "bronze"
+      }
+    },
+    "iso_time": "2025-12-08T09:49:03Z"
+  },
+  {
+    "timestamp": 1765187344.211125,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 3326400
+    },
+    "iso_time": "2025-12-08T09:49:04Z"
+  },
+  {
+    "timestamp": 1765187344.211294,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A coin-stacking puzzle generalizes the classic two-metal scenario as follows. There are 7 indistinguishable gold coins, ",
+      "correct_answer": "3326400",
+      "seed_value": 405512488
+    },
+    "iso_time": "2025-12-08T09:49:04Z"
+  },
+  {
+    "timestamp": 1765187344.211346,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3326400",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T09:49:04Z"
+  },
+  {
+    "timestamp": 1765187372.019846,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "3326396",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T09:49:32Z"
+  },
+  {
+    "timestamp": 1765187579.3795059,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "3326400",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T09:52:59Z"
+  },
+  {
+    "timestamp": 1765187777.93805,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "3326392",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T09:56:17Z"
+  },
+  {
+    "timestamp": 1765187912.513572,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "3326408",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T09:58:32Z"
+  },
+  {
+    "timestamp": 1765188036.9011562,
+    "seed_id": "2005-I-5::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-5::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T10:00:36Z"
+  },
+  {
+    "timestamp": 1765188036.9013288,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-5::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 920537233
+    },
+    "iso_time": "2025-12-08T10:00:36Z"
+  },
+  {
+    "timestamp": 1765188038.051498,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "gold_count": 5,
+        "silver_count": 3,
+        "bronze_count": 5,
+        "up_gold": 2,
+        "up_silver": 2,
+        "up_bronze": 1,
+        "top_type": "gold"
+      }
+    },
+    "iso_time": "2025-12-08T10:00:38Z"
+  },
+  {
+    "timestamp": 1765188039.2141812,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 2100
+    },
+    "iso_time": "2025-12-08T10:00:39Z"
+  },
+  {
+    "timestamp": 1765188039.214325,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A coin-stacking puzzle generalizes the classic two-metal scenario as follows. There are 5 indistinguishable gold coins, ",
+      "correct_answer": "2100",
+      "seed_value": 920537233
+    },
+    "iso_time": "2025-12-08T10:00:39Z"
+  },
+  {
+    "timestamp": 1765188039.214371,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2095",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T10:00:39Z"
+  },
+  {
+    "timestamp": 1765188077.071667,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T10:01:17Z"
+  },
+  {
+    "timestamp": 1765188113.220194,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "2103",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T10:01:53Z"
+  },
+  {
+    "timestamp": 1765188282.966393,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2104",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T10:04:42Z"
+  },
+  {
+    "timestamp": 1765188373.5683389,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2100",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T10:06:13Z"
+  },
+  {
+    "timestamp": 1765188511.195372,
+    "seed_id": "2005-I-5::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-5::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T10:08:31Z"
+  },
+  {
+    "timestamp": 1765188511.195575,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-5::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 258460365
+    },
+    "iso_time": "2025-12-08T10:08:31Z"
+  },
+  {
+    "timestamp": 1765188512.543233,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "gold_count": 8,
+        "silver_count": 5,
+        "bronze_count": 8,
+        "up_gold": 1,
+        "up_silver": 4,
+        "up_bronze": 1,
+        "top_type": "bronze"
+      }
+    },
+    "iso_time": "2025-12-08T10:08:32Z"
+  },
+  {
+    "timestamp": 1765188513.6580238,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 137280
+    },
+    "iso_time": "2025-12-08T10:08:33Z"
+  },
+  {
+    "timestamp": 1765188513.6581929,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A coin-stacking puzzle generalizes the classic two-metal scenario as follows. There are 8 indistinguishable gold coins, ",
+      "correct_answer": "137280",
+      "seed_value": 258460365
+    },
+    "iso_time": "2025-12-08T10:08:33Z"
+  },
+  {
+    "timestamp": 1765188513.658242,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "137284",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T10:08:33Z"
+  },
+  {
+    "timestamp": 1765188738.211366,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "137288",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T10:12:18Z"
+  },
+  {
+    "timestamp": 1765188919.571668,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "137280",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T10:15:19Z"
+  },
+  {
+    "timestamp": 1765189080.3795872,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "137280",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T10:18:00Z"
+  },
+  {
+    "timestamp": 1765189268.7611341,
+    "seed_id": "2005-I-5::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "137272",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T10:21:08Z"
+  },
+  {
+    "timestamp": 1765189454.8755379,
+    "seed_id": "2005-I-5::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-5::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T10:24:14Z"
+  }
+]

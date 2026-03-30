@@ -1,0 +1,704 @@
+[
+  {
+    "timestamp": 1764715079.009805,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2002,
+      "question_preview": "Given that $x$ and $y$ are both integers between $100$ and $999$ , inclusive; $y$ is the number formed by reversing the ",
+      "answer": "9",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-02T22:37:59Z"
+  },
+  {
+    "timestamp": 1764715079.009897,
+    "seed_id": "2002-II-1::2002",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-02T22:37:59Z"
+  },
+  {
+    "timestamp": 1764715079.009944,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Given that $x$ and $y$ are both integers between $100$ and $999$ , inclusive; $y$ is the number formed by reversing the digits of $x$ ; and $z=|x-y|$ . How many distinct values of $z$ are possible?",
+      "answer": "9",
+      "example_id": "2002-II-1::2002"
+    },
+    "iso_time": "2025-12-02T22:37:59Z"
+  },
+  {
+    "timestamp": 1764715161.523427,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-1::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1676727455
+    },
+    "iso_time": "2025-12-02T22:39:21Z"
+  },
+  {
+    "timestamp": 1764715162.9214249,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 8,
+        "num_digits": 6,
+        "digit_min": 0,
+        "digit_max": 5,
+        "lead_min": 1,
+        "lead_max": 4,
+        "target_sum": 5
+      }
+    },
+    "iso_time": "2025-12-02T22:39:22Z"
+  },
+  {
+    "timestamp": 1764715163.992733,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 242
+    },
+    "iso_time": "2025-12-02T22:39:23Z"
+  },
+  {
+    "timestamp": 1764715163.992898,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 8, consider all 6-digit integers x whose digits all lie in the interval [0,5], with the leading digit constraine",
+      "correct_answer": "242",
+      "seed_value": 1676727455
+    },
+    "iso_time": "2025-12-02T22:39:23Z"
+  },
+  {
+    "timestamp": 1764715163.992963,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:39:23Z"
+  },
+  {
+    "timestamp": 1764715229.566356,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "242",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T22:40:29Z"
+  },
+  {
+    "timestamp": 1764715310.204705,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "242",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T22:41:50Z"
+  },
+  {
+    "timestamp": 1764715370.110995,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "249",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:42:50Z"
+  },
+  {
+    "timestamp": 1764715500.1607099,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "246",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:45:00Z"
+  },
+  {
+    "timestamp": 1764715548.8921201,
+    "seed_id": "2002-II-1::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-1::2002_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T22:45:48Z"
+  },
+  {
+    "timestamp": 1764715548.892223,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-1::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1282556391
+    },
+    "iso_time": "2025-12-02T22:45:48Z"
+  },
+  {
+    "timestamp": 1764715550.233268,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "num_digits": 4,
+        "digit_min": 0,
+        "digit_max": 8,
+        "lead_min": 6,
+        "lead_max": 8,
+        "target_sum": 15
+      }
+    },
+    "iso_time": "2025-12-02T22:45:50Z"
+  },
+  {
+    "timestamp": 1764715551.35608,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 17
+    },
+    "iso_time": "2025-12-02T22:45:51Z"
+  },
+  {
+    "timestamp": 1764715551.356241,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, consider all 4-digit integers x whose digits all lie in the interval [0,8], with the leading digit constrain",
+      "correct_answer": "17",
+      "seed_value": 1282556391
+    },
+    "iso_time": "2025-12-02T22:45:51Z"
+  },
+  {
+    "timestamp": 1764715551.356307,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "17",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T22:45:51Z"
+  },
+  {
+    "timestamp": 1764715573.6827679,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "13",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:46:13Z"
+  },
+  {
+    "timestamp": 1764715602.9463801,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "24",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:46:42Z"
+  },
+  {
+    "timestamp": 1764715628.3375292,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "15",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:47:08Z"
+  },
+  {
+    "timestamp": 1764715656.418051,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "17",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T22:47:36Z"
+  },
+  {
+    "timestamp": 1764715672.8447092,
+    "seed_id": "2002-II-1::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-1::2002_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T22:47:52Z"
+  },
+  {
+    "timestamp": 1764715672.844856,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-1::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1628941722
+    },
+    "iso_time": "2025-12-02T22:47:52Z"
+  },
+  {
+    "timestamp": 1764715674.1451032,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 12,
+        "num_digits": 4,
+        "digit_min": 0,
+        "digit_max": 10,
+        "lead_min": 7,
+        "lead_max": 9,
+        "target_sum": 18
+      }
+    },
+    "iso_time": "2025-12-02T22:47:54Z"
+  },
+  {
+    "timestamp": 1764715675.272962,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 31
+    },
+    "iso_time": "2025-12-02T22:47:55Z"
+  },
+  {
+    "timestamp": 1764715675.273101,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 12, consider all 4-digit integers x whose digits all lie in the interval [0,10], with the leading digit constrai",
+      "correct_answer": "31",
+      "seed_value": 1628941722
+    },
+    "iso_time": "2025-12-02T22:47:55Z"
+  },
+  {
+    "timestamp": 1764715675.2731671,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "22",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:47:55Z"
+  },
+  {
+    "timestamp": 1764715700.250457,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "31",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T22:48:20Z"
+  },
+  {
+    "timestamp": 1764715721.4421818,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "24",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:48:41Z"
+  },
+  {
+    "timestamp": 1764715763.759468,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "31",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T22:49:23Z"
+  },
+  {
+    "timestamp": 1764715798.653735,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "29",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:49:58Z"
+  },
+  {
+    "timestamp": 1764715831.0021088,
+    "seed_id": "2002-II-1::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-1::2002_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T22:50:31Z"
+  },
+  {
+    "timestamp": 1764715831.0022871,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-1::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1448319667
+    },
+    "iso_time": "2025-12-02T22:50:31Z"
+  },
+  {
+    "timestamp": 1764715832.1775491,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 10,
+        "num_digits": 6,
+        "digit_min": 0,
+        "digit_max": 7,
+        "lead_min": 1,
+        "lead_max": 3,
+        "target_sum": 9
+      }
+    },
+    "iso_time": "2025-12-02T22:50:32Z"
+  },
+  {
+    "timestamp": 1764715833.290879,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 450
+    },
+    "iso_time": "2025-12-02T22:50:33Z"
+  },
+  {
+    "timestamp": 1764715833.291039,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 10, consider all 6-digit integers x whose digits all lie in the interval [0,7], with the leading digit constrain",
+      "correct_answer": "450",
+      "seed_value": 1448319667
+    },
+    "iso_time": "2025-12-02T22:50:33Z"
+  },
+  {
+    "timestamp": 1764715833.291095,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "450",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T22:50:33Z"
+  },
+  {
+    "timestamp": 1764715892.3964212,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "457",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:51:32Z"
+  },
+  {
+    "timestamp": 1764715931.16232,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "450",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T22:52:11Z"
+  },
+  {
+    "timestamp": 1764716009.212499,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "455",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:53:29Z"
+  },
+  {
+    "timestamp": 1764716064.3472059,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "459",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:54:24Z"
+  },
+  {
+    "timestamp": 1764716176.704833,
+    "seed_id": "2002-II-1::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-1::2002_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T22:56:16Z"
+  },
+  {
+    "timestamp": 1764716176.7050161,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2002-II-1::2002_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1394263530
+    },
+    "iso_time": "2025-12-02T22:56:16Z"
+  },
+  {
+    "timestamp": 1764716178.001523,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "base": 12,
+        "num_digits": 5,
+        "digit_min": 0,
+        "digit_max": 7,
+        "lead_min": 4,
+        "lead_max": 7,
+        "target_sum": 9
+      }
+    },
+    "iso_time": "2025-12-02T22:56:18Z"
+  },
+  {
+    "timestamp": 1764716179.0938041,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 45
+    },
+    "iso_time": "2025-12-02T22:56:19Z"
+  },
+  {
+    "timestamp": 1764716179.093951,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In base 12, consider all 5-digit integers x whose digits all lie in the interval [0,7], with the leading digit constrain",
+      "correct_answer": "45",
+      "seed_value": 1394263530
+    },
+    "iso_time": "2025-12-02T22:56:19Z"
+  },
+  {
+    "timestamp": 1764716179.094016,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "45",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T22:56:19Z"
+  },
+  {
+    "timestamp": 1764716207.846642,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "42",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:56:47Z"
+  },
+  {
+    "timestamp": 1764716241.657419,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "38",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:57:21Z"
+  },
+  {
+    "timestamp": 1764716290.997202,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "45",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-02T22:58:10Z"
+  },
+  {
+    "timestamp": 1764716326.631467,
+    "seed_id": "2002-II-1::2002",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "40",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-02T22:58:46Z"
+  },
+  {
+    "timestamp": 1764716375.169267,
+    "seed_id": "2002-II-1::2002",
+    "stage": "variant_success",
+    "message": "Accepted variant 2002-II-1::2002_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-02T22:59:35Z"
+  }
+]

@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1764326745.768715,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1999,
+      "question_preview": "The inscribed circle of triangle $ABC$ is tangent to $\\overline{AB}$ at $P_{},$ and its radius is 21.  Given that $AP=23",
+      "answer": "345",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T10:45:45Z"
+  },
+  {
+    "timestamp": 1764326745.768765,
+    "seed_id": "1999-12::1999",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T10:45:45Z"
+  },
+  {
+    "timestamp": 1764326745.768786,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The inscribed circle of triangle $ABC$ is tangent to $\\overline{AB}$ at $P_{},$ and its radius is 21.  Given that $AP=23$ and $PB=27,$ find the perimeter of the triangle.",
+      "answer": "345",
+      "example_id": "1999-12::1999"
+    },
+    "iso_time": "2025-11-28T10:45:45Z"
+  },
+  {
+    "timestamp": 1764326860.223115,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-12::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1422260767
+    },
+    "iso_time": "2025-11-28T10:47:40Z"
+  },
+  {
+    "timestamp": 1764326861.361152,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ap": 8,
+        "pb": 35,
+        "angle_bisector_length": 28.664570465995123
+      }
+    },
+    "iso_time": "2025-11-28T10:47:41Z"
+  },
+  {
+    "timestamp": 1764326862.381144,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 118.0
+    },
+    "iso_time": "2025-11-28T10:47:42Z"
+  },
+  {
+    "timestamp": 1764326862.3812969,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, an inscribed circle is tangent to side AB at point P. Let AP = 8 and PB = 35. The length of the interna",
+      "correct_answer": "118",
+      "seed_value": 1422260767
+    },
+    "iso_time": "2025-11-28T10:47:42Z"
+  },
+  {
+    "timestamp": 1764326862.381342,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "119",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T10:47:42Z"
+  },
+  {
+    "timestamp": 1764326917.526953,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "118",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T10:48:37Z"
+  },
+  {
+    "timestamp": 1764326963.716492,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "118",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T10:49:23Z"
+  },
+  {
+    "timestamp": 1764327007.222729,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "121",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T10:50:07Z"
+  },
+  {
+    "timestamp": 1764327055.71339,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "114",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T10:50:55Z"
+  },
+  {
+    "timestamp": 1764327117.232361,
+    "seed_id": "1999-12::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-12::1999_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T10:51:57Z"
+  },
+  {
+    "timestamp": 1764327117.2325141,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-12::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1710113642
+    },
+    "iso_time": "2025-11-28T10:51:57Z"
+  },
+  {
+    "timestamp": 1764327118.396662,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ap": 46,
+        "pb": 20,
+        "angle_bisector_length": 66.33037313327884
+      }
+    },
+    "iso_time": "2025-11-28T10:51:58Z"
+  },
+  {
+    "timestamp": 1764327119.420417,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 216.0
+    },
+    "iso_time": "2025-11-28T10:51:59Z"
+  },
+  {
+    "timestamp": 1764327119.420565,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, an inscribed circle is tangent to side AB at point P. Let AP = 46 and PB = 20. The length of the intern",
+      "correct_answer": "216",
+      "seed_value": 1710113642
+    },
+    "iso_time": "2025-11-28T10:51:59Z"
+  },
+  {
+    "timestamp": 1764327119.420607,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "216",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T10:51:59Z"
+  },
+  {
+    "timestamp": 1764327147.221215,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "216",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T10:52:27Z"
+  },
+  {
+    "timestamp": 1764327163.5281432,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "207",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T10:52:43Z"
+  },
+  {
+    "timestamp": 1764327223.230366,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "210",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T10:53:43Z"
+  },
+  {
+    "timestamp": 1764327281.566865,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "223",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T10:54:41Z"
+  },
+  {
+    "timestamp": 1764327334.6121888,
+    "seed_id": "1999-12::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-12::1999_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T10:55:34Z"
+  },
+  {
+    "timestamp": 1764327334.612372,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-12::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 188045446
+    },
+    "iso_time": "2025-11-28T10:55:34Z"
+  },
+  {
+    "timestamp": 1764327335.829472,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ap": 59,
+        "pb": 20,
+        "angle_bisector_length": 88.44715498198181
+      }
+    },
+    "iso_time": "2025-11-28T10:55:35Z"
+  },
+  {
+    "timestamp": 1764327336.8804219,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 276.0
+    },
+    "iso_time": "2025-11-28T10:55:36Z"
+  },
+  {
+    "timestamp": 1764327336.880578,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, an inscribed circle is tangent to side AB at point P. Let AP = 59 and PB = 20. The length of the intern",
+      "correct_answer": "276",
+      "seed_value": 188045446
+    },
+    "iso_time": "2025-11-28T10:55:36Z"
+  },
+  {
+    "timestamp": 1764327336.880624,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "282",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T10:55:36Z"
+  },
+  {
+    "timestamp": 1764327391.855277,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "276",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T10:56:31Z"
+  },
+  {
+    "timestamp": 1764327416.224549,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "276",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T10:56:56Z"
+  },
+  {
+    "timestamp": 1764327460.562088,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "283",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T10:57:40Z"
+  },
+  {
+    "timestamp": 1764327511.973042,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "268",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T10:58:31Z"
+  },
+  {
+    "timestamp": 1764327538.377085,
+    "seed_id": "1999-12::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-12::1999_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T10:58:58Z"
+  },
+  {
+    "timestamp": 1764327538.3772569,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-12::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1093329949
+    },
+    "iso_time": "2025-11-28T10:58:58Z"
+  },
+  {
+    "timestamp": 1764327539.63434,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ap": 58,
+        "pb": 52,
+        "angle_bisector_length": 141.672786262508
+      }
+    },
+    "iso_time": "2025-11-28T10:58:59Z"
+  },
+  {
+    "timestamp": 1764327540.788117,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 414.0
+    },
+    "iso_time": "2025-11-28T10:59:00Z"
+  },
+  {
+    "timestamp": 1764327540.7882519,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, an inscribed circle is tangent to side AB at point P. Let AP = 58 and PB = 52. The length of the intern",
+      "correct_answer": "414",
+      "seed_value": 1093329949
+    },
+    "iso_time": "2025-11-28T10:59:00Z"
+  },
+  {
+    "timestamp": 1764327540.788295,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "414",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T10:59:00Z"
+  },
+  {
+    "timestamp": 1764327585.164839,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "422",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T10:59:45Z"
+  },
+  {
+    "timestamp": 1764327649.097453,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "407",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:00:49Z"
+  },
+  {
+    "timestamp": 1764327724.244728,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "413",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:02:04Z"
+  },
+  {
+    "timestamp": 1764327826.4392772,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "414",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:03:46Z"
+  },
+  {
+    "timestamp": 1764327920.954499,
+    "seed_id": "1999-12::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-12::1999_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T11:05:20Z"
+  },
+  {
+    "timestamp": 1764327920.954606,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-12::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1047750184
+    },
+    "iso_time": "2025-11-28T11:05:20Z"
+  },
+  {
+    "timestamp": 1764327922.236235,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "ap": 30,
+        "pb": 13,
+        "angle_bisector_length": 39.393935317992586
+      }
+    },
+    "iso_time": "2025-11-28T11:05:22Z"
+  },
+  {
+    "timestamp": 1764327923.281471,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 134.0
+    },
+    "iso_time": "2025-11-28T11:05:23Z"
+  },
+  {
+    "timestamp": 1764327923.281612,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In triangle ABC, an inscribed circle is tangent to side AB at point P. Let AP = 30 and PB = 13. The length of the intern",
+      "correct_answer": "134",
+      "seed_value": 1047750184
+    },
+    "iso_time": "2025-11-28T11:05:23Z"
+  },
+  {
+    "timestamp": 1764327923.281653,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "143",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:05:23Z"
+  },
+  {
+    "timestamp": 1764327966.881995,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "134",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:06:06Z"
+  },
+  {
+    "timestamp": 1764328043.838243,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "142",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:07:23Z"
+  },
+  {
+    "timestamp": 1764328114.2766669,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "125",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T11:08:34Z"
+  },
+  {
+    "timestamp": 1764328163.235976,
+    "seed_id": "1999-12::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "134",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T11:09:23Z"
+  },
+  {
+    "timestamp": 1764328196.3485131,
+    "seed_id": "1999-12::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-12::1999_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T11:09:56Z"
+  }
+]

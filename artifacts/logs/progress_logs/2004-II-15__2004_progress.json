@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1765099737.1216562,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "A long thin strip of paper is 1024 units in length, 1 unit in width, and is divided into 1024 unit squares. The paper is",
+      "answer": "593",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-07T09:28:57Z"
+  },
+  {
+    "timestamp": 1765099737.1217139,
+    "seed_id": "2004-II-15::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-07T09:28:57Z"
+  },
+  {
+    "timestamp": 1765099737.121742,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A long thin strip of paper is 1024 units in length, 1 unit in width, and is divided into 1024 unit squares. The paper is folded in half repeatedly. For the first fold, the right end of the paper is folded over to coincide with and lie on top of the left end. The result is a 512 by 1 strip of double thickness. Next, the right end of this strip is folded over to coincide with and lie on top of the left end, resulting in a 256 by 1 strip of quadruple thickness. This process is repeated 8 more times. After the last fold, the strip has become a stack of 1024 unit squares. How many of these squares lie below the square that was originally the 942nd square counting from the left?",
+      "answer": "593",
+      "example_id": "2004-II-15::2004"
+    },
+    "iso_time": "2025-12-07T09:28:57Z"
+  },
+  {
+    "timestamp": 1765100446.765088,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-15::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1697760098
+    },
+    "iso_time": "2025-12-07T09:40:46Z"
+  },
+  {
+    "timestamp": 1765100448.070133,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1024,
+        "k": 10,
+        "folds": "RLRLLRLLLR",
+        "target": 113
+      }
+    },
+    "iso_time": "2025-12-07T09:40:48Z"
+  },
+  {
+    "timestamp": 1765100448.9727411,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 550
+    },
+    "iso_time": "2025-12-07T09:40:48Z"
+  },
+  {
+    "timestamp": 1765100448.972908,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A long, thin strip of paper is 1024 units long, 1 unit wide, and divided into 1024 unit squares labeled 1 through 1024 f",
+      "correct_answer": "550",
+      "seed_value": 1697760098
+    },
+    "iso_time": "2025-12-07T09:40:48Z"
+  },
+  {
+    "timestamp": 1765100448.972954,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "547",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:40:48Z"
+  },
+  {
+    "timestamp": 1765100568.733946,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "549",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:42:48Z"
+  },
+  {
+    "timestamp": 1765100735.334612,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "550",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:45:35Z"
+  },
+  {
+    "timestamp": 1765100787.8674932,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "551",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:46:27Z"
+  },
+  {
+    "timestamp": 1765100918.116802,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "550",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:48:38Z"
+  },
+  {
+    "timestamp": 1765101017.034508,
+    "seed_id": "2004-II-15::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-15::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T09:50:17Z"
+  },
+  {
+    "timestamp": 1765101017.034699,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-15::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 322945654
+    },
+    "iso_time": "2025-12-07T09:50:17Z"
+  },
+  {
+    "timestamp": 1765101018.3287911,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 4096,
+        "k": 12,
+        "folds": "RRLLLLRLLRLL",
+        "target": 1136
+      }
+    },
+    "iso_time": "2025-12-07T09:50:18Z"
+  },
+  {
+    "timestamp": 1765101019.555845,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1890
+    },
+    "iso_time": "2025-12-07T09:50:19Z"
+  },
+  {
+    "timestamp": 1765101019.556034,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A long, thin strip of paper is 4096 units long, 1 unit wide, and divided into 4096 unit squares labeled 1 through 4096 f",
+      "correct_answer": "1890",
+      "seed_value": 322945654
+    },
+    "iso_time": "2025-12-07T09:50:19Z"
+  },
+  {
+    "timestamp": 1765101019.556083,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1882",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:50:19Z"
+  },
+  {
+    "timestamp": 1765101138.910829,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1893",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:52:18Z"
+  },
+  {
+    "timestamp": 1765101216.599519,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1890",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:53:36Z"
+  },
+  {
+    "timestamp": 1765101303.6579142,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1890",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T09:55:03Z"
+  },
+  {
+    "timestamp": 1765101359.157036,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1897",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:55:59Z"
+  },
+  {
+    "timestamp": 1765101560.966254,
+    "seed_id": "2004-II-15::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-15::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T09:59:20Z"
+  },
+  {
+    "timestamp": 1765101560.966434,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-15::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 468083902
+    },
+    "iso_time": "2025-12-07T09:59:20Z"
+  },
+  {
+    "timestamp": 1765101562.2345579,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1024,
+        "k": 10,
+        "folds": "LRRLRLRRRL",
+        "target": 345
+      }
+    },
+    "iso_time": "2025-12-07T09:59:22Z"
+  },
+  {
+    "timestamp": 1765101563.3607092,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 709
+    },
+    "iso_time": "2025-12-07T09:59:23Z"
+  },
+  {
+    "timestamp": 1765101563.360853,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A long, thin strip of paper is 1024 units long, 1 unit wide, and divided into 1024 unit squares labeled 1 through 1024 f",
+      "correct_answer": "709",
+      "seed_value": 468083902
+    },
+    "iso_time": "2025-12-07T09:59:23Z"
+  },
+  {
+    "timestamp": 1765101563.360898,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "704",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T09:59:23Z"
+  },
+  {
+    "timestamp": 1765101727.0153549,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "712",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T10:02:07Z"
+  },
+  {
+    "timestamp": 1765101755.070623,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "709",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T10:02:35Z"
+  },
+  {
+    "timestamp": 1765102073.341095,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "709",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T10:07:53Z"
+  },
+  {
+    "timestamp": 1765102182.445747,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "705",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T10:09:42Z"
+  },
+  {
+    "timestamp": 1765102269.498184,
+    "seed_id": "2004-II-15::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-15::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-07T10:11:09Z"
+  },
+  {
+    "timestamp": 1765102269.498378,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-15::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 559464881
+    },
+    "iso_time": "2025-12-07T10:11:09Z"
+  },
+  {
+    "timestamp": 1765102270.804725,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 1024,
+        "k": 10,
+        "folds": "LRRLLLLLRL",
+        "target": 957
+      }
+    },
+    "iso_time": "2025-12-07T10:11:10Z"
+  },
+  {
+    "timestamp": 1765102271.947995,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 530
+    },
+    "iso_time": "2025-12-07T10:11:11Z"
+  },
+  {
+    "timestamp": 1765102271.9481359,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A long, thin strip of paper is 1024 units long, 1 unit wide, and divided into 1024 unit squares labeled 1 through 1024 f",
+      "correct_answer": "530",
+      "seed_value": 559464881
+    },
+    "iso_time": "2025-12-07T10:11:11Z"
+  },
+  {
+    "timestamp": 1765102271.9481878,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "530",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T10:11:11Z"
+  },
+  {
+    "timestamp": 1765102374.973102,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "530",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T10:12:54Z"
+  },
+  {
+    "timestamp": 1765102401.025055,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "525",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T10:13:21Z"
+  },
+  {
+    "timestamp": 1765102558.775139,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "528",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T10:15:58Z"
+  },
+  {
+    "timestamp": 1765102634.037479,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "532",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T10:17:14Z"
+  },
+  {
+    "timestamp": 1765102766.54939,
+    "seed_id": "2004-II-15::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-15::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T10:19:26Z"
+  },
+  {
+    "timestamp": 1765102766.5495548,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-15::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1289806108
+    },
+    "iso_time": "2025-12-07T10:19:26Z"
+  },
+  {
+    "timestamp": 1765102767.865366,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 512,
+        "k": 9,
+        "folds": "LRLLRLLLR",
+        "target": 133
+      }
+    },
+    "iso_time": "2025-12-07T10:19:27Z"
+  },
+  {
+    "timestamp": 1765102768.910732,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 497
+    },
+    "iso_time": "2025-12-07T10:19:28Z"
+  },
+  {
+    "timestamp": 1765102768.9108648,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A long, thin strip of paper is 512 units long, 1 unit wide, and divided into 512 unit squares labeled 1 through 512 from",
+      "correct_answer": "497",
+      "seed_value": 1289806108
+    },
+    "iso_time": "2025-12-07T10:19:28Z"
+  },
+  {
+    "timestamp": 1765102768.91091,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "503",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T10:19:28Z"
+  },
+  {
+    "timestamp": 1765102885.717185,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "501",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T10:21:25Z"
+  },
+  {
+    "timestamp": 1765103014.152257,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "497",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T10:23:34Z"
+  },
+  {
+    "timestamp": 1765103149.627051,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "497",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T10:25:49Z"
+  },
+  {
+    "timestamp": 1765103236.337675,
+    "seed_id": "2004-II-15::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "506",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T10:27:16Z"
+  },
+  {
+    "timestamp": 1765103292.6527581,
+    "seed_id": "2004-II-15::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-15::2004_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T10:28:12Z"
+  }
+]

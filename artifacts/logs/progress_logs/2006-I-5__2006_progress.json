@@ -1,0 +1,724 @@
+[
+  {
+    "timestamp": 1765326654.3162339,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2006,
+      "question_preview": "The number $\\sqrt{104\\sqrt{6}+468\\sqrt{10}+144\\sqrt{15}+2006}$ can be written as $a\\sqrt{2}+b\\sqrt{3}+c\\sqrt{5},$ where ",
+      "answer": "936",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-10T00:30:54Z"
+  },
+  {
+    "timestamp": 1765326654.31631,
+    "seed_id": "2006-I-5::2006",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-10T00:30:54Z"
+  },
+  {
+    "timestamp": 1765326654.316343,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "The number $\\sqrt{104\\sqrt{6}+468\\sqrt{10}+144\\sqrt{15}+2006}$ can be written as $a\\sqrt{2}+b\\sqrt{3}+c\\sqrt{5},$ where $a, b,$ and $c$ are positive integers. Find $abc.$",
+      "answer": "936",
+      "example_id": "2006-I-5::2006"
+    },
+    "iso_time": "2025-12-10T00:30:54Z"
+  },
+  {
+    "timestamp": 1765326827.774294,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-5::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 830756812
+    },
+    "iso_time": "2025-12-10T00:33:47Z"
+  },
+  {
+    "timestamp": 1765326828.917917,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 5,
+        "r2": 23,
+        "r3": 17,
+        "r4": 3,
+        "k12": 676,
+        "k13": 728,
+        "k14": 312,
+        "k23": 364,
+        "k24": 156,
+        "k34": 168,
+        "m": 10707
+      }
+    },
+    "iso_time": "2025-12-10T00:33:48Z"
+  },
+  {
+    "timestamp": 1765326830.076141,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 59
+    },
+    "iso_time": "2025-12-10T00:33:50Z"
+  },
+  {
+    "timestamp": 1765326830.076311,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the number sqrt( 676*sqrt(5*23) + 728*sqrt(5*17) + 312*sqrt(5*3) + 364*sqrt(23*17) + 156*sqrt(23*3) + 168*sqrt(",
+      "correct_answer": "59",
+      "seed_value": 830756812
+    },
+    "iso_time": "2025-12-10T00:33:50Z"
+  },
+  {
+    "timestamp": 1765326830.0763588,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:33:50Z"
+  },
+  {
+    "timestamp": 1765326845.610108,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "51",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:34:05Z"
+  },
+  {
+    "timestamp": 1765326890.1310358,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "67",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:34:50Z"
+  },
+  {
+    "timestamp": 1765326923.102546,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "59",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:35:23Z"
+  },
+  {
+    "timestamp": 1765326937.497715,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "63",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:35:37Z"
+  },
+  {
+    "timestamp": 1765326948.87698,
+    "seed_id": "2006-I-5::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-5::2006_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-10T00:35:48Z"
+  },
+  {
+    "timestamp": 1765326948.877177,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-5::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 945630400
+    },
+    "iso_time": "2025-12-10T00:35:48Z"
+  },
+  {
+    "timestamp": 1765326950.1958668,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 13,
+        "r2": 2,
+        "r3": 23,
+        "r4": 3,
+        "k12": 952,
+        "k13": 896,
+        "k14": 896,
+        "k23": 544,
+        "k24": 544,
+        "k34": 512,
+        "m": 17426
+      }
+    },
+    "iso_time": "2025-12-10T00:35:50Z"
+  },
+  {
+    "timestamp": 1765326951.429683,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 77
+    },
+    "iso_time": "2025-12-10T00:35:51Z"
+  },
+  {
+    "timestamp": 1765326951.429895,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the number sqrt( 952*sqrt(13*2) + 896*sqrt(13*23) + 896*sqrt(13*3) + 544*sqrt(2*23) + 544*sqrt(2*3) + 512*sqrt(",
+      "correct_answer": "77",
+      "seed_value": 945630400
+    },
+    "iso_time": "2025-12-10T00:35:51Z"
+  },
+  {
+    "timestamp": 1765326951.429945,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "84",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:35:51Z"
+  },
+  {
+    "timestamp": 1765326985.954628,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "82",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:36:25Z"
+  },
+  {
+    "timestamp": 1765327004.786842,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "86",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:36:44Z"
+  },
+  {
+    "timestamp": 1765327022.740143,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "77",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:37:02Z"
+  },
+  {
+    "timestamp": 1765327032.444635,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "77",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:37:12Z"
+  },
+  {
+    "timestamp": 1765327050.3657448,
+    "seed_id": "2006-I-5::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-5::2006_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-10T00:37:30Z"
+  },
+  {
+    "timestamp": 1765327050.3658938,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-5::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 468619917
+    },
+    "iso_time": "2025-12-10T00:37:30Z"
+  },
+  {
+    "timestamp": 1765327051.497462,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 11,
+        "r2": 23,
+        "r3": 3,
+        "r4": 2,
+        "k12": 754,
+        "k13": 812,
+        "k14": 638,
+        "k23": 364,
+        "k24": 286,
+        "k34": 308,
+        "m": 13968
+      }
+    },
+    "iso_time": "2025-12-10T00:37:31Z"
+  },
+  {
+    "timestamp": 1765327052.515164,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 67
+    },
+    "iso_time": "2025-12-10T00:37:32Z"
+  },
+  {
+    "timestamp": 1765327052.515378,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the number sqrt( 754*sqrt(11*23) + 812*sqrt(11*3) + 638*sqrt(11*2) + 364*sqrt(23*3) + 286*sqrt(23*2) + 308*sqrt",
+      "correct_answer": "67",
+      "seed_value": 468619917
+    },
+    "iso_time": "2025-12-10T00:37:32Z"
+  },
+  {
+    "timestamp": 1765327052.5154471,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "71",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:37:32Z"
+  },
+  {
+    "timestamp": 1765327061.5520132,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "59",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:37:41Z"
+  },
+  {
+    "timestamp": 1765327078.920136,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "67",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:37:58Z"
+  },
+  {
+    "timestamp": 1765327089.604688,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "67",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:38:09Z"
+  },
+  {
+    "timestamp": 1765327112.237939,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "74",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:38:32Z"
+  },
+  {
+    "timestamp": 1765327139.558466,
+    "seed_id": "2006-I-5::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-5::2006_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-10T00:38:59Z"
+  },
+  {
+    "timestamp": 1765327139.558659,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-5::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1159910077
+    },
+    "iso_time": "2025-12-10T00:38:59Z"
+  },
+  {
+    "timestamp": 1765327140.921026,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 3,
+        "r2": 2,
+        "r3": 29,
+        "r4": 11,
+        "k12": 700,
+        "k13": 1300,
+        "k14": 1500,
+        "k23": 728,
+        "k24": 840,
+        "k34": 1560,
+        "m": 31771
+      }
+    },
+    "iso_time": "2025-12-10T00:39:00Z"
+  },
+  {
+    "timestamp": 1765327142.0315478,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 95
+    },
+    "iso_time": "2025-12-10T00:39:02Z"
+  },
+  {
+    "timestamp": 1765327142.03169,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the number sqrt( 700*sqrt(3*2) + 1300*sqrt(3*29) + 1500*sqrt(3*11) + 728*sqrt(2*29) + 840*sqrt(2*11) + 1560*sqr",
+      "correct_answer": "95",
+      "seed_value": 1159910077
+    },
+    "iso_time": "2025-12-10T00:39:02Z"
+  },
+  {
+    "timestamp": 1765327142.031738,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "100",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:39:02Z"
+  },
+  {
+    "timestamp": 1765327156.8888042,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "95",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:39:16Z"
+  },
+  {
+    "timestamp": 1765327180.53943,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "101",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:39:40Z"
+  },
+  {
+    "timestamp": 1765327203.219776,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "99",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:40:03Z"
+  },
+  {
+    "timestamp": 1765327223.9353971,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "95",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:40:23Z"
+  },
+  {
+    "timestamp": 1765327239.9854982,
+    "seed_id": "2006-I-5::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-5::2006_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-10T00:40:39Z"
+  },
+  {
+    "timestamp": 1765327239.985674,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2006-I-5::2006_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 989586074
+    },
+    "iso_time": "2025-12-10T00:40:39Z"
+  },
+  {
+    "timestamp": 1765327241.3418891,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "r1": 11,
+        "r2": 19,
+        "r3": 23,
+        "r4": 5,
+        "k12": 48,
+        "k13": 108,
+        "k14": 42,
+        "k23": 288,
+        "k24": 112,
+        "k34": 252,
+        "m": 9012
+      }
+    },
+    "iso_time": "2025-12-10T00:40:41Z"
+  },
+  {
+    "timestamp": 1765327242.499902,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 36
+    },
+    "iso_time": "2025-12-10T00:40:42Z"
+  },
+  {
+    "timestamp": 1765327242.5000598,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Consider the number sqrt( 48*sqrt(11*19) + 108*sqrt(11*23) + 42*sqrt(11*5) + 288*sqrt(19*23) + 112*sqrt(19*5) + 252*sqrt",
+      "correct_answer": "36",
+      "seed_value": 989586074
+    },
+    "iso_time": "2025-12-10T00:40:42Z"
+  },
+  {
+    "timestamp": 1765327242.500109,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "38",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:40:42Z"
+  },
+  {
+    "timestamp": 1765327250.7707782,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "45",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:40:50Z"
+  },
+  {
+    "timestamp": 1765327259.593719,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "36",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:40:59Z"
+  },
+  {
+    "timestamp": 1765327267.169601,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "36",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-10T00:41:07Z"
+  },
+  {
+    "timestamp": 1765327283.5545652,
+    "seed_id": "2006-I-5::2006",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "44",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-10T00:41:23Z"
+  },
+  {
+    "timestamp": 1765327294.2965262,
+    "seed_id": "2006-I-5::2006",
+    "stage": "variant_success",
+    "message": "Accepted variant 2006-I-5::2006_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-10T00:41:34Z"
+  }
+]

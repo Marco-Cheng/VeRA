@@ -1,0 +1,879 @@
+[
+  {
+    "timestamp": 1765017685.279349,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "Alpha and Beta both took part in a two-day problem-solving competition. At the end of the second day, each had attempted",
+      "answer": "849",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-06T10:41:25Z"
+  },
+  {
+    "timestamp": 1765017685.279423,
+    "seed_id": "2004-I-5::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-06T10:41:25Z"
+  },
+  {
+    "timestamp": 1765017685.279454,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Alpha and Beta both took part in a two-day problem-solving competition. At the end of the second day, each had attempted questions worth a total of $500$ points. Alpha scored $160$ points out of $300$ points attempted on the first day, and scored $140$ points out of $200$ points attempted on the second day. Beta who did not attempt $300$ points on the first day, had a positive integer score on each of the two days, and Beta's daily success rate (points scored divided by points attempted) on each day was less than Alpha's on that day. Alpha's two-day success ratio was $\\frac{300}{500} = \\frac{3}{5}$ . The largest possible two-day success ratio that Beta could achieve is $m/n,$ where $m$ and $n$ are relatively prime positive integers. What is $m+n$ ?",
+      "answer": "849",
+      "example_id": "2004-I-5::2004"
+    },
+    "iso_time": "2025-12-06T10:41:25Z"
+  },
+  {
+    "timestamp": 1765018146.534813,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-5::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1389247718
+    },
+    "iso_time": "2025-12-06T10:49:06Z"
+  },
+  {
+    "timestamp": 1765018149.527456,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "days": 3,
+        "alpha_day_summary": "Day 1: attempted 16 and scored 10; Day 2: attempted 28 and scored 18; Day 3: attempted 44 and scored 28",
+        "total_attempts": 88,
+        "alpha_overall_num": 7,
+        "alpha_overall_den": 11,
+        "forbidden_day": 3,
+        "forbidden_attempt_value": 44,
+        "congruence_day": 1,
+        "congruence_mod": 3,
+        "congruence_res": 0,
+        "A": [
+          16,
+          28,
+          44
+        ],
+        "S": [
+          10,
+          18,
+          28
+        ],
+        "p": [
+          5,
+          9,
+          7
+        ],
+        "q": [
+          8,
+          14,
+          11
+        ],
+        "answer": 13
+      }
+    },
+    "iso_time": "2025-12-06T10:49:09Z"
+  },
+  {
+    "timestamp": 1765018150.7567449,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 13
+    },
+    "iso_time": "2025-12-06T10:49:10Z"
+  },
+  {
+    "timestamp": 1765018150.756926,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A three-day problem-solving contest had the following results for Alpha: Day 1: attempted 16 and scored 10; Day 2: attem",
+      "correct_answer": "13",
+      "seed_value": 1389247718
+    },
+    "iso_time": "2025-12-06T10:49:10Z"
+  },
+  {
+    "timestamp": 1765018150.756978,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "5",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T10:49:10Z"
+  },
+  {
+    "timestamp": 1765018866.966034,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "13",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T11:01:06Z"
+  },
+  {
+    "timestamp": 1765019215.746943,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "20",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T11:06:55Z"
+  },
+  {
+    "timestamp": 1765019433.577665,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "14",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T11:10:33Z"
+  },
+  {
+    "timestamp": 1765019860.069647,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "13",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T11:17:40Z"
+  },
+  {
+    "timestamp": 1765020331.316869,
+    "seed_id": "2004-I-5::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-5::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T11:25:31Z"
+  },
+  {
+    "timestamp": 1765020331.317067,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-5::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 978796477
+    },
+    "iso_time": "2025-12-06T11:25:31Z"
+  },
+  {
+    "timestamp": 1765020339.761788,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "days": 3,
+        "alpha_day_summary": "Day 1: attempted 22 and scored 14; Day 2: attempted 16 and scored 10; Day 3: attempted 56 and scored 36",
+        "total_attempts": 94,
+        "alpha_overall_num": 30,
+        "alpha_overall_den": 47,
+        "forbidden_day": 3,
+        "forbidden_attempt_value": 56,
+        "congruence_day": 2,
+        "congruence_mod": 4,
+        "congruence_res": 3,
+        "A": [
+          22,
+          16,
+          56
+        ],
+        "S": [
+          14,
+          10,
+          36
+        ],
+        "p": [
+          7,
+          5,
+          9
+        ],
+        "q": [
+          11,
+          8,
+          14
+        ],
+        "answer": 153
+      }
+    },
+    "iso_time": "2025-12-06T11:25:39Z"
+  },
+  {
+    "timestamp": 1765020340.896399,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 153
+    },
+    "iso_time": "2025-12-06T11:25:40Z"
+  },
+  {
+    "timestamp": 1765020340.8965619,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A three-day problem-solving contest had the following results for Alpha: Day 1: attempted 22 and scored 14; Day 2: attem",
+      "correct_answer": "153",
+      "seed_value": 978796477
+    },
+    "iso_time": "2025-12-06T11:25:40Z"
+  },
+  {
+    "timestamp": 1765020340.896616,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "155",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T11:25:40Z"
+  },
+  {
+    "timestamp": 1765020936.7004669,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "160",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T11:35:36Z"
+  },
+  {
+    "timestamp": 1765021483.509237,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "153",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T11:44:43Z"
+  },
+  {
+    "timestamp": 1765021948.93875,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "153",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T11:52:28Z"
+  },
+  {
+    "timestamp": 1765022524.924664,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "162",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T12:02:04Z"
+  },
+  {
+    "timestamp": 1765022638.254195,
+    "seed_id": "2004-I-5::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-5::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T12:03:58Z"
+  },
+  {
+    "timestamp": 1765022638.254304,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-5::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 584882255
+    },
+    "iso_time": "2025-12-06T12:03:58Z"
+  },
+  {
+    "timestamp": 1765022639.976898,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "days": 3,
+        "alpha_day_summary": "Day 1: attempted 24 and scored 15; Day 2: attempted 33 and scored 21; Day 3: attempted 84 and scored 54",
+        "total_attempts": 141,
+        "alpha_overall_num": 30,
+        "alpha_overall_den": 47,
+        "forbidden_day": 3,
+        "forbidden_attempt_value": 84,
+        "congruence_day": 1,
+        "congruence_mod": 4,
+        "congruence_res": 3,
+        "A": [
+          24,
+          33,
+          84
+        ],
+        "S": [
+          15,
+          21,
+          54
+        ],
+        "p": [
+          5,
+          7,
+          9
+        ],
+        "q": [
+          8,
+          11,
+          14
+        ],
+        "answer": 230
+      }
+    },
+    "iso_time": "2025-12-06T12:03:59Z"
+  },
+  {
+    "timestamp": 1765022641.0569909,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 230
+    },
+    "iso_time": "2025-12-06T12:04:01Z"
+  },
+  {
+    "timestamp": 1765022641.05715,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A three-day problem-solving contest had the following results for Alpha: Day 1: attempted 24 and scored 15; Day 2: attem",
+      "correct_answer": "230",
+      "seed_value": 584882255
+    },
+    "iso_time": "2025-12-06T12:04:01Z"
+  },
+  {
+    "timestamp": 1765022641.057195,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "230",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T12:04:01Z"
+  },
+  {
+    "timestamp": 1765022877.1313438,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "230",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T12:07:57Z"
+  },
+  {
+    "timestamp": 1765023519.554442,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "231",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T12:18:39Z"
+  },
+  {
+    "timestamp": 1765023983.632925,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "228",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T12:26:23Z"
+  },
+  {
+    "timestamp": 1765024719.0721579,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "235",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T12:38:39Z"
+  },
+  {
+    "timestamp": 1765025375.971909,
+    "seed_id": "2004-I-5::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-5::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T12:49:35Z"
+  },
+  {
+    "timestamp": 1765025375.972094,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-5::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1517053314
+    },
+    "iso_time": "2025-12-06T12:49:35Z"
+  },
+  {
+    "timestamp": 1765025384.264216,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "days": 3,
+        "alpha_day_summary": "Day 1: attempted 16 and scored 10; Day 2: attempted 66 and scored 42; Day 3: attempted 70 and scored 45",
+        "total_attempts": 152,
+        "alpha_overall_num": 97,
+        "alpha_overall_den": 152,
+        "forbidden_day": 3,
+        "forbidden_attempt_value": 70,
+        "congruence_day": 1,
+        "congruence_mod": 5,
+        "congruence_res": 4,
+        "A": [
+          16,
+          66,
+          70
+        ],
+        "S": [
+          10,
+          42,
+          45
+        ],
+        "p": [
+          5,
+          7,
+          9
+        ],
+        "q": [
+          8,
+          11,
+          14
+        ],
+        "answer": 31
+      }
+    },
+    "iso_time": "2025-12-06T12:49:44Z"
+  },
+  {
+    "timestamp": 1765025385.3950348,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 31
+    },
+    "iso_time": "2025-12-06T12:49:45Z"
+  },
+  {
+    "timestamp": 1765025385.395186,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A three-day problem-solving contest had the following results for Alpha: Day 1: attempted 16 and scored 10; Day 2: attem",
+      "correct_answer": "31",
+      "seed_value": 1517053314
+    },
+    "iso_time": "2025-12-06T12:49:45Z"
+  },
+  {
+    "timestamp": 1765025385.395231,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "33",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T12:49:45Z"
+  },
+  {
+    "timestamp": 1765025739.591337,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "31",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T12:55:39Z"
+  },
+  {
+    "timestamp": 1765026231.660335,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "22",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T13:03:51Z"
+  },
+  {
+    "timestamp": 1765026475.335666,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "31",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T13:07:55Z"
+  },
+  {
+    "timestamp": 1765027193.470508,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "26",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T13:19:53Z"
+  },
+  {
+    "timestamp": 1765027926.893492,
+    "seed_id": "2004-I-5::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-5::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T13:32:06Z"
+  },
+  {
+    "timestamp": 1765027926.8938649,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-5::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2125788542
+    },
+    "iso_time": "2025-12-06T13:32:06Z"
+  },
+  {
+    "timestamp": 1765027936.905971,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-12-06T13:32:16Z"
+  },
+  {
+    "timestamp": 1765027938.045334,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-12-06T13:32:18Z"
+  },
+  {
+    "timestamp": 1765027938.0454311,
+    "seed_id": "2004-I-5::2004",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.151573896408081
+    },
+    "iso_time": "2025-12-06T13:32:18Z"
+  },
+  {
+    "timestamp": 1765027938.045465,
+    "seed_id": "2004-I-5::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-12-06T13:32:18Z"
+  },
+  {
+    "timestamp": 1765027938.0454788,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Sample 5 failed to produce valid assignment.",
+      "question": "Alpha and Beta both took part in a two-day problem-solving competition. At the end of the second day, each had attempted questions worth a total of $500$ points. Alpha scored $160$ points out of $300$ points attempted on the first day, and scored $140$ points out of $200$ points attempted on the second day. Beta who did not attempt $300$ points on the first day, had a positive integer score on each of the two days, and Beta's daily success rate (points scored divided by points attempted) on each day was less than Alpha's on that day. Alpha's two-day success ratio was $\\frac{300}{500} = \\frac{3}{5}$ . The largest possible two-day success ratio that Beta could achieve is $m/n,$ where $m$ and $n$ are relatively prime positive integers. What is $m+n$ ?",
+      "answer": "849",
+      "example_id": "2004-I-5::2004"
+    },
+    "iso_time": "2025-12-06T13:32:18Z"
+  },
+  {
+    "timestamp": 1765028564.316913,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-I-5::2004_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1325166935
+    },
+    "iso_time": "2025-12-06T13:42:44Z"
+  },
+  {
+    "timestamp": 1765028565.687498,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a1": 130,
+        "s1": 100,
+        "a2": 270,
+        "s2": 198,
+        "a3": 380,
+        "s3": 133,
+        "total_attempted": 780,
+        "l1": 3,
+        "u1": 406,
+        "l2": 2,
+        "u2": 178,
+        "l3": 4,
+        "u3": 197,
+        "forb_day": 2,
+        "forbidden_value": 270
+      }
+    },
+    "iso_time": "2025-12-06T13:42:45Z"
+  },
+  {
+    "timestamp": 1765028566.809152,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 43
+    },
+    "iso_time": "2025-12-06T13:42:46Z"
+  },
+  {
+    "timestamp": 1765028566.809349,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a three-day problem-solving competition, Alpha attempted 130 points and scored 100 on Day 1, attempted 270 points and",
+      "correct_answer": "43",
+      "seed_value": 1325166935
+    },
+    "iso_time": "2025-12-06T13:42:46Z"
+  },
+  {
+    "timestamp": 1765028566.8093991,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "40",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T13:42:46Z"
+  },
+  {
+    "timestamp": 1765028770.6520782,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "37",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T13:46:10Z"
+  },
+  {
+    "timestamp": 1765028952.22223,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "43",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T13:49:12Z"
+  },
+  {
+    "timestamp": 1765029103.2675278,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "43",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-06T13:51:43Z"
+  },
+  {
+    "timestamp": 1765029261.279847,
+    "seed_id": "2004-I-5::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "34",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-06T13:54:21Z"
+  },
+  {
+    "timestamp": 1765029300.576527,
+    "seed_id": "2004-I-5::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-I-5::2004_prompt02-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-06T13:55:00Z"
+  }
+]

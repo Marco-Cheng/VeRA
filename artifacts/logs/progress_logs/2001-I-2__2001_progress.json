@@ -1,0 +1,714 @@
+[
+  {
+    "timestamp": 1764445379.7080479,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2001,
+      "question_preview": "A finite set $\\mathcal{S}$ of distinct real numbers has the following properties: the mean of $\\mathcal{S}\\cup\\{1\\}$ is ",
+      "answer": "651",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-29T19:42:59Z"
+  },
+  {
+    "timestamp": 1764445379.708085,
+    "seed_id": "2001-I-2::2001",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-29T19:42:59Z"
+  },
+  {
+    "timestamp": 1764445379.7081048,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A finite set $\\mathcal{S}$ of distinct real numbers has the following properties: the mean of $\\mathcal{S}\\cup\\{1\\}$ is $13$ less than the mean of $\\mathcal{S}$ , and the mean of $\\mathcal{S}\\cup\\{2001\\}$ is $27$ more than the mean of $\\mathcal{S}$ . Find the mean of $\\mathcal{S}$ .",
+      "answer": "651",
+      "example_id": "2001-I-2::2001"
+    },
+    "iso_time": "2025-11-29T19:42:59Z"
+  },
+  {
+    "timestamp": 1764445480.487285,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-2::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 110482456
+    },
+    "iso_time": "2025-11-29T19:44:40Z"
+  },
+  {
+    "timestamp": 1764445481.8776221,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u_count": 6,
+        "a1_first": 1713,
+        "d1_diff": 10,
+        "v_count": 10,
+        "a2_first": 1638,
+        "d2_diff": 12,
+        "delta_a": 23,
+        "delta_b": 23,
+        "delta_ab": 38
+      }
+    },
+    "iso_time": "2025-11-29T19:44:41Z"
+  },
+  {
+    "timestamp": 1764445482.95173,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1600
+    },
+    "iso_time": "2025-11-29T19:44:42Z"
+  },
+  {
+    "timestamp": 1764445482.951905,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be a finite set of distinct real numbers with unknown size and mean. Consider two arithmetic progressions A and B ",
+      "correct_answer": "1600",
+      "seed_value": 110482456
+    },
+    "iso_time": "2025-11-29T19:44:42Z"
+  },
+  {
+    "timestamp": 1764445482.95195,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:44:42Z"
+  },
+  {
+    "timestamp": 1764445495.456318,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1593",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:44:55Z"
+  },
+  {
+    "timestamp": 1764445507.975567,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1595",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:45:07Z"
+  },
+  {
+    "timestamp": 1764445520.17276,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1600",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:45:20Z"
+  },
+  {
+    "timestamp": 1764445529.9679801,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1606",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:45:29Z"
+  },
+  {
+    "timestamp": 1764445542.765484,
+    "seed_id": "2001-I-2::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-2::2001_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T19:45:42Z"
+  },
+  {
+    "timestamp": 1764445542.765614,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-2::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 101911346
+    },
+    "iso_time": "2025-11-29T19:45:42Z"
+  },
+  {
+    "timestamp": 1764445544.0408828,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u_count": 4,
+        "a1_first": 4985,
+        "d1_diff": 8,
+        "v_count": 6,
+        "a2_first": 3903,
+        "d2_diff": 6,
+        "delta_a": 83,
+        "delta_b": 83,
+        "delta_ab": 161
+      }
+    },
+    "iso_time": "2025-11-29T19:45:44Z"
+  },
+  {
+    "timestamp": 1764445545.14362,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1677
+    },
+    "iso_time": "2025-11-29T19:45:45Z"
+  },
+  {
+    "timestamp": 1764445545.1437912,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be a finite set of distinct real numbers with unknown size and mean. Consider two arithmetic progressions A and B ",
+      "correct_answer": "1677",
+      "seed_value": 101911346
+    },
+    "iso_time": "2025-11-29T19:45:45Z"
+  },
+  {
+    "timestamp": 1764445545.143837,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1682",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:45:45Z"
+  },
+  {
+    "timestamp": 1764445557.1928399,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1677",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:45:57Z"
+  },
+  {
+    "timestamp": 1764445569.4767601,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1677",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:46:09Z"
+  },
+  {
+    "timestamp": 1764445582.182575,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1669",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:46:22Z"
+  },
+  {
+    "timestamp": 1764445596.7392058,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1679",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:46:36Z"
+  },
+  {
+    "timestamp": 1764445609.317096,
+    "seed_id": "2001-I-2::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-2::2001_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T19:46:49Z"
+  },
+  {
+    "timestamp": 1764445609.317186,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-2::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1905031018
+    },
+    "iso_time": "2025-11-29T19:46:49Z"
+  },
+  {
+    "timestamp": 1764445610.48497,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u_count": 4,
+        "a1_first": 821,
+        "d1_diff": 6,
+        "v_count": 8,
+        "a2_first": 751,
+        "d2_diff": 10,
+        "delta_a": 11,
+        "delta_b": 11,
+        "delta_ab": 19
+      }
+    },
+    "iso_time": "2025-11-29T19:46:50Z"
+  },
+  {
+    "timestamp": 1764445611.634613,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 731
+    },
+    "iso_time": "2025-11-29T19:46:51Z"
+  },
+  {
+    "timestamp": 1764445611.634773,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be a finite set of distinct real numbers with unknown size and mean. Consider two arithmetic progressions A and B ",
+      "correct_answer": "731",
+      "seed_value": 1905031018
+    },
+    "iso_time": "2025-11-29T19:46:51Z"
+  },
+  {
+    "timestamp": 1764445611.6348329,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "731",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:46:51Z"
+  },
+  {
+    "timestamp": 1764445651.4023402,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "731",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:47:31Z"
+  },
+  {
+    "timestamp": 1764445704.3421068,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "724",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:48:24Z"
+  },
+  {
+    "timestamp": 1764445758.970728,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "738",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:49:18Z"
+  },
+  {
+    "timestamp": 1764445795.930051,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "736",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:49:55Z"
+  },
+  {
+    "timestamp": 1764445843.0958579,
+    "seed_id": "2001-I-2::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-2::2001_prompt01-3",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-29T19:50:43Z"
+  },
+  {
+    "timestamp": 1764445843.0959628,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-2::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 395730090
+    },
+    "iso_time": "2025-11-29T19:50:43Z"
+  },
+  {
+    "timestamp": 1764445844.216042,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u_count": 6,
+        "a1_first": 4599,
+        "d1_diff": 4,
+        "v_count": 9,
+        "a2_first": 3507,
+        "d2_diff": 10,
+        "delta_a": 118,
+        "delta_b": 118,
+        "delta_ab": 226
+      }
+    },
+    "iso_time": "2025-11-29T19:50:44Z"
+  },
+  {
+    "timestamp": 1764445845.264787,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1305
+    },
+    "iso_time": "2025-11-29T19:50:45Z"
+  },
+  {
+    "timestamp": 1764445845.2649422,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be a finite set of distinct real numbers with unknown size and mean. Consider two arithmetic progressions A and B ",
+      "correct_answer": "1305",
+      "seed_value": 395730090
+    },
+    "iso_time": "2025-11-29T19:50:45Z"
+  },
+  {
+    "timestamp": 1764445845.264987,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1312",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:50:45Z"
+  },
+  {
+    "timestamp": 1764445860.988076,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1305",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:51:00Z"
+  },
+  {
+    "timestamp": 1764445875.147438,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1303",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:51:15Z"
+  },
+  {
+    "timestamp": 1764445892.658771,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1305",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:51:32Z"
+  },
+  {
+    "timestamp": 1764445904.9509912,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1296",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:51:44Z"
+  },
+  {
+    "timestamp": 1764445919.756459,
+    "seed_id": "2001-I-2::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-2::2001_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T19:51:59Z"
+  },
+  {
+    "timestamp": 1764445919.756685,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2001-I-2::2001_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1910474359
+    },
+    "iso_time": "2025-11-29T19:51:59Z"
+  },
+  {
+    "timestamp": 1764445920.810101,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "u_count": 9,
+        "a1_first": 2120,
+        "d1_diff": 10,
+        "v_count": 3,
+        "a2_first": 2724,
+        "d2_diff": 6,
+        "delta_a": 57,
+        "delta_b": 57,
+        "delta_ab": 102
+      }
+    },
+    "iso_time": "2025-11-29T19:52:00Z"
+  },
+  {
+    "timestamp": 1764445921.849493,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1818
+    },
+    "iso_time": "2025-11-29T19:52:01Z"
+  },
+  {
+    "timestamp": 1764445921.849659,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let S be a finite set of distinct real numbers with unknown size and mean. Consider two arithmetic progressions A and B ",
+      "correct_answer": "1818",
+      "seed_value": 1910474359
+    },
+    "iso_time": "2025-11-29T19:52:01Z"
+  },
+  {
+    "timestamp": 1764445921.849704,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1820",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:52:01Z"
+  },
+  {
+    "timestamp": 1764445931.6716459,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1818",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:52:11Z"
+  },
+  {
+    "timestamp": 1764445942.222126,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1818",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-29T19:52:22Z"
+  },
+  {
+    "timestamp": 1764445951.3389492,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1810",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:52:31Z"
+  },
+  {
+    "timestamp": 1764445964.23816,
+    "seed_id": "2001-I-2::2001",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1823",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-29T19:52:44Z"
+  },
+  {
+    "timestamp": 1764445977.702288,
+    "seed_id": "2001-I-2::2001",
+    "stage": "variant_success",
+    "message": "Accepted variant 2001-I-2::2001_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-29T19:52:57Z"
+  }
+]

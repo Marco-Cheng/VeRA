@@ -1,0 +1,674 @@
+[
+  {
+    "timestamp": 1764319266.6135209,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1999,
+      "question_preview": "Ten points in the plane are given, with no three collinear.  Four distinct segments joining pairs of these points are ch",
+      "answer": "489",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-28T08:41:06Z"
+  },
+  {
+    "timestamp": 1764319266.613626,
+    "seed_id": "1999-10::1999",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-28T08:41:06Z"
+  },
+  {
+    "timestamp": 1764319266.6136599,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Ten points in the plane are given, with no three collinear.  Four distinct segments joining pairs of these points are chosen at random, all such segments being equally likely.  The probability that some three of the segments form a triangle whose vertices are among the ten given points is $m/n,$ where $m_{}$ and $n_{}$ are relatively prime positive integers.  Find $m+n.$",
+      "answer": "489",
+      "example_id": "1999-10::1999"
+    },
+    "iso_time": "2025-11-28T08:41:06Z"
+  },
+  {
+    "timestamp": 1764319349.225009,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-10::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 2091235562
+    },
+    "iso_time": "2025-11-28T08:42:29Z"
+  },
+  {
+    "timestamp": 1764319350.461804,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_points": 14
+      }
+    },
+    "iso_time": "2025-11-28T08:42:30Z"
+  },
+  {
+    "timestamp": 1764319351.513101,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7793
+    },
+    "iso_time": "2025-11-28T08:42:31Z"
+  },
+  {
+    "timestamp": 1764319351.5132642,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 14 points are placed in the plane in general position (no three are collinear). Five distinct segment",
+      "correct_answer": "7793",
+      "seed_value": 2091235562
+    },
+    "iso_time": "2025-11-28T08:42:31Z"
+  },
+  {
+    "timestamp": 1764319351.5133069,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7793",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:42:31Z"
+  },
+  {
+    "timestamp": 1764319423.699501,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7793",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:43:43Z"
+  },
+  {
+    "timestamp": 1764319496.439092,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7785",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:44:56Z"
+  },
+  {
+    "timestamp": 1764319699.330077,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7801",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:48:19Z"
+  },
+  {
+    "timestamp": 1764319825.900547,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7787",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:50:25Z"
+  },
+  {
+    "timestamp": 1764319906.797985,
+    "seed_id": "1999-10::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-10::1999_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T08:51:46Z"
+  },
+  {
+    "timestamp": 1764319906.798395,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-10::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 702611926
+    },
+    "iso_time": "2025-11-28T08:51:46Z"
+  },
+  {
+    "timestamp": 1764319907.931648,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_points": 18
+      }
+    },
+    "iso_time": "2025-11-28T08:51:47Z"
+  },
+  {
+    "timestamp": 1764319908.98003,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 428321
+    },
+    "iso_time": "2025-11-28T08:51:48Z"
+  },
+  {
+    "timestamp": 1764319908.980248,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 18 points are placed in the plane in general position (no three are collinear). Five distinct segment",
+      "correct_answer": "428321",
+      "seed_value": 702611926
+    },
+    "iso_time": "2025-11-28T08:51:48Z"
+  },
+  {
+    "timestamp": 1764319908.980329,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "428321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T08:51:48Z"
+  },
+  {
+    "timestamp": 1764319981.858488,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "428316",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:53:01Z"
+  },
+  {
+    "timestamp": 1764320031.198647,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "428314",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:53:51Z"
+  },
+  {
+    "timestamp": 1764320310.624373,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "428323",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T08:58:30Z"
+  },
+  {
+    "timestamp": 1764320438.990703,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "428321",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T09:00:38Z"
+  },
+  {
+    "timestamp": 1764320499.140075,
+    "seed_id": "1999-10::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-10::1999_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T09:01:39Z"
+  },
+  {
+    "timestamp": 1764320499.140336,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-10::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1008795344
+    },
+    "iso_time": "2025-11-28T09:01:39Z"
+  },
+  {
+    "timestamp": 1764320500.314979,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_points": 13
+      }
+    },
+    "iso_time": "2025-11-28T09:01:40Z"
+  },
+  {
+    "timestamp": 1764320501.380043,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4966
+    },
+    "iso_time": "2025-11-28T09:01:41Z"
+  },
+  {
+    "timestamp": 1764320501.380213,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 13 points are placed in the plane in general position (no three are collinear). Five distinct segment",
+      "correct_answer": "4966",
+      "seed_value": 1008795344
+    },
+    "iso_time": "2025-11-28T09:01:41Z"
+  },
+  {
+    "timestamp": 1764320501.380259,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4966",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T09:01:41Z"
+  },
+  {
+    "timestamp": 1764320560.872267,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4966",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T09:02:40Z"
+  },
+  {
+    "timestamp": 1764320671.273142,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4965",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T09:04:31Z"
+  },
+  {
+    "timestamp": 1764320748.793625,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4962",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T09:05:48Z"
+  },
+  {
+    "timestamp": 1764320835.8326058,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4969",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T09:07:15Z"
+  },
+  {
+    "timestamp": 1764321060.702976,
+    "seed_id": "1999-10::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-10::1999_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T09:11:00Z"
+  },
+  {
+    "timestamp": 1764321060.703081,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-10::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 854468042
+    },
+    "iso_time": "2025-11-28T09:11:00Z"
+  },
+  {
+    "timestamp": 1764321062.073448,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_points": 7
+      }
+    },
+    "iso_time": "2025-11-28T09:11:02Z"
+  },
+  {
+    "timestamp": 1764321063.082125,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 373
+    },
+    "iso_time": "2025-11-28T09:11:03Z"
+  },
+  {
+    "timestamp": 1764321063.0822778,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 7 points are placed in the plane in general position (no three are collinear). Five distinct segments",
+      "correct_answer": "373",
+      "seed_value": 854468042
+    },
+    "iso_time": "2025-11-28T09:11:03Z"
+  },
+  {
+    "timestamp": 1764321063.0823228,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "373",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T09:11:03Z"
+  },
+  {
+    "timestamp": 1764321149.4392,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "371",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T09:12:29Z"
+  },
+  {
+    "timestamp": 1764321238.980025,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "373",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T09:13:58Z"
+  },
+  {
+    "timestamp": 1764321396.773775,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "377",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T09:16:36Z"
+  },
+  {
+    "timestamp": 1764321469.8851688,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "379",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T09:17:49Z"
+  },
+  {
+    "timestamp": 1764321567.474468,
+    "seed_id": "1999-10::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-10::1999_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T09:19:27Z"
+  },
+  {
+    "timestamp": 1764321567.474667,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1999-10::1999_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1019492372
+    },
+    "iso_time": "2025-11-28T09:19:27Z"
+  },
+  {
+    "timestamp": 1764321568.717283,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_points": 8
+      }
+    },
+    "iso_time": "2025-11-28T09:19:28Z"
+  },
+  {
+    "timestamp": 1764321569.779765,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 127
+    },
+    "iso_time": "2025-11-28T09:19:29Z"
+  },
+  {
+    "timestamp": 1764321569.779924,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, 8 points are placed in the plane in general position (no three are collinear). Five distinct segments",
+      "correct_answer": "127",
+      "seed_value": 1019492372
+    },
+    "iso_time": "2025-11-28T09:19:29Z"
+  },
+  {
+    "timestamp": 1764321569.779967,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "127",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T09:19:29Z"
+  },
+  {
+    "timestamp": 1764321737.0467358,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "124",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T09:22:17Z"
+  },
+  {
+    "timestamp": 1764321789.1664379,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "125",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T09:23:09Z"
+  },
+  {
+    "timestamp": 1764321870.8720908,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "127",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-28T09:24:30Z"
+  },
+  {
+    "timestamp": 1764322013.1917372,
+    "seed_id": "1999-10::1999",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "131",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-28T09:26:53Z"
+  },
+  {
+    "timestamp": 1764322064.0081549,
+    "seed_id": "1999-10::1999",
+    "stage": "variant_success",
+    "message": "Accepted variant 1999-10::1999_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-28T09:27:44Z"
+  }
+]

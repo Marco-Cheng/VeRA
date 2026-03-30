@@ -1,0 +1,679 @@
+[
+  {
+    "timestamp": 1765149303.334902,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2005,
+      "question_preview": "For positive integers $n,$ let $\\tau (n)$ denote the number of positive integer divisors of $n,$ including 1 and $n.$ Fo",
+      "answer": "25",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-07T23:15:03Z"
+  },
+  {
+    "timestamp": 1765149303.334992,
+    "seed_id": "2005-I-12::2005",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-07T23:15:03Z"
+  },
+  {
+    "timestamp": 1765149303.335042,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "For positive integers $n,$ let $\\tau (n)$ denote the number of positive integer divisors of $n,$ including 1 and $n.$ For example, $\\tau (1)=1$ and $\\tau(6) =4.$ Define $S(n)$ by $S(n)=\\tau(1)+ \\tau(2) + \\cdots + \\tau(n).$ Let $a$ denote the number of positive integers $n \\leq 2005$ with $S(n)$ odd, and let $b$ denote the number of positive integers $n \\leq 2005$ with $S(n)$ even. Find $|a-b|.$",
+      "answer": "25",
+      "example_id": "2005-I-12::2005"
+    },
+    "iso_time": "2025-12-07T23:15:03Z"
+  },
+  {
+    "timestamp": 1765149506.541821,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-12::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1701733998
+    },
+    "iso_time": "2025-12-07T23:18:26Z"
+  },
+  {
+    "timestamp": 1765149507.8078048,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_limit": 26799,
+        "modulus": 6061
+      }
+    },
+    "iso_time": "2025-12-07T23:18:27Z"
+  },
+  {
+    "timestamp": 1765149508.8445828,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 951
+    },
+    "iso_time": "2025-12-07T23:18:28Z"
+  },
+  {
+    "timestamp": 1765149508.844707,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "For positive integers n, let tau(n) denote the number of positive divisors of n, including 1 and n. Fix a modulus 6061. ",
+      "correct_answer": "951",
+      "seed_value": 1701733998
+    },
+    "iso_time": "2025-12-07T23:18:28Z"
+  },
+  {
+    "timestamp": 1765149508.8447602,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "947",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:18:28Z"
+  },
+  {
+    "timestamp": 1765149790.795776,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "949",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:23:10Z"
+  },
+  {
+    "timestamp": 1765150184.9878762,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "951",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T23:29:44Z"
+  },
+  {
+    "timestamp": 1765150453.683842,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "960",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:34:13Z"
+  },
+  {
+    "timestamp": 1765150691.711104,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "951",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T23:38:11Z"
+  },
+  {
+    "timestamp": 1765150947.458289,
+    "seed_id": "2005-I-12::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-12::2005_prompt01-1",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-12-07T23:42:27Z"
+  },
+  {
+    "timestamp": 1765150947.458475,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-12::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1637556479
+    },
+    "iso_time": "2025-12-07T23:42:27Z"
+  },
+  {
+    "timestamp": 1765150948.854648,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_limit": 13690,
+        "modulus": 133
+      }
+    },
+    "iso_time": "2025-12-07T23:42:28Z"
+  },
+  {
+    "timestamp": 1765150950.056035,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 156
+    },
+    "iso_time": "2025-12-07T23:42:30Z"
+  },
+  {
+    "timestamp": 1765150950.0562088,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "For positive integers n, let tau(n) denote the number of positive divisors of n, including 1 and n. Fix a modulus 133. D",
+      "correct_answer": "156",
+      "seed_value": 1637556479
+    },
+    "iso_time": "2025-12-07T23:42:30Z"
+  },
+  {
+    "timestamp": 1765150950.0562618,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "163",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:42:30Z"
+  },
+  {
+    "timestamp": 1765151328.563196,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "160",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:48:48Z"
+  },
+  {
+    "timestamp": 1765151537.601535,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "156",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T23:52:17Z"
+  },
+  {
+    "timestamp": 1765151784.383471,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "153",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T23:56:24Z"
+  },
+  {
+    "timestamp": 1765152034.543657,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "156",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T00:00:34Z"
+  },
+  {
+    "timestamp": 1765152124.044388,
+    "seed_id": "2005-I-12::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-12::2005_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T00:02:04Z"
+  },
+  {
+    "timestamp": 1765152124.044584,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-12::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 1474158169
+    },
+    "iso_time": "2025-12-08T00:02:04Z"
+  },
+  {
+    "timestamp": 1765152125.0929852,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_limit": 60690,
+        "modulus": 6409
+      }
+    },
+    "iso_time": "2025-12-08T00:02:05Z"
+  },
+  {
+    "timestamp": 1765152126.147584,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 976
+    },
+    "iso_time": "2025-12-08T00:02:06Z"
+  },
+  {
+    "timestamp": 1765152126.1477451,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "For positive integers n, let tau(n) denote the number of positive divisors of n, including 1 and n. Fix a modulus 6409. ",
+      "correct_answer": "976",
+      "seed_value": 1474158169
+    },
+    "iso_time": "2025-12-08T00:02:06Z"
+  },
+  {
+    "timestamp": 1765152126.147794,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "969",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T00:02:06Z"
+  },
+  {
+    "timestamp": 1765152248.325025,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "976",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T00:04:08Z"
+  },
+  {
+    "timestamp": 1765152552.114374,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "973",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T00:09:12Z"
+  },
+  {
+    "timestamp": 1765152770.227322,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "976",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T00:12:50Z"
+  },
+  {
+    "timestamp": 1765153464.466006,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "975",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T00:24:24Z"
+  },
+  {
+    "timestamp": 1765153819.329931,
+    "seed_id": "2005-I-12::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-12::2005_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T00:30:19Z"
+  },
+  {
+    "timestamp": 1765153819.330113,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-12::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 435966039
+    },
+    "iso_time": "2025-12-08T00:30:19Z"
+  },
+  {
+    "timestamp": 1765153820.7110589,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_limit": 20708,
+        "modulus": 42
+      }
+    },
+    "iso_time": "2025-12-08T00:30:20Z"
+  },
+  {
+    "timestamp": 1765153821.8297129,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 4924
+    },
+    "iso_time": "2025-12-08T00:30:21Z"
+  },
+  {
+    "timestamp": 1765153821.829893,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "For positive integers n, let tau(n) denote the number of positive divisors of n, including 1 and n. Fix a modulus 42. De",
+      "correct_answer": "4924",
+      "seed_value": 435966039
+    },
+    "iso_time": "2025-12-08T00:30:21Z"
+  },
+  {
+    "timestamp": 1765153821.829945,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4924",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T00:30:21Z"
+  },
+  {
+    "timestamp": 1765153874.375655,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "4926",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T00:31:14Z"
+  },
+  {
+    "timestamp": 1765154325.168849,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "4925",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T00:38:45Z"
+  },
+  {
+    "timestamp": 1765154589.618051,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "4917",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T00:43:09Z"
+  },
+  {
+    "timestamp": 1765154812.29673,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "4924",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T00:46:52Z"
+  },
+  {
+    "timestamp": 1765155076.383877,
+    "seed_id": "2005-I-12::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-12::2005_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T00:51:16Z"
+  },
+  {
+    "timestamp": 1765155076.384059,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2005-I-12::2005_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 1572866604
+    },
+    "iso_time": "2025-12-08T00:51:16Z"
+  },
+  {
+    "timestamp": 1765155077.746706,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n_limit": 34118,
+        "modulus": 1771
+      }
+    },
+    "iso_time": "2025-12-08T00:51:17Z"
+  },
+  {
+    "timestamp": 1765155078.844247,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1534
+    },
+    "iso_time": "2025-12-08T00:51:18Z"
+  },
+  {
+    "timestamp": 1765155078.844396,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "For positive integers n, let tau(n) denote the number of positive divisors of n, including 1 and n. Fix a modulus 1771. ",
+      "correct_answer": "1534",
+      "seed_value": 1572866604
+    },
+    "iso_time": "2025-12-08T00:51:18Z"
+  },
+  {
+    "timestamp": 1765155078.8444412,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1534",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T00:51:18Z"
+  },
+  {
+    "timestamp": 1765155416.285996,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1538",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T00:56:56Z"
+  },
+  {
+    "timestamp": 1765155706.664934,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1543",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T01:01:46Z"
+  },
+  {
+    "timestamp": 1765156009.72543,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1534",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-08T01:06:49Z"
+  },
+  {
+    "timestamp": 1765156298.550924,
+    "seed_id": "2005-I-12::2005",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1528",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-08T01:11:38Z"
+  },
+  {
+    "timestamp": 1765156730.9137468,
+    "seed_id": "2005-I-12::2005",
+    "stage": "variant_success",
+    "message": "Accepted variant 2005-I-12::2005_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-08T01:18:50Z"
+  }
+]

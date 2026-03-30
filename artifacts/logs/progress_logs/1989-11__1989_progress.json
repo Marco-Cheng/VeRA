@@ -1,0 +1,684 @@
+[
+  {
+    "timestamp": 1763229367.15041,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1989,
+      "question_preview": "A sample of 121 integers is given, each between 1 and 1000 inclusive, with repetitions allowed. The sample has a unique ",
+      "answer": "947",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-15T17:56:07Z"
+  },
+  {
+    "timestamp": 1763229367.1504939,
+    "seed_id": "1989-11::1989",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-15T17:56:07Z"
+  },
+  {
+    "timestamp": 1763229367.150538,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A sample of 121 integers is given, each between 1 and 1000 inclusive, with repetitions allowed. The sample has a unique mode (most frequent value). Let $D^{}_{}$ be the difference between the mode and the arithmetic mean of the sample. What is the largest possible value of $\\lfloor D^{}_{}\\rfloor$ ? (For real $x^{}_{}$ , $\\lfloor x^{}_{}\\rfloor$ is the greatest integer less than or equal to $x^{}_{}$ .)",
+      "answer": "947",
+      "example_id": "1989-11::1989"
+    },
+    "iso_time": "2025-11-15T17:56:07Z"
+  },
+  {
+    "timestamp": 1763229535.289355,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-11::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1699270312
+    },
+    "iso_time": "2025-11-15T17:58:55Z"
+  },
+  {
+    "timestamp": 1763229536.0607748,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_samples": 68,
+        "upper_bound": 873,
+        "num_modes": 5
+      }
+    },
+    "iso_time": "2025-11-15T17:58:56Z"
+  },
+  {
+    "timestamp": 1763229536.8074062,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 717
+    },
+    "iso_time": "2025-11-15T17:58:56Z"
+  },
+  {
+    "timestamp": 1763229536.8075662,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A set of 68 scores, each an integer between 1 and 873 inclusive, is collected from a programming contest. The set of sco",
+      "correct_answer": "717",
+      "seed_value": 1699270312
+    },
+    "iso_time": "2025-11-15T17:58:56Z"
+  },
+  {
+    "timestamp": 1763229536.8076138,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "717",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T17:58:56Z"
+  },
+  {
+    "timestamp": 1763229716.828869,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "714",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T18:01:56Z"
+  },
+  {
+    "timestamp": 1763230014.578277,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "719",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T18:06:54Z"
+  },
+  {
+    "timestamp": 1763230219.516563,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "711",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T18:10:19Z"
+  },
+  {
+    "timestamp": 1763230477.87974,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "717",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T18:14:37Z"
+  },
+  {
+    "timestamp": 1763230610.472202,
+    "seed_id": "1989-11::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-11::1989_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T18:16:50Z"
+  },
+  {
+    "timestamp": 1763230610.4723861,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-11::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 1057138902
+    },
+    "iso_time": "2025-11-15T18:16:50Z"
+  },
+  {
+    "timestamp": 1763230611.443944,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_samples": 52,
+        "upper_bound": 1584,
+        "num_modes": 3
+      }
+    },
+    "iso_time": "2025-11-15T18:16:51Z"
+  },
+  {
+    "timestamp": 1763230612.191682,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1379
+    },
+    "iso_time": "2025-11-15T18:16:52Z"
+  },
+  {
+    "timestamp": 1763230612.191818,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A set of 52 scores, each an integer between 1 and 1584 inclusive, is collected from a programming contest. The set of sc",
+      "correct_answer": "1379",
+      "seed_value": 1057138902
+    },
+    "iso_time": "2025-11-15T18:16:52Z"
+  },
+  {
+    "timestamp": 1763230612.1918669,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1379",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T18:16:52Z"
+  },
+  {
+    "timestamp": 1763230781.873324,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1379",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T18:19:41Z"
+  },
+  {
+    "timestamp": 1763230955.8660119,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1374",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T18:22:35Z"
+  },
+  {
+    "timestamp": 1763231226.390081,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1381",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T18:27:06Z"
+  },
+  {
+    "timestamp": 1763231495.905626,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1378",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T18:31:35Z"
+  },
+  {
+    "timestamp": 1763231730.5846379,
+    "seed_id": "1989-11::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-11::1989_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T18:35:30Z"
+  },
+  {
+    "timestamp": 1763231730.5848389,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-11::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 159179601
+    },
+    "iso_time": "2025-11-15T18:35:30Z"
+  },
+  {
+    "timestamp": 1763231731.336681,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_samples": 63,
+        "upper_bound": 1297,
+        "num_modes": 2
+      }
+    },
+    "iso_time": "2025-11-15T18:35:31Z"
+  },
+  {
+    "timestamp": 1763231732.077334,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1186
+    },
+    "iso_time": "2025-11-15T18:35:32Z"
+  },
+  {
+    "timestamp": 1763231732.077485,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A set of 63 scores, each an integer between 1 and 1297 inclusive, is collected from a programming contest. The set of sc",
+      "correct_answer": "1186",
+      "seed_value": 159179601
+    },
+    "iso_time": "2025-11-15T18:35:32Z"
+  },
+  {
+    "timestamp": 1763231732.077534,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1194",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T18:35:32Z"
+  },
+  {
+    "timestamp": 1763231994.59282,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1188",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T18:39:54Z"
+  },
+  {
+    "timestamp": 1763232186.967156,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1186",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T18:43:06Z"
+  },
+  {
+    "timestamp": 1763232368.255734,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1195",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T18:46:08Z"
+  },
+  {
+    "timestamp": 1763232635.413183,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1186",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T18:50:35Z"
+  },
+  {
+    "timestamp": 1763232819.4739451,
+    "seed_id": "1989-11::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-11::1989_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T18:53:39Z"
+  },
+  {
+    "timestamp": 1763232819.474154,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-11::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 830382705
+    },
+    "iso_time": "2025-11-15T18:53:39Z"
+  },
+  {
+    "timestamp": 1763232820.245594,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_samples": 76,
+        "upper_bound": 1440,
+        "num_modes": 3
+      }
+    },
+    "iso_time": "2025-11-15T18:53:40Z"
+  },
+  {
+    "timestamp": 1763232820.991086,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1292
+    },
+    "iso_time": "2025-11-15T18:53:40Z"
+  },
+  {
+    "timestamp": 1763232820.991234,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A set of 76 scores, each an integer between 1 and 1440 inclusive, is collected from a programming contest. The set of sc",
+      "correct_answer": "1292",
+      "seed_value": 830382705
+    },
+    "iso_time": "2025-11-15T18:53:40Z"
+  },
+  {
+    "timestamp": 1763232820.991277,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1292",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T18:53:40Z"
+  },
+  {
+    "timestamp": 1763232941.7196128,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1284",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T18:55:41Z"
+  },
+  {
+    "timestamp": 1763233220.0461068,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1300",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T19:00:20Z"
+  },
+  {
+    "timestamp": 1763233489.192787,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1292",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T19:04:49Z"
+  },
+  {
+    "timestamp": 1763233637.066375,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1289",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T19:07:17Z"
+  },
+  {
+    "timestamp": 1763233907.884104,
+    "seed_id": "1989-11::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-11::1989_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T19:11:47Z"
+  },
+  {
+    "timestamp": 1763233907.8843,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1989-11::1989_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 500538772
+    },
+    "iso_time": "2025-11-15T19:11:47Z"
+  },
+  {
+    "timestamp": 1763233908.672162,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_samples": 89,
+        "upper_bound": 1374,
+        "num_modes": 2
+      }
+    },
+    "iso_time": "2025-11-15T19:11:48Z"
+  },
+  {
+    "timestamp": 1763233909.469252,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1270
+    },
+    "iso_time": "2025-11-15T19:11:49Z"
+  },
+  {
+    "timestamp": 1763233909.469385,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "A set of 89 scores, each an integer between 1 and 1374 inclusive, is collected from a programming contest. The set of sc",
+      "correct_answer": "1270",
+      "seed_value": 500538772
+    },
+    "iso_time": "2025-11-15T19:11:49Z"
+  },
+  {
+    "timestamp": 1763233909.46943,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1269",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T19:11:49Z"
+  },
+  {
+    "timestamp": 1763234179.685764,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1273",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T19:16:19Z"
+  },
+  {
+    "timestamp": 1763234394.5315468,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1270",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T19:19:54Z"
+  },
+  {
+    "timestamp": 1763234534.019104,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1270",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-15T19:22:14Z"
+  },
+  {
+    "timestamp": 1763234689.806644,
+    "seed_id": "1989-11::1989",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1272",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-15T19:24:49Z"
+  },
+  {
+    "timestamp": 1763234943.2491882,
+    "seed_id": "1989-11::1989",
+    "stage": "variant_success",
+    "message": "Accepted variant 1989-11::1989_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-15T19:29:03Z"
+  }
+]

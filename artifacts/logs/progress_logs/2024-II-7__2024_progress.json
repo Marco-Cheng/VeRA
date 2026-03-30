@@ -1,0 +1,694 @@
+[
+  {
+    "timestamp": 1761947317.1630342,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2024,
+      "question_preview": "Let $N$ be the greatest four-digit integer with the property that whenever one of its digits is changed to $1$ , the res",
+      "answer": "699",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-10-31T21:48:37Z"
+  },
+  {
+    "timestamp": 1761947317.163212,
+    "seed_id": "2024-II-7::2024",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-10-31T21:48:37Z"
+  },
+  {
+    "timestamp": 1761947317.1633248,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let $N$ be the greatest four-digit integer with the property that whenever one of its digits is changed to $1$ , the resulting number is divisible by $7$ . Let $Q$ and $R$ be the quotient and remainder, respectively, when $N$ is divided by $1000$ . Find $Q+R$ .",
+      "answer": "699",
+      "example_id": "2024-II-7::2024"
+    },
+    "iso_time": "2025-10-31T21:48:37Z"
+  },
+  {
+    "timestamp": 1761947552.028728,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-7::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 1558416611
+    },
+    "iso_time": "2025-10-31T21:52:32Z"
+  },
+  {
+    "timestamp": 1761947552.926028,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 5,
+        "modulus": 13,
+        "s_odd": 0,
+        "s_even": 3,
+        "div_power": 3
+      }
+    },
+    "iso_time": "2025-10-31T21:52:32Z"
+  },
+  {
+    "timestamp": 1761947553.813601,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 933
+    },
+    "iso_time": "2025-10-31T21:52:33Z"
+  },
+  {
+    "timestamp": 1761947553.813757,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let N be the greatest 5-digit decimal integer with the property that, for every position i from 1 (leftmost) to 5, if th",
+      "correct_answer": "933",
+      "seed_value": 1558416611
+    },
+    "iso_time": "2025-10-31T21:52:33Z"
+  },
+  {
+    "timestamp": 1761947553.813805,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "937",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T21:52:33Z"
+  },
+  {
+    "timestamp": 1761947696.9480078,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "932",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T21:54:56Z"
+  },
+  {
+    "timestamp": 1761947871.569058,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "933",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T21:57:51Z"
+  },
+  {
+    "timestamp": 1761947915.378133,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "931",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T21:58:35Z"
+  },
+  {
+    "timestamp": 1761948091.638686,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "933",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:01:31Z"
+  },
+  {
+    "timestamp": 1761948232.157218,
+    "seed_id": "2024-II-7::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-7::2024_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T22:03:52Z"
+  },
+  {
+    "timestamp": 1761948232.1574059,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-7::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 832130672
+    },
+    "iso_time": "2025-10-31T22:03:52Z"
+  },
+  {
+    "timestamp": 1761948233.072302,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 6,
+        "modulus": 11,
+        "s_odd": 1,
+        "s_even": 0,
+        "div_power": 4
+      }
+    },
+    "iso_time": "2025-10-31T22:03:53Z"
+  },
+  {
+    "timestamp": 1761948234.0546,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 7650
+    },
+    "iso_time": "2025-10-31T22:03:54Z"
+  },
+  {
+    "timestamp": 1761948234.054733,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let N be the greatest 6-digit decimal integer with the property that, for every position i from 1 (leftmost) to 6, if th",
+      "correct_answer": "7650",
+      "seed_value": 832130672
+    },
+    "iso_time": "2025-10-31T22:03:54Z"
+  },
+  {
+    "timestamp": 1761948234.054781,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7659",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:03:54Z"
+  },
+  {
+    "timestamp": 1761948291.294347,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7649",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:04:51Z"
+  },
+  {
+    "timestamp": 1761948370.424153,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "7650",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:06:10Z"
+  },
+  {
+    "timestamp": 1761948430.354055,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "7650",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:07:10Z"
+  },
+  {
+    "timestamp": 1761948497.641715,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "7648",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:08:17Z"
+  },
+  {
+    "timestamp": 1761948595.906925,
+    "seed_id": "2024-II-7::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-7::2024_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T22:09:55Z"
+  },
+  {
+    "timestamp": 1761948595.907104,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-7::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 960490385
+    },
+    "iso_time": "2025-10-31T22:09:55Z"
+  },
+  {
+    "timestamp": 1761948596.809174,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 5,
+        "modulus": 11,
+        "s_odd": 2,
+        "s_even": 0,
+        "div_power": 2
+      }
+    },
+    "iso_time": "2025-10-31T22:09:56Z"
+  },
+  {
+    "timestamp": 1761948597.6549199,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 752
+    },
+    "iso_time": "2025-10-31T22:09:57Z"
+  },
+  {
+    "timestamp": 1761948597.6550689,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let N be the greatest 5-digit decimal integer with the property that, for every position i from 1 (leftmost) to 5, if th",
+      "correct_answer": "752",
+      "seed_value": 960490385
+    },
+    "iso_time": "2025-10-31T22:09:57Z"
+  },
+  {
+    "timestamp": 1761948597.655116,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "752",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:09:57Z"
+  },
+  {
+    "timestamp": 1761948725.9382532,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "750",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:12:05Z"
+  },
+  {
+    "timestamp": 1761948757.011619,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "751",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:12:37Z"
+  },
+  {
+    "timestamp": 1761948833.826339,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "743",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:13:53Z"
+  },
+  {
+    "timestamp": 1761948922.203777,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "752",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:15:22Z"
+  },
+  {
+    "timestamp": 1761948966.795594,
+    "seed_id": "2024-II-7::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-7::2024_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T22:16:06Z"
+  },
+  {
+    "timestamp": 1761948966.795784,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-7::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1115260244
+    },
+    "iso_time": "2025-10-31T22:16:06Z"
+  },
+  {
+    "timestamp": 1761948967.699029,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 7,
+        "modulus": 11,
+        "s_odd": 1,
+        "s_even": 2,
+        "div_power": 4
+      }
+    },
+    "iso_time": "2025-10-31T22:16:07Z"
+  },
+  {
+    "timestamp": 1761948968.600678,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10190
+    },
+    "iso_time": "2025-10-31T22:16:08Z"
+  },
+  {
+    "timestamp": 1761948968.600817,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let N be the greatest 7-digit decimal integer with the property that, for every position i from 1 (leftmost) to 7, if th",
+      "correct_answer": "10190",
+      "seed_value": 1115260244
+    },
+    "iso_time": "2025-10-31T22:16:08Z"
+  },
+  {
+    "timestamp": 1761948968.600859,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10184",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:16:08Z"
+  },
+  {
+    "timestamp": 1761949033.384686,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10190",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:17:13Z"
+  },
+  {
+    "timestamp": 1761949121.3692522,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "10198",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:18:41Z"
+  },
+  {
+    "timestamp": 1761949190.568206,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10190",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:19:50Z"
+  },
+  {
+    "timestamp": 1761949326.128173,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10182",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:22:06Z"
+  },
+  {
+    "timestamp": 1761949463.220806,
+    "seed_id": "2024-II-7::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-7::2024_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T22:24:23Z"
+  },
+  {
+    "timestamp": 1761949463.220984,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2024-II-7::2024_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 2143031620
+    },
+    "iso_time": "2025-10-31T22:24:23Z"
+  },
+  {
+    "timestamp": 1761949464.103295,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "k": 5,
+        "modulus": 11,
+        "s_odd": 3,
+        "s_even": 1,
+        "div_power": 2
+      }
+    },
+    "iso_time": "2025-10-31T22:24:24Z"
+  },
+  {
+    "timestamp": 1761949465.0026371,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 408
+    },
+    "iso_time": "2025-10-31T22:24:25Z"
+  },
+  {
+    "timestamp": 1761949465.0027788,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let N be the greatest 5-digit decimal integer with the property that, for every position i from 1 (leftmost) to 5, if th",
+      "correct_answer": "408",
+      "seed_value": 2143031620
+    },
+    "iso_time": "2025-10-31T22:24:25Z"
+  },
+  {
+    "timestamp": 1761949465.0028229,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "413",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:24:25Z"
+  },
+  {
+    "timestamp": 1761949577.565892,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "401",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:26:17Z"
+  },
+  {
+    "timestamp": 1761949625.628412,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "408",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:27:05Z"
+  },
+  {
+    "timestamp": 1761949657.032041,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "400",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-10-31T22:27:37Z"
+  },
+  {
+    "timestamp": 1761949778.190433,
+    "seed_id": "2024-II-7::2024",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "408",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-10-31T22:29:38Z"
+  },
+  {
+    "timestamp": 1761949812.167802,
+    "seed_id": "2024-II-7::2024",
+    "stage": "variant_success",
+    "message": "Accepted variant 2024-II-7::2024_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-10-31T22:30:12Z"
+  }
+]

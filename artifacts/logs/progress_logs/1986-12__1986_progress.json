@@ -1,0 +1,4575 @@
+[
+  {
+    "timestamp": 1762865249.403527,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 1986,
+      "question_preview": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15.",
+      "answer": "61",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-11-11T12:47:29Z"
+  },
+  {
+    "timestamp": 1762865249.403549,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-11-11T12:47:29Z"
+  },
+  {
+    "timestamp": 1762865249.403562,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T12:47:29Z"
+  },
+  {
+    "timestamp": 1762865496.550216,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 18 column 795 (char 5440)",
+    "payload": {},
+    "iso_time": "2025-11-11T12:51:36Z"
+  },
+  {
+    "timestamp": 1762865496.550254,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 2).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T12:51:36Z"
+  },
+  {
+    "timestamp": 1762865496.550273,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 2,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 18 column 795 (char 5440)",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T12:51:36Z"
+  },
+  {
+    "timestamp": 1762865705.990623,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 1,
+      "seed_value": 1456606920
+    },
+    "iso_time": "2025-11-11T12:55:05Z"
+  },
+  {
+    "timestamp": 1762865706.768194,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 127,
+        "p_list": [
+          3,
+          5
+        ],
+        "p_list_str": "3, 5"
+      }
+    },
+    "iso_time": "2025-11-11T12:55:06Z"
+  },
+  {
+    "timestamp": 1762865707.569553,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 351
+    },
+    "iso_time": "2025-11-11T12:55:07Z"
+  },
+  {
+    "timestamp": 1762865707.569689,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the kingdom of Factoria, the royal treasurer is collecting a portfolio of special assets. The value of each asset is ",
+      "correct_answer": "351",
+      "seed_value": 1456606920
+    },
+    "iso_time": "2025-11-11T12:55:07Z"
+  },
+  {
+    "timestamp": 1762865707.569741,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "351",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T12:55:07Z"
+  },
+  {
+    "timestamp": 1762865982.852853,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "357",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T12:59:42Z"
+  },
+  {
+    "timestamp": 1762866288.109855,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "356",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T13:04:48Z"
+  },
+  {
+    "timestamp": 1762866547.775873,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "344",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T13:09:07Z"
+  },
+  {
+    "timestamp": 1762866884.4410188,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "351",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T13:14:44Z"
+  },
+  {
+    "timestamp": 1762867173.590501,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T13:19:33Z"
+  },
+  {
+    "timestamp": 1762867173.5905762,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 2,
+      "seed_value": 202080039
+    },
+    "iso_time": "2025-11-11T13:19:33Z"
+  },
+  {
+    "timestamp": 1762867174.3987782,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 45,
+        "p_list": [
+          2,
+          3,
+          5
+        ],
+        "p_list_str": "2, 3, 5"
+      }
+    },
+    "iso_time": "2025-11-11T13:19:34Z"
+  },
+  {
+    "timestamp": 1762867175.186295,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 202
+    },
+    "iso_time": "2025-11-11T13:19:35Z"
+  },
+  {
+    "timestamp": 1762867175.186434,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the kingdom of Factoria, the royal treasurer is collecting a portfolio of special assets. The value of each asset is ",
+      "correct_answer": "202",
+      "seed_value": 202080039
+    },
+    "iso_time": "2025-11-11T13:19:35Z"
+  },
+  {
+    "timestamp": 1762867175.186479,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "196",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T13:19:35Z"
+  },
+  {
+    "timestamp": 1762867429.004669,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "202",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T13:23:49Z"
+  },
+  {
+    "timestamp": 1762867656.478521,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "194",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T13:27:36Z"
+  },
+  {
+    "timestamp": 1762867899.371629,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "202",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T13:31:39Z"
+  },
+  {
+    "timestamp": 1762868197.433454,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "204",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T13:36:37Z"
+  },
+  {
+    "timestamp": 1762868472.429,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 1
+    },
+    "iso_time": "2025-11-11T13:41:12Z"
+  },
+  {
+    "timestamp": 1762868472.4290738,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 3,
+      "seed_value": 268210438
+    },
+    "iso_time": "2025-11-11T13:41:12Z"
+  },
+  {
+    "timestamp": 1762868473.190783,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 133,
+        "p_list": [
+          3,
+          5
+        ],
+        "p_list_str": "3, 5"
+      }
+    },
+    "iso_time": "2025-11-11T13:41:13Z"
+  },
+  {
+    "timestamp": 1762868473.970103,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 351
+    },
+    "iso_time": "2025-11-11T13:41:13Z"
+  },
+  {
+    "timestamp": 1762868473.97025,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the kingdom of Factoria, the royal treasurer is collecting a portfolio of special assets. The value of each asset is ",
+      "correct_answer": "351",
+      "seed_value": 268210438
+    },
+    "iso_time": "2025-11-11T13:41:13Z"
+  },
+  {
+    "timestamp": 1762868473.970295,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "347",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T13:41:13Z"
+  },
+  {
+    "timestamp": 1762868761.967021,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "348",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T13:46:01Z"
+  },
+  {
+    "timestamp": 1762869015.909772,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "349",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T13:50:15Z"
+  },
+  {
+    "timestamp": 1762869292.200928,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "351",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T13:54:52Z"
+  },
+  {
+    "timestamp": 1762869578.2391129,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "351",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T13:59:38Z"
+  },
+  {
+    "timestamp": 1762869847.5754728,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-11T14:04:07Z"
+  },
+  {
+    "timestamp": 1762869847.575563,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 4,
+      "seed_value": 874268287
+    },
+    "iso_time": "2025-11-11T14:04:07Z"
+  },
+  {
+    "timestamp": 1762869848.3772511,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 119,
+        "p_list": [
+          2,
+          5
+        ],
+        "p_list_str": "2, 5"
+      }
+    },
+    "iso_time": "2025-11-11T14:04:08Z"
+  },
+  {
+    "timestamp": 1762869849.163255,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 327
+    },
+    "iso_time": "2025-11-11T14:04:09Z"
+  },
+  {
+    "timestamp": 1762869849.163418,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the kingdom of Factoria, the royal treasurer is collecting a portfolio of special assets. The value of each asset is ",
+      "correct_answer": "327",
+      "seed_value": 874268287
+    },
+    "iso_time": "2025-11-11T14:04:09Z"
+  },
+  {
+    "timestamp": 1762869849.163469,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "325",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T14:04:09Z"
+  },
+  {
+    "timestamp": 1762870140.906344,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "327",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T14:09:00Z"
+  },
+  {
+    "timestamp": 1762870460.745188,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "319",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T14:14:20Z"
+  },
+  {
+    "timestamp": 1762870763.6457758,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "327",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T14:19:23Z"
+  },
+  {
+    "timestamp": 1762871038.995681,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "335",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T14:23:58Z"
+  },
+  {
+    "timestamp": 1762871336.9221618,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T14:28:56Z"
+  },
+  {
+    "timestamp": 1762871336.922239,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt02",
+      "prompt_attempt": 2,
+      "sample_index": 5,
+      "seed_value": 561534360
+    },
+    "iso_time": "2025-11-11T14:28:56Z"
+  },
+  {
+    "timestamp": 1762871337.721733,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 89,
+        "p_list": [
+          2,
+          5
+        ],
+        "p_list_str": "2, 5"
+      }
+    },
+    "iso_time": "2025-11-11T14:28:57Z"
+  },
+  {
+    "timestamp": 1762871338.511345,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 242
+    },
+    "iso_time": "2025-11-11T14:28:58Z"
+  },
+  {
+    "timestamp": 1762871338.511494,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In the kingdom of Factoria, the royal treasurer is collecting a portfolio of special assets. The value of each asset is ",
+      "correct_answer": "242",
+      "seed_value": 561534360
+    },
+    "iso_time": "2025-11-11T14:28:58Z"
+  },
+  {
+    "timestamp": 1762871338.511544,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "242",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T14:28:58Z"
+  },
+  {
+    "timestamp": 1762871645.144002,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "234",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T14:34:05Z"
+  },
+  {
+    "timestamp": 1762871942.72314,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "242",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T14:39:02Z"
+  },
+  {
+    "timestamp": 1762872213.118929,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "243",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T14:43:33Z"
+  },
+  {
+    "timestamp": 1762872460.520166,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "245",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T14:47:40Z"
+  },
+  {
+    "timestamp": 1762872707.003839,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T14:51:47Z"
+  },
+  {
+    "timestamp": 1762872707.0038981,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 3).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T14:51:47Z"
+  },
+  {
+    "timestamp": 1762872707.003915,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 3,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=1). | Judge rejected variant 3 (successes=2).",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T14:51:47Z"
+  },
+  {
+    "timestamp": 1762872985.016573,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 1,
+      "seed_value": 1725172291
+    },
+    "iso_time": "2025-11-11T14:56:25Z"
+  },
+  {
+    "timestamp": 1762872985.801356,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 17,
+        "a": 4,
+        "d": 5
+      }
+    },
+    "iso_time": "2025-11-11T14:56:25Z"
+  },
+  {
+    "timestamp": 1762872986.5768142,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 369
+    },
+    "iso_time": "2025-11-11T14:56:26Z"
+  },
+  {
+    "timestamp": 1762872986.576939,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $A$ be an arithmetic progression of 17 terms with first term 4 and common difference 5. Let $S$ be a subset of $A$ w",
+      "correct_answer": "369",
+      "seed_value": 1725172291
+    },
+    "iso_time": "2025-11-11T14:56:26Z"
+  },
+  {
+    "timestamp": 1762872986.5769842,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "369",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T14:56:26Z"
+  },
+  {
+    "timestamp": 1762873218.41012,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "368",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T15:00:18Z"
+  },
+  {
+    "timestamp": 1762873528.6393118,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "369",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T15:05:28Z"
+  },
+  {
+    "timestamp": 1762874024.82143,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "376",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T15:13:44Z"
+  },
+  {
+    "timestamp": 1762874338.965004,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "365",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T15:18:58Z"
+  },
+  {
+    "timestamp": 1762874634.081444,
+    "seed_id": "1986-12::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-12::1986_prompt03-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-11T15:23:54Z"
+  },
+  {
+    "timestamp": 1762874634.0814989,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 2,
+      "seed_value": 1305037382
+    },
+    "iso_time": "2025-11-11T15:23:54Z"
+  },
+  {
+    "timestamp": 1762874634.8630981,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 15,
+        "a": 1,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-11T15:23:54Z"
+  },
+  {
+    "timestamp": 1762874635.6296241,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 177
+    },
+    "iso_time": "2025-11-11T15:23:55Z"
+  },
+  {
+    "timestamp": 1762874635.629782,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $A$ be an arithmetic progression of 15 terms with first term 1 and common difference 3. Let $S$ be a subset of $A$ w",
+      "correct_answer": "177",
+      "seed_value": 1305037382
+    },
+    "iso_time": "2025-11-11T15:23:55Z"
+  },
+  {
+    "timestamp": 1762874635.629824,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "177",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T15:23:55Z"
+  },
+  {
+    "timestamp": 1762874876.465396,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "179",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T15:27:56Z"
+  },
+  {
+    "timestamp": 1762875112.291965,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "177",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T15:31:52Z"
+  },
+  {
+    "timestamp": 1762875411.3962822,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "181",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T15:36:51Z"
+  },
+  {
+    "timestamp": 1762875733.305311,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "171",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T15:42:13Z"
+  },
+  {
+    "timestamp": 1762876001.050733,
+    "seed_id": "1986-12::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-12::1986_prompt03-2",
+    "payload": {
+      "judge_successes": 4
+    },
+    "iso_time": "2025-11-11T15:46:41Z"
+  },
+  {
+    "timestamp": 1762876001.0507782,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 3,
+      "seed_value": 1547972514
+    },
+    "iso_time": "2025-11-11T15:46:41Z"
+  },
+  {
+    "timestamp": 1762876001.866665,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 17,
+        "a": 1,
+        "d": 2
+      }
+    },
+    "iso_time": "2025-11-11T15:46:41Z"
+  },
+  {
+    "timestamp": 1762876002.6803992,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 144
+    },
+    "iso_time": "2025-11-11T15:46:42Z"
+  },
+  {
+    "timestamp": 1762876002.6805382,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $A$ be an arithmetic progression of 17 terms with first term 1 and common difference 2. Let $S$ be a subset of $A$ w",
+      "correct_answer": "144",
+      "seed_value": 1547972514
+    },
+    "iso_time": "2025-11-11T15:46:42Z"
+  },
+  {
+    "timestamp": 1762876002.6805792,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "144",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T15:46:42Z"
+  },
+  {
+    "timestamp": 1762876250.1592371,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "138",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T15:50:50Z"
+  },
+  {
+    "timestamp": 1762876576.4585521,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "137",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T15:56:16Z"
+  },
+  {
+    "timestamp": 1762876835.9083679,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "144",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T16:00:35Z"
+  },
+  {
+    "timestamp": 1762877274.820483,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "145",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T16:07:54Z"
+  },
+  {
+    "timestamp": 1762877575.4473028,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T16:12:55Z"
+  },
+  {
+    "timestamp": 1762877575.4473732,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 4,
+      "seed_value": 541676747
+    },
+    "iso_time": "2025-11-11T16:12:55Z"
+  },
+  {
+    "timestamp": 1762877576.2833788,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 16,
+        "a": 1,
+        "d": 2
+      }
+    },
+    "iso_time": "2025-11-11T16:12:56Z"
+  },
+  {
+    "timestamp": 1762877577.14027,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 132
+    },
+    "iso_time": "2025-11-11T16:12:57Z"
+  },
+  {
+    "timestamp": 1762877577.140413,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $A$ be an arithmetic progression of 16 terms with first term 1 and common difference 2. Let $S$ be a subset of $A$ w",
+      "correct_answer": "132",
+      "seed_value": 541676747
+    },
+    "iso_time": "2025-11-11T16:12:57Z"
+  },
+  {
+    "timestamp": 1762877577.140455,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "137",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T16:12:57Z"
+  },
+  {
+    "timestamp": 1762877877.766805,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "123",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T16:17:57Z"
+  },
+  {
+    "timestamp": 1762878144.3770728,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "132",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T16:22:24Z"
+  },
+  {
+    "timestamp": 1762878431.06373,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "128",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T16:27:11Z"
+  },
+  {
+    "timestamp": 1762878701.125914,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "132",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T16:31:41Z"
+  },
+  {
+    "timestamp": 1762878939.727948,
+    "seed_id": "1986-12::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-12::1986_prompt03-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-11T16:35:39Z"
+  },
+  {
+    "timestamp": 1762878939.72799,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt03",
+      "prompt_attempt": 3,
+      "sample_index": 5,
+      "seed_value": 848567178
+    },
+    "iso_time": "2025-11-11T16:35:39Z"
+  },
+  {
+    "timestamp": 1762878940.523722,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "n": 13,
+        "a": 1,
+        "d": 3
+      }
+    },
+    "iso_time": "2025-11-11T16:35:40Z"
+  },
+  {
+    "timestamp": 1762878941.307838,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 143
+    },
+    "iso_time": "2025-11-11T16:35:41Z"
+  },
+  {
+    "timestamp": 1762878941.307967,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $A$ be an arithmetic progression of 13 terms with first term 1 and common difference 3. Let $S$ be a subset of $A$ w",
+      "correct_answer": "143",
+      "seed_value": 848567178
+    },
+    "iso_time": "2025-11-11T16:35:41Z"
+  },
+  {
+    "timestamp": 1762878941.308009,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "143",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T16:35:41Z"
+  },
+  {
+    "timestamp": 1762879228.571635,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "146",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T16:40:28Z"
+  },
+  {
+    "timestamp": 1762879644.435321,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "148",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T16:47:24Z"
+  },
+  {
+    "timestamp": 1762879942.05582,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "143",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T16:52:22Z"
+  },
+  {
+    "timestamp": 1762880153.314093,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "134",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T16:55:53Z"
+  },
+  {
+    "timestamp": 1762880397.635869,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T16:59:57Z"
+  },
+  {
+    "timestamp": 1762880397.635911,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 4).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T16:59:57Z"
+  },
+  {
+    "timestamp": 1762880397.635926,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 4,
+      "feedback": "Judge rejected variant 3 (successes=3). | Judge rejected variant 5 (successes=3).",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T16:59:57Z"
+  },
+  {
+    "timestamp": 1762880677.3600159,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "payload": {},
+    "iso_time": "2025-11-11T17:04:37Z"
+  },
+  {
+    "timestamp": 1762880677.360057,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 5).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T17:04:37Z"
+  },
+  {
+    "timestamp": 1762880677.360074,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 5,
+      "feedback": "Teacher call raised JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T17:04:37Z"
+  },
+  {
+    "timestamp": 1762880983.3491929,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+    "payload": {},
+    "iso_time": "2025-11-11T17:09:43Z"
+  },
+  {
+    "timestamp": 1762880983.34924,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 6).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T17:09:43Z"
+  },
+  {
+    "timestamp": 1762880983.349258,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 6,
+      "feedback": "Teacher call raised JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T17:09:43Z"
+  },
+  {
+    "timestamp": 1762881251.129629,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 19 column 190 (char 3954)",
+    "payload": {},
+    "iso_time": "2025-11-11T17:14:11Z"
+  },
+  {
+    "timestamp": 1762881251.129667,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 7).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T17:14:11Z"
+  },
+  {
+    "timestamp": 1762881251.129685,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 7,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 19 column 190 (char 3954)",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T17:14:11Z"
+  },
+  {
+    "timestamp": 1762881510.49448,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 1,
+      "seed_value": 560810179
+    },
+    "iso_time": "2025-11-11T17:18:30Z"
+  },
+  {
+    "timestamp": 1762881511.2660701,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:18:31Z"
+  },
+  {
+    "timestamp": 1762881512.0312781,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:32Z"
+  },
+  {
+    "timestamp": 1762881512.7939389,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:32Z"
+  },
+  {
+    "timestamp": 1762881513.562203,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:33Z"
+  },
+  {
+    "timestamp": 1762881514.3214688,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:18:34Z"
+  },
+  {
+    "timestamp": 1762881515.13999,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:35Z"
+  },
+  {
+    "timestamp": 1762881515.898454,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:35Z"
+  },
+  {
+    "timestamp": 1762881516.6682692,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:36Z"
+  },
+  {
+    "timestamp": 1762881517.425411,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:18:37Z"
+  },
+  {
+    "timestamp": 1762881518.184834,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:38Z"
+  },
+  {
+    "timestamp": 1762881518.9506419,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:38Z"
+  },
+  {
+    "timestamp": 1762881519.717737,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:39Z"
+  },
+  {
+    "timestamp": 1762881520.477791,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:40Z"
+  },
+  {
+    "timestamp": 1762881521.235389,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:41Z"
+  },
+  {
+    "timestamp": 1762881521.235451,
+    "seed_id": "1986-12::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.74097204208374
+    },
+    "iso_time": "2025-11-11T17:18:41Z"
+  },
+  {
+    "timestamp": 1762881521.235541,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 2,
+      "seed_value": 2134291699
+    },
+    "iso_time": "2025-11-11T17:18:41Z"
+  },
+  {
+    "timestamp": 1762881522.001154,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:42Z"
+  },
+  {
+    "timestamp": 1762881522.767498,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:42Z"
+  },
+  {
+    "timestamp": 1762881523.5297768,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:18:43Z"
+  },
+  {
+    "timestamp": 1762881524.288725,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:44Z"
+  },
+  {
+    "timestamp": 1762881525.0547001,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:45Z"
+  },
+  {
+    "timestamp": 1762881525.8783622,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:45Z"
+  },
+  {
+    "timestamp": 1762881526.6870599,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:46Z"
+  },
+  {
+    "timestamp": 1762881527.4780118,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:47Z"
+  },
+  {
+    "timestamp": 1762881528.235565,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:48Z"
+  },
+  {
+    "timestamp": 1762881529.0401978,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:49Z"
+  },
+  {
+    "timestamp": 1762881529.822978,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:18:49Z"
+  },
+  {
+    "timestamp": 1762881530.666352,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:50Z"
+  },
+  {
+    "timestamp": 1762881531.444723,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:51Z"
+  },
+  {
+    "timestamp": 1762881532.275019,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:52Z"
+  },
+  {
+    "timestamp": 1762881532.275108,
+    "seed_id": "1986-12::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 11.039568185806274
+    },
+    "iso_time": "2025-11-11T17:18:52Z"
+  },
+  {
+    "timestamp": 1762881532.2751648,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 3,
+      "seed_value": 241036748
+    },
+    "iso_time": "2025-11-11T17:18:52Z"
+  },
+  {
+    "timestamp": 1762881533.0836291,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:18:53Z"
+  },
+  {
+    "timestamp": 1762881533.862438,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:53Z"
+  },
+  {
+    "timestamp": 1762881534.642047,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:54Z"
+  },
+  {
+    "timestamp": 1762881535.424424,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:55Z"
+  },
+  {
+    "timestamp": 1762881536.19297,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:56Z"
+  },
+  {
+    "timestamp": 1762881537.004694,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:57Z"
+  },
+  {
+    "timestamp": 1762881537.786926,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:18:57Z"
+  },
+  {
+    "timestamp": 1762881538.5611079,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:18:58Z"
+  },
+  {
+    "timestamp": 1762881539.3419662,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:18:59Z"
+  },
+  {
+    "timestamp": 1762881540.1146948,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:00Z"
+  },
+  {
+    "timestamp": 1762881540.89252,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:19:00Z"
+  },
+  {
+    "timestamp": 1762881541.680552,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:01Z"
+  },
+  {
+    "timestamp": 1762881542.459726,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:19:02Z"
+  },
+  {
+    "timestamp": 1762881543.237837,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:03Z"
+  },
+  {
+    "timestamp": 1762881543.237918,
+    "seed_id": "1986-12::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 10.962754011154175
+    },
+    "iso_time": "2025-11-11T17:19:03Z"
+  },
+  {
+    "timestamp": 1762881543.237979,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 4,
+      "seed_value": 814386755
+    },
+    "iso_time": "2025-11-11T17:19:03Z"
+  },
+  {
+    "timestamp": 1762881544.015915,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:19:04Z"
+  },
+  {
+    "timestamp": 1762881544.796417,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:04Z"
+  },
+  {
+    "timestamp": 1762881545.574205,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:19:05Z"
+  },
+  {
+    "timestamp": 1762881546.3552058,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:06Z"
+  },
+  {
+    "timestamp": 1762881547.136907,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:19:07Z"
+  },
+  {
+    "timestamp": 1762881547.916385,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:07Z"
+  },
+  {
+    "timestamp": 1762881548.692202,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:19:08Z"
+  },
+  {
+    "timestamp": 1762881549.471235,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:09Z"
+  },
+  {
+    "timestamp": 1762881550.248306,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:19:10Z"
+  },
+  {
+    "timestamp": 1762881551.028478,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:11Z"
+  },
+  {
+    "timestamp": 1762881551.811146,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:19:11Z"
+  },
+  {
+    "timestamp": 1762881552.5891688,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:12Z"
+  },
+  {
+    "timestamp": 1762881553.368862,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:19:13Z"
+  },
+  {
+    "timestamp": 1762881554.1469681,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:14Z"
+  },
+  {
+    "timestamp": 1762881554.1470568,
+    "seed_id": "1986-12::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 10.909078598022461
+    },
+    "iso_time": "2025-11-11T17:19:14Z"
+  },
+  {
+    "timestamp": 1762881554.147104,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt07",
+      "prompt_attempt": 7,
+      "sample_index": 5,
+      "seed_value": 132078195
+    },
+    "iso_time": "2025-11-11T17:19:14Z"
+  },
+  {
+    "timestamp": 1762881554.9289339,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:19:14Z"
+  },
+  {
+    "timestamp": 1762881555.70695,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:15Z"
+  },
+  {
+    "timestamp": 1762881556.4876559,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:19:16Z"
+  },
+  {
+    "timestamp": 1762881557.2734551,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:17Z"
+  },
+  {
+    "timestamp": 1762881558.049671,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:19:18Z"
+  },
+  {
+    "timestamp": 1762881558.830818,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:18Z"
+  },
+  {
+    "timestamp": 1762881559.606247,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:19:19Z"
+  },
+  {
+    "timestamp": 1762881560.382698,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:20Z"
+  },
+  {
+    "timestamp": 1762881561.1581252,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:19:21Z"
+  },
+  {
+    "timestamp": 1762881561.9432352,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:21Z"
+  },
+  {
+    "timestamp": 1762881562.720937,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {
+        "M": 5
+      }
+    },
+    "iso_time": "2025-11-11T17:19:22Z"
+  },
+  {
+    "timestamp": 1762881563.496659,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:23Z"
+  },
+  {
+    "timestamp": 1762881564.277243,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {
+        "M": 4
+      }
+    },
+    "iso_time": "2025-11-11T17:19:24Z"
+  },
+  {
+    "timestamp": 1762881565.055999,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T17:19:25Z"
+  },
+  {
+    "timestamp": 1762881565.056084,
+    "seed_id": "1986-12::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 10.908981084823608
+    },
+    "iso_time": "2025-11-11T17:19:25Z"
+  },
+  {
+    "timestamp": 1762881565.0561159,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 8).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T17:19:25Z"
+  },
+  {
+    "timestamp": 1762881565.056127,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 8,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T17:19:25Z"
+  },
+  {
+    "timestamp": 1762881844.4328918,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 18 column 210 (char 4108)",
+    "payload": {},
+    "iso_time": "2025-11-11T17:24:04Z"
+  },
+  {
+    "timestamp": 1762881844.4329321,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 9).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T17:24:04Z"
+  },
+  {
+    "timestamp": 1762881844.43295,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 9,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 18 column 210 (char 4108)",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T17:24:04Z"
+  },
+  {
+    "timestamp": 1762882085.146904,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 18 column 434 (char 2780)",
+    "payload": {},
+    "iso_time": "2025-11-11T17:28:05Z"
+  },
+  {
+    "timestamp": 1762882085.146966,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 10).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T17:28:05Z"
+  },
+  {
+    "timestamp": 1762882085.146987,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 10,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 18 column 434 (char 2780)",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T17:28:05Z"
+  },
+  {
+    "timestamp": 1762882346.5866282,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 2 column 66 (char 67)",
+    "payload": {},
+    "iso_time": "2025-11-11T17:32:26Z"
+  },
+  {
+    "timestamp": 1762882346.586665,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 11).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T17:32:26Z"
+  },
+  {
+    "timestamp": 1762882346.5866828,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 11,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 2 column 66 (char 67)",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T17:32:26Z"
+  },
+  {
+    "timestamp": 1762882604.656836,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt11",
+      "prompt_attempt": 11,
+      "sample_index": 1,
+      "seed_value": 429761867
+    },
+    "iso_time": "2025-11-11T17:36:44Z"
+  },
+  {
+    "timestamp": 1762882605.438064,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 1,
+        "d": 5,
+        "M": 11,
+        "a_d": 6,
+        "a_2d": 11,
+        "max_val": 51
+      }
+    },
+    "iso_time": "2025-11-11T17:36:45Z"
+  },
+  {
+    "timestamp": 1762882606.494348,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 0
+    },
+    "iso_time": "2025-11-11T17:36:46Z"
+  },
+  {
+    "timestamp": 1762882606.494497,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $U$ be the arithmetic progression $\\{{a}, 6, 11, \\dots, 51\\}$. A subset $S \\subseteq U$ is called special if no two ",
+      "correct_answer": "0",
+      "seed_value": 429761867
+    },
+    "iso_time": "2025-11-11T17:36:46Z"
+  },
+  {
+    "timestamp": 1762882606.49454,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T17:36:46Z"
+  },
+  {
+    "timestamp": 1762882827.22761,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "5",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T17:40:27Z"
+  },
+  {
+    "timestamp": 1762883101.215148,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T17:45:01Z"
+  },
+  {
+    "timestamp": 1762883367.059277,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T17:49:27Z"
+  },
+  {
+    "timestamp": 1762883605.347305,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T17:53:25Z"
+  },
+  {
+    "timestamp": 1762883870.741278,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 1,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T17:57:50Z"
+  },
+  {
+    "timestamp": 1762883870.741357,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt11",
+      "prompt_attempt": 11,
+      "sample_index": 2,
+      "seed_value": 1513941446
+    },
+    "iso_time": "2025-11-11T17:57:50Z"
+  },
+  {
+    "timestamp": 1762883871.535583,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 3,
+        "d": 2,
+        "M": 10,
+        "a_d": 5,
+        "a_2d": 7,
+        "max_val": 21
+      }
+    },
+    "iso_time": "2025-11-11T17:57:51Z"
+  },
+  {
+    "timestamp": 1762883872.368886,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 0
+    },
+    "iso_time": "2025-11-11T17:57:52Z"
+  },
+  {
+    "timestamp": 1762883872.36902,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $U$ be the arithmetic progression $\\{{a}, 5, 7, \\dots, 21\\}$. A subset $S \\subseteq U$ is called special if no two o",
+      "correct_answer": "0",
+      "seed_value": 1513941446
+    },
+    "iso_time": "2025-11-11T17:57:52Z"
+  },
+  {
+    "timestamp": 1762883872.36907,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "3",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T17:57:52Z"
+  },
+  {
+    "timestamp": 1762884121.290719,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T18:02:01Z"
+  },
+  {
+    "timestamp": 1762884347.56879,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T18:05:47Z"
+  },
+  {
+    "timestamp": 1762884633.0831912,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T18:10:33Z"
+  },
+  {
+    "timestamp": 1762884913.880675,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T18:15:13Z"
+  },
+  {
+    "timestamp": 1762885150.6132889,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 2,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T18:19:10Z"
+  },
+  {
+    "timestamp": 1762885150.613378,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt11",
+      "prompt_attempt": 11,
+      "sample_index": 3,
+      "seed_value": 643151600
+    },
+    "iso_time": "2025-11-11T18:19:10Z"
+  },
+  {
+    "timestamp": 1762885151.409523,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 4,
+        "d": 3,
+        "M": 9,
+        "a_d": 7,
+        "a_2d": 10,
+        "max_val": 28
+      }
+    },
+    "iso_time": "2025-11-11T18:19:11Z"
+  },
+  {
+    "timestamp": 1762885152.2154398,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 0
+    },
+    "iso_time": "2025-11-11T18:19:12Z"
+  },
+  {
+    "timestamp": 1762885152.21558,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $U$ be the arithmetic progression $\\{{a}, 7, 10, \\dots, 28\\}$. A subset $S \\subseteq U$ is called special if no two ",
+      "correct_answer": "0",
+      "seed_value": 643151600
+    },
+    "iso_time": "2025-11-11T18:19:12Z"
+  },
+  {
+    "timestamp": 1762885152.215632,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T18:19:12Z"
+  },
+  {
+    "timestamp": 1762885383.441369,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T18:23:03Z"
+  },
+  {
+    "timestamp": 1762885668.648111,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T18:27:48Z"
+  },
+  {
+    "timestamp": 1762885955.475956,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "5",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T18:32:35Z"
+  },
+  {
+    "timestamp": 1762886223.594113,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T18:37:03Z"
+  },
+  {
+    "timestamp": 1762886447.079198,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 3,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T18:40:47Z"
+  },
+  {
+    "timestamp": 1762886447.079276,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt11",
+      "prompt_attempt": 11,
+      "sample_index": 4,
+      "seed_value": 1428046078
+    },
+    "iso_time": "2025-11-11T18:40:47Z"
+  },
+  {
+    "timestamp": 1762886447.874111,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 1,
+        "d": 2,
+        "M": 9,
+        "a_d": 3,
+        "a_2d": 5,
+        "max_val": 17
+      }
+    },
+    "iso_time": "2025-11-11T18:40:47Z"
+  },
+  {
+    "timestamp": 1762886448.684196,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 0
+    },
+    "iso_time": "2025-11-11T18:40:48Z"
+  },
+  {
+    "timestamp": 1762886448.684337,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $U$ be the arithmetic progression $\\{{a}, 3, 5, \\dots, 17\\}$. A subset $S \\subseteq U$ is called special if no two o",
+      "correct_answer": "0",
+      "seed_value": 1428046078
+    },
+    "iso_time": "2025-11-11T18:40:48Z"
+  },
+  {
+    "timestamp": 1762886448.684382,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "7",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T18:40:48Z"
+  },
+  {
+    "timestamp": 1762886689.413045,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T18:44:49Z"
+  },
+  {
+    "timestamp": 1762886922.992071,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T18:48:42Z"
+  },
+  {
+    "timestamp": 1762887108.6989639,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "9",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T18:51:48Z"
+  },
+  {
+    "timestamp": 1762887377.1130219,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T18:56:17Z"
+  },
+  {
+    "timestamp": 1762887673.385453,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 4,
+      "judge_successes": 3
+    },
+    "iso_time": "2025-11-11T19:01:13Z"
+  },
+  {
+    "timestamp": 1762887673.385699,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt11",
+      "prompt_attempt": 11,
+      "sample_index": 5,
+      "seed_value": 376869911
+    },
+    "iso_time": "2025-11-11T19:01:13Z"
+  },
+  {
+    "timestamp": 1762887674.170197,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "a": 1,
+        "d": 3,
+        "M": 10,
+        "a_d": 4,
+        "a_2d": 7,
+        "max_val": 28
+      }
+    },
+    "iso_time": "2025-11-11T19:01:14Z"
+  },
+  {
+    "timestamp": 1762887674.980598,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 0
+    },
+    "iso_time": "2025-11-11T19:01:14Z"
+  },
+  {
+    "timestamp": 1762887674.980743,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "Let $U$ be the arithmetic progression $\\{{a}, 4, 7, \\dots, 28\\}$. A subset $S \\subseteq U$ is called special if no two o",
+      "correct_answer": "0",
+      "seed_value": 376869911
+    },
+    "iso_time": "2025-11-11T19:01:14Z"
+  },
+  {
+    "timestamp": 1762887674.980789,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "4",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T19:01:14Z"
+  },
+  {
+    "timestamp": 1762887949.620598,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "2",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T19:05:49Z"
+  },
+  {
+    "timestamp": 1762888205.0473468,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T19:10:05Z"
+  },
+  {
+    "timestamp": 1762888428.21567,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T19:13:48Z"
+  },
+  {
+    "timestamp": 1762888678.158099,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "0",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T19:17:58Z"
+  },
+  {
+    "timestamp": 1762888857.424531,
+    "seed_id": "1986-12::1986",
+    "stage": "judge_reject",
+    "message": "Judge deemed the candidate inconsistent with gold answer.",
+    "payload": {
+      "sample_index": 5,
+      "judge_successes": 2
+    },
+    "iso_time": "2025-11-11T19:20:57Z"
+  },
+  {
+    "timestamp": 1762888857.4246778,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 12).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T19:20:57Z"
+  },
+  {
+    "timestamp": 1762888857.424719,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 12,
+      "feedback": "Judge rejected variant 1 (successes=3). | Judge rejected variant 2 (successes=3). | Judge rejected variant 3 (successes=3).",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T19:20:57Z"
+  },
+  {
+    "timestamp": 1762889112.214622,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 21 column 80 (char 5323)",
+    "payload": {},
+    "iso_time": "2025-11-11T19:25:12Z"
+  },
+  {
+    "timestamp": 1762889112.214653,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 13).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T19:25:12Z"
+  },
+  {
+    "timestamp": 1762889112.2146711,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 13,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 21 column 80 (char 5323)",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T19:25:12Z"
+  },
+  {
+    "timestamp": 1762889380.420911,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt13",
+      "prompt_attempt": 13,
+      "sample_index": 1,
+      "seed_value": 782685496
+    },
+    "iso_time": "2025-11-11T19:29:40Z"
+  },
+  {
+    "timestamp": 1762889381.237801,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:41Z"
+  },
+  {
+    "timestamp": 1762889382.019517,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:42Z"
+  },
+  {
+    "timestamp": 1762889382.80295,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:42Z"
+  },
+  {
+    "timestamp": 1762889383.58202,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:43Z"
+  },
+  {
+    "timestamp": 1762889384.352285,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:44Z"
+  },
+  {
+    "timestamp": 1762889385.1401541,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:45Z"
+  },
+  {
+    "timestamp": 1762889385.901639,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:45Z"
+  },
+  {
+    "timestamp": 1762889386.6708622,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:46Z"
+  },
+  {
+    "timestamp": 1762889387.4466271,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:47Z"
+  },
+  {
+    "timestamp": 1762889388.2283762,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:48Z"
+  },
+  {
+    "timestamp": 1762889388.9994292,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:48Z"
+  },
+  {
+    "timestamp": 1762889389.772914,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:49Z"
+  },
+  {
+    "timestamp": 1762889390.547059,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:50Z"
+  },
+  {
+    "timestamp": 1762889391.337237,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:51Z"
+  },
+  {
+    "timestamp": 1762889391.337323,
+    "seed_id": "1986-12::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 1,
+      "elapsed": 10.916416883468628
+    },
+    "iso_time": "2025-11-11T19:29:51Z"
+  },
+  {
+    "timestamp": 1762889391.337423,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt13",
+      "prompt_attempt": 13,
+      "sample_index": 2,
+      "seed_value": 1860394477
+    },
+    "iso_time": "2025-11-11T19:29:51Z"
+  },
+  {
+    "timestamp": 1762889392.1204338,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:52Z"
+  },
+  {
+    "timestamp": 1762889392.89343,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:52Z"
+  },
+  {
+    "timestamp": 1762889393.672058,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:53Z"
+  },
+  {
+    "timestamp": 1762889394.44624,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:54Z"
+  },
+  {
+    "timestamp": 1762889395.215043,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:55Z"
+  },
+  {
+    "timestamp": 1762889395.9929469,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:55Z"
+  },
+  {
+    "timestamp": 1762889396.778903,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:56Z"
+  },
+  {
+    "timestamp": 1762889397.5558999,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:57Z"
+  },
+  {
+    "timestamp": 1762889398.335545,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:58Z"
+  },
+  {
+    "timestamp": 1762889399.122611,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:29:59Z"
+  },
+  {
+    "timestamp": 1762889399.901139,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:29:59Z"
+  },
+  {
+    "timestamp": 1762889400.6780329,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:00Z"
+  },
+  {
+    "timestamp": 1762889401.456911,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:01Z"
+  },
+  {
+    "timestamp": 1762889402.243159,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:02Z"
+  },
+  {
+    "timestamp": 1762889402.243239,
+    "seed_id": "1986-12::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 2,
+      "elapsed": 10.905815839767456
+    },
+    "iso_time": "2025-11-11T19:30:02Z"
+  },
+  {
+    "timestamp": 1762889402.243307,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt13",
+      "prompt_attempt": 13,
+      "sample_index": 3,
+      "seed_value": 2101797735
+    },
+    "iso_time": "2025-11-11T19:30:02Z"
+  },
+  {
+    "timestamp": 1762889403.0340831,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:03Z"
+  },
+  {
+    "timestamp": 1762889403.8218088,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:03Z"
+  },
+  {
+    "timestamp": 1762889404.603262,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:04Z"
+  },
+  {
+    "timestamp": 1762889405.383316,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:05Z"
+  },
+  {
+    "timestamp": 1762889406.164022,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:06Z"
+  },
+  {
+    "timestamp": 1762889406.9543731,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:06Z"
+  },
+  {
+    "timestamp": 1762889407.758851,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:07Z"
+  },
+  {
+    "timestamp": 1762889408.537154,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:08Z"
+  },
+  {
+    "timestamp": 1762889409.310018,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:09Z"
+  },
+  {
+    "timestamp": 1762889410.0857348,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:10Z"
+  },
+  {
+    "timestamp": 1762889410.8727412,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:10Z"
+  },
+  {
+    "timestamp": 1762889411.6972852,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:11Z"
+  },
+  {
+    "timestamp": 1762889412.480843,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:12Z"
+  },
+  {
+    "timestamp": 1762889413.257149,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:13Z"
+  },
+  {
+    "timestamp": 1762889413.257229,
+    "seed_id": "1986-12::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 3,
+      "elapsed": 11.013923168182373
+    },
+    "iso_time": "2025-11-11T19:30:13Z"
+  },
+  {
+    "timestamp": 1762889413.257289,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt13",
+      "prompt_attempt": 13,
+      "sample_index": 4,
+      "seed_value": 1210732692
+    },
+    "iso_time": "2025-11-11T19:30:13Z"
+  },
+  {
+    "timestamp": 1762889414.031559,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:14Z"
+  },
+  {
+    "timestamp": 1762889414.809862,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:14Z"
+  },
+  {
+    "timestamp": 1762889415.586956,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:15Z"
+  },
+  {
+    "timestamp": 1762889416.377486,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:16Z"
+  },
+  {
+    "timestamp": 1762889417.196754,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:17Z"
+  },
+  {
+    "timestamp": 1762889417.979372,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:17Z"
+  },
+  {
+    "timestamp": 1762889418.761873,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:18Z"
+  },
+  {
+    "timestamp": 1762889419.534593,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:19Z"
+  },
+  {
+    "timestamp": 1762889420.313175,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:20Z"
+  },
+  {
+    "timestamp": 1762889421.096506,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:21Z"
+  },
+  {
+    "timestamp": 1762889421.890667,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:21Z"
+  },
+  {
+    "timestamp": 1762889422.697552,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:22Z"
+  },
+  {
+    "timestamp": 1762889423.488276,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:23Z"
+  },
+  {
+    "timestamp": 1762889424.282397,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:24Z"
+  },
+  {
+    "timestamp": 1762889424.282471,
+    "seed_id": "1986-12::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 4,
+      "elapsed": 11.025183916091919
+    },
+    "iso_time": "2025-11-11T19:30:24Z"
+  },
+  {
+    "timestamp": 1762889424.282519,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt13",
+      "prompt_attempt": 13,
+      "sample_index": 5,
+      "seed_value": 2110449863
+    },
+    "iso_time": "2025-11-11T19:30:24Z"
+  },
+  {
+    "timestamp": 1762889425.0682502,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:25Z"
+  },
+  {
+    "timestamp": 1762889425.860641,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:25Z"
+  },
+  {
+    "timestamp": 1762889426.663738,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 2,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:26Z"
+  },
+  {
+    "timestamp": 1762889427.526691,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 2,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:27Z"
+  },
+  {
+    "timestamp": 1762889428.3745532,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 3,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:28Z"
+  },
+  {
+    "timestamp": 1762889429.176681,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 3,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:29Z"
+  },
+  {
+    "timestamp": 1762889429.982699,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 4,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:29Z"
+  },
+  {
+    "timestamp": 1762889430.7540019,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 4,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:30Z"
+  },
+  {
+    "timestamp": 1762889431.5695841,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 5,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:31Z"
+  },
+  {
+    "timestamp": 1762889432.367986,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 5,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:32Z"
+  },
+  {
+    "timestamp": 1762889433.168138,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 6,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:33Z"
+  },
+  {
+    "timestamp": 1762889434.000331,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 6,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:34Z"
+  },
+  {
+    "timestamp": 1762889434.857693,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 7,
+      "assignment": {}
+    },
+    "iso_time": "2025-11-11T19:30:34Z"
+  },
+  {
+    "timestamp": 1762889435.64853,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 7,
+      "valid": false,
+      "answer": null
+    },
+    "iso_time": "2025-11-11T19:30:35Z"
+  },
+  {
+    "timestamp": 1762889435.648606,
+    "seed_id": "1986-12::1986",
+    "stage": "generator_timeout",
+    "message": "No valid assignment within timeout.",
+    "payload": {
+      "sample_index": 5,
+      "elapsed": 11.366089105606079
+    },
+    "iso_time": "2025-11-11T19:30:35Z"
+  },
+  {
+    "timestamp": 1762889435.648648,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 14).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T19:30:35Z"
+  },
+  {
+    "timestamp": 1762889435.64866,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 14,
+      "feedback": "Sample 1 failed to produce valid assignment. | Sample 2 failed to produce valid assignment. | Sample 3 failed to produce valid assignment.",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T19:30:35Z"
+  },
+  {
+    "timestamp": 1762889657.739462,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_error",
+    "message": "Teacher call failed: Invalid \\escape: line 19 column 108 (char 6975)",
+    "payload": {},
+    "iso_time": "2025-11-11T19:34:17Z"
+  },
+  {
+    "timestamp": 1762889657.739586,
+    "seed_id": "1986-12::1986",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 15).",
+    "payload": {
+      "feedback": true
+    },
+    "iso_time": "2025-11-11T19:34:17Z"
+  },
+  {
+    "timestamp": 1762889657.7396321,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 15,
+      "feedback": "Teacher call raised JSONDecodeError: Invalid \\escape: line 19 column 108 (char 6975)",
+      "question": "Let the sum of a set of numbers be the sum of its elements. Let $S$ be a set of positive integers, none greater than 15. Suppose no two disjoint subsets of $S$ have the same sum. What is the largest sum a set $S$ with these properties can have?",
+      "answer": "61",
+      "example_id": "1986-12::1986"
+    },
+    "iso_time": "2025-11-11T19:34:17Z"
+  },
+  {
+    "timestamp": 1762889986.180866,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt15",
+      "prompt_attempt": 15,
+      "sample_index": 1,
+      "seed_value": 1958162580
+    },
+    "iso_time": "2025-11-11T19:39:46Z"
+  },
+  {
+    "timestamp": 1762889986.918349,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 2
+      }
+    },
+    "iso_time": "2025-11-11T19:39:46Z"
+  },
+  {
+    "timestamp": 1762889987.654316,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10
+    },
+    "iso_time": "2025-11-11T19:39:47Z"
+  },
+  {
+    "timestamp": 1762889987.654454,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a vector-sum game, a player chooses a set $S$ of vectors $(x,y)$ where $x$ and $y$ are integers from $1$ to $2$. A ch",
+      "correct_answer": "10",
+      "seed_value": 1958162580
+    },
+    "iso_time": "2025-11-11T19:39:47Z"
+  },
+  {
+    "timestamp": 1762889987.654496,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "18",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T19:39:47Z"
+  },
+  {
+    "timestamp": 1762890187.2462451,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "7",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T19:43:07Z"
+  },
+  {
+    "timestamp": 1762890332.117375,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T19:45:32Z"
+  },
+  {
+    "timestamp": 1762890479.631489,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "10",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T19:47:59Z"
+  },
+  {
+    "timestamp": 1762890594.136377,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "10",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T19:49:54Z"
+  },
+  {
+    "timestamp": 1762890768.601873,
+    "seed_id": "1986-12::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-12::1986_prompt15-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-11T19:52:48Z"
+  },
+  {
+    "timestamp": 1762890768.6020281,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "1986-12::1986_prompt15",
+      "prompt_attempt": 15,
+      "sample_index": 2,
+      "seed_value": 1416429771
+    },
+    "iso_time": "2025-11-11T19:52:48Z"
+  },
+  {
+    "timestamp": 1762890769.347766,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "N": 2
+      }
+    },
+    "iso_time": "2025-11-11T19:52:49Z"
+  },
+  {
+    "timestamp": 1762890770.087138,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 10
+    },
+    "iso_time": "2025-11-11T19:52:50Z"
+  },
+  {
+    "timestamp": 1762890770.0872698,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a vector-sum game, a player chooses a set $S$ of vectors $(x,y)$ where $x$ and $y$ are integers from $1$ to $2$. A ch",
+      "correct_answer": "10",
+      "seed_value": 1416429771
+    },
+    "iso_time": "2025-11-11T19:52:50Z"
+  },
+  {
+    "timestamp": 1762890770.08731,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "10",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T19:52:50Z"
+  },
+  {
+    "timestamp": 1762890880.60619,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "10",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-11-11T19:54:40Z"
+  },
+  {
+    "timestamp": 1762890973.691294,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T19:56:13Z"
+  },
+  {
+    "timestamp": 1762891092.334122,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "8",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T19:58:12Z"
+  },
+  {
+    "timestamp": 1762891228.138931,
+    "seed_id": "1986-12::1986",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "12",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-11-11T20:00:28Z"
+  },
+  {
+    "timestamp": 1762891384.143004,
+    "seed_id": "1986-12::1986",
+    "stage": "variant_success",
+    "message": "Accepted variant 1986-12::1986_prompt15-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-11-11T20:03:04Z"
+  }
+]

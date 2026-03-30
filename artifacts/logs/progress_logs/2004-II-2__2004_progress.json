@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 1765111691.452773,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::augment_seed",
+    "message": "Entered augment_seed.",
+    "payload": {
+      "seed_year": 2004,
+      "question_preview": "A jar has 10 red candies and 10 blue candies. Terry picks two candies at random, then Mary picks two of the remaining ca",
+      "answer": "441",
+      "config": {
+        "variants_per_seed": 5,
+        "prompt_attempt_limit": 20,
+        "samples_per_prompt": 5,
+        "generator_timeout_sec": 10.0,
+        "judge_consistency_threshold": 4,
+        "judge_correct_trials": 2,
+        "judge_noise_trials": 3,
+        "base_seed": 0,
+        "debug": true
+      }
+    },
+    "iso_time": "2025-12-07T12:48:11Z"
+  },
+  {
+    "timestamp": 1765111691.452823,
+    "seed_id": "2004-II-2::2004",
+    "stage": "teacher_prompt",
+    "message": "Requesting augmentation spec (attempt 1).",
+    "payload": {
+      "feedback": false
+    },
+    "iso_time": "2025-12-07T12:48:11Z"
+  },
+  {
+    "timestamp": 1765111691.4528441,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::teacher_prompt",
+    "message": "Calling teacher.convert_to_spec.",
+    "payload": {
+      "attempt": 1,
+      "feedback": null,
+      "question": "A jar has 10 red candies and 10 blue candies. Terry picks two candies at random, then Mary picks two of the remaining candies at random. Given that the probability that they get the same color combination, irrespective of order, is $m/n,$ where $m$ and $n$ are relatively prime positive integers, find $m+n.$",
+      "answer": "441",
+      "example_id": "2004-II-2::2004"
+    },
+    "iso_time": "2025-12-07T12:48:11Z"
+  },
+  {
+    "timestamp": 1765111896.152398,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-2::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 1,
+      "seed_value": 830645504
+    },
+    "iso_time": "2025-12-07T12:51:36Z"
+  },
+  {
+    "timestamp": 1765111897.4065752,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_colors": 5,
+        "counts_str": "[15, 15, 8, 6, 6]",
+        "draw_size": 5,
+        "removal_size": 4
+      }
+    },
+    "iso_time": "2025-12-07T12:51:37Z"
+  },
+  {
+    "timestamp": 1765111898.5480819,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 109449240673
+    },
+    "iso_time": "2025-12-07T12:51:38Z"
+  },
+  {
+    "timestamp": 1765111898.548244,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a jar contains candies of 5 distinguishable colors, with counts listed as [15, 15, 8, 6, 6]. Terry dr",
+      "correct_answer": "109449240673",
+      "seed_value": 830645504
+    },
+    "iso_time": "2025-12-07T12:51:38Z"
+  },
+  {
+    "timestamp": 1765111898.5482938,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "109449240667",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T12:51:38Z"
+  },
+  {
+    "timestamp": 1765112325.84438,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "109449240674",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T12:58:45Z"
+  },
+  {
+    "timestamp": 1765112658.173546,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "109449240682",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T13:04:18Z"
+  },
+  {
+    "timestamp": 1765112775.064822,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "109449240673",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T13:06:15Z"
+  },
+  {
+    "timestamp": 1765113043.25248,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "109449240673",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T13:10:43Z"
+  },
+  {
+    "timestamp": 1765113225.0999,
+    "seed_id": "2004-II-2::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-2::2004_prompt01-1",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T13:13:45Z"
+  },
+  {
+    "timestamp": 1765113225.100097,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-2::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 2,
+      "seed_value": 685089048
+    },
+    "iso_time": "2025-12-07T13:13:45Z"
+  },
+  {
+    "timestamp": 1765113226.454783,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_colors": 4,
+        "counts_str": "[12, 14, 16, 7]",
+        "draw_size": 3,
+        "removal_size": 2
+      }
+    },
+    "iso_time": "2025-12-07T13:13:46Z"
+  },
+  {
+    "timestamp": 1765113227.619595,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 18607717
+    },
+    "iso_time": "2025-12-07T13:13:47Z"
+  },
+  {
+    "timestamp": 1765113227.61978,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a jar contains candies of 4 distinguishable colors, with counts listed as [12, 14, 16, 7]. Terry draw",
+      "correct_answer": "18607717",
+      "seed_value": 685089048
+    },
+    "iso_time": "2025-12-07T13:13:47Z"
+  },
+  {
+    "timestamp": 1765113227.619831,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "18607721",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T13:13:47Z"
+  },
+  {
+    "timestamp": 1765113483.270447,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "18607717",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T13:18:03Z"
+  },
+  {
+    "timestamp": 1765113627.04136,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "18607712",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T13:20:27Z"
+  },
+  {
+    "timestamp": 1765113815.0754838,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "18607717",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T13:23:35Z"
+  },
+  {
+    "timestamp": 1765114637.216256,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "18607725",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T13:37:17Z"
+  },
+  {
+    "timestamp": 1765114732.224162,
+    "seed_id": "2004-II-2::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-2::2004_prompt01-2",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T13:38:52Z"
+  },
+  {
+    "timestamp": 1765114732.224355,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-2::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 3,
+      "seed_value": 2113903085
+    },
+    "iso_time": "2025-12-07T13:38:52Z"
+  },
+  {
+    "timestamp": 1765114733.593297,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_colors": 4,
+        "counts_str": "[10, 11, 6, 8]",
+        "draw_size": 3,
+        "removal_size": 3
+      }
+    },
+    "iso_time": "2025-12-07T13:38:53Z"
+  },
+  {
+    "timestamp": 1765114734.5342941,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 343797
+    },
+    "iso_time": "2025-12-07T13:38:54Z"
+  },
+  {
+    "timestamp": 1765114734.5344489,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a jar contains candies of 4 distinguishable colors, with counts listed as [10, 11, 6, 8]. Terry draws",
+      "correct_answer": "343797",
+      "seed_value": 2113903085
+    },
+    "iso_time": "2025-12-07T13:38:54Z"
+  },
+  {
+    "timestamp": 1765114734.534494,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "343788",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T13:38:54Z"
+  },
+  {
+    "timestamp": 1765114943.4563122,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "343802",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T13:42:23Z"
+  },
+  {
+    "timestamp": 1765115540.180355,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "343797",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T13:52:20Z"
+  },
+  {
+    "timestamp": 1765115667.977825,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "343797",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T13:54:27Z"
+  },
+  {
+    "timestamp": 1765115836.1130419,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "343804",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T13:57:16Z"
+  },
+  {
+    "timestamp": 1765115991.767145,
+    "seed_id": "2004-II-2::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-2::2004_prompt01-3",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T13:59:51Z"
+  },
+  {
+    "timestamp": 1765115991.767318,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-2::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 4,
+      "seed_value": 1852189342
+    },
+    "iso_time": "2025-12-07T13:59:51Z"
+  },
+  {
+    "timestamp": 1765115993.133318,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_colors": 4,
+        "counts_str": "[9, 15, 15, 6]",
+        "draw_size": 2,
+        "removal_size": 5
+      }
+    },
+    "iso_time": "2025-12-07T13:59:53Z"
+  },
+  {
+    "timestamp": 1765115994.275279,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 1684
+    },
+    "iso_time": "2025-12-07T13:59:54Z"
+  },
+  {
+    "timestamp": 1765115994.275428,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a jar contains candies of 4 distinguishable colors, with counts listed as [9, 15, 15, 6]. Terry draws",
+      "correct_answer": "1684",
+      "seed_value": 1852189342
+    },
+    "iso_time": "2025-12-07T13:59:54Z"
+  },
+  {
+    "timestamp": 1765115994.2754838,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "1682",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T13:59:54Z"
+  },
+  {
+    "timestamp": 1765116172.116014,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "1683",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T14:02:52Z"
+  },
+  {
+    "timestamp": 1765116349.6979141,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "1681",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T14:05:49Z"
+  },
+  {
+    "timestamp": 1765116493.735979,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "1684",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T14:08:13Z"
+  },
+  {
+    "timestamp": 1765116614.7438421,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "1684",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T14:10:14Z"
+  },
+  {
+    "timestamp": 1765116663.7180722,
+    "seed_id": "2004-II-2::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-2::2004_prompt01-4",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T14:11:03Z"
+  },
+  {
+    "timestamp": 1765116663.718174,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::_sample_variant",
+    "message": "Entered _sample_variant.",
+    "payload": {
+      "generator_id": "2004-II-2::2004_prompt01",
+      "prompt_attempt": 1,
+      "sample_index": 5,
+      "seed_value": 460407966
+    },
+    "iso_time": "2025-12-07T14:11:03Z"
+  },
+  {
+    "timestamp": 1765116665.098284,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::generator_sample",
+    "message": "Generator produced candidate assignment.",
+    "payload": {
+      "attempt": 1,
+      "assignment": {
+        "num_colors": 3,
+        "counts_str": "[16, 15, 9]",
+        "draw_size": 4,
+        "removal_size": 3
+      }
+    },
+    "iso_time": "2025-12-07T14:11:05Z"
+  },
+  {
+    "timestamp": 1765116666.161932,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::verifier_result",
+    "message": "Verifier evaluated candidate.",
+    "payload": {
+      "attempt": 1,
+      "valid": true,
+      "answer": 9381667
+    },
+    "iso_time": "2025-12-07T14:11:06Z"
+  },
+  {
+    "timestamp": 1765116666.162078,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::_run_judge",
+    "message": "Entered _run_judge.",
+    "payload": {
+      "question_preview": "In a math contest, a jar contains candies of 3 distinguishable colors, with counts listed as [16, 15, 9]. Terry draws 4 ",
+      "correct_answer": "9381667",
+      "seed_value": 460407966
+    },
+    "iso_time": "2025-12-07T14:11:06Z"
+  },
+  {
+    "timestamp": 1765116666.162127,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 1,
+      "candidate_answer": "9381665",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T14:11:06Z"
+  },
+  {
+    "timestamp": 1765117413.9046998,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 2,
+      "candidate_answer": "9381667",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T14:23:33Z"
+  },
+  {
+    "timestamp": 1765117755.010646,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 3,
+      "candidate_answer": "9381666",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T14:29:15Z"
+  },
+  {
+    "timestamp": 1765118020.5214112,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 4,
+      "candidate_answer": "9381670",
+      "expected_truth": false,
+      "is_noise": true
+    },
+    "iso_time": "2025-12-07T14:33:40Z"
+  },
+  {
+    "timestamp": 1765118450.704627,
+    "seed_id": "2004-II-2::2004",
+    "stage": "debug::judge_trial",
+    "message": "Submitting candidate answer to judge.",
+    "payload": {
+      "trial_index": 5,
+      "candidate_answer": "9381667",
+      "expected_truth": true,
+      "is_noise": false
+    },
+    "iso_time": "2025-12-07T14:40:50Z"
+  },
+  {
+    "timestamp": 1765118618.4116511,
+    "seed_id": "2004-II-2::2004",
+    "stage": "variant_success",
+    "message": "Accepted variant 2004-II-2::2004_prompt01-5",
+    "payload": {
+      "judge_successes": 5
+    },
+    "iso_time": "2025-12-07T14:43:38Z"
+  }
+]
